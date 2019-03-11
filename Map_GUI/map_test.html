@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Test</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/><style type='text/css'>body{margin:0;padding:0;overflow:hidden;font-family:'Segoe UI',Helvetica,Arial,Sans-Serif}</style>
+</head>
+<body>
+
+<div id='myMap' style='width: 100vw; height: 100vh;'></div>
+<script type='text/javascript'>    
+		function loadMapScenario() {
+			var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
+			var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), null);
+			map.entities.push(pushpin);
+			var locationArray = new Array();
+			var i;
+		for (i = 0; i < 100; i++)
+		{
+			locationArray.push(map.getCenter());
+			console.log(locationArray[i].latitude);
+			locationArray[i].latitude 	= Math.random()+locationArray[i].latitude;
+			locationArray[i].longitude 	= Math.random()+locationArray[i].longitude;
+			var cpushpin 	= new Microsoft.Maps.Pushpin(locationArray[i],null);
+			map.entities.push(cpushpin);
+		}
+		
+		//Make polylines for location array
+		var polyline = new Microsoft.Maps.Polyline(locationArray,null);
+		map.entities.push(polyline);
+		
+		};
+</script>
+<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=Aqh7_Rmh7zsYgkI0lrr8CEe6aYz3BCH0bieH5fSjYZbqeO9VTxkdvGenGKQCa99L&callback=loadMapScenario' async defer></script>
+</body>
+</html>
