@@ -23,10 +23,10 @@
 #define CONFIG          (0x1A)      // For setting DLPF - fast or slow
 #define START_GYRO_DATA (0x43)      // First address in gyro registers      | 6bytes long
 #define START_ACC_DATA  (0x3b)      // First address in accelerometer       | 6bytes long
-#define TEMP_DATA       (0x41)      // First address in temperature sensor  | 2bytes long
+#define START_TEMP_DATA (0x41)      // First address in temperature sensor  | 2bytes long
 
 /*ADDITIONAL MACROS*/
-#define WAIT_DELAY      (500)       // Delay in ms     
+#define WAIT_DELAY      (250)       // Delay in ms     
 #define CLEAR_SCREEN    "\x1b[2J"   // Clears terminal when printed
 
 /*Structure for gyrosensor data*/
@@ -51,8 +51,8 @@ typedef struct acc_data {
 
 /*Structure for all sensor data*/
 typedef struct sensor_data {
-    gyro_data gd;
-    acc_data ad;
+    gyro_data gyro;
+    acc_data acc;
     float temperature;
 } sensor_data;
 
@@ -63,6 +63,8 @@ void I2CReadBytes(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint8_t *val
 void I2CWriteBytes(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint8_t *value);
 void I2CWriteByte(uint8_t devAddr, uint8_t regAddr, uint8_t value);
 void readGyroData(gyro_data* gp);
+void readAccData(acc_data* ap);
+void readTemp(float *temperature);
 
 int main(void)
 {
@@ -81,15 +83,23 @@ int main(void)
     I2CWriteByte(MPU6050_ADD,INT_PIN_CFG,0x37);
     I2CWriteByte(MPU6050_ADD,CONFIG,6);         //6 very slow
     
-    //struct for gyro-data
+    
+    //Struct for gyro-data
     gyro_data gdata;
+    
+    //Structure for accelerometer-data
+    acc_data adata;
+    
+    float temperature_C;
     
     for(;;)
     {
         /*Read data from gyrosensor with I2C*/
         readGyroData(&gdata);
+        readAccData(&adata);
+        readTemp(&temperature_C);
         
-        /*Print out data*/
+        /*Print out gyro-data*/
         UART_1_PutString(CLEAR_SCREEN);
         sprintf(buf,"------ GYRO-DATA ------\r\nX: %d\r\nY: %d\r\nZ: %d\r\n",
             gdata.x,
@@ -98,11 +108,25 @@ int main(void)
         );
         UART_1_PutString(buf);
         
-        /*Print out float data*/
+        /*Print out float gyro-data*/
         sprintf(buf,"------ GYRO-DATA (Rad/s) ------\r\nX: %f\r\nY: %f\r\nZ: %f\r\n",
             gdata.x_rad,
             gdata.y_rad,
             gdata.z_rad
+        );
+        UART_1_PutString(buf);
+        
+        /*Print out acc-data*/
+        sprintf(buf,"------ ACC-DATA (G's) ------\r\nX: %f\r\nY: %f\r\nZ: %f\r\n",
+            adata.x_G,
+            adata.y_G,
+            adata.z_G
+        );
+        UART_1_PutString(buf);
+
+        /*Print out temperature*/
+        sprintf(buf,"------ Temperature (C) ------\r\nTemperature: %f\r\n",
+            temperature_C
         );
         UART_1_PutString(buf);
         
@@ -178,6 +202,48 @@ void readGyroData(gyro_data* gp)
     gp->y_rad = gp->y / 939.650784f;
     gp->z_rad = gp->z / 939.650784f;
 
+}
+
+void readAccData(acc_data* ap)
+{
+    //Buffer for sensor data
+    uint8_t rx_buffer[6];
+
+    /*Read data into buffer*/
+    I2CReadBytes(MPU6050_ADD,START_ACC_DATA, 6, rx_buffer);
+    
+    //Extract raw data
+    ap->x = rx_buffer[0] << 8 | rx_buffer[1];
+    ap->y = rx_buffer[2] << 8 | rx_buffer[3];
+    ap->z = rx_buffer[4] << 8 | rx_buffer[5];
+    
+    /*Convert into G's*/
+    ap->x_G = ap->x / 8192.0f;
+    ap->y_G = ap->y / 8192.0f;
+    ap->z_G = ap->z / 8192.0f;
+}
+
+void readTemp(float *temperature)
+{
+    uint8_t rx_buffer[2];
+    uint16_t temp_buffer;
+    
+    /*Read data into buffer*/
+    I2CReadBytes(MPU6050_ADD,START_TEMP_DATA, 2, rx_buffer);
+    
+    /*Extract raw data*/
+    temp_buffer = rx_buffer[0] << 8 | rx_buffer[1];
+    
+    /*Convert to celsius*/
+    *temperature = temp_buffer / 340.0f + 36.53f;
+}
+
+void readAllSensorData(sensor_data *sp)
+{
+    /*Read data from all sensors*/
+    readAccData(&sp->acc);      //Accelerometer data
+    readGyroData(&sp->gyro);    //Gyro data
+    readTemp(&sp->temperature); //Temperature
 }
 
 void handleErrors(uint8 error)

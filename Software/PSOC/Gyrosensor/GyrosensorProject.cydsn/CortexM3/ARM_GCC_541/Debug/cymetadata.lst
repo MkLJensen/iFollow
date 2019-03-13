@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
   55 001a 01       		.byte	1
   56 001b 40       		.byte	64
   57 001c 02       		.byte	2
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 2
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 2
 
 
   58 001d 42       		.byte	66
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  112 0053 08       		.byte	8
  113 0054 A2       		.byte	-94
  114 0055 02       		.byte	2
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 3
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 3
 
 
  115 0056 A4       		.byte	-92
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  169 008c 16       		.byte	22
  170 008d 01       		.byte	1
  171 008e 17       		.byte	23
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 4
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 4
 
 
  172 008f 28       		.byte	40
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  226 00c5 60       		.byte	96
  227 00c6 57       		.byte	87
  228 00c7 40       		.byte	64
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 5
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 5
 
 
  229 00c8 5B       		.byte	91
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  283 00fe 02       		.byte	2
  284 00ff 71       		.byte	113
  285 0100 05       		.byte	5
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 6
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 6
 
 
  286 0101 80       		.byte	-128
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  340 0137 02       		.byte	2
  341 0138 3B       		.byte	59
  342 0139 08       		.byte	8
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 7
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 7
 
 
  343 013a 3F       		.byte	63
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  397 0170 89       		.byte	-119
  398 0171 18       		.byte	24
  399 0172 8A       		.byte	-118
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 8
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 8
 
 
  400 0173 0C       		.byte	12
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  454 01a9 20       		.byte	32
  455 01aa B7       		.byte	-73
  456 01ab 18       		.byte	24
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 9
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 9
 
 
  457 01ac B9       		.byte	-71
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  511 01e2 05       		.byte	5
  512 01e3 16       		.byte	22
  513 01e4 08       		.byte	8
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 10
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 10
 
 
  514 01e5 10       		.byte	16
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  568 021b 04       		.byte	4
  569 021c 2F       		.byte	47
  570 021d 06       		.byte	6
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 11
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 11
 
 
  571 021e 30       		.byte	48
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  625 0254 8F       		.byte	-113
  626 0255 01       		.byte	1
  627 0256 91       		.byte	-111
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 12
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 12
 
 
  628 0257 10       		.byte	16
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  682 028d 10       		.byte	16
  683 028e AA       		.byte	-86
  684 028f 10       		.byte	16
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 13
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 13
 
 
  685 0290 EA       		.byte	-22
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  739 02c6 00       		.byte	0
  740 02c7 00       		.byte	0
  741 02c8 1F       		.byte	31
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 14
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 14
 
 
  742 02c9 10       		.byte	16
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  796 02ff C0       		.byte	-64
  797 0300 00       		.byte	0
  798 0301 00       		.byte	0
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 15
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 15
 
 
  799 0302 A2       		.byte	-94
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  853 0338 00       		.byte	0
  854 0339 00       		.byte	0
  855 033a 00       		.byte	0
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 16
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 16
 
 
  856 033b 00       		.byte	0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  910 0003 05       		.byte	5
  911              		.section	.cymeta,"a",%progbits
  912              		.align	2
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 17
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 17
 
 
  913              		.type	cy_metadata, %object
@@ -1000,13 +1000,13 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  945 000b 01       		.uleb128 0x1
  946 000c 24000000 		.4byte	.LASF17
  947 0010 0C       		.byte	0xc
- 948 0011 C7010000 		.4byte	.LASF18
+ 948 0011 D3010000 		.4byte	.LASF18
  949 0015 D7000000 		.4byte	.LASF19
  950 0019 00000000 		.4byte	.Ldebug_line0
  951 001d 02       		.uleb128 0x2
  952 001e 01       		.byte	0x1
  953 001f 06       		.byte	0x6
- 954 0020 BB010000 		.4byte	.LASF0
+ 954 0020 C7010000 		.4byte	.LASF0
  955 0024 03       		.uleb128 0x3
  956 0025 00000000 		.4byte	.LASF9
  957 0029 01       		.byte	0x1
@@ -1018,11 +1018,11 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  963 0032 16000000 		.4byte	.LASF1
  964 0036 02       		.uleb128 0x2
  965 0037 02       		.byte	0x2
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 18
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 18
 
 
  966 0038 05       		.byte	0x5
- 967 0039 A8010000 		.4byte	.LASF2
+ 967 0039 B4010000 		.4byte	.LASF2
  968 003d 02       		.uleb128 0x2
  969 003e 02       		.byte	0x2
  970 003f 07       		.byte	0x7
@@ -1030,7 +1030,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  972 0044 02       		.uleb128 0x2
  973 0045 04       		.byte	0x4
  974 0046 05       		.byte	0x5
- 975 0047 B2010000 		.4byte	.LASF4
+ 975 0047 BE010000 		.4byte	.LASF4
  976 004b 02       		.uleb128 0x2
  977 004c 04       		.byte	0x4
  978 004d 07       		.byte	0x7
@@ -1038,11 +1038,11 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  980 0052 02       		.uleb128 0x2
  981 0053 08       		.byte	0x8
  982 0054 05       		.byte	0x5
- 983 0055 9A010000 		.4byte	.LASF6
+ 983 0055 A6010000 		.4byte	.LASF6
  984 0059 02       		.uleb128 0x2
  985 005a 08       		.byte	0x8
  986 005b 07       		.byte	0x7
- 987 005c 4F010000 		.4byte	.LASF7
+ 987 005c 5B010000 		.4byte	.LASF7
  988 0060 04       		.uleb128 0x4
  989 0061 04       		.byte	0x4
  990 0062 05       		.byte	0x5
@@ -1050,9 +1050,9 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  992 0067 02       		.uleb128 0x2
  993 0068 04       		.byte	0x4
  994 0069 07       		.byte	0x7
- 995 006a 42010000 		.4byte	.LASF8
+ 995 006a 4E010000 		.4byte	.LASF8
  996 006e 03       		.uleb128 0x3
- 997 006f 66010000 		.4byte	.LASF10
+ 997 006f 72010000 		.4byte	.LASF10
  998 0073 02       		.byte	0x2
  999 0074 18       		.byte	0x18
  1000 0075 24000000 		.4byte	0x24
@@ -1066,11 +1066,11 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  1008 008a 02       		.uleb128 0x2
  1009 008b 04       		.byte	0x4
  1010 008c 07       		.byte	0x7
- 1011 008d 91010000 		.4byte	.LASF11
+ 1011 008d 9D010000 		.4byte	.LASF11
  1012 0091 07       		.uleb128 0x7
  1013 0092 6E000000 		.4byte	0x6e
  1014 0096 08       		.uleb128 0x8
- 1015 0097 30010000 		.4byte	.LASF12
+ 1015 0097 3C010000 		.4byte	.LASF12
  1016 009b 03       		.byte	0x3
  1017 009c 1F       		.byte	0x1f
  1018 009d A7000000 		.4byte	0xa7
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  1020 00a2 03       		.byte	0x3
  1021 00a3 00000000 		.4byte	cy_meta_configecc
  1022 00a7 07       		.uleb128 0x7
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 19
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 19
 
 
  1023 00a8 79000000 		.4byte	0x79
@@ -1090,7 +1090,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  1029 00ba 03       		.byte	0x3
  1030 00bb 00       		.byte	0
  1031 00bc 08       		.uleb128 0x8
- 1032 00bd 20010000 		.4byte	.LASF13
+ 1032 00bd 2C010000 		.4byte	.LASF13
  1033 00c1 03       		.byte	0x3
  1034 00c2 98       		.byte	0x98
  1035 00c3 CD000000 		.4byte	0xcd
@@ -1100,7 +1100,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  1039 00cd 07       		.uleb128 0x7
  1040 00ce AC000000 		.4byte	0xac
  1041 00d2 08       		.uleb128 0x8
- 1042 00d3 83010000 		.4byte	.LASF14
+ 1042 00d3 8F010000 		.4byte	.LASF14
  1043 00d7 03       		.byte	0x3
  1044 00d8 A6       		.byte	0xa6
  1045 00d9 E3000000 		.4byte	0xe3
@@ -1117,7 +1117,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  1056 00f6 FF       		.byte	0xff
  1057 00f7 00       		.byte	0
  1058 00f8 08       		.uleb128 0x8
- 1059 00f9 6E010000 		.4byte	.LASF15
+ 1059 00f9 7A010000 		.4byte	.LASF15
  1060 00fd 03       		.byte	0x3
  1061 00fe B4       		.byte	0xb4
  1062 00ff 09010000 		.4byte	0x109
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  1077 0123 03       		.byte	0x3
  1078 0124 E1       		.byte	0xe1
  1079 0125 2F010000 		.4byte	0x12f
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 20
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 20
 
 
  1080 0129 05       		.uleb128 0x5
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  1134 002e 03       		.uleb128 0x3
  1135 002f 08       		.uleb128 0x8
  1136 0030 00       		.byte	0
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 21
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 21
 
 
  1137 0031 00       		.byte	0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  1191 0000 14000000 		.4byte	0x14
  1192 0004 0200     		.2byte	0x2
  1193 0006 00000000 		.4byte	.Ldebug_info0
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 22
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 22
 
 
  1194 000a 04       		.byte	0x4
@@ -1316,81 +1316,81 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 1
  1216      65642069 
  1216      6E7400
  1217              	.LASF19:
- 1218 00d7 433A5C55 		.ascii	"C:\\Users\\hejmi\\Documents\\PSoC Creator\\Gyrosens"
+ 1218 00d7 433A5C55 		.ascii	"C:\\Users\\SYFO\\Documents\\Git\\iFollow\\Software\\"
  1218      73657273 
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 23
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 23
 
 
- 1218      5C68656A 
- 1218      6D695C44 
- 1218      6F63756D 
- 1219 0105 6F725C47 		.ascii	"or\\GyrosensorProject.cydsn\000"
- 1219      79726F73 
- 1219      656E736F 
- 1219      7250726F 
- 1219      6A656374 
+ 1218      5C535946 
+ 1218      4F5C446F 
+ 1218      63756D65 
+ 1219 0104 50534F43 		.ascii	"PSOC\\Gyrosensor\\GyrosensorProject.cydsn\000"
+ 1219      5C477972 
+ 1219      6F73656E 
+ 1219      736F725C 
+ 1219      4779726F 
  1220              	.LASF13:
- 1221 0120 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1221 012c 63795F6D 		.ascii	"cy_meta_custnvl\000"
  1221      6574615F 
  1221      63757374 
  1221      6E766C00 
  1222              	.LASF12:
- 1223 0130 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1223 013c 63795F6D 		.ascii	"cy_meta_configecc\000"
  1223      6574615F 
  1223      636F6E66 
  1223      69676563 
  1223      6300
  1224              	.LASF8:
- 1225 0142 756E7369 		.ascii	"unsigned int\000"
+ 1225 014e 756E7369 		.ascii	"unsigned int\000"
  1225      676E6564 
  1225      20696E74 
  1225      00
  1226              	.LASF7:
- 1227 014f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1227 015b 6C6F6E67 		.ascii	"long long unsigned int\000"
  1227      206C6F6E 
  1227      6720756E 
  1227      7369676E 
  1227      65642069 
  1228              	.LASF10:
- 1229 0166 75696E74 		.ascii	"uint8_t\000"
+ 1229 0172 75696E74 		.ascii	"uint8_t\000"
  1229      385F7400 
  1230              	.LASF15:
- 1231 016e 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1231 017a 63795F6D 		.ascii	"cy_meta_flashprotect\000"
  1231      6574615F 
  1231      666C6173 
  1231      6870726F 
  1231      74656374 
  1232              	.LASF14:
- 1233 0183 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1233 018f 63795F6D 		.ascii	"cy_meta_wonvl\000"
  1233      6574615F 
  1233      776F6E76 
  1233      6C00
  1234              	.LASF11:
- 1235 0191 73697A65 		.ascii	"sizetype\000"
+ 1235 019d 73697A65 		.ascii	"sizetype\000"
  1235      74797065 
  1235      00
  1236              	.LASF6:
- 1237 019a 6C6F6E67 		.ascii	"long long int\000"
+ 1237 01a6 6C6F6E67 		.ascii	"long long int\000"
  1237      206C6F6E 
  1237      6720696E 
  1237      7400
  1238              	.LASF2:
- 1239 01a8 73686F72 		.ascii	"short int\000"
+ 1239 01b4 73686F72 		.ascii	"short int\000"
  1239      7420696E 
  1239      7400
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccxIJKaB.s 			page 24
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\cc1tpCfi.s 			page 24
 
 
  1240              	.LASF4:
- 1241 01b2 6C6F6E67 		.ascii	"long int\000"
+ 1241 01be 6C6F6E67 		.ascii	"long int\000"
  1241      20696E74 
  1241      00
  1242              	.LASF0:
- 1243 01bb 7369676E 		.ascii	"signed char\000"
+ 1243 01c7 7369676E 		.ascii	"signed char\000"
  1243      65642063 
  1243      68617200 
  1244              	.LASF18:
- 1245 01c7 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1245 01d3 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
  1245      72617465 
  1245      645F536F 
  1245      75726365 
