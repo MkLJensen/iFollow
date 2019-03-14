@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Gyrosensor\GyrosensorProject\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\Pins">
 <ExpandedNodeIds>
 <v>Gyrosensor</v>
 <v>Gyrosensor\GyrosensorProject</v>
@@ -179,11 +179,6 @@
 <v>Gyrosensor\GyrosensorProject\PSoC 5LP Architecture TRM</v>
 <v>Gyrosensor\GyrosensorProject\CY8C58LP Family Datasheet</v>
 <v>Gyrosensor\GyrosensorProject\System Reference Guides</v>
-<v>Gyrosensor\GyrosensorProject\System Reference Guides\cy_boot_v5_70</v>
-<v>Gyrosensor\GyrosensorProject\cy_pins_v2_20</v>
-<v>Gyrosensor\GyrosensorProject\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Gyrosensor\GyrosensorProject\I2C_v3_50.pdf</v>
-<v>Gyrosensor\GyrosensorProject\UART_v2_50.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Gyrosensor</v>
@@ -191,11 +186,6 @@
 <v>Gyrosensor\GyrosensorProject\PSoC 5LP Architecture TRM</v>
 <v>Gyrosensor\GyrosensorProject\CY8C58LP Family Datasheet</v>
 <v>Gyrosensor\GyrosensorProject\System Reference Guides</v>
-<v>Gyrosensor\GyrosensorProject\System Reference Guides\cy_boot_v5_70</v>
-<v>Gyrosensor\GyrosensorProject\cy_pins_v2_20</v>
-<v>Gyrosensor\GyrosensorProject\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Gyrosensor\GyrosensorProject\I2C_v3_50.pdf</v>
-<v>Gyrosensor\GyrosensorProject\UART_v2_50.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -206,6 +196,8 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\GyrosensorProject.cydsn\main.c" />
+<name v=".\GyrosensorProject.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\GyrosensorProject.cydsn\GyrosensorProject.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -213,7 +205,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1098, 495" SelectedTabbedMdiWindow="b196c93a-fc13-4dcc-94a8-9aea56a24524"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6f3018fb-d561-4696-b286-3fe2ea90fc61" /><DocumentWindow Key="C:\Users\SYFO\Documents\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\main.c" Guid="b196c93a-fc13-4dcc-94a8-9aea56a24524" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1098, 495" SelectedTabbedMdiWindow="b196c93a-fc13-4dcc-94a8-9aea56a24524"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6f3018fb-d561-4696-b286-3fe2ea90fc61" /><DocumentWindow Key="C:\Users\SYFO\Documents\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\main.c" Guid="b196c93a-fc13-4dcc-94a8-9aea56a24524" /><DocumentWindow Key="C:\Users\SYFO\Documents\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\TopDesign\TopDesign.cysch" Guid="e6d8ebdb-61ea-48f6-9651-3da87e361bd0" /><DocumentWindow Key="C:\Users\SYFO\Documents\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\GyrosensorProject.cydwr" Guid="24a33662-0ecd-43bb-b417-e9aed1c8ed2e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

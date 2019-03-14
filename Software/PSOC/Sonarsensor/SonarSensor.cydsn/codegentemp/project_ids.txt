@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f4e47440-9581-4067-b765-a7d2e067e412
+C:\Users\SYFO\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|03261e5a-bc0c-42b2-8f1f-4b2ae5f49231
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|89bec36a-7160-44b8-9f8b-965cd60a564b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|db002d78-1196-497c-8741-74c4be44ae53
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|5a465955-106c-4b90-963c-076a7da1b5bc
+C:\Users\SYFO\Documents\PSoC Creator\SonarSensor\SonarSensor.cydsn\SonarSensor.cyprj|62d4b61b-616b-4801-b562-5cdaec68e36e

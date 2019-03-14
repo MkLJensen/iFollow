@@ -56,6 +56,8 @@ typedef struct sensor_data {
     float temperature;
 } sensor_data;
 
+/*Variable for sonar-sensor*/
+float range_value = 0.0f;
 
 /*TODO: PUT IN HEADER!!*/
 void readGyroData(gyro_data*);
@@ -65,6 +67,7 @@ void I2CWriteByte(uint8_t devAddr, uint8_t regAddr, uint8_t value);
 void readGyroData(gyro_data* gp);
 void readAccData(acc_data* ap);
 void readTemp(float *temperature);
+void readSonarSensor(float *range);
 
 int main(void)
 {
@@ -82,7 +85,6 @@ int main(void)
     I2CWriteByte(MPU6050_ADD,USER_CTRL,0x20);
     I2CWriteByte(MPU6050_ADD,INT_PIN_CFG,0x37);
     I2CWriteByte(MPU6050_ADD,CONFIG,6);         //6 very slow
-    
     
     //Struct for gyro-data
     gyro_data gdata;
@@ -125,7 +127,7 @@ int main(void)
         UART_1_PutString(buf);
 
         /*Print out temperature*/
-        sprintf(buf,"------ Temperature (C) ------\r\nTemperature: %f\r\n",
+        sprintf(buf,"------ TEMPERATURE (C) ------\r\nTemperature: %f\r\n",
             temperature_C
         );
         UART_1_PutString(buf);

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SonarSensor\SonarSensor\Source Files\main.c">
+<ExpandedNodeIds>
+<v>SonarSensor</v>
+<v>SonarSensor\SonarSensor</v>
+<v>SonarSensor\SonarSensor\TopDesign</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Pins</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Analog</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Clocks</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Interrupts</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\DMA</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\System</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Directives</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Flash Security</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\EEPROM</v>
+<v>SonarSensor\SonarSensor\Header Files</v>
+<v>SonarSensor\SonarSensor\Header Files\cyapicallbacks.h</v>
+<v>SonarSensor\SonarSensor\Source Files</v>
+<v>SonarSensor\SonarSensor\Source Files\main.c</v>
+<v>SonarSensor\SonarSensor\Generated_Source</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SonarSensor</v>
+<v>SonarSensor\SonarSensor</v>
+<v>SonarSensor\SonarSensor\TopDesign</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Pins</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Analog</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Clocks</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Interrupts</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\DMA</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\System</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Directives</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\Flash Security</v>
+<v>SonarSensor\SonarSensor\SonarSensor.cydwr\EEPROM</v>
+<v>SonarSensor\SonarSensor\Header Files</v>
+<v>SonarSensor\SonarSensor\Header Files\cyapicallbacks.h</v>
+<v>SonarSensor\SonarSensor\Source Files</v>
+<v>SonarSensor\SonarSensor\Source Files\main.c</v>
+<v>SonarSensor\SonarSensor\Generated_Source</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\Clock</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\cy_boot</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\I2C_1</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\Pin_1</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\SCL_1</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\SDA_1</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\UART_1</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\UART_1_IntClock</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\cydevice.h</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>SonarSensor\SonarSensor\Generated_Source\PSoC5\cydeviceiar.inc</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SonarSensor</v>
+<v>SonarSensor\SonarSensor</v>
+<v>SonarSensor\SonarSensor\TopDesign</v>
+<v>SonarSensor\SonarSensor\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SonarSensor</v>
+<v>SonarSensor\SonarSensor</v>
+<v>SonarSensor\SonarSensor\TopDesign</v>
+<v>SonarSensor\SonarSensor\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SonarSensor</v>
+<v>SonarSensor\SonarSensor</v>
+<v>SonarSensor\SonarSensor\CortexM3</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\SonarSensor.elf</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\SonarSensor.hex</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\SonarSensor.map</v>
+<v>SonarSensor\SonarSensor\SonarSensor.gpdsc</v>
+<v>SonarSensor\SonarSensor\SonarSensor.rpt</v>
+<v>SonarSensor\SonarSensor\SonarSensor_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SonarSensor</v>
+<v>SonarSensor\SonarSensor</v>
+<v>SonarSensor\SonarSensor\CortexM3</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\SonarSensor.elf</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\SonarSensor.hex</v>
+<v>SonarSensor\SonarSensor\CortexM3\ARM_GCC_541\Debug\SonarSensor.map</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SonarSensor</v>
+<v>SonarSensor\SonarSensor</v>
+<v>SonarSensor\SonarSensor\PSoC 5LP Architecture TRM</v>
+<v>SonarSensor\SonarSensor\CY8C58LP Family Datasheet</v>
+<v>SonarSensor\SonarSensor\System Reference Guides</v>
+<v>SonarSensor\SonarSensor\System Reference Guides\cy_boot_v5_70</v>
+<v>SonarSensor\SonarSensor\cy_clock_v2_20.pdf</v>
+<v>SonarSensor\SonarSensor\cy_pins_v2_20</v>
+<v>SonarSensor\SonarSensor\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>SonarSensor\SonarSensor\I2C_v3_50.pdf</v>
+<v>SonarSensor\SonarSensor\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SonarSensor</v>
+<v>SonarSensor\SonarSensor</v>
+<v>SonarSensor\SonarSensor\PSoC 5LP Architecture TRM</v>
+<v>SonarSensor\SonarSensor\CY8C58LP Family Datasheet</v>
+<v>SonarSensor\SonarSensor\System Reference Guides</v>
+<v>SonarSensor\SonarSensor\System Reference Guides\cy_boot_v5_70</v>
+<v>SonarSensor\SonarSensor\cy_clock_v2_20.pdf</v>
+<v>SonarSensor\SonarSensor\cy_pins_v2_20</v>
+<v>SonarSensor\SonarSensor\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>SonarSensor\SonarSensor\I2C_v3_50.pdf</v>
+<v>SonarSensor\SonarSensor\UART_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\SonarSensor.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\SonarSensor.cydsn\main.c" />
+<name v=".\SonarSensor.cydsn\SonarSensor.cydwr" />
+<name v=".\SonarSensor.cydsn\Generated_Source\PSoC5\I2C_1_MASTER.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1098, 495" SelectedTabbedMdiWindow="da234fdf-a18f-4489-ad65-eef9a69290fc"><DocumentWindow Key="C:\Users\SYFO\Documents\PSoC Creator\SonarSensor\SonarSensor.cydsn\TopDesign\TopDesign.cysch" Guid="b48c6fe8-f08a-4320-bf88-35a030b00585" /><DocumentWindow Key="C:\Users\SYFO\Documents\PSoC Creator\SonarSensor\SonarSensor.cydsn\main.c" Guid="da234fdf-a18f-4489-ad65-eef9a69290fc" /><DocumentWindow Key="C:\Users\SYFO\Documents\PSoC Creator\SonarSensor\SonarSensor.cydsn\SonarSensor.cydwr" Guid="9776446d-1695-49ac-b3ed-e34f32eeca2d" /><DocumentWindow Key="C:\Users\SYFO\Documents\PSoC Creator\SonarSensor\SonarSensor.cydsn\Generated_Source\PSoC5\I2C_1_MASTER.c" Guid="7f8f4e04-b79c-4674-8b4a-844514b90828" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6f3018fb-d561-4696-b286-3fe2ea90fc61" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
