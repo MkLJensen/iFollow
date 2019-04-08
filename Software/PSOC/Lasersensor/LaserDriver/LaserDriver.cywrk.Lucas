@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LaserDriver\LaserDriver\Source Files\main.c">
+<ExpandedNodeIds>
+<v>LaserDriver</v>
+<v>LaserDriver\LaserDriver</v>
+<v>LaserDriver\LaserDriver\TopDesign</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Pins</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Analog</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Clocks</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Interrupts</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\DMA</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\System</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Directives</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Flash Security</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\EEPROM</v>
+<v>LaserDriver\LaserDriver\Header Files</v>
+<v>LaserDriver\LaserDriver\Header Files\cyapicallbacks.h</v>
+<v>LaserDriver\LaserDriver\Header Files\i2c.h</v>
+<v>LaserDriver\LaserDriver\Header Files\Laser.h</v>
+<v>LaserDriver\LaserDriver\Header Files\Laser_def.h</v>
+<v>LaserDriver\LaserDriver\Source Files</v>
+<v>LaserDriver\LaserDriver\Source Files\i2c.c</v>
+<v>LaserDriver\LaserDriver\Source Files\Laser.c</v>
+<v>LaserDriver\LaserDriver\Source Files\main.c</v>
+<v>LaserDriver\LaserDriver\Generated_Source</v>
+<v>LaserDriver\LaserDriver\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LaserDriver</v>
+<v>LaserDriver\LaserDriver</v>
+<v>LaserDriver\LaserDriver\TopDesign</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Pins</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Analog</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Clocks</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Interrupts</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\DMA</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\System</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Directives</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\Flash Security</v>
+<v>LaserDriver\LaserDriver\LaserDriver.cydwr\EEPROM</v>
+<v>LaserDriver\LaserDriver\Header Files</v>
+<v>LaserDriver\LaserDriver\Header Files\cyapicallbacks.h</v>
+<v>LaserDriver\LaserDriver\Header Files\i2c.h</v>
+<v>LaserDriver\LaserDriver\Header Files\Laser.h</v>
+<v>LaserDriver\LaserDriver\Header Files\Laser_def.h</v>
+<v>LaserDriver\LaserDriver\Source Files</v>
+<v>LaserDriver\LaserDriver\Source Files\i2c.c</v>
+<v>LaserDriver\LaserDriver\Source Files\Laser.c</v>
+<v>LaserDriver\LaserDriver\Source Files\main.c</v>
+<v>LaserDriver\LaserDriver\Generated_Source</v>
+<v>LaserDriver\LaserDriver\Generated_Source\PSoC5</v>
+<v>LaserDriver\LaserDriver\Generated_Source\PSoC5\cy_boot</v>
+<v>LaserDriver\LaserDriver\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>LaserDriver\LaserDriver\Generated_Source\PSoC5\I2C_1</v>
+<v>LaserDriver\LaserDriver\Generated_Source\PSoC5\SCL_1</v>
+<v>LaserDriver\LaserDriver\Generated_Source\PSoC5\SDA_1</v>
+<v>LaserDriver\LaserDriver\Generated_Source\PSoC5\UART_1</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>LaserDriver</v>
+<v>LaserDriver\LaserDriver</v>
+<v>LaserDriver\LaserDriver\TopDesign</v>
+<v>LaserDriver\LaserDriver\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LaserDriver</v>
+<v>LaserDriver\LaserDriver</v>
+<v>LaserDriver\LaserDriver\TopDesign</v>
+<v>LaserDriver\LaserDriver\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>LaserDriver</v>
+<v>LaserDriver\LaserDriver</v>
+<v>LaserDriver\LaserDriver\CortexM3</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\i2c.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\Laser.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\LaserDriver.elf</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\LaserDriver.hex</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\LaserDriver.map</v>
+<v>LaserDriver\LaserDriver\LaserDriver.gpdsc</v>
+<v>LaserDriver\LaserDriver\LaserDriver.rpt</v>
+<v>LaserDriver\LaserDriver\LaserDriver_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LaserDriver</v>
+<v>LaserDriver\LaserDriver</v>
+<v>LaserDriver\LaserDriver\CortexM3</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\i2c.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\Laser.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>LaserDriver\LaserDriver\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>LaserDriver</v>
+<v>LaserDriver\LaserDriver</v>
+<v>LaserDriver\LaserDriver\PSoC 5LP Architecture TRM</v>
+<v>LaserDriver\LaserDriver\CY8C58LP Family Datasheet</v>
+<v>LaserDriver\LaserDriver\System Reference Guides</v>
+<v>LaserDriver\LaserDriver\System Reference Guides\cy_boot_v5_70</v>
+<v>LaserDriver\LaserDriver\cy_pins_v2_20</v>
+<v>LaserDriver\LaserDriver\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>LaserDriver\LaserDriver\I2C_v3_50.pdf</v>
+<v>LaserDriver\LaserDriver\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LaserDriver</v>
+<v>LaserDriver\LaserDriver</v>
+<v>LaserDriver\LaserDriver\PSoC 5LP Architecture TRM</v>
+<v>LaserDriver\LaserDriver\CY8C58LP Family Datasheet</v>
+<v>LaserDriver\LaserDriver\System Reference Guides</v>
+<v>LaserDriver\LaserDriver\System Reference Guides\cy_boot_v5_70</v>
+<v>LaserDriver\LaserDriver\cy_pins_v2_20</v>
+<v>LaserDriver\LaserDriver\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>LaserDriver\LaserDriver\I2C_v3_50.pdf</v>
+<v>LaserDriver\LaserDriver\UART_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\LaserDriver.cydsn\LaserDriver.cydwr" />
+<name v=".\LaserDriver.cydsn\main.c" />
+<name v=".\LaserDriver.cydsn\Laser.c" />
+<name v=".\LaserDriver.cydsn\Laser_def.h" />
+<name v=".\LaserDriver.cydsn\i2c.h" />
+<name v=".\LaserDriver.cydsn\Laser.h" />
+<name v=".\LaserDriver.cydsn\Generated_Source\PSoC5\CyLib.c" />
+<name v=".\LaserDriver.cydsn\i2c.c" />
+<name v=".\LaserDriver.cydsn\Generated_Source\PSoC5\cm3gcc.ld" />
+<name v=".\LaserDriver.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\LaserDriver.cydsn\Generated_Source\PSoC5\I2C_1_MASTER.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="908, 399" SelectedTabbedMdiWindow="9878756f-362c-43ce-9100-fa7b15fd56b9"><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\LaserDriver.cydwr" Guid="54141a21-5fb0-4ffc-a071-c4dbec3b4fef" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\main.c" Guid="49d4d39e-92f8-4e56-8ccf-63927892395f" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Laser.c" Guid="78e90380-05c9-4d7b-a75d-86e33d1cad67" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Laser_def.h" Guid="1f98af6a-cc29-4555-a65a-e7ceca49212b" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\i2c.h" Guid="a72f2bca-434c-4abe-bbc6-3d562ec8be79" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Laser.h" Guid="02ae42b8-10cb-4642-afdf-b557207f5042" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Generated_Source\PSoC5\CyLib.c" Guid="0014b739-60ad-4914-ac2f-7bac01f62ba2" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\i2c.c" Guid="9878756f-362c-43ce-9100-fa7b15fd56b9" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Generated_Source\PSoC5\cm3gcc.ld" Guid="e02c95fe-2ed6-4bba-82ca-572938124cfa" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\TopDesign\TopDesign.cysch" Guid="b440c6ff-8c55-44bf-9269-82ef6ae20b75" /><DocumentWindow Key="C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Generated_Source\PSoC5\I2C_1_MASTER.c" Guid="dfe3209e-47d2-4eab-84ef-7a6ade1336ec" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

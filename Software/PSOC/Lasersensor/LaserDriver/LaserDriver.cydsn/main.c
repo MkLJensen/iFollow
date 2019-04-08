@@ -35,12 +35,18 @@ char* buf;
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
-
+    UART_1_Start();
+    UART_1_PutString("Program started!\r\n");
+    
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
     Laser VL53L0X;
+    UART_1_PutString("Created Laser Object!\r\n");
     VL53L0X.Init(false);
+    UART_1_PutString("Initialized VL53L0X\r\n");
     VL53L0X.SetTimeout(500);
+    UART_1_PutString("Set timeout!\r\n");
     VL53L0X.StartContinuous();
+    UART_1_PutString("Started continuous!\r\n");
     
     for(;;)
     {

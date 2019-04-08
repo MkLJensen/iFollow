@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 1
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 1
 
 
    1              		.syntax unified
@@ -10,7 +10,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 6
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.thumb
@@ -19,1624 +19,1417 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.global	cy_metadata
-  20              		.global	cy_meta_flashprotect
-  21              		.global	cy_meta_wonvl
-  22              		.global	cy_meta_custnvl
-  23              		.global	cy_meta_configecc
-  24              		.section	.cyconfigecc,"a",%progbits
-  25              		.align	2
-  26              		.type	cy_meta_configecc, %object
-  27              		.size	cy_meta_configecc, 1096
-  28              	cy_meta_configecc:
-  29 0000 04       		.byte	4
-  30 0001 52       		.byte	82
-  31 0002 00       		.byte	0
-  32 0003 40       		.byte	64
-  33 0004 03       		.byte	3
-  34 0005 64       		.byte	100
-  35 0006 00       		.byte	0
-  36 0007 40       		.byte	64
-  37 0008 43       		.byte	67
-  38 0009 00       		.byte	0
-  39 000a 01       		.byte	1
-  40 000b 40       		.byte	64
-  41 000c 33       		.byte	51
-  42 000d 01       		.byte	1
-  43 000e 01       		.byte	1
-  44 000f 40       		.byte	64
-  45 0010 4C       		.byte	76
-  46 0011 02       		.byte	2
-  47 0012 01       		.byte	1
-  48 0013 40       		.byte	64
-  49 0014 49       		.byte	73
-  50 0015 03       		.byte	3
-  51 0016 01       		.byte	1
-  52 0017 40       		.byte	64
-  53 0018 4E       		.byte	78
-  54 0019 04       		.byte	4
-  55 001a 01       		.byte	1
-  56 001b 40       		.byte	64
-  57 001c 44       		.byte	68
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 2
+  19              		.global	cy_meta_configecc
+  20              		.section	.cyconfigecc,"a",%progbits
+  21              		.align	2
+  22              		.type	cy_meta_configecc, %object
+  23              		.size	cy_meta_configecc, 896
+  24              	cy_meta_configecc:
+  25 0000 03       		.byte	3
+  26 0001 65       		.byte	101
+  27 0002 00       		.byte	0
+  28 0003 40       		.byte	64
+  29 0004 03       		.byte	3
+  30 0005 15       		.byte	21
+  31 0006 01       		.byte	1
+  32 0007 40       		.byte	64
+  33 0008 01       		.byte	1
+  34 0009 17       		.byte	23
+  35 000a 01       		.byte	1
+  36 000b 40       		.byte	64
+  37 000c 14       		.byte	20
+  38 000d 18       		.byte	24
+  39 000e 01       		.byte	1
+  40 000f 40       		.byte	64
+  41 0010 45       		.byte	69
+  42 0011 19       		.byte	25
+  43 0012 01       		.byte	1
+  44 0013 40       		.byte	64
+  45 0014 70       		.byte	112
+  46 0015 1A       		.byte	26
+  47 0016 01       		.byte	1
+  48 0017 40       		.byte	64
+  49 0018 56       		.byte	86
+  50 0019 1B       		.byte	27
+  51 001a 01       		.byte	1
+  52 001b 40       		.byte	64
+  53 001c 02       		.byte	2
+  54 001d 42       		.byte	66
+  55 001e 01       		.byte	1
+  56 001f 40       		.byte	64
+  57 0020 01       		.byte	1
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 2
 
 
-  58 001d 05       		.byte	5
-  59 001e 01       		.byte	1
-  60 001f 40       		.byte	64
-  61 0020 01       		.byte	1
-  62 0021 07       		.byte	7
-  63 0022 01       		.byte	1
-  64 0023 40       		.byte	64
-  65 0024 02       		.byte	2
-  66 0025 0B       		.byte	11
-  67 0026 01       		.byte	1
-  68 0027 40       		.byte	64
-  69 0028 01       		.byte	1
-  70 0029 0D       		.byte	13
-  71 002a 01       		.byte	1
-  72 002b 40       		.byte	64
-  73 002c 01       		.byte	1
-  74 002d 15       		.byte	21
-  75 002e 01       		.byte	1
-  76 002f 40       		.byte	64
-  77 0030 01       		.byte	1
-  78 0031 1B       		.byte	27
-  79 0032 01       		.byte	1
-  80 0033 40       		.byte	64
-  81 0034 09       		.byte	9
-  82 0035 41       		.byte	65
-  83 0036 01       		.byte	1
-  84 0037 40       		.byte	64
-  85 0038 0D       		.byte	13
-  86 0039 42       		.byte	66
-  87 003a 01       		.byte	1
-  88 003b 40       		.byte	64
-  89 003c 03       		.byte	3
-  90 003d 43       		.byte	67
-  91 003e 01       		.byte	1
-  92 003f 40       		.byte	64
-  93 0040 02       		.byte	2
-  94 0041 45       		.byte	69
-  95 0042 01       		.byte	1
-  96 0043 40       		.byte	64
-  97 0044 05       		.byte	5
-  98 0045 46       		.byte	70
-  99 0046 01       		.byte	1
- 100 0047 40       		.byte	64
- 101 0048 04       		.byte	4
- 102 0049 47       		.byte	71
- 103 004a 01       		.byte	1
- 104 004b 40       		.byte	64
- 105 004c 01       		.byte	1
- 106 004d 48       		.byte	72
- 107 004e 01       		.byte	1
- 108 004f 40       		.byte	64
- 109 0050 02       		.byte	2
- 110 0051 49       		.byte	73
- 111 0052 01       		.byte	1
- 112 0053 40       		.byte	64
- 113 0054 0B       		.byte	11
- 114 0055 4C       		.byte	76
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 3
+  58 0021 43       		.byte	67
+  59 0022 01       		.byte	1
+  60 0023 40       		.byte	64
+  61 0024 03       		.byte	3
+  62 0025 48       		.byte	72
+  63 0026 01       		.byte	1
+  64 0027 40       		.byte	64
+  65 0028 10       		.byte	16
+  66 0029 49       		.byte	73
+  67 002a 01       		.byte	1
+  68 002b 40       		.byte	64
+  69 002c 09       		.byte	9
+  70 002d 4C       		.byte	76
+  71 002e 01       		.byte	1
+  72 002f 40       		.byte	64
+  73 0030 0C       		.byte	12
+  74 0031 4D       		.byte	77
+  75 0032 01       		.byte	1
+  76 0033 40       		.byte	64
+  77 0034 02       		.byte	2
+  78 0035 50       		.byte	80
+  79 0036 01       		.byte	1
+  80 0037 40       		.byte	64
+  81 0038 01       		.byte	1
+  82 0039 51       		.byte	81
+  83 003a 01       		.byte	1
+  84 003b 40       		.byte	64
+  85 003c 88       		.byte	-120
+  86 003d 72       		.byte	114
+  87 003e 89       		.byte	-119
+  88 003f 38       		.byte	56
+  89 0040 8B       		.byte	-117
+  90 0041 0F       		.byte	15
+  91 0042 E0       		.byte	-32
+  92 0043 08       		.byte	8
+  93 0044 E4       		.byte	-28
+  94 0045 01       		.byte	1
+  95 0046 EA       		.byte	-22
+  96 0047 05       		.byte	5
+  97 0048 E2       		.byte	-30
+  98 0049 04       		.byte	4
+  99 004a 86       		.byte	-122
+ 100 004b 02       		.byte	2
+ 101 004c 88       		.byte	-120
+ 102 004d 04       		.byte	4
+ 103 004e 95       		.byte	-107
+ 104 004f 01       		.byte	1
+ 105 0050 9A       		.byte	-102
+ 106 0051 08       		.byte	8
+ 107 0052 A2       		.byte	-94
+ 108 0053 02       		.byte	2
+ 109 0054 A4       		.byte	-92
+ 110 0055 01       		.byte	1
+ 111 0056 A8       		.byte	-88
+ 112 0057 01       		.byte	1
+ 113 0058 AC       		.byte	-84
+ 114 0059 01       		.byte	1
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 3
 
 
- 115 0056 01       		.byte	1
- 116 0057 40       		.byte	64
- 117 0058 01       		.byte	1
- 118 0059 4D       		.byte	77
- 119 005a 01       		.byte	1
- 120 005b 40       		.byte	64
- 121 005c 03       		.byte	3
- 122 005d 50       		.byte	80
- 123 005e 01       		.byte	1
- 124 005f 40       		.byte	64
- 125 0060 01       		.byte	1
- 126 0061 51       		.byte	81
- 127 0062 01       		.byte	1
- 128 0063 40       		.byte	64
- 129 0064 00       		.byte	0
- 130 0065 08       		.byte	8
- 131 0066 01       		.byte	1
- 132 0067 08       		.byte	8
- 133 0068 04       		.byte	4
- 134 0069 0D       		.byte	13
- 135 006a 61       		.byte	97
- 136 006b 08       		.byte	8
- 137 006c 81       		.byte	-127
- 138 006d 72       		.byte	114
- 139 006e 82       		.byte	-126
- 140 006f 0F       		.byte	15
- 141 0070 85       		.byte	-123
- 142 0071 38       		.byte	56
- 143 0072 04       		.byte	4
- 144 0073 01       		.byte	1
- 145 0074 10       		.byte	16
- 146 0075 01       		.byte	1
- 147 0076 18       		.byte	24
- 148 0077 01       		.byte	1
- 149 0078 28       		.byte	40
- 150 0079 01       		.byte	1
- 151 007a 30       		.byte	48
- 152 007b 01       		.byte	1
- 153 007c 3A       		.byte	58
- 154 007d 20       		.byte	32
- 155 007e 3E       		.byte	62
- 156 007f 01       		.byte	1
- 157 0080 58       		.byte	88
- 158 0081 04       		.byte	4
- 159 0082 5F       		.byte	95
- 160 0083 01       		.byte	1
- 161 0084 80       		.byte	-128
- 162 0085 03       		.byte	3
- 163 0086 83       		.byte	-125
- 164 0087 E3       		.byte	-29
- 165 0088 84       		.byte	-124
- 166 0089 0C       		.byte	12
- 167 008a 85       		.byte	-123
- 168 008b FF       		.byte	-1
- 169 008c 86       		.byte	-122
- 170 008d 13       		.byte	19
- 171 008e 88       		.byte	-120
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 4
+ 115 005a B0       		.byte	-80
+ 116 005b 02       		.byte	2
+ 117 005c B2       		.byte	-78
+ 118 005d 08       		.byte	8
+ 119 005e B4       		.byte	-76
+ 120 005f 01       		.byte	1
+ 121 0060 B5       		.byte	-75
+ 122 0061 01       		.byte	1
+ 123 0062 B6       		.byte	-74
+ 124 0063 04       		.byte	4
+ 125 0064 BE       		.byte	-66
+ 126 0065 41       		.byte	65
+ 127 0066 BF       		.byte	-65
+ 128 0067 10       		.byte	16
+ 129 0068 D4       		.byte	-44
+ 130 0069 18       		.byte	24
+ 131 006a D8       		.byte	-40
+ 132 006b 04       		.byte	4
+ 133 006c D9       		.byte	-39
+ 134 006d 04       		.byte	4
+ 135 006e DB       		.byte	-37
+ 136 006f 04       		.byte	4
+ 137 0070 DF       		.byte	-33
+ 138 0071 01       		.byte	1
+ 139 0072 01       		.byte	1
+ 140 0073 20       		.byte	32
+ 141 0074 02       		.byte	2
+ 142 0075 20       		.byte	32
+ 143 0076 05       		.byte	5
+ 144 0077 01       		.byte	1
+ 145 0078 06       		.byte	6
+ 146 0079 06       		.byte	6
+ 147 007a 07       		.byte	7
+ 148 007b 10       		.byte	16
+ 149 007c 08       		.byte	8
+ 150 007d 20       		.byte	32
+ 151 007e 0C       		.byte	12
+ 152 007f 40       		.byte	64
+ 153 0080 0E       		.byte	14
+ 154 0081 0A       		.byte	10
+ 155 0082 0F       		.byte	15
+ 156 0083 20       		.byte	32
+ 157 0084 10       		.byte	16
+ 158 0085 A2       		.byte	-94
+ 159 0086 11       		.byte	17
+ 160 0087 10       		.byte	16
+ 161 0088 14       		.byte	20
+ 162 0089 80       		.byte	-128
+ 163 008a 16       		.byte	22
+ 164 008b 01       		.byte	1
+ 165 008c 17       		.byte	23
+ 166 008d 28       		.byte	40
+ 167 008e 19       		.byte	25
+ 168 008f 08       		.byte	8
+ 169 0090 1A       		.byte	26
+ 170 0091 01       		.byte	1
+ 171 0092 1B       		.byte	27
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 4
 
 
- 172 008f 02       		.byte	2
- 173 0090 89       		.byte	-119
- 174 0091 80       		.byte	-128
- 175 0092 8C       		.byte	-116
- 176 0093 08       		.byte	8
- 177 0094 8D       		.byte	-115
- 178 0095 44       		.byte	68
- 179 0096 90       		.byte	-112
- 180 0097 0F       		.byte	15
- 181 0098 91       		.byte	-111
- 182 0099 1C       		.byte	28
- 183 009a 92       		.byte	-110
- 184 009b 10       		.byte	16
- 185 009c 93       		.byte	-109
- 186 009d E1       		.byte	-31
- 187 009e 94       		.byte	-108
- 188 009f 1F       		.byte	31
- 189 00a0 95       		.byte	-107
- 190 00a1 08       		.byte	8
- 191 00a2 98       		.byte	-104
- 192 00a3 13       		.byte	19
- 193 00a4 99       		.byte	-103
- 194 00a5 18       		.byte	24
- 195 00a6 9A       		.byte	-102
- 196 00a7 0C       		.byte	12
- 197 00a8 9D       		.byte	-99
- 198 00a9 10       		.byte	16
- 199 00aa 9E       		.byte	-98
- 200 00ab 13       		.byte	19
- 201 00ac A1       		.byte	-95
- 202 00ad E7       		.byte	-25
- 203 00ae A3       		.byte	-93
- 204 00af 18       		.byte	24
- 205 00b0 A4       		.byte	-92
- 206 00b1 04       		.byte	4
- 207 00b2 A7       		.byte	-89
- 208 00b3 04       		.byte	4
- 209 00b4 A8       		.byte	-88
- 210 00b5 0C       		.byte	12
- 211 00b6 A9       		.byte	-87
- 212 00b7 3C       		.byte	60
- 213 00b8 AB       		.byte	-85
- 214 00b9 C2       		.byte	-62
- 215 00ba AC       		.byte	-84
- 216 00bb 01       		.byte	1
- 217 00bc AD       		.byte	-83
- 218 00bd C0       		.byte	-64
- 219 00be B0       		.byte	-80
- 220 00bf 1C       		.byte	28
- 221 00c0 B3       		.byte	-77
- 222 00c1 1F       		.byte	31
- 223 00c2 B4       		.byte	-76
- 224 00c3 0F       		.byte	15
- 225 00c4 B5       		.byte	-75
- 226 00c5 38       		.byte	56
- 227 00c6 B7       		.byte	-73
- 228 00c7 C0       		.byte	-64
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 5
+ 172 0093 11       		.byte	17
+ 173 0094 1C       		.byte	28
+ 174 0095 10       		.byte	16
+ 175 0096 1D       		.byte	29
+ 176 0097 21       		.byte	33
+ 177 0098 1E       		.byte	30
+ 178 0099 0A       		.byte	10
+ 179 009a 1F       		.byte	31
+ 180 009b 02       		.byte	2
+ 181 009c 23       		.byte	35
+ 182 009d 04       		.byte	4
+ 183 009e 26       		.byte	38
+ 184 009f 20       		.byte	32
+ 185 00a0 27       		.byte	39
+ 186 00a1 11       		.byte	17
+ 187 00a2 2D       		.byte	45
+ 188 00a3 08       		.byte	8
+ 189 00a4 2E       		.byte	46
+ 190 00a5 02       		.byte	2
+ 191 00a6 2F       		.byte	47
+ 192 00a7 05       		.byte	5
+ 193 00a8 30       		.byte	48
+ 194 00a9 08       		.byte	8
+ 195 00aa 34       		.byte	52
+ 196 00ab 80       		.byte	-128
+ 197 00ac 35       		.byte	53
+ 198 00ad 05       		.byte	5
+ 199 00ae 37       		.byte	55
+ 200 00af 10       		.byte	16
+ 201 00b0 3A       		.byte	58
+ 202 00b1 05       		.byte	5
+ 203 00b2 3B       		.byte	59
+ 204 00b3 09       		.byte	9
+ 205 00b4 3E       		.byte	62
+ 206 00b5 88       		.byte	-120
+ 207 00b6 3F       		.byte	63
+ 208 00b7 21       		.byte	33
+ 209 00b8 44       		.byte	68
+ 210 00b9 40       		.byte	64
+ 211 00ba 45       		.byte	69
+ 212 00bb 20       		.byte	32
+ 213 00bc 46       		.byte	70
+ 214 00bd 80       		.byte	-128
+ 215 00be 47       		.byte	71
+ 216 00bf 40       		.byte	64
+ 217 00c0 4C       		.byte	76
+ 218 00c1 80       		.byte	-128
+ 219 00c2 4F       		.byte	79
+ 220 00c3 60       		.byte	96
+ 221 00c4 57       		.byte	87
+ 222 00c5 40       		.byte	64
+ 223 00c6 5B       		.byte	91
+ 224 00c7 01       		.byte	1
+ 225 00c8 5C       		.byte	92
+ 226 00c9 10       		.byte	16
+ 227 00ca 60       		.byte	96
+ 228 00cb 04       		.byte	4
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 5
 
 
- 229 00c8 BA       		.byte	-70
- 230 00c9 22       		.byte	34
- 231 00ca BB       		.byte	-69
- 232 00cb 08       		.byte	8
- 233 00cc C0       		.byte	-64
- 234 00cd 34       		.byte	52
- 235 00ce C1       		.byte	-63
- 236 00cf 05       		.byte	5
- 237 00d0 C5       		.byte	-59
- 238 00d1 0C       		.byte	12
- 239 00d2 C6       		.byte	-58
- 240 00d3 B0       		.byte	-80
- 241 00d4 C7       		.byte	-57
- 242 00d5 E0       		.byte	-32
- 243 00d6 C8       		.byte	-56
- 244 00d7 29       		.byte	41
- 245 00d8 C9       		.byte	-55
- 246 00d9 FF       		.byte	-1
- 247 00da CA       		.byte	-54
- 248 00db FF       		.byte	-1
- 249 00dc CB       		.byte	-53
- 250 00dd FF       		.byte	-1
- 251 00de CE       		.byte	-50
- 252 00df F0       		.byte	-16
- 253 00e0 CF       		.byte	-49
- 254 00e1 44       		.byte	68
- 255 00e2 D0       		.byte	-48
- 256 00e3 0C       		.byte	12
- 257 00e4 D6       		.byte	-42
- 258 00e5 02       		.byte	2
- 259 00e6 D7       		.byte	-41
- 260 00e7 10       		.byte	16
- 261 00e8 D8       		.byte	-40
- 262 00e9 04       		.byte	4
- 263 00ea D9       		.byte	-39
- 264 00eb 04       		.byte	4
- 265 00ec DA       		.byte	-38
- 266 00ed 04       		.byte	4
- 267 00ee DB       		.byte	-37
- 268 00ef 04       		.byte	4
- 269 00f0 DF       		.byte	-33
- 270 00f1 01       		.byte	1
- 271 00f2 E6       		.byte	-26
- 272 00f3 C0       		.byte	-64
- 273 00f4 EA       		.byte	-22
- 274 00f5 40       		.byte	64
- 275 00f6 EB       		.byte	-21
- 276 00f7 02       		.byte	2
- 277 00f8 00       		.byte	0
- 278 00f9 04       		.byte	4
- 279 00fa 04       		.byte	4
- 280 00fb 12       		.byte	18
- 281 00fc 06       		.byte	6
- 282 00fd 81       		.byte	-127
- 283 00fe 07       		.byte	7
- 284 00ff 10       		.byte	16
- 285 0100 09       		.byte	9
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 6
+ 229 00cc 63       		.byte	99
+ 230 00cd 02       		.byte	2
+ 231 00ce 6C       		.byte	108
+ 232 00cf 22       		.byte	34
+ 233 00d0 6D       		.byte	109
+ 234 00d1 10       		.byte	16
+ 235 00d2 6E       		.byte	110
+ 236 00d3 04       		.byte	4
+ 237 00d4 75       		.byte	117
+ 238 00d5 04       		.byte	4
+ 239 00d6 76       		.byte	118
+ 240 00d7 09       		.byte	9
+ 241 00d8 77       		.byte	119
+ 242 00d9 28       		.byte	40
+ 243 00da 86       		.byte	-122
+ 244 00db 01       		.byte	1
+ 245 00dc 8A       		.byte	-118
+ 246 00dd 20       		.byte	32
+ 247 00de 8B       		.byte	-117
+ 248 00df 40       		.byte	64
+ 249 00e0 8E       		.byte	-114
+ 250 00e1 04       		.byte	4
+ 251 00e2 8F       		.byte	-113
+ 252 00e3 01       		.byte	1
+ 253 00e4 C0       		.byte	-64
+ 254 00e5 F6       		.byte	-10
+ 255 00e6 C2       		.byte	-62
+ 256 00e7 E2       		.byte	-30
+ 257 00e8 C4       		.byte	-60
+ 258 00e9 FF       		.byte	-1
+ 259 00ea CA       		.byte	-54
+ 260 00eb F0       		.byte	-16
+ 261 00ec CC       		.byte	-52
+ 262 00ed F2       		.byte	-14
+ 263 00ee CE       		.byte	-50
+ 264 00ef F0       		.byte	-16
+ 265 00f0 D0       		.byte	-48
+ 266 00f1 B0       		.byte	-80
+ 267 00f2 D2       		.byte	-46
+ 268 00f3 30       		.byte	48
+ 269 00f4 D6       		.byte	-42
+ 270 00f5 21       		.byte	33
+ 271 00f6 D8       		.byte	-40
+ 272 00f7 0C       		.byte	12
+ 273 00f8 E0       		.byte	-32
+ 274 00f9 08       		.byte	8
+ 275 00fa E2       		.byte	-30
+ 276 00fb 04       		.byte	4
+ 277 00fc 00       		.byte	0
+ 278 00fd 0C       		.byte	12
+ 279 00fe 02       		.byte	2
+ 280 00ff 71       		.byte	113
+ 281 0100 05       		.byte	5
+ 282 0101 80       		.byte	-128
+ 283 0102 06       		.byte	6
+ 284 0103 03       		.byte	3
+ 285 0104 07       		.byte	7
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 6
 
 
- 286 0101 22       		.byte	34
- 287 0102 0D       		.byte	13
- 288 0103 20       		.byte	32
- 289 0104 0E       		.byte	14
- 290 0105 41       		.byte	65
- 291 0106 0F       		.byte	15
- 292 0107 20       		.byte	32
- 293 0108 10       		.byte	16
- 294 0109 08       		.byte	8
- 295 010a 12       		.byte	18
- 296 010b 08       		.byte	8
- 297 010c 14       		.byte	20
- 298 010d 02       		.byte	2
- 299 010e 17       		.byte	23
- 300 010f 28       		.byte	40
- 301 0110 18       		.byte	24
- 302 0111 44       		.byte	68
- 303 0112 1A       		.byte	26
- 304 0113 08       		.byte	8
- 305 0114 1B       		.byte	27
- 306 0115 10       		.byte	16
- 307 0116 1D       		.byte	29
- 308 0117 23       		.byte	35
- 309 0118 1E       		.byte	30
- 310 0119 40       		.byte	64
- 311 011a 24       		.byte	36
- 312 011b 01       		.byte	1
- 313 011c 26       		.byte	38
- 314 011d 18       		.byte	24
- 315 011e 27       		.byte	39
- 316 011f 14       		.byte	20
- 317 0120 2C       		.byte	44
- 318 0121 08       		.byte	8
- 319 0122 2D       		.byte	45
- 320 0123 01       		.byte	1
- 321 0124 2E       		.byte	46
- 322 0125 80       		.byte	-128
- 323 0126 2F       		.byte	47
- 324 0127 20       		.byte	32
- 325 0128 35       		.byte	53
- 326 0129 41       		.byte	65
- 327 012a 37       		.byte	55
- 328 012b 28       		.byte	40
- 329 012c 3C       		.byte	60
- 330 012d 14       		.byte	20
- 331 012e 3E       		.byte	62
- 332 012f 01       		.byte	1
- 333 0130 3F       		.byte	63
- 334 0131 40       		.byte	64
- 335 0132 44       		.byte	68
- 336 0133 40       		.byte	64
- 337 0134 45       		.byte	69
- 338 0135 08       		.byte	8
- 339 0136 4D       		.byte	77
- 340 0137 80       		.byte	-128
- 341 0138 4F       		.byte	79
- 342 0139 04       		.byte	4
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 7
+ 286 0105 13       		.byte	19
+ 287 0106 0F       		.byte	15
+ 288 0107 0C       		.byte	12
+ 289 0108 10       		.byte	16
+ 290 0109 09       		.byte	9
+ 291 010a 12       		.byte	18
+ 292 010b D0       		.byte	-48
+ 293 010c 14       		.byte	20
+ 294 010d 14       		.byte	20
+ 295 010e 15       		.byte	21
+ 296 010f 2C       		.byte	44
+ 297 0110 17       		.byte	23
+ 298 0111 43       		.byte	67
+ 299 0112 18       		.byte	24
+ 300 0113 10       		.byte	16
+ 301 0114 19       		.byte	25
+ 302 0115 71       		.byte	113
+ 303 0116 1A       		.byte	26
+ 304 0117 AC       		.byte	-84
+ 305 0118 1B       		.byte	27
+ 306 0119 06       		.byte	6
+ 307 011a 1F       		.byte	31
+ 308 011b 08       		.byte	8
+ 309 011c 20       		.byte	32
+ 310 011d 10       		.byte	16
+ 311 011e 21       		.byte	33
+ 312 011f 71       		.byte	113
+ 313 0120 22       		.byte	34
+ 314 0121 40       		.byte	64
+ 315 0122 23       		.byte	35
+ 316 0123 0E       		.byte	14
+ 317 0124 26       		.byte	38
+ 318 0125 20       		.byte	32
+ 319 0126 28       		.byte	40
+ 320 0127 DC       		.byte	-36
+ 321 0128 2A       		.byte	42
+ 322 0129 22       		.byte	34
+ 323 012a 30       		.byte	48
+ 324 012b E0       		.byte	-32
+ 325 012c 31       		.byte	49
+ 326 012d C0       		.byte	-64
+ 327 012e 33       		.byte	51
+ 328 012f 0F       		.byte	15
+ 329 0130 34       		.byte	52
+ 330 0131 1F       		.byte	31
+ 331 0132 35       		.byte	53
+ 332 0133 30       		.byte	48
+ 333 0134 39       		.byte	57
+ 334 0135 22       		.byte	34
+ 335 0136 3A       		.byte	58
+ 336 0137 02       		.byte	2
+ 337 0138 3B       		.byte	59
+ 338 0139 08       		.byte	8
+ 339 013a 3F       		.byte	63
+ 340 013b 10       		.byte	16
+ 341 013c 40       		.byte	64
+ 342 013d 02       		.byte	2
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 7
 
 
- 343 013a 56       		.byte	86
- 344 013b 10       		.byte	16
- 345 013c 57       		.byte	87
- 346 013d 02       		.byte	2
- 347 013e 5C       		.byte	92
- 348 013f 40       		.byte	64
- 349 0140 6D       		.byte	109
- 350 0141 10       		.byte	16
- 351 0142 6E       		.byte	110
- 352 0143 04       		.byte	4
- 353 0144 6F       		.byte	111
- 354 0145 01       		.byte	1
- 355 0146 75       		.byte	117
- 356 0147 40       		.byte	64
- 357 0148 76       		.byte	118
- 358 0149 01       		.byte	1
- 359 014a 77       		.byte	119
- 360 014b 28       		.byte	40
- 361 014c C0       		.byte	-64
- 362 014d F4       		.byte	-12
- 363 014e C2       		.byte	-62
- 364 014f FA       		.byte	-6
- 365 0150 C4       		.byte	-60
- 366 0151 E2       		.byte	-30
- 367 0152 CA       		.byte	-54
- 368 0153 F0       		.byte	-16
- 369 0154 CC       		.byte	-52
- 370 0155 F0       		.byte	-16
- 371 0156 CE       		.byte	-50
- 372 0157 F0       		.byte	-16
- 373 0158 D0       		.byte	-48
- 374 0159 C0       		.byte	-64
- 375 015a D2       		.byte	-46
- 376 015b 10       		.byte	16
- 377 015c D6       		.byte	-42
- 378 015d 10       		.byte	16
- 379 015e 01       		.byte	1
- 380 015f 04       		.byte	4
- 381 0160 02       		.byte	2
- 382 0161 01       		.byte	1
- 383 0162 03       		.byte	3
- 384 0163 02       		.byte	2
- 385 0164 05       		.byte	5
- 386 0165 06       		.byte	6
- 387 0166 06       		.byte	6
- 388 0167 04       		.byte	4
- 389 0168 09       		.byte	9
- 390 0169 06       		.byte	6
- 391 016a 0C       		.byte	12
- 392 016b 04       		.byte	4
- 393 016c 0F       		.byte	15
- 394 016d 01       		.byte	1
- 395 016e 11       		.byte	17
- 396 016f 01       		.byte	1
- 397 0170 12       		.byte	18
- 398 0171 0A       		.byte	10
- 399 0172 14       		.byte	20
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 8
+ 343 013e 46       		.byte	70
+ 344 013f 04       		.byte	4
+ 345 0140 49       		.byte	73
+ 346 0141 FF       		.byte	-1
+ 347 0142 4A       		.byte	74
+ 348 0143 07       		.byte	7
+ 349 0144 4B       		.byte	75
+ 350 0145 FF       		.byte	-1
+ 351 0146 4C       		.byte	76
+ 352 0147 40       		.byte	64
+ 353 0148 4D       		.byte	77
+ 354 0149 20       		.byte	32
+ 355 014a 4E       		.byte	78
+ 356 014b F0       		.byte	-16
+ 357 014c 4F       		.byte	79
+ 358 014d 05       		.byte	5
+ 359 014e 50       		.byte	80
+ 360 014f 08       		.byte	8
+ 361 0150 58       		.byte	88
+ 362 0151 04       		.byte	4
+ 363 0152 59       		.byte	89
+ 364 0153 04       		.byte	4
+ 365 0154 5A       		.byte	90
+ 366 0155 04       		.byte	4
+ 367 0156 5F       		.byte	95
+ 368 0157 01       		.byte	1
+ 369 0158 60       		.byte	96
+ 370 0159 40       		.byte	64
+ 371 015a 61       		.byte	97
+ 372 015b A8       		.byte	-88
+ 373 015c 62       		.byte	98
+ 374 015d 40       		.byte	64
+ 375 015e 63       		.byte	99
+ 376 015f 20       		.byte	32
+ 377 0160 80       		.byte	-128
+ 378 0161 13       		.byte	19
+ 379 0162 81       		.byte	-127
+ 380 0163 08       		.byte	8
+ 381 0164 82       		.byte	-126
+ 382 0165 04       		.byte	4
+ 383 0166 83       		.byte	-125
+ 384 0167 14       		.byte	20
+ 385 0168 84       		.byte	-124
+ 386 0169 20       		.byte	32
+ 387 016a 86       		.byte	-122
+ 388 016b C0       		.byte	-64
+ 389 016c 87       		.byte	-121
+ 390 016d 20       		.byte	32
+ 391 016e 88       		.byte	-120
+ 392 016f 13       		.byte	19
+ 393 0170 89       		.byte	-119
+ 394 0171 18       		.byte	24
+ 395 0172 8A       		.byte	-118
+ 396 0173 0C       		.byte	12
+ 397 0174 8F       		.byte	-113
+ 398 0175 20       		.byte	32
+ 399 0176 92       		.byte	-110
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 8
 
 
- 400 0173 04       		.byte	4
- 401 0174 15       		.byte	21
- 402 0175 08       		.byte	8
- 403 0176 1A       		.byte	26
- 404 0177 04       		.byte	4
- 405 0178 1B       		.byte	27
- 406 0179 01       		.byte	1
- 407 017a 1D       		.byte	29
- 408 017b 08       		.byte	8
- 409 017c 21       		.byte	33
- 410 017d 01       		.byte	1
- 411 017e 22       		.byte	34
- 412 017f 04       		.byte	4
- 413 0180 25       		.byte	37
- 414 0181 02       		.byte	2
- 415 0182 27       		.byte	39
- 416 0183 04       		.byte	4
- 417 0184 2A       		.byte	42
- 418 0185 02       		.byte	2
- 419 0186 2B       		.byte	43
- 420 0187 08       		.byte	8
- 421 0188 2D       		.byte	45
- 422 0189 10       		.byte	16
- 423 018a 30       		.byte	48
- 424 018b 04       		.byte	4
- 425 018c 31       		.byte	49
- 426 018d 01       		.byte	1
- 427 018e 33       		.byte	51
- 428 018f 06       		.byte	6
- 429 0190 34       		.byte	52
- 430 0191 08       		.byte	8
- 431 0192 35       		.byte	53
- 432 0193 18       		.byte	24
- 433 0194 36       		.byte	54
- 434 0195 03       		.byte	3
- 435 0196 39       		.byte	57
- 436 0197 22       		.byte	34
- 437 0198 3E       		.byte	62
- 438 0199 41       		.byte	65
- 439 019a 40       		.byte	64
- 440 019b 25       		.byte	37
- 441 019c 41       		.byte	65
- 442 019d 06       		.byte	6
- 443 019e 42       		.byte	66
- 444 019f 03       		.byte	3
- 445 01a0 44       		.byte	68
- 446 01a1 01       		.byte	1
- 447 01a2 46       		.byte	70
- 448 01a3 0E       		.byte	14
- 449 01a4 47       		.byte	71
- 450 01a5 C0       		.byte	-64
- 451 01a6 48       		.byte	72
- 452 01a7 24       		.byte	36
- 453 01a8 49       		.byte	73
- 454 01a9 FF       		.byte	-1
- 455 01aa 4A       		.byte	74
- 456 01ab FF       		.byte	-1
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 9
+ 400 0177 08       		.byte	8
+ 401 0178 94       		.byte	-108
+ 402 0179 0A       		.byte	10
+ 403 017a 95       		.byte	-107
+ 404 017b 01       		.byte	1
+ 405 017c 96       		.byte	-106
+ 406 017d 14       		.byte	20
+ 407 017e 98       		.byte	-104
+ 408 017f E0       		.byte	-32
+ 409 0180 9B       		.byte	-101
+ 410 0181 01       		.byte	1
+ 411 0182 9C       		.byte	-100
+ 412 0183 03       		.byte	3
+ 413 0184 9D       		.byte	-99
+ 414 0185 10       		.byte	16
+ 415 0186 9E       		.byte	-98
+ 416 0187 14       		.byte	20
+ 417 0188 9F       		.byte	-97
+ 418 0189 0C       		.byte	12
+ 419 018a A0       		.byte	-96
+ 420 018b 80       		.byte	-128
+ 421 018c A1       		.byte	-95
+ 422 018d 01       		.byte	1
+ 423 018e A2       		.byte	-94
+ 424 018f 20       		.byte	32
+ 425 0190 A5       		.byte	-91
+ 426 0191 18       		.byte	24
+ 427 0192 A6       		.byte	-90
+ 428 0193 15       		.byte	21
+ 429 0194 A8       		.byte	-88
+ 430 0195 E0       		.byte	-32
+ 431 0196 AB       		.byte	-85
+ 432 0197 02       		.byte	2
+ 433 0198 AC       		.byte	-84
+ 434 0199 40       		.byte	64
+ 435 019a AE       		.byte	-82
+ 436 019b 20       		.byte	32
+ 437 019c AF       		.byte	-81
+ 438 019d 01       		.byte	1
+ 439 019e B0       		.byte	-80
+ 440 019f 10       		.byte	16
+ 441 01a0 B1       		.byte	-79
+ 442 01a1 06       		.byte	6
+ 443 01a2 B2       		.byte	-78
+ 444 01a3 E0       		.byte	-32
+ 445 01a4 B3       		.byte	-77
+ 446 01a5 01       		.byte	1
+ 447 01a6 B4       		.byte	-76
+ 448 01a7 0F       		.byte	15
+ 449 01a8 B5       		.byte	-75
+ 450 01a9 20       		.byte	32
+ 451 01aa B7       		.byte	-73
+ 452 01ab 18       		.byte	24
+ 453 01ac B9       		.byte	-71
+ 454 01ad 08       		.byte	8
+ 455 01ae BA       		.byte	-70
+ 456 01af 20       		.byte	32
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 9
 
 
- 457 01ac 4B       		.byte	75
- 458 01ad FF       		.byte	-1
- 459 01ae 4C       		.byte	76
- 460 01af 62       		.byte	98
- 461 01b0 4D       		.byte	77
- 462 01b1 A0       		.byte	-96
- 463 01b2 4E       		.byte	78
- 464 01b3 F0       		.byte	-16
- 465 01b4 4F       		.byte	79
- 466 01b5 41       		.byte	65
- 467 01b6 50       		.byte	80
- 468 01b7 0C       		.byte	12
- 469 01b8 54       		.byte	84
- 470 01b9 01       		.byte	1
- 471 01ba 58       		.byte	88
- 472 01bb 04       		.byte	4
- 473 01bc 59       		.byte	89
- 474 01bd 04       		.byte	4
- 475 01be 5A       		.byte	90
- 476 01bf 04       		.byte	4
- 477 01c0 5B       		.byte	91
- 478 01c1 04       		.byte	4
- 479 01c2 5F       		.byte	95
- 480 01c3 01       		.byte	1
- 481 01c4 66       		.byte	102
- 482 01c5 40       		.byte	64
- 483 01c6 67       		.byte	103
- 484 01c7 02       		.byte	2
- 485 01c8 69       		.byte	105
- 486 01c9 10       		.byte	16
- 487 01ca 6A       		.byte	106
- 488 01cb 30       		.byte	48
- 489 01cc 6B       		.byte	107
- 490 01cd 10       		.byte	16
- 491 01ce 6D       		.byte	109
- 492 01cf 10       		.byte	16
- 493 01d0 6E       		.byte	110
- 494 01d1 10       		.byte	16
- 495 01d2 6F       		.byte	111
- 496 01d3 12       		.byte	18
- 497 01d4 85       		.byte	-123
- 498 01d5 06       		.byte	6
- 499 01d6 87       		.byte	-121
- 500 01d7 08       		.byte	8
- 501 01d8 91       		.byte	-111
- 502 01d9 01       		.byte	1
- 503 01da 95       		.byte	-107
- 504 01db 06       		.byte	6
- 505 01dc 97       		.byte	-105
- 506 01dd 18       		.byte	24
- 507 01de 9B       		.byte	-101
- 508 01df 10       		.byte	16
- 509 01e0 9D       		.byte	-99
- 510 01e1 06       		.byte	6
- 511 01e2 9F       		.byte	-97
- 512 01e3 08       		.byte	8
- 513 01e4 A3       		.byte	-93
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 10
+ 457 01b0 BE       		.byte	-66
+ 458 01b1 01       		.byte	1
+ 459 01b2 BF       		.byte	-65
+ 460 01b3 11       		.byte	17
+ 461 01b4 C0       		.byte	-64
+ 462 01b5 36       		.byte	54
+ 463 01b6 C1       		.byte	-63
+ 464 01b7 01       		.byte	1
+ 465 01b8 C5       		.byte	-59
+ 466 01b9 0B       		.byte	11
+ 467 01ba C7       		.byte	-57
+ 468 01bb CE       		.byte	-50
+ 469 01bc C8       		.byte	-56
+ 470 01bd 31       		.byte	49
+ 471 01be C9       		.byte	-55
+ 472 01bf FF       		.byte	-1
+ 473 01c0 CA       		.byte	-54
+ 474 01c1 FF       		.byte	-1
+ 475 01c2 CB       		.byte	-53
+ 476 01c3 FF       		.byte	-1
+ 477 01c4 CE       		.byte	-50
+ 478 01c5 F0       		.byte	-16
+ 479 01c6 CF       		.byte	-49
+ 480 01c7 44       		.byte	68
+ 481 01c8 D0       		.byte	-48
+ 482 01c9 0C       		.byte	12
+ 483 01ca D4       		.byte	-44
+ 484 01cb 01       		.byte	1
+ 485 01cc D8       		.byte	-40
+ 486 01cd 04       		.byte	4
+ 487 01ce D9       		.byte	-39
+ 488 01cf 04       		.byte	4
+ 489 01d0 DA       		.byte	-38
+ 490 01d1 04       		.byte	4
+ 491 01d2 DB       		.byte	-37
+ 492 01d3 04       		.byte	4
+ 493 01d4 DF       		.byte	-33
+ 494 01d5 01       		.byte	1
+ 495 01d6 E6       		.byte	-26
+ 496 01d7 C0       		.byte	-64
+ 497 01d8 EA       		.byte	-22
+ 498 01d9 40       		.byte	64
+ 499 01da EB       		.byte	-21
+ 500 01db 02       		.byte	2
+ 501 01dc 01       		.byte	1
+ 502 01dd 02       		.byte	2
+ 503 01de 03       		.byte	3
+ 504 01df 20       		.byte	32
+ 505 01e0 05       		.byte	5
+ 506 01e1 16       		.byte	22
+ 507 01e2 08       		.byte	8
+ 508 01e3 10       		.byte	16
+ 509 01e4 0A       		.byte	10
+ 510 01e5 20       		.byte	32
+ 511 01e6 0B       		.byte	11
+ 512 01e7 40       		.byte	64
+ 513 01e8 0D       		.byte	13
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 10
 
 
- 514 01e5 0A       		.byte	10
- 515 01e6 A5       		.byte	-91
- 516 01e7 14       		.byte	20
- 517 01e8 A7       		.byte	-89
- 518 01e9 08       		.byte	8
- 519 01ea B3       		.byte	-77
- 520 01eb 1E       		.byte	30
- 521 01ec B5       		.byte	-75
- 522 01ed 01       		.byte	1
- 523 01ee BB       		.byte	-69
- 524 01ef 08       		.byte	8
- 525 01f0 BF       		.byte	-65
- 526 01f1 10       		.byte	16
- 527 01f2 D9       		.byte	-39
- 528 01f3 04       		.byte	4
- 529 01f4 DF       		.byte	-33
- 530 01f5 01       		.byte	1
- 531 01f6 04       		.byte	4
- 532 01f7 02       		.byte	2
- 533 01f8 05       		.byte	5
- 534 01f9 88       		.byte	-120
- 535 01fa 06       		.byte	6
- 536 01fb 20       		.byte	32
- 537 01fc 08       		.byte	8
- 538 01fd 20       		.byte	32
- 539 01fe 0B       		.byte	11
- 540 01ff 04       		.byte	4
- 541 0200 0D       		.byte	13
- 542 0201 08       		.byte	8
- 543 0202 0F       		.byte	15
- 544 0203 44       		.byte	68
- 545 0204 14       		.byte	20
- 546 0205 40       		.byte	64
- 547 0206 16       		.byte	22
- 548 0207 80       		.byte	-128
- 549 0208 17       		.byte	23
- 550 0209 20       		.byte	32
- 551 020a 1D       		.byte	29
- 552 020b 80       		.byte	-128
- 553 020c 1E       		.byte	30
- 554 020d 80       		.byte	-128
- 555 020e 1F       		.byte	31
- 556 020f 20       		.byte	32
- 557 0210 20       		.byte	32
- 558 0211 04       		.byte	4
- 559 0212 21       		.byte	33
- 560 0213 08       		.byte	8
- 561 0214 22       		.byte	34
- 562 0215 08       		.byte	8
- 563 0216 24       		.byte	36
- 564 0217 10       		.byte	16
- 565 0218 26       		.byte	38
- 566 0219 22       		.byte	34
- 567 021a 27       		.byte	39
- 568 021b 28       		.byte	40
- 569 021c 28       		.byte	40
- 570 021d 40       		.byte	64
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 11
+ 514 01e9 08       		.byte	8
+ 515 01ea 0E       		.byte	14
+ 516 01eb 04       		.byte	4
+ 517 01ec 0F       		.byte	15
+ 518 01ed 42       		.byte	66
+ 519 01ee 10       		.byte	16
+ 520 01ef 80       		.byte	-128
+ 521 01f0 11       		.byte	17
+ 522 01f1 04       		.byte	4
+ 523 01f2 12       		.byte	18
+ 524 01f3 08       		.byte	8
+ 525 01f4 14       		.byte	20
+ 526 01f5 80       		.byte	-128
+ 527 01f6 15       		.byte	21
+ 528 01f7 14       		.byte	20
+ 529 01f8 16       		.byte	22
+ 530 01f9 02       		.byte	2
+ 531 01fa 19       		.byte	25
+ 532 01fb 22       		.byte	34
+ 533 01fc 1B       		.byte	27
+ 534 01fd 20       		.byte	32
+ 535 01fe 1D       		.byte	29
+ 536 01ff 14       		.byte	20
+ 537 0200 1E       		.byte	30
+ 538 0201 40       		.byte	64
+ 539 0202 1F       		.byte	31
+ 540 0203 04       		.byte	4
+ 541 0204 21       		.byte	33
+ 542 0205 18       		.byte	24
+ 543 0206 22       		.byte	34
+ 544 0207 08       		.byte	8
+ 545 0208 23       		.byte	35
+ 546 0209 40       		.byte	64
+ 547 020a 24       		.byte	36
+ 548 020b 04       		.byte	4
+ 549 020c 25       		.byte	37
+ 550 020d 04       		.byte	4
+ 551 020e 26       		.byte	38
+ 552 020f 80       		.byte	-128
+ 553 0210 27       		.byte	39
+ 554 0211 40       		.byte	64
+ 555 0212 29       		.byte	41
+ 556 0213 02       		.byte	2
+ 557 0214 2A       		.byte	42
+ 558 0215 01       		.byte	1
+ 559 0216 2C       		.byte	44
+ 560 0217 40       		.byte	64
+ 561 0218 2E       		.byte	46
+ 562 0219 04       		.byte	4
+ 563 021a 2F       		.byte	47
+ 564 021b 06       		.byte	6
+ 565 021c 30       		.byte	48
+ 566 021d 90       		.byte	-112
+ 567 021e 31       		.byte	49
+ 568 021f 18       		.byte	24
+ 569 0220 34       		.byte	52
+ 570 0221 80       		.byte	-128
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 11
 
 
- 571 021e 29       		.byte	41
- 572 021f 08       		.byte	8
- 573 0220 2D       		.byte	45
- 574 0221 05       		.byte	5
- 575 0222 2E       		.byte	46
- 576 0223 A0       		.byte	-96
- 577 0224 31       		.byte	49
- 578 0225 08       		.byte	8
- 579 0226 32       		.byte	50
- 580 0227 A0       		.byte	-96
- 581 0228 33       		.byte	51
- 582 0229 02       		.byte	2
- 583 022a 35       		.byte	53
- 584 022b 82       		.byte	-126
- 585 022c 36       		.byte	54
- 586 022d 88       		.byte	-120
- 587 022e 37       		.byte	55
- 588 022f 10       		.byte	16
- 589 0230 3B       		.byte	59
- 590 0231 04       		.byte	4
- 591 0232 3D       		.byte	61
- 592 0233 10       		.byte	16
- 593 0234 3E       		.byte	62
- 594 0235 44       		.byte	68
- 595 0236 3F       		.byte	63
- 596 0237 01       		.byte	1
- 597 0238 45       		.byte	69
- 598 0239 A0       		.byte	-96
- 599 023a 47       		.byte	71
- 600 023b 04       		.byte	4
- 601 023c 4C       		.byte	76
- 602 023d 02       		.byte	2
- 603 023e 4E       		.byte	78
- 604 023f 04       		.byte	4
- 605 0240 56       		.byte	86
- 606 0241 01       		.byte	1
- 607 0242 57       		.byte	87
- 608 0243 40       		.byte	64
- 609 0244 5C       		.byte	92
- 610 0245 24       		.byte	36
- 611 0246 5E       		.byte	94
- 612 0247 82       		.byte	-126
- 613 0248 7A       		.byte	122
- 614 0249 01       		.byte	1
- 615 024a 7B       		.byte	123
- 616 024b 02       		.byte	2
- 617 024c 83       		.byte	-125
- 618 024d 21       		.byte	33
- 619 024e 84       		.byte	-124
- 620 024f 12       		.byte	18
- 621 0250 86       		.byte	-122
- 622 0251 01       		.byte	1
- 623 0252 90       		.byte	-112
- 624 0253 01       		.byte	1
- 625 0254 91       		.byte	-111
- 626 0255 10       		.byte	16
- 627 0256 92       		.byte	-110
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 12
+ 571 0222 36       		.byte	54
+ 572 0223 84       		.byte	-124
+ 573 0224 37       		.byte	55
+ 574 0225 10       		.byte	16
+ 575 0226 38       		.byte	56
+ 576 0227 08       		.byte	8
+ 577 0228 39       		.byte	57
+ 578 0229 04       		.byte	4
+ 579 022a 3B       		.byte	59
+ 580 022b 40       		.byte	64
+ 581 022c 3D       		.byte	61
+ 582 022d 18       		.byte	24
+ 583 022e 3E       		.byte	62
+ 584 022f 02       		.byte	2
+ 585 0230 3F       		.byte	63
+ 586 0231 80       		.byte	-128
+ 587 0232 41       		.byte	65
+ 588 0233 10       		.byte	16
+ 589 0234 44       		.byte	68
+ 590 0235 10       		.byte	16
+ 591 0236 46       		.byte	70
+ 592 0237 01       		.byte	1
+ 593 0238 4C       		.byte	76
+ 594 0239 04       		.byte	4
+ 595 023a 4E       		.byte	78
+ 596 023b 10       		.byte	16
+ 597 023c 50       		.byte	80
+ 598 023d 84       		.byte	-124
+ 599 023e 54       		.byte	84
+ 600 023f 08       		.byte	8
+ 601 0240 55       		.byte	85
+ 602 0241 02       		.byte	2
+ 603 0242 57       		.byte	87
+ 604 0243 01       		.byte	1
+ 605 0244 5E       		.byte	94
+ 606 0245 40       		.byte	64
+ 607 0246 5F       		.byte	95
+ 608 0247 25       		.byte	37
+ 609 0248 88       		.byte	-120
+ 610 0249 20       		.byte	32
+ 611 024a 89       		.byte	-119
+ 612 024b 02       		.byte	2
+ 613 024c 8A       		.byte	-118
+ 614 024d 02       		.byte	2
+ 615 024e 8B       		.byte	-117
+ 616 024f 20       		.byte	32
+ 617 0250 8C       		.byte	-116
+ 618 0251 08       		.byte	8
+ 619 0252 8F       		.byte	-113
+ 620 0253 01       		.byte	1
+ 621 0254 91       		.byte	-111
+ 622 0255 10       		.byte	16
+ 623 0256 92       		.byte	-110
+ 624 0257 04       		.byte	4
+ 625 0258 93       		.byte	-109
+ 626 0259 04       		.byte	4
+ 627 025a 94       		.byte	-108
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 12
 
 
- 628 0257 4C       		.byte	76
- 629 0258 93       		.byte	-109
- 630 0259 04       		.byte	4
- 631 025a 94       		.byte	-108
- 632 025b 12       		.byte	18
- 633 025c 95       		.byte	-107
- 634 025d 01       		.byte	1
- 635 025e 96       		.byte	-106
- 636 025f 01       		.byte	1
- 637 0260 97       		.byte	-105
- 638 0261 40       		.byte	64
- 639 0262 9A       		.byte	-102
- 640 0263 10       		.byte	16
- 641 0264 9B       		.byte	-101
- 642 0265 15       		.byte	21
- 643 0266 9C       		.byte	-100
- 644 0267 42       		.byte	66
- 645 0268 9D       		.byte	-99
- 646 0269 80       		.byte	-128
- 647 026a A1       		.byte	-95
- 648 026b 20       		.byte	32
- 649 026c A2       		.byte	-94
- 650 026d 10       		.byte	16
- 651 026e A3       		.byte	-93
- 652 026f 02       		.byte	2
- 653 0270 A5       		.byte	-91
- 654 0271 08       		.byte	8
- 655 0272 A7       		.byte	-89
- 656 0273 20       		.byte	32
- 657 0274 C0       		.byte	-64
- 658 0275 B0       		.byte	-80
- 659 0276 C2       		.byte	-62
- 660 0277 70       		.byte	112
- 661 0278 C4       		.byte	-60
- 662 0279 50       		.byte	80
- 663 027a CA       		.byte	-54
- 664 027b F3       		.byte	-13
- 665 027c CC       		.byte	-52
- 666 027d FF       		.byte	-1
- 667 027e CE       		.byte	-50
- 668 027f F2       		.byte	-14
- 669 0280 D0       		.byte	-48
- 670 0281 70       		.byte	112
- 671 0282 D2       		.byte	-46
- 672 0283 30       		.byte	48
- 673 0284 D6       		.byte	-42
- 674 0285 F0       		.byte	-16
- 675 0286 E4       		.byte	-28
- 676 0287 20       		.byte	32
- 677 0288 02       		.byte	2
- 678 0289 20       		.byte	32
- 679 028a 04       		.byte	4
- 680 028b 14       		.byte	20
- 681 028c 0E       		.byte	14
- 682 028d 03       		.byte	3
- 683 028e 10       		.byte	16
- 684 028f 0C       		.byte	12
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 13
+ 628 025b 04       		.byte	4
+ 629 025c 97       		.byte	-105
+ 630 025d 08       		.byte	8
+ 631 025e 98       		.byte	-104
+ 632 025f 40       		.byte	64
+ 633 0260 9B       		.byte	-101
+ 634 0261 10       		.byte	16
+ 635 0262 9C       		.byte	-100
+ 636 0263 A0       		.byte	-96
+ 637 0264 9D       		.byte	-99
+ 638 0265 20       		.byte	32
+ 639 0266 9E       		.byte	-98
+ 640 0267 02       		.byte	2
+ 641 0268 9F       		.byte	-97
+ 642 0269 40       		.byte	64
+ 643 026a A2       		.byte	-94
+ 644 026b 04       		.byte	4
+ 645 026c A3       		.byte	-93
+ 646 026d 42       		.byte	66
+ 647 026e A4       		.byte	-92
+ 648 026f 08       		.byte	8
+ 649 0270 C0       		.byte	-64
+ 650 0271 7C       		.byte	124
+ 651 0272 C2       		.byte	-62
+ 652 0273 FE       		.byte	-2
+ 653 0274 C4       		.byte	-60
+ 654 0275 FE       		.byte	-2
+ 655 0276 CA       		.byte	-54
+ 656 0277 F1       		.byte	-15
+ 657 0278 CC       		.byte	-52
+ 658 0279 7E       		.byte	126
+ 659 027a CE       		.byte	-50
+ 660 027b FA       		.byte	-6
+ 661 027c D0       		.byte	-48
+ 662 027d 54       		.byte	84
+ 663 027e D2       		.byte	-46
+ 664 027f 20       		.byte	32
+ 665 0280 D6       		.byte	-42
+ 666 0281 F0       		.byte	-16
+ 667 0282 E0       		.byte	-32
+ 668 0283 08       		.byte	8
+ 669 0284 E4       		.byte	-28
+ 670 0285 01       		.byte	1
+ 671 0286 EA       		.byte	-22
+ 672 0287 05       		.byte	5
+ 673 0288 3E       		.byte	62
+ 674 0289 10       		.byte	16
+ 675 028a CE       		.byte	-50
+ 676 028b 20       		.byte	32
+ 677 028c 96       		.byte	-106
+ 678 028d 10       		.byte	16
+ 679 028e 82       		.byte	-126
+ 680 028f 20       		.byte	32
+ 681 0290 96       		.byte	-106
+ 682 0291 10       		.byte	16
+ 683 0292 E2       		.byte	-30
+ 684 0293 20       		.byte	32
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 13
 
 
- 685 0290 12       		.byte	18
- 686 0291 71       		.byte	113
- 687 0292 18       		.byte	24
- 688 0293 DC       		.byte	-36
- 689 0294 1A       		.byte	26
- 690 0295 22       		.byte	34
- 691 0296 20       		.byte	32
- 692 0297 10       		.byte	16
- 693 0298 22       		.byte	34
- 694 0299 40       		.byte	64
- 695 029a 24       		.byte	36
- 696 029b 09       		.byte	9
- 697 029c 26       		.byte	38
- 698 029d D0       		.byte	-48
- 699 029e 28       		.byte	40
- 700 029f 10       		.byte	16
- 701 02a0 2A       		.byte	42
- 702 02a1 AC       		.byte	-84
- 703 02a2 30       		.byte	48
- 704 02a3 1F       		.byte	31
- 705 02a4 36       		.byte	54
- 706 02a5 E0       		.byte	-32
- 707 02a6 3A       		.byte	58
- 708 02a7 80       		.byte	-128
- 709 02a8 40       		.byte	64
- 710 02a9 02       		.byte	2
- 711 02aa 46       		.byte	70
- 712 02ab 04       		.byte	4
- 713 02ac 49       		.byte	73
- 714 02ad FF       		.byte	-1
- 715 02ae 4A       		.byte	74
- 716 02af 07       		.byte	7
- 717 02b0 4B       		.byte	75
- 718 02b1 FF       		.byte	-1
- 719 02b2 4C       		.byte	76
- 720 02b3 40       		.byte	64
- 721 02b4 4D       		.byte	77
- 722 02b5 20       		.byte	32
- 723 02b6 4E       		.byte	78
- 724 02b7 F0       		.byte	-16
- 725 02b8 4F       		.byte	79
- 726 02b9 05       		.byte	5
- 727 02ba 50       		.byte	80
- 728 02bb 08       		.byte	8
- 729 02bc 58       		.byte	88
- 730 02bd 04       		.byte	4
- 731 02be 5A       		.byte	90
- 732 02bf 04       		.byte	4
- 733 02c0 5F       		.byte	95
- 734 02c1 01       		.byte	1
- 735 02c2 60       		.byte	96
- 736 02c3 40       		.byte	64
- 737 02c4 61       		.byte	97
- 738 02c5 A8       		.byte	-88
- 739 02c6 62       		.byte	98
- 740 02c7 40       		.byte	64
- 741 02c8 63       		.byte	99
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 14
+ 685 0294 12       		.byte	18
+ 686 0295 20       		.byte	32
+ 687 0296 16       		.byte	22
+ 688 0297 40       		.byte	64
+ 689 0298 72       		.byte	114
+ 690 0299 20       		.byte	32
+ 691 029a 77       		.byte	119
+ 692 029b 10       		.byte	16
+ 693 029c 82       		.byte	-126
+ 694 029d 20       		.byte	32
+ 695 029e 86       		.byte	-122
+ 696 029f 40       		.byte	64
+ 697 02a0 9A       		.byte	-102
+ 698 02a1 20       		.byte	32
+ 699 02a2 9B       		.byte	-101
+ 700 02a3 10       		.byte	16
+ 701 02a4 AA       		.byte	-86
+ 702 02a5 10       		.byte	16
+ 703 02a6 AB       		.byte	-85
+ 704 02a7 10       		.byte	16
+ 705 02a8 C4       		.byte	-60
+ 706 02a9 30       		.byte	48
+ 707 02aa DC       		.byte	-36
+ 708 02ab 80       		.byte	-128
+ 709 02ac DE       		.byte	-34
+ 710 02ad 20       		.byte	32
+ 711 02ae E0       		.byte	-32
+ 712 02af 10       		.byte	16
+ 713 02b0 E4       		.byte	-28
+ 714 02b1 80       		.byte	-128
+ 715 02b2 EA       		.byte	-22
+ 716 02b3 A0       		.byte	-96
+ 717 02b4 10       		.byte	16
+ 718 02b5 80       		.byte	-128
+ 719 02b6 13       		.byte	19
+ 720 02b7 20       		.byte	32
+ 721 02b8 17       		.byte	23
+ 722 02b9 08       		.byte	8
+ 723 02ba 7B       		.byte	123
+ 724 02bb 10       		.byte	16
+ 725 02bc 7F       		.byte	127
+ 726 02bd 40       		.byte	64
+ 727 02be 80       		.byte	-128
+ 728 02bf 80       		.byte	-128
+ 729 02c0 87       		.byte	-121
+ 730 02c1 10       		.byte	16
+ 731 02c2 C4       		.byte	-60
+ 732 02c3 0E       		.byte	14
+ 733 02c4 DE       		.byte	-34
+ 734 02c5 03       		.byte	3
+ 735 02c6 10       		.byte	16
+ 736 02c7 40       		.byte	64
+ 737 02c8 73       		.byte	115
+ 738 02c9 10       		.byte	16
+ 739 02ca 83       		.byte	-125
+ 740 02cb 10       		.byte	16
+ 741 02cc 87       		.byte	-121
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 14
 
 
- 742 02c9 20       		.byte	32
- 743 02ca 82       		.byte	-126
- 744 02cb 18       		.byte	24
- 745 02cc 84       		.byte	-124
- 746 02cd 08       		.byte	8
- 747 02ce 85       		.byte	-123
- 748 02cf 07       		.byte	7
- 749 02d0 86       		.byte	-122
- 750 02d1 30       		.byte	48
- 751 02d2 88       		.byte	-120
- 752 02d3 60       		.byte	96
- 753 02d4 89       		.byte	-119
- 754 02d5 07       		.byte	7
- 755 02d6 8A       		.byte	-118
- 756 02d7 18       		.byte	24
- 757 02d8 8E       		.byte	-114
- 758 02d9 02       		.byte	2
- 759 02da 8F       		.byte	-113
- 760 02db 20       		.byte	32
- 761 02dc 90       		.byte	-112
- 762 02dd 08       		.byte	8
- 763 02de 92       		.byte	-110
- 764 02df 70       		.byte	112
- 765 02e0 93       		.byte	-109
- 766 02e1 20       		.byte	32
- 767 02e2 95       		.byte	-107
- 768 02e3 18       		.byte	24
- 769 02e4 96       		.byte	-106
- 770 02e5 02       		.byte	2
- 771 02e6 98       		.byte	-104
- 772 02e7 01       		.byte	1
- 773 02e8 99       		.byte	-103
- 774 02e9 04       		.byte	4
- 775 02ea 9B       		.byte	-101
- 776 02eb 01       		.byte	1
- 777 02ec 9C       		.byte	-100
- 778 02ed 04       		.byte	4
- 779 02ee 9D       		.byte	-99
- 780 02ef 01       		.byte	1
- 781 02f0 9F       		.byte	-97
- 782 02f1 06       		.byte	6
- 783 02f2 A0       		.byte	-96
- 784 02f3 01       		.byte	1
- 785 02f4 A3       		.byte	-93
- 786 02f5 08       		.byte	8
- 787 02f6 A5       		.byte	-91
- 788 02f7 10       		.byte	16
- 789 02f8 A6       		.byte	-90
- 790 02f9 60       		.byte	96
- 791 02fa A8       		.byte	-88
- 792 02fb 01       		.byte	1
- 793 02fc A9       		.byte	-87
- 794 02fd 02       		.byte	2
- 795 02fe AB       		.byte	-85
- 796 02ff 01       		.byte	1
- 797 0300 AD       		.byte	-83
- 798 0301 18       		.byte	24
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 15
+ 742 02cd 40       		.byte	64
+ 743 02ce 88       		.byte	-120
+ 744 02cf 40       		.byte	64
+ 745 02d0 93       		.byte	-109
+ 746 02d1 10       		.byte	16
+ 747 02d2 97       		.byte	-105
+ 748 02d3 80       		.byte	-128
+ 749 02d4 A7       		.byte	-89
+ 750 02d5 10       		.byte	16
+ 751 02d6 AB       		.byte	-85
+ 752 02d7 28       		.byte	40
+ 753 02d8 C4       		.byte	-60
+ 754 02d9 08       		.byte	8
+ 755 02da DC       		.byte	-36
+ 756 02db 01       		.byte	1
+ 757 02dc E2       		.byte	-30
+ 758 02dd 01       		.byte	1
+ 759 02de 10       		.byte	16
+ 760 02df 01       		.byte	1
+ 761 02e0 1C       		.byte	28
+ 762 02e1 01       		.byte	1
+ 763 02e2 03       		.byte	3
+ 764 02e3 C0       		.byte	-64
+ 765 02e4 02       		.byte	2
+ 766 02e5 80       		.byte	-128
+ 767 02e6 00       		.byte	0
+ 768 02e7 00       		.byte	0
+ 769 02e8 43       		.byte	67
+ 770 02e9 00       		.byte	0
+ 771 02ea 00       		.byte	0
+ 772 02eb 00       		.byte	0
+ 773 02ec 1F       		.byte	31
+ 774 02ed 10       		.byte	16
+ 775 02ee 20       		.byte	32
+ 776 02ef 00       		.byte	0
+ 777 02f0 1C       		.byte	28
+ 778 02f1 08       		.byte	8
+ 779 02f2 23       		.byte	35
+ 780 02f3 00       		.byte	0
+ 781 02f4 03       		.byte	3
+ 782 02f5 00       		.byte	0
+ 783 02f6 00       		.byte	0
+ 784 02f7 E3       		.byte	-29
+ 785 02f8 01       		.byte	1
+ 786 02f9 FF       		.byte	-1
+ 787 02fa 00       		.byte	0
+ 788 02fb 00       		.byte	0
+ 789 02fc 00       		.byte	0
+ 790 02fd 1C       		.byte	28
+ 791 02fe 00       		.byte	0
+ 792 02ff E1       		.byte	-31
+ 793 0300 00       		.byte	0
+ 794 0301 18       		.byte	24
+ 795 0302 23       		.byte	35
+ 796 0303 00       		.byte	0
+ 797 0304 33       		.byte	51
+ 798 0305 3C       		.byte	60
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 15
 
 
- 799 0302 AE       		.byte	-82
- 800 0303 40       		.byte	64
- 801 0304 B0       		.byte	-80
- 802 0305 02       		.byte	2
- 803 0306 B2       		.byte	-78
- 804 0307 01       		.byte	1
- 805 0308 B3       		.byte	-77
- 806 0309 20       		.byte	32
- 807 030a B4       		.byte	-76
- 808 030b 78       		.byte	120
- 809 030c B5       		.byte	-75
- 810 030d 18       		.byte	24
- 811 030e B6       		.byte	-74
- 812 030f 04       		.byte	4
- 813 0310 B7       		.byte	-73
- 814 0311 07       		.byte	7
- 815 0312 B9       		.byte	-71
- 816 0313 20       		.byte	32
- 817 0314 BA       		.byte	-70
- 818 0315 20       		.byte	32
- 819 0316 BE       		.byte	-66
- 820 0317 41       		.byte	65
- 821 0318 BF       		.byte	-65
- 822 0319 14       		.byte	20
- 823 031a D4       		.byte	-44
- 824 031b 18       		.byte	24
- 825 031c D8       		.byte	-40
- 826 031d 04       		.byte	4
- 827 031e D9       		.byte	-39
- 828 031f 04       		.byte	4
- 829 0320 DB       		.byte	-37
- 830 0321 04       		.byte	4
- 831 0322 DF       		.byte	-33
- 832 0323 01       		.byte	1
- 833 0324 00       		.byte	0
- 834 0325 40       		.byte	64
- 835 0326 01       		.byte	1
- 836 0327 02       		.byte	2
- 837 0328 02       		.byte	2
- 838 0329 10       		.byte	16
- 839 032a 05       		.byte	5
- 840 032b 16       		.byte	22
- 841 032c 06       		.byte	6
- 842 032d 01       		.byte	1
- 843 032e 09       		.byte	9
- 844 032f 20       		.byte	32
- 845 0330 0A       		.byte	10
- 846 0331 40       		.byte	64
- 847 0332 0E       		.byte	14
- 848 0333 64       		.byte	100
- 849 0334 0F       		.byte	15
- 850 0335 02       		.byte	2
- 851 0336 10       		.byte	16
- 852 0337 80       		.byte	-128
- 853 0338 12       		.byte	18
- 854 0339 08       		.byte	8
- 855 033a 13       		.byte	19
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 16
+ 799 0306 0C       		.byte	12
+ 800 0307 C2       		.byte	-62
+ 801 0308 3F       		.byte	63
+ 802 0309 80       		.byte	-128
+ 803 030a 00       		.byte	0
+ 804 030b 00       		.byte	0
+ 805 030c 02       		.byte	2
+ 806 030d 44       		.byte	68
+ 807 030e 00       		.byte	0
+ 808 030f 00       		.byte	0
+ 809 0310 04       		.byte	4
+ 810 0311 00       		.byte	0
+ 811 0312 00       		.byte	0
+ 812 0313 04       		.byte	4
+ 813 0314 0C       		.byte	12
+ 814 0315 C0       		.byte	-64
+ 815 0316 00       		.byte	0
+ 816 0317 00       		.byte	0
+ 817 0318 08       		.byte	8
+ 818 0319 E7       		.byte	-25
+ 819 031a 00       		.byte	0
+ 820 031b 18       		.byte	24
+ 821 031c 2C       		.byte	44
+ 822 031d 00       		.byte	0
+ 823 031e 10       		.byte	16
+ 824 031f 1F       		.byte	31
+ 825 0320 0F       		.byte	15
+ 826 0321 38       		.byte	56
+ 827 0322 00       		.byte	0
+ 828 0323 C0       		.byte	-64
+ 829 0324 00       		.byte	0
+ 830 0325 00       		.byte	0
+ 831 0326 A2       		.byte	-94
+ 832 0327 08       		.byte	8
+ 833 0328 00       		.byte	0
+ 834 0329 00       		.byte	0
+ 835 032a 04       		.byte	4
+ 836 032b 00       		.byte	0
+ 837 032c 26       		.byte	38
+ 838 032d 04       		.byte	4
+ 839 032e 05       		.byte	5
+ 840 032f 00       		.byte	0
+ 841 0330 01       		.byte	1
+ 842 0331 C0       		.byte	-64
+ 843 0332 0E       		.byte	14
+ 844 0333 00       		.byte	0
+ 845 0334 06       		.byte	6
+ 846 0335 FF       		.byte	-1
+ 847 0336 FF       		.byte	-1
+ 848 0337 FF       		.byte	-1
+ 849 0338 62       		.byte	98
+ 850 0339 A0       		.byte	-96
+ 851 033a F0       		.byte	-16
+ 852 033b 41       		.byte	65
+ 853 033c 0C       		.byte	12
+ 854 033d 00       		.byte	0
+ 855 033e 00       		.byte	0
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 16
 
 
- 856 033b 08       		.byte	8
- 857 033c 15       		.byte	21
- 858 033d 90       		.byte	-112
- 859 033e 17       		.byte	23
- 860 033f 09       		.byte	9
- 861 0340 18       		.byte	24
- 862 0341 40       		.byte	64
- 863 0342 19       		.byte	25
- 864 0343 80       		.byte	-128
- 865 0344 1B       		.byte	27
- 866 0345 01       		.byte	1
- 867 0346 1C       		.byte	28
- 868 0347 22       		.byte	34
- 869 0348 1D       		.byte	29
- 870 0349 30       		.byte	48
- 871 034a 1F       		.byte	31
- 872 034b 21       		.byte	33
- 873 034c 24       		.byte	36
- 874 034d 06       		.byte	6
- 875 034e 25       		.byte	37
- 876 034f 08       		.byte	8
- 877 0350 26       		.byte	38
- 878 0351 40       		.byte	64
- 879 0352 2C       		.byte	44
- 880 0353 40       		.byte	64
- 881 0354 2D       		.byte	45
- 882 0355 8A       		.byte	-118
- 883 0356 2E       		.byte	46
- 884 0357 40       		.byte	64
- 885 0358 2F       		.byte	47
- 886 0359 28       		.byte	40
- 887 035a 35       		.byte	53
- 888 035b 04       		.byte	4
- 889 035c 36       		.byte	54
- 890 035d 4A       		.byte	74
- 891 035e 37       		.byte	55
- 892 035f 20       		.byte	32
- 893 0360 3D       		.byte	61
- 894 0361 10       		.byte	16
- 895 0362 3E       		.byte	62
- 896 0363 04       		.byte	4
- 897 0364 3F       		.byte	63
- 898 0365 80       		.byte	-128
- 899 0366 40       		.byte	64
- 900 0367 04       		.byte	4
- 901 0368 45       		.byte	69
- 902 0369 08       		.byte	8
- 903 036a 46       		.byte	70
- 904 036b 20       		.byte	32
- 905 036c 49       		.byte	73
- 906 036d 02       		.byte	2
- 907 036e 50       		.byte	80
- 908 036f 80       		.byte	-128
- 909 0370 51       		.byte	81
- 910 0371 40       		.byte	64
- 911 0372 5C       		.byte	92
- 912 0373 01       		.byte	1
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 17
+ 856 033f 00       		.byte	0
+ 857 0340 00       		.byte	0
+ 858 0341 00       		.byte	0
+ 859 0342 02       		.byte	2
+ 860 0343 11       		.byte	17
+ 861 0344 04       		.byte	4
+ 862 0345 04       		.byte	4
+ 863 0346 04       		.byte	4
+ 864 0347 04       		.byte	4
+ 865 0348 00       		.byte	0
+ 866 0349 00       		.byte	0
+ 867 034a 00       		.byte	0
+ 868 034b 01       		.byte	1
+ 869 034c 00       		.byte	0
+ 870 034d 00       		.byte	0
+ 871 034e 00       		.byte	0
+ 872 034f 00       		.byte	0
+ 873 0350 00       		.byte	0
+ 874 0351 00       		.byte	0
+ 875 0352 40       		.byte	64
+ 876 0353 02       		.byte	2
+ 877 0354 00       		.byte	0
+ 878 0355 10       		.byte	16
+ 879 0356 30       		.byte	48
+ 880 0357 10       		.byte	16
+ 881 0358 00       		.byte	0
+ 882 0359 10       		.byte	16
+ 883 035a 10       		.byte	16
+ 884 035b 12       		.byte	18
+ 885 035c 00       		.byte	0
+ 886 035d 00       		.byte	0
+ 887 035e 00       		.byte	0
+ 888 035f 00       		.byte	0
+ 889 0360 00       		.byte	0
+ 890 0361 00       		.byte	0
+ 891 0362 00       		.byte	0
+ 892 0363 00       		.byte	0
+ 893 0364 00       		.byte	0
+ 894 0365 00       		.byte	0
+ 895 0366 00       		.byte	0
+ 896 0367 00       		.byte	0
+ 897 0368 00       		.byte	0
+ 898 0369 00       		.byte	0
+ 899 036a 00       		.byte	0
+ 900 036b 00       		.byte	0
+ 901 036c 83       		.byte	-125
+ 902 036d 00       		.byte	0
+ 903 036e 40       		.byte	64
+ 904 036f 80       		.byte	-128
+ 905 0370 83       		.byte	-125
+ 906 0371 00       		.byte	0
+ 907 0372 83       		.byte	-125
+ 908 0373 00       		.byte	0
+ 909 0374 00       		.byte	0
+ 910 0375 00       		.byte	0
+ 911 0376 00       		.byte	0
+ 912 0377 00       		.byte	0
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 17
 
 
- 913 0374 66       		.byte	102
- 914 0375 20       		.byte	32
- 915 0376 67       		.byte	103
- 916 0377 02       		.byte	2
- 917 0378 90       		.byte	-112
- 918 0379 01       		.byte	1
- 919 037a 91       		.byte	-111
- 920 037b 10       		.byte	16
- 921 037c 92       		.byte	-110
- 922 037d 04       		.byte	4
- 923 037e 94       		.byte	-108
- 924 037f 02       		.byte	2
- 925 0380 9A       		.byte	-102
- 926 0381 11       		.byte	17
- 927 0382 9B       		.byte	-101
- 928 0383 29       		.byte	41
- 929 0384 9C       		.byte	-100
- 930 0385 40       		.byte	64
- 931 0386 9D       		.byte	-99
- 932 0387 88       		.byte	-120
- 933 0388 A2       		.byte	-94
- 934 0389 1A       		.byte	26
- 935 038a A3       		.byte	-93
- 936 038b 48       		.byte	72
- 937 038c A4       		.byte	-92
- 938 038d 10       		.byte	16
- 939 038e AC       		.byte	-84
- 940 038f 02       		.byte	2
- 941 0390 AD       		.byte	-83
- 942 0391 27       		.byte	39
- 943 0392 AE       		.byte	-82
- 944 0393 04       		.byte	4
- 945 0394 AF       		.byte	-81
- 946 0395 48       		.byte	72
- 947 0396 C0       		.byte	-64
- 948 0397 FD       		.byte	-3
- 949 0398 C2       		.byte	-62
- 950 0399 FA       		.byte	-6
- 951 039a C4       		.byte	-60
- 952 039b FE       		.byte	-2
- 953 039c CA       		.byte	-54
- 954 039d F0       		.byte	-16
- 955 039e CC       		.byte	-52
- 956 039f F0       		.byte	-16
- 957 03a0 CE       		.byte	-50
- 958 03a1 70       		.byte	112
- 959 03a2 D0       		.byte	-48
- 960 03a3 04       		.byte	4
- 961 03a4 D6       		.byte	-42
- 962 03a5 80       		.byte	-128
- 963 03a6 D8       		.byte	-40
- 964 03a7 30       		.byte	48
- 965 03a8 E6       		.byte	-26
- 966 03a9 09       		.byte	9
- 967 03aa E8       		.byte	-24
- 968 03ab 01       		.byte	1
- 969 03ac AC       		.byte	-84
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 18
+ 913 0378 00       		.byte	0
+ 914 0379 0B       		.byte	11
+ 915 037a 0B       		.byte	11
+ 916 037b 00       		.byte	0
+ 917 037c 00       		.byte	0
+ 918 037d 00       		.byte	0
+ 919 037e 00       		.byte	0
+ 920 037f 00       		.byte	0
+ 921              		.global	cy_meta_custnvl
+ 922              		.section	.cycustnvl,"a",%progbits
+ 923              		.align	2
+ 924              		.type	cy_meta_custnvl, %object
+ 925              		.size	cy_meta_custnvl, 4
+ 926              	cy_meta_custnvl:
+ 927 0000 00       		.byte	0
+ 928 0001 00       		.byte	0
+ 929 0002 40       		.byte	64
+ 930 0003 05       		.byte	5
+ 931              		.global	cy_meta_wonvl
+ 932              		.section	.cywolatch,"a",%progbits
+ 933              		.align	2
+ 934              		.type	cy_meta_wonvl, %object
+ 935              		.size	cy_meta_wonvl, 4
+ 936              	cy_meta_wonvl:
+ 937 0000 BC       		.byte	-68
+ 938 0001 90       		.byte	-112
+ 939 0002 AC       		.byte	-84
+ 940 0003 AF       		.byte	-81
+ 941              		.global	cy_meta_flashprotect
+ 942              		.section	.cyflashprotect,"a",%progbits
+ 943              		.align	2
+ 944              		.type	cy_meta_flashprotect, %object
+ 945              		.size	cy_meta_flashprotect, 256
+ 946              	cy_meta_flashprotect:
+ 947 0000 00000000 		.space	256
+ 947      00000000 
+ 947      00000000 
+ 947      00000000 
+ 947      00000000 
+ 948              		.global	cy_metadata
+ 949              		.section	.cymeta,"a",%progbits
+ 950              		.align	2
+ 951              		.type	cy_metadata, %object
+ 952              		.size	cy_metadata, 12
+ 953              	cy_metadata:
+ 954 0000 00       		.byte	0
+ 955 0001 01       		.byte	1
+ 956 0002 2E       		.byte	46
+ 957 0003 16       		.byte	22
+ 958 0004 10       		.byte	16
+ 959 0005 69       		.byte	105
+ 960 0006 00       		.byte	0
+ 961 0007 01       		.byte	1
+ 962 0008 00       		.byte	0
+ 963 0009 00       		.byte	0
+ 964 000a 00       		.byte	0
+ 965 000b 00       		.byte	0
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 18
 
 
- 970 03ad 01       		.byte	1
- 971 03ae E6       		.byte	-26
- 972 03af 09       		.byte	9
- 973 03b0 E8       		.byte	-24
- 974 03b1 01       		.byte	1
- 975 03b2 E4       		.byte	-28
- 976 03b3 20       		.byte	32
- 977 03b4 EA       		.byte	-22
- 978 03b5 01       		.byte	1
- 979 03b6 EA       		.byte	-22
- 980 03b7 01       		.byte	1
- 981 03b8 00       		.byte	0
- 982 03b9 08       		.byte	8
- 983 03ba 03       		.byte	3
- 984 03bb 01       		.byte	1
- 985 03bc 06       		.byte	6
- 986 03bd 04       		.byte	4
- 987 03be 50       		.byte	80
- 988 03bf 04       		.byte	4
- 989 03c0 56       		.byte	86
- 990 03c1 02       		.byte	2
- 991 03c2 8B       		.byte	-117
- 992 03c3 01       		.byte	1
- 993 03c4 C0       		.byte	-64
- 994 03c5 D0       		.byte	-48
- 995 03c6 D4       		.byte	-44
- 996 03c7 20       		.byte	32
- 997 03c8 D6       		.byte	-42
- 998 03c9 20       		.byte	32
- 999 03ca 3E       		.byte	62
- 1000 03cb 10       		.byte	16
- 1001 03cc 52       		.byte	82
- 1002 03cd 80       		.byte	-128
- 1003 03ce 80       		.byte	-128
- 1004 03cf 04       		.byte	4
- 1005 03d0 86       		.byte	-122
- 1006 03d1 02       		.byte	2
- 1007 03d2 94       		.byte	-108
- 1008 03d3 08       		.byte	8
- 1009 03d4 9E       		.byte	-98
- 1010 03d5 02       		.byte	2
- 1011 03d6 AA       		.byte	-86
- 1012 03d7 04       		.byte	4
- 1013 03d8 AC       		.byte	-84
- 1014 03d9 04       		.byte	4
- 1015 03da CE       		.byte	-50
- 1016 03db 20       		.byte	32
- 1017 03dc D4       		.byte	-44
- 1018 03dd 20       		.byte	32
- 1019 03de E6       		.byte	-26
- 1020 03df 90       		.byte	-112
- 1021 03e0 E8       		.byte	-24
- 1022 03e1 80       		.byte	-128
- 1023 03e2 EC       		.byte	-20
- 1024 03e3 40       		.byte	64
- 1025 03e4 96       		.byte	-106
- 1026 03e5 10       		.byte	16
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 19
+ 966              		.text
+ 967              	.Letext0:
+ 968              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 969              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 970              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 971              		.section	.debug_info,"",%progbits
+ 972              	.Ldebug_info0:
+ 973 0000 31010000 		.4byte	0x131
+ 974 0004 0400     		.2byte	0x4
+ 975 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 976 000a 04       		.byte	0x4
+ 977 000b 01       		.uleb128 0x1
+ 978 000c 0A000000 		.4byte	.LASF17
+ 979 0010 0C       		.byte	0xc
+ 980 0011 F0010000 		.4byte	.LASF18
+ 981 0015 5F010000 		.4byte	.LASF19
+ 982 0019 00000000 		.4byte	.Ldebug_line0
+ 983 001d 02       		.uleb128 0x2
+ 984 001e 01       		.byte	0x1
+ 985 001f 06       		.byte	0x6
+ 986 0020 E4010000 		.4byte	.LASF0
+ 987 0024 03       		.uleb128 0x3
+ 988 0025 00000000 		.4byte	.LASF9
+ 989 0029 01       		.byte	0x1
+ 990 002a 1D       		.byte	0x1d
+ 991 002b 2F000000 		.4byte	0x2f
+ 992 002f 02       		.uleb128 0x2
+ 993 0030 01       		.byte	0x1
+ 994 0031 08       		.byte	0x8
+ 995 0032 A4000000 		.4byte	.LASF1
+ 996 0036 02       		.uleb128 0x2
+ 997 0037 02       		.byte	0x2
+ 998 0038 05       		.byte	0x5
+ 999 0039 D1010000 		.4byte	.LASF2
+ 1000 003d 02       		.uleb128 0x2
+ 1001 003e 02       		.byte	0x2
+ 1002 003f 07       		.byte	0x7
+ 1003 0040 C4000000 		.4byte	.LASF3
+ 1004 0044 02       		.uleb128 0x2
+ 1005 0045 04       		.byte	0x4
+ 1006 0046 05       		.byte	0x5
+ 1007 0047 DB010000 		.4byte	.LASF4
+ 1008 004b 02       		.uleb128 0x2
+ 1009 004c 04       		.byte	0x4
+ 1010 004d 07       		.byte	0x7
+ 1011 004e B2000000 		.4byte	.LASF5
+ 1012 0052 02       		.uleb128 0x2
+ 1013 0053 08       		.byte	0x8
+ 1014 0054 05       		.byte	0x5
+ 1015 0055 51010000 		.4byte	.LASF6
+ 1016 0059 02       		.uleb128 0x2
+ 1017 005a 08       		.byte	0x8
+ 1018 005b 07       		.byte	0x7
+ 1019 005c 06010000 		.4byte	.LASF7
+ 1020 0060 04       		.uleb128 0x4
+ 1021 0061 04       		.byte	0x4
+ 1022 0062 05       		.byte	0x5
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 19
 
 
- 1027 03e6 AE       		.byte	-82
- 1028 03e7 80       		.byte	-128
- 1029 03e8 EE       		.byte	-18
- 1030 03e9 10       		.byte	16
- 1031 03ea 88       		.byte	-120
- 1032 03eb 01       		.byte	1
- 1033 03ec E4       		.byte	-28
- 1034 03ed 04       		.byte	4
- 1035 03ee 82       		.byte	-126
- 1036 03ef 20       		.byte	32
- 1037 03f0 84       		.byte	-124
- 1038 03f1 40       		.byte	64
- 1039 03f2 90       		.byte	-112
- 1040 03f3 01       		.byte	1
- 1041 03f4 98       		.byte	-104
- 1042 03f5 01       		.byte	1
- 1043 03f6 A8       		.byte	-88
- 1044 03f7 01       		.byte	1
- 1045 03f8 90       		.byte	-112
- 1046 03f9 01       		.byte	1
- 1047 03fa 98       		.byte	-104
- 1048 03fb 01       		.byte	1
- 1049 03fc 9C       		.byte	-100
- 1050 03fd 40       		.byte	64
- 1051 03fe A6       		.byte	-90
- 1052 03ff 20       		.byte	32
- 1053 0400 96       		.byte	-106
- 1054 0401 10       		.byte	16
- 1055 0402 AA       		.byte	-86
- 1056 0403 10       		.byte	16
- 1057 0404 EA       		.byte	-22
- 1058 0405 80       		.byte	-128
- 1059 0406 12       		.byte	18
- 1060 0407 20       		.byte	32
- 1061 0408 13       		.byte	19
- 1062 0409 20       		.byte	32
- 1063 040a 14       		.byte	20
- 1064 040b 40       		.byte	64
- 1065 040c 78       		.byte	120
- 1066 040d 01       		.byte	1
- 1067 040e 7C       		.byte	124
- 1068 040f 01       		.byte	1
- 1069 0410 90       		.byte	-112
- 1070 0411 01       		.byte	1
- 1071 0412 98       		.byte	-104
- 1072 0413 01       		.byte	1
- 1073 0414 9C       		.byte	-100
- 1074 0415 40       		.byte	64
- 1075 0416 A6       		.byte	-90
- 1076 0417 20       		.byte	32
- 1077 0418 C4       		.byte	-60
- 1078 0419 0E       		.byte	14
- 1079 041a DE       		.byte	-34
- 1080 041b 03       		.byte	3
- 1081 041c AB       		.byte	-85
- 1082 041d 20       		.byte	32
- 1083 041e 00       		.byte	0
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 20
+ 1023 0063 696E7400 		.ascii	"int\000"
+ 1024 0067 02       		.uleb128 0x2
+ 1025 0068 04       		.byte	0x4
+ 1026 0069 07       		.byte	0x7
+ 1027 006a F9000000 		.4byte	.LASF8
+ 1028 006e 03       		.uleb128 0x3
+ 1029 006f 1D010000 		.4byte	.LASF10
+ 1030 0073 02       		.byte	0x2
+ 1031 0074 18       		.byte	0x18
+ 1032 0075 24000000 		.4byte	0x24
+ 1033 0079 05       		.uleb128 0x5
+ 1034 007a 91000000 		.4byte	0x91
+ 1035 007e 8A000000 		.4byte	0x8a
+ 1036 0082 06       		.uleb128 0x6
+ 1037 0083 8A000000 		.4byte	0x8a
+ 1038 0087 7F03     		.2byte	0x37f
+ 1039 0089 00       		.byte	0
+ 1040 008a 02       		.uleb128 0x2
+ 1041 008b 04       		.byte	0x4
+ 1042 008c 07       		.byte	0x7
+ 1043 008d 48010000 		.4byte	.LASF11
+ 1044 0091 07       		.uleb128 0x7
+ 1045 0092 6E000000 		.4byte	0x6e
+ 1046 0096 08       		.uleb128 0x8
+ 1047 0097 E7000000 		.4byte	.LASF12
+ 1048 009b 03       		.byte	0x3
+ 1049 009c 1F       		.byte	0x1f
+ 1050 009d A7000000 		.4byte	0xa7
+ 1051 00a1 05       		.uleb128 0x5
+ 1052 00a2 03       		.byte	0x3
+ 1053 00a3 00000000 		.4byte	cy_meta_configecc
+ 1054 00a7 07       		.uleb128 0x7
+ 1055 00a8 79000000 		.4byte	0x79
+ 1056 00ac 05       		.uleb128 0x5
+ 1057 00ad 91000000 		.4byte	0x91
+ 1058 00b1 BC000000 		.4byte	0xbc
+ 1059 00b5 09       		.uleb128 0x9
+ 1060 00b6 8A000000 		.4byte	0x8a
+ 1061 00ba 03       		.byte	0x3
+ 1062 00bb 00       		.byte	0
+ 1063 00bc 08       		.uleb128 0x8
+ 1064 00bd D7000000 		.4byte	.LASF13
+ 1065 00c1 03       		.byte	0x3
+ 1066 00c2 9C       		.byte	0x9c
+ 1067 00c3 CD000000 		.4byte	0xcd
+ 1068 00c7 05       		.uleb128 0x5
+ 1069 00c8 03       		.byte	0x3
+ 1070 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1071 00cd 07       		.uleb128 0x7
+ 1072 00ce AC000000 		.4byte	0xac
+ 1073 00d2 08       		.uleb128 0x8
+ 1074 00d3 3A010000 		.4byte	.LASF14
+ 1075 00d7 03       		.byte	0x3
+ 1076 00d8 AA       		.byte	0xaa
+ 1077 00d9 E3000000 		.4byte	0xe3
+ 1078 00dd 05       		.uleb128 0x5
+ 1079 00de 03       		.byte	0x3
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 20
 
 
- 1084 041f 01       		.byte	1
- 1085 0420 08       		.byte	8
- 1086 0421 01       		.byte	1
- 1087 0422 0A       		.byte	10
- 1088 0423 01       		.byte	1
- 1089 0424 03       		.byte	3
- 1090 0425 C0       		.byte	-64
- 1091 0426 00       		.byte	0
- 1092 0427 00       		.byte	0
- 1093 0428 0C       		.byte	12
- 1094 0429 00       		.byte	0
- 1095 042a 01       		.byte	1
- 1096 042b 00       		.byte	0
- 1097 042c 0C       		.byte	12
- 1098 042d 00       		.byte	0
- 1099 042e 0C       		.byte	12
- 1100 042f 00       		.byte	0
- 1101 0430 00       		.byte	0
- 1102 0431 00       		.byte	0
- 1103 0432 00       		.byte	0
- 1104 0433 00       		.byte	0
- 1105 0434 08       		.byte	8
- 1106 0435 00       		.byte	0
- 1107 0436 00       		.byte	0
- 1108 0437 08       		.byte	8
- 1109 0438 08       		.byte	8
- 1110 0439 00       		.byte	0
- 1111 043a 08       		.byte	8
- 1112 043b 00       		.byte	0
- 1113 043c 00       		.byte	0
- 1114 043d 00       		.byte	0
- 1115 043e 00       		.byte	0
- 1116 043f 00       		.byte	0
- 1117 0440 00       		.byte	0
- 1118 0441 0B       		.byte	11
- 1119 0442 0B       		.byte	11
- 1120 0443 00       		.byte	0
- 1121 0444 00       		.byte	0
- 1122 0445 00       		.byte	0
- 1123 0446 00       		.byte	0
- 1124 0447 00       		.byte	0
- 1125              		.section	.cywolatch,"a",%progbits
- 1126              		.align	2
- 1127              		.type	cy_meta_wonvl, %object
- 1128              		.size	cy_meta_wonvl, 4
- 1129              	cy_meta_wonvl:
- 1130 0000 BC       		.byte	-68
- 1131 0001 90       		.byte	-112
- 1132 0002 AC       		.byte	-84
- 1133 0003 AF       		.byte	-81
- 1134              		.section	.cycustnvl,"a",%progbits
- 1135              		.align	2
- 1136              		.type	cy_meta_custnvl, %object
- 1137              		.size	cy_meta_custnvl, 4
- 1138              	cy_meta_custnvl:
- 1139 0000 00       		.byte	0
- 1140 0001 00       		.byte	0
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 21
+ 1080 00df 00000000 		.4byte	cy_meta_wonvl
+ 1081 00e3 07       		.uleb128 0x7
+ 1082 00e4 AC000000 		.4byte	0xac
+ 1083 00e8 05       		.uleb128 0x5
+ 1084 00e9 91000000 		.4byte	0x91
+ 1085 00ed F8000000 		.4byte	0xf8
+ 1086 00f1 09       		.uleb128 0x9
+ 1087 00f2 8A000000 		.4byte	0x8a
+ 1088 00f6 FF       		.byte	0xff
+ 1089 00f7 00       		.byte	0
+ 1090 00f8 08       		.uleb128 0x8
+ 1091 00f9 25010000 		.4byte	.LASF15
+ 1092 00fd 03       		.byte	0x3
+ 1093 00fe B8       		.byte	0xb8
+ 1094 00ff 09010000 		.4byte	0x109
+ 1095 0103 05       		.uleb128 0x5
+ 1096 0104 03       		.byte	0x3
+ 1097 0105 00000000 		.4byte	cy_meta_flashprotect
+ 1098 0109 07       		.uleb128 0x7
+ 1099 010a E8000000 		.4byte	0xe8
+ 1100 010e 05       		.uleb128 0x5
+ 1101 010f 91000000 		.4byte	0x91
+ 1102 0113 1E010000 		.4byte	0x11e
+ 1103 0117 09       		.uleb128 0x9
+ 1104 0118 8A000000 		.4byte	0x8a
+ 1105 011c 0B       		.byte	0xb
+ 1106 011d 00       		.byte	0
+ 1107 011e 08       		.uleb128 0x8
+ 1108 011f 98000000 		.4byte	.LASF16
+ 1109 0123 03       		.byte	0x3
+ 1110 0124 E5       		.byte	0xe5
+ 1111 0125 2F010000 		.4byte	0x12f
+ 1112 0129 05       		.uleb128 0x5
+ 1113 012a 03       		.byte	0x3
+ 1114 012b 00000000 		.4byte	cy_metadata
+ 1115 012f 07       		.uleb128 0x7
+ 1116 0130 0E010000 		.4byte	0x10e
+ 1117 0134 00       		.byte	0
+ 1118              		.section	.debug_abbrev,"",%progbits
+ 1119              	.Ldebug_abbrev0:
+ 1120 0000 01       		.uleb128 0x1
+ 1121 0001 11       		.uleb128 0x11
+ 1122 0002 01       		.byte	0x1
+ 1123 0003 25       		.uleb128 0x25
+ 1124 0004 0E       		.uleb128 0xe
+ 1125 0005 13       		.uleb128 0x13
+ 1126 0006 0B       		.uleb128 0xb
+ 1127 0007 03       		.uleb128 0x3
+ 1128 0008 0E       		.uleb128 0xe
+ 1129 0009 1B       		.uleb128 0x1b
+ 1130 000a 0E       		.uleb128 0xe
+ 1131 000b 10       		.uleb128 0x10
+ 1132 000c 17       		.uleb128 0x17
+ 1133 000d 00       		.byte	0
+ 1134 000e 00       		.byte	0
+ 1135 000f 02       		.uleb128 0x2
+ 1136 0010 24       		.uleb128 0x24
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 21
 
 
- 1141 0002 40       		.byte	64
- 1142 0003 05       		.byte	5
- 1143              		.section	.cymeta,"a",%progbits
- 1144              		.align	2
- 1145              		.type	cy_metadata, %object
- 1146              		.size	cy_metadata, 12
- 1147              	cy_metadata:
- 1148 0000 00       		.byte	0
- 1149 0001 01       		.byte	1
- 1150 0002 2E       		.byte	46
- 1151 0003 16       		.byte	22
- 1152 0004 10       		.byte	16
- 1153 0005 69       		.byte	105
- 1154 0006 00       		.byte	0
- 1155 0007 01       		.byte	1
- 1156 0008 00       		.byte	0
- 1157 0009 00       		.byte	0
- 1158 000a 00       		.byte	0
- 1159 000b 00       		.byte	0
- 1160              		.section	.cyflashprotect,"a",%progbits
- 1161              		.align	2
- 1162              		.type	cy_meta_flashprotect, %object
- 1163              		.size	cy_meta_flashprotect, 256
- 1164              	cy_meta_flashprotect:
- 1165 0000 00000000 		.space	256
- 1165      00000000 
- 1165      00000000 
- 1165      00000000 
- 1165      00000000 
- 1166              		.text
- 1167              	.Letext0:
- 1168              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 1169              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 1170              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
- 1171              		.section	.debug_info,"",%progbits
- 1172              	.Ldebug_info0:
- 1173 0000 31010000 		.4byte	0x131
- 1174 0004 0400     		.2byte	0x4
- 1175 0006 00000000 		.4byte	.Ldebug_abbrev0
- 1176 000a 04       		.byte	0x4
- 1177 000b 01       		.uleb128 0x1
- 1178 000c 24000000 		.4byte	.LASF17
- 1179 0010 0C       		.byte	0xc
- 1180 0011 C2010000 		.4byte	.LASF18
- 1181 0015 69010000 		.4byte	.LASF19
- 1182 0019 00000000 		.4byte	.Ldebug_line0
- 1183 001d 02       		.uleb128 0x2
- 1184 001e 01       		.byte	0x1
- 1185 001f 06       		.byte	0x6
- 1186 0020 B6010000 		.4byte	.LASF0
- 1187 0024 03       		.uleb128 0x3
- 1188 0025 00000000 		.4byte	.LASF9
- 1189 0029 01       		.byte	0x1
- 1190 002a 1D       		.byte	0x1d
- 1191 002b 2F000000 		.4byte	0x2f
- 1192 002f 02       		.uleb128 0x2
- 1193 0030 01       		.byte	0x1
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 22
+ 1137 0011 00       		.byte	0
+ 1138 0012 0B       		.uleb128 0xb
+ 1139 0013 0B       		.uleb128 0xb
+ 1140 0014 3E       		.uleb128 0x3e
+ 1141 0015 0B       		.uleb128 0xb
+ 1142 0016 03       		.uleb128 0x3
+ 1143 0017 0E       		.uleb128 0xe
+ 1144 0018 00       		.byte	0
+ 1145 0019 00       		.byte	0
+ 1146 001a 03       		.uleb128 0x3
+ 1147 001b 16       		.uleb128 0x16
+ 1148 001c 00       		.byte	0
+ 1149 001d 03       		.uleb128 0x3
+ 1150 001e 0E       		.uleb128 0xe
+ 1151 001f 3A       		.uleb128 0x3a
+ 1152 0020 0B       		.uleb128 0xb
+ 1153 0021 3B       		.uleb128 0x3b
+ 1154 0022 0B       		.uleb128 0xb
+ 1155 0023 49       		.uleb128 0x49
+ 1156 0024 13       		.uleb128 0x13
+ 1157 0025 00       		.byte	0
+ 1158 0026 00       		.byte	0
+ 1159 0027 04       		.uleb128 0x4
+ 1160 0028 24       		.uleb128 0x24
+ 1161 0029 00       		.byte	0
+ 1162 002a 0B       		.uleb128 0xb
+ 1163 002b 0B       		.uleb128 0xb
+ 1164 002c 3E       		.uleb128 0x3e
+ 1165 002d 0B       		.uleb128 0xb
+ 1166 002e 03       		.uleb128 0x3
+ 1167 002f 08       		.uleb128 0x8
+ 1168 0030 00       		.byte	0
+ 1169 0031 00       		.byte	0
+ 1170 0032 05       		.uleb128 0x5
+ 1171 0033 01       		.uleb128 0x1
+ 1172 0034 01       		.byte	0x1
+ 1173 0035 49       		.uleb128 0x49
+ 1174 0036 13       		.uleb128 0x13
+ 1175 0037 01       		.uleb128 0x1
+ 1176 0038 13       		.uleb128 0x13
+ 1177 0039 00       		.byte	0
+ 1178 003a 00       		.byte	0
+ 1179 003b 06       		.uleb128 0x6
+ 1180 003c 21       		.uleb128 0x21
+ 1181 003d 00       		.byte	0
+ 1182 003e 49       		.uleb128 0x49
+ 1183 003f 13       		.uleb128 0x13
+ 1184 0040 2F       		.uleb128 0x2f
+ 1185 0041 05       		.uleb128 0x5
+ 1186 0042 00       		.byte	0
+ 1187 0043 00       		.byte	0
+ 1188 0044 07       		.uleb128 0x7
+ 1189 0045 26       		.uleb128 0x26
+ 1190 0046 00       		.byte	0
+ 1191 0047 49       		.uleb128 0x49
+ 1192 0048 13       		.uleb128 0x13
+ 1193 0049 00       		.byte	0
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 22
 
 
- 1194 0031 08       		.byte	0x8
- 1195 0032 16000000 		.4byte	.LASF1
- 1196 0036 02       		.uleb128 0x2
- 1197 0037 02       		.byte	0x2
- 1198 0038 05       		.byte	0x5
- 1199 0039 5F010000 		.4byte	.LASF2
- 1200 003d 02       		.uleb128 0x2
- 1201 003e 02       		.byte	0x2
- 1202 003f 07       		.byte	0x7
- 1203 0040 C4000000 		.4byte	.LASF3
- 1204 0044 02       		.uleb128 0x2
- 1205 0045 04       		.byte	0x4
- 1206 0046 05       		.byte	0x5
- 1207 0047 AD010000 		.4byte	.LASF4
- 1208 004b 02       		.uleb128 0x2
- 1209 004c 04       		.byte	0x4
- 1210 004d 07       		.byte	0x7
- 1211 004e B2000000 		.4byte	.LASF5
- 1212 0052 02       		.uleb128 0x2
- 1213 0053 08       		.byte	0x8
- 1214 0054 05       		.byte	0x5
- 1215 0055 51010000 		.4byte	.LASF6
- 1216 0059 02       		.uleb128 0x2
- 1217 005a 08       		.byte	0x8
- 1218 005b 07       		.byte	0x7
- 1219 005c 06010000 		.4byte	.LASF7
- 1220 0060 04       		.uleb128 0x4
- 1221 0061 04       		.byte	0x4
- 1222 0062 05       		.byte	0x5
- 1223 0063 696E7400 		.ascii	"int\000"
- 1224 0067 02       		.uleb128 0x2
- 1225 0068 04       		.byte	0x4
- 1226 0069 07       		.byte	0x7
- 1227 006a F9000000 		.4byte	.LASF8
- 1228 006e 03       		.uleb128 0x3
- 1229 006f 1D010000 		.4byte	.LASF10
- 1230 0073 02       		.byte	0x2
- 1231 0074 18       		.byte	0x18
- 1232 0075 24000000 		.4byte	0x24
- 1233 0079 05       		.uleb128 0x5
- 1234 007a 91000000 		.4byte	0x91
- 1235 007e 8A000000 		.4byte	0x8a
- 1236 0082 06       		.uleb128 0x6
- 1237 0083 8A000000 		.4byte	0x8a
- 1238 0087 4704     		.2byte	0x447
- 1239 0089 00       		.byte	0
- 1240 008a 02       		.uleb128 0x2
- 1241 008b 04       		.byte	0x4
- 1242 008c 07       		.byte	0x7
- 1243 008d 48010000 		.4byte	.LASF11
- 1244 0091 07       		.uleb128 0x7
- 1245 0092 6E000000 		.4byte	0x6e
- 1246 0096 08       		.uleb128 0x8
- 1247 0097 E7000000 		.4byte	.LASF12
- 1248 009b 03       		.byte	0x3
- 1249 009c 1F       		.byte	0x1f
- 1250 009d A7000000 		.4byte	0xa7
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 23
+ 1194 004a 00       		.byte	0
+ 1195 004b 08       		.uleb128 0x8
+ 1196 004c 34       		.uleb128 0x34
+ 1197 004d 00       		.byte	0
+ 1198 004e 03       		.uleb128 0x3
+ 1199 004f 0E       		.uleb128 0xe
+ 1200 0050 3A       		.uleb128 0x3a
+ 1201 0051 0B       		.uleb128 0xb
+ 1202 0052 3B       		.uleb128 0x3b
+ 1203 0053 0B       		.uleb128 0xb
+ 1204 0054 49       		.uleb128 0x49
+ 1205 0055 13       		.uleb128 0x13
+ 1206 0056 3F       		.uleb128 0x3f
+ 1207 0057 19       		.uleb128 0x19
+ 1208 0058 02       		.uleb128 0x2
+ 1209 0059 18       		.uleb128 0x18
+ 1210 005a 00       		.byte	0
+ 1211 005b 00       		.byte	0
+ 1212 005c 09       		.uleb128 0x9
+ 1213 005d 21       		.uleb128 0x21
+ 1214 005e 00       		.byte	0
+ 1215 005f 49       		.uleb128 0x49
+ 1216 0060 13       		.uleb128 0x13
+ 1217 0061 2F       		.uleb128 0x2f
+ 1218 0062 0B       		.uleb128 0xb
+ 1219 0063 00       		.byte	0
+ 1220 0064 00       		.byte	0
+ 1221 0065 00       		.byte	0
+ 1222              		.section	.debug_aranges,"",%progbits
+ 1223 0000 14000000 		.4byte	0x14
+ 1224 0004 0200     		.2byte	0x2
+ 1225 0006 00000000 		.4byte	.Ldebug_info0
+ 1226 000a 04       		.byte	0x4
+ 1227 000b 00       		.byte	0
+ 1228 000c 0000     		.2byte	0
+ 1229 000e 0000     		.2byte	0
+ 1230 0010 00000000 		.4byte	0
+ 1231 0014 00000000 		.4byte	0
+ 1232              		.section	.debug_line,"",%progbits
+ 1233              	.Ldebug_line0:
+ 1234 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 1234      02003701 
+ 1234      00000201 
+ 1234      FB0E0D00 
+ 1234      01010101 
+ 1235              	.LASF9:
+ 1236 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1236      6E74385F 
+ 1236      7400
+ 1237              	.LASF17:
+ 1238 000a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1238      43313120 
+ 1238      352E342E 
+ 1238      31203230 
+ 1238      31363036 
+ 1239 003d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1239      20726576 
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 23
 
 
- 1251 00a1 05       		.uleb128 0x5
- 1252 00a2 03       		.byte	0x3
- 1253 00a3 00000000 		.4byte	cy_meta_configecc
- 1254 00a7 07       		.uleb128 0x7
- 1255 00a8 79000000 		.4byte	0x79
- 1256 00ac 05       		.uleb128 0x5
- 1257 00ad 91000000 		.4byte	0x91
- 1258 00b1 BC000000 		.4byte	0xbc
- 1259 00b5 09       		.uleb128 0x9
- 1260 00b6 8A000000 		.4byte	0x8a
- 1261 00ba 03       		.byte	0x3
- 1262 00bb 00       		.byte	0
- 1263 00bc 08       		.uleb128 0x8
- 1264 00bd D7000000 		.4byte	.LASF13
- 1265 00c1 03       		.byte	0x3
- 1266 00c2 B5       		.byte	0xb5
- 1267 00c3 CD000000 		.4byte	0xcd
- 1268 00c7 05       		.uleb128 0x5
- 1269 00c8 03       		.byte	0x3
- 1270 00c9 00000000 		.4byte	cy_meta_custnvl
- 1271 00cd 07       		.uleb128 0x7
- 1272 00ce AC000000 		.4byte	0xac
- 1273 00d2 08       		.uleb128 0x8
- 1274 00d3 3A010000 		.4byte	.LASF14
- 1275 00d7 03       		.byte	0x3
- 1276 00d8 C3       		.byte	0xc3
- 1277 00d9 E3000000 		.4byte	0xe3
- 1278 00dd 05       		.uleb128 0x5
- 1279 00de 03       		.byte	0x3
- 1280 00df 00000000 		.4byte	cy_meta_wonvl
- 1281 00e3 07       		.uleb128 0x7
- 1282 00e4 AC000000 		.4byte	0xac
- 1283 00e8 05       		.uleb128 0x5
- 1284 00e9 91000000 		.4byte	0x91
- 1285 00ed F8000000 		.4byte	0xf8
- 1286 00f1 09       		.uleb128 0x9
- 1287 00f2 8A000000 		.4byte	0x8a
- 1288 00f6 FF       		.byte	0xff
- 1289 00f7 00       		.byte	0
- 1290 00f8 08       		.uleb128 0x8
- 1291 00f9 25010000 		.4byte	.LASF15
- 1292 00fd 03       		.byte	0x3
- 1293 00fe D1       		.byte	0xd1
- 1294 00ff 09010000 		.4byte	0x109
- 1295 0103 05       		.uleb128 0x5
- 1296 0104 03       		.byte	0x3
- 1297 0105 00000000 		.4byte	cy_meta_flashprotect
- 1298 0109 07       		.uleb128 0x7
- 1299 010a E8000000 		.4byte	0xe8
- 1300 010e 05       		.uleb128 0x5
- 1301 010f 91000000 		.4byte	0x91
- 1302 0113 1E010000 		.4byte	0x11e
- 1303 0117 09       		.uleb128 0x9
- 1304 0118 8A000000 		.4byte	0x8a
- 1305 011c 0B       		.byte	0xb
- 1306 011d 00       		.byte	0
- 1307 011e 08       		.uleb128 0x8
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 24
+ 1239      6973696F 
+ 1239      6E203233 
+ 1239      37373135 
+ 1240 0070 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1240      66756E63 
+ 1240      74696F6E 
+ 1240      2D736563 
+ 1240      74696F6E 
+ 1241              	.LASF16:
+ 1242 0098 63795F6D 		.ascii	"cy_metadata\000"
+ 1242      65746164 
+ 1242      61746100 
+ 1243              	.LASF1:
+ 1244 00a4 756E7369 		.ascii	"unsigned char\000"
+ 1244      676E6564 
+ 1244      20636861 
+ 1244      7200
+ 1245              	.LASF5:
+ 1246 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1246      20756E73 
+ 1246      69676E65 
+ 1246      6420696E 
+ 1246      7400
+ 1247              	.LASF3:
+ 1248 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 1248      7420756E 
+ 1248      7369676E 
+ 1248      65642069 
+ 1248      6E7400
+ 1249              	.LASF13:
+ 1250 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1250      6574615F 
+ 1250      63757374 
+ 1250      6E766C00 
+ 1251              	.LASF12:
+ 1252 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1252      6574615F 
+ 1252      636F6E66 
+ 1252      69676563 
+ 1252      6300
+ 1253              	.LASF8:
+ 1254 00f9 756E7369 		.ascii	"unsigned int\000"
+ 1254      676E6564 
+ 1254      20696E74 
+ 1254      00
+ 1255              	.LASF7:
+ 1256 0106 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1256      206C6F6E 
+ 1256      6720756E 
+ 1256      7369676E 
+ 1256      65642069 
+ 1257              	.LASF10:
+ 1258 011d 75696E74 		.ascii	"uint8_t\000"
+ 1258      385F7400 
+ 1259              	.LASF15:
+ 1260 0125 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1260      6574615F 
+ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccPA3TOI.s 			page 24
 
 
- 1308 011f 0A000000 		.4byte	.LASF16
- 1309 0123 03       		.byte	0x3
- 1310 0124 FE       		.byte	0xfe
- 1311 0125 2F010000 		.4byte	0x12f
- 1312 0129 05       		.uleb128 0x5
- 1313 012a 03       		.byte	0x3
- 1314 012b 00000000 		.4byte	cy_metadata
- 1315 012f 07       		.uleb128 0x7
- 1316 0130 0E010000 		.4byte	0x10e
- 1317 0134 00       		.byte	0
- 1318              		.section	.debug_abbrev,"",%progbits
- 1319              	.Ldebug_abbrev0:
- 1320 0000 01       		.uleb128 0x1
- 1321 0001 11       		.uleb128 0x11
- 1322 0002 01       		.byte	0x1
- 1323 0003 25       		.uleb128 0x25
- 1324 0004 0E       		.uleb128 0xe
- 1325 0005 13       		.uleb128 0x13
- 1326 0006 0B       		.uleb128 0xb
- 1327 0007 03       		.uleb128 0x3
- 1328 0008 0E       		.uleb128 0xe
- 1329 0009 1B       		.uleb128 0x1b
- 1330 000a 0E       		.uleb128 0xe
- 1331 000b 10       		.uleb128 0x10
- 1332 000c 17       		.uleb128 0x17
- 1333 000d 00       		.byte	0
- 1334 000e 00       		.byte	0
- 1335 000f 02       		.uleb128 0x2
- 1336 0010 24       		.uleb128 0x24
- 1337 0011 00       		.byte	0
- 1338 0012 0B       		.uleb128 0xb
- 1339 0013 0B       		.uleb128 0xb
- 1340 0014 3E       		.uleb128 0x3e
- 1341 0015 0B       		.uleb128 0xb
- 1342 0016 03       		.uleb128 0x3
- 1343 0017 0E       		.uleb128 0xe
- 1344 0018 00       		.byte	0
- 1345 0019 00       		.byte	0
- 1346 001a 03       		.uleb128 0x3
- 1347 001b 16       		.uleb128 0x16
- 1348 001c 00       		.byte	0
- 1349 001d 03       		.uleb128 0x3
- 1350 001e 0E       		.uleb128 0xe
- 1351 001f 3A       		.uleb128 0x3a
- 1352 0020 0B       		.uleb128 0xb
- 1353 0021 3B       		.uleb128 0x3b
- 1354 0022 0B       		.uleb128 0xb
- 1355 0023 49       		.uleb128 0x49
- 1356 0024 13       		.uleb128 0x13
- 1357 0025 00       		.byte	0
- 1358 0026 00       		.byte	0
- 1359 0027 04       		.uleb128 0x4
- 1360 0028 24       		.uleb128 0x24
- 1361 0029 00       		.byte	0
- 1362 002a 0B       		.uleb128 0xb
- 1363 002b 0B       		.uleb128 0xb
- 1364 002c 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 25
-
-
- 1365 002d 0B       		.uleb128 0xb
- 1366 002e 03       		.uleb128 0x3
- 1367 002f 08       		.uleb128 0x8
- 1368 0030 00       		.byte	0
- 1369 0031 00       		.byte	0
- 1370 0032 05       		.uleb128 0x5
- 1371 0033 01       		.uleb128 0x1
- 1372 0034 01       		.byte	0x1
- 1373 0035 49       		.uleb128 0x49
- 1374 0036 13       		.uleb128 0x13
- 1375 0037 01       		.uleb128 0x1
- 1376 0038 13       		.uleb128 0x13
- 1377 0039 00       		.byte	0
- 1378 003a 00       		.byte	0
- 1379 003b 06       		.uleb128 0x6
- 1380 003c 21       		.uleb128 0x21
- 1381 003d 00       		.byte	0
- 1382 003e 49       		.uleb128 0x49
- 1383 003f 13       		.uleb128 0x13
- 1384 0040 2F       		.uleb128 0x2f
- 1385 0041 05       		.uleb128 0x5
- 1386 0042 00       		.byte	0
- 1387 0043 00       		.byte	0
- 1388 0044 07       		.uleb128 0x7
- 1389 0045 26       		.uleb128 0x26
- 1390 0046 00       		.byte	0
- 1391 0047 49       		.uleb128 0x49
- 1392 0048 13       		.uleb128 0x13
- 1393 0049 00       		.byte	0
- 1394 004a 00       		.byte	0
- 1395 004b 08       		.uleb128 0x8
- 1396 004c 34       		.uleb128 0x34
- 1397 004d 00       		.byte	0
- 1398 004e 03       		.uleb128 0x3
- 1399 004f 0E       		.uleb128 0xe
- 1400 0050 3A       		.uleb128 0x3a
- 1401 0051 0B       		.uleb128 0xb
- 1402 0052 3B       		.uleb128 0x3b
- 1403 0053 0B       		.uleb128 0xb
- 1404 0054 49       		.uleb128 0x49
- 1405 0055 13       		.uleb128 0x13
- 1406 0056 3F       		.uleb128 0x3f
- 1407 0057 19       		.uleb128 0x19
- 1408 0058 02       		.uleb128 0x2
- 1409 0059 18       		.uleb128 0x18
- 1410 005a 00       		.byte	0
- 1411 005b 00       		.byte	0
- 1412 005c 09       		.uleb128 0x9
- 1413 005d 21       		.uleb128 0x21
- 1414 005e 00       		.byte	0
- 1415 005f 49       		.uleb128 0x49
- 1416 0060 13       		.uleb128 0x13
- 1417 0061 2F       		.uleb128 0x2f
- 1418 0062 0B       		.uleb128 0xb
- 1419 0063 00       		.byte	0
- 1420 0064 00       		.byte	0
- 1421 0065 00       		.byte	0
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 26
-
-
- 1422              		.section	.debug_aranges,"",%progbits
- 1423 0000 14000000 		.4byte	0x14
- 1424 0004 0200     		.2byte	0x2
- 1425 0006 00000000 		.4byte	.Ldebug_info0
- 1426 000a 04       		.byte	0x4
- 1427 000b 00       		.byte	0
- 1428 000c 0000     		.2byte	0
- 1429 000e 0000     		.2byte	0
- 1430 0010 00000000 		.4byte	0
- 1431 0014 00000000 		.4byte	0
- 1432              		.section	.debug_line,"",%progbits
- 1433              	.Ldebug_line0:
- 1434 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
- 1434      02003701 
- 1434      00000201 
- 1434      FB0E0D00 
- 1434      01010101 
- 1435              	.LASF9:
- 1436 0000 5F5F7569 		.ascii	"__uint8_t\000"
- 1436      6E74385F 
- 1436      7400
- 1437              	.LASF16:
- 1438 000a 63795F6D 		.ascii	"cy_metadata\000"
- 1438      65746164 
- 1438      61746100 
- 1439              	.LASF1:
- 1440 0016 756E7369 		.ascii	"unsigned char\000"
- 1440      676E6564 
- 1440      20636861 
- 1440      7200
- 1441              	.LASF17:
- 1442 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1442      43313120 
- 1442      352E342E 
- 1442      31203230 
- 1442      31363036 
- 1443 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1443      20726576 
- 1443      6973696F 
- 1443      6E203233 
- 1443      37373135 
- 1444 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1444      66756E63 
- 1444      74696F6E 
- 1444      2D736563 
- 1444      74696F6E 
- 1445              	.LASF5:
- 1446 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
- 1446      20756E73 
- 1446      69676E65 
- 1446      6420696E 
- 1446      7400
- 1447              	.LASF3:
- 1448 00c4 73686F72 		.ascii	"short unsigned int\000"
- 1448      7420756E 
- 1448      7369676E 
- 1448      65642069 
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 27
-
-
- 1448      6E7400
- 1449              	.LASF13:
- 1450 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 1450      6574615F 
- 1450      63757374 
- 1450      6E766C00 
- 1451              	.LASF12:
- 1452 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
- 1452      6574615F 
- 1452      636F6E66 
- 1452      69676563 
- 1452      6300
- 1453              	.LASF8:
- 1454 00f9 756E7369 		.ascii	"unsigned int\000"
- 1454      676E6564 
- 1454      20696E74 
- 1454      00
- 1455              	.LASF7:
- 1456 0106 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1456      206C6F6E 
- 1456      6720756E 
- 1456      7369676E 
- 1456      65642069 
- 1457              	.LASF10:
- 1458 011d 75696E74 		.ascii	"uint8_t\000"
- 1458      385F7400 
- 1459              	.LASF15:
- 1460 0125 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 1460      6574615F 
- 1460      666C6173 
- 1460      6870726F 
- 1460      74656374 
- 1461              	.LASF14:
- 1462 013a 63795F6D 		.ascii	"cy_meta_wonvl\000"
- 1462      6574615F 
- 1462      776F6E76 
- 1462      6C00
- 1463              	.LASF11:
- 1464 0148 73697A65 		.ascii	"sizetype\000"
- 1464      74797065 
- 1464      00
- 1465              	.LASF6:
- 1466 0151 6C6F6E67 		.ascii	"long long int\000"
- 1466      206C6F6E 
- 1466      6720696E 
- 1466      7400
- 1467              	.LASF2:
- 1468 015f 73686F72 		.ascii	"short int\000"
- 1468      7420696E 
- 1468      7400
- 1469              	.LASF19:
- 1470 0169 433A5C55 		.ascii	"C:\\Users\\hejmi\\Documents\\PSoC Creator\\LaserDri"
- 1470      73657273 
- 1470      5C68656A 
- 1470      6D695C44 
- 1470      6F63756D 
- 1471 0197 7665725C 		.ascii	"ver\\LaserDriver.cydsn\000"
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccOl1R3Q.s 			page 28
-
-
- 1471      4C617365 
- 1471      72447269 
- 1471      7665722E 
- 1471      63796473 
- 1472              	.LASF4:
- 1473 01ad 6C6F6E67 		.ascii	"long int\000"
- 1473      20696E74 
- 1473      00
- 1474              	.LASF0:
- 1475 01b6 7369676E 		.ascii	"signed char\000"
- 1475      65642063 
- 1475      68617200 
- 1476              	.LASF18:
- 1477 01c2 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
- 1477      72617465 
- 1477      645F536F 
- 1477      75726365 
- 1477      5C50536F 
- 1478              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1260      666C6173 
+ 1260      6870726F 
+ 1260      74656374 
+ 1261              	.LASF14:
+ 1262 013a 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1262      6574615F 
+ 1262      776F6E76 
+ 1262      6C00
+ 1263              	.LASF11:
+ 1264 0148 73697A65 		.ascii	"sizetype\000"
+ 1264      74797065 
+ 1264      00
+ 1265              	.LASF6:
+ 1266 0151 6C6F6E67 		.ascii	"long long int\000"
+ 1266      206C6F6E 
+ 1266      6720696E 
+ 1266      7400
+ 1267              	.LASF19:
+ 1268 015f 433A5C55 		.ascii	"C:\\Users\\Lucas\\OneDrive - Aarhus universitet\\PR"
+ 1268      73657273 
+ 1268      5C4C7563 
+ 1268      61735C4F 
+ 1268      6E654472 
+ 1269 018e 4A345C69 		.ascii	"J4\\iFollow\\Software\\PSOC\\Lasersensor\\LaserDriv"
+ 1269      466F6C6C 
+ 1269      6F775C53 
+ 1269      6F667477 
+ 1269      6172655C 
+ 1270 01bc 65725C4C 		.ascii	"er\\LaserDriver.cydsn\000"
+ 1270      61736572 
+ 1270      44726976 
+ 1270      65722E63 
+ 1270      7964736E 
+ 1271              	.LASF2:
+ 1272 01d1 73686F72 		.ascii	"short int\000"
+ 1272      7420696E 
+ 1272      7400
+ 1273              	.LASF4:
+ 1274 01db 6C6F6E67 		.ascii	"long int\000"
+ 1274      20696E74 
+ 1274      00
+ 1275              	.LASF0:
+ 1276 01e4 7369676E 		.ascii	"signed char\000"
+ 1276      65642063 
+ 1276      68617200 
+ 1277              	.LASF18:
+ 1278 01f0 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1278      72617465 
+ 1278      645F536F 
+ 1278      75726365 
+ 1278      5C50536F 
+ 1279              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
