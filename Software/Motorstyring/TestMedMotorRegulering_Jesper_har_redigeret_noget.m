@@ -22,11 +22,10 @@ J = Tidskonstant*(D+((Kb*Kt)/R));
 %% Overf?ringsfunktion Theta/Ea
 s  = tf('s');
 Gs1 = (Kt/(R/J))/s*(s+(1/J)*(D+(Kt*Kb)/R));    % Theta/Ea -- vel/V
-Gacc = 1/(R/Kt*(J*s+D)+Kb);
 
 %% Overf?ringsfunktion w/Ea
 s  = tf('s');
-Gs2 = (Kt/(R/J))/s*(s+(1/J)*(D+(Kt*Kb)/R));    % w/Ea -- vel/V
+Gs2 = (Kt/(R/J))/(s+(1/J)*(D+(Kt*Kb)/R));    % w/Ea -- vel/V
 %% Beregning af diverse features
 Ea          = 12;       % Indgangssp?nding (V)
 w_tomgang   = Ea/Kb;    % Tomgangs hastighed I = 0A (rad/s)
