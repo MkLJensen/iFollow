@@ -1,10 +1,10 @@
 #---------------Variabler---------------------
-SOURCES=main.cpp getGPS.cpp
+SOURCES=main.cpp getGPS.cpp NMEA_GPGGA.cpp
 OBJECTS=$(addprefix $(BUILD_DIR)/,$(SOURCES:.cpp=.o))
 DEPS=$(addprefix $(BUILD_DIR)/,$(SOURCES:.cpp=.d))
 EXE=$(BUILD_BIN)/prog
 CXXFLAGS=-I.
-LDFLAGS=-lpthread
+LDFLAGS=
 
 #----------Valg imellem host og target--------
 # Making for host

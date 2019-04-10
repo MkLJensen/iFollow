@@ -10,16 +10,6 @@ GPS::~GPS(void)
 {
 }
 
-std::string GPS::getLatitude(void)
-{
-    return Latitude_;
-}
-
-std::string GPS::getLongitude(void)
-{
-    return Longitude_;
-}
-
 void GPS::updateCordinates(void)
 {
     
@@ -33,8 +23,8 @@ void GPS::updateCordinates(void)
 
     if (inFile.fail()) // checking if opening file has failed
     {
-        Latitude_ = "Failed to get latitude GPS Data"; // GPS example string : $GPGGA,091224.00,5610.35994,N,01011.51373,E,1,07,1.49,59.3,M,42.8,M,,*68
-        Longitude_ = "Failed to get Longitude GPS Data";
+        setLatitude("Failed to get latitude GPS Data"); // GPS example string : $GPGGA,091224.00,5610.35994,N,01011.51373,E,1,07,1.49,59.3,M,42.8,M,,*68
+        setLongitude("Failed to get Longitude GPS Data");
         readError = true;
     }
     readError = false;
@@ -97,34 +87,34 @@ void GPS::updateCordinates(void)
                         switch (i)
                         {
                             case 0: 
-                                gpsType_ = std::string(caseBuffer_);
+                                setGpsType(caseBuffer_);
                                 break;
                             case 1:
-                                fixTime_ = std::string(caseBuffer_);
+                                setfixTime(caseBuffer_);
                                 break;
                             case 2:
-                                Latitude_ = std::string(caseBuffer_);
+                                setLatitude(caseBuffer_);
                                 break;
                             case 3:
-                                Longitude_ = std::string(caseBuffer_);
+                                setLongitude(caseBuffer_);
                                 break;
                             case 4:
-                                fixQuality_ = std::string(caseBuffer_);
+                                setfixQuality(caseBuffer_);
                                 break;
                             case 5:
-                                numOfSats_ = std::string(caseBuffer_);
+                                setnumofSats(caseBuffer_);
                                 break;
                             case 6:
-                                hDilutionofPos_ = std::string(caseBuffer_);
+                                sethDilutionofPos(caseBuffer_);
                                 break;
                             case 7:
-                                altitudeMeters_ = std::string(caseBuffer_);
+                                setaltitudeMeters(caseBuffer_);
                                 break;
                             case 8:
-                                hOfGeoid_ = std::string(caseBuffer_);
+                                sethOgGeoid(caseBuffer_);
                                 break;
                             case 9:
-                                checkSum_ = std::string(caseBuffer_);
+                                setcheckSum(caseBuffer_);
                                 break;
                         }
                     }
