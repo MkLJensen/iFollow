@@ -28,14 +28,16 @@ void GPS::updateCordinates(void)
     std::size_t posOfComma1 = 0, posOfComma2;
 
     std::ifstream inFile (fileDescrip_); //Opening file 
+    std::cout << fileDescrip_ << std::endl;
     int longofFileDe = inFile.tellg(); // getting size of file
 
     if (inFile.fail()) // checking if opening file has failed
     {
         Latitude_ = "Failed to get latitude GPS Data"; // GPS example string : $GPGGA,091224.00,5610.35994,N,01011.51373,E,1,07,1.49,59.3,M,42.8,M,,*68
         Longitude_ = "Failed to get Longitude GPS Data";
+        readError = true;
     }
-
+    readError = false;
     inFile.read(bufferChar_,longofFileDe);
     std::string bufferString_(bufferChar_);
 
@@ -131,8 +133,9 @@ void GPS::updateCordinates(void)
         inFile.close();
         return;
     }
-    readError = true;
-    std::cout << "error reading. size of read data: " << inFile.gcount() <<std::endl;
+    if (readError = true) {
+        std::cout << "error reading. size of read data: " << inFile.gcount() <<std::endl;
+    }
 
 
     inFile.close();
