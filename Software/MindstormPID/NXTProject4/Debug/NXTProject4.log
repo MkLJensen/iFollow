@@ -1,12 +1,1 @@
-﻿  Exercise 10.1.cpp
-c:\users\lucas\source\repos\nxtproject4\nxtproject4\exercise 10.1.cpp(15): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lucas\source\repos\nxtproject4\nxtproject4\exercise 10.1.cpp(16): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lucas\source\repos\nxtproject4\nxtproject4\exercise 10.1.cpp(17): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lucas\source\repos\nxtproject4\nxtproject4\exercise 10.1.cpp(36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\lucas\source\repos\nxtproject4\nxtproject4\exercise 10.1.cpp(38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\lucas\source\repos\nxtproject4\nxtproject4\exercise 10.1.cpp(63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\lucas\source\repos\nxtproject4\nxtproject4\exercise 10.1.cpp(82): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\lucas\source\repos\nxtproject4\nxtproject4\exercise 10.1.cpp(87): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\lucas\source\repos\nxtproject4\nxtproject4\exercise 10.1.cpp(92): warning C4305: '+=': truncation from 'double' to 'float'
-  NXTProject4.vcxproj -> C:\Users\Lucas\source\repos\NXTProject4\Debug\Exercise10.1.exe
-  NXTProject4.vcxproj -> C:\Users\Lucas\source\repos\NXTProject4\Debug\Exercise10.1.pdb (Partial PDB)
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.15063.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution".

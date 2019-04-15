@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
   36 0002 84B0     		sub	sp, sp, #16
   37              		.cfi_def_cfa_offset 24
   38 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 2
 
 
   39              		.cfi_def_cfa_register 7
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
   80 004e 1846     		mov	r0, r3
   81 0050 FFF7FEFF 		bl	I2C_1_MasterWriteByte
   29:i2c.c         ****     {
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 3
 
 
   82              		.loc 1 29 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  123 0010 FB70     		strb	r3, [r7, #3]
  124 0012 0B46     		mov	r3, r1	@ movhi
  125 0014 3B80     		strh	r3, [r7]	@ movhi
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 4
 
 
  126 0016 1346     		mov	r3, r2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  168 005c 3B61     		str	r3, [r7, #16]
  169 005e F0E7     		b	.L6
  170              	.L5:
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 5
 
 
  171              	.LBE2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  214              	.LFB68:
   68:i2c.c         **** 
   69:i2c.c         **** /***************************************************
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 6
 
 
   70:i2c.c         **** * For writing a single byte of data to device with I2C
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  261              		.type	_ZN3i2c14WriteByte16bitEhth, %function
  262              	_ZN3i2c14WriteByte16bitEhth:
  263              	.LFB69:
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 7
 
 
   78:i2c.c         **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  308              		.thumb
  309              		.thumb_func
  310              		.type	_ZN3i2c9ReadBytesEhhhPh, %function
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 8
 
 
  311              	_ZN3i2c9ReadBytesEhhhPh:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  105:i2c.c         ****     I2C_1_MasterSendRestart(device_add, I2C_1_READ_XFER_MODE);
  348              		.loc 1 105 0
  349 0030 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 9
 
 
  350 0032 0121     		movs	r1, #1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  393              		.cfi_def_cfa_register 13
  394              		@ sp needed
  395 007e 90BD     		pop	{r4, r7, pc}
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 10
 
 
  396              		.cfi_endproc
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  440 0028 80BD     		pop	{r7, pc}
  441              		.cfi_endproc
  442              	.LFE71:
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 11
 
 
  443              		.size	_ZN3i2c8ReadByteEhhPh, .-_ZN3i2c8ReadByteEhhPh
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  484 0026 3B88     		ldrh	r3, [r7]
  485 0028 1B12     		asrs	r3, r3, #8
  486 002a DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 12
 
 
  487 002c 3B73     		strb	r3, [r7, #12]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  528 006e FA75     		strb	r2, [r7, #23]
  529 0070 1A46     		mov	r2, r3
  530 0072 BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 13
 
 
  531 0074 013B     		subs	r3, r3, #1
@@ -778,23 +778,23 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  577              	.Ldebug_info0:
  578 0000 67050000 		.4byte	0x567
  579 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 14
 
 
  580 0006 00000000 		.4byte	.Ldebug_abbrev0
  581 000a 04       		.byte	0x4
  582 000b 01       		.uleb128 0x1
- 583 000c 88010000 		.4byte	.LASF42
+ 583 000c E3010000 		.4byte	.LASF42
  584 0010 04       		.byte	0x4
- 585 0011 36010000 		.4byte	.LASF43
- 586 0015 82020000 		.4byte	.LASF44
+ 585 0011 91010000 		.4byte	.LASF43
+ 586 0015 37000000 		.4byte	.LASF44
  587 0019 00000000 		.4byte	.Ldebug_ranges0+0
  588 001d 00000000 		.4byte	0
  589 0021 00000000 		.4byte	.Ldebug_line0
  590 0025 02       		.uleb128 0x2
  591 0026 01       		.byte	0x1
  592 0027 06       		.byte	0x6
- 593 0028 4F030000 		.4byte	.LASF0
+ 593 0028 38030000 		.4byte	.LASF0
  594 002c 03       		.uleb128 0x3
  595 002d 0B000000 		.4byte	.LASF3
  596 0031 02       		.byte	0x2
@@ -803,20 +803,20 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  599 0037 02       		.uleb128 0x2
  600 0038 01       		.byte	0x1
  601 0039 08       		.byte	0x8
- 602 003a B3000000 		.4byte	.LASF1
+ 602 003a 0E010000 		.4byte	.LASF1
  603 003e 02       		.uleb128 0x2
  604 003f 02       		.byte	0x2
  605 0040 05       		.byte	0x5
- 606 0041 F4020000 		.4byte	.LASF2
+ 606 0041 DD020000 		.4byte	.LASF2
  607 0045 03       		.uleb128 0x3
- 608 0046 24010000 		.4byte	.LASF4
+ 608 0046 7F010000 		.4byte	.LASF4
  609 004a 02       		.byte	0x2
  610 004b 2B       		.byte	0x2b
  611 004c 50000000 		.4byte	0x50
  612 0050 02       		.uleb128 0x2
  613 0051 02       		.byte	0x2
  614 0052 07       		.byte	0x7
- 615 0053 E0000000 		.4byte	.LASF5
+ 615 0053 3B010000 		.4byte	.LASF5
  616 0057 03       		.uleb128 0x3
  617 0058 1B000000 		.4byte	.LASF6
  618 005c 02       		.byte	0x2
@@ -825,20 +825,20 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  621 0062 02       		.uleb128 0x2
  622 0063 04       		.byte	0x4
  623 0064 05       		.byte	0x5
- 624 0065 28030000 		.4byte	.LASF7
+ 624 0065 11030000 		.4byte	.LASF7
  625 0069 02       		.uleb128 0x2
  626 006a 04       		.byte	0x4
  627 006b 07       		.byte	0x7
- 628 006c CE000000 		.4byte	.LASF8
+ 628 006c 29010000 		.4byte	.LASF8
  629 0070 02       		.uleb128 0x2
  630 0071 08       		.byte	0x8
  631 0072 05       		.byte	0x5
- 632 0073 6F020000 		.4byte	.LASF9
+ 632 0073 CA020000 		.4byte	.LASF9
  633 0077 02       		.uleb128 0x2
  634 0078 08       		.byte	0x8
  635 0079 07       		.byte	0x7
- 636 007a 69010000 		.4byte	.LASF10
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 15
+ 636 007a C4010000 		.4byte	.LASF10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 15
 
 
  637 007e 04       		.uleb128 0x4
@@ -848,44 +848,44 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  641 0085 02       		.uleb128 0x2
  642 0086 04       		.byte	0x4
  643 0087 07       		.byte	0x7
- 644 0088 54010000 		.4byte	.LASF11
+ 644 0088 AF010000 		.4byte	.LASF11
  645 008c 03       		.uleb128 0x3
- 646 008d 80010000 		.4byte	.LASF12
+ 646 008d DB010000 		.4byte	.LASF12
  647 0091 03       		.byte	0x3
  648 0092 18       		.byte	0x18
  649 0093 2C000000 		.4byte	0x2c
  650 0097 03       		.uleb128 0x3
- 651 0098 06030000 		.4byte	.LASF13
+ 651 0098 EF020000 		.4byte	.LASF13
  652 009c 03       		.byte	0x3
  653 009d 24       		.byte	0x24
  654 009e 45000000 		.4byte	0x45
  655 00a2 03       		.uleb128 0x3
- 656 00a3 75000000 		.4byte	.LASF14
+ 656 00a3 D0000000 		.4byte	.LASF14
  657 00a7 03       		.byte	0x3
  658 00a8 2C       		.byte	0x2c
  659 00a9 57000000 		.4byte	0x57
  660 00ad 02       		.uleb128 0x2
  661 00ae 04       		.byte	0x4
  662 00af 04       		.byte	0x4
- 663 00b0 99000000 		.4byte	.LASF15
+ 663 00b0 F4000000 		.4byte	.LASF15
  664 00b4 02       		.uleb128 0x2
  665 00b5 08       		.byte	0x8
  666 00b6 04       		.byte	0x4
- 667 00b7 2F010000 		.4byte	.LASF16
+ 667 00b7 8A010000 		.4byte	.LASF16
  668 00bb 02       		.uleb128 0x2
  669 00bc 01       		.byte	0x1
  670 00bd 08       		.byte	0x8
- 671 00be 7D020000 		.4byte	.LASF17
+ 671 00be D8020000 		.4byte	.LASF17
  672 00c2 02       		.uleb128 0x2
  673 00c3 08       		.byte	0x8
  674 00c4 04       		.byte	0x4
- 675 00c5 8D000000 		.4byte	.LASF18
+ 675 00c5 E8000000 		.4byte	.LASF18
  676 00c9 05       		.uleb128 0x5
  677 00ca 25000000 		.4byte	.LASF45
  678 00ce 02       		.uleb128 0x2
  679 00cf 04       		.byte	0x4
  680 00d0 07       		.byte	0x7
- 681 00d1 49020000 		.4byte	.LASF19
+ 681 00d1 A4020000 		.4byte	.LASF19
  682 00d5 06       		.uleb128 0x6
  683 00d6 69326300 		.ascii	"i2c\000"
  684 00da 01       		.byte	0x1
@@ -896,9 +896,9 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  689 00e2 69326300 		.ascii	"i2c\000"
  690 00e6 04       		.byte	0x4
  691 00e7 1C       		.byte	0x1c
- 692 00e8 90030000 		.4byte	.LASF46
+ 692 00e8 79030000 		.4byte	.LASF46
  693 00ec 58020000 		.4byte	0x258
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 16
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 16
 
 
  694 00f0 01       		.byte	0x1
@@ -908,10 +908,10 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  698 00fa 58020000 		.4byte	0x258
  699 00fe 00       		.byte	0
  700 00ff 09       		.uleb128 0x9
- 701 0100 0F030000 		.4byte	.LASF20
+ 701 0100 F8020000 		.4byte	.LASF20
  702 0104 04       		.byte	0x4
  703 0105 1D       		.byte	0x1d
- 704 0106 3C010000 		.4byte	.LASF22
+ 704 0106 97010000 		.4byte	.LASF22
  705 010a 01       		.byte	0x1
  706 010b 13010000 		.4byte	0x113
  707 010f 2D010000 		.4byte	0x12d
@@ -927,10 +927,10 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  717 0128 5E020000 		.4byte	0x25e
  718 012c 00       		.byte	0
  719 012d 09       		.uleb128 0x9
- 720 012e 5B030000 		.4byte	.LASF21
+ 720 012e 44030000 		.4byte	.LASF21
  721 0132 04       		.byte	0x4
  722 0133 1E       		.byte	0x1e
- 723 0134 33020000 		.4byte	.LASF23
+ 723 0134 8E020000 		.4byte	.LASF23
  724 0138 01       		.byte	0x1
  725 0139 41010000 		.4byte	0x141
  726 013d 56010000 		.4byte	0x156
@@ -947,7 +947,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  737 0157 00000000 		.4byte	.LASF24
  738 015b 04       		.byte	0x4
  739 015c 1F       		.byte	0x1f
- 740 015d 00010000 		.4byte	.LASF25
+ 740 015d 5B010000 		.4byte	.LASF25
  741 0161 01       		.byte	0x1
  742 0162 6A010000 		.4byte	0x16a
  743 0166 84010000 		.4byte	0x184
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  748 0174 0A       		.uleb128 0xa
  749 0175 8C000000 		.4byte	0x8c
  750 0179 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 17
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 17
 
 
  751 017a 8C000000 		.4byte	0x8c
@@ -966,10 +966,10 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  753 017f 5E020000 		.4byte	0x25e
  754 0183 00       		.byte	0
  755 0184 09       		.uleb128 0x9
- 756 0185 1A010000 		.4byte	.LASF26
+ 756 0185 75010000 		.4byte	.LASF26
  757 0189 04       		.byte	0x4
  758 018a 20       		.byte	0x20
- 759 018b 39030000 		.4byte	.LASF27
+ 759 018b 22030000 		.4byte	.LASF27
  760 018f 01       		.byte	0x1
  761 0190 98010000 		.4byte	0x198
  762 0194 AD010000 		.4byte	0x1ad
@@ -983,10 +983,10 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  770 01a8 8C000000 		.4byte	0x8c
  771 01ac 00       		.byte	0
  772 01ad 09       		.uleb128 0x9
- 773 01ae 7D000000 		.4byte	.LASF28
+ 773 01ae D8000000 		.4byte	.LASF28
  774 01b2 04       		.byte	0x4
  775 01b3 21       		.byte	0x21
- 776 01b4 37000000 		.4byte	.LASF29
+ 776 01b4 92000000 		.4byte	.LASF29
  777 01b8 01       		.byte	0x1
  778 01b9 C1010000 		.4byte	0x1c1
  779 01bd DB010000 		.4byte	0x1db
@@ -1002,10 +1002,10 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  789 01d6 5E020000 		.4byte	0x25e
  790 01da 00       		.byte	0
  791 01db 09       		.uleb128 0x9
- 792 01dc 19030000 		.4byte	.LASF30
+ 792 01dc 02030000 		.4byte	.LASF30
  793 01e0 04       		.byte	0x4
  794 01e1 22       		.byte	0x22
- 795 01e2 74030000 		.4byte	.LASF31
+ 795 01e2 5D030000 		.4byte	.LASF31
  796 01e6 01       		.byte	0x1
  797 01e7 EF010000 		.4byte	0x1ef
  798 01eb 04020000 		.4byte	0x204
@@ -1018,14 +1018,14 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  805 01fe 0A       		.uleb128 0xa
  806 01ff 8C000000 		.4byte	0x8c
  807 0203 00       		.byte	0
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 18
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 18
 
 
  808 0204 09       		.uleb128 0x9
- 809 0205 64030000 		.4byte	.LASF32
+ 809 0205 4D030000 		.4byte	.LASF32
  810 0209 04       		.byte	0x4
  811 020a 23       		.byte	0x23
- 812 020b 56000000 		.4byte	.LASF33
+ 812 020b B1000000 		.4byte	.LASF33
  813 020f 01       		.byte	0x1
  814 0210 18020000 		.4byte	0x218
  815 0214 32020000 		.4byte	0x232
@@ -1041,10 +1041,10 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  825 022d 5E020000 		.4byte	0x25e
  826 0231 00       		.byte	0
  827 0232 0B       		.uleb128 0xb
- 828 0233 A4000000 		.4byte	.LASF47
+ 828 0233 FF000000 		.4byte	.LASF47
  829 0237 04       		.byte	0x4
  830 0238 24       		.byte	0x24
- 831 0239 52020000 		.4byte	.LASF48
+ 831 0239 AD020000 		.4byte	.LASF48
  832 023d 01       		.byte	0x1
  833 023e 42020000 		.4byte	0x242
  834 0242 08       		.uleb128 0x8
@@ -1074,16 +1074,16 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  858 0275 7D020000 		.4byte	0x27d
  859 0279 CE020000 		.4byte	0x2ce
  860 027d 0E       		.uleb128 0xe
- 861 027e C1000000 		.4byte	.LASF38
+ 861 027e 1C010000 		.4byte	.LASF38
  862 0282 CE020000 		.4byte	0x2ce
  863 0286 02       		.uleb128 0x2
  864 0287 91       		.byte	0x91
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 19
 
 
  865 0288 6C       		.sleb128 -20
  866 0289 0F       		.uleb128 0xf
- 867 028a 9C030000 		.4byte	.LASF34
+ 867 028a 85030000 		.4byte	.LASF34
  868 028e 01       		.byte	0x1
  869 028f 13       		.byte	0x13
  870 0290 8C000000 		.4byte	0x8c
@@ -1091,7 +1091,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  872 0295 91       		.byte	0x91
  873 0296 6B       		.sleb128 -21
  874 0297 0F       		.uleb128 0xf
- 875 0298 61010000 		.4byte	.LASF35
+ 875 0298 BC010000 		.4byte	.LASF35
  876 029c 01       		.byte	0x1
  877 029d 13       		.byte	0x13
  878 029e 8C000000 		.4byte	0x8c
@@ -1099,7 +1099,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  880 02a3 91       		.byte	0x91
  881 02a4 6A       		.sleb128 -22
  882 02a5 0F       		.uleb128 0xf
- 883 02a6 31030000 		.4byte	.LASF36
+ 883 02a6 1A030000 		.4byte	.LASF36
  884 02aa 01       		.byte	0x1
  885 02ab 13       		.byte	0x13
  886 02ac 8C000000 		.4byte	0x8c
@@ -1107,7 +1107,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  888 02b1 91       		.byte	0x91
  889 02b2 69       		.sleb128 -23
  890 02b3 0F       		.uleb128 0xf
- 891 02b4 9F000000 		.4byte	.LASF37
+ 891 02b4 FA000000 		.4byte	.LASF37
  892 02b8 01       		.byte	0x1
  893 02b9 13       		.byte	0x13
  894 02ba 5E020000 		.4byte	0x25e
@@ -1136,16 +1136,16 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  917 02e4 EC020000 		.4byte	0x2ec
  918 02e8 61030000 		.4byte	0x361
  919 02ec 0E       		.uleb128 0xe
- 920 02ed C1000000 		.4byte	.LASF38
+ 920 02ed 1C010000 		.4byte	.LASF38
  921 02f1 CE020000 		.4byte	0x2ce
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 20
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 20
 
 
  922 02f5 02       		.uleb128 0x2
  923 02f6 91       		.byte	0x91
  924 02f7 64       		.sleb128 -28
  925 02f8 0F       		.uleb128 0xf
- 926 02f9 9C030000 		.4byte	.LASF34
+ 926 02f9 85030000 		.4byte	.LASF34
  927 02fd 01       		.byte	0x1
  928 02fe 2C       		.byte	0x2c
  929 02ff 8C000000 		.4byte	0x8c
@@ -1153,7 +1153,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  931 0304 91       		.byte	0x91
  932 0305 63       		.sleb128 -29
  933 0306 0F       		.uleb128 0xf
- 934 0307 61010000 		.4byte	.LASF35
+ 934 0307 BC010000 		.4byte	.LASF35
  935 030b 01       		.byte	0x1
  936 030c 2C       		.byte	0x2c
  937 030d 97000000 		.4byte	0x97
@@ -1161,7 +1161,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  939 0312 91       		.byte	0x91
  940 0313 60       		.sleb128 -32
  941 0314 0F       		.uleb128 0xf
- 942 0315 31030000 		.4byte	.LASF36
+ 942 0315 1A030000 		.4byte	.LASF36
  943 0319 01       		.byte	0x1
  944 031a 2C       		.byte	0x2c
  945 031b 8C000000 		.4byte	0x8c
@@ -1169,7 +1169,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  947 0320 91       		.byte	0x91
  948 0321 62       		.sleb128 -30
  949 0322 0F       		.uleb128 0xf
- 950 0323 9F000000 		.4byte	.LASF37
+ 950 0323 FA000000 		.4byte	.LASF37
  951 0327 01       		.byte	0x1
  952 0328 2C       		.byte	0x2c
  953 0329 5E020000 		.4byte	0x25e
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  976 0353 10       		.uleb128 0x10
  977 0354 6A00     		.ascii	"j\000"
  978 0356 01       		.byte	0x1
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 21
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 21
 
 
  979 0357 39       		.byte	0x39
@@ -1226,13 +1226,13 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1001 0382 8A030000 		.4byte	0x38a
  1002 0386 C1030000 		.4byte	0x3c1
  1003 038a 0E       		.uleb128 0xe
- 1004 038b C1000000 		.4byte	.LASF38
+ 1004 038b 1C010000 		.4byte	.LASF38
  1005 038f CE020000 		.4byte	0x2ce
  1006 0393 02       		.uleb128 0x2
  1007 0394 91       		.byte	0x91
  1008 0395 74       		.sleb128 -12
  1009 0396 0F       		.uleb128 0xf
- 1010 0397 9C030000 		.4byte	.LASF34
+ 1010 0397 85030000 		.4byte	.LASF34
  1011 039b 01       		.byte	0x1
  1012 039c 4A       		.byte	0x4a
  1013 039d 8C000000 		.4byte	0x8c
@@ -1240,7 +1240,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1015 03a2 91       		.byte	0x91
  1016 03a3 73       		.sleb128 -13
  1017 03a4 0F       		.uleb128 0xf
- 1018 03a5 61010000 		.4byte	.LASF35
+ 1018 03a5 BC010000 		.4byte	.LASF35
  1019 03a9 01       		.byte	0x1
  1020 03aa 4A       		.byte	0x4a
  1021 03ab 8C000000 		.4byte	0x8c
@@ -1248,7 +1248,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1023 03b0 91       		.byte	0x91
  1024 03b1 72       		.sleb128 -14
  1025 03b2 0F       		.uleb128 0xf
- 1026 03b3 9F000000 		.4byte	.LASF37
+ 1026 03b3 FA000000 		.4byte	.LASF37
  1027 03b7 01       		.byte	0x1
  1028 03b8 4A       		.byte	0x4a
  1029 03b9 8C000000 		.4byte	0x8c
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1033 03c0 00       		.byte	0
  1034 03c1 0D       		.uleb128 0xd
  1035 03c2 DB010000 		.4byte	0x1db
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 22
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 22
 
 
  1036 03c6 01       		.byte	0x1
@@ -1270,13 +1270,13 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1042 03d2 DA030000 		.4byte	0x3da
  1043 03d6 11040000 		.4byte	0x411
  1044 03da 0E       		.uleb128 0xe
- 1045 03db C1000000 		.4byte	.LASF38
+ 1045 03db 1C010000 		.4byte	.LASF38
  1046 03df CE020000 		.4byte	0x2ce
  1047 03e3 02       		.uleb128 0x2
  1048 03e4 91       		.byte	0x91
  1049 03e5 74       		.sleb128 -12
  1050 03e6 0F       		.uleb128 0xf
- 1051 03e7 9C030000 		.4byte	.LASF34
+ 1051 03e7 85030000 		.4byte	.LASF34
  1052 03eb 01       		.byte	0x1
  1053 03ec 54       		.byte	0x54
  1054 03ed 8C000000 		.4byte	0x8c
@@ -1284,7 +1284,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1056 03f2 91       		.byte	0x91
  1057 03f3 73       		.sleb128 -13
  1058 03f4 0F       		.uleb128 0xf
- 1059 03f5 61010000 		.4byte	.LASF35
+ 1059 03f5 BC010000 		.4byte	.LASF35
  1060 03f9 01       		.byte	0x1
  1061 03fa 54       		.byte	0x54
  1062 03fb 97000000 		.4byte	0x97
@@ -1292,7 +1292,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1064 0400 91       		.byte	0x91
  1065 0401 70       		.sleb128 -16
  1066 0402 0F       		.uleb128 0xf
- 1067 0403 9F000000 		.4byte	.LASF37
+ 1067 0403 FA000000 		.4byte	.LASF37
  1068 0407 01       		.byte	0x1
  1069 0408 54       		.byte	0x54
  1070 0409 8C000000 		.4byte	0x8c
@@ -1311,14 +1311,14 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1083 0422 2A040000 		.4byte	0x42a
  1084 0426 7B040000 		.4byte	0x47b
  1085 042a 0E       		.uleb128 0xe
- 1086 042b C1000000 		.4byte	.LASF38
+ 1086 042b 1C010000 		.4byte	.LASF38
  1087 042f CE020000 		.4byte	0x2ce
  1088 0433 02       		.uleb128 0x2
  1089 0434 91       		.byte	0x91
  1090 0435 64       		.sleb128 -28
  1091 0436 0F       		.uleb128 0xf
- 1092 0437 9C030000 		.4byte	.LASF34
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 23
+ 1092 0437 85030000 		.4byte	.LASF34
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 23
 
 
  1093 043b 01       		.byte	0x1
@@ -1328,7 +1328,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1097 0442 91       		.byte	0x91
  1098 0443 63       		.sleb128 -29
  1099 0444 0F       		.uleb128 0xf
- 1100 0445 61010000 		.4byte	.LASF35
+ 1100 0445 BC010000 		.4byte	.LASF35
  1101 0449 01       		.byte	0x1
  1102 044a 5E       		.byte	0x5e
  1103 044b 8C000000 		.4byte	0x8c
@@ -1336,7 +1336,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1105 0450 91       		.byte	0x91
  1106 0451 62       		.sleb128 -30
  1107 0452 0F       		.uleb128 0xf
- 1108 0453 31030000 		.4byte	.LASF36
+ 1108 0453 1A030000 		.4byte	.LASF36
  1109 0457 01       		.byte	0x1
  1110 0458 5E       		.byte	0x5e
  1111 0459 8C000000 		.4byte	0x8c
@@ -1344,7 +1344,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1113 045e 91       		.byte	0x91
  1114 045f 61       		.sleb128 -31
  1115 0460 0F       		.uleb128 0xf
- 1116 0461 9F000000 		.4byte	.LASF37
+ 1116 0461 FA000000 		.4byte	.LASF37
  1117 0465 01       		.byte	0x1
  1118 0466 5E       		.byte	0x5e
  1119 0467 5E020000 		.4byte	0x25e
@@ -1371,14 +1371,14 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1140 048c 94040000 		.4byte	0x494
  1141 0490 CB040000 		.4byte	0x4cb
  1142 0494 0E       		.uleb128 0xe
- 1143 0495 C1000000 		.4byte	.LASF38
+ 1143 0495 1C010000 		.4byte	.LASF38
  1144 0499 CE020000 		.4byte	0x2ce
  1145 049d 02       		.uleb128 0x2
  1146 049e 91       		.byte	0x91
  1147 049f 74       		.sleb128 -12
  1148 04a0 0F       		.uleb128 0xf
- 1149 04a1 FE020000 		.4byte	.LASF39
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 24
+ 1149 04a1 E7020000 		.4byte	.LASF39
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 24
 
 
  1150 04a5 01       		.byte	0x1
@@ -1388,7 +1388,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1154 04ac 91       		.byte	0x91
  1155 04ad 73       		.sleb128 -13
  1156 04ae 0F       		.uleb128 0xf
- 1157 04af C6000000 		.4byte	.LASF40
+ 1157 04af 21010000 		.4byte	.LASF40
  1158 04b3 01       		.byte	0x1
  1159 04b4 7A       		.byte	0x7a
  1160 04b5 8C000000 		.4byte	0x8c
@@ -1415,13 +1415,13 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1181 04dc E4040000 		.4byte	0x4e4
  1182 04e0 59050000 		.4byte	0x559
  1183 04e4 0E       		.uleb128 0xe
- 1184 04e5 C1000000 		.4byte	.LASF38
+ 1184 04e5 1C010000 		.4byte	.LASF38
  1185 04e9 CE020000 		.4byte	0x2ce
  1186 04ed 02       		.uleb128 0x2
  1187 04ee 91       		.byte	0x91
  1188 04ef 5C       		.sleb128 -36
  1189 04f0 0F       		.uleb128 0xf
- 1190 04f1 9C030000 		.4byte	.LASF34
+ 1190 04f1 85030000 		.4byte	.LASF34
  1191 04f5 01       		.byte	0x1
  1192 04f6 84       		.byte	0x84
  1193 04f7 8C000000 		.4byte	0x8c
@@ -1429,7 +1429,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1195 04fc 91       		.byte	0x91
  1196 04fd 5B       		.sleb128 -37
  1197 04fe 0F       		.uleb128 0xf
- 1198 04ff 61010000 		.4byte	.LASF35
+ 1198 04ff BC010000 		.4byte	.LASF35
  1199 0503 01       		.byte	0x1
  1200 0504 84       		.byte	0x84
  1201 0505 97000000 		.4byte	0x97
@@ -1437,8 +1437,8 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1203 050a 91       		.byte	0x91
  1204 050b 58       		.sleb128 -40
  1205 050c 0F       		.uleb128 0xf
- 1206 050d 31030000 		.4byte	.LASF36
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 25
+ 1206 050d 1A030000 		.4byte	.LASF36
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 25
 
 
  1207 0511 01       		.byte	0x1
@@ -1448,7 +1448,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1211 0518 91       		.byte	0x91
  1212 0519 5A       		.sleb128 -38
  1213 051a 0F       		.uleb128 0xf
- 1214 051b 9F000000 		.4byte	.LASF37
+ 1214 051b FA000000 		.4byte	.LASF37
  1215 051f 01       		.byte	0x1
  1216 0520 84       		.byte	0x84
  1217 0521 5E020000 		.4byte	0x25e
@@ -1485,7 +1485,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1248 0557 00       		.byte	0
  1249 0558 00       		.byte	0
  1250 0559 15       		.uleb128 0x15
- 1251 055a F3000000 		.4byte	.LASF49
+ 1251 055a 4E010000 		.4byte	.LASF49
  1252 055e 05       		.byte	0x5
  1253 055f 1207     		.2byte	0x712
  1254 0561 65050000 		.4byte	0x565
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1261 0001 11       		.uleb128 0x11
  1262 0002 01       		.byte	0x1
  1263 0003 25       		.uleb128 0x25
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 26
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 26
 
 
  1264 0004 0E       		.uleb128 0xe
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1318 003a 0E       		.uleb128 0xe
  1319 003b 00       		.byte	0
  1320 003c 00       		.byte	0
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 27
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 27
 
 
  1321 003d 06       		.uleb128 0x6
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1375 0073 03       		.uleb128 0x3
  1376 0074 0E       		.uleb128 0xe
  1377 0075 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 28
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 28
 
 
  1378 0076 0B       		.uleb128 0xb
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1432 00ac 01       		.byte	0x1
  1433 00ad 47       		.uleb128 0x47
  1434 00ae 13       		.uleb128 0x13
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 29
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 29
 
 
  1435 00af 3A       		.uleb128 0x3a
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1489 00e6 0B       		.uleb128 0xb
  1490 00e7 49       		.uleb128 0x49
  1491 00e8 13       		.uleb128 0x13
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 30
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 30
 
 
  1492 00e9 02       		.uleb128 0x2
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1546 011f 00       		.byte	0
  1547 0120 16       		.uleb128 0x16
  1548 0121 35       		.uleb128 0x35
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 31
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 31
 
 
  1549 0122 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1599      01010101 
  1600              	.LASF24:
  1601 0000 57726974 		.ascii	"WriteBytes\000"
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 32
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 32
 
 
  1601      65427974 
@@ -1880,243 +1880,238 @@ ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 1
  1609      286E756C 
  1609      6C707472 
  1609      2900
- 1610              	.LASF29:
- 1611 0037 5F5A4E33 		.ascii	"_ZN3i2c15WriteBytes16bitEhthPh\000"
- 1611      69326331 
- 1611      35577269 
- 1611      74654279 
- 1611      74657331 
- 1612              	.LASF33:
- 1613 0056 5F5A4E33 		.ascii	"_ZN3i2c15ReadBytes16bitsEhthPh\000"
- 1613      69326331 
- 1613      35526561 
- 1613      64427974 
- 1613      65733136 
- 1614              	.LASF14:
- 1615 0075 696E7433 		.ascii	"int32_t\000"
- 1615      325F7400 
- 1616              	.LASF28:
- 1617 007d 57726974 		.ascii	"WriteBytes16bit\000"
- 1617      65427974 
- 1617      65733136 
- 1617      62697400 
- 1618              	.LASF18:
- 1619 008d 6C6F6E67 		.ascii	"long double\000"
- 1619      20646F75 
- 1619      626C6500 
- 1620              	.LASF15:
- 1621 0099 666C6F61 		.ascii	"float\000"
- 1621      7400
- 1622              	.LASF37:
- 1623 009f 64617461 		.ascii	"data\000"
- 1623      00
- 1624              	.LASF47:
- 1625 00a4 52656164 		.ascii	"ReadByte16bits\000"
- 1625      42797465 
- 1625      31366269 
- 1625      747300
- 1626              	.LASF1:
- 1627 00b3 756E7369 		.ascii	"unsigned char\000"
- 1627      676E6564 
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 33
+ 1610              	.LASF44:
+ 1611 0037 433A5C55 		.ascii	"C:\\Users\\jespe\\Desktop\\GIT\\iFollow\\Software\\"
+ 1611      73657273 
+ 1611      5C6A6573 
+ 1611      70655C44 
+ 1611      65736B74 
+ 1612 0063 50534F43 		.ascii	"PSOC\\Lasersensor\\LaserDriver\\LaserDriver.cydsn\000"
+ 1612      5C4C6173 
+ 1612      65727365 
+ 1612      6E736F72 
+ 1612      5C4C6173 
+ 1613              	.LASF29:
+ 1614 0092 5F5A4E33 		.ascii	"_ZN3i2c15WriteBytes16bitEhthPh\000"
+ 1614      69326331 
+ 1614      35577269 
+ 1614      74654279 
+ 1614      74657331 
+ 1615              	.LASF33:
+ 1616 00b1 5F5A4E33 		.ascii	"_ZN3i2c15ReadBytes16bitsEhthPh\000"
+ 1616      69326331 
+ 1616      35526561 
+ 1616      64427974 
+ 1616      65733136 
+ 1617              	.LASF14:
+ 1618 00d0 696E7433 		.ascii	"int32_t\000"
+ 1618      325F7400 
+ 1619              	.LASF28:
+ 1620 00d8 57726974 		.ascii	"WriteBytes16bit\000"
+ 1620      65427974 
+ 1620      65733136 
+ 1620      62697400 
+ 1621              	.LASF18:
+ 1622 00e8 6C6F6E67 		.ascii	"long double\000"
+ 1622      20646F75 
+ 1622      626C6500 
+ 1623              	.LASF15:
+ 1624 00f4 666C6F61 		.ascii	"float\000"
+ 1624      7400
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 33
 
 
- 1627      20636861 
- 1627      7200
- 1628              	.LASF38:
- 1629 00c1 74686973 		.ascii	"this\000"
- 1629      00
- 1630              	.LASF40:
- 1631 00c6 72656741 		.ascii	"regAddr\000"
- 1631      64647200 
- 1632              	.LASF8:
- 1633 00ce 6C6F6E67 		.ascii	"long unsigned int\000"
- 1633      20756E73 
- 1633      69676E65 
- 1633      6420696E 
- 1633      7400
- 1634              	.LASF5:
- 1635 00e0 73686F72 		.ascii	"short unsigned int\000"
- 1635      7420756E 
- 1635      7369676E 
- 1635      65642069 
- 1635      6E7400
- 1636              	.LASF49:
- 1637 00f3 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1637      52784275 
- 1637      66666572 
- 1637      00
- 1638              	.LASF25:
- 1639 0100 5F5A4E33 		.ascii	"_ZN3i2c10WriteBytesEhhhPh\000"
- 1639      69326331 
- 1639      30577269 
- 1639      74654279 
- 1639      74657345 
- 1640              	.LASF26:
- 1641 011a 57726974 		.ascii	"WriteByte\000"
- 1641      65427974 
- 1641      6500
- 1642              	.LASF4:
- 1643 0124 5F5F7569 		.ascii	"__uint16_t\000"
- 1643      6E743136 
- 1643      5F7400
- 1644              	.LASF16:
- 1645 012f 646F7562 		.ascii	"double\000"
- 1645      6C6500
- 1646              	.LASF43:
- 1647 0136 6932632E 		.ascii	"i2c.c\000"
- 1647      6300
- 1648              	.LASF22:
- 1649 013c 5F5A4E33 		.ascii	"_ZN3i2c9ReadBytesEhhhPh\000"
- 1649      69326339 
- 1649      52656164 
- 1649      42797465 
- 1649      73456868 
- 1650              	.LASF11:
- 1651 0154 756E7369 		.ascii	"unsigned int\000"
- 1651      676E6564 
- 1651      20696E74 
- 1651      00
- 1652              	.LASF35:
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 34
+ 1625              	.LASF37:
+ 1626 00fa 64617461 		.ascii	"data\000"
+ 1626      00
+ 1627              	.LASF47:
+ 1628 00ff 52656164 		.ascii	"ReadByte16bits\000"
+ 1628      42797465 
+ 1628      31366269 
+ 1628      747300
+ 1629              	.LASF1:
+ 1630 010e 756E7369 		.ascii	"unsigned char\000"
+ 1630      676E6564 
+ 1630      20636861 
+ 1630      7200
+ 1631              	.LASF38:
+ 1632 011c 74686973 		.ascii	"this\000"
+ 1632      00
+ 1633              	.LASF40:
+ 1634 0121 72656741 		.ascii	"regAddr\000"
+ 1634      64647200 
+ 1635              	.LASF8:
+ 1636 0129 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1636      20756E73 
+ 1636      69676E65 
+ 1636      6420696E 
+ 1636      7400
+ 1637              	.LASF5:
+ 1638 013b 73686F72 		.ascii	"short unsigned int\000"
+ 1638      7420756E 
+ 1638      7369676E 
+ 1638      65642069 
+ 1638      6E7400
+ 1639              	.LASF49:
+ 1640 014e 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1640      52784275 
+ 1640      66666572 
+ 1640      00
+ 1641              	.LASF25:
+ 1642 015b 5F5A4E33 		.ascii	"_ZN3i2c10WriteBytesEhhhPh\000"
+ 1642      69326331 
+ 1642      30577269 
+ 1642      74654279 
+ 1642      74657345 
+ 1643              	.LASF26:
+ 1644 0175 57726974 		.ascii	"WriteByte\000"
+ 1644      65427974 
+ 1644      6500
+ 1645              	.LASF4:
+ 1646 017f 5F5F7569 		.ascii	"__uint16_t\000"
+ 1646      6E743136 
+ 1646      5F7400
+ 1647              	.LASF16:
+ 1648 018a 646F7562 		.ascii	"double\000"
+ 1648      6C6500
+ 1649              	.LASF43:
+ 1650 0191 6932632E 		.ascii	"i2c.c\000"
+ 1650      6300
+ 1651              	.LASF22:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 34
 
 
- 1653 0161 7265675F 		.ascii	"reg_add\000"
- 1653      61646400 
- 1654              	.LASF10:
- 1655 0169 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1655      206C6F6E 
- 1655      6720756E 
- 1655      7369676E 
- 1655      65642069 
- 1656              	.LASF12:
- 1657 0180 75696E74 		.ascii	"uint8_t\000"
- 1657      385F7400 
- 1658              	.LASF42:
- 1659 0188 474E5520 		.ascii	"GNU C++14 5.4.1 20160609 (release) [ARM/embedded-5-"
- 1659      432B2B31 
- 1659      3420352E 
- 1659      342E3120 
- 1659      32303136 
- 1660 01bb 6272616E 		.ascii	"branch revision 237715] -mcpu=cortex-m3 -mthumb -g "
- 1660      63682072 
- 1660      65766973 
- 1660      696F6E20 
- 1660      32333737 
- 1661 01ee 2D4F3020 		.ascii	"-O0 -std=c++1z -ffunction-sections -ffat-lto-object"
- 1661      2D737464 
- 1661      3D632B2B 
- 1661      317A202D 
- 1661      6666756E 
- 1662 0221 73202D66 		.ascii	"s -fno-exceptions\000"
- 1662      6E6F2D65 
- 1662      78636570 
- 1662      74696F6E 
- 1662      7300
- 1663              	.LASF23:
- 1664 0233 5F5A4E33 		.ascii	"_ZN3i2c8ReadByteEhhPh\000"
- 1664      69326338 
- 1664      52656164 
- 1664      42797465 
- 1664      45686850 
- 1665              	.LASF19:
- 1666 0249 73697A65 		.ascii	"sizetype\000"
- 1666      74797065 
- 1666      00
- 1667              	.LASF48:
- 1668 0252 5F5A4E33 		.ascii	"_ZN3i2c14ReadByte16bitsEhtPh\000"
- 1668      69326331 
- 1668      34526561 
- 1668      64427974 
- 1668      65313662 
- 1669              	.LASF9:
- 1670 026f 6C6F6E67 		.ascii	"long long int\000"
- 1670      206C6F6E 
- 1670      6720696E 
- 1670      7400
- 1671              	.LASF17:
- 1672 027d 63686172 		.ascii	"char\000"
- 1672      00
- 1673              	.LASF44:
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 35
+ 1652 0197 5F5A4E33 		.ascii	"_ZN3i2c9ReadBytesEhhhPh\000"
+ 1652      69326339 
+ 1652      52656164 
+ 1652      42797465 
+ 1652      73456868 
+ 1653              	.LASF11:
+ 1654 01af 756E7369 		.ascii	"unsigned int\000"
+ 1654      676E6564 
+ 1654      20696E74 
+ 1654      00
+ 1655              	.LASF35:
+ 1656 01bc 7265675F 		.ascii	"reg_add\000"
+ 1656      61646400 
+ 1657              	.LASF10:
+ 1658 01c4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1658      206C6F6E 
+ 1658      6720756E 
+ 1658      7369676E 
+ 1658      65642069 
+ 1659              	.LASF12:
+ 1660 01db 75696E74 		.ascii	"uint8_t\000"
+ 1660      385F7400 
+ 1661              	.LASF42:
+ 1662 01e3 474E5520 		.ascii	"GNU C++14 5.4.1 20160609 (release) [ARM/embedded-5-"
+ 1662      432B2B31 
+ 1662      3420352E 
+ 1662      342E3120 
+ 1662      32303136 
+ 1663 0216 6272616E 		.ascii	"branch revision 237715] -mcpu=cortex-m3 -mthumb -g "
+ 1663      63682072 
+ 1663      65766973 
+ 1663      696F6E20 
+ 1663      32333737 
+ 1664 0249 2D4F3020 		.ascii	"-O0 -std=c++1z -ffunction-sections -ffat-lto-object"
+ 1664      2D737464 
+ 1664      3D632B2B 
+ 1664      317A202D 
+ 1664      6666756E 
+ 1665 027c 73202D66 		.ascii	"s -fno-exceptions\000"
+ 1665      6E6F2D65 
+ 1665      78636570 
+ 1665      74696F6E 
+ 1665      7300
+ 1666              	.LASF23:
+ 1667 028e 5F5A4E33 		.ascii	"_ZN3i2c8ReadByteEhhPh\000"
+ 1667      69326338 
+ 1667      52656164 
+ 1667      42797465 
+ 1667      45686850 
+ 1668              	.LASF19:
+ 1669 02a4 73697A65 		.ascii	"sizetype\000"
+ 1669      74797065 
+ 1669      00
+ 1670              	.LASF48:
+ 1671 02ad 5F5A4E33 		.ascii	"_ZN3i2c14ReadByte16bitsEhtPh\000"
+ 1671      69326331 
+ 1671      34526561 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 35
 
 
- 1674 0282 433A5C55 		.ascii	"C:\\Users\\Lucas\\OneDrive - Aarhus universitet\\PR"
- 1674      73657273 
- 1674      5C4C7563 
- 1674      61735C4F 
- 1674      6E654472 
- 1675 02b1 4A345C69 		.ascii	"J4\\iFollow\\Software\\PSOC\\Lasersensor\\LaserDriv"
- 1675      466F6C6C 
- 1675      6F775C53 
- 1675      6F667477 
- 1675      6172655C 
- 1676 02df 65725C4C 		.ascii	"er\\LaserDriver.cydsn\000"
- 1676      61736572 
- 1676      44726976 
- 1676      65722E63 
- 1676      7964736E 
- 1677              	.LASF2:
- 1678 02f4 73686F72 		.ascii	"short int\000"
- 1678      7420696E 
- 1678      7400
- 1679              	.LASF39:
- 1680 02fe 64657641 		.ascii	"devAddr\000"
- 1680      64647200 
- 1681              	.LASF13:
- 1682 0306 75696E74 		.ascii	"uint16_t\000"
- 1682      31365F74 
- 1682      00
- 1683              	.LASF20:
- 1684 030f 52656164 		.ascii	"ReadBytes\000"
- 1684      42797465 
- 1684      7300
- 1685              	.LASF30:
- 1686 0319 57726974 		.ascii	"WriteByte16bit\000"
- 1686      65427974 
- 1686      65313662 
- 1686      697400
- 1687              	.LASF7:
- 1688 0328 6C6F6E67 		.ascii	"long int\000"
- 1688      20696E74 
- 1688      00
- 1689              	.LASF36:
- 1690 0331 6E6F6279 		.ascii	"nobytes\000"
- 1690      74657300 
- 1691              	.LASF27:
- 1692 0339 5F5A4E33 		.ascii	"_ZN3i2c9WriteByteEhhh\000"
- 1692      69326339 
- 1692      57726974 
- 1692      65427974 
- 1692      65456868 
- 1693              	.LASF0:
- 1694 034f 7369676E 		.ascii	"signed char\000"
- 1694      65642063 
- 1694      68617200 
- 1695              	.LASF21:
- 1696 035b 52656164 		.ascii	"ReadByte\000"
- 1696      42797465 
- 1696      00
- 1697              	.LASF32:
-ARM GAS  C:\Users\Lucas\AppData\Local\Temp\ccuRpYTH.s 			page 36
+ 1671      64427974 
+ 1671      65313662 
+ 1672              	.LASF9:
+ 1673 02ca 6C6F6E67 		.ascii	"long long int\000"
+ 1673      206C6F6E 
+ 1673      6720696E 
+ 1673      7400
+ 1674              	.LASF17:
+ 1675 02d8 63686172 		.ascii	"char\000"
+ 1675      00
+ 1676              	.LASF2:
+ 1677 02dd 73686F72 		.ascii	"short int\000"
+ 1677      7420696E 
+ 1677      7400
+ 1678              	.LASF39:
+ 1679 02e7 64657641 		.ascii	"devAddr\000"
+ 1679      64647200 
+ 1680              	.LASF13:
+ 1681 02ef 75696E74 		.ascii	"uint16_t\000"
+ 1681      31365F74 
+ 1681      00
+ 1682              	.LASF20:
+ 1683 02f8 52656164 		.ascii	"ReadBytes\000"
+ 1683      42797465 
+ 1683      7300
+ 1684              	.LASF30:
+ 1685 0302 57726974 		.ascii	"WriteByte16bit\000"
+ 1685      65427974 
+ 1685      65313662 
+ 1685      697400
+ 1686              	.LASF7:
+ 1687 0311 6C6F6E67 		.ascii	"long int\000"
+ 1687      20696E74 
+ 1687      00
+ 1688              	.LASF36:
+ 1689 031a 6E6F6279 		.ascii	"nobytes\000"
+ 1689      74657300 
+ 1690              	.LASF27:
+ 1691 0322 5F5A4E33 		.ascii	"_ZN3i2c9WriteByteEhhh\000"
+ 1691      69326339 
+ 1691      57726974 
+ 1691      65427974 
+ 1691      65456868 
+ 1692              	.LASF0:
+ 1693 0338 7369676E 		.ascii	"signed char\000"
+ 1693      65642063 
+ 1693      68617200 
+ 1694              	.LASF21:
+ 1695 0344 52656164 		.ascii	"ReadByte\000"
+ 1695      42797465 
+ 1695      00
+ 1696              	.LASF32:
+ 1697 034d 52656164 		.ascii	"ReadBytes16bits\000"
+ 1697      42797465 
+ 1697      73313662 
+ 1697      69747300 
+ 1698              	.LASF31:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccsHxjuP.s 			page 36
 
 
- 1698 0364 52656164 		.ascii	"ReadBytes16bits\000"
- 1698      42797465 
- 1698      73313662 
- 1698      69747300 
- 1699              	.LASF31:
- 1700 0374 5F5A4E33 		.ascii	"_ZN3i2c14WriteByte16bitEhth\000"
- 1700      69326331 
- 1700      34577269 
- 1700      74654279 
- 1700      74653136 
- 1701              	.LASF46:
- 1702 0390 5F5A4E33 		.ascii	"_ZN3i2cC4Ev\000"
- 1702      69326343 
- 1702      34457600 
- 1703              	.LASF34:
- 1704 039c 64657669 		.ascii	"device_add\000"
- 1704      63655F61 
- 1704      646400
- 1705              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1699 035d 5F5A4E33 		.ascii	"_ZN3i2c14WriteByte16bitEhth\000"
+ 1699      69326331 
+ 1699      34577269 
+ 1699      74654279 
+ 1699      74653136 
+ 1700              	.LASF46:
+ 1701 0379 5F5A4E33 		.ascii	"_ZN3i2cC4Ev\000"
+ 1701      69326343 
+ 1701      34457600 
+ 1702              	.LASF34:
+ 1703 0385 64657669 		.ascii	"device_add\000"
+ 1703      63655F61 
+ 1703      646400
+ 1704              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
