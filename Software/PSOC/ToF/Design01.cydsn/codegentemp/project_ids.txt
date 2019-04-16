@@ -1,0 +1,6 @@
+C:\Users\Mathias\Desktop\Uni\3. Semester\GFV\Ex 2\SPI_Slave\Design01.cydsn\Design01.cyprj|bdd4aeaf-3321-4172-98d5-75f2d505ded7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3ae72b55-062d-4bd7-971f-fc4e914175be
+C:\Users\Mathias\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|1a476110-d925-4272-aec2-5ddf15d55d08
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|68604c2f-c4f0-4415-9168-6a0c45f25882
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|1d692467-8c94-4ad8-a46f-8ecbc2825b25
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|6612f0de-3cef-4339-b7a3-c62d6dd0b208
