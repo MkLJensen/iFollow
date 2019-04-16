@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
   28:Generated_Source\PSoC5/SPIS.c **** 
   29:Generated_Source\PSoC5/SPIS.c **** #if (SPIS_RX_SOFTWARE_BUF_ENABLED)
   30:Generated_Source\PSoC5/SPIS.c **** 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 2
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPIS.c ****     volatile uint8 SPIS_rxBuffer[SPIS_RX_BUFFER_SIZE];
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
   85:Generated_Source\PSoC5/SPIS.c ****     #if(SPIS_INTERNAL_RX_INT_ENABLED)
   86:Generated_Source\PSoC5/SPIS.c **** 
   87:Generated_Source\PSoC5/SPIS.c ****         CyIntDisable(SPIS_RX_ISR_NUMBER);
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 3
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 3
 
 
   88:Generated_Source\PSoC5/SPIS.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  142:Generated_Source\PSoC5/SPIS.c **** void SPIS_Enable(void) 
  143:Generated_Source\PSoC5/SPIS.c **** {
   28              		.loc 1 143 0
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 4
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 4
 
 
   29              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  154:Generated_Source\PSoC5/SPIS.c ****         CyIntEnable(SPIS_TX_ISR_NUMBER);
  155:Generated_Source\PSoC5/SPIS.c ****     #endif /* SPIS_INTERNAL_TX_INT_ENABLED */
  156:Generated_Source\PSoC5/SPIS.c **** 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 5
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 5
 
 
  157:Generated_Source\PSoC5/SPIS.c ****     #if(SPIS_INTERNAL_RX_INT_ENABLED)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  211:Generated_Source\PSoC5/SPIS.c **** *
  212:Generated_Source\PSoC5/SPIS.c **** * Theory:
  213:Generated_Source\PSoC5/SPIS.c **** *  Disable the internal interrupt if one is used.
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 6
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 6
 
 
  214:Generated_Source\PSoC5/SPIS.c **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  228:Generated_Source\PSoC5/SPIS.c ****     #endif /* SPIS_INTERNAL_TX_INT_ENABLED */
  229:Generated_Source\PSoC5/SPIS.c **** 
  230:Generated_Source\PSoC5/SPIS.c ****     #if(SPIS_INTERNAL_RX_INT_ENABLED)
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 7
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 7
 
 
  231:Generated_Source\PSoC5/SPIS.c ****         CyIntDisable(SPIS_RX_ISR_NUMBER);
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  268:Generated_Source\PSoC5/SPIS.c **** * Parameters:
  269:Generated_Source\PSoC5/SPIS.c **** *  None.
  270:Generated_Source\PSoC5/SPIS.c **** *
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 8
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 8
 
 
  271:Generated_Source\PSoC5/SPIS.c **** * Return:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  150              		@ frame_needed = 0, uses_anonymous_args = 0
  151              		@ link register save eliminated.
  152 0000 7047     		bx	lr
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 9
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 9
 
 
  153              		.cfi_endproc
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  331:Generated_Source\PSoC5/SPIS.c ****         CyIntDisable(SPIS_RX_ISR_NUMBER);
  332:Generated_Source\PSoC5/SPIS.c ****     #endif /* SPIS_INTERNAL_RX_INT_ENABLED */
  333:Generated_Source\PSoC5/SPIS.c **** }
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 10
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 10
 
 
  334:Generated_Source\PSoC5/SPIS.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  363:Generated_Source\PSoC5/SPIS.c **** *
  364:Generated_Source\PSoC5/SPIS.c **** * Summary:
  365:Generated_Source\PSoC5/SPIS.c **** *  Configure which status bits trigger an interrupt event.
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 11
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 11
 
 
  366:Generated_Source\PSoC5/SPIS.c **** *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  395:Generated_Source\PSoC5/SPIS.c **** *  Contents of the Tx status register.
  396:Generated_Source\PSoC5/SPIS.c **** *
  397:Generated_Source\PSoC5/SPIS.c **** * Global variables:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 12
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 12
 
 
  398:Generated_Source\PSoC5/SPIS.c **** *  SPIS_swStatusTx - used to store in software status register,
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  248              		.size	SPIS_ReadTxStatus, .-SPIS_ReadTxStatus
  249              		.section	.text.SPIS_ReadRxStatus,"ax",%progbits
  250              		.align	2
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 13
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 13
 
 
  251              		.global	SPIS_ReadRxStatus
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  478:Generated_Source\PSoC5/SPIS.c ****         SPIS_EnableRxInt();
  479:Generated_Source\PSoC5/SPIS.c **** 
  480:Generated_Source\PSoC5/SPIS.c ****     #else /* !SPIS_RX_SOFTWARE_BUF_ENABLED */
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 14
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 14
 
 
  481:Generated_Source\PSoC5/SPIS.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  514:Generated_Source\PSoC5/SPIS.c **** *
  515:Generated_Source\PSoC5/SPIS.c **** * Side Effects:
  516:Generated_Source\PSoC5/SPIS.c **** *  If this function is called again before the previous byte is finished then
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 15
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 15
 
 
  517:Generated_Source\PSoC5/SPIS.c **** *  the next byte will be appended to the transfer with no time between
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  564:Generated_Source\PSoC5/SPIS.c ****             {
  565:Generated_Source\PSoC5/SPIS.c ****                 SPIS_txBufferWrite = 0u;
  566:Generated_Source\PSoC5/SPIS.c ****             }
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 16
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 16
 
 
  567:Generated_Source\PSoC5/SPIS.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  596:Generated_Source\PSoC5/SPIS.c **** }
  597:Generated_Source\PSoC5/SPIS.c **** 
  598:Generated_Source\PSoC5/SPIS.c **** #if(SPIS_MODE_USE_ZERO != 0u)
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 17
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 17
 
 
  599:Generated_Source\PSoC5/SPIS.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  628:Generated_Source\PSoC5/SPIS.c **** /*******************************************************************************
  629:Generated_Source\PSoC5/SPIS.c **** * Function Name: SPIS_ReadRxData
  630:Generated_Source\PSoC5/SPIS.c **** ********************************************************************************
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 18
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 18
 
 
  631:Generated_Source\PSoC5/SPIS.c **** *
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  680:Generated_Source\PSoC5/SPIS.c ****             else
  681:Generated_Source\PSoC5/SPIS.c ****             {
  682:Generated_Source\PSoC5/SPIS.c ****                 SPIS_rxBufferFull = 0u;
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 19
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 19
 
 
  683:Generated_Source\PSoC5/SPIS.c ****             }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  716:Generated_Source\PSoC5/SPIS.c **** *
  717:Generated_Source\PSoC5/SPIS.c **** * Global variables:
  718:Generated_Source\PSoC5/SPIS.c **** *  SPIS_rxBufferWrite - used for the account of the bytes which
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 20
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 20
 
 
  719:Generated_Source\PSoC5/SPIS.c **** *  have been written down in the RX software buffer.
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  758:Generated_Source\PSoC5/SPIS.c **** 
  759:Generated_Source\PSoC5/SPIS.c ****     return (size);
  760:Generated_Source\PSoC5/SPIS.c **** }
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 21
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 21
 
 
  381              		.loc 1 760 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  402              		@ link register save eliminated.
  794:Generated_Source\PSoC5/SPIS.c ****     uint8 size;
  795:Generated_Source\PSoC5/SPIS.c **** 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 22
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 22
 
 
  796:Generated_Source\PSoC5/SPIS.c ****     #if(SPIS_TX_SOFTWARE_BUF_ENABLED)
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  830:Generated_Source\PSoC5/SPIS.c ****         else
  831:Generated_Source\PSoC5/SPIS.c ****         {
  832:Generated_Source\PSoC5/SPIS.c ****             size = 4u;
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 23
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 23
 
 
  422              		.loc 1 832 0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  867:Generated_Source\PSoC5/SPIS.c **** * Side Effects:
  868:Generated_Source\PSoC5/SPIS.c **** *  Any received data not read from the RAM buffer will be lost when overwritten.
  869:Generated_Source\PSoC5/SPIS.c **** *
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 24
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 24
 
 
  870:Generated_Source\PSoC5/SPIS.c **** * Reentrant:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  470              		.align	2
  471              		.global	SPIS_ClearTxBuffer
  472              		.thumb
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 25
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 25
 
 
  473              		.thumb_func
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  485              		.loc 1 936 0
  486 0002 FFF7FEFF 		bl	CyEnterCriticalSection
  487              	.LVL14:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 26
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 26
 
 
  937:Generated_Source\PSoC5/SPIS.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  963:Generated_Source\PSoC5/SPIS.c **** 		SPIS_txBufferFull  = 0u;
  964:Generated_Source\PSoC5/SPIS.c **** 		
  965:Generated_Source\PSoC5/SPIS.c ****         /* If Buffer is empty then disable TX FIFO status interrupt */
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 27
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 27
 
 
  966:Generated_Source\PSoC5/SPIS.c ****         SPIS_TX_STATUS_MASK_REG &= (uint8)~SPIS_STS_TX_FIFO_NOT_FULL;
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
 1020:Generated_Source\PSoC5/SPIS.c **** 
 1021:Generated_Source\PSoC5/SPIS.c **** /*******************************************************************************
 1022:Generated_Source\PSoC5/SPIS.c **** * Function Name: SPIS_PutArray
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 28
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 28
 
 
 1023:Generated_Source\PSoC5/SPIS.c **** ********************************************************************************
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  537 000a 705D     		ldrb	r0, [r6, r5]	@ zero_extendqisi2
  538 000c FFF7FEFF 		bl	SPIS_WriteTxData
  539              	.LVL19:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 29
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 29
 
 
 1056:Generated_Source\PSoC5/SPIS.c ****         bufIndex++;
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  568              		.cfi_startproc
  569              		@ args = 0, pretend = 0, frame = 0
  570              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 30
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 30
 
 
  571 0000 08B5     		push	{r3, lr}
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
 1106:Generated_Source\PSoC5/SPIS.c ****     CyExitCriticalSection(enableInterrupts);
  599              		.loc 1 1106 0
  600 0028 FFF7FEFF 		bl	CyExitCriticalSection
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 31
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 31
 
 
  601              	.LVL25:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  648 0020 1A70     		strb	r2, [r3]
  649 0022 08BD     		pop	{r3, pc}
  650              	.L68:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 32
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 32
 
 
  651              		.align	2
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  700              		.thumb
  701              		.thumb_func
  702              		.type	SPIS_EnableInt, %function
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 33
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 33
 
 
  703              	SPIS_EnableInt:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
 1142:Generated_Source\PSoC5/SPIS.c **** 
 1143:Generated_Source\PSoC5/SPIS.c **** 
 1144:Generated_Source\PSoC5/SPIS.c **** /*******************************************************************************
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 34
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 34
 
 
 1145:Generated_Source\PSoC5/SPIS.c **** * Function Name: SPIS_DisableInt
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
 1182:Generated_Source\PSoC5/SPIS.c **** *  header file).
 1183:Generated_Source\PSoC5/SPIS.c **** *
 1184:Generated_Source\PSoC5/SPIS.c **** * Return:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 35
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 35
 
 
 1185:Generated_Source\PSoC5/SPIS.c **** *  None.
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
 1211:Generated_Source\PSoC5/SPIS.c **** * Global variables:
 1212:Generated_Source\PSoC5/SPIS.c **** *  SPIS_swStatus - used to store in software status register,
 1213:Generated_Source\PSoC5/SPIS.c **** *  modified every function call - resets to zero.
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 36
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 36
 
 
 1214:Generated_Source\PSoC5/SPIS.c **** *
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  783              	.L81:
  784 0012 00BF     		.align	2
  785              	.L80:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 37
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 37
 
 
  786 0014 68640040 		.word	1073767528
@@ -2185,48 +2185,48 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  807 0006 00000000 		.4byte	.Ldebug_abbrev0
  808 000a 04       		.byte	0x4
  809 000b 01       		.uleb128 0x1
- 810 000c 34010000 		.4byte	.LASF56
+ 810 000c FC000000 		.4byte	.LASF56
  811 0010 0C       		.byte	0xc
- 812 0011 5A020000 		.4byte	.LASF57
- 813 0015 20000000 		.4byte	.LASF58
+ 812 0011 22020000 		.4byte	.LASF57
+ 813 0015 AA020000 		.4byte	.LASF58
  814 0019 00000000 		.4byte	.Ldebug_ranges0+0
  815 001d 00000000 		.4byte	0
  816 0021 00000000 		.4byte	.Ldebug_line0
  817 0025 02       		.uleb128 0x2
  818 0026 01       		.byte	0x1
  819 0027 06       		.byte	0x6
- 820 0028 AA030000 		.4byte	.LASF0
+ 820 0028 CE030000 		.4byte	.LASF0
  821 002c 02       		.uleb128 0x2
  822 002d 01       		.byte	0x1
  823 002e 08       		.byte	0x8
- 824 002f B1020000 		.4byte	.LASF1
+ 824 002f 79020000 		.4byte	.LASF1
  825 0033 02       		.uleb128 0x2
  826 0034 02       		.byte	0x2
  827 0035 05       		.byte	0x5
- 828 0036 4C030000 		.4byte	.LASF2
+ 828 0036 70030000 		.4byte	.LASF2
  829 003a 02       		.uleb128 0x2
  830 003b 02       		.byte	0x2
  831 003c 07       		.byte	0x7
- 832 003d B6030000 		.4byte	.LASF3
+ 832 003d 41000000 		.4byte	.LASF3
  833 0041 02       		.uleb128 0x2
  834 0042 04       		.byte	0x4
  835 0043 05       		.byte	0x5
- 836 0044 7C030000 		.4byte	.LASF4
+ 836 0044 A0030000 		.4byte	.LASF4
  837 0048 02       		.uleb128 0x2
  838 0049 04       		.byte	0x4
  839 004a 07       		.byte	0x7
- 840 004b C7010000 		.4byte	.LASF5
+ 840 004b 8F010000 		.4byte	.LASF5
  841 004f 02       		.uleb128 0x2
  842 0050 08       		.byte	0x8
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 38
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 38
 
 
  843 0051 05       		.byte	0x5
- 844 0052 27030000 		.4byte	.LASF6
+ 844 0052 4B030000 		.4byte	.LASF6
  845 0056 02       		.uleb128 0x2
  846 0057 08       		.byte	0x8
  847 0058 07       		.byte	0x7
- 848 0059 18010000 		.4byte	.LASF7
+ 848 0059 E0000000 		.4byte	.LASF7
  849 005d 03       		.uleb128 0x3
  850 005e 04       		.byte	0x4
  851 005f 05       		.byte	0x5
@@ -2234,26 +2234,26 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  853 0064 02       		.uleb128 0x2
  854 0065 04       		.byte	0x4
  855 0066 07       		.byte	0x7
- 856 0067 BF020000 		.4byte	.LASF8
+ 856 0067 87020000 		.4byte	.LASF8
  857 006b 04       		.uleb128 0x4
- 858 006c D9010000 		.4byte	.LASF12
+ 858 006c A1010000 		.4byte	.LASF12
  859 0070 02       		.byte	0x2
  860 0071 E401     		.2byte	0x1e4
  861 0073 2C000000 		.4byte	0x2c
  862 0077 02       		.uleb128 0x2
  863 0078 04       		.byte	0x4
  864 0079 04       		.byte	0x4
- 865 007a 12010000 		.4byte	.LASF9
+ 865 007a DA000000 		.4byte	.LASF9
  866 007e 02       		.uleb128 0x2
  867 007f 08       		.byte	0x8
  868 0080 04       		.byte	0x4
- 869 0081 3E020000 		.4byte	.LASF10
+ 869 0081 06020000 		.4byte	.LASF10
  870 0085 02       		.uleb128 0x2
  871 0086 01       		.byte	0x1
  872 0087 08       		.byte	0x8
- 873 0088 47030000 		.4byte	.LASF11
+ 873 0088 6B030000 		.4byte	.LASF11
  874 008c 04       		.uleb128 0x4
- 875 008d C2010000 		.4byte	.LASF13
+ 875 008d 8A010000 		.4byte	.LASF13
  876 0091 02       		.byte	0x2
  877 0092 8E02     		.2byte	0x28e
  878 0094 98000000 		.4byte	0x98
@@ -2262,13 +2262,13 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  881 009d 02       		.uleb128 0x2
  882 009e 08       		.byte	0x8
  883 009f 04       		.byte	0x4
- 884 00a0 9E030000 		.4byte	.LASF14
+ 884 00a0 C2030000 		.4byte	.LASF14
  885 00a4 02       		.uleb128 0x2
  886 00a5 04       		.byte	0x4
  887 00a6 07       		.byte	0x7
- 888 00a7 0E030000 		.4byte	.LASF15
+ 888 00a7 32030000 		.4byte	.LASF15
  889 00ab 06       		.uleb128 0x6
- 890 00ac 78020000 		.4byte	.LASF16
+ 890 00ac 40020000 		.4byte	.LASF16
  891 00b0 01       		.byte	0x1
  892 00b1 8E       		.byte	0x8e
  893 00b2 00000000 		.4byte	.LFB1
@@ -2277,8 +2277,8 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  896 00bb 9C       		.byte	0x9c
  897 00bc E2000000 		.4byte	0xe2
  898 00c0 07       		.uleb128 0x7
- 899 00c1 FA010000 		.4byte	.LASF18
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 39
+ 899 00c1 C2010000 		.4byte	.LASF18
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 39
 
 
  900 00c5 01       		.byte	0x1
@@ -2293,7 +2293,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  909 00dd AD040000 		.4byte	0x4ad
  910 00e1 00       		.byte	0
  911 00e2 06       		.uleb128 0x6
- 912 00e3 C9030000 		.4byte	.LASF17
+ 912 00e3 DA030000 		.4byte	.LASF17
  913 00e7 01       		.byte	0x1
  914 00e8 D8       		.byte	0xd8
  915 00e9 00000000 		.4byte	.LFB3
@@ -2302,7 +2302,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  918 00f2 9C       		.byte	0x9c
  919 00f3 19010000 		.4byte	0x119
  920 00f7 07       		.uleb128 0x7
- 921 00f8 FA010000 		.4byte	.LASF18
+ 921 00f8 C2010000 		.4byte	.LASF18
  922 00fc 01       		.byte	0x1
  923 00fd DA       		.byte	0xda
  924 00fe 6B000000 		.4byte	0x6b
@@ -2315,7 +2315,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  931 0114 AD040000 		.4byte	0x4ad
  932 0118 00       		.byte	0
  933 0119 09       		.uleb128 0x9
- 934 011a 2D020000 		.4byte	.LASF19
+ 934 011a F5010000 		.4byte	.LASF19
  935 011e 01       		.byte	0x1
  936 011f FD       		.byte	0xfd
  937 0120 00000000 		.4byte	.LFB4
@@ -2323,7 +2323,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  939 0128 01       		.uleb128 0x1
  940 0129 9C       		.byte	0x9c
  941 012a 0A       		.uleb128 0xa
- 942 012b DF010000 		.4byte	.LASF20
+ 942 012b A7010000 		.4byte	.LASF20
  943 012f 01       		.byte	0x1
  944 0130 1601     		.2byte	0x116
  945 0132 00000000 		.4byte	.LFB5
@@ -2331,18 +2331,18 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  947 013a 01       		.uleb128 0x1
  948 013b 9C       		.byte	0x9c
  949 013c 0A       		.uleb128 0xa
- 950 013d EC020000 		.4byte	.LASF21
+ 950 013d 10030000 		.4byte	.LASF21
  951 0141 01       		.byte	0x1
  952 0142 2F01     		.2byte	0x12f
  953 0144 00000000 		.4byte	.LFB6
  954 0148 02000000 		.4byte	.LFE6-.LFB6
  955 014c 01       		.uleb128 0x1
  956 014d 9C       		.byte	0x9c
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 40
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 40
 
 
  957 014e 0A       		.uleb128 0xa
- 958 014f 8C000000 		.4byte	.LASF22
+ 958 014f 64000000 		.4byte	.LASF22
  959 0153 01       		.byte	0x1
  960 0154 4801     		.2byte	0x148
  961 0156 00000000 		.4byte	.LFB7
@@ -2350,7 +2350,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  963 015e 01       		.uleb128 0x1
  964 015f 9C       		.byte	0x9c
  965 0160 0B       		.uleb128 0xb
- 966 0161 D3030000 		.4byte	.LASF23
+ 966 0161 E4030000 		.4byte	.LASF23
  967 0165 01       		.byte	0x1
  968 0166 6201     		.2byte	0x162
  969 0168 00000000 		.4byte	.LFB8
@@ -2359,7 +2359,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  972 0171 9C       		.byte	0x9c
  973 0172 85010000 		.4byte	0x185
  974 0176 0C       		.uleb128 0xc
- 975 0177 45020000 		.4byte	.LASF25
+ 975 0177 0D020000 		.4byte	.LASF25
  976 017b 01       		.byte	0x1
  977 017c 6201     		.2byte	0x162
  978 017e 6B000000 		.4byte	0x6b
@@ -2367,7 +2367,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  980 0183 50       		.byte	0x50
  981 0184 00       		.byte	0
  982 0185 0B       		.uleb128 0xb
- 983 0186 F6030000 		.4byte	.LASF24
+ 983 0186 07040000 		.4byte	.LASF24
  984 018a 01       		.byte	0x1
  985 018b 7A01     		.2byte	0x17a
  986 018d 00000000 		.4byte	.LFB9
@@ -2376,7 +2376,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  989 0196 9C       		.byte	0x9c
  990 0197 AA010000 		.4byte	0x1aa
  991 019b 0C       		.uleb128 0xc
- 992 019c 45020000 		.4byte	.LASF25
+ 992 019c 0D020000 		.4byte	.LASF25
  993 01a0 01       		.byte	0x1
  994 01a1 7A01     		.2byte	0x17a
  995 01a3 6B000000 		.4byte	0x6b
@@ -2384,7 +2384,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  997 01a8 50       		.byte	0x50
  998 01a9 00       		.byte	0
  999 01aa 0D       		.uleb128 0xd
- 1000 01ab D1000000 		.4byte	.LASF27
+ 1000 01ab 99000000 		.4byte	.LASF27
  1001 01af 01       		.byte	0x1
  1002 01b0 9C01     		.2byte	0x19c
  1003 01b2 6B000000 		.4byte	0x6b
@@ -2394,18 +2394,18 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1007 01bf 9C       		.byte	0x9c
  1008 01c0 D3010000 		.4byte	0x1d3
  1009 01c4 0E       		.uleb128 0xe
- 1010 01c5 85030000 		.4byte	.LASF26
+ 1010 01c5 A9030000 		.4byte	.LASF26
  1011 01c9 01       		.byte	0x1
  1012 01ca 9E01     		.2byte	0x19e
  1013 01cc 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 41
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 41
 
 
  1014 01d0 01       		.uleb128 0x1
  1015 01d1 50       		.byte	0x50
  1016 01d2 00       		.byte	0
  1017 01d3 0D       		.uleb128 0xd
- 1018 01d4 35030000 		.4byte	.LASF28
+ 1018 01d4 59030000 		.4byte	.LASF28
  1019 01d8 01       		.byte	0x1
  1020 01d9 D101     		.2byte	0x1d1
  1021 01db 6B000000 		.4byte	0x6b
@@ -2415,7 +2415,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1025 01e8 9C       		.byte	0x9c
  1026 01e9 FC010000 		.4byte	0x1fc
  1027 01ed 0E       		.uleb128 0xe
- 1028 01ee 85030000 		.4byte	.LASF26
+ 1028 01ee A9030000 		.4byte	.LASF26
  1029 01f2 01       		.byte	0x1
  1030 01f3 D301     		.2byte	0x1d3
  1031 01f5 6B000000 		.4byte	0x6b
@@ -2423,7 +2423,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1033 01fa 50       		.byte	0x50
  1034 01fb 00       		.byte	0
  1035 01fc 0B       		.uleb128 0xb
- 1036 01fd 7B000000 		.4byte	.LASF29
+ 1036 01fd 30000000 		.4byte	.LASF29
  1037 0201 01       		.byte	0x1
  1038 0202 0C02     		.2byte	0x20c
  1039 0204 00000000 		.4byte	.LFB12
@@ -2432,7 +2432,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1042 020d 9C       		.byte	0x9c
  1043 020e 21020000 		.4byte	0x221
  1044 0212 0C       		.uleb128 0xc
- 1045 0213 07030000 		.4byte	.LASF30
+ 1045 0213 2B030000 		.4byte	.LASF30
  1046 0217 01       		.byte	0x1
  1047 0218 0C02     		.2byte	0x20c
  1048 021a 6B000000 		.4byte	0x6b
@@ -2449,7 +2449,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1059 0232 9C       		.byte	0x9c
  1060 0233 46020000 		.4byte	0x246
  1061 0237 0C       		.uleb128 0xc
- 1062 0238 EB030000 		.4byte	.LASF32
+ 1062 0238 FC030000 		.4byte	.LASF32
  1063 023c 01       		.byte	0x1
  1064 023d 6B02     		.2byte	0x26b
  1065 023f 6B000000 		.4byte	0x6b
@@ -2457,8 +2457,8 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1067 0244 50       		.byte	0x50
  1068 0245 00       		.byte	0
  1069 0246 0D       		.uleb128 0xd
- 1070 0247 AE000000 		.4byte	.LASF33
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 42
+ 1070 0247 76000000 		.4byte	.LASF33
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 42
 
 
  1071 024b 01       		.byte	0x1
@@ -2470,7 +2470,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1077 025b 9C       		.byte	0x9c
  1078 025c 6F020000 		.4byte	0x26f
  1079 0260 0E       		.uleb128 0xe
- 1080 0261 F6000000 		.4byte	.LASF34
+ 1080 0261 BE000000 		.4byte	.LASF34
  1081 0265 01       		.byte	0x1
  1082 0266 9702     		.2byte	0x297
  1083 0268 6B000000 		.4byte	0x6b
@@ -2478,7 +2478,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1085 026d 50       		.byte	0x50
  1086 026e 00       		.byte	0
  1087 026f 0D       		.uleb128 0xd
- 1088 0270 0B020000 		.4byte	.LASF35
+ 1088 0270 D3010000 		.4byte	.LASF35
  1089 0274 01       		.byte	0x1
  1090 0275 D702     		.2byte	0x2d7
  1091 0277 6B000000 		.4byte	0x6b
@@ -2488,7 +2488,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1095 0284 9C       		.byte	0x9c
  1096 0285 98020000 		.4byte	0x298
  1097 0289 0E       		.uleb128 0xe
- 1098 028a 2F010000 		.4byte	.LASF36
+ 1098 028a F7000000 		.4byte	.LASF36
  1099 028e 01       		.byte	0x1
  1100 028f D902     		.2byte	0x2d9
  1101 0291 6B000000 		.4byte	0x6b
@@ -2496,7 +2496,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1103 0296 50       		.byte	0x50
  1104 0297 00       		.byte	0
  1105 0298 0D       		.uleb128 0xd
- 1106 0299 FD000000 		.4byte	.LASF37
+ 1106 0299 C5000000 		.4byte	.LASF37
  1107 029d 01       		.byte	0x1
  1108 029e 1803     		.2byte	0x318
  1109 02a0 6B000000 		.4byte	0x6b
@@ -2506,25 +2506,25 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1113 02ad 9C       		.byte	0x9c
  1114 02ae C3020000 		.4byte	0x2c3
  1115 02b2 0F       		.uleb128 0xf
- 1116 02b3 2F010000 		.4byte	.LASF36
+ 1116 02b3 F7000000 		.4byte	.LASF36
  1117 02b7 01       		.byte	0x1
  1118 02b8 1A03     		.2byte	0x31a
  1119 02ba 6B000000 		.4byte	0x6b
  1120 02be 26000000 		.4byte	.LLST2
  1121 02c2 00       		.byte	0
  1122 02c3 0A       		.uleb128 0xa
- 1123 02c4 E3000000 		.4byte	.LASF38
+ 1123 02c4 AB000000 		.4byte	.LASF38
  1124 02c8 01       		.byte	0x1
  1125 02c9 6A03     		.2byte	0x36a
  1126 02cb 00000000 		.4byte	.LFB17
  1127 02cf 1C000000 		.4byte	.LFE17-.LFB17
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 43
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 43
 
 
  1128 02d3 01       		.uleb128 0x1
  1129 02d4 9C       		.byte	0x9c
  1130 02d5 0B       		.uleb128 0xb
- 1131 02d6 BE000000 		.4byte	.LASF39
+ 1131 02d6 86000000 		.4byte	.LASF39
  1132 02da 01       		.byte	0x1
  1133 02db A303     		.2byte	0x3a3
  1134 02dd 00000000 		.4byte	.LFB18
@@ -2533,7 +2533,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1137 02e6 9C       		.byte	0x9c
  1138 02e7 0E030000 		.4byte	0x30e
  1139 02eb 0F       		.uleb128 0xf
- 1140 02ec FA010000 		.4byte	.LASF18
+ 1140 02ec C2010000 		.4byte	.LASF18
  1141 02f0 01       		.byte	0x1
  1142 02f1 A503     		.2byte	0x3a5
  1143 02f3 6B000000 		.4byte	0x6b
@@ -2546,7 +2546,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1150 0309 AD040000 		.4byte	0x4ad
  1151 030d 00       		.byte	0
  1152 030e 0B       		.uleb128 0xb
- 1153 030f 4C020000 		.4byte	.LASF40
+ 1153 030f 14020000 		.4byte	.LASF40
  1154 0313 01       		.byte	0x1
  1155 0314 1704     		.2byte	0x417
  1156 0316 00000000 		.4byte	.LFB19
@@ -2555,19 +2555,19 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1159 031f 9C       		.byte	0x9c
  1160 0320 5E030000 		.4byte	0x35e
  1161 0324 10       		.uleb128 0x10
- 1162 0325 65030000 		.4byte	.LASF41
+ 1162 0325 89030000 		.4byte	.LASF41
  1163 0329 01       		.byte	0x1
  1164 032a 1704     		.2byte	0x417
  1165 032c 5E030000 		.4byte	0x35e
  1166 0330 57000000 		.4byte	.LLST4
  1167 0334 10       		.uleb128 0x10
- 1168 0335 F0010000 		.4byte	.LASF42
+ 1168 0335 B8010000 		.4byte	.LASF42
  1169 0339 01       		.byte	0x1
  1170 033a 1704     		.2byte	0x417
  1171 033c 6B000000 		.4byte	0x6b
  1172 0340 75000000 		.4byte	.LLST5
  1173 0344 0F       		.uleb128 0xf
- 1174 0345 FE020000 		.4byte	.LASF43
+ 1174 0345 22030000 		.4byte	.LASF43
  1175 0349 01       		.byte	0x1
  1176 034a 1A04     		.2byte	0x41a
  1177 034c 6B000000 		.4byte	0x6b
@@ -2578,14 +2578,14 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1182 035d 00       		.byte	0
  1183 035e 11       		.uleb128 0x11
  1184 035f 04       		.byte	0x4
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 44
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 44
 
 
  1185 0360 64030000 		.4byte	0x364
  1186 0364 12       		.uleb128 0x12
  1187 0365 6B000000 		.4byte	0x6b
  1188 0369 0B       		.uleb128 0xb
- 1189 036a 8F030000 		.4byte	.LASF44
+ 1189 036a B3030000 		.4byte	.LASF44
  1190 036e 01       		.byte	0x1
  1191 036f 3704     		.2byte	0x437
  1192 0371 00000000 		.4byte	.LFB20
@@ -2594,7 +2594,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1195 037a 9C       		.byte	0x9c
  1196 037b A2030000 		.4byte	0x3a2
  1197 037f 0F       		.uleb128 0xf
- 1198 0380 FA010000 		.4byte	.LASF18
+ 1198 0380 C2010000 		.4byte	.LASF18
  1199 0384 01       		.byte	0x1
  1200 0385 3904     		.2byte	0x439
  1201 0387 6B000000 		.4byte	0x6b
@@ -2607,7 +2607,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1208 039d AD040000 		.4byte	0x4ad
  1209 03a1 00       		.byte	0
  1210 03a2 06       		.uleb128 0x6
- 1211 03a3 E2020000 		.4byte	.LASF45
+ 1211 03a3 06030000 		.4byte	.LASF45
  1212 03a7 01       		.byte	0x1
  1213 03a8 43       		.byte	0x43
  1214 03a9 00000000 		.4byte	.LFB0
@@ -2638,14 +2638,14 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1239 03e9 0C000000 		.4byte	.LVL29
  1240 03ed A2030000 		.4byte	0x3a2
  1241 03f1 08       		.uleb128 0x8
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 45
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 45
 
 
  1242 03f2 16000000 		.4byte	.LVL30
  1243 03f6 AB000000 		.4byte	0xab
  1244 03fa 00       		.byte	0
  1245 03fb 0A       		.uleb128 0xa
- 1246 03fc 56030000 		.4byte	.LASF47
+ 1246 03fc 7A030000 		.4byte	.LASF47
  1247 0400 01       		.byte	0x1
  1248 0401 6C04     		.2byte	0x46c
  1249 0403 00000000 		.4byte	.LFB21
@@ -2653,7 +2653,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1251 040b 01       		.uleb128 0x1
  1252 040c 9C       		.byte	0x9c
  1253 040d 0A       		.uleb128 0xa
- 1254 040e 17030000 		.4byte	.LASF48
+ 1254 040e 3B030000 		.4byte	.LASF48
  1255 0412 01       		.byte	0x1
  1256 0413 8904     		.2byte	0x489
  1257 0415 00000000 		.4byte	.LFB22
@@ -2661,7 +2661,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1259 041d 01       		.uleb128 0x1
  1260 041e 9C       		.byte	0x9c
  1261 041f 0B       		.uleb128 0xb
- 1262 0420 84020000 		.4byte	.LASF49
+ 1262 0420 4C020000 		.4byte	.LASF49
  1263 0424 01       		.byte	0x1
  1264 0425 A704     		.2byte	0x4a7
  1265 0427 00000000 		.4byte	.LFB23
@@ -2670,7 +2670,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1268 0430 9C       		.byte	0x9c
  1269 0431 44040000 		.4byte	0x444
  1270 0435 0C       		.uleb128 0xc
- 1271 0436 45020000 		.4byte	.LASF25
+ 1271 0436 0D020000 		.4byte	.LASF25
  1272 043a 01       		.byte	0x1
  1273 043b A704     		.2byte	0x4a7
  1274 043d 6B000000 		.4byte	0x6b
@@ -2678,7 +2678,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1276 0442 50       		.byte	0x50
  1277 0443 00       		.byte	0
  1278 0444 0D       		.uleb128 0xd
- 1279 0445 6C030000 		.4byte	.LASF50
+ 1279 0445 90030000 		.4byte	.LASF50
  1280 0449 01       		.byte	0x1
  1281 044a CA04     		.2byte	0x4ca
  1282 044c 6B000000 		.4byte	0x6b
@@ -2688,17 +2688,17 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1286 0459 9C       		.byte	0x9c
  1287 045a 6F040000 		.4byte	0x46f
  1288 045e 0F       		.uleb128 0xf
- 1289 045f 85030000 		.4byte	.LASF26
+ 1289 045f A9030000 		.4byte	.LASF26
  1290 0463 01       		.byte	0x1
  1291 0464 CC04     		.2byte	0x4cc
  1292 0466 6B000000 		.4byte	0x6b
  1293 046a DB000000 		.4byte	.LLST8
  1294 046e 00       		.byte	0
  1295 046f 13       		.uleb128 0x13
- 1296 0470 20020000 		.4byte	.LASF51
+ 1296 0470 E8010000 		.4byte	.LASF51
  1297 0474 01       		.byte	0x1
  1298 0475 26       		.byte	0x26
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 46
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 46
 
 
  1299 0476 6B000000 		.4byte	0x6b
@@ -2706,7 +2706,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1301 047b 03       		.byte	0x3
  1302 047c 00000000 		.4byte	SPIS_initVar
  1303 0480 13       		.uleb128 0x13
- 1304 0481 9E000000 		.4byte	.LASF52
+ 1304 0481 54000000 		.4byte	.LASF52
  1305 0485 01       		.byte	0x1
  1306 0486 28       		.byte	0x28
  1307 0487 98000000 		.4byte	0x98
@@ -2714,7 +2714,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1309 048c 03       		.byte	0x3
  1310 048d 00000000 		.4byte	SPIS_swStatusTx
  1311 0491 13       		.uleb128 0x13
- 1312 0492 6B000000 		.4byte	.LASF53
+ 1312 0492 20000000 		.4byte	.LASF53
  1313 0496 01       		.byte	0x1
  1314 0497 29       		.byte	0x29
  1315 0498 98000000 		.4byte	0x98
@@ -2722,13 +2722,13 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1317 049d 03       		.byte	0x3
  1318 049e 00000000 		.4byte	SPIS_swStatusRx
  1319 04a2 14       		.uleb128 0x14
- 1320 04a3 9A020000 		.4byte	.LASF54
- 1321 04a7 9A020000 		.4byte	.LASF54
+ 1320 04a3 62020000 		.4byte	.LASF54
+ 1321 04a7 62020000 		.4byte	.LASF54
  1322 04ab 03       		.byte	0x3
  1323 04ac 7D       		.byte	0x7d
  1324 04ad 14       		.uleb128 0x14
- 1325 04ae CC020000 		.4byte	.LASF55
- 1326 04b2 CC020000 		.4byte	.LASF55
+ 1325 04ae 94020000 		.4byte	.LASF55
+ 1326 04b2 94020000 		.4byte	.LASF55
  1327 04b6 03       		.byte	0x3
  1328 04b7 7E       		.byte	0x7e
  1329 04b8 00       		.byte	0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1353 0015 00       		.byte	0
  1354 0016 0B       		.uleb128 0xb
  1355 0017 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 47
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 47
 
 
  1356 0018 3E       		.uleb128 0x3e
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1410 004e 40       		.uleb128 0x40
  1411 004f 18       		.uleb128 0x18
  1412 0050 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 48
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 48
 
 
  1413 0052 19       		.uleb128 0x19
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1467 008b 00       		.byte	0
  1468 008c 3F       		.uleb128 0x3f
  1469 008d 19       		.uleb128 0x19
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 49
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 49
 
 
  1470 008e 03       		.uleb128 0x3
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1524 00c6 02       		.uleb128 0x2
  1525 00c7 18       		.uleb128 0x18
  1526 00c8 00       		.byte	0
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 50
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 50
 
 
  1527 00c9 00       		.byte	0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1581 0100 02       		.uleb128 0x2
  1582 0101 17       		.uleb128 0x17
  1583 0102 00       		.byte	0
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 51
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 51
 
 
  1584 0103 00       		.byte	0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1638 0139 3C       		.uleb128 0x3c
  1639 013a 19       		.uleb128 0x19
  1640 013b 6E       		.uleb128 0x6e
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 52
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 52
 
 
  1641 013c 0E       		.uleb128 0xe
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1695 0071 00000000 		.4byte	0
  1696              	.LLST5:
  1697 0075 00000000 		.4byte	.LVL16
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 53
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 53
 
 
  1698 0079 0A000000 		.4byte	.LVL18
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1752 000c 0000     		.2byte	0
  1753 000e 0000     		.2byte	0
  1754 0010 00000000 		.4byte	.LFB1
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 54
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 54
 
 
  1755 0014 30000000 		.4byte	.LFE1-.LFB1
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1809 0004 30000000 		.4byte	.LFE1
  1810 0008 00000000 		.4byte	.LFB3
  1811 000c 28000000 		.4byte	.LFE3
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 55
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 55
 
 
  1812 0010 00000000 		.4byte	.LFB4
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1862      01010101 
  1863              	.LASF31:
  1864 0000 53504953 		.ascii	"SPIS_WriteTxDataZero\000"
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 56
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 56
 
 
  1864      5F577269 
@@ -3309,310 +3309,311 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 1
  1866 0015 53504953 		.ascii	"SPIS_Start\000"
  1866      5F537461 
  1866      727400
- 1867              	.LASF58:
- 1868 0020 433A5C55 		.ascii	"C:\\Users\\Mathias\\Desktop\\Uni\\3. Semester\\GFV\\"
- 1868      73657273 
- 1868      5C4D6174 
- 1868      68696173 
- 1868      5C446573 
- 1869 004d 45782032 		.ascii	"Ex 2\\SPI_Slave\\Design01.cydsn\000"
- 1869      5C535049 
- 1869      5F536C61 
- 1869      76655C44 
- 1869      65736967 
- 1870              	.LASF53:
- 1871 006b 53504953 		.ascii	"SPIS_swStatusRx\000"
- 1871      5F737753 
- 1871      74617475 
- 1871      73527800 
- 1872              	.LASF29:
- 1873 007b 53504953 		.ascii	"SPIS_WriteTxData\000"
- 1873      5F577269 
- 1873      74655478 
- 1873      44617461 
- 1873      00
- 1874              	.LASF22:
- 1875 008c 53504953 		.ascii	"SPIS_DisableRxInt\000"
- 1875      5F446973 
- 1875      61626C65 
- 1875      5278496E 
- 1875      7400
- 1876              	.LASF52:
- 1877 009e 53504953 		.ascii	"SPIS_swStatusTx\000"
- 1877      5F737753 
- 1877      74617475 
- 1877      73547800 
- 1878              	.LASF33:
- 1879 00ae 53504953 		.ascii	"SPIS_ReadRxData\000"
- 1879      5F526561 
- 1879      64527844 
- 1879      61746100 
- 1880              	.LASF39:
- 1881 00be 53504953 		.ascii	"SPIS_ClearTxBuffer\000"
- 1881      5F436C65 
- 1881      61725478 
- 1881      42756666 
- 1881      657200
- 1882              	.LASF27:
- 1883 00d1 53504953 		.ascii	"SPIS_ReadTxStatus\000"
- 1883      5F526561 
- 1883      64547853 
- 1883      74617475 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 57
+ 1867              	.LASF53:
+ 1868 0020 53504953 		.ascii	"SPIS_swStatusRx\000"
+ 1868      5F737753 
+ 1868      74617475 
+ 1868      73527800 
+ 1869              	.LASF29:
+ 1870 0030 53504953 		.ascii	"SPIS_WriteTxData\000"
+ 1870      5F577269 
+ 1870      74655478 
+ 1870      44617461 
+ 1870      00
+ 1871              	.LASF3:
+ 1872 0041 73686F72 		.ascii	"short unsigned int\000"
+ 1872      7420756E 
+ 1872      7369676E 
+ 1872      65642069 
+ 1872      6E7400
+ 1873              	.LASF52:
+ 1874 0054 53504953 		.ascii	"SPIS_swStatusTx\000"
+ 1874      5F737753 
+ 1874      74617475 
+ 1874      73547800 
+ 1875              	.LASF22:
+ 1876 0064 53504953 		.ascii	"SPIS_DisableRxInt\000"
+ 1876      5F446973 
+ 1876      61626C65 
+ 1876      5278496E 
+ 1876      7400
+ 1877              	.LASF33:
+ 1878 0076 53504953 		.ascii	"SPIS_ReadRxData\000"
+ 1878      5F526561 
+ 1878      64527844 
+ 1878      61746100 
+ 1879              	.LASF39:
+ 1880 0086 53504953 		.ascii	"SPIS_ClearTxBuffer\000"
+ 1880      5F436C65 
+ 1880      61725478 
+ 1880      42756666 
+ 1880      657200
+ 1881              	.LASF27:
+ 1882 0099 53504953 		.ascii	"SPIS_ReadTxStatus\000"
+ 1882      5F526561 
+ 1882      64547853 
+ 1882      74617475 
+ 1882      7300
+ 1883              	.LASF38:
+ 1884 00ab 53504953 		.ascii	"SPIS_ClearRxBuffer\000"
+ 1884      5F436C65 
+ 1884      61725278 
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 57
 
 
- 1883      7300
- 1884              	.LASF38:
- 1885 00e3 53504953 		.ascii	"SPIS_ClearRxBuffer\000"
- 1885      5F436C65 
- 1885      61725278 
- 1885      42756666 
- 1885      657200
- 1886              	.LASF34:
- 1887 00f6 72784461 		.ascii	"rxData\000"
- 1887      746100
- 1888              	.LASF37:
- 1889 00fd 53504953 		.ascii	"SPIS_GetTxBufferSize\000"
- 1889      5F476574 
- 1889      54784275 
- 1889      66666572 
- 1889      53697A65 
- 1890              	.LASF9:
- 1891 0112 666C6F61 		.ascii	"float\000"
- 1891      7400
- 1892              	.LASF7:
- 1893 0118 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1893      206C6F6E 
- 1893      6720756E 
- 1893      7369676E 
- 1893      65642069 
- 1894              	.LASF36:
- 1895 012f 73697A65 		.ascii	"size\000"
- 1895      00
- 1896              	.LASF56:
- 1897 0134 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1897      43313120 
- 1897      352E342E 
- 1897      31203230 
- 1897      31363036 
- 1898 0167 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1898      20726576 
- 1898      6973696F 
- 1898      6E203233 
- 1898      37373135 
- 1899 019a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1899      66756E63 
- 1899      74696F6E 
- 1899      2D736563 
- 1899      74696F6E 
- 1900              	.LASF13:
- 1901 01c2 72656738 		.ascii	"reg8\000"
- 1901      00
- 1902              	.LASF5:
- 1903 01c7 6C6F6E67 		.ascii	"long unsigned int\000"
- 1903      20756E73 
- 1903      69676E65 
- 1903      6420696E 
- 1903      7400
- 1904              	.LASF12:
- 1905 01d9 75696E74 		.ascii	"uint8\000"
- 1905      3800
- 1906              	.LASF20:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 58
+ 1884      42756666 
+ 1884      657200
+ 1885              	.LASF34:
+ 1886 00be 72784461 		.ascii	"rxData\000"
+ 1886      746100
+ 1887              	.LASF37:
+ 1888 00c5 53504953 		.ascii	"SPIS_GetTxBufferSize\000"
+ 1888      5F476574 
+ 1888      54784275 
+ 1888      66666572 
+ 1888      53697A65 
+ 1889              	.LASF9:
+ 1890 00da 666C6F61 		.ascii	"float\000"
+ 1890      7400
+ 1891              	.LASF7:
+ 1892 00e0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1892      206C6F6E 
+ 1892      6720756E 
+ 1892      7369676E 
+ 1892      65642069 
+ 1893              	.LASF36:
+ 1894 00f7 73697A65 		.ascii	"size\000"
+ 1894      00
+ 1895              	.LASF56:
+ 1896 00fc 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1896      43313120 
+ 1896      352E342E 
+ 1896      31203230 
+ 1896      31363036 
+ 1897 012f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1897      20726576 
+ 1897      6973696F 
+ 1897      6E203233 
+ 1897      37373135 
+ 1898 0162 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1898      66756E63 
+ 1898      74696F6E 
+ 1898      2D736563 
+ 1898      74696F6E 
+ 1899              	.LASF13:
+ 1900 018a 72656738 		.ascii	"reg8\000"
+ 1900      00
+ 1901              	.LASF5:
+ 1902 018f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1902      20756E73 
+ 1902      69676E65 
+ 1902      6420696E 
+ 1902      7400
+ 1903              	.LASF12:
+ 1904 01a1 75696E74 		.ascii	"uint8\000"
+ 1904      3800
+ 1905              	.LASF20:
+ 1906 01a7 53504953 		.ascii	"SPIS_EnableRxInt\000"
+ 1906      5F456E61 
+ 1906      626C6552 
+ 1906      78496E74 
+ 1906      00
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 58
 
 
- 1907 01df 53504953 		.ascii	"SPIS_EnableRxInt\000"
- 1907      5F456E61 
- 1907      626C6552 
- 1907      78496E74 
- 1907      00
- 1908              	.LASF42:
- 1909 01f0 62797465 		.ascii	"byteCount\000"
- 1909      436F756E 
- 1909      7400
- 1910              	.LASF18:
- 1911 01fa 656E6162 		.ascii	"enableInterrupts\000"
- 1911      6C65496E 
- 1911      74657272 
- 1911      75707473 
- 1911      00
- 1912              	.LASF35:
- 1913 020b 53504953 		.ascii	"SPIS_GetRxBufferSize\000"
- 1913      5F476574 
- 1913      52784275 
- 1913      66666572 
- 1913      53697A65 
- 1914              	.LASF51:
- 1915 0220 53504953 		.ascii	"SPIS_initVar\000"
- 1915      5F696E69 
- 1915      74566172 
- 1915      00
- 1916              	.LASF19:
- 1917 022d 53504953 		.ascii	"SPIS_EnableTxInt\000"
- 1917      5F456E61 
- 1917      626C6554 
- 1917      78496E74 
- 1917      00
- 1918              	.LASF10:
- 1919 023e 646F7562 		.ascii	"double\000"
- 1919      6C6500
- 1920              	.LASF25:
- 1921 0245 696E7453 		.ascii	"intSrc\000"
- 1921      726300
- 1922              	.LASF40:
- 1923 024c 53504953 		.ascii	"SPIS_PutArray\000"
- 1923      5F507574 
- 1923      41727261 
- 1923      7900
- 1924              	.LASF57:
- 1925 025a 47656E65 		.ascii	"Generated_Source\\PSoC5\\SPIS.c\000"
- 1925      72617465 
- 1925      645F536F 
- 1925      75726365 
- 1925      5C50536F 
- 1926              	.LASF16:
- 1927 0278 53504953 		.ascii	"SPIS_Enable\000"
- 1927      5F456E61 
- 1927      626C6500 
- 1928              	.LASF49:
- 1929 0284 53504953 		.ascii	"SPIS_SetInterruptMode\000"
- 1929      5F536574 
- 1929      496E7465 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 59
+ 1907              	.LASF42:
+ 1908 01b8 62797465 		.ascii	"byteCount\000"
+ 1908      436F756E 
+ 1908      7400
+ 1909              	.LASF18:
+ 1910 01c2 656E6162 		.ascii	"enableInterrupts\000"
+ 1910      6C65496E 
+ 1910      74657272 
+ 1910      75707473 
+ 1910      00
+ 1911              	.LASF35:
+ 1912 01d3 53504953 		.ascii	"SPIS_GetRxBufferSize\000"
+ 1912      5F476574 
+ 1912      52784275 
+ 1912      66666572 
+ 1912      53697A65 
+ 1913              	.LASF51:
+ 1914 01e8 53504953 		.ascii	"SPIS_initVar\000"
+ 1914      5F696E69 
+ 1914      74566172 
+ 1914      00
+ 1915              	.LASF19:
+ 1916 01f5 53504953 		.ascii	"SPIS_EnableTxInt\000"
+ 1916      5F456E61 
+ 1916      626C6554 
+ 1916      78496E74 
+ 1916      00
+ 1917              	.LASF10:
+ 1918 0206 646F7562 		.ascii	"double\000"
+ 1918      6C6500
+ 1919              	.LASF25:
+ 1920 020d 696E7453 		.ascii	"intSrc\000"
+ 1920      726300
+ 1921              	.LASF40:
+ 1922 0214 53504953 		.ascii	"SPIS_PutArray\000"
+ 1922      5F507574 
+ 1922      41727261 
+ 1922      7900
+ 1923              	.LASF57:
+ 1924 0222 47656E65 		.ascii	"Generated_Source\\PSoC5\\SPIS.c\000"
+ 1924      72617465 
+ 1924      645F536F 
+ 1924      75726365 
+ 1924      5C50536F 
+ 1925              	.LASF16:
+ 1926 0240 53504953 		.ascii	"SPIS_Enable\000"
+ 1926      5F456E61 
+ 1926      626C6500 
+ 1927              	.LASF49:
+ 1928 024c 53504953 		.ascii	"SPIS_SetInterruptMode\000"
+ 1928      5F536574 
+ 1928      496E7465 
+ 1928      72727570 
+ 1928      744D6F64 
+ 1929              	.LASF54:
+ 1930 0262 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1930      74657243 
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 59
 
 
- 1929      72727570 
- 1929      744D6F64 
- 1930              	.LASF54:
- 1931 029a 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1931      74657243 
- 1931      72697469 
- 1931      63616C53 
- 1931      65637469 
- 1932              	.LASF1:
- 1933 02b1 756E7369 		.ascii	"unsigned char\000"
- 1933      676E6564 
- 1933      20636861 
- 1933      7200
- 1934              	.LASF8:
- 1935 02bf 756E7369 		.ascii	"unsigned int\000"
- 1935      676E6564 
- 1935      20696E74 
- 1935      00
- 1936              	.LASF55:
- 1937 02cc 43794578 		.ascii	"CyExitCriticalSection\000"
- 1937      69744372 
- 1937      69746963 
- 1937      616C5365 
- 1937      6374696F 
- 1938              	.LASF45:
- 1939 02e2 53504953 		.ascii	"SPIS_Init\000"
- 1939      5F496E69 
- 1939      7400
- 1940              	.LASF21:
- 1941 02ec 53504953 		.ascii	"SPIS_DisableTxInt\000"
- 1941      5F446973 
- 1941      61626C65 
- 1941      5478496E 
- 1941      7400
- 1942              	.LASF43:
- 1943 02fe 62756649 		.ascii	"bufIndex\000"
- 1943      6E646578 
- 1943      00
- 1944              	.LASF30:
- 1945 0307 74784461 		.ascii	"txData\000"
- 1945      746100
- 1946              	.LASF15:
- 1947 030e 73697A65 		.ascii	"sizetype\000"
- 1947      74797065 
- 1947      00
- 1948              	.LASF48:
- 1949 0317 53504953 		.ascii	"SPIS_DisableInt\000"
- 1949      5F446973 
- 1949      61626C65 
- 1949      496E7400 
- 1950              	.LASF6:
- 1951 0327 6C6F6E67 		.ascii	"long long int\000"
- 1951      206C6F6E 
- 1951      6720696E 
- 1951      7400
- 1952              	.LASF28:
- 1953 0335 53504953 		.ascii	"SPIS_ReadRxStatus\000"
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 60
+ 1930      72697469 
+ 1930      63616C53 
+ 1930      65637469 
+ 1931              	.LASF1:
+ 1932 0279 756E7369 		.ascii	"unsigned char\000"
+ 1932      676E6564 
+ 1932      20636861 
+ 1932      7200
+ 1933              	.LASF8:
+ 1934 0287 756E7369 		.ascii	"unsigned int\000"
+ 1934      676E6564 
+ 1934      20696E74 
+ 1934      00
+ 1935              	.LASF55:
+ 1936 0294 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1936      69744372 
+ 1936      69746963 
+ 1936      616C5365 
+ 1936      6374696F 
+ 1937              	.LASF58:
+ 1938 02aa 433A5C55 		.ascii	"C:\\Users\\Mathias\\Desktop\\Uni\\4. Semester\\Proj"
+ 1938      73657273 
+ 1938      5C4D6174 
+ 1938      68696173 
+ 1938      5C446573 
+ 1939 02d7 656B7420 		.ascii	"ekt 4\\iFollow\\Software\\PSOC\\ToF\\Design01.cydsn"
+ 1939      345C6946 
+ 1939      6F6C6C6F 
+ 1939      775C536F 
+ 1939      66747761 
+ 1940 0305 00       		.ascii	"\000"
+ 1941              	.LASF45:
+ 1942 0306 53504953 		.ascii	"SPIS_Init\000"
+ 1942      5F496E69 
+ 1942      7400
+ 1943              	.LASF21:
+ 1944 0310 53504953 		.ascii	"SPIS_DisableTxInt\000"
+ 1944      5F446973 
+ 1944      61626C65 
+ 1944      5478496E 
+ 1944      7400
+ 1945              	.LASF43:
+ 1946 0322 62756649 		.ascii	"bufIndex\000"
+ 1946      6E646578 
+ 1946      00
+ 1947              	.LASF30:
+ 1948 032b 74784461 		.ascii	"txData\000"
+ 1948      746100
+ 1949              	.LASF15:
+ 1950 0332 73697A65 		.ascii	"sizetype\000"
+ 1950      74797065 
+ 1950      00
+ 1951              	.LASF48:
+ 1952 033b 53504953 		.ascii	"SPIS_DisableInt\000"
+ 1952      5F446973 
+ 1952      61626C65 
+ 1952      496E7400 
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 60
 
 
- 1953      5F526561 
- 1953      64527853 
- 1953      74617475 
- 1953      7300
- 1954              	.LASF11:
- 1955 0347 63686172 		.ascii	"char\000"
- 1955      00
- 1956              	.LASF2:
- 1957 034c 73686F72 		.ascii	"short int\000"
- 1957      7420696E 
- 1957      7400
- 1958              	.LASF47:
- 1959 0356 53504953 		.ascii	"SPIS_EnableInt\000"
- 1959      5F456E61 
- 1959      626C6549 
- 1959      6E7400
- 1960              	.LASF41:
- 1961 0365 62756666 		.ascii	"buffer\000"
- 1961      657200
- 1962              	.LASF50:
- 1963 036c 53504953 		.ascii	"SPIS_ReadStatus\000"
- 1963      5F526561 
- 1963      64537461 
- 1963      74757300 
- 1964              	.LASF4:
- 1965 037c 6C6F6E67 		.ascii	"long int\000"
- 1965      20696E74 
- 1965      00
- 1966              	.LASF26:
- 1967 0385 746D7053 		.ascii	"tmpStatus\000"
- 1967      74617475 
- 1967      7300
- 1968              	.LASF44:
- 1969 038f 53504953 		.ascii	"SPIS_ClearFIFO\000"
- 1969      5F436C65 
- 1969      61724649 
- 1969      464F00
- 1970              	.LASF14:
- 1971 039e 6C6F6E67 		.ascii	"long double\000"
- 1971      20646F75 
- 1971      626C6500 
- 1972              	.LASF0:
- 1973 03aa 7369676E 		.ascii	"signed char\000"
- 1973      65642063 
- 1973      68617200 
- 1974              	.LASF3:
- 1975 03b6 73686F72 		.ascii	"short unsigned int\000"
- 1975      7420756E 
- 1975      7369676E 
- 1975      65642069 
- 1975      6E7400
- 1976              	.LASF17:
- 1977 03c9 53504953 		.ascii	"SPIS_Stop\000"
- 1977      5F53746F 
- 1977      7000
- 1978              	.LASF23:
- 1979 03d3 53504953 		.ascii	"SPIS_SetTxInterruptMode\000"
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccNuW83l.s 			page 61
+ 1953              	.LASF6:
+ 1954 034b 6C6F6E67 		.ascii	"long long int\000"
+ 1954      206C6F6E 
+ 1954      6720696E 
+ 1954      7400
+ 1955              	.LASF28:
+ 1956 0359 53504953 		.ascii	"SPIS_ReadRxStatus\000"
+ 1956      5F526561 
+ 1956      64527853 
+ 1956      74617475 
+ 1956      7300
+ 1957              	.LASF11:
+ 1958 036b 63686172 		.ascii	"char\000"
+ 1958      00
+ 1959              	.LASF2:
+ 1960 0370 73686F72 		.ascii	"short int\000"
+ 1960      7420696E 
+ 1960      7400
+ 1961              	.LASF47:
+ 1962 037a 53504953 		.ascii	"SPIS_EnableInt\000"
+ 1962      5F456E61 
+ 1962      626C6549 
+ 1962      6E7400
+ 1963              	.LASF41:
+ 1964 0389 62756666 		.ascii	"buffer\000"
+ 1964      657200
+ 1965              	.LASF50:
+ 1966 0390 53504953 		.ascii	"SPIS_ReadStatus\000"
+ 1966      5F526561 
+ 1966      64537461 
+ 1966      74757300 
+ 1967              	.LASF4:
+ 1968 03a0 6C6F6E67 		.ascii	"long int\000"
+ 1968      20696E74 
+ 1968      00
+ 1969              	.LASF26:
+ 1970 03a9 746D7053 		.ascii	"tmpStatus\000"
+ 1970      74617475 
+ 1970      7300
+ 1971              	.LASF44:
+ 1972 03b3 53504953 		.ascii	"SPIS_ClearFIFO\000"
+ 1972      5F436C65 
+ 1972      61724649 
+ 1972      464F00
+ 1973              	.LASF14:
+ 1974 03c2 6C6F6E67 		.ascii	"long double\000"
+ 1974      20646F75 
+ 1974      626C6500 
+ 1975              	.LASF0:
+ 1976 03ce 7369676E 		.ascii	"signed char\000"
+ 1976      65642063 
+ 1976      68617200 
+ 1977              	.LASF17:
+ 1978 03da 53504953 		.ascii	"SPIS_Stop\000"
+ 1978      5F53746F 
+ 1978      7000
+ 1979              	.LASF23:
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cchVN6j6.s 			page 61
 
 
- 1979      5F536574 
- 1979      5478496E 
- 1979      74657272 
- 1979      7570744D 
- 1980              	.LASF32:
- 1981 03eb 74784461 		.ascii	"txDataByte\000"
- 1981      74614279 
- 1981      746500
- 1982              	.LASF24:
- 1983 03f6 53504953 		.ascii	"SPIS_SetRxInterruptMode\000"
- 1983      5F536574 
- 1983      5278496E 
- 1983      74657272 
- 1983      7570744D 
- 1984              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1980 03e4 53504953 		.ascii	"SPIS_SetTxInterruptMode\000"
+ 1980      5F536574 
+ 1980      5478496E 
+ 1980      74657272 
+ 1980      7570744D 
+ 1981              	.LASF32:
+ 1982 03fc 74784461 		.ascii	"txDataByte\000"
+ 1982      74614279 
+ 1982      746500
+ 1983              	.LASF24:
+ 1984 0407 53504953 		.ascii	"SPIS_SetRxInterruptMode\000"
+ 1984      5F536574 
+ 1984      5278496E 
+ 1984      74657272 
+ 1984      7570744D 
+ 1985              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

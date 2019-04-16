@@ -1,27 +1,44 @@
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-    // PSoC include, this has to be wrapped
-    #include "project.h"
-
-
-#ifdef __cplusplus
-}
-#endif
-
-#include "stdio.h"
+/* ========================================
+ *
+ * Copyright YOUR COMPANY, THE YEAR
+ * All Rights Reserved
+ * UNPUBLISHED, LICENSED SOFTWARE.
+ *
+ * CONFIDENTIAL AND PROPRIETARY INFORMATION
+ * WHICH IS THE PROPERTY OF your company.
+ *
+ * ========================================
+*/
 #include "ToF.h"
-#include "time.h"
 
-/*uint8_t byteR = 0;
-uint8_t i = 0;
-uint16_t s1, s2, s3;
-char string[50];*/
+ToF::ToF(){
+    sensorLeft = 1;
+    sensorRight = 1;
+    sensorMid = 1;
+}
+void ToF::start(){
+    CyGlobalIntEnable; /* Enable global interrupts. */
+     
+    // Init
+    SPIS_Start();
+    isr_1_StartEx(&ToF.isr_handler);
+    UART_1_Start();
+    UART_1_PutString("Terminal vindue er connected\n\r");
+}
 
-/*CY_ISR_PROTO(isr_handler)
-{
-    byteR = SPIS_ReadRxData();                                          // Gemmer aflæsning af RX-buffer
+void ToF::stop(){
+    CyGlobalIntDisable; /* Enable global interrupts. */
+     
+    // Init
+    SPIS_Stop();
+    isr_1_StopEx(&ToF.isr_handler);
+    UART_1_PutString("Terminal vindue er disconnected\n\r");
+    UART_1_Stop();
+
+}
+
+CY_ISR(ToF::isr_handler){
+   byteR = SPIS_ReadRxData();                                          // Gemmer aflæsning af RX-buffer
     
     if (byteR == 0)
         i = 0;
@@ -77,31 +94,6 @@ char string[50];*/
         
         default:
             UART_1_PutString("Error! Ukendt Index");
-    }
+    } 
 }
-*/
-int main(void)
-{
-    /*
-    CyGlobalIntEnable; //Enable global interrupts.
-     
-    // Init
-    SPIS_Start();
-    isr_1_StartEx(isr_handler);
-    UART_1_Start();
-    UART_1_PutString("Terminal vindue er connected\n\r");
-    */
-    ToF obj;
-    obj.start();
-    CyDelay(10000);
-    obj.stop();
-    
-    for(;;)
-    {
-        /* Place your application code here. */
-        
-    }
-
-}
-
 /* [] END OF FILE */
