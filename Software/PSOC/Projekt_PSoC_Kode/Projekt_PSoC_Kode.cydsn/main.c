@@ -18,48 +18,49 @@ extern "C"
 }
 #endif
 #include "MotorController.h"
-#include "RpiUartHandler.h"
+#include "RpiUart.h"
 #include "PIDcontroller.h"
+#include "LED.h"
+#include "Switches.h"
 
 CY_ISR_PROTO(ISR_UART_rx_handler);
-//void handleByteReceived(uint8_t byteReceived[]);
+CY_ISR_PROTO(PowerSwitch_Handler);
+CY_ISR_PROTO(FollowSwitch_Handler);
 
-RpiUartHandler Handler;
+RpiUart UART;
 MotorController Motor;
-
-int i = 50;
+Switches Switchcontroller;
 
 int main(void)
 {
-    CyGlobalIntEnable; /* Enable global interrupts. */
-    
-    PWM_1_Start();
-    I2C_1_Start();
-    UART_1_Start();   
+    CyGlobalIntEnable; /* Enable global interrupts. */ 
     isr_uart_rx_StartEx(ISR_UART_rx_handler);
+    Power_isr_StartEx(PowerSwitch_Handler);
+    Follow_isr_StartEx(FollowSwitch_Handler);
     //isr_SPI_rx_StartEx(ISR_SPI_rx_handler);
     
-    SPIS_1_Start();
-    
     PIDcontroller PIDcontrol(0.5, 0.01, 0.01, 50);
+    LED Ledcontrol;
    
     for(;;)
     {
-        
+
     }
 }
 
-
 CY_ISR(ISR_UART_rx_handler)
 {
-    Handler.UARTreaddata(&Motor);
+    UART.ReadData(&Motor);
 }
 
-CY_ISR(ISR_SPI_rx_handler)
+CY_ISR(PowerSwitch_Handler)
 {
-    UART_1_PutString("Data");
+    Switchcontroller.setSwitchStatus('P');
 }
 
-
+CY_ISR(FollowSwitch_Handler)
+{
+    Switchcontroller.setSwitchStatus('F');
+}
 
 /* [] END OF FILE */

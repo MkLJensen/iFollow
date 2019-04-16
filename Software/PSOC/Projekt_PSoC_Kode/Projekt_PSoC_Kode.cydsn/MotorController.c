@@ -16,7 +16,7 @@
 
 MotorController::MotorController()
 {
-    
+    PWM_1_Start();
 }
 
 MotorController::~MotorController()
@@ -84,8 +84,8 @@ int MotorController::getRightPWM(void) const
 void MotorController::setDir(bool dir)
 {
     direction_ = dir;
-    Pin_3_Write(dir);
-    Pin_4_Write(!dir);
+    Forward_Write(dir);
+    Backward_Write(!dir);
 }
       
 bool MotorController::getDir(void) const
