@@ -1305,39 +1305,39 @@ END GROUP
  .debug_frame   0x000026ec       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
  .debug_frame   0x0000270c       0x5c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
 
-.debug_str      0x00000000     0x253e
+.debug_str      0x00000000     0x25b0
  *(.debug_str)
- .debug_str     0x00000000      0x977 .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0xa38 (size before relaxing)
- .debug_str     0x00000977       0x37 .\CortexM3\ARM_GCC_541\Debug\i2c.o
-                                0x390 (size before relaxing)
- .debug_str     0x000009ae      0x1eb .\CortexM3\ARM_GCC_541\Debug\Laser.o
-                                0xc39 (size before relaxing)
- .debug_str     0x00000b99      0x222 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_str     0x00000000      0x98e .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0xa4f (size before relaxing)
+ .debug_str     0x0000098e       0x37 .\CortexM3\ARM_GCC_541\Debug\i2c.o
+                                0x3a7 (size before relaxing)
+ .debug_str     0x000009c5      0x1eb .\CortexM3\ARM_GCC_541\Debug\Laser.o
+                                0xc50 (size before relaxing)
+ .debug_str     0x00000bb0      0x27d .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
                                 0x351 (size before relaxing)
- .debug_str     0x00000dbb       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x00000e2d       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                                 0x1fd (size before relaxing)
- .debug_str     0x00000e30      0x123 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_str     0x00000ea2      0x123 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
                                 0x2f0 (size before relaxing)
- .debug_str     0x00000f53      0x2ba .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(UART_1.o)
+ .debug_str     0x00000fc5      0x2ba .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(UART_1.o)
                                 0x474 (size before relaxing)
- .debug_str     0x0000120d      0x238 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(I2C_1_MASTER.o)
+ .debug_str     0x0000127f      0x238 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(I2C_1_MASTER.o)
                                 0x3eb (size before relaxing)
- .debug_str     0x00001445      0x1c2 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(UART_1_IntClock.o)
+ .debug_str     0x000014b7      0x1c2 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(UART_1_IntClock.o)
                                 0x367 (size before relaxing)
- .debug_str     0x00001607      0x801 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(CyLib.o)
+ .debug_str     0x00001679      0x801 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(CyLib.o)
                                 0xa03 (size before relaxing)
- .debug_str     0x00001e08      0x371 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(cyPm.o)
+ .debug_str     0x00001e7a      0x371 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(cyPm.o)
                                 0x55c (size before relaxing)
- .debug_str     0x00002179       0xb4 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(I2C_1.o)
+ .debug_str     0x000021eb       0xb4 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(I2C_1.o)
                                 0x2b7 (size before relaxing)
- .debug_str     0x0000222d       0x34 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(I2C_1_INT.o)
+ .debug_str     0x0000229f       0x34 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(I2C_1_INT.o)
                                 0x287 (size before relaxing)
- .debug_str     0x00002261       0x60 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(I2C_1_PM.o)
+ .debug_str     0x000022d3       0x60 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(I2C_1_PM.o)
                                 0x263 (size before relaxing)
- .debug_str     0x000022c1      0x156 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(CyFlash.o)
+ .debug_str     0x00002333      0x156 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(CyFlash.o)
                                 0x320 (size before relaxing)
- .debug_str     0x00002417      0x127 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(CySpc.o)
+ .debug_str     0x00002489      0x127 .\CortexM3\ARM_GCC_541\Debug\LaserDriver.a(CySpc.o)
                                 0x31a (size before relaxing)
 
 .debug_loc
@@ -1494,4 +1494,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\CortexM3\ARM_GCC_541\Debug\LaserDriver.elf elf32-littlearm)
+OUTPUT(C:\Users\Lucas\OneDrive - Aarhus universitet\PRJ4\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\CortexM3\ARM_GCC_541\Debug\LaserDriver.elf elf32-littlearm)

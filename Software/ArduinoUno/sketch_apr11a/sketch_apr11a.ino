@@ -1,16 +1,16 @@
 #include "Adafruit_VL53L0X.h"
 #include "SPI.h"
 
-//Array of range data to send to PSoC
+//Array of range data to send to PSoC - arranged: startbyte, then 8 MSB's and 8 LSB's of sensor 1, 2 and 3
 uint8_t sensorData[7] = {0,0,0,0,0,0,0};
 
 // SPI slave-select pin
 const int slavePin = 53;
 
 //Speed, data order and data mode - to be matched with PSoC creator settings
-SPISettings slaveSettings(2000000, MSBFIRST, SPI_MODE0);
+SPISettings slaveSettings(10000000, MSBFIRST, SPI_MODE0);
 
-// address we will assign if dual sensor is present
+// Assigned addresses for the three sensors
 #define LOX1_ADDRESS 0x30
 #define LOX2_ADDRESS 0x31
 #define LOX3_ADDRESS 0x32
@@ -105,70 +105,30 @@ void read_three_ranges(){
   uint16_t range_3 = 0;
   
   // Get ranges from all three sensors
-  if(measure1.RangeStatus != 4) {     // if not out of range
-    range_1 = measure1.RangeMilliMeter;
+  if(measure1.RangeStatus != 4) {         // if not out of range
+    range_1 = measure1.RangeMilliMeter;   // Read range of sensor 1
   } else{
-    range_1 = 1;
+    range_1 = 1;                          // Out of range
   }
-  if(measure2.RangeStatus != 4) {     // if not out of range
-    range_2 = measure2.RangeMilliMeter;
+  if(measure2.RangeStatus != 4) {         // if not out of range
+    range_2 = measure2.RangeMilliMeter;   // Read range of sensor 2
   } else{
-    range_2 = 1;
+    range_2 = 1;                          // Out of range
   }
-  if(measure3.RangeStatus != 4) {     // if not out of range
-    range_3 = measure3.RangeMilliMeter;
+  if(measure3.RangeStatus != 4) {         // if not out of range
+    range_3 = measure3.RangeMilliMeter;   // Read range of sensor 3
   } else{
-    range_3 = 1;
+    range_3 = 1;                          // Out of range
   }
 
   //Split each range_ data into two uint8_t and update to global array
-  sensorData[1] = (range_1>>8);
-  sensorData[2] = range_1;
-  sensorData[3] = (range_2>>8);
-  sensorData[4] = range_2;
-  sensorData[5] = (range_3>>8);
-  sensorData[6] = range_3;
-
-  uint16_t toReceive = (sensorData[1]<<8)|sensorData[2]; 
-  Serial.println(toReceive);
-  Serial.println();
-}
-
-void read_dual_sensors() {
-  
-  lox1.rangingTest(&measure1, false); // pass in 'true' to get debug data printout!
-  lox2.rangingTest(&measure2, false); // pass in 'true' to get debug data printout!
-  lox3.rangingTest(&measure3, false); // pass in 'true' to get debug data printout!
-
-  // print sensor one reading
-  Serial.print("1: ");
-  if(measure1.RangeStatus != 4) {     // if not out of range
-    Serial.print(measure1.RangeMilliMeter);
-  } else {
-    Serial.print("Out of range");
-  }
-  
-  Serial.print(" ");
-
-  // print sensor two reading
-  Serial.print("2: ");
-  if(measure2.RangeStatus != 4) {
-    Serial.print(measure2.RangeMilliMeter);
-  } else {
-    Serial.print("Out of range");
-  }
-
-  Serial.print(" ");
-  
-  // print sensor three reading
-  Serial.print("3: ");
-  if(measure3.RangeStatus != 4) {
-    Serial.print(measure3.RangeMilliMeter);
-  } else {
-    Serial.print("Out of range");
-  }
-  
-  Serial.println();
+  //+1 on each byte to avoid assigning 0 (value of start byte)
+  sensorData[1] = (range_1>>8)+1;
+  sensorData[2] = range_1+1;
+  sensorData[3] = (range_2>>8)+1;
+  sensorData[4] = range_2+1;
+  sensorData[5] = (range_3>>8)+1;
+  sensorData[6] = range_3+1;
 }
 
 void setup() {
@@ -201,24 +161,17 @@ void setup() {
  
 }
 
-void loop() { 
-  // read_dual_sensors();
-  read_three_ranges();
-  delay(100);
 
+void loop() { 
   read_three_ranges(); // Update global array sensorData
+  // MISO not connected - dont care
+  for(int i=0;i<7;i++) // Send byte of sensorData[0<=i<=6]
   SPI.beginTransaction(slaveSettings);
-  digitalWrite (slavePin, LOW);
-  SPI.transfer(sensorData[0]); // Start byte
-  SPI.transfer(sensorData[1]); // 8 MSB's of sensor 1
-  SPI.transfer(sensorData[2]); // 8 LSB's of sensor 1
-  SPI.transfer(sensorData[3]); // 8 MSB's of sensor 2
-  SPI.transfer(sensorData[4]); // 8 LSB's of sensor 2
-  SPI.transfer(sensorData[5]); // 8 MSB's of sensor 3
-  SPI.transfer(sensorData[6]); // 8 LSB's of sensor 3
-  digitalWrite (slavePin, HIGH);
+  digitalWrite (slavePin, LOW); // Set slave select low to indicate start of transfer
+  SPI.transfer(sensorData[i]);
+  digitalWrite (slavePin, HIGH); // Set slave select high to indicate end of transfer
   SPI.endTransaction();
-  Serial.println("Sending...");
-  delay(100);
+  delay(2); // Delay necessary for succesful communication with PSoC
+  }
 
 }
