@@ -1,0 +1,8 @@
+C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Projekt_PSoC_Kode.cyprj|7300d741-34f5-4a71-86bf-d7231c8f4073
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9022486f-7600-4e2f-b7c8-10563aeb6ffd
+C:\Users\jespe\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|1a16bf57-da48-494e-8a7b-ce5df2a706d1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2d8ff5b3-6f19-437a-9d55-3fdbb56b8f6a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|13639ef0-2ba1-4663-9c21-6a448b319bfc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|1cedf565-e958-436b-ad80-d6c2ee798e07
+C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\CE195352_PSoC_5LP_Blinking_LED01.cydsn\CE195352_PSoC_5LP_Blinking_LED01.cyprj|f7375e51-d165-4af0-9109-71da64429c3e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|0571ba74-81c1-4a1e-b10c-4c32a238a518

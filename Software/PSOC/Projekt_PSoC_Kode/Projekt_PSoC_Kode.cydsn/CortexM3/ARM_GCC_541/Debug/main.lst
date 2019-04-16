@@ -1,0 +1,2288 @@
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text._Z19ISR_UART_rx_handlerv,"ax",%progbits
+  20              		.align	2
+  21              		.global	_Z19ISR_UART_rx_handlerv
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	_Z19ISR_UART_rx_handlerv, %function
+  25              	_Z19ISR_UART_rx_handlerv:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #ifdef __cplusplus
+  13:main.c        **** extern "C"
+  14:main.c        **** {
+  15:main.c        **** #endif
+  16:main.c        **** #include "project.h"
+  17:main.c        **** #ifdef __cplusplus
+  18:main.c        **** }
+  19:main.c        **** #endif
+  20:main.c        **** #include "MotorController.h"
+  21:main.c        **** #include "RpiUartHandler.h"
+  22:main.c        **** #include "PIDcontroller.h"
+  23:main.c        **** 
+  24:main.c        **** CY_ISR_PROTO(ISR_UART_rx_handler);
+  25:main.c        **** //void handleByteReceived(uint8_t byteReceived[]);
+  26:main.c        **** 
+  27:main.c        **** RpiUartHandler Handler;
+  28:main.c        **** MotorController Motor;
+  29:main.c        **** 
+  30:main.c        **** int i = 50;
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 2
+
+
+  31:main.c        **** 
+  32:main.c        **** int main(void)
+  33:main.c        **** {
+  34:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  35:main.c        ****     
+  36:main.c        ****     PWM_1_Start();
+  37:main.c        ****     I2C_1_Start();
+  38:main.c        ****     UART_1_Start();   
+  39:main.c        ****     isr_uart_rx_StartEx(ISR_UART_rx_handler);
+  40:main.c        ****     //isr_SPI_rx_StartEx(ISR_SPI_rx_handler);
+  41:main.c        ****     
+  42:main.c        ****     SPIS_1_Start();
+  43:main.c        ****     
+  44:main.c        ****     PIDcontroller PIDcontrol(0.5, 0.01, 0.01, 50);
+  45:main.c        ****    
+  46:main.c        ****     for(;;)
+  47:main.c        ****     {
+  48:main.c        ****         
+  49:main.c        ****     }
+  50:main.c        **** }
+  51:main.c        **** 
+  52:main.c        **** 
+  53:main.c        **** CY_ISR(ISR_UART_rx_handler)
+  54:main.c        **** {
+  28              		.loc 1 54 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  55:main.c        ****     Handler.UARTreaddata(&Motor);
+  36              		.loc 1 55 0
+  37 0002 0348     		ldr	r0, .L3
+  38 0004 0146     		mov	r1, r0
+  39 0006 0C30     		adds	r0, r0, #12
+  40 0008 FFF7FEFF 		bl	_ZN14RpiUartHandler12UARTreaddataEP15MotorController
+  41              	.LVL0:
+  42 000c 08BD     		pop	{r3, pc}
+  43              	.L4:
+  44 000e 00BF     		.align	2
+  45              	.L3:
+  46 0010 00000000 		.word	.LANCHOR0
+  47              		.cfi_endproc
+  48              	.LFE64:
+  49              		.size	_Z19ISR_UART_rx_handlerv, .-_Z19ISR_UART_rx_handlerv
+  50              		.section	.text._Z41__static_initialization_and_destruction_0ii,"ax",%progbits
+  51              		.align	2
+  52              		.thumb
+  53              		.thumb_func
+  54              		.type	_Z41__static_initialization_and_destruction_0ii, %function
+  55              	_Z41__static_initialization_and_destruction_0ii:
+  56              	.LFB66:
+  56:main.c        **** }
+  57:main.c        **** 
+  58:main.c        **** CY_ISR(ISR_SPI_rx_handler)
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 3
+
+
+  59:main.c        **** {
+  60:main.c        ****     UART_1_PutString("Data");
+  61:main.c        **** }
+  57              		.loc 1 61 0
+  58              		.cfi_startproc
+  59              		@ args = 0, pretend = 0, frame = 0
+  60              		@ frame_needed = 0, uses_anonymous_args = 0
+  61              	.LVL1:
+  62 0000 0128     		cmp	r0, #1
+  63 0002 19D1     		bne	.L8
+  64              		.loc 1 61 0 is_stmt 0 discriminator 1
+  65 0004 4FF6FF73 		movw	r3, #65535
+  66 0008 9942     		cmp	r1, r3
+  67 000a 15D1     		bne	.L8
+  68              		.loc 1 61 0
+  69 000c 70B5     		push	{r4, r5, r6, lr}
+  70              		.cfi_def_cfa_offset 16
+  71              		.cfi_offset 4, -16
+  72              		.cfi_offset 5, -12
+  73              		.cfi_offset 6, -8
+  74              		.cfi_offset 14, -4
+  27:main.c        **** MotorController Motor;
+  75              		.loc 1 27 0 is_stmt 1
+  76 000e 0B4C     		ldr	r4, .L9
+  77 0010 04F10C06 		add	r6, r4, #12
+  78 0014 3046     		mov	r0, r6
+  79              	.LVL2:
+  80 0016 FFF7FEFF 		bl	_ZN14RpiUartHandlerC1Ev
+  81              	.LVL3:
+  82 001a 094D     		ldr	r5, .L9+4
+  83 001c 2A46     		mov	r2, r5
+  84 001e 0949     		ldr	r1, .L9+8
+  85 0020 3046     		mov	r0, r6
+  86 0022 FFF7FEFF 		bl	__aeabi_atexit
+  87              	.LVL4:
+  28:main.c        **** 
+  88              		.loc 1 28 0
+  89 0026 2046     		mov	r0, r4
+  90 0028 FFF7FEFF 		bl	_ZN15MotorControllerC1Ev
+  91              	.LVL5:
+  92 002c 2A46     		mov	r2, r5
+  93 002e 0649     		ldr	r1, .L9+12
+  94 0030 2046     		mov	r0, r4
+  95 0032 FFF7FEFF 		bl	__aeabi_atexit
+  96              	.LVL6:
+  97 0036 70BD     		pop	{r4, r5, r6, pc}
+  98              	.LVL7:
+  99              	.L8:
+ 100              		.cfi_def_cfa_offset 0
+ 101              		.cfi_restore 4
+ 102              		.cfi_restore 5
+ 103              		.cfi_restore 6
+ 104              		.cfi_restore 14
+ 105 0038 7047     		bx	lr
+ 106              	.L10:
+ 107 003a 00BF     		.align	2
+ 108              	.L9:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 4
+
+
+ 109 003c 00000000 		.word	.LANCHOR0
+ 110 0040 00000000 		.word	__dso_handle
+ 111 0044 00000000 		.word	_ZN14RpiUartHandlerD1Ev
+ 112 0048 00000000 		.word	_ZN15MotorControllerD1Ev
+ 113              		.cfi_endproc
+ 114              	.LFE66:
+ 115              		.size	_Z41__static_initialization_and_destruction_0ii, .-_Z41__static_initialization_and_destructi
+ 116              		.section	.text.main,"ax",%progbits
+ 117              		.align	2
+ 118              		.global	main
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.type	main, %function
+ 122              	main:
+ 123              	.LFB63:
+  33:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 124              		.loc 1 33 0
+ 125              		.cfi_startproc
+ 126              		@ args = 0, pretend = 0, frame = 40
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+ 128 0000 00B5     		push	{lr}
+ 129              		.cfi_def_cfa_offset 4
+ 130              		.cfi_offset 14, -4
+ 131 0002 8DB0     		sub	sp, sp, #52
+ 132              		.cfi_def_cfa_offset 56
+  34:main.c        ****     
+ 133              		.loc 1 34 0
+ 134              		.syntax unified
+ 135              	@ 34 "main.c" 1
+ 136 0004 62B6     		CPSIE   i
+ 137              	@ 0 "" 2
+  36:main.c        ****     I2C_1_Start();
+ 138              		.loc 1 36 0
+ 139              		.thumb
+ 140              		.syntax unified
+ 141 0006 FFF7FEFF 		bl	PWM_1_Start
+ 142              	.LVL8:
+  37:main.c        ****     UART_1_Start();   
+ 143              		.loc 1 37 0
+ 144 000a FFF7FEFF 		bl	I2C_1_Start
+ 145              	.LVL9:
+  38:main.c        ****     isr_uart_rx_StartEx(ISR_UART_rx_handler);
+ 146              		.loc 1 38 0
+ 147 000e FFF7FEFF 		bl	UART_1_Start
+ 148              	.LVL10:
+  39:main.c        ****     //isr_SPI_rx_StartEx(ISR_SPI_rx_handler);
+ 149              		.loc 1 39 0
+ 150 0012 0748     		ldr	r0, .L14
+ 151 0014 FFF7FEFF 		bl	isr_uart_rx_StartEx
+ 152              	.LVL11:
+  42:main.c        ****     
+ 153              		.loc 1 42 0
+ 154 0018 FFF7FEFF 		bl	SPIS_1_Start
+ 155              	.LVL12:
+  44:main.c        ****    
+ 156              		.loc 1 44 0
+ 157 001c 054A     		ldr	r2, .L14+4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 5
+
+
+ 158 001e 064B     		ldr	r3, .L14+8
+ 159 0020 0093     		str	r3, [sp]	@ float
+ 160 0022 1346     		mov	r3, r2
+ 161 0024 4FF07C51 		mov	r1, #1056964608
+ 162 0028 03A8     		add	r0, sp, #12
+ 163 002a FFF7FEFF 		bl	_ZN13PIDcontrollerC1Effff
+ 164              	.LVL13:
+ 165              	.L12:
+ 166 002e FEE7     		b	.L12
+ 167              	.L15:
+ 168              		.align	2
+ 169              	.L14:
+ 170 0030 00000000 		.word	_Z19ISR_UART_rx_handlerv
+ 171 0034 0AD7233C 		.word	1008981770
+ 172 0038 00004842 		.word	1112014848
+ 173              		.cfi_endproc
+ 174              	.LFE63:
+ 175              		.size	main, .-main
+ 176              		.section	.text._Z18ISR_SPI_rx_handlerv,"ax",%progbits
+ 177              		.align	2
+ 178              		.global	_Z18ISR_SPI_rx_handlerv
+ 179              		.thumb
+ 180              		.thumb_func
+ 181              		.type	_Z18ISR_SPI_rx_handlerv, %function
+ 182              	_Z18ISR_SPI_rx_handlerv:
+ 183              	.LFB65:
+  59:main.c        ****     UART_1_PutString("Data");
+ 184              		.loc 1 59 0
+ 185              		.cfi_startproc
+ 186              		@ args = 0, pretend = 0, frame = 0
+ 187              		@ frame_needed = 0, uses_anonymous_args = 0
+ 188 0000 08B5     		push	{r3, lr}
+ 189              		.cfi_def_cfa_offset 8
+ 190              		.cfi_offset 3, -8
+ 191              		.cfi_offset 14, -4
+  60:main.c        **** }
+ 192              		.loc 1 60 0
+ 193 0002 0248     		ldr	r0, .L18
+ 194 0004 FFF7FEFF 		bl	UART_1_PutString
+ 195              	.LVL14:
+ 196 0008 08BD     		pop	{r3, pc}
+ 197              	.L19:
+ 198 000a 00BF     		.align	2
+ 199              	.L18:
+ 200 000c 00000000 		.word	.LC0
+ 201              		.cfi_endproc
+ 202              	.LFE65:
+ 203              		.size	_Z18ISR_SPI_rx_handlerv, .-_Z18ISR_SPI_rx_handlerv
+ 204              		.section	.text._GLOBAL__sub_I_Handler,"ax",%progbits
+ 205              		.align	2
+ 206              		.thumb
+ 207              		.thumb_func
+ 208              		.type	_GLOBAL__sub_I_Handler, %function
+ 209              	_GLOBAL__sub_I_Handler:
+ 210              	.LFB67:
+ 211              		.loc 1 61 0
+ 212              		.cfi_startproc
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 6
+
+
+ 213              		@ args = 0, pretend = 0, frame = 0
+ 214              		@ frame_needed = 0, uses_anonymous_args = 0
+ 215 0000 08B5     		push	{r3, lr}
+ 216              		.cfi_def_cfa_offset 8
+ 217              		.cfi_offset 3, -8
+ 218              		.cfi_offset 14, -4
+ 219              		.loc 1 61 0
+ 220 0002 4FF6FF71 		movw	r1, #65535
+ 221 0006 0120     		movs	r0, #1
+ 222 0008 FFF7FEFF 		bl	_Z41__static_initialization_and_destruction_0ii
+ 223              	.LVL15:
+ 224 000c 08BD     		pop	{r3, pc}
+ 225              		.cfi_endproc
+ 226              	.LFE67:
+ 227              		.size	_GLOBAL__sub_I_Handler, .-_GLOBAL__sub_I_Handler
+ 228 000e 00BF     		.section	.init_array,"aw",%init_array
+ 229              		.align	2
+ 230 0000 00000000 		.word	_GLOBAL__sub_I_Handler(target1)
+ 231              		.global	i
+ 232              		.global	Motor
+ 233              		.global	Handler
+ 234              		.data
+ 235              		.align	2
+ 236              		.type	i, %object
+ 237              		.size	i, 4
+ 238              	i:
+ 239 0000 32000000 		.word	50
+ 240              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 241              		.align	2
+ 242              	.LC0:
+ 243 0000 44617461 		.ascii	"Data\000"
+ 243      00
+ 244              		.bss
+ 245              		.align	2
+ 246              		.set	.LANCHOR0,. + 0
+ 247              		.type	Motor, %object
+ 248              		.size	Motor, 12
+ 249              	Motor:
+ 250 0000 00000000 		.space	12
+ 250      00000000 
+ 250      00000000 
+ 251              		.type	Handler, %object
+ 252              		.size	Handler, 1
+ 253              	Handler:
+ 254 000c 00       		.space	1
+ 255              		.text
+ 256              	.Letext0:
+ 257              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 258              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 259              		.file 4 "MotorController.h"
+ 260              		.file 5 "RpiUartHandler.h"
+ 261              		.file 6 "PIDcontroller.h"
+ 262              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 263              		.file 8 "Generated_Source\\PSoC5/PWM_1.h"
+ 264              		.file 9 "Generated_Source\\PSoC5/I2C_1.h"
+ 265              		.file 10 "Generated_Source\\PSoC5/UART_1.h"
+ 266              		.file 11 "Generated_Source\\PSoC5/isr_uart_rx.h"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 7
+
+
+ 267              		.file 12 "Generated_Source\\PSoC5/SPIS_1.h"
+ 268              		.section	.debug_info,"",%progbits
+ 269              	.Ldebug_info0:
+ 270 0000 70060000 		.4byte	0x670
+ 271 0004 0400     		.2byte	0x4
+ 272 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 273 000a 04       		.byte	0x4
+ 274 000b 01       		.uleb128 0x1
+ 275 000c FA000000 		.4byte	.LASF88
+ 276 0010 04       		.byte	0x4
+ 277 0011 98050000 		.4byte	.LASF89
+ 278 0015 D7030000 		.4byte	.LASF90
+ 279 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 280 001d 00000000 		.4byte	0
+ 281 0021 00000000 		.4byte	.Ldebug_line0
+ 282 0025 02       		.uleb128 0x2
+ 283 0026 01       		.byte	0x1
+ 284 0027 06       		.byte	0x6
+ 285 0028 91040000 		.4byte	.LASF0
+ 286 002c 03       		.uleb128 0x3
+ 287 002d F7020000 		.4byte	.LASF4
+ 288 0031 02       		.byte	0x2
+ 289 0032 1D       		.byte	0x1d
+ 290 0033 37000000 		.4byte	0x37
+ 291 0037 02       		.uleb128 0x2
+ 292 0038 01       		.byte	0x1
+ 293 0039 08       		.byte	0x8
+ 294 003a 8B030000 		.4byte	.LASF1
+ 295 003e 02       		.uleb128 0x2
+ 296 003f 02       		.byte	0x2
+ 297 0040 05       		.byte	0x5
+ 298 0041 91000000 		.4byte	.LASF2
+ 299 0045 02       		.uleb128 0x2
+ 300 0046 02       		.byte	0x2
+ 301 0047 07       		.byte	0x7
+ 302 0048 7E040000 		.4byte	.LASF3
+ 303 004c 03       		.uleb128 0x3
+ 304 004d 91060000 		.4byte	.LASF5
+ 305 0051 02       		.byte	0x2
+ 306 0052 3F       		.byte	0x3f
+ 307 0053 57000000 		.4byte	0x57
+ 308 0057 02       		.uleb128 0x2
+ 309 0058 04       		.byte	0x4
+ 310 0059 05       		.byte	0x5
+ 311 005a E6040000 		.4byte	.LASF6
+ 312 005e 02       		.uleb128 0x2
+ 313 005f 04       		.byte	0x4
+ 314 0060 07       		.byte	0x7
+ 315 0061 C2050000 		.4byte	.LASF7
+ 316 0065 02       		.uleb128 0x2
+ 317 0066 08       		.byte	0x8
+ 318 0067 05       		.byte	0x5
+ 319 0068 6B020000 		.4byte	.LASF8
+ 320 006c 02       		.uleb128 0x2
+ 321 006d 08       		.byte	0x8
+ 322 006e 07       		.byte	0x7
+ 323 006f C0030000 		.4byte	.LASF9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 8
+
+
+ 324 0073 04       		.uleb128 0x4
+ 325 0074 04       		.byte	0x4
+ 326 0075 05       		.byte	0x5
+ 327 0076 696E7400 		.ascii	"int\000"
+ 328 007a 02       		.uleb128 0x2
+ 329 007b 04       		.byte	0x4
+ 330 007c 07       		.byte	0x7
+ 331 007d 20040000 		.4byte	.LASF10
+ 332 0081 03       		.uleb128 0x3
+ 333 0082 08020000 		.4byte	.LASF11
+ 334 0086 03       		.byte	0x3
+ 335 0087 18       		.byte	0x18
+ 336 0088 2C000000 		.4byte	0x2c
+ 337 008c 03       		.uleb128 0x3
+ 338 008d EF040000 		.4byte	.LASF12
+ 339 0091 03       		.byte	0x3
+ 340 0092 2C       		.byte	0x2c
+ 341 0093 4C000000 		.4byte	0x4c
+ 342 0097 02       		.uleb128 0x2
+ 343 0098 04       		.byte	0x4
+ 344 0099 04       		.byte	0x4
+ 345 009a 65020000 		.4byte	.LASF13
+ 346 009e 02       		.uleb128 0x2
+ 347 009f 08       		.byte	0x8
+ 348 00a0 04       		.byte	0x4
+ 349 00a1 DF050000 		.4byte	.LASF14
+ 350 00a5 02       		.uleb128 0x2
+ 351 00a6 01       		.byte	0x1
+ 352 00a7 08       		.byte	0x8
+ 353 00a8 D6040000 		.4byte	.LASF15
+ 354 00ac 02       		.uleb128 0x2
+ 355 00ad 08       		.byte	0x8
+ 356 00ae 04       		.byte	0x4
+ 357 00af 79030000 		.4byte	.LASF16
+ 358 00b3 05       		.uleb128 0x5
+ 359 00b4 27000000 		.4byte	.LASF91
+ 360 00b8 02       		.uleb128 0x2
+ 361 00b9 04       		.byte	0x4
+ 362 00ba 07       		.byte	0x7
+ 363 00bb 9B000000 		.4byte	.LASF17
+ 364 00bf 06       		.uleb128 0x6
+ 365 00c0 04       		.byte	0x4
+ 366 00c1 07       		.uleb128 0x7
+ 367 00c2 8E020000 		.4byte	.LASF21
+ 368 00c6 0C       		.byte	0xc
+ 369 00c7 04       		.byte	0x4
+ 370 00c8 1D       		.byte	0x1d
+ 371 00c9 48020000 		.4byte	0x248
+ 372 00cd 08       		.uleb128 0x8
+ 373 00ce 70060000 		.4byte	.LASF18
+ 374 00d2 04       		.byte	0x4
+ 375 00d3 2D       		.byte	0x2d
+ 376 00d4 73000000 		.4byte	0x73
+ 377 00d8 00       		.byte	0
+ 378 00d9 08       		.uleb128 0x8
+ 379 00da 84050000 		.4byte	.LASF19
+ 380 00de 04       		.byte	0x4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 9
+
+
+ 381 00df 2D       		.byte	0x2d
+ 382 00e0 73000000 		.4byte	0x73
+ 383 00e4 04       		.byte	0x4
+ 384 00e5 08       		.uleb128 0x8
+ 385 00e6 D4050000 		.4byte	.LASF20
+ 386 00ea 04       		.byte	0x4
+ 387 00eb 2E       		.byte	0x2e
+ 388 00ec 48020000 		.4byte	0x248
+ 389 00f0 08       		.byte	0x8
+ 390 00f1 09       		.uleb128 0x9
+ 391 00f2 8E020000 		.4byte	.LASF21
+ 392 00f6 04       		.byte	0x4
+ 393 00f7 20       		.byte	0x20
+ 394 00f8 A7030000 		.4byte	.LASF23
+ 395 00fc 4F020000 		.4byte	0x24f
+ 396 0100 01       		.byte	0x1
+ 397 0101 09010000 		.4byte	0x109
+ 398 0105 0F010000 		.4byte	0x10f
+ 399 0109 0A       		.uleb128 0xa
+ 400 010a 4F020000 		.4byte	0x24f
+ 401 010e 00       		.byte	0
+ 402 010f 09       		.uleb128 0x9
+ 403 0110 B9060000 		.4byte	.LASF22
+ 404 0114 04       		.byte	0x4
+ 405 0115 21       		.byte	0x21
+ 406 0116 FC050000 		.4byte	.LASF24
+ 407 011a BF000000 		.4byte	0xbf
+ 408 011e 01       		.byte	0x1
+ 409 011f 27010000 		.4byte	0x127
+ 410 0123 32010000 		.4byte	0x132
+ 411 0127 0A       		.uleb128 0xa
+ 412 0128 4F020000 		.4byte	0x24f
+ 413 012c 0A       		.uleb128 0xa
+ 414 012d 73000000 		.4byte	0x73
+ 415 0131 00       		.byte	0
+ 416 0132 0B       		.uleb128 0xb
+ 417 0133 8E050000 		.4byte	.LASF25
+ 418 0137 04       		.byte	0x4
+ 419 0138 22       		.byte	0x22
+ 420 0139 C4010000 		.4byte	.LASF27
+ 421 013d 01       		.byte	0x1
+ 422 013e 46010000 		.4byte	0x146
+ 423 0142 51010000 		.4byte	0x151
+ 424 0146 0A       		.uleb128 0xa
+ 425 0147 4F020000 		.4byte	0x24f
+ 426 014b 0C       		.uleb128 0xc
+ 427 014c 73000000 		.4byte	0x73
+ 428 0150 00       		.byte	0
+ 429 0151 0B       		.uleb128 0xb
+ 430 0152 9B060000 		.4byte	.LASF26
+ 431 0156 04       		.byte	0x4
+ 432 0157 23       		.byte	0x23
+ 433 0158 9F050000 		.4byte	.LASF28
+ 434 015c 01       		.byte	0x1
+ 435 015d 65010000 		.4byte	0x165
+ 436 0161 70010000 		.4byte	0x170
+ 437 0165 0A       		.uleb128 0xa
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 10
+
+
+ 438 0166 4F020000 		.4byte	0x24f
+ 439 016a 0C       		.uleb128 0xc
+ 440 016b 73000000 		.4byte	0x73
+ 441 016f 00       		.byte	0
+ 442 0170 0B       		.uleb128 0xb
+ 443 0171 F7050000 		.4byte	.LASF29
+ 444 0175 04       		.byte	0x4
+ 445 0176 24       		.byte	0x24
+ 446 0177 49000000 		.4byte	.LASF30
+ 447 017b 01       		.byte	0x1
+ 448 017c 84010000 		.4byte	0x184
+ 449 0180 94010000 		.4byte	0x194
+ 450 0184 0A       		.uleb128 0xa
+ 451 0185 4F020000 		.4byte	0x24f
+ 452 0189 0C       		.uleb128 0xc
+ 453 018a 73000000 		.4byte	0x73
+ 454 018e 0C       		.uleb128 0xc
+ 455 018f A5000000 		.4byte	0xa5
+ 456 0193 00       		.byte	0
+ 457 0194 0B       		.uleb128 0xb
+ 458 0195 72000000 		.4byte	.LASF31
+ 459 0199 04       		.byte	0x4
+ 460 019a 25       		.byte	0x25
+ 461 019b E5010000 		.4byte	.LASF32
+ 462 019f 01       		.byte	0x1
+ 463 01a0 A8010000 		.4byte	0x1a8
+ 464 01a4 B3010000 		.4byte	0x1b3
+ 465 01a8 0A       		.uleb128 0xa
+ 466 01a9 4F020000 		.4byte	0x24f
+ 467 01ad 0C       		.uleb128 0xc
+ 468 01ae 73000000 		.4byte	0x73
+ 469 01b2 00       		.byte	0
+ 470 01b3 09       		.uleb128 0x9
+ 471 01b4 DB040000 		.4byte	.LASF33
+ 472 01b8 04       		.byte	0x4
+ 473 01b9 26       		.byte	0x26
+ 474 01ba D3020000 		.4byte	.LASF34
+ 475 01be 73000000 		.4byte	0x73
+ 476 01c2 01       		.byte	0x1
+ 477 01c3 CB010000 		.4byte	0x1cb
+ 478 01c7 D1010000 		.4byte	0x1d1
+ 479 01cb 0A       		.uleb128 0xa
+ 480 01cc 55020000 		.4byte	0x255
+ 481 01d0 00       		.byte	0
+ 482 01d1 0B       		.uleb128 0xb
+ 483 01d2 DD000000 		.4byte	.LASF35
+ 484 01d6 04       		.byte	0x4
+ 485 01d7 27       		.byte	0x27
+ 486 01d8 14030000 		.4byte	.LASF36
+ 487 01dc 01       		.byte	0x1
+ 488 01dd E5010000 		.4byte	0x1e5
+ 489 01e1 F0010000 		.4byte	0x1f0
+ 490 01e5 0A       		.uleb128 0xa
+ 491 01e6 4F020000 		.4byte	0x24f
+ 492 01ea 0C       		.uleb128 0xc
+ 493 01eb 73000000 		.4byte	0x73
+ 494 01ef 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 11
+
+
+ 495 01f0 09       		.uleb128 0x9
+ 496 01f1 3C050000 		.4byte	.LASF37
+ 497 01f5 04       		.byte	0x4
+ 498 01f6 28       		.byte	0x28
+ 499 01f7 4B060000 		.4byte	.LASF38
+ 500 01fb 73000000 		.4byte	0x73
+ 501 01ff 01       		.byte	0x1
+ 502 0200 08020000 		.4byte	0x208
+ 503 0204 0E020000 		.4byte	0x20e
+ 504 0208 0A       		.uleb128 0xa
+ 505 0209 55020000 		.4byte	0x255
+ 506 020d 00       		.byte	0
+ 507 020e 0B       		.uleb128 0xb
+ 508 020f 9D040000 		.4byte	.LASF39
+ 509 0213 04       		.byte	0x4
+ 510 0214 29       		.byte	0x29
+ 511 0215 5B030000 		.4byte	.LASF40
+ 512 0219 01       		.byte	0x1
+ 513 021a 22020000 		.4byte	0x222
+ 514 021e 2D020000 		.4byte	0x22d
+ 515 0222 0A       		.uleb128 0xa
+ 516 0223 4F020000 		.4byte	0x24f
+ 517 0227 0C       		.uleb128 0xc
+ 518 0228 48020000 		.4byte	0x248
+ 519 022c 00       		.byte	0
+ 520 022d 0D       		.uleb128 0xd
+ 521 022e 7D050000 		.4byte	.LASF41
+ 522 0232 04       		.byte	0x4
+ 523 0233 2A       		.byte	0x2a
+ 524 0234 A5010000 		.4byte	.LASF42
+ 525 0238 48020000 		.4byte	0x248
+ 526 023c 01       		.byte	0x1
+ 527 023d 41020000 		.4byte	0x241
+ 528 0241 0A       		.uleb128 0xa
+ 529 0242 55020000 		.4byte	0x255
+ 530 0246 00       		.byte	0
+ 531 0247 00       		.byte	0
+ 532 0248 02       		.uleb128 0x2
+ 533 0249 01       		.byte	0x1
+ 534 024a 02       		.byte	0x2
+ 535 024b 53020000 		.4byte	.LASF43
+ 536 024f 0E       		.uleb128 0xe
+ 537 0250 04       		.byte	0x4
+ 538 0251 C1000000 		.4byte	0xc1
+ 539 0255 0E       		.uleb128 0xe
+ 540 0256 04       		.byte	0x4
+ 541 0257 5B020000 		.4byte	0x25b
+ 542 025b 0F       		.uleb128 0xf
+ 543 025c C1000000 		.4byte	0xc1
+ 544 0260 07       		.uleb128 0x7
+ 545 0261 29070000 		.4byte	.LASF44
+ 546 0265 01       		.byte	0x1
+ 547 0266 05       		.byte	0x5
+ 548 0267 1F       		.byte	0x1f
+ 549 0268 F9020000 		.4byte	0x2f9
+ 550 026c 08       		.uleb128 0x8
+ 551 026d 34050000 		.4byte	.LASF45
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 12
+
+
+ 552 0271 05       		.byte	0x5
+ 553 0272 28       		.byte	0x28
+ 554 0273 81000000 		.4byte	0x81
+ 555 0277 00       		.byte	0
+ 556 0278 09       		.uleb128 0x9
+ 557 0279 29070000 		.4byte	.LASF44
+ 558 027d 05       		.byte	0x5
+ 559 027e 22       		.byte	0x22
+ 560 027f BE040000 		.4byte	.LASF46
+ 561 0283 F9020000 		.4byte	0x2f9
+ 562 0287 01       		.byte	0x1
+ 563 0288 90020000 		.4byte	0x290
+ 564 028c 96020000 		.4byte	0x296
+ 565 0290 0A       		.uleb128 0xa
+ 566 0291 F9020000 		.4byte	0x2f9
+ 567 0295 00       		.byte	0
+ 568 0296 09       		.uleb128 0x9
+ 569 0297 39000000 		.4byte	.LASF47
+ 570 029b 05       		.byte	0x5
+ 571 029c 23       		.byte	0x23
+ 572 029d FE060000 		.4byte	.LASF48
+ 573 02a1 BF000000 		.4byte	0xbf
+ 574 02a5 01       		.byte	0x1
+ 575 02a6 AE020000 		.4byte	0x2ae
+ 576 02aa B9020000 		.4byte	0x2b9
+ 577 02ae 0A       		.uleb128 0xa
+ 578 02af F9020000 		.4byte	0x2f9
+ 579 02b3 0A       		.uleb128 0xa
+ 580 02b4 73000000 		.4byte	0x73
+ 581 02b8 00       		.byte	0
+ 582 02b9 0B       		.uleb128 0xb
+ 583 02ba 81020000 		.4byte	.LASF49
+ 584 02be 05       		.byte	0x5
+ 585 02bf 24       		.byte	0x24
+ 586 02c0 9E020000 		.4byte	.LASF50
+ 587 02c4 01       		.byte	0x1
+ 588 02c5 CD020000 		.4byte	0x2cd
+ 589 02c9 D8020000 		.4byte	0x2d8
+ 590 02cd 0A       		.uleb128 0xa
+ 591 02ce F9020000 		.4byte	0x2f9
+ 592 02d2 0C       		.uleb128 0xc
+ 593 02d3 4F020000 		.4byte	0x24f
+ 594 02d7 00       		.byte	0
+ 595 02d8 10       		.uleb128 0x10
+ 596 02d9 01030000 		.4byte	.LASF92
+ 597 02dd 05       		.byte	0x5
+ 598 02de 25       		.byte	0x25
+ 599 02df F7040000 		.4byte	.LASF93
+ 600 02e3 01       		.byte	0x1
+ 601 02e4 E8020000 		.4byte	0x2e8
+ 602 02e8 0A       		.uleb128 0xa
+ 603 02e9 F9020000 		.4byte	0x2f9
+ 604 02ed 0C       		.uleb128 0xc
+ 605 02ee FF020000 		.4byte	0x2ff
+ 606 02f2 0C       		.uleb128 0xc
+ 607 02f3 4F020000 		.4byte	0x24f
+ 608 02f7 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 13
+
+
+ 609 02f8 00       		.byte	0
+ 610 02f9 0E       		.uleb128 0xe
+ 611 02fa 04       		.byte	0x4
+ 612 02fb 60020000 		.4byte	0x260
+ 613 02ff 0E       		.uleb128 0xe
+ 614 0300 04       		.byte	0x4
+ 615 0301 81000000 		.4byte	0x81
+ 616 0305 07       		.uleb128 0x7
+ 617 0306 99030000 		.4byte	.LASF51
+ 618 030a 24       		.byte	0x24
+ 619 030b 06       		.byte	0x6
+ 620 030c 1D       		.byte	0x1d
+ 621 030d 4E040000 		.4byte	0x44e
+ 622 0311 11       		.uleb128 0x11
+ 623 0312 6B705F00 		.ascii	"kp_\000"
+ 624 0316 06       		.byte	0x6
+ 625 0317 28       		.byte	0x28
+ 626 0318 97000000 		.4byte	0x97
+ 627 031c 00       		.byte	0
+ 628 031d 11       		.uleb128 0x11
+ 629 031e 6B695F00 		.ascii	"ki_\000"
+ 630 0322 06       		.byte	0x6
+ 631 0323 28       		.byte	0x28
+ 632 0324 97000000 		.4byte	0x97
+ 633 0328 04       		.byte	0x4
+ 634 0329 11       		.uleb128 0x11
+ 635 032a 6B645F00 		.ascii	"kd_\000"
+ 636 032e 06       		.byte	0x6
+ 637 032f 28       		.byte	0x28
+ 638 0330 97000000 		.4byte	0x97
+ 639 0334 08       		.byte	0x8
+ 640 0335 08       		.uleb128 0x8
+ 641 0336 16070000 		.4byte	.LASF52
+ 642 033a 06       		.byte	0x6
+ 643 033b 29       		.byte	0x29
+ 644 033c 97000000 		.4byte	0x97
+ 645 0340 0C       		.byte	0xc
+ 646 0341 08       		.uleb128 0x8
+ 647 0342 A4000000 		.4byte	.LASF53
+ 648 0346 06       		.byte	0x6
+ 649 0347 2A       		.byte	0x2a
+ 650 0348 97000000 		.4byte	0x97
+ 651 034c 10       		.byte	0x10
+ 652 034d 08       		.uleb128 0x8
+ 653 034e 00000000 		.4byte	.LASF54
+ 654 0352 06       		.byte	0x6
+ 655 0353 2A       		.byte	0x2a
+ 656 0354 97000000 		.4byte	0x97
+ 657 0358 14       		.byte	0x14
+ 658 0359 08       		.uleb128 0x8
+ 659 035a 3C040000 		.4byte	.LASF55
+ 660 035e 06       		.byte	0x6
+ 661 035f 2A       		.byte	0x2a
+ 662 0360 97000000 		.4byte	0x97
+ 663 0364 18       		.byte	0x18
+ 664 0365 08       		.uleb128 0x8
+ 665 0366 EE000000 		.4byte	.LASF56
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 14
+
+
+ 666 036a 06       		.byte	0x6
+ 667 036b 2A       		.byte	0x2a
+ 668 036c 97000000 		.4byte	0x97
+ 669 0370 1C       		.byte	0x1c
+ 670 0371 08       		.uleb128 0x8
+ 671 0372 21020000 		.4byte	.LASF57
+ 672 0376 06       		.byte	0x6
+ 673 0377 2A       		.byte	0x2a
+ 674 0378 97000000 		.4byte	0x97
+ 675 037c 20       		.byte	0x20
+ 676 037d 09       		.uleb128 0x9
+ 677 037e 99030000 		.4byte	.LASF51
+ 678 0382 06       		.byte	0x6
+ 679 0383 20       		.byte	0x20
+ 680 0384 A4040000 		.4byte	.LASF58
+ 681 0388 4E040000 		.4byte	0x44e
+ 682 038c 01       		.byte	0x1
+ 683 038d 95030000 		.4byte	0x395
+ 684 0391 AF030000 		.4byte	0x3af
+ 685 0395 0A       		.uleb128 0xa
+ 686 0396 4E040000 		.4byte	0x44e
+ 687 039a 0C       		.uleb128 0xc
+ 688 039b 97000000 		.4byte	0x97
+ 689 039f 0C       		.uleb128 0xc
+ 690 03a0 97000000 		.4byte	0x97
+ 691 03a4 0C       		.uleb128 0xc
+ 692 03a5 97000000 		.4byte	0x97
+ 693 03a9 0C       		.uleb128 0xc
+ 694 03aa 97000000 		.4byte	0x97
+ 695 03ae 00       		.byte	0
+ 696 03af 09       		.uleb128 0x9
+ 697 03b0 18000000 		.4byte	.LASF59
+ 698 03b4 06       		.byte	0x6
+ 699 03b5 21       		.byte	0x21
+ 700 03b6 CA060000 		.4byte	.LASF60
+ 701 03ba BF000000 		.4byte	0xbf
+ 702 03be 01       		.byte	0x1
+ 703 03bf C7030000 		.4byte	0x3c7
+ 704 03c3 D2030000 		.4byte	0x3d2
+ 705 03c7 0A       		.uleb128 0xa
+ 706 03c8 4E040000 		.4byte	0x44e
+ 707 03cc 0A       		.uleb128 0xa
+ 708 03cd 73000000 		.4byte	0x73
+ 709 03d1 00       		.byte	0
+ 710 03d2 0B       		.uleb128 0xb
+ 711 03d3 4B020000 		.4byte	.LASF61
+ 712 03d7 06       		.byte	0x6
+ 713 03d8 22       		.byte	0x22
+ 714 03d9 E1060000 		.4byte	.LASF62
+ 715 03dd 01       		.byte	0x1
+ 716 03de E6030000 		.4byte	0x3e6
+ 717 03e2 F1030000 		.4byte	0x3f1
+ 718 03e6 0A       		.uleb128 0xa
+ 719 03e7 4E040000 		.4byte	0x44e
+ 720 03eb 0C       		.uleb128 0xc
+ 721 03ec 97000000 		.4byte	0x97
+ 722 03f0 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 15
+
+
+ 723 03f1 09       		.uleb128 0x9
+ 724 03f2 43020000 		.4byte	.LASF63
+ 725 03f6 06       		.byte	0x6
+ 726 03f7 23       		.byte	0x23
+ 727 03f8 15060000 		.4byte	.LASF64
+ 728 03fc 97000000 		.4byte	0x97
+ 729 0400 01       		.byte	0x1
+ 730 0401 09040000 		.4byte	0x409
+ 731 0405 0F040000 		.4byte	0x40f
+ 732 0409 0A       		.uleb128 0xa
+ 733 040a 54040000 		.4byte	0x454
+ 734 040e 00       		.byte	0
+ 735 040f 0B       		.uleb128 0xb
+ 736 0410 38070000 		.4byte	.LASF65
+ 737 0414 06       		.byte	0x6
+ 738 0415 24       		.byte	0x24
+ 739 0416 AB000000 		.4byte	.LASF66
+ 740 041a 01       		.byte	0x1
+ 741 041b 23040000 		.4byte	0x423
+ 742 041f 2E040000 		.4byte	0x42e
+ 743 0423 0A       		.uleb128 0xa
+ 744 0424 4E040000 		.4byte	0x44e
+ 745 0428 0C       		.uleb128 0xc
+ 746 0429 97000000 		.4byte	0x97
+ 747 042d 00       		.byte	0
+ 748 042e 0D       		.uleb128 0xd
+ 749 042f 10020000 		.4byte	.LASF67
+ 750 0433 06       		.byte	0x6
+ 751 0434 25       		.byte	0x25
+ 752 0435 46040000 		.4byte	.LASF68
+ 753 0439 97000000 		.4byte	0x97
+ 754 043d 01       		.byte	0x1
+ 755 043e 42040000 		.4byte	0x442
+ 756 0442 0A       		.uleb128 0xa
+ 757 0443 4E040000 		.4byte	0x44e
+ 758 0447 0C       		.uleb128 0xc
+ 759 0448 4F020000 		.4byte	0x24f
+ 760 044c 00       		.byte	0
+ 761 044d 00       		.byte	0
+ 762 044e 0E       		.uleb128 0xe
+ 763 044f 04       		.byte	0x4
+ 764 0450 05030000 		.4byte	0x305
+ 765 0454 0E       		.uleb128 0xe
+ 766 0455 04       		.byte	0x4
+ 767 0456 5A040000 		.4byte	0x45a
+ 768 045a 0F       		.uleb128 0xf
+ 769 045b 05030000 		.4byte	0x305
+ 770 045f 12       		.uleb128 0x12
+ 771 0460 7D000000 		.4byte	.LASF69
+ 772 0464 01       		.byte	0x1
+ 773 0465 35       		.byte	0x35
+ 774 0466 2A020000 		.4byte	.LASF70
+ 775 046a 00000000 		.4byte	.LFB64
+ 776 046e 14000000 		.4byte	.LFE64-.LFB64
+ 777 0472 01       		.uleb128 0x1
+ 778 0473 9C       		.byte	0x9c
+ 779 0474 95040000 		.4byte	0x495
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 16
+
+
+ 780 0478 13       		.uleb128 0x13
+ 781 0479 0C000000 		.4byte	.LVL0
+ 782 047d B9020000 		.4byte	0x2b9
+ 783 0481 14       		.uleb128 0x14
+ 784 0482 01       		.uleb128 0x1
+ 785 0483 50       		.byte	0x50
+ 786 0484 05       		.uleb128 0x5
+ 787 0485 03       		.byte	0x3
+ 788 0486 0C000000 		.4byte	.LANCHOR0+12
+ 789 048a 14       		.uleb128 0x14
+ 790 048b 01       		.uleb128 0x1
+ 791 048c 51       		.byte	0x51
+ 792 048d 05       		.uleb128 0x5
+ 793 048e 03       		.byte	0x3
+ 794 048f 00000000 		.4byte	.LANCHOR0
+ 795 0493 00       		.byte	0
+ 796 0494 00       		.byte	0
+ 797 0495 15       		.uleb128 0x15
+ 798 0496 48050000 		.4byte	.LASF75
+ 799 049a 00000000 		.4byte	.LFB66
+ 800 049e 4C000000 		.4byte	.LFE66-.LFB66
+ 801 04a2 01       		.uleb128 0x1
+ 802 04a3 9C       		.byte	0x9c
+ 803 04a4 17050000 		.4byte	0x517
+ 804 04a8 16       		.uleb128 0x16
+ 805 04a9 38030000 		.4byte	.LASF71
+ 806 04ad 01       		.byte	0x1
+ 807 04ae 3D       		.byte	0x3d
+ 808 04af 73000000 		.4byte	0x73
+ 809 04b3 00000000 		.4byte	.LLST0
+ 810 04b7 16       		.uleb128 0x16
+ 811 04b8 72050000 		.4byte	.LASF72
+ 812 04bc 01       		.byte	0x1
+ 813 04bd 3D       		.byte	0x3d
+ 814 04be 73000000 		.4byte	0x73
+ 815 04c2 2C000000 		.4byte	.LLST1
+ 816 04c6 17       		.uleb128 0x17
+ 817 04c7 1A000000 		.4byte	.LVL3
+ 818 04cb D6040000 		.4byte	0x4d6
+ 819 04cf 14       		.uleb128 0x14
+ 820 04d0 01       		.uleb128 0x1
+ 821 04d1 50       		.byte	0x50
+ 822 04d2 02       		.uleb128 0x2
+ 823 04d3 76       		.byte	0x76
+ 824 04d4 00       		.sleb128 0
+ 825 04d5 00       		.byte	0
+ 826 04d6 18       		.uleb128 0x18
+ 827 04d7 26000000 		.4byte	.LVL4
+ 828 04db 28060000 		.4byte	0x628
+ 829 04df F0040000 		.4byte	0x4f0
+ 830 04e3 14       		.uleb128 0x14
+ 831 04e4 01       		.uleb128 0x1
+ 832 04e5 50       		.byte	0x50
+ 833 04e6 02       		.uleb128 0x2
+ 834 04e7 76       		.byte	0x76
+ 835 04e8 00       		.sleb128 0
+ 836 04e9 14       		.uleb128 0x14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 17
+
+
+ 837 04ea 01       		.uleb128 0x1
+ 838 04eb 52       		.byte	0x52
+ 839 04ec 02       		.uleb128 0x2
+ 840 04ed 75       		.byte	0x75
+ 841 04ee 00       		.sleb128 0
+ 842 04ef 00       		.byte	0
+ 843 04f0 17       		.uleb128 0x17
+ 844 04f1 2C000000 		.4byte	.LVL5
+ 845 04f5 00050000 		.4byte	0x500
+ 846 04f9 14       		.uleb128 0x14
+ 847 04fa 01       		.uleb128 0x1
+ 848 04fb 50       		.byte	0x50
+ 849 04fc 02       		.uleb128 0x2
+ 850 04fd 74       		.byte	0x74
+ 851 04fe 00       		.sleb128 0
+ 852 04ff 00       		.byte	0
+ 853 0500 13       		.uleb128 0x13
+ 854 0501 36000000 		.4byte	.LVL6
+ 855 0505 28060000 		.4byte	0x628
+ 856 0509 14       		.uleb128 0x14
+ 857 050a 01       		.uleb128 0x1
+ 858 050b 50       		.byte	0x50
+ 859 050c 02       		.uleb128 0x2
+ 860 050d 74       		.byte	0x74
+ 861 050e 00       		.sleb128 0
+ 862 050f 14       		.uleb128 0x14
+ 863 0510 01       		.uleb128 0x1
+ 864 0511 52       		.byte	0x52
+ 865 0512 02       		.uleb128 0x2
+ 866 0513 75       		.byte	0x75
+ 867 0514 00       		.sleb128 0
+ 868 0515 00       		.byte	0
+ 869 0516 00       		.byte	0
+ 870 0517 19       		.uleb128 0x19
+ 871 0518 E9000000 		.4byte	.LASF94
+ 872 051c 01       		.byte	0x1
+ 873 051d 20       		.byte	0x20
+ 874 051e 73000000 		.4byte	0x73
+ 875 0522 00000000 		.4byte	.LFB63
+ 876 0526 3C000000 		.4byte	.LFE63-.LFB63
+ 877 052a 01       		.uleb128 0x1
+ 878 052b 9C       		.byte	0x9c
+ 879 052c 86050000 		.4byte	0x586
+ 880 0530 1A       		.uleb128 0x1a
+ 881 0531 79060000 		.4byte	.LASF80
+ 882 0535 01       		.byte	0x1
+ 883 0536 2C       		.byte	0x2c
+ 884 0537 05030000 		.4byte	0x305
+ 885 053b 02       		.uleb128 0x2
+ 886 053c 91       		.byte	0x91
+ 887 053d 54       		.sleb128 -44
+ 888 053e 1B       		.uleb128 0x1b
+ 889 053f 0A000000 		.4byte	.LVL8
+ 890 0543 31060000 		.4byte	0x631
+ 891 0547 1B       		.uleb128 0x1b
+ 892 0548 0E000000 		.4byte	.LVL9
+ 893 054c 3C060000 		.4byte	0x63c
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 18
+
+
+ 894 0550 1B       		.uleb128 0x1b
+ 895 0551 12000000 		.4byte	.LVL10
+ 896 0555 47060000 		.4byte	0x647
+ 897 0559 18       		.uleb128 0x18
+ 898 055a 18000000 		.4byte	.LVL11
+ 899 055e 52060000 		.4byte	0x652
+ 900 0562 70050000 		.4byte	0x570
+ 901 0566 14       		.uleb128 0x14
+ 902 0567 01       		.uleb128 0x1
+ 903 0568 50       		.byte	0x50
+ 904 0569 05       		.uleb128 0x5
+ 905 056a 03       		.byte	0x3
+ 906 056b 00000000 		.4byte	_Z19ISR_UART_rx_handlerv
+ 907 056f 00       		.byte	0
+ 908 0570 1B       		.uleb128 0x1b
+ 909 0571 1C000000 		.4byte	.LVL12
+ 910 0575 5D060000 		.4byte	0x65d
+ 911 0579 1C       		.uleb128 0x1c
+ 912 057a 2E000000 		.4byte	.LVL13
+ 913 057e 14       		.uleb128 0x14
+ 914 057f 01       		.uleb128 0x1
+ 915 0580 50       		.byte	0x50
+ 916 0581 02       		.uleb128 0x2
+ 917 0582 91       		.byte	0x91
+ 918 0583 54       		.sleb128 -44
+ 919 0584 00       		.byte	0
+ 920 0585 00       		.byte	0
+ 921 0586 12       		.uleb128 0x12
+ 922 0587 A6060000 		.4byte	.LASF73
+ 923 058b 01       		.byte	0x1
+ 924 058c 3A       		.byte	0x3a
+ 925 058d 33060000 		.4byte	.LASF74
+ 926 0591 00000000 		.4byte	.LFB65
+ 927 0595 10000000 		.4byte	.LFE65-.LFB65
+ 928 0599 01       		.uleb128 0x1
+ 929 059a 9C       		.byte	0x9c
+ 930 059b B3050000 		.4byte	0x5b3
+ 931 059f 13       		.uleb128 0x13
+ 932 05a0 08000000 		.4byte	.LVL14
+ 933 05a4 68060000 		.4byte	0x668
+ 934 05a8 14       		.uleb128 0x14
+ 935 05a9 01       		.uleb128 0x1
+ 936 05aa 50       		.byte	0x50
+ 937 05ab 05       		.uleb128 0x5
+ 938 05ac 03       		.byte	0x3
+ 939 05ad 00000000 		.4byte	.LC0
+ 940 05b1 00       		.byte	0
+ 941 05b2 00       		.byte	0
+ 942 05b3 15       		.uleb128 0x15
+ 943 05b4 47070000 		.4byte	.LASF76
+ 944 05b8 00000000 		.4byte	.LFB67
+ 945 05bc 0E000000 		.4byte	.LFE67-.LFB67
+ 946 05c0 01       		.uleb128 0x1
+ 947 05c1 9C       		.byte	0x9c
+ 948 05c2 DD050000 		.4byte	0x5dd
+ 949 05c6 13       		.uleb128 0x13
+ 950 05c7 0C000000 		.4byte	.LVL15
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 19
+
+
+ 951 05cb 95040000 		.4byte	0x495
+ 952 05cf 14       		.uleb128 0x14
+ 953 05d0 01       		.uleb128 0x1
+ 954 05d1 50       		.byte	0x50
+ 955 05d2 01       		.uleb128 0x1
+ 956 05d3 31       		.byte	0x31
+ 957 05d4 14       		.uleb128 0x14
+ 958 05d5 01       		.uleb128 0x1
+ 959 05d6 51       		.byte	0x51
+ 960 05d7 03       		.uleb128 0x3
+ 961 05d8 0A       		.byte	0xa
+ 962 05d9 FFFF     		.2byte	0xffff
+ 963 05db 00       		.byte	0
+ 964 05dc 00       		.byte	0
+ 965 05dd 1D       		.uleb128 0x1d
+ 966 05de 1C070000 		.4byte	.LASF77
+ 967 05e2 07       		.byte	0x7
+ 968 05e3 1207     		.2byte	0x712
+ 969 05e5 E9050000 		.4byte	0x5e9
+ 970 05e9 1E       		.uleb128 0x1e
+ 971 05ea 8C000000 		.4byte	0x8c
+ 972 05ee 1F       		.uleb128 0x1f
+ 973 05ef 79020000 		.4byte	.LASF78
+ 974 05f3 01       		.byte	0x1
+ 975 05f4 1B       		.byte	0x1b
+ 976 05f5 60020000 		.4byte	0x260
+ 977 05f9 05       		.uleb128 0x5
+ 978 05fa 03       		.byte	0x3
+ 979 05fb 00000000 		.4byte	Handler
+ 980 05ff 1F       		.uleb128 0x1f
+ 981 0600 85030000 		.4byte	.LASF79
+ 982 0604 01       		.byte	0x1
+ 983 0605 1C       		.byte	0x1c
+ 984 0606 C1000000 		.4byte	0xc1
+ 985 060a 05       		.uleb128 0x5
+ 986 060b 03       		.byte	0x3
+ 987 060c 00000000 		.4byte	Motor
+ 988 0610 20       		.uleb128 0x20
+ 989 0611 6900     		.ascii	"i\000"
+ 990 0613 01       		.byte	0x1
+ 991 0614 1E       		.byte	0x1e
+ 992 0615 73000000 		.4byte	0x73
+ 993 0619 05       		.uleb128 0x5
+ 994 061a 03       		.byte	0x3
+ 995 061b 00000000 		.4byte	i
+ 996 061f 21       		.uleb128 0x21
+ 997 0620 84060000 		.4byte	.LASF81
+ 998 0624 BF000000 		.4byte	0xbf
+ 999 0628 22       		.uleb128 0x22
+ 1000 0629 2D040000 		.4byte	.LASF95
+ 1001 062d 2D040000 		.4byte	.LASF95
+ 1002 0631 23       		.uleb128 0x23
+ 1003 0632 66000000 		.4byte	.LASF82
+ 1004 0636 66000000 		.4byte	.LASF82
+ 1005 063a 08       		.byte	0x8
+ 1006 063b 92       		.byte	0x92
+ 1007 063c 23       		.uleb128 0x23
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 20
+
+
+ 1008 063d 0C000000 		.4byte	.LASF83
+ 1009 0641 0C000000 		.4byte	.LASF83
+ 1010 0645 09       		.byte	0x9
+ 1011 0646 93       		.byte	0x93
+ 1012 0647 23       		.uleb128 0x23
+ 1013 0648 58020000 		.4byte	.LASF84
+ 1014 064c 58020000 		.4byte	.LASF84
+ 1015 0650 0A       		.byte	0xa
+ 1016 0651 54       		.byte	0x54
+ 1017 0652 23       		.uleb128 0x23
+ 1018 0653 47030000 		.4byte	.LASF85
+ 1019 0657 47030000 		.4byte	.LASF85
+ 1020 065b 0B       		.byte	0xb
+ 1021 065c 18       		.byte	0x18
+ 1022 065d 23       		.uleb128 0x23
+ 1023 065e D0000000 		.4byte	.LASF86
+ 1024 0662 D0000000 		.4byte	.LASF86
+ 1025 0666 0C       		.byte	0xc
+ 1026 0667 46       		.byte	0x46
+ 1027 0668 23       		.uleb128 0x23
+ 1028 0669 E6050000 		.4byte	.LASF87
+ 1029 066d E6050000 		.4byte	.LASF87
+ 1030 0671 0A       		.byte	0xa
+ 1031 0672 8B       		.byte	0x8b
+ 1032 0673 00       		.byte	0
+ 1033              		.section	.debug_abbrev,"",%progbits
+ 1034              	.Ldebug_abbrev0:
+ 1035 0000 01       		.uleb128 0x1
+ 1036 0001 11       		.uleb128 0x11
+ 1037 0002 01       		.byte	0x1
+ 1038 0003 25       		.uleb128 0x25
+ 1039 0004 0E       		.uleb128 0xe
+ 1040 0005 13       		.uleb128 0x13
+ 1041 0006 0B       		.uleb128 0xb
+ 1042 0007 03       		.uleb128 0x3
+ 1043 0008 0E       		.uleb128 0xe
+ 1044 0009 1B       		.uleb128 0x1b
+ 1045 000a 0E       		.uleb128 0xe
+ 1046 000b 55       		.uleb128 0x55
+ 1047 000c 17       		.uleb128 0x17
+ 1048 000d 11       		.uleb128 0x11
+ 1049 000e 01       		.uleb128 0x1
+ 1050 000f 10       		.uleb128 0x10
+ 1051 0010 17       		.uleb128 0x17
+ 1052 0011 00       		.byte	0
+ 1053 0012 00       		.byte	0
+ 1054 0013 02       		.uleb128 0x2
+ 1055 0014 24       		.uleb128 0x24
+ 1056 0015 00       		.byte	0
+ 1057 0016 0B       		.uleb128 0xb
+ 1058 0017 0B       		.uleb128 0xb
+ 1059 0018 3E       		.uleb128 0x3e
+ 1060 0019 0B       		.uleb128 0xb
+ 1061 001a 03       		.uleb128 0x3
+ 1062 001b 0E       		.uleb128 0xe
+ 1063 001c 00       		.byte	0
+ 1064 001d 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 21
+
+
+ 1065 001e 03       		.uleb128 0x3
+ 1066 001f 16       		.uleb128 0x16
+ 1067 0020 00       		.byte	0
+ 1068 0021 03       		.uleb128 0x3
+ 1069 0022 0E       		.uleb128 0xe
+ 1070 0023 3A       		.uleb128 0x3a
+ 1071 0024 0B       		.uleb128 0xb
+ 1072 0025 3B       		.uleb128 0x3b
+ 1073 0026 0B       		.uleb128 0xb
+ 1074 0027 49       		.uleb128 0x49
+ 1075 0028 13       		.uleb128 0x13
+ 1076 0029 00       		.byte	0
+ 1077 002a 00       		.byte	0
+ 1078 002b 04       		.uleb128 0x4
+ 1079 002c 24       		.uleb128 0x24
+ 1080 002d 00       		.byte	0
+ 1081 002e 0B       		.uleb128 0xb
+ 1082 002f 0B       		.uleb128 0xb
+ 1083 0030 3E       		.uleb128 0x3e
+ 1084 0031 0B       		.uleb128 0xb
+ 1085 0032 03       		.uleb128 0x3
+ 1086 0033 08       		.uleb128 0x8
+ 1087 0034 00       		.byte	0
+ 1088 0035 00       		.byte	0
+ 1089 0036 05       		.uleb128 0x5
+ 1090 0037 3B       		.uleb128 0x3b
+ 1091 0038 00       		.byte	0
+ 1092 0039 03       		.uleb128 0x3
+ 1093 003a 0E       		.uleb128 0xe
+ 1094 003b 00       		.byte	0
+ 1095 003c 00       		.byte	0
+ 1096 003d 06       		.uleb128 0x6
+ 1097 003e 0F       		.uleb128 0xf
+ 1098 003f 00       		.byte	0
+ 1099 0040 0B       		.uleb128 0xb
+ 1100 0041 0B       		.uleb128 0xb
+ 1101 0042 00       		.byte	0
+ 1102 0043 00       		.byte	0
+ 1103 0044 07       		.uleb128 0x7
+ 1104 0045 02       		.uleb128 0x2
+ 1105 0046 01       		.byte	0x1
+ 1106 0047 03       		.uleb128 0x3
+ 1107 0048 0E       		.uleb128 0xe
+ 1108 0049 0B       		.uleb128 0xb
+ 1109 004a 0B       		.uleb128 0xb
+ 1110 004b 3A       		.uleb128 0x3a
+ 1111 004c 0B       		.uleb128 0xb
+ 1112 004d 3B       		.uleb128 0x3b
+ 1113 004e 0B       		.uleb128 0xb
+ 1114 004f 01       		.uleb128 0x1
+ 1115 0050 13       		.uleb128 0x13
+ 1116 0051 00       		.byte	0
+ 1117 0052 00       		.byte	0
+ 1118 0053 08       		.uleb128 0x8
+ 1119 0054 0D       		.uleb128 0xd
+ 1120 0055 00       		.byte	0
+ 1121 0056 03       		.uleb128 0x3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 22
+
+
+ 1122 0057 0E       		.uleb128 0xe
+ 1123 0058 3A       		.uleb128 0x3a
+ 1124 0059 0B       		.uleb128 0xb
+ 1125 005a 3B       		.uleb128 0x3b
+ 1126 005b 0B       		.uleb128 0xb
+ 1127 005c 49       		.uleb128 0x49
+ 1128 005d 13       		.uleb128 0x13
+ 1129 005e 38       		.uleb128 0x38
+ 1130 005f 0B       		.uleb128 0xb
+ 1131 0060 00       		.byte	0
+ 1132 0061 00       		.byte	0
+ 1133 0062 09       		.uleb128 0x9
+ 1134 0063 2E       		.uleb128 0x2e
+ 1135 0064 01       		.byte	0x1
+ 1136 0065 3F       		.uleb128 0x3f
+ 1137 0066 19       		.uleb128 0x19
+ 1138 0067 03       		.uleb128 0x3
+ 1139 0068 0E       		.uleb128 0xe
+ 1140 0069 3A       		.uleb128 0x3a
+ 1141 006a 0B       		.uleb128 0xb
+ 1142 006b 3B       		.uleb128 0x3b
+ 1143 006c 0B       		.uleb128 0xb
+ 1144 006d 6E       		.uleb128 0x6e
+ 1145 006e 0E       		.uleb128 0xe
+ 1146 006f 49       		.uleb128 0x49
+ 1147 0070 13       		.uleb128 0x13
+ 1148 0071 32       		.uleb128 0x32
+ 1149 0072 0B       		.uleb128 0xb
+ 1150 0073 3C       		.uleb128 0x3c
+ 1151 0074 19       		.uleb128 0x19
+ 1152 0075 64       		.uleb128 0x64
+ 1153 0076 13       		.uleb128 0x13
+ 1154 0077 01       		.uleb128 0x1
+ 1155 0078 13       		.uleb128 0x13
+ 1156 0079 00       		.byte	0
+ 1157 007a 00       		.byte	0
+ 1158 007b 0A       		.uleb128 0xa
+ 1159 007c 05       		.uleb128 0x5
+ 1160 007d 00       		.byte	0
+ 1161 007e 49       		.uleb128 0x49
+ 1162 007f 13       		.uleb128 0x13
+ 1163 0080 34       		.uleb128 0x34
+ 1164 0081 19       		.uleb128 0x19
+ 1165 0082 00       		.byte	0
+ 1166 0083 00       		.byte	0
+ 1167 0084 0B       		.uleb128 0xb
+ 1168 0085 2E       		.uleb128 0x2e
+ 1169 0086 01       		.byte	0x1
+ 1170 0087 3F       		.uleb128 0x3f
+ 1171 0088 19       		.uleb128 0x19
+ 1172 0089 03       		.uleb128 0x3
+ 1173 008a 0E       		.uleb128 0xe
+ 1174 008b 3A       		.uleb128 0x3a
+ 1175 008c 0B       		.uleb128 0xb
+ 1176 008d 3B       		.uleb128 0x3b
+ 1177 008e 0B       		.uleb128 0xb
+ 1178 008f 6E       		.uleb128 0x6e
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 23
+
+
+ 1179 0090 0E       		.uleb128 0xe
+ 1180 0091 32       		.uleb128 0x32
+ 1181 0092 0B       		.uleb128 0xb
+ 1182 0093 3C       		.uleb128 0x3c
+ 1183 0094 19       		.uleb128 0x19
+ 1184 0095 64       		.uleb128 0x64
+ 1185 0096 13       		.uleb128 0x13
+ 1186 0097 01       		.uleb128 0x1
+ 1187 0098 13       		.uleb128 0x13
+ 1188 0099 00       		.byte	0
+ 1189 009a 00       		.byte	0
+ 1190 009b 0C       		.uleb128 0xc
+ 1191 009c 05       		.uleb128 0x5
+ 1192 009d 00       		.byte	0
+ 1193 009e 49       		.uleb128 0x49
+ 1194 009f 13       		.uleb128 0x13
+ 1195 00a0 00       		.byte	0
+ 1196 00a1 00       		.byte	0
+ 1197 00a2 0D       		.uleb128 0xd
+ 1198 00a3 2E       		.uleb128 0x2e
+ 1199 00a4 01       		.byte	0x1
+ 1200 00a5 3F       		.uleb128 0x3f
+ 1201 00a6 19       		.uleb128 0x19
+ 1202 00a7 03       		.uleb128 0x3
+ 1203 00a8 0E       		.uleb128 0xe
+ 1204 00a9 3A       		.uleb128 0x3a
+ 1205 00aa 0B       		.uleb128 0xb
+ 1206 00ab 3B       		.uleb128 0x3b
+ 1207 00ac 0B       		.uleb128 0xb
+ 1208 00ad 6E       		.uleb128 0x6e
+ 1209 00ae 0E       		.uleb128 0xe
+ 1210 00af 49       		.uleb128 0x49
+ 1211 00b0 13       		.uleb128 0x13
+ 1212 00b1 32       		.uleb128 0x32
+ 1213 00b2 0B       		.uleb128 0xb
+ 1214 00b3 3C       		.uleb128 0x3c
+ 1215 00b4 19       		.uleb128 0x19
+ 1216 00b5 64       		.uleb128 0x64
+ 1217 00b6 13       		.uleb128 0x13
+ 1218 00b7 00       		.byte	0
+ 1219 00b8 00       		.byte	0
+ 1220 00b9 0E       		.uleb128 0xe
+ 1221 00ba 0F       		.uleb128 0xf
+ 1222 00bb 00       		.byte	0
+ 1223 00bc 0B       		.uleb128 0xb
+ 1224 00bd 0B       		.uleb128 0xb
+ 1225 00be 49       		.uleb128 0x49
+ 1226 00bf 13       		.uleb128 0x13
+ 1227 00c0 00       		.byte	0
+ 1228 00c1 00       		.byte	0
+ 1229 00c2 0F       		.uleb128 0xf
+ 1230 00c3 26       		.uleb128 0x26
+ 1231 00c4 00       		.byte	0
+ 1232 00c5 49       		.uleb128 0x49
+ 1233 00c6 13       		.uleb128 0x13
+ 1234 00c7 00       		.byte	0
+ 1235 00c8 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 24
+
+
+ 1236 00c9 10       		.uleb128 0x10
+ 1237 00ca 2E       		.uleb128 0x2e
+ 1238 00cb 01       		.byte	0x1
+ 1239 00cc 3F       		.uleb128 0x3f
+ 1240 00cd 19       		.uleb128 0x19
+ 1241 00ce 03       		.uleb128 0x3
+ 1242 00cf 0E       		.uleb128 0xe
+ 1243 00d0 3A       		.uleb128 0x3a
+ 1244 00d1 0B       		.uleb128 0xb
+ 1245 00d2 3B       		.uleb128 0x3b
+ 1246 00d3 0B       		.uleb128 0xb
+ 1247 00d4 6E       		.uleb128 0x6e
+ 1248 00d5 0E       		.uleb128 0xe
+ 1249 00d6 32       		.uleb128 0x32
+ 1250 00d7 0B       		.uleb128 0xb
+ 1251 00d8 3C       		.uleb128 0x3c
+ 1252 00d9 19       		.uleb128 0x19
+ 1253 00da 64       		.uleb128 0x64
+ 1254 00db 13       		.uleb128 0x13
+ 1255 00dc 00       		.byte	0
+ 1256 00dd 00       		.byte	0
+ 1257 00de 11       		.uleb128 0x11
+ 1258 00df 0D       		.uleb128 0xd
+ 1259 00e0 00       		.byte	0
+ 1260 00e1 03       		.uleb128 0x3
+ 1261 00e2 08       		.uleb128 0x8
+ 1262 00e3 3A       		.uleb128 0x3a
+ 1263 00e4 0B       		.uleb128 0xb
+ 1264 00e5 3B       		.uleb128 0x3b
+ 1265 00e6 0B       		.uleb128 0xb
+ 1266 00e7 49       		.uleb128 0x49
+ 1267 00e8 13       		.uleb128 0x13
+ 1268 00e9 38       		.uleb128 0x38
+ 1269 00ea 0B       		.uleb128 0xb
+ 1270 00eb 00       		.byte	0
+ 1271 00ec 00       		.byte	0
+ 1272 00ed 12       		.uleb128 0x12
+ 1273 00ee 2E       		.uleb128 0x2e
+ 1274 00ef 01       		.byte	0x1
+ 1275 00f0 3F       		.uleb128 0x3f
+ 1276 00f1 19       		.uleb128 0x19
+ 1277 00f2 03       		.uleb128 0x3
+ 1278 00f3 0E       		.uleb128 0xe
+ 1279 00f4 3A       		.uleb128 0x3a
+ 1280 00f5 0B       		.uleb128 0xb
+ 1281 00f6 3B       		.uleb128 0x3b
+ 1282 00f7 0B       		.uleb128 0xb
+ 1283 00f8 6E       		.uleb128 0x6e
+ 1284 00f9 0E       		.uleb128 0xe
+ 1285 00fa 11       		.uleb128 0x11
+ 1286 00fb 01       		.uleb128 0x1
+ 1287 00fc 12       		.uleb128 0x12
+ 1288 00fd 06       		.uleb128 0x6
+ 1289 00fe 40       		.uleb128 0x40
+ 1290 00ff 18       		.uleb128 0x18
+ 1291 0100 9742     		.uleb128 0x2117
+ 1292 0102 19       		.uleb128 0x19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 25
+
+
+ 1293 0103 01       		.uleb128 0x1
+ 1294 0104 13       		.uleb128 0x13
+ 1295 0105 00       		.byte	0
+ 1296 0106 00       		.byte	0
+ 1297 0107 13       		.uleb128 0x13
+ 1298 0108 898201   		.uleb128 0x4109
+ 1299 010b 01       		.byte	0x1
+ 1300 010c 11       		.uleb128 0x11
+ 1301 010d 01       		.uleb128 0x1
+ 1302 010e 31       		.uleb128 0x31
+ 1303 010f 13       		.uleb128 0x13
+ 1304 0110 00       		.byte	0
+ 1305 0111 00       		.byte	0
+ 1306 0112 14       		.uleb128 0x14
+ 1307 0113 8A8201   		.uleb128 0x410a
+ 1308 0116 00       		.byte	0
+ 1309 0117 02       		.uleb128 0x2
+ 1310 0118 18       		.uleb128 0x18
+ 1311 0119 9142     		.uleb128 0x2111
+ 1312 011b 18       		.uleb128 0x18
+ 1313 011c 00       		.byte	0
+ 1314 011d 00       		.byte	0
+ 1315 011e 15       		.uleb128 0x15
+ 1316 011f 2E       		.uleb128 0x2e
+ 1317 0120 01       		.byte	0x1
+ 1318 0121 03       		.uleb128 0x3
+ 1319 0122 0E       		.uleb128 0xe
+ 1320 0123 34       		.uleb128 0x34
+ 1321 0124 19       		.uleb128 0x19
+ 1322 0125 11       		.uleb128 0x11
+ 1323 0126 01       		.uleb128 0x1
+ 1324 0127 12       		.uleb128 0x12
+ 1325 0128 06       		.uleb128 0x6
+ 1326 0129 40       		.uleb128 0x40
+ 1327 012a 18       		.uleb128 0x18
+ 1328 012b 9742     		.uleb128 0x2117
+ 1329 012d 19       		.uleb128 0x19
+ 1330 012e 01       		.uleb128 0x1
+ 1331 012f 13       		.uleb128 0x13
+ 1332 0130 00       		.byte	0
+ 1333 0131 00       		.byte	0
+ 1334 0132 16       		.uleb128 0x16
+ 1335 0133 05       		.uleb128 0x5
+ 1336 0134 00       		.byte	0
+ 1337 0135 03       		.uleb128 0x3
+ 1338 0136 0E       		.uleb128 0xe
+ 1339 0137 3A       		.uleb128 0x3a
+ 1340 0138 0B       		.uleb128 0xb
+ 1341 0139 3B       		.uleb128 0x3b
+ 1342 013a 0B       		.uleb128 0xb
+ 1343 013b 49       		.uleb128 0x49
+ 1344 013c 13       		.uleb128 0x13
+ 1345 013d 02       		.uleb128 0x2
+ 1346 013e 17       		.uleb128 0x17
+ 1347 013f 00       		.byte	0
+ 1348 0140 00       		.byte	0
+ 1349 0141 17       		.uleb128 0x17
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 26
+
+
+ 1350 0142 898201   		.uleb128 0x4109
+ 1351 0145 01       		.byte	0x1
+ 1352 0146 11       		.uleb128 0x11
+ 1353 0147 01       		.uleb128 0x1
+ 1354 0148 01       		.uleb128 0x1
+ 1355 0149 13       		.uleb128 0x13
+ 1356 014a 00       		.byte	0
+ 1357 014b 00       		.byte	0
+ 1358 014c 18       		.uleb128 0x18
+ 1359 014d 898201   		.uleb128 0x4109
+ 1360 0150 01       		.byte	0x1
+ 1361 0151 11       		.uleb128 0x11
+ 1362 0152 01       		.uleb128 0x1
+ 1363 0153 31       		.uleb128 0x31
+ 1364 0154 13       		.uleb128 0x13
+ 1365 0155 01       		.uleb128 0x1
+ 1366 0156 13       		.uleb128 0x13
+ 1367 0157 00       		.byte	0
+ 1368 0158 00       		.byte	0
+ 1369 0159 19       		.uleb128 0x19
+ 1370 015a 2E       		.uleb128 0x2e
+ 1371 015b 01       		.byte	0x1
+ 1372 015c 3F       		.uleb128 0x3f
+ 1373 015d 19       		.uleb128 0x19
+ 1374 015e 03       		.uleb128 0x3
+ 1375 015f 0E       		.uleb128 0xe
+ 1376 0160 3A       		.uleb128 0x3a
+ 1377 0161 0B       		.uleb128 0xb
+ 1378 0162 3B       		.uleb128 0x3b
+ 1379 0163 0B       		.uleb128 0xb
+ 1380 0164 49       		.uleb128 0x49
+ 1381 0165 13       		.uleb128 0x13
+ 1382 0166 8701     		.uleb128 0x87
+ 1383 0168 19       		.uleb128 0x19
+ 1384 0169 11       		.uleb128 0x11
+ 1385 016a 01       		.uleb128 0x1
+ 1386 016b 12       		.uleb128 0x12
+ 1387 016c 06       		.uleb128 0x6
+ 1388 016d 40       		.uleb128 0x40
+ 1389 016e 18       		.uleb128 0x18
+ 1390 016f 9742     		.uleb128 0x2117
+ 1391 0171 19       		.uleb128 0x19
+ 1392 0172 01       		.uleb128 0x1
+ 1393 0173 13       		.uleb128 0x13
+ 1394 0174 00       		.byte	0
+ 1395 0175 00       		.byte	0
+ 1396 0176 1A       		.uleb128 0x1a
+ 1397 0177 34       		.uleb128 0x34
+ 1398 0178 00       		.byte	0
+ 1399 0179 03       		.uleb128 0x3
+ 1400 017a 0E       		.uleb128 0xe
+ 1401 017b 3A       		.uleb128 0x3a
+ 1402 017c 0B       		.uleb128 0xb
+ 1403 017d 3B       		.uleb128 0x3b
+ 1404 017e 0B       		.uleb128 0xb
+ 1405 017f 49       		.uleb128 0x49
+ 1406 0180 13       		.uleb128 0x13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 27
+
+
+ 1407 0181 02       		.uleb128 0x2
+ 1408 0182 18       		.uleb128 0x18
+ 1409 0183 00       		.byte	0
+ 1410 0184 00       		.byte	0
+ 1411 0185 1B       		.uleb128 0x1b
+ 1412 0186 898201   		.uleb128 0x4109
+ 1413 0189 00       		.byte	0
+ 1414 018a 11       		.uleb128 0x11
+ 1415 018b 01       		.uleb128 0x1
+ 1416 018c 31       		.uleb128 0x31
+ 1417 018d 13       		.uleb128 0x13
+ 1418 018e 00       		.byte	0
+ 1419 018f 00       		.byte	0
+ 1420 0190 1C       		.uleb128 0x1c
+ 1421 0191 898201   		.uleb128 0x4109
+ 1422 0194 01       		.byte	0x1
+ 1423 0195 11       		.uleb128 0x11
+ 1424 0196 01       		.uleb128 0x1
+ 1425 0197 00       		.byte	0
+ 1426 0198 00       		.byte	0
+ 1427 0199 1D       		.uleb128 0x1d
+ 1428 019a 34       		.uleb128 0x34
+ 1429 019b 00       		.byte	0
+ 1430 019c 03       		.uleb128 0x3
+ 1431 019d 0E       		.uleb128 0xe
+ 1432 019e 3A       		.uleb128 0x3a
+ 1433 019f 0B       		.uleb128 0xb
+ 1434 01a0 3B       		.uleb128 0x3b
+ 1435 01a1 05       		.uleb128 0x5
+ 1436 01a2 49       		.uleb128 0x49
+ 1437 01a3 13       		.uleb128 0x13
+ 1438 01a4 3F       		.uleb128 0x3f
+ 1439 01a5 19       		.uleb128 0x19
+ 1440 01a6 3C       		.uleb128 0x3c
+ 1441 01a7 19       		.uleb128 0x19
+ 1442 01a8 00       		.byte	0
+ 1443 01a9 00       		.byte	0
+ 1444 01aa 1E       		.uleb128 0x1e
+ 1445 01ab 35       		.uleb128 0x35
+ 1446 01ac 00       		.byte	0
+ 1447 01ad 49       		.uleb128 0x49
+ 1448 01ae 13       		.uleb128 0x13
+ 1449 01af 00       		.byte	0
+ 1450 01b0 00       		.byte	0
+ 1451 01b1 1F       		.uleb128 0x1f
+ 1452 01b2 34       		.uleb128 0x34
+ 1453 01b3 00       		.byte	0
+ 1454 01b4 03       		.uleb128 0x3
+ 1455 01b5 0E       		.uleb128 0xe
+ 1456 01b6 3A       		.uleb128 0x3a
+ 1457 01b7 0B       		.uleb128 0xb
+ 1458 01b8 3B       		.uleb128 0x3b
+ 1459 01b9 0B       		.uleb128 0xb
+ 1460 01ba 49       		.uleb128 0x49
+ 1461 01bb 13       		.uleb128 0x13
+ 1462 01bc 3F       		.uleb128 0x3f
+ 1463 01bd 19       		.uleb128 0x19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 28
+
+
+ 1464 01be 02       		.uleb128 0x2
+ 1465 01bf 18       		.uleb128 0x18
+ 1466 01c0 00       		.byte	0
+ 1467 01c1 00       		.byte	0
+ 1468 01c2 20       		.uleb128 0x20
+ 1469 01c3 34       		.uleb128 0x34
+ 1470 01c4 00       		.byte	0
+ 1471 01c5 03       		.uleb128 0x3
+ 1472 01c6 08       		.uleb128 0x8
+ 1473 01c7 3A       		.uleb128 0x3a
+ 1474 01c8 0B       		.uleb128 0xb
+ 1475 01c9 3B       		.uleb128 0x3b
+ 1476 01ca 0B       		.uleb128 0xb
+ 1477 01cb 49       		.uleb128 0x49
+ 1478 01cc 13       		.uleb128 0x13
+ 1479 01cd 3F       		.uleb128 0x3f
+ 1480 01ce 19       		.uleb128 0x19
+ 1481 01cf 02       		.uleb128 0x2
+ 1482 01d0 18       		.uleb128 0x18
+ 1483 01d1 00       		.byte	0
+ 1484 01d2 00       		.byte	0
+ 1485 01d3 21       		.uleb128 0x21
+ 1486 01d4 34       		.uleb128 0x34
+ 1487 01d5 00       		.byte	0
+ 1488 01d6 03       		.uleb128 0x3
+ 1489 01d7 0E       		.uleb128 0xe
+ 1490 01d8 49       		.uleb128 0x49
+ 1491 01d9 13       		.uleb128 0x13
+ 1492 01da 3F       		.uleb128 0x3f
+ 1493 01db 19       		.uleb128 0x19
+ 1494 01dc 34       		.uleb128 0x34
+ 1495 01dd 19       		.uleb128 0x19
+ 1496 01de 3C       		.uleb128 0x3c
+ 1497 01df 19       		.uleb128 0x19
+ 1498 01e0 00       		.byte	0
+ 1499 01e1 00       		.byte	0
+ 1500 01e2 22       		.uleb128 0x22
+ 1501 01e3 2E       		.uleb128 0x2e
+ 1502 01e4 00       		.byte	0
+ 1503 01e5 3F       		.uleb128 0x3f
+ 1504 01e6 19       		.uleb128 0x19
+ 1505 01e7 3C       		.uleb128 0x3c
+ 1506 01e8 19       		.uleb128 0x19
+ 1507 01e9 6E       		.uleb128 0x6e
+ 1508 01ea 0E       		.uleb128 0xe
+ 1509 01eb 03       		.uleb128 0x3
+ 1510 01ec 0E       		.uleb128 0xe
+ 1511 01ed 00       		.byte	0
+ 1512 01ee 00       		.byte	0
+ 1513 01ef 23       		.uleb128 0x23
+ 1514 01f0 2E       		.uleb128 0x2e
+ 1515 01f1 00       		.byte	0
+ 1516 01f2 3F       		.uleb128 0x3f
+ 1517 01f3 19       		.uleb128 0x19
+ 1518 01f4 3C       		.uleb128 0x3c
+ 1519 01f5 19       		.uleb128 0x19
+ 1520 01f6 6E       		.uleb128 0x6e
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 29
+
+
+ 1521 01f7 0E       		.uleb128 0xe
+ 1522 01f8 03       		.uleb128 0x3
+ 1523 01f9 0E       		.uleb128 0xe
+ 1524 01fa 3A       		.uleb128 0x3a
+ 1525 01fb 0B       		.uleb128 0xb
+ 1526 01fc 3B       		.uleb128 0x3b
+ 1527 01fd 0B       		.uleb128 0xb
+ 1528 01fe 00       		.byte	0
+ 1529 01ff 00       		.byte	0
+ 1530 0200 00       		.byte	0
+ 1531              		.section	.debug_loc,"",%progbits
+ 1532              	.Ldebug_loc0:
+ 1533              	.LLST0:
+ 1534 0000 00000000 		.4byte	.LVL1
+ 1535 0004 16000000 		.4byte	.LVL2
+ 1536 0008 0100     		.2byte	0x1
+ 1537 000a 50       		.byte	0x50
+ 1538 000b 16000000 		.4byte	.LVL2
+ 1539 000f 38000000 		.4byte	.LVL7
+ 1540 0013 0400     		.2byte	0x4
+ 1541 0015 F3       		.byte	0xf3
+ 1542 0016 01       		.uleb128 0x1
+ 1543 0017 50       		.byte	0x50
+ 1544 0018 9F       		.byte	0x9f
+ 1545 0019 38000000 		.4byte	.LVL7
+ 1546 001d 4C000000 		.4byte	.LFE66
+ 1547 0021 0100     		.2byte	0x1
+ 1548 0023 50       		.byte	0x50
+ 1549 0024 00000000 		.4byte	0
+ 1550 0028 00000000 		.4byte	0
+ 1551              	.LLST1:
+ 1552 002c 00000000 		.4byte	.LVL1
+ 1553 0030 19000000 		.4byte	.LVL3-1
+ 1554 0034 0100     		.2byte	0x1
+ 1555 0036 51       		.byte	0x51
+ 1556 0037 19000000 		.4byte	.LVL3-1
+ 1557 003b 38000000 		.4byte	.LVL7
+ 1558 003f 0400     		.2byte	0x4
+ 1559 0041 F3       		.byte	0xf3
+ 1560 0042 01       		.uleb128 0x1
+ 1561 0043 51       		.byte	0x51
+ 1562 0044 9F       		.byte	0x9f
+ 1563 0045 38000000 		.4byte	.LVL7
+ 1564 0049 4C000000 		.4byte	.LFE66
+ 1565 004d 0100     		.2byte	0x1
+ 1566 004f 51       		.byte	0x51
+ 1567 0050 00000000 		.4byte	0
+ 1568 0054 00000000 		.4byte	0
+ 1569              		.section	.debug_aranges,"",%progbits
+ 1570 0000 3C000000 		.4byte	0x3c
+ 1571 0004 0200     		.2byte	0x2
+ 1572 0006 00000000 		.4byte	.Ldebug_info0
+ 1573 000a 04       		.byte	0x4
+ 1574 000b 00       		.byte	0
+ 1575 000c 0000     		.2byte	0
+ 1576 000e 0000     		.2byte	0
+ 1577 0010 00000000 		.4byte	.LFB64
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 30
+
+
+ 1578 0014 14000000 		.4byte	.LFE64-.LFB64
+ 1579 0018 00000000 		.4byte	.LFB66
+ 1580 001c 4C000000 		.4byte	.LFE66-.LFB66
+ 1581 0020 00000000 		.4byte	.LFB63
+ 1582 0024 3C000000 		.4byte	.LFE63-.LFB63
+ 1583 0028 00000000 		.4byte	.LFB65
+ 1584 002c 10000000 		.4byte	.LFE65-.LFB65
+ 1585 0030 00000000 		.4byte	.LFB67
+ 1586 0034 0E000000 		.4byte	.LFE67-.LFB67
+ 1587 0038 00000000 		.4byte	0
+ 1588 003c 00000000 		.4byte	0
+ 1589              		.section	.debug_ranges,"",%progbits
+ 1590              	.Ldebug_ranges0:
+ 1591 0000 00000000 		.4byte	.LFB64
+ 1592 0004 14000000 		.4byte	.LFE64
+ 1593 0008 00000000 		.4byte	.LFB66
+ 1594 000c 4C000000 		.4byte	.LFE66
+ 1595 0010 00000000 		.4byte	.LFB63
+ 1596 0014 3C000000 		.4byte	.LFE63
+ 1597 0018 00000000 		.4byte	.LFB65
+ 1598 001c 10000000 		.4byte	.LFE65
+ 1599 0020 00000000 		.4byte	.LFB67
+ 1600 0024 0E000000 		.4byte	.LFE67
+ 1601 0028 00000000 		.4byte	0
+ 1602 002c 00000000 		.4byte	0
+ 1603              		.section	.debug_line,"",%progbits
+ 1604              	.Ldebug_line0:
+ 1605 0000 21020000 		.section	.debug_str,"MS",%progbits,1
+ 1605      0200BA01 
+ 1605      00000201 
+ 1605      FB0E0D00 
+ 1605      01010101 
+ 1606              	.LASF54:
+ 1607 0000 6C617374 		.ascii	"last_error_\000"
+ 1607      5F657272 
+ 1607      6F725F00 
+ 1608              	.LASF83:
+ 1609 000c 4932435F 		.ascii	"I2C_1_Start\000"
+ 1609      315F5374 
+ 1609      61727400 
+ 1610              	.LASF59:
+ 1611 0018 7E504944 		.ascii	"~PIDcontroller\000"
+ 1611      636F6E74 
+ 1611      726F6C6C 
+ 1611      657200
+ 1612              	.LASF91:
+ 1613 0027 6465636C 		.ascii	"decltype(nullptr)\000"
+ 1613      74797065 
+ 1613      286E756C 
+ 1613      6C707472 
+ 1613      2900
+ 1614              	.LASF47:
+ 1615 0039 7E527069 		.ascii	"~RpiUartHandler\000"
+ 1615      55617274 
+ 1615      48616E64 
+ 1615      6C657200 
+ 1616              	.LASF30:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 31
+
+
+ 1617 0049 5F5A4E31 		.ascii	"_ZN15MotorController4TurnEic\000"
+ 1617      354D6F74 
+ 1617      6F72436F 
+ 1617      6E74726F 
+ 1617      6C6C6572 
+ 1618              	.LASF82:
+ 1619 0066 50574D5F 		.ascii	"PWM_1_Start\000"
+ 1619      315F5374 
+ 1619      61727400 
+ 1620              	.LASF31:
+ 1621 0072 7365744C 		.ascii	"setLeftPWM\000"
+ 1621      65667450 
+ 1621      574D00
+ 1622              	.LASF69:
+ 1623 007d 4953525F 		.ascii	"ISR_UART_rx_handler\000"
+ 1623      55415254 
+ 1623      5F72785F 
+ 1623      68616E64 
+ 1623      6C657200 
+ 1624              	.LASF2:
+ 1625 0091 73686F72 		.ascii	"short int\000"
+ 1625      7420696E 
+ 1625      7400
+ 1626              	.LASF17:
+ 1627 009b 73697A65 		.ascii	"sizetype\000"
+ 1627      74797065 
+ 1627      00
+ 1628              	.LASF53:
+ 1629 00a4 6572726F 		.ascii	"error_\000"
+ 1629      725F00
+ 1630              	.LASF66:
+ 1631 00ab 5F5A4E31 		.ascii	"_ZN13PIDcontroller14calculateErrorEf\000"
+ 1631      33504944 
+ 1631      636F6E74 
+ 1631      726F6C6C 
+ 1631      65723134 
+ 1632              	.LASF86:
+ 1633 00d0 53504953 		.ascii	"SPIS_1_Start\000"
+ 1633      5F315F53 
+ 1633      74617274 
+ 1633      00
+ 1634              	.LASF35:
+ 1635 00dd 73657452 		.ascii	"setRightPWM\000"
+ 1635      69676874 
+ 1635      50574D00 
+ 1636              	.LASF94:
+ 1637 00e9 6D61696E 		.ascii	"main\000"
+ 1637      00
+ 1638              	.LASF56:
+ 1639 00ee 64657269 		.ascii	"derivative_\000"
+ 1639      76617469 
+ 1639      76655F00 
+ 1640              	.LASF88:
+ 1641 00fa 474E5520 		.ascii	"GNU C++14 5.4.1 20160609 (release) [ARM/embedded-5-"
+ 1641      432B2B31 
+ 1641      3420352E 
+ 1641      342E3120 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 32
+
+
+ 1641      32303136 
+ 1642 012d 6272616E 		.ascii	"branch revision 237715] -mcpu=cortex-m3 -mthumb -g "
+ 1642      63682072 
+ 1642      65766973 
+ 1642      696F6E20 
+ 1642      32333737 
+ 1643 0160 2D4F6720 		.ascii	"-Og -std=c++1z -ffunction-sections -ffat-lto-object"
+ 1643      2D737464 
+ 1643      3D632B2B 
+ 1643      317A202D 
+ 1643      6666756E 
+ 1644 0193 73202D66 		.ascii	"s -fno-exceptions\000"
+ 1644      6E6F2D65 
+ 1644      78636570 
+ 1644      74696F6E 
+ 1644      7300
+ 1645              	.LASF42:
+ 1646 01a5 5F5A4E4B 		.ascii	"_ZNK15MotorController6getDirEv\000"
+ 1646      31354D6F 
+ 1646      746F7243 
+ 1646      6F6E7472 
+ 1646      6F6C6C65 
+ 1647              	.LASF27:
+ 1648 01c4 5F5A4E31 		.ascii	"_ZN15MotorController9GoForwardEi\000"
+ 1648      354D6F74 
+ 1648      6F72436F 
+ 1648      6E74726F 
+ 1648      6C6C6572 
+ 1649              	.LASF32:
+ 1650 01e5 5F5A4E31 		.ascii	"_ZN15MotorController10setLeftPWMEi\000"
+ 1650      354D6F74 
+ 1650      6F72436F 
+ 1650      6E74726F 
+ 1650      6C6C6572 
+ 1651              	.LASF11:
+ 1652 0208 75696E74 		.ascii	"uint8_t\000"
+ 1652      385F7400 
+ 1653              	.LASF67:
+ 1654 0210 63616C63 		.ascii	"calculateControl\000"
+ 1654      756C6174 
+ 1654      65436F6E 
+ 1654      74726F6C 
+ 1654      00
+ 1655              	.LASF57:
+ 1656 0221 636F6E74 		.ascii	"control_\000"
+ 1656      726F6C5F 
+ 1656      00
+ 1657              	.LASF70:
+ 1658 022a 5F5A3139 		.ascii	"_Z19ISR_UART_rx_handlerv\000"
+ 1658      4953525F 
+ 1658      55415254 
+ 1658      5F72785F 
+ 1658      68616E64 
+ 1659              	.LASF63:
+ 1660 0243 67657447 		.ascii	"getGoal\000"
+ 1660      6F616C00 
+ 1661              	.LASF61:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 33
+
+
+ 1662 024b 73657447 		.ascii	"setGoal\000"
+ 1662      6F616C00 
+ 1663              	.LASF43:
+ 1664 0253 626F6F6C 		.ascii	"bool\000"
+ 1664      00
+ 1665              	.LASF84:
+ 1666 0258 55415254 		.ascii	"UART_1_Start\000"
+ 1666      5F315F53 
+ 1666      74617274 
+ 1666      00
+ 1667              	.LASF13:
+ 1668 0265 666C6F61 		.ascii	"float\000"
+ 1668      7400
+ 1669              	.LASF8:
+ 1670 026b 6C6F6E67 		.ascii	"long long int\000"
+ 1670      206C6F6E 
+ 1670      6720696E 
+ 1670      7400
+ 1671              	.LASF78:
+ 1672 0279 48616E64 		.ascii	"Handler\000"
+ 1672      6C657200 
+ 1673              	.LASF49:
+ 1674 0281 55415254 		.ascii	"UARTreaddata\000"
+ 1674      72656164 
+ 1674      64617461 
+ 1674      00
+ 1675              	.LASF21:
+ 1676 028e 4D6F746F 		.ascii	"MotorController\000"
+ 1676      72436F6E 
+ 1676      74726F6C 
+ 1676      6C657200 
+ 1677              	.LASF50:
+ 1678 029e 5F5A4E31 		.ascii	"_ZN14RpiUartHandler12UARTreaddataEP15MotorControlle"
+ 1678      34527069 
+ 1678      55617274 
+ 1678      48616E64 
+ 1678      6C657231 
+ 1679 02d1 7200     		.ascii	"r\000"
+ 1680              	.LASF34:
+ 1681 02d3 5F5A4E4B 		.ascii	"_ZNK15MotorController10getLeftPWMEv\000"
+ 1681      31354D6F 
+ 1681      746F7243 
+ 1681      6F6E7472 
+ 1681      6F6C6C65 
+ 1682              	.LASF4:
+ 1683 02f7 5F5F7569 		.ascii	"__uint8_t\000"
+ 1683      6E74385F 
+ 1683      7400
+ 1684              	.LASF92:
+ 1685 0301 68616E64 		.ascii	"handleByteReceived\000"
+ 1685      6C654279 
+ 1685      74655265 
+ 1685      63656976 
+ 1685      656400
+ 1686              	.LASF36:
+ 1687 0314 5F5A4E31 		.ascii	"_ZN15MotorController11setRightPWMEi\000"
+ 1687      354D6F74 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 34
+
+
+ 1687      6F72436F 
+ 1687      6E74726F 
+ 1687      6C6C6572 
+ 1688              	.LASF71:
+ 1689 0338 5F5F696E 		.ascii	"__initialize_p\000"
+ 1689      69746961 
+ 1689      6C697A65 
+ 1689      5F7000
+ 1690              	.LASF85:
+ 1691 0347 6973725F 		.ascii	"isr_uart_rx_StartEx\000"
+ 1691      75617274 
+ 1691      5F72785F 
+ 1691      53746172 
+ 1691      74457800 
+ 1692              	.LASF40:
+ 1693 035b 5F5A4E31 		.ascii	"_ZN15MotorController6setDirEb\000"
+ 1693      354D6F74 
+ 1693      6F72436F 
+ 1693      6E74726F 
+ 1693      6C6C6572 
+ 1694              	.LASF16:
+ 1695 0379 6C6F6E67 		.ascii	"long double\000"
+ 1695      20646F75 
+ 1695      626C6500 
+ 1696              	.LASF79:
+ 1697 0385 4D6F746F 		.ascii	"Motor\000"
+ 1697      7200
+ 1698              	.LASF1:
+ 1699 038b 756E7369 		.ascii	"unsigned char\000"
+ 1699      676E6564 
+ 1699      20636861 
+ 1699      7200
+ 1700              	.LASF51:
+ 1701 0399 50494463 		.ascii	"PIDcontroller\000"
+ 1701      6F6E7472 
+ 1701      6F6C6C65 
+ 1701      7200
+ 1702              	.LASF23:
+ 1703 03a7 5F5A4E31 		.ascii	"_ZN15MotorControllerC4Ev\000"
+ 1703      354D6F74 
+ 1703      6F72436F 
+ 1703      6E74726F 
+ 1703      6C6C6572 
+ 1704              	.LASF9:
+ 1705 03c0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1705      206C6F6E 
+ 1705      6720756E 
+ 1705      7369676E 
+ 1705      65642069 
+ 1706              	.LASF90:
+ 1707 03d7 433A5C55 		.ascii	"C:\\Users\\jespe\\Desktop\\Projekt\\Projekt_PSoC_Ko"
+ 1707      73657273 
+ 1707      5C6A6573 
+ 1707      70655C44 
+ 1707      65736B74 
+ 1708 0405 64655C50 		.ascii	"de\\Projekt_PSoC_Kode.cydsn\000"
+ 1708      726F6A65 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 35
+
+
+ 1708      6B745F50 
+ 1708      536F435F 
+ 1708      4B6F6465 
+ 1709              	.LASF10:
+ 1710 0420 756E7369 		.ascii	"unsigned int\000"
+ 1710      676E6564 
+ 1710      20696E74 
+ 1710      00
+ 1711              	.LASF95:
+ 1712 042d 5F5F6165 		.ascii	"__aeabi_atexit\000"
+ 1712      6162695F 
+ 1712      61746578 
+ 1712      697400
+ 1713              	.LASF55:
+ 1714 043c 696E7465 		.ascii	"integral_\000"
+ 1714      6772616C 
+ 1714      5F00
+ 1715              	.LASF68:
+ 1716 0446 5F5A4E31 		.ascii	"_ZN13PIDcontroller16calculateControlEP15MotorContro"
+ 1716      33504944 
+ 1716      636F6E74 
+ 1716      726F6C6C 
+ 1716      65723136 
+ 1717 0479 6C6C6572 		.ascii	"ller\000"
+ 1717      00
+ 1718              	.LASF3:
+ 1719 047e 73686F72 		.ascii	"short unsigned int\000"
+ 1719      7420756E 
+ 1719      7369676E 
+ 1719      65642069 
+ 1719      6E7400
+ 1720              	.LASF0:
+ 1721 0491 7369676E 		.ascii	"signed char\000"
+ 1721      65642063 
+ 1721      68617200 
+ 1722              	.LASF39:
+ 1723 049d 73657444 		.ascii	"setDir\000"
+ 1723      697200
+ 1724              	.LASF58:
+ 1725 04a4 5F5A4E31 		.ascii	"_ZN13PIDcontrollerC4Effff\000"
+ 1725      33504944 
+ 1725      636F6E74 
+ 1725      726F6C6C 
+ 1725      65724334 
+ 1726              	.LASF46:
+ 1727 04be 5F5A4E31 		.ascii	"_ZN14RpiUartHandlerC4Ev\000"
+ 1727      34527069 
+ 1727      55617274 
+ 1727      48616E64 
+ 1727      6C657243 
+ 1728              	.LASF15:
+ 1729 04d6 63686172 		.ascii	"char\000"
+ 1729      00
+ 1730              	.LASF33:
+ 1731 04db 6765744C 		.ascii	"getLeftPWM\000"
+ 1731      65667450 
+ 1731      574D00
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 36
+
+
+ 1732              	.LASF6:
+ 1733 04e6 6C6F6E67 		.ascii	"long int\000"
+ 1733      20696E74 
+ 1733      00
+ 1734              	.LASF12:
+ 1735 04ef 696E7433 		.ascii	"int32_t\000"
+ 1735      325F7400 
+ 1736              	.LASF93:
+ 1737 04f7 5F5A4E31 		.ascii	"_ZN14RpiUartHandler18handleByteReceivedEPhP15MotorC"
+ 1737      34527069 
+ 1737      55617274 
+ 1737      48616E64 
+ 1737      6C657231 
+ 1738 052a 6F6E7472 		.ascii	"ontroller\000"
+ 1738      6F6C6C65 
+ 1738      7200
+ 1739              	.LASF45:
+ 1740 0534 44617461 		.ascii	"DataLen\000"
+ 1740      4C656E00 
+ 1741              	.LASF37:
+ 1742 053c 67657452 		.ascii	"getRightPWM\000"
+ 1742      69676874 
+ 1742      50574D00 
+ 1743              	.LASF75:
+ 1744 0548 5F5F7374 		.ascii	"__static_initialization_and_destruction_0\000"
+ 1744      61746963 
+ 1744      5F696E69 
+ 1744      7469616C 
+ 1744      697A6174 
+ 1745              	.LASF72:
+ 1746 0572 5F5F7072 		.ascii	"__priority\000"
+ 1746      696F7269 
+ 1746      747900
+ 1747              	.LASF41:
+ 1748 057d 67657444 		.ascii	"getDir\000"
+ 1748      697200
+ 1749              	.LASF19:
+ 1750 0584 52696768 		.ascii	"Rightpwm_\000"
+ 1750      7470776D 
+ 1750      5F00
+ 1751              	.LASF25:
+ 1752 058e 476F466F 		.ascii	"GoForward\000"
+ 1752      72776172 
+ 1752      6400
+ 1753              	.LASF89:
+ 1754 0598 6D61696E 		.ascii	"main.c\000"
+ 1754      2E6300
+ 1755              	.LASF28:
+ 1756 059f 5F5A4E31 		.ascii	"_ZN15MotorController10GoBackwardEi\000"
+ 1756      354D6F74 
+ 1756      6F72436F 
+ 1756      6E74726F 
+ 1756      6C6C6572 
+ 1757              	.LASF7:
+ 1758 05c2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1758      20756E73 
+ 1758      69676E65 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 37
+
+
+ 1758      6420696E 
+ 1758      7400
+ 1759              	.LASF20:
+ 1760 05d4 64697265 		.ascii	"direction_\000"
+ 1760      6374696F 
+ 1760      6E5F00
+ 1761              	.LASF14:
+ 1762 05df 646F7562 		.ascii	"double\000"
+ 1762      6C6500
+ 1763              	.LASF87:
+ 1764 05e6 55415254 		.ascii	"UART_1_PutString\000"
+ 1764      5F315F50 
+ 1764      75745374 
+ 1764      72696E67 
+ 1764      00
+ 1765              	.LASF29:
+ 1766 05f7 5475726E 		.ascii	"Turn\000"
+ 1766      00
+ 1767              	.LASF24:
+ 1768 05fc 5F5A4E31 		.ascii	"_ZN15MotorControllerD4Ev\000"
+ 1768      354D6F74 
+ 1768      6F72436F 
+ 1768      6E74726F 
+ 1768      6C6C6572 
+ 1769              	.LASF64:
+ 1770 0615 5F5A4E4B 		.ascii	"_ZNK13PIDcontroller7getGoalEv\000"
+ 1770      31335049 
+ 1770      44636F6E 
+ 1770      74726F6C 
+ 1770      6C657237 
+ 1771              	.LASF74:
+ 1772 0633 5F5A3138 		.ascii	"_Z18ISR_SPI_rx_handlerv\000"
+ 1772      4953525F 
+ 1772      5350495F 
+ 1772      72785F68 
+ 1772      616E646C 
+ 1773              	.LASF38:
+ 1774 064b 5F5A4E4B 		.ascii	"_ZNK15MotorController11getRightPWMEv\000"
+ 1774      31354D6F 
+ 1774      746F7243 
+ 1774      6F6E7472 
+ 1774      6F6C6C65 
+ 1775              	.LASF18:
+ 1776 0670 4C656674 		.ascii	"Leftpwm_\000"
+ 1776      70776D5F 
+ 1776      00
+ 1777              	.LASF80:
+ 1778 0679 50494463 		.ascii	"PIDcontrol\000"
+ 1778      6F6E7472 
+ 1778      6F6C00
+ 1779              	.LASF81:
+ 1780 0684 5F5F6473 		.ascii	"__dso_handle\000"
+ 1780      6F5F6861 
+ 1780      6E646C65 
+ 1780      00
+ 1781              	.LASF5:
+ 1782 0691 5F5F696E 		.ascii	"__int32_t\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 38
+
+
+ 1782      7433325F 
+ 1782      7400
+ 1783              	.LASF26:
+ 1784 069b 476F4261 		.ascii	"GoBackward\000"
+ 1784      636B7761 
+ 1784      726400
+ 1785              	.LASF73:
+ 1786 06a6 4953525F 		.ascii	"ISR_SPI_rx_handler\000"
+ 1786      5350495F 
+ 1786      72785F68 
+ 1786      616E646C 
+ 1786      657200
+ 1787              	.LASF22:
+ 1788 06b9 7E4D6F74 		.ascii	"~MotorController\000"
+ 1788      6F72436F 
+ 1788      6E74726F 
+ 1788      6C6C6572 
+ 1788      00
+ 1789              	.LASF60:
+ 1790 06ca 5F5A4E31 		.ascii	"_ZN13PIDcontrollerD4Ev\000"
+ 1790      33504944 
+ 1790      636F6E74 
+ 1790      726F6C6C 
+ 1790      65724434 
+ 1791              	.LASF62:
+ 1792 06e1 5F5A4E31 		.ascii	"_ZN13PIDcontroller7setGoalEf\000"
+ 1792      33504944 
+ 1792      636F6E74 
+ 1792      726F6C6C 
+ 1792      65723773 
+ 1793              	.LASF48:
+ 1794 06fe 5F5A4E31 		.ascii	"_ZN14RpiUartHandlerD4Ev\000"
+ 1794      34527069 
+ 1794      55617274 
+ 1794      48616E64 
+ 1794      6C657244 
+ 1795              	.LASF52:
+ 1796 0716 676F616C 		.ascii	"goal_\000"
+ 1796      5F00
+ 1797              	.LASF77:
+ 1798 071c 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1798      52784275 
+ 1798      66666572 
+ 1798      00
+ 1799              	.LASF44:
+ 1800 0729 52706955 		.ascii	"RpiUartHandler\000"
+ 1800      61727448 
+ 1800      616E646C 
+ 1800      657200
+ 1801              	.LASF65:
+ 1802 0738 63616C63 		.ascii	"calculateError\000"
+ 1802      756C6174 
+ 1802      65457272 
+ 1802      6F7200
+ 1803              	.LASF76:
+ 1804 0747 5F474C4F 		.ascii	"_GLOBAL__sub_I_Handler\000"
+ 1804      42414C5F 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccfmZOSk.s 			page 39
+
+
+ 1804      5F737562 
+ 1804      5F495F48 
+ 1804      616E646C 
+ 1805              		.hidden	__dso_handle
+ 1806              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Projekt_PSoC_Kode\Projekt_PSoC_Kode\TopDesign">
+<ExpandedNodeIds>
+<v>Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\CE195352_PSoC_5LP_Blinking_LED01</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\TopDesign</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Pins</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Analog</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Clocks</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Interrupts</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\DMA</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\System</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Directives</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Flash Security</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\EEPROM</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\cyapicallbacks.h</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\MotorController.h</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\PIDcontroller.h</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\RpiUartHandler.h</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files\main.c</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files\MotorController.c</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files\PIDcontroller.c</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files\RpiUartHandler.c</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5</v>
+<v>Projekt_PSoC_Kode\CE195352_PSoC_5LP_Blinking_LED.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\CE195352_PSoC_5LP_Blinking_LED01</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\TopDesign</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Pins</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Analog</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Clocks</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Interrupts</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\DMA</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\System</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Directives</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Flash Security</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\EEPROM</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\cyapicallbacks.h</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\MotorController.h</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\PIDcontroller.h</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\RpiUartHandler.h</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files\main.c</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files\MotorController.c</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files\PIDcontroller.c</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Source Files\RpiUartHandler.c</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Clock_1</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Clock_2</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Clock_3</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\cy_boot</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\I2C_1</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\isr_SPI_rx</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\isr_uart_rx</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Pin_1</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Pin_2</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Pin_3</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Pin_4</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\PWM_1</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\RST_1</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\SCL_1</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\SDA_1</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\SPIS_1</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\UART_1</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\UART_1_IntClock</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\CE195352_PSoC_5LP_Blinking_LED01</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\TopDesign</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\CE195352_PSoC_5LP_Blinking_LED01</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\TopDesign</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\CE195352_PSoC_5LP_Blinking_LED01</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_3.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_SPI_rx.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_uart_rx.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorController.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\PIDcontroller.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_4.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\RpiUartHandler.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\RST_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_1_BOOT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_1_INT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_1_PM.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Projekt_PSoC_Kode.elf</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Projekt_PSoC_Kode.hex</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Projekt_PSoC_Kode.map</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.gpdsc</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.rpt</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\CE195352_PSoC_5LP_Blinking_LED01</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_3.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_SPI_rx.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_uart_rx.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorController.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\PIDcontroller.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_4.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\RpiUartHandler.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\RST_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_1_BOOT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_1_INT.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_1_PM.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\PSoC 5LP Architecture TRM</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CY8C58LP Family Datasheet</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\System Reference Guides</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\PSoC 5LP Architecture TRM</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CY8C58LP Family Datasheet</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\System Reference Guides</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="33" DocumentName=".\Projekt_PSoC_Kode.cydsn\MotorClass.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="14" DocumentName=".\Projekt_PSoC_Kode.cydsn\MotorClass.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="15" DocumentName=".\Projekt_PSoC_Kode.cydsn\MotorClass.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="29" DocumentName=".\Projekt_PSoC_Kode.cydsn\MotorClass.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+</indicators>
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded>
+<project v=".\CE195352_PSoC_5LP_Blinking_LED01.cydsn\CE195352_PSoC_5LP_Blinking_LED01.cyprj" />
+</Unloaded>
+<OpenDocs>
+<name v=".\Projekt_PSoC_Kode.cydsn\MotorController.c" />
+<name v=".\Projekt_PSoC_Kode.cydsn\main.c" />
+<name v=".\Projekt_PSoC_Kode.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Projekt_PSoC_Kode.cydsn\Generated_Source\PSoC5\PWM_1.c" />
+<name v=".\Projekt_PSoC_Kode.cydsn\Projekt_PSoC_Kode.cydwr" />
+<name v=".\Projekt_PSoC_Kode.cydsn\PIDcontroller.c" />
+<name v=".\Projekt_PSoC_Kode.cydsn\MotorController.h" />
+<name v=".\Projekt_PSoC_Kode.cydsn\RpiUartHandler.c" />
+<name v=".\Projekt_PSoC_Kode.cydsn\PIDcontroller.h" />
+<name v=".\Projekt_PSoC_Kode.cydsn\RpiUartHandler.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="702, 697" SelectedTabbedMdiWindow="6b271971-d302-4981-8296-000dce30f6ea"><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\MotorController.c" Guid="6013d713-8915-4cea-9117-37d4b720cab6" /><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\main.c" Guid="6b271971-d302-4981-8296-000dce30f6ea" /><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\TopDesign\TopDesign.cysch" Guid="363d79e3-45af-4997-bf68-baecdc06e3bc" /><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Generated_Source\PSoC5\PWM_1.c" Guid="ff697c5f-819f-42d4-b61a-9d8801f23f28" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4b092cf8-2597-4e9e-899e-42c869ca2181" /><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Projekt_PSoC_Kode.cydwr" Guid="4c881a7e-83bd-4d04-a6bb-4411587454b4" /></TabbedMdiContainer><TabbedMdiContainer Size="633, 697" SelectedTabbedMdiWindow="11220c74-0c51-43a0-aeb3-8577d15d857e"><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\PIDcontroller.c" Guid="f8524a7c-0304-418d-9676-2636ec755918" /><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\MotorController.h" Guid="498f00a0-ebc0-4b3d-94b8-237b9997896d" /><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\RpiUartHandler.c" Guid="11220c74-0c51-43a0-aeb3-8577d15d857e" /><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\PIDcontroller.h" Guid="412a0758-9d3c-4086-9e31-598115de7bfa" /><DocumentWindow Key="C:\Users\jespe\Desktop\Projekt\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\RpiUartHandler.h" Guid="a0296c23-0426-431e-a1f4-ced644b1e8b7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
