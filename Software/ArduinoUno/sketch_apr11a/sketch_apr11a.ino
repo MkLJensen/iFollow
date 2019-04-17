@@ -165,7 +165,7 @@ void setup() {
 void loop() { 
   read_three_ranges(); // Update global array sensorData
   // MISO not connected - dont care
-  for(int i=0;i<7;i++) // Send byte of sensorData[0<=i<=6]
+  for(int i=0;i<7;i++){ // Send byte of sensorData[0<=i<=6]
   SPI.beginTransaction(slaveSettings);
   digitalWrite (slavePin, LOW); // Set slave select low to indicate start of transfer
   SPI.transfer(sensorData[i]);
