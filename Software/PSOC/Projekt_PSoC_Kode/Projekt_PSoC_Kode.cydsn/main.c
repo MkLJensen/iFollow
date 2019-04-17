@@ -22,10 +22,14 @@ extern "C"
 #include "PIDcontroller.h"
 #include "LED.h"
 #include "Switches.h"
+#include "ToF.h"
 
+CY_ISR_PROTO(isr_handler);
 CY_ISR_PROTO(PowerSwitch_Handler);
 CY_ISR_PROTO(FollowSwitch_Handler);
 
+uint8_t byteR = 0;
+ToF obj;
 RpiUart UARTcontroller;
 MotorController Motor;
 Switches Switchcontroller;
@@ -35,6 +39,17 @@ enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4};
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */ 
+    
+    /*Start kom med ToF
+    
+    SPIS_Start();
+    isr_1_StartEx(isr_handler); */
+    
+    /*Stop kom med ToF
+    
+    SPIS_Stop();
+    isr_1_StopEx(isr_handler); */
+    
     Power_isr_StartEx(PowerSwitch_Handler);
     Follow_isr_StartEx(FollowSwitch_Handler);
     //isr_SPI_rx_StartEx(ISR_SPI_rx_handler);
@@ -116,6 +131,12 @@ int main(void)
         }
     }
 }
+CY_ISR(isr_handler)
+{
+    byteR = SPIS_ReadRxData();                                          // Gemmer aflæsning af RX-buffer
+    obj.handleByte(byteR);
+}
+
 
 CY_ISR(PowerSwitch_Handler)
 {

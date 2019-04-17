@@ -43,7 +43,20 @@
 #include "Power_isr.h"
 #include "Follow_isr.h"
 #include "Clock_4.h"
+#include "SPIS.h"
+#include "SPIS_PVT.h"
+#include "miso_aliases.h"
+#include "miso.h"
+#include "mosi_aliases.h"
+#include "mosi.h"
+#include "sclk_aliases.h"
+#include "sclk.h"
+#include "isr_1.h"
+#include "ss_aliases.h"
+#include "ss.h"
 #include "UART_1_IntClock.h"
+#include "SPIS_IntClock.h"
+#include "cy_em_eeprom.h"
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"
 #include "CyFlash.h"
@@ -52,7 +65,6 @@
 #include "cyPm.h"
 #include "CySpc.h"
 #include "cytypes.h"
-#include "cy_em_eeprom.h"
 
 /*[]*/
 
