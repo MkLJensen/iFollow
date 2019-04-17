@@ -27,11 +27,17 @@ void LED::turnOnLed(char Color)
 {
     if (Color == 'g' || Color == 'G')
     {
-        LED_PWM_WriteCompare2(100);
+        if (LED_PWM_ReadCompare2() != 255)
+        {
+            LED_PWM_WriteCompare2(255);
+        }
     }
     else if(Color == 'r' || Color == 'R')
     {
-        LED_PWM_WriteCompare1(100);
+        if (LED_PWM_ReadCompare1() != 255)
+        {
+            LED_PWM_WriteCompare1(255); 
+        }
     }
 }
 
@@ -51,10 +57,10 @@ void LED::blinkLed(char Color)
 {
     if (Color == 'g' || Color == 'G')
     {
-        LED_PWM_WriteCompare2(50);
+        LED_PWM_WriteCompare2(122);
     }
     else if(Color == 'r' || Color == 'R')
     {
-        LED_PWM_WriteCompare1(50);        
+        LED_PWM_WriteCompare1(122);        
     }
 }

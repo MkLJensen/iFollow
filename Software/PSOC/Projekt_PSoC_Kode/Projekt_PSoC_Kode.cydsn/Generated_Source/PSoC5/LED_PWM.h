@@ -226,7 +226,7 @@ void LED_PWM_RestoreConfig(void) ;
 /***************************************
 *         Initialization Values
 **************************************/
-#define LED_PWM_INIT_PERIOD_VALUE          (100u)
+#define LED_PWM_INIT_PERIOD_VALUE          (255u)
 #define LED_PWM_INIT_COMPARE_VALUE1        (0u)
 #define LED_PWM_INIT_COMPARE_VALUE2        (0u)
 #define LED_PWM_INIT_INTERRUPTS_MODE       (uint8)(((uint8)(0u <<   \

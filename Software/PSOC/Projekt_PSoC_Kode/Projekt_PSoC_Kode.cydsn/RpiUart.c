@@ -16,7 +16,7 @@
 
 RpiUart::RpiUart()
 {
-    UART_1_Start();
+    
 }
 
 RpiUart::~RpiUart()
@@ -33,7 +33,7 @@ void RpiUart::TransmitData(uint8_t data[], uint8_t size)
     
 }
 
-void RpiUart::ReadData(MotorController * motorPtr)
+uint8_t RpiUart::ReadData(MotorController * motorPtr)
 {
     uint8_t DataLen = UART_1_GetRxBufferSize();
      
@@ -44,52 +44,83 @@ void RpiUart::ReadData(MotorController * motorPtr)
         {
             byteReceived[i] = UART_1_ReadRxData();
         }
-        handleByteReceived(byteReceived, motorPtr);
+        return handleByteReceived(byteReceived, motorPtr);
     }
+    return 0;
+    
 }
 
-void RpiUart::handleByteReceived(uint8_t byteReceived[], MotorController * MotorPtr)
+uint8_t RpiUart::handleByteReceived(uint8_t byteReceived[], MotorController * MotorPtr)
 {
     switch(byteReceived[0])
     {
         case 'f' :
         {
-            MotorPtr->GoForward(byteReceived[1]);
-            UART_1_PutString(" Going forward    ");
-            if (byteReceived[1] == 97)
+            if (ControlModeActive == true)
             {
-                 UART_1_PutChar(byteReceived[1]);
+                MotorPtr->GoForward(byteReceived[1]);
+                UART_1_PutString(" Going forward    ");
+                if (byteReceived[1] == 97)
+                {
+                     UART_1_PutChar(byteReceived[1]);
+                }
             }
+            return 0;
         }
         break;
         case 'b' :
         {
-            MotorPtr->GoBackward(byteReceived[1]);
-            UART_1_PutString("Going backward");
-            UART_1_PutChar(byteReceived[1]);
+            if (ControlModeActive == true)
+            {
+                MotorPtr->GoBackward(byteReceived[1]);
+                UART_1_PutString("Going backward");
+                UART_1_PutChar(byteReceived[1]);
+            }
+            return 0;
         }
         break;
         case 'l' :
         {
-            MotorPtr->Turn(byteReceived[1], 'l');
-            CyDelay(500);
-            MotorPtr->GoForward(0);
-            UART_1_PutString("Going left");
-            UART_1_PutChar(byteReceived[1]);
+            if (ControlModeActive == true)
+            {
+                MotorPtr->Turn(byteReceived[1], 'l');
+                CyDelay(500);
+                MotorPtr->GoForward(0);
+                UART_1_PutString("Going left");
+                UART_1_PutChar(byteReceived[1]);
+            }
+            return 0;
         }
         break;
         case 'r' :
         {
-            MotorPtr->Turn(byteReceived[1], 'r');
-            CyDelay(500);
-            MotorPtr->GoForward(0);
-            UART_1_PutString("Going right");
-            UART_1_PutChar(byteReceived[1]);
+            if (ControlModeActive == true)
+            {
+                MotorPtr->Turn(byteReceived[1], 'r');
+                CyDelay(500);
+                MotorPtr->GoForward(0);
+                UART_1_PutString("Going right");
+                UART_1_PutChar(byteReceived[1]);
+            }
+            return 0;
         }
         break;
+        case 'o' :
+        {
+            ControlModeActive = true;
+            return 'o';
+        }
+        break;
+         case 'c' :
+        {
+            ControlModeActive = false;
+            MotorPtr->GoForward(0);
+            return 'c';
+        }
+        break;        
         default :
         {
-            
+            return 0;
         }
         break;
     }

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 1
 
 
    1              		.syntax unified
@@ -27,2388 +27,2003 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 1
   24              		.section	.cyconfigecc,"a",%progbits
   25              		.align	2
   26              		.type	cy_meta_configecc, %object
-  27              		.size	cy_meta_configecc, 1812
+  27              		.size	cy_meta_configecc, 1448
   28              	cy_meta_configecc:
-  29 0000 08       		.byte	8
+  29 0000 06       		.byte	6
   30 0001 52       		.byte	82
   31 0002 00       		.byte	0
   32 0003 40       		.byte	64
-  33 0004 04       		.byte	4
+  33 0004 02       		.byte	2
   34 0005 64       		.byte	100
   35 0006 00       		.byte	0
   36 0007 40       		.byte	64
-  37 0008 04       		.byte	4
+  37 0008 03       		.byte	3
   38 0009 65       		.byte	101
   39 000a 00       		.byte	0
   40 000b 40       		.byte	64
-  41 000c 55       		.byte	85
-  42 000d 02       		.byte	2
+  41 000c 01       		.byte	1
+  42 000d 03       		.byte	3
   43 000e 01       		.byte	1
   44 000f 40       		.byte	64
-  45 0010 3A       		.byte	58
-  46 0011 03       		.byte	3
+  45 0010 01       		.byte	1
+  46 0011 05       		.byte	5
   47 0012 01       		.byte	1
   48 0013 40       		.byte	64
-  49 0014 50       		.byte	80
-  50 0015 04       		.byte	4
+  49 0014 57       		.byte	87
+  50 0015 08       		.byte	8
   51 0016 01       		.byte	1
   52 0017 40       		.byte	64
-  53 0018 47       		.byte	71
-  54 0019 05       		.byte	5
+  53 0018 43       		.byte	67
+  54 0019 09       		.byte	9
   55 001a 01       		.byte	1
   56 001b 40       		.byte	64
-  57 001c 49       		.byte	73
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 2
+  57 001c 45       		.byte	69
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 2
 
 
-  58 001d 06       		.byte	6
+  58 001d 0A       		.byte	10
   59 001e 01       		.byte	1
   60 001f 40       		.byte	64
-  61 0020 41       		.byte	65
-  62 0021 07       		.byte	7
+  61 0020 32       		.byte	50
+  62 0021 0B       		.byte	11
   63 0022 01       		.byte	1
   64 0023 40       		.byte	64
   65 0024 01       		.byte	1
-  66 0025 0B       		.byte	11
+  66 0025 0D       		.byte	13
   67 0026 01       		.byte	1
   68 0027 40       		.byte	64
-  69 0028 02       		.byte	2
-  70 0029 0D       		.byte	13
+  69 0028 01       		.byte	1
+  70 0029 15       		.byte	21
   71 002a 01       		.byte	1
   72 002b 40       		.byte	64
   73 002c 4E       		.byte	78
-  74 002d 14       		.byte	20
+  74 002d 18       		.byte	24
   75 002e 01       		.byte	1
   76 002f 40       		.byte	64
-  77 0030 47       		.byte	71
-  78 0031 15       		.byte	21
+  77 0030 48       		.byte	72
+  78 0031 19       		.byte	25
   79 0032 01       		.byte	1
   80 0033 40       		.byte	64
-  81 0034 4F       		.byte	79
-  82 0035 16       		.byte	22
+  81 0034 5A       		.byte	90
+  82 0035 1A       		.byte	26
   83 0036 01       		.byte	1
   84 0037 40       		.byte	64
-  85 0038 3D       		.byte	61
-  86 0039 17       		.byte	23
+  85 0038 46       		.byte	70
+  86 0039 1B       		.byte	27
   87 003a 01       		.byte	1
   88 003b 40       		.byte	64
-  89 003c 01       		.byte	1
-  90 003d 19       		.byte	25
+  89 003c 04       		.byte	4
+  90 003d 40       		.byte	64
   91 003e 01       		.byte	1
   92 003f 40       		.byte	64
-  93 0040 03       		.byte	3
-  94 0041 1B       		.byte	27
+  93 0040 05       		.byte	5
+  94 0041 41       		.byte	65
   95 0042 01       		.byte	1
   96 0043 40       		.byte	64
-  97 0044 07       		.byte	7
-  98 0045 40       		.byte	64
+  97 0044 04       		.byte	4
+  98 0045 42       		.byte	66
   99 0046 01       		.byte	1
  100 0047 40       		.byte	64
- 101 0048 0A       		.byte	10
- 102 0049 41       		.byte	65
+ 101 0048 01       		.byte	1
+ 102 0049 43       		.byte	67
  103 004a 01       		.byte	1
  104 004b 40       		.byte	64
- 105 004c 0B       		.byte	11
- 106 004d 42       		.byte	66
+ 105 004c 06       		.byte	6
+ 106 004d 45       		.byte	69
  107 004e 01       		.byte	1
  108 004f 40       		.byte	64
- 109 0050 04       		.byte	4
- 110 0051 43       		.byte	67
+ 109 0050 08       		.byte	8
+ 110 0051 46       		.byte	70
  111 0052 01       		.byte	1
  112 0053 40       		.byte	64
- 113 0054 02       		.byte	2
- 114 0055 44       		.byte	68
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 3
+ 113 0054 04       		.byte	4
+ 114 0055 47       		.byte	71
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 3
 
 
  115 0056 01       		.byte	1
  116 0057 40       		.byte	64
- 117 0058 0D       		.byte	13
- 118 0059 45       		.byte	69
+ 117 0058 01       		.byte	1
+ 118 0059 48       		.byte	72
  119 005a 01       		.byte	1
  120 005b 40       		.byte	64
- 121 005c 02       		.byte	2
- 122 005d 46       		.byte	70
+ 121 005c 03       		.byte	3
+ 122 005d 49       		.byte	73
  123 005e 01       		.byte	1
  124 005f 40       		.byte	64
- 125 0060 01       		.byte	1
- 126 0061 47       		.byte	71
+ 125 0060 07       		.byte	7
+ 126 0061 4C       		.byte	76
  127 0062 01       		.byte	1
  128 0063 40       		.byte	64
- 129 0064 04       		.byte	4
- 130 0065 48       		.byte	72
+ 129 0064 07       		.byte	7
+ 130 0065 4D       		.byte	77
  131 0066 01       		.byte	1
  132 0067 40       		.byte	64
- 133 0068 03       		.byte	3
- 134 0069 49       		.byte	73
+ 133 0068 04       		.byte	4
+ 134 0069 50       		.byte	80
  135 006a 01       		.byte	1
  136 006b 40       		.byte	64
- 137 006c 06       		.byte	6
- 138 006d 4C       		.byte	76
+ 137 006c 01       		.byte	1
+ 138 006d 51       		.byte	81
  139 006e 01       		.byte	1
  140 006f 40       		.byte	64
- 141 0070 09       		.byte	9
- 142 0071 4D       		.byte	77
- 143 0072 01       		.byte	1
+ 141 0070 08       		.byte	8
+ 142 0071 C0       		.byte	-64
+ 143 0072 09       		.byte	9
  144 0073 40       		.byte	64
- 145 0074 05       		.byte	5
- 146 0075 50       		.byte	80
- 147 0076 01       		.byte	1
- 148 0077 40       		.byte	64
- 149 0078 02       		.byte	2
- 150 0079 51       		.byte	81
- 151 007a 01       		.byte	1
+ 145 0074 10       		.byte	16
+ 146 0075 20       		.byte	32
+ 147 0076 11       		.byte	17
+ 148 0077 30       		.byte	48
+ 149 0078 61       		.byte	97
+ 150 0079 80       		.byte	-128
+ 151 007a 64       		.byte	100
  152 007b 40       		.byte	64
- 153 007c 00       		.byte	0
- 154 007d 01       		.byte	1
- 155 007e 04       		.byte	4
- 156 007f 0E       		.byte	14
- 157 0080 08       		.byte	8
- 158 0081 40       		.byte	64
- 159 0082 09       		.byte	9
- 160 0083 40       		.byte	64
- 161 0084 10       		.byte	16
- 162 0085 02       		.byte	2
- 163 0086 11       		.byte	17
- 164 0087 12       		.byte	18
- 165 0088 60       		.byte	96
- 166 0089 80       		.byte	-128
- 167 008a 64       		.byte	100
- 168 008b 40       		.byte	64
- 169 008c 82       		.byte	-126
- 170 008d 0F       		.byte	15
- 171 008e 84       		.byte	-124
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 4
+ 153 007c 89       		.byte	-119
+ 154 007d 0F       		.byte	15
+ 155 007e 8B       		.byte	-117
+ 156 007f 0F       		.byte	15
+ 157 0080 89       		.byte	-119
+ 158 0081 72       		.byte	114
+ 159 0082 8A       		.byte	-118
+ 160 0083 38       		.byte	56
+ 161 0084 8B       		.byte	-117
+ 162 0085 0F       		.byte	15
+ 163 0086 E2       		.byte	-30
+ 164 0087 02       		.byte	2
+ 165 0088 E6       		.byte	-26
+ 166 0089 08       		.byte	8
+ 167 008a 07       		.byte	7
+ 168 008b 04       		.byte	4
+ 169 008c 08       		.byte	8
+ 170 008d 08       		.byte	8
+ 171 008e 14       		.byte	20
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 4
 
 
- 172 008f 07       		.byte	7
- 173 0090 85       		.byte	-123
- 174 0091 47       		.byte	71
- 175 0092 86       		.byte	-122
- 176 0093 0F       		.byte	15
- 177 0094 84       		.byte	-124
- 178 0095 0F       		.byte	15
- 179 0096 85       		.byte	-123
- 180 0097 38       		.byte	56
- 181 0098 86       		.byte	-122
- 182 0099 72       		.byte	114
- 183 009a 87       		.byte	-121
- 184 009b 78       		.byte	120
- 185 009c 04       		.byte	4
- 186 009d 0C       		.byte	12
- 187 009e 06       		.byte	6
- 188 009f 71       		.byte	113
- 189 00a0 08       		.byte	8
- 190 00a1 14       		.byte	20
- 191 00a2 0B       		.byte	11
- 192 00a3 0A       		.byte	10
- 193 00a4 0C       		.byte	12
- 194 00a5 10       		.byte	16
- 195 00a6 0E       		.byte	14
- 196 00a7 40       		.byte	64
- 197 00a8 15       		.byte	21
- 198 00a9 04       		.byte	4
- 199 00aa 16       		.byte	22
- 200 00ab 20       		.byte	32
- 201 00ac 17       		.byte	23
- 202 00ad 08       		.byte	8
- 203 00ae 18       		.byte	24
- 204 00af 10       		.byte	16
- 205 00b0 19       		.byte	25
- 206 00b1 0E       		.byte	14
- 207 00b2 1A       		.byte	26
- 208 00b3 AC       		.byte	-84
- 209 00b4 1E       		.byte	30
- 210 00b5 03       		.byte	3
- 211 00b6 20       		.byte	32
- 212 00b7 09       		.byte	9
- 213 00b8 21       		.byte	33
- 214 00b9 01       		.byte	1
- 215 00ba 22       		.byte	34
- 216 00bb D0       		.byte	-48
- 217 00bc 24       		.byte	36
- 218 00bd DC       		.byte	-36
- 219 00be 25       		.byte	37
- 220 00bf 0E       		.byte	14
- 221 00c0 26       		.byte	38
- 222 00c1 22       		.byte	34
- 223 00c2 2F       		.byte	47
- 224 00c3 08       		.byte	8
- 225 00c4 33       		.byte	51
- 226 00c5 06       		.byte	6
- 227 00c6 34       		.byte	52
- 228 00c7 E0       		.byte	-32
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 5
+ 172 008f 01       		.byte	1
+ 173 0090 17       		.byte	23
+ 174 0091 06       		.byte	6
+ 175 0092 1A       		.byte	26
+ 176 0093 04       		.byte	4
+ 177 0094 1B       		.byte	27
+ 178 0095 0A       		.byte	10
+ 179 0096 1E       		.byte	30
+ 180 0097 02       		.byte	2
+ 181 0098 1F       		.byte	31
+ 182 0099 01       		.byte	1
+ 183 009a 20       		.byte	32
+ 184 009b 01       		.byte	1
+ 185 009c 26       		.byte	38
+ 186 009d 02       		.byte	2
+ 187 009e 28       		.byte	40
+ 188 009f 01       		.byte	1
+ 189 00a0 2E       		.byte	46
+ 190 00a1 04       		.byte	4
+ 191 00a2 30       		.byte	48
+ 192 00a3 08       		.byte	8
+ 193 00a4 31       		.byte	49
+ 194 00a5 04       		.byte	4
+ 195 00a6 32       		.byte	50
+ 196 00a7 02       		.byte	2
+ 197 00a8 33       		.byte	51
+ 198 00a9 08       		.byte	8
+ 199 00aa 34       		.byte	52
+ 200 00ab 04       		.byte	4
+ 201 00ac 35       		.byte	53
+ 202 00ad 01       		.byte	1
+ 203 00ae 36       		.byte	54
+ 204 00af 01       		.byte	1
+ 205 00b0 37       		.byte	55
+ 206 00b1 02       		.byte	2
+ 207 00b2 3E       		.byte	62
+ 208 00b3 15       		.byte	21
+ 209 00b4 40       		.byte	64
+ 210 00b5 30       		.byte	48
+ 211 00b6 41       		.byte	65
+ 212 00b7 04       		.byte	4
+ 213 00b8 45       		.byte	69
+ 214 00b9 D5       		.byte	-43
+ 215 00ba 47       		.byte	71
+ 216 00bb 21       		.byte	33
+ 217 00bc 48       		.byte	72
+ 218 00bd 33       		.byte	51
+ 219 00be 49       		.byte	73
+ 220 00bf FF       		.byte	-1
+ 221 00c0 4A       		.byte	74
+ 222 00c1 FF       		.byte	-1
+ 223 00c2 4B       		.byte	75
+ 224 00c3 FF       		.byte	-1
+ 225 00c4 4D       		.byte	77
+ 226 00c5 A0       		.byte	-96
+ 227 00c6 4F       		.byte	79
+ 228 00c7 04       		.byte	4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 5
 
 
- 229 00c8 35       		.byte	53
- 230 00c9 01       		.byte	1
- 231 00ca 36       		.byte	54
- 232 00cb 1F       		.byte	31
- 233 00cc 37       		.byte	55
- 234 00cd 08       		.byte	8
- 235 00ce 39       		.byte	57
- 236 00cf 08       		.byte	8
- 237 00d0 3A       		.byte	58
- 238 00d1 20       		.byte	32
- 239 00d2 3F       		.byte	63
- 240 00d3 54       		.byte	84
- 241 00d4 40       		.byte	64
- 242 00d5 02       		.byte	2
- 243 00d6 45       		.byte	69
- 244 00d7 40       		.byte	64
- 245 00d8 49       		.byte	73
- 246 00d9 FF       		.byte	-1
- 247 00da 4A       		.byte	74
- 248 00db 07       		.byte	7
- 249 00dc 4B       		.byte	75
- 250 00dd FF       		.byte	-1
- 251 00de 4C       		.byte	76
+ 229 00c8 50       		.byte	80
+ 230 00c9 18       		.byte	24
+ 231 00ca 52       		.byte	82
+ 232 00cb 80       		.byte	-128
+ 233 00cc 58       		.byte	88
+ 234 00cd 04       		.byte	4
+ 235 00ce 59       		.byte	89
+ 236 00cf 04       		.byte	4
+ 237 00d0 5A       		.byte	90
+ 238 00d1 04       		.byte	4
+ 239 00d2 5B       		.byte	91
+ 240 00d3 04       		.byte	4
+ 241 00d4 5C       		.byte	92
+ 242 00d5 01       		.byte	1
+ 243 00d6 5F       		.byte	95
+ 244 00d7 01       		.byte	1
+ 245 00d8 60       		.byte	96
+ 246 00d9 40       		.byte	64
+ 247 00da 62       		.byte	98
+ 248 00db C0       		.byte	-64
+ 249 00dc 64       		.byte	100
+ 250 00dd 40       		.byte	64
+ 251 00de 65       		.byte	101
  252 00df 40       		.byte	64
- 253 00e0 4D       		.byte	77
- 254 00e1 20       		.byte	32
- 255 00e2 4E       		.byte	78
- 256 00e3 F0       		.byte	-16
- 257 00e4 4F       		.byte	79
- 258 00e5 05       		.byte	5
- 259 00e6 50       		.byte	80
- 260 00e7 08       		.byte	8
- 261 00e8 54       		.byte	84
- 262 00e9 01       		.byte	1
- 263 00ea 58       		.byte	88
- 264 00eb 04       		.byte	4
- 265 00ec 59       		.byte	89
- 266 00ed 04       		.byte	4
- 267 00ee 5A       		.byte	90
- 268 00ef 04       		.byte	4
- 269 00f0 5B       		.byte	91
- 270 00f1 04       		.byte	4
- 271 00f2 5C       		.byte	92
- 272 00f3 01       		.byte	1
- 273 00f4 5D       		.byte	93
- 274 00f5 11       		.byte	17
- 275 00f6 5F       		.byte	95
+ 253 00e0 66       		.byte	102
+ 254 00e1 C0       		.byte	-64
+ 255 00e2 68       		.byte	104
+ 256 00e3 C0       		.byte	-64
+ 257 00e4 6A       		.byte	106
+ 258 00e5 C0       		.byte	-64
+ 259 00e6 6C       		.byte	108
+ 260 00e7 C0       		.byte	-64
+ 261 00e8 6E       		.byte	110
+ 262 00e9 C0       		.byte	-64
+ 263 00ea 85       		.byte	-123
+ 264 00eb 09       		.byte	9
+ 265 00ec 87       		.byte	-121
+ 266 00ed 06       		.byte	6
+ 267 00ee 89       		.byte	-119
+ 268 00ef 0E       		.byte	14
+ 269 00f0 8B       		.byte	-117
+ 270 00f1 01       		.byte	1
+ 271 00f2 8D       		.byte	-115
+ 272 00f3 04       		.byte	4
+ 273 00f4 91       		.byte	-111
+ 274 00f5 0F       		.byte	15
+ 275 00f6 94       		.byte	-108
  276 00f7 01       		.byte	1
- 277 00f8 60       		.byte	96
- 278 00f9 40       		.byte	64
- 279 00fa 61       		.byte	97
- 280 00fb A8       		.byte	-88
- 281 00fc 62       		.byte	98
- 282 00fd 40       		.byte	64
- 283 00fe 63       		.byte	99
- 284 00ff 20       		.byte	32
- 285 0100 81       		.byte	-127
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 6
+ 277 00f8 95       		.byte	-107
+ 278 00f9 06       		.byte	6
+ 279 00fa 99       		.byte	-103
+ 280 00fb 02       		.byte	2
+ 281 00fc 9F       		.byte	-97
+ 282 00fd 01       		.byte	1
+ 283 00fe A1       		.byte	-95
+ 284 00ff 0F       		.byte	15
+ 285 0100 B1       		.byte	-79
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 6
 
 
  286 0101 08       		.byte	8
- 287 0102 85       		.byte	-123
- 288 0103 08       		.byte	8
- 289 0104 89       		.byte	-119
- 290 0105 01       		.byte	1
- 291 0106 8E       		.byte	-114
- 292 0107 1E       		.byte	30
- 293 0108 8F       		.byte	-113
- 294 0109 08       		.byte	8
- 295 010a 93       		.byte	-109
- 296 010b 08       		.byte	8
- 297 010c 94       		.byte	-108
- 298 010d 01       		.byte	1
- 299 010e 96       		.byte	-106
- 300 010f 08       		.byte	8
- 301 0110 97       		.byte	-105
- 302 0111 01       		.byte	1
- 303 0112 99       		.byte	-103
- 304 0113 01       		.byte	1
- 305 0114 9E       		.byte	-98
- 306 0115 21       		.byte	33
- 307 0116 A0       		.byte	-96
- 308 0117 01       		.byte	1
- 309 0118 A1       		.byte	-95
- 310 0119 04       		.byte	4
- 311 011a A2       		.byte	-94
- 312 011b 02       		.byte	2
- 313 011c A4       		.byte	-92
- 314 011d 01       		.byte	1
- 315 011e A5       		.byte	-91
- 316 011f 02       		.byte	2
- 317 0120 A6       		.byte	-90
- 318 0121 04       		.byte	4
- 319 0122 A9       		.byte	-87
- 320 0123 08       		.byte	8
- 321 0124 AC       		.byte	-84
- 322 0125 10       		.byte	16
- 323 0126 AE       		.byte	-82
- 324 0127 01       		.byte	1
- 325 0128 B0       		.byte	-80
- 326 0129 20       		.byte	32
- 327 012a B1       		.byte	-79
- 328 012b 03       		.byte	3
- 329 012c B4       		.byte	-76
- 330 012d 1F       		.byte	31
- 331 012e B5       		.byte	-75
- 332 012f 04       		.byte	4
- 333 0130 B7       		.byte	-73
- 334 0131 08       		.byte	8
- 335 0132 B9       		.byte	-71
- 336 0133 02       		.byte	2
- 337 0134 BE       		.byte	-66
- 338 0135 10       		.byte	16
- 339 0136 BF       		.byte	-65
- 340 0137 50       		.byte	80
- 341 0138 D6       		.byte	-42
- 342 0139 08       		.byte	8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 7
+ 287 0102 B2       		.byte	-78
+ 288 0103 01       		.byte	1
+ 289 0104 B5       		.byte	-75
+ 290 0105 07       		.byte	7
+ 291 0106 BE       		.byte	-66
+ 292 0107 04       		.byte	4
+ 293 0108 BF       		.byte	-65
+ 294 0109 01       		.byte	1
+ 295 010a C0       		.byte	-64
+ 296 010b 46       		.byte	70
+ 297 010c C1       		.byte	-63
+ 298 010d 03       		.byte	3
+ 299 010e C5       		.byte	-59
+ 300 010f 0C       		.byte	12
+ 301 0110 C6       		.byte	-58
+ 302 0111 E0       		.byte	-32
+ 303 0112 C7       		.byte	-57
+ 304 0113 0B       		.byte	11
+ 305 0114 C8       		.byte	-56
+ 306 0115 19       		.byte	25
+ 307 0116 C9       		.byte	-55
+ 308 0117 FF       		.byte	-1
+ 309 0118 CA       		.byte	-54
+ 310 0119 FF       		.byte	-1
+ 311 011a CB       		.byte	-53
+ 312 011b FF       		.byte	-1
+ 313 011c CE       		.byte	-50
+ 314 011d F0       		.byte	-16
+ 315 011e CF       		.byte	-49
+ 316 011f 44       		.byte	68
+ 317 0120 D0       		.byte	-48
+ 318 0121 0C       		.byte	12
+ 319 0122 D4       		.byte	-44
+ 320 0123 01       		.byte	1
+ 321 0124 D8       		.byte	-40
+ 322 0125 04       		.byte	4
+ 323 0126 D9       		.byte	-39
+ 324 0127 04       		.byte	4
+ 325 0128 DA       		.byte	-38
+ 326 0129 04       		.byte	4
+ 327 012a DB       		.byte	-37
+ 328 012b 04       		.byte	4
+ 329 012c DC       		.byte	-36
+ 330 012d 10       		.byte	16
+ 331 012e DD       		.byte	-35
+ 332 012f 11       		.byte	17
+ 333 0130 DF       		.byte	-33
+ 334 0131 01       		.byte	1
+ 335 0132 E6       		.byte	-26
+ 336 0133 C0       		.byte	-64
+ 337 0134 EA       		.byte	-22
+ 338 0135 40       		.byte	64
+ 339 0136 EB       		.byte	-21
+ 340 0137 02       		.byte	2
+ 341 0138 05       		.byte	5
+ 342 0139 10       		.byte	16
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 7
 
 
- 343 013a D8       		.byte	-40
- 344 013b 04       		.byte	4
- 345 013c D9       		.byte	-39
- 346 013d 04       		.byte	4
- 347 013e DB       		.byte	-37
- 348 013f 04       		.byte	4
- 349 0140 DC       		.byte	-36
- 350 0141 18       		.byte	24
- 351 0142 DD       		.byte	-35
- 352 0143 20       		.byte	32
- 353 0144 DF       		.byte	-33
- 354 0145 31       		.byte	49
- 355 0146 00       		.byte	0
- 356 0147 40       		.byte	64
- 357 0148 04       		.byte	4
- 358 0149 A4       		.byte	-92
- 359 014a 08       		.byte	8
- 360 014b 04       		.byte	4
- 361 014c 0A       		.byte	10
- 362 014d 20       		.byte	32
- 363 014e 0B       		.byte	11
- 364 014f 02       		.byte	2
- 365 0150 0D       		.byte	13
- 366 0151 20       		.byte	32
- 367 0152 0E       		.byte	14
- 368 0153 01       		.byte	1
- 369 0154 0F       		.byte	15
- 370 0155 20       		.byte	32
- 371 0156 10       		.byte	16
- 372 0157 02       		.byte	2
- 373 0158 11       		.byte	17
- 374 0159 05       		.byte	5
- 375 015a 15       		.byte	21
+ 343 013a 0B       		.byte	11
+ 344 013b 2C       		.byte	44
+ 345 013c 0E       		.byte	14
+ 346 013d 18       		.byte	24
+ 347 013e 0F       		.byte	15
+ 348 013f 02       		.byte	2
+ 349 0140 11       		.byte	17
+ 350 0141 08       		.byte	8
+ 351 0142 12       		.byte	18
+ 352 0143 10       		.byte	16
+ 353 0144 16       		.byte	22
+ 354 0145 01       		.byte	1
+ 355 0146 17       		.byte	23
+ 356 0147 15       		.byte	21
+ 357 0148 19       		.byte	25
+ 358 0149 04       		.byte	4
+ 359 014a 1E       		.byte	30
+ 360 014b 86       		.byte	-122
+ 361 014c 1F       		.byte	31
+ 362 014d 84       		.byte	-124
+ 363 014e 21       		.byte	33
+ 364 014f 10       		.byte	16
+ 365 0150 22       		.byte	34
+ 366 0151 01       		.byte	1
+ 367 0152 25       		.byte	37
+ 368 0153 04       		.byte	4
+ 369 0154 26       		.byte	38
+ 370 0155 80       		.byte	-128
+ 371 0156 27       		.byte	39
+ 372 0157 84       		.byte	-124
+ 373 0158 28       		.byte	40
+ 374 0159 80       		.byte	-128
+ 375 015a 29       		.byte	41
  376 015b 02       		.byte	2
- 377 015c 17       		.byte	23
- 378 015d 04       		.byte	4
- 379 015e 18       		.byte	24
- 380 015f 40       		.byte	64
- 381 0160 19       		.byte	25
- 382 0161 10       		.byte	16
- 383 0162 1C       		.byte	28
- 384 0163 04       		.byte	4
- 385 0164 1E       		.byte	30
- 386 0165 01       		.byte	1
- 387 0166 1F       		.byte	31
- 388 0167 B0       		.byte	-80
- 389 0168 21       		.byte	33
- 390 0169 01       		.byte	1
- 391 016a 22       		.byte	34
- 392 016b 42       		.byte	66
- 393 016c 23       		.byte	35
- 394 016d 04       		.byte	4
- 395 016e 26       		.byte	38
- 396 016f 40       		.byte	64
- 397 0170 27       		.byte	39
- 398 0171 28       		.byte	40
- 399 0172 28       		.byte	40
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 8
+ 377 015c 30       		.byte	48
+ 378 015d 20       		.byte	32
+ 379 015e 31       		.byte	49
+ 380 015f 0A       		.byte	10
+ 381 0160 33       		.byte	51
+ 382 0161 80       		.byte	-128
+ 383 0162 36       		.byte	54
+ 384 0163 20       		.byte	32
+ 385 0164 37       		.byte	55
+ 386 0165 44       		.byte	68
+ 387 0166 38       		.byte	56
+ 388 0167 A4       		.byte	-92
+ 389 0168 3E       		.byte	62
+ 390 0169 08       		.byte	8
+ 391 016a 43       		.byte	67
+ 392 016b 0A       		.byte	10
+ 393 016c 45       		.byte	69
+ 394 016d 01       		.byte	1
+ 395 016e 47       		.byte	71
+ 396 016f 04       		.byte	4
+ 397 0170 48       		.byte	72
+ 398 0171 04       		.byte	4
+ 399 0172 49       		.byte	73
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 8
 
 
- 400 0173 04       		.byte	4
- 401 0174 2B       		.byte	43
- 402 0175 90       		.byte	-112
- 403 0176 2C       		.byte	44
- 404 0177 90       		.byte	-112
- 405 0178 2D       		.byte	45
- 406 0179 02       		.byte	2
- 407 017a 2F       		.byte	47
- 408 017b 22       		.byte	34
- 409 017c 30       		.byte	48
- 410 017d 02       		.byte	2
- 411 017e 31       		.byte	49
- 412 017f 20       		.byte	32
- 413 0180 33       		.byte	51
- 414 0181 14       		.byte	20
- 415 0182 37       		.byte	55
- 416 0183 14       		.byte	20
- 417 0184 39       		.byte	57
- 418 0185 05       		.byte	5
- 419 0186 3B       		.byte	59
- 420 0187 A0       		.byte	-96
- 421 0188 3F       		.byte	63
- 422 0189 20       		.byte	32
- 423 018a 47       		.byte	71
- 424 018b 20       		.byte	32
- 425 018c 4C       		.byte	76
- 426 018d 40       		.byte	64
- 427 018e 4F       		.byte	79
- 428 018f 02       		.byte	2
- 429 0190 57       		.byte	87
- 430 0191 10       		.byte	16
- 431 0192 5B       		.byte	91
- 432 0193 40       		.byte	64
- 433 0194 5D       		.byte	93
- 434 0195 02       		.byte	2
- 435 0196 5E       		.byte	94
- 436 0197 80       		.byte	-128
- 437 0198 5F       		.byte	95
- 438 0199 18       		.byte	24
- 439 019a 62       		.byte	98
- 440 019b C0       		.byte	-64
- 441 019c 78       		.byte	120
- 442 019d 02       		.byte	2
- 443 019e 8B       		.byte	-117
+ 400 0173 08       		.byte	8
+ 401 0174 4E       		.byte	78
+ 402 0175 20       		.byte	32
+ 403 0176 4F       		.byte	79
+ 404 0177 01       		.byte	1
+ 405 0178 51       		.byte	81
+ 406 0179 04       		.byte	4
+ 407 017a 53       		.byte	83
+ 408 017b 10       		.byte	16
+ 409 017c 55       		.byte	85
+ 410 017d 01       		.byte	1
+ 411 017e 56       		.byte	86
+ 412 017f 08       		.byte	8
+ 413 0180 57       		.byte	87
+ 414 0181 01       		.byte	1
+ 415 0182 58       		.byte	88
+ 416 0183 20       		.byte	32
+ 417 0184 59       		.byte	89
+ 418 0185 84       		.byte	-124
+ 419 0186 5B       		.byte	91
+ 420 0187 02       		.byte	2
+ 421 0188 77       		.byte	119
+ 422 0189 40       		.byte	64
+ 423 018a 7A       		.byte	122
+ 424 018b 03       		.byte	3
+ 425 018c 86       		.byte	-122
+ 426 018d 80       		.byte	-128
+ 427 018e 8A       		.byte	-118
+ 428 018f 40       		.byte	64
+ 429 0190 90       		.byte	-112
+ 430 0191 24       		.byte	36
+ 431 0192 92       		.byte	-110
+ 432 0193 20       		.byte	32
+ 433 0194 95       		.byte	-107
+ 434 0195 40       		.byte	64
+ 435 0196 96       		.byte	-106
+ 436 0197 05       		.byte	5
+ 437 0198 99       		.byte	-103
+ 438 0199 22       		.byte	34
+ 439 019a 9A       		.byte	-102
+ 440 019b 01       		.byte	1
+ 441 019c 9C       		.byte	-100
+ 442 019d 10       		.byte	16
+ 443 019e A2       		.byte	-94
  444 019f 04       		.byte	4
- 445 01a0 8E       		.byte	-114
- 446 01a1 60       		.byte	96
- 447 01a2 8F       		.byte	-113
- 448 01a3 40       		.byte	64
- 449 01a4 C0       		.byte	-64
- 450 01a5 E1       		.byte	-31
- 451 01a6 C2       		.byte	-62
- 452 01a7 E5       		.byte	-27
- 453 01a8 C4       		.byte	-60
- 454 01a9 3D       		.byte	61
- 455 01aa CA       		.byte	-54
- 456 01ab D7       		.byte	-41
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 9
+ 445 01a0 A4       		.byte	-92
+ 446 01a1 20       		.byte	32
+ 447 01a2 A5       		.byte	-91
+ 448 01a3 0A       		.byte	10
+ 449 01a4 A6       		.byte	-90
+ 450 01a5 0A       		.byte	10
+ 451 01a6 AB       		.byte	-85
+ 452 01a7 20       		.byte	32
+ 453 01a8 C0       		.byte	-64
+ 454 01a9 40       		.byte	64
+ 455 01aa C2       		.byte	-62
+ 456 01ab E4       		.byte	-28
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 9
 
 
- 457 01ac CC       		.byte	-52
- 458 01ad 67       		.byte	103
- 459 01ae CE       		.byte	-50
- 460 01af 2F       		.byte	47
- 461 01b0 D0       		.byte	-48
- 462 01b1 20       		.byte	32
- 463 01b2 D6       		.byte	-42
- 464 01b3 F8       		.byte	-8
- 465 01b4 D8       		.byte	-40
- 466 01b5 08       		.byte	8
- 467 01b6 DE       		.byte	-34
- 468 01b7 01       		.byte	1
- 469 01b8 E2       		.byte	-30
- 470 01b9 02       		.byte	2
- 471 01ba 01       		.byte	1
- 472 01bb 02       		.byte	2
- 473 01bc 05       		.byte	5
- 474 01bd 02       		.byte	2
- 475 01be 13       		.byte	19
- 476 01bf 02       		.byte	2
- 477 01c0 15       		.byte	21
- 478 01c1 01       		.byte	1
- 479 01c2 19       		.byte	25
- 480 01c3 02       		.byte	2
- 481 01c4 33       		.byte	51
- 482 01c5 02       		.byte	2
- 483 01c6 35       		.byte	53
+ 457 01ac C4       		.byte	-60
+ 458 01ad F0       		.byte	-16
+ 459 01ae CA       		.byte	-54
+ 460 01af 01       		.byte	1
+ 461 01b0 CC       		.byte	-52
+ 462 01b1 7F       		.byte	127
+ 463 01b2 CE       		.byte	-50
+ 464 01b3 4E       		.byte	78
+ 465 01b4 D0       		.byte	-48
+ 466 01b5 C3       		.byte	-61
+ 467 01b6 D2       		.byte	-46
+ 468 01b7 04       		.byte	4
+ 469 01b8 D6       		.byte	-42
+ 470 01b9 0F       		.byte	15
+ 471 01ba E4       		.byte	-28
+ 472 01bb 08       		.byte	8
+ 473 01bc EE       		.byte	-18
+ 474 01bd 04       		.byte	4
+ 475 01be 04       		.byte	4
+ 476 01bf 13       		.byte	19
+ 477 01c0 06       		.byte	6
+ 478 01c1 0C       		.byte	12
+ 479 01c2 08       		.byte	8
+ 480 01c3 0F       		.byte	15
+ 481 01c4 0A       		.byte	10
+ 482 01c5 10       		.byte	16
+ 483 01c6 0C       		.byte	12
  484 01c7 01       		.byte	1
- 485 01c8 3F       		.byte	63
- 486 01c9 14       		.byte	20
- 487 01ca 40       		.byte	64
- 488 01cb 03       		.byte	3
- 489 01cc 41       		.byte	65
- 490 01cd 02       		.byte	2
- 491 01ce 42       		.byte	66
- 492 01cf 30       		.byte	48
- 493 01d0 44       		.byte	68
- 494 01d1 06       		.byte	6
- 495 01d2 45       		.byte	69
- 496 01d3 FE       		.byte	-2
- 497 01d4 46       		.byte	70
- 498 01d5 CD       		.byte	-51
- 499 01d6 47       		.byte	71
- 500 01d7 0B       		.byte	11
- 501 01d8 48       		.byte	72
- 502 01d9 1F       		.byte	31
- 503 01da 49       		.byte	73
- 504 01db FF       		.byte	-1
- 505 01dc 4A       		.byte	74
- 506 01dd FF       		.byte	-1
- 507 01de 4B       		.byte	75
- 508 01df FF       		.byte	-1
- 509 01e0 4C       		.byte	76
- 510 01e1 22       		.byte	34
- 511 01e2 4E       		.byte	78
- 512 01e3 F0       		.byte	-16
- 513 01e4 4F       		.byte	79
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 10
+ 485 01c8 10       		.byte	16
+ 486 01c9 0C       		.byte	12
+ 487 01ca 12       		.byte	18
+ 488 01cb 13       		.byte	19
+ 489 01cc 14       		.byte	20
+ 490 01cd 0C       		.byte	12
+ 491 01ce 18       		.byte	24
+ 492 01cf 03       		.byte	3
+ 493 01d0 1B       		.byte	27
+ 494 01d1 02       		.byte	2
+ 495 01d2 1C       		.byte	28
+ 496 01d3 08       		.byte	8
+ 497 01d4 1F       		.byte	31
+ 498 01d5 01       		.byte	1
+ 499 01d6 20       		.byte	32
+ 500 01d7 1F       		.byte	31
+ 501 01d8 24       		.byte	36
+ 502 01d9 04       		.byte	4
+ 503 01da 28       		.byte	40
+ 504 01db 02       		.byte	2
+ 505 01dc 2E       		.byte	46
+ 506 01dd 13       		.byte	19
+ 507 01de 32       		.byte	50
+ 508 01df 1C       		.byte	28
+ 509 01e0 34       		.byte	52
+ 510 01e1 0F       		.byte	15
+ 511 01e2 35       		.byte	53
+ 512 01e3 02       		.byte	2
+ 513 01e4 37       		.byte	55
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 10
 
 
- 514 01e5 0C       		.byte	12
- 515 01e6 50       		.byte	80
- 516 01e7 8C       		.byte	-116
- 517 01e8 51       		.byte	81
- 518 01e9 10       		.byte	16
- 519 01ea 56       		.byte	86
- 520 01eb 02       		.byte	2
- 521 01ec 57       		.byte	87
- 522 01ed 24       		.byte	36
- 523 01ee 59       		.byte	89
- 524 01ef 04       		.byte	4
- 525 01f0 5A       		.byte	90
- 526 01f1 24       		.byte	36
- 527 01f2 5B       		.byte	91
- 528 01f3 24       		.byte	36
- 529 01f4 5D       		.byte	93
- 530 01f5 88       		.byte	-120
- 531 01f6 5E       		.byte	94
- 532 01f7 08       		.byte	8
- 533 01f8 5F       		.byte	95
- 534 01f9 31       		.byte	49
- 535 01fa 68       		.byte	104
- 536 01fb 40       		.byte	64
- 537 01fc 69       		.byte	105
- 538 01fd 01       		.byte	1
- 539 01fe 6A       		.byte	106
- 540 01ff C0       		.byte	-64
- 541 0200 6B       		.byte	107
+ 514 01e5 01       		.byte	1
+ 515 01e6 3A       		.byte	58
+ 516 01e7 2A       		.byte	42
+ 517 01e8 58       		.byte	88
+ 518 01e9 04       		.byte	4
+ 519 01ea 59       		.byte	89
+ 520 01eb 04       		.byte	4
+ 521 01ec 5C       		.byte	92
+ 522 01ed 31       		.byte	49
+ 523 01ee 5F       		.byte	95
+ 524 01ef 01       		.byte	1
+ 525 01f0 82       		.byte	-126
+ 526 01f1 08       		.byte	8
+ 527 01f2 96       		.byte	-106
+ 528 01f3 07       		.byte	7
+ 529 01f4 97       		.byte	-105
+ 530 01f5 01       		.byte	1
+ 531 01f6 99       		.byte	-103
+ 532 01f7 04       		.byte	4
+ 533 01f8 9A       		.byte	-102
+ 534 01f9 04       		.byte	4
+ 535 01fa 9C       		.byte	-100
+ 536 01fb 01       		.byte	1
+ 537 01fc AB       		.byte	-85
+ 538 01fd 07       		.byte	7
+ 539 01fe B0       		.byte	-80
+ 540 01ff 04       		.byte	4
+ 541 0200 B2       		.byte	-78
  542 0201 01       		.byte	1
- 543 0202 83       		.byte	-125
- 544 0203 08       		.byte	8
- 545 0204 84       		.byte	-124
- 546 0205 04       		.byte	4
- 547 0206 8A       		.byte	-118
- 548 0207 06       		.byte	6
- 549 0208 8B       		.byte	-117
- 550 0209 53       		.byte	83
- 551 020a 93       		.byte	-109
- 552 020b 8C       		.byte	-116
- 553 020c 94       		.byte	-108
- 554 020d 01       		.byte	1
- 555 020e 95       		.byte	-107
- 556 020f AC       		.byte	-84
- 557 0210 97       		.byte	-105
- 558 0211 43       		.byte	67
- 559 0212 99       		.byte	-103
- 560 0213 31       		.byte	49
- 561 0214 9B       		.byte	-101
- 562 0215 C6       		.byte	-58
- 563 0216 A5       		.byte	-91
- 564 0217 31       		.byte	49
- 565 0218 A6       		.byte	-90
- 566 0219 01       		.byte	1
- 567 021a A7       		.byte	-89
- 568 021b 4E       		.byte	78
- 569 021c AD       		.byte	-83
- 570 021d 30       		.byte	48
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 11
+ 543 0202 B3       		.byte	-77
+ 544 0203 01       		.byte	1
+ 545 0204 B4       		.byte	-76
+ 546 0205 08       		.byte	8
+ 547 0206 B5       		.byte	-75
+ 548 0207 02       		.byte	2
+ 549 0208 B6       		.byte	-74
+ 550 0209 02       		.byte	2
+ 551 020a B7       		.byte	-73
+ 552 020b 04       		.byte	4
+ 553 020c C0       		.byte	-64
+ 554 020d 20       		.byte	32
+ 555 020e C1       		.byte	-63
+ 556 020f 05       		.byte	5
+ 557 0210 C5       		.byte	-59
+ 558 0211 D0       		.byte	-48
+ 559 0212 C6       		.byte	-58
+ 560 0213 50       		.byte	80
+ 561 0214 C7       		.byte	-57
+ 562 0215 21       		.byte	33
+ 563 0216 C8       		.byte	-56
+ 564 0217 3A       		.byte	58
+ 565 0218 C9       		.byte	-55
+ 566 0219 FF       		.byte	-1
+ 567 021a CA       		.byte	-54
+ 568 021b FF       		.byte	-1
+ 569 021c CB       		.byte	-53
+ 570 021d FF       		.byte	-1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 11
 
 
- 571 021e AF       		.byte	-81
- 572 021f 40       		.byte	64
- 573 0220 B2       		.byte	-78
- 574 0221 02       		.byte	2
- 575 0222 B3       		.byte	-77
- 576 0223 F0       		.byte	-16
- 577 0224 B4       		.byte	-76
- 578 0225 04       		.byte	4
- 579 0226 B5       		.byte	-75
- 580 0227 0F       		.byte	15
- 581 0228 B6       		.byte	-74
- 582 0229 01       		.byte	1
- 583 022a BB       		.byte	-69
- 584 022b 28       		.byte	40
- 585 022c BE       		.byte	-66
- 586 022d 50       		.byte	80
- 587 022e C0       		.byte	-64
- 588 022f 26       		.byte	38
- 589 0230 C1       		.byte	-63
- 590 0231 03       		.byte	3
- 591 0232 C5       		.byte	-59
- 592 0233 EB       		.byte	-21
- 593 0234 C7       		.byte	-57
- 594 0235 C0       		.byte	-64
- 595 0236 C8       		.byte	-56
- 596 0237 23       		.byte	35
- 597 0238 C9       		.byte	-55
- 598 0239 FF       		.byte	-1
- 599 023a CA       		.byte	-54
- 600 023b FF       		.byte	-1
- 601 023c CB       		.byte	-53
- 602 023d FF       		.byte	-1
- 603 023e CE       		.byte	-50
- 604 023f F0       		.byte	-16
- 605 0240 CF       		.byte	-49
- 606 0241 44       		.byte	68
- 607 0242 D0       		.byte	-48
- 608 0243 0C       		.byte	12
- 609 0244 D4       		.byte	-44
- 610 0245 41       		.byte	65
- 611 0246 D8       		.byte	-40
- 612 0247 04       		.byte	4
- 613 0248 D9       		.byte	-39
- 614 0249 04       		.byte	4
- 615 024a DA       		.byte	-38
- 616 024b 04       		.byte	4
- 617 024c DB       		.byte	-37
- 618 024d 04       		.byte	4
- 619 024e DC       		.byte	-36
- 620 024f 12       		.byte	18
- 621 0250 DD       		.byte	-35
- 622 0251 21       		.byte	33
- 623 0252 DF       		.byte	-33
+ 571 021e CD       		.byte	-51
+ 572 021f A0       		.byte	-96
+ 573 0220 CF       		.byte	-49
+ 574 0221 04       		.byte	4
+ 575 0222 D0       		.byte	-48
+ 576 0223 18       		.byte	24
+ 577 0224 D2       		.byte	-46
+ 578 0225 80       		.byte	-128
+ 579 0226 D4       		.byte	-44
+ 580 0227 07       		.byte	7
+ 581 0228 D8       		.byte	-40
+ 582 0229 04       		.byte	4
+ 583 022a D9       		.byte	-39
+ 584 022b 04       		.byte	4
+ 585 022c DA       		.byte	-38
+ 586 022d 04       		.byte	4
+ 587 022e DB       		.byte	-37
+ 588 022f 04       		.byte	4
+ 589 0230 DC       		.byte	-36
+ 590 0231 22       		.byte	34
+ 591 0232 DD       		.byte	-35
+ 592 0233 22       		.byte	34
+ 593 0234 DF       		.byte	-33
+ 594 0235 01       		.byte	1
+ 595 0236 E0       		.byte	-32
+ 596 0237 40       		.byte	64
+ 597 0238 E2       		.byte	-30
+ 598 0239 C0       		.byte	-64
+ 599 023a E4       		.byte	-28
+ 600 023b 40       		.byte	64
+ 601 023c E5       		.byte	-27
+ 602 023d 40       		.byte	64
+ 603 023e E6       		.byte	-26
+ 604 023f C0       		.byte	-64
+ 605 0240 E8       		.byte	-24
+ 606 0241 C0       		.byte	-64
+ 607 0242 EA       		.byte	-22
+ 608 0243 C0       		.byte	-64
+ 609 0244 EC       		.byte	-20
+ 610 0245 C0       		.byte	-64
+ 611 0246 EE       		.byte	-18
+ 612 0247 C0       		.byte	-64
+ 613 0248 00       		.byte	0
+ 614 0249 14       		.byte	20
+ 615 024a 01       		.byte	1
+ 616 024b 40       		.byte	64
+ 617 024c 05       		.byte	5
+ 618 024d 01       		.byte	1
+ 619 024e 08       		.byte	8
+ 620 024f 10       		.byte	16
+ 621 0250 09       		.byte	9
+ 622 0251 0A       		.byte	10
+ 623 0252 0A       		.byte	10
  624 0253 01       		.byte	1
- 625 0254 E6       		.byte	-26
- 626 0255 C0       		.byte	-64
- 627 0256 EA       		.byte	-22
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 12
+ 625 0254 0D       		.byte	13
+ 626 0255 20       		.byte	32
+ 627 0256 0E       		.byte	14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 12
 
 
- 628 0257 40       		.byte	64
- 629 0258 EB       		.byte	-21
- 630 0259 02       		.byte	2
- 631 025a 05       		.byte	5
- 632 025b 04       		.byte	4
- 633 025c 06       		.byte	6
- 634 025d 04       		.byte	4
- 635 025e 0D       		.byte	13
- 636 025f 08       		.byte	8
- 637 0260 15       		.byte	21
- 638 0261 08       		.byte	8
- 639 0262 1D       		.byte	29
- 640 0263 04       		.byte	4
- 641 0264 1E       		.byte	30
- 642 0265 10       		.byte	16
- 643 0266 1F       		.byte	31
- 644 0267 90       		.byte	-112
- 645 0268 20       		.byte	32
- 646 0269 14       		.byte	20
- 647 026a 22       		.byte	34
- 648 026b 04       		.byte	4
- 649 026c 27       		.byte	39
- 650 026d 14       		.byte	20
- 651 026e 2C       		.byte	44
- 652 026f 10       		.byte	16
- 653 0270 2F       		.byte	47
- 654 0271 02       		.byte	2
- 655 0272 30       		.byte	48
- 656 0273 06       		.byte	6
- 657 0274 31       		.byte	49
- 658 0275 08       		.byte	8
- 659 0276 32       		.byte	50
- 660 0277 10       		.byte	16
- 661 0278 36       		.byte	54
- 662 0279 02       		.byte	2
- 663 027a 37       		.byte	55
- 664 027b 14       		.byte	20
- 665 027c 39       		.byte	57
- 666 027d 05       		.byte	5
- 667 027e 3F       		.byte	63
- 668 027f 22       		.byte	34
- 669 0280 40       		.byte	64
- 670 0281 14       		.byte	20
- 671 0282 44       		.byte	68
- 672 0283 10       		.byte	16
- 673 0284 47       		.byte	71
- 674 0285 10       		.byte	16
- 675 0286 49       		.byte	73
- 676 0287 11       		.byte	17
- 677 0288 4A       		.byte	74
- 678 0289 10       		.byte	16
- 679 028a 4C       		.byte	76
- 680 028b 90       		.byte	-112
- 681 028c 4F       		.byte	79
- 682 028d 20       		.byte	32
- 683 028e 50       		.byte	80
- 684 028f 40       		.byte	64
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 13
+ 628 0257 02       		.byte	2
+ 629 0258 0F       		.byte	15
+ 630 0259 20       		.byte	32
+ 631 025a 10       		.byte	16
+ 632 025b 60       		.byte	96
+ 633 025c 12       		.byte	18
+ 634 025d 0A       		.byte	10
+ 635 025e 18       		.byte	24
+ 636 025f 34       		.byte	52
+ 637 0260 19       		.byte	25
+ 638 0261 22       		.byte	34
+ 639 0262 1A       		.byte	26
+ 640 0263 20       		.byte	32
+ 641 0264 1C       		.byte	28
+ 642 0265 40       		.byte	64
+ 643 0266 1D       		.byte	29
+ 644 0267 20       		.byte	32
+ 645 0268 1E       		.byte	30
+ 646 0269 2A       		.byte	42
+ 647 026a 20       		.byte	32
+ 648 026b 02       		.byte	2
+ 649 026c 23       		.byte	35
+ 650 026d 04       		.byte	4
+ 651 026e 25       		.byte	37
+ 652 026f 04       		.byte	4
+ 653 0270 26       		.byte	38
+ 654 0271 60       		.byte	96
+ 655 0272 28       		.byte	40
+ 656 0273 40       		.byte	64
+ 657 0274 29       		.byte	41
+ 658 0275 02       		.byte	2
+ 659 0276 2F       		.byte	47
+ 660 0277 08       		.byte	8
+ 661 0278 33       		.byte	51
+ 662 0279 A0       		.byte	-96
+ 663 027a 36       		.byte	54
+ 664 027b 24       		.byte	36
+ 665 027c 45       		.byte	69
+ 666 027d 20       		.byte	32
+ 667 027e 4C       		.byte	76
+ 668 027f 02       		.byte	2
+ 669 0280 4F       		.byte	79
+ 670 0281 01       		.byte	1
+ 671 0282 54       		.byte	84
+ 672 0283 02       		.byte	2
+ 673 0284 56       		.byte	86
+ 674 0285 01       		.byte	1
+ 675 0286 57       		.byte	87
+ 676 0287 18       		.byte	24
+ 677 0288 5E       		.byte	94
+ 678 0289 A4       		.byte	-92
+ 679 028a 5F       		.byte	95
+ 680 028b 01       		.byte	1
+ 681 028c 75       		.byte	117
+ 682 028d 01       		.byte	1
+ 683 028e 81       		.byte	-127
+ 684 028f 04       		.byte	4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 13
 
 
- 685 0290 51       		.byte	81
- 686 0291 04       		.byte	4
- 687 0292 52       		.byte	82
- 688 0293 20       		.byte	32
- 689 0294 53       		.byte	83
+ 685 0290 83       		.byte	-125
+ 686 0291 80       		.byte	-128
+ 687 0292 84       		.byte	-124
+ 688 0293 01       		.byte	1
+ 689 0294 8C       		.byte	-116
  690 0295 40       		.byte	64
- 691 0296 57       		.byte	87
- 692 0297 02       		.byte	2
- 693 0298 5C       		.byte	92
- 694 0299 48       		.byte	72
- 695 029a 5E       		.byte	94
- 696 029b 20       		.byte	32
- 697 029c 60       		.byte	96
- 698 029d 04       		.byte	4
- 699 029e 67       		.byte	103
+ 691 0296 97       		.byte	-105
+ 692 0297 04       		.byte	4
+ 693 0298 C0       		.byte	-64
+ 694 0299 17       		.byte	23
+ 695 029a C2       		.byte	-62
+ 696 029b EF       		.byte	-17
+ 697 029c C4       		.byte	-60
+ 698 029d 0F       		.byte	15
+ 699 029e CA       		.byte	-54
  700 029f 20       		.byte	32
- 701 02a0 68       		.byte	104
- 702 02a1 02       		.byte	2
- 703 02a2 69       		.byte	105
- 704 02a3 05       		.byte	5
- 705 02a4 6A       		.byte	106
- 706 02a5 20       		.byte	32
- 707 02a6 78       		.byte	120
- 708 02a7 06       		.byte	6
- 709 02a8 84       		.byte	-124
- 710 02a9 02       		.byte	2
- 711 02aa 92       		.byte	-110
- 712 02ab 80       		.byte	-128
- 713 02ac 94       		.byte	-108
- 714 02ad 20       		.byte	32
- 715 02ae 95       		.byte	-107
- 716 02af 05       		.byte	5
- 717 02b0 96       		.byte	-106
- 718 02b1 60       		.byte	96
- 719 02b2 97       		.byte	-105
- 720 02b3 80       		.byte	-128
- 721 02b4 98       		.byte	-104
- 722 02b5 10       		.byte	16
- 723 02b6 99       		.byte	-103
- 724 02b7 10       		.byte	16
- 725 02b8 9A       		.byte	-102
- 726 02b9 40       		.byte	64
- 727 02ba 9C       		.byte	-100
- 728 02bb 02       		.byte	2
- 729 02bc 9F       		.byte	-97
- 730 02bd 14       		.byte	20
- 731 02be A1       		.byte	-95
- 732 02bf 08       		.byte	8
- 733 02c0 A2       		.byte	-94
- 734 02c1 82       		.byte	-126
- 735 02c2 A3       		.byte	-93
- 736 02c3 11       		.byte	17
- 737 02c4 A4       		.byte	-92
- 738 02c5 82       		.byte	-126
- 739 02c6 A6       		.byte	-90
- 740 02c7 20       		.byte	32
- 741 02c8 A7       		.byte	-89
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 14
+ 701 02a0 CC       		.byte	-52
+ 702 02a1 6C       		.byte	108
+ 703 02a2 D0       		.byte	-48
+ 704 02a3 20       		.byte	32
+ 705 02a4 D2       		.byte	-46
+ 706 02a5 10       		.byte	16
+ 707 02a6 D6       		.byte	-42
+ 708 02a7 F0       		.byte	-16
+ 709 02a8 E0       		.byte	-32
+ 710 02a9 04       		.byte	4
+ 711 02aa E6       		.byte	-26
+ 712 02ab 04       		.byte	4
+ 713 02ac 87       		.byte	-121
+ 714 02ad 04       		.byte	4
+ 715 02ae E6       		.byte	-26
+ 716 02af 02       		.byte	2
+ 717 02b0 05       		.byte	5
+ 718 02b1 80       		.byte	-128
+ 719 02b2 07       		.byte	7
+ 720 02b3 13       		.byte	19
+ 721 02b4 0A       		.byte	10
+ 722 02b5 03       		.byte	3
+ 723 02b6 0C       		.byte	12
+ 724 02b7 09       		.byte	9
+ 725 02b8 0E       		.byte	14
+ 726 02b9 D0       		.byte	-48
+ 727 02ba 0F       		.byte	15
+ 728 02bb 0C       		.byte	12
+ 729 02bc 14       		.byte	20
+ 730 02bd 0C       		.byte	12
+ 731 02be 15       		.byte	21
+ 732 02bf 2C       		.byte	44
+ 733 02c0 16       		.byte	22
+ 734 02c1 71       		.byte	113
+ 735 02c2 17       		.byte	23
+ 736 02c3 43       		.byte	67
+ 737 02c4 1A       		.byte	26
+ 738 02c5 20       		.byte	32
+ 739 02c6 1C       		.byte	28
+ 740 02c7 10       		.byte	16
+ 741 02c8 1E       		.byte	30
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 14
 
 
- 742 02c9 02       		.byte	2
- 743 02ca A9       		.byte	-87
- 744 02cb 08       		.byte	8
- 745 02cc AB       		.byte	-85
- 746 02cd 01       		.byte	1
- 747 02ce AF       		.byte	-81
- 748 02cf 12       		.byte	18
- 749 02d0 C0       		.byte	-64
- 750 02d1 60       		.byte	96
- 751 02d2 C2       		.byte	-62
- 752 02d3 20       		.byte	32
- 753 02d4 C4       		.byte	-60
- 754 02d5 20       		.byte	32
- 755 02d6 CA       		.byte	-54
- 756 02d7 50       		.byte	80
- 757 02d8 CC       		.byte	-52
- 758 02d9 E7       		.byte	-25
- 759 02da CE       		.byte	-50
- 760 02db A3       		.byte	-93
- 761 02dc D0       		.byte	-48
- 762 02dd 66       		.byte	102
- 763 02de D2       		.byte	-46
- 764 02df 24       		.byte	36
- 765 02e0 D6       		.byte	-42
- 766 02e1 70       		.byte	112
- 767 02e2 D8       		.byte	-40
- 768 02e3 44       		.byte	68
- 769 02e4 DE       		.byte	-34
- 770 02e5 03       		.byte	3
- 771 02e6 EE       		.byte	-18
- 772 02e7 01       		.byte	1
- 773 02e8 02       		.byte	2
- 774 02e9 01       		.byte	1
- 775 02ea 03       		.byte	3
+ 742 02c9 AC       		.byte	-84
+ 743 02ca 20       		.byte	32
+ 744 02cb 10       		.byte	16
+ 745 02cc 22       		.byte	34
+ 746 02cd 40       		.byte	64
+ 747 02ce 23       		.byte	35
+ 748 02cf 08       		.byte	8
+ 749 02d0 24       		.byte	36
+ 750 02d1 14       		.byte	20
+ 751 02d2 28       		.byte	40
+ 752 02d3 DC       		.byte	-36
+ 753 02d4 29       		.byte	41
+ 754 02d5 71       		.byte	113
+ 755 02d6 2A       		.byte	42
+ 756 02d7 22       		.byte	34
+ 757 02d8 2B       		.byte	43
+ 758 02d9 0E       		.byte	14
+ 759 02da 2D       		.byte	45
+ 760 02db 71       		.byte	113
+ 761 02dc 2F       		.byte	47
+ 762 02dd 06       		.byte	6
+ 763 02de 31       		.byte	49
+ 764 02df C0       		.byte	-64
+ 765 02e0 32       		.byte	50
+ 766 02e1 E0       		.byte	-32
+ 767 02e2 33       		.byte	51
+ 768 02e3 0F       		.byte	15
+ 769 02e4 34       		.byte	52
+ 770 02e5 1F       		.byte	31
+ 771 02e6 35       		.byte	53
+ 772 02e7 30       		.byte	48
+ 773 02e8 39       		.byte	57
+ 774 02e9 22       		.byte	34
+ 775 02ea 3A       		.byte	58
  776 02eb 08       		.byte	8
- 777 02ec 0A       		.byte	10
- 778 02ed 01       		.byte	1
- 779 02ee 0B       		.byte	11
- 780 02ef 06       		.byte	6
- 781 02f0 0E       		.byte	14
- 782 02f1 08       		.byte	8
- 783 02f2 11       		.byte	17
+ 777 02ec 3B       		.byte	59
+ 778 02ed 08       		.byte	8
+ 779 02ee 3F       		.byte	63
+ 780 02ef 10       		.byte	16
+ 781 02f0 58       		.byte	88
+ 782 02f1 04       		.byte	4
+ 783 02f2 59       		.byte	89
  784 02f3 04       		.byte	4
- 785 02f4 14       		.byte	20
- 786 02f5 01       		.byte	1
- 787 02f6 1A       		.byte	26
- 788 02f7 08       		.byte	8
- 789 02f8 1B       		.byte	27
- 790 02f9 01       		.byte	1
- 791 02fa 1E       		.byte	30
- 792 02fb 04       		.byte	4
- 793 02fc 22       		.byte	34
- 794 02fd 02       		.byte	2
- 795 02fe 27       		.byte	39
- 796 02ff 01       		.byte	1
- 797 0300 28       		.byte	40
- 798 0301 04       		.byte	4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 15
+ 785 02f4 5C       		.byte	92
+ 786 02f5 11       		.byte	17
+ 787 02f6 5F       		.byte	95
+ 788 02f7 01       		.byte	1
+ 789 02f8 84       		.byte	-124
+ 790 02f9 03       		.byte	3
+ 791 02fa 86       		.byte	-122
+ 792 02fb 14       		.byte	20
+ 793 02fc 87       		.byte	-121
+ 794 02fd 04       		.byte	4
+ 795 02fe 88       		.byte	-120
+ 796 02ff 13       		.byte	19
+ 797 0300 89       		.byte	-119
+ 798 0301 08       		.byte	8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 15
 
 
- 799 0302 30       		.byte	48
- 800 0303 01       		.byte	1
- 801 0304 31       		.byte	49
- 802 0305 04       		.byte	4
- 803 0306 32       		.byte	50
- 804 0307 04       		.byte	4
- 805 0308 33       		.byte	51
- 806 0309 01       		.byte	1
- 807 030a 34       		.byte	52
- 808 030b 08       		.byte	8
- 809 030c 35       		.byte	53
- 810 030d 08       		.byte	8
- 811 030e 36       		.byte	54
- 812 030f 02       		.byte	2
- 813 0310 37       		.byte	55
- 814 0311 02       		.byte	2
- 815 0312 3E       		.byte	62
- 816 0313 15       		.byte	21
- 817 0314 3F       		.byte	63
- 818 0315 04       		.byte	4
- 819 0316 40       		.byte	64
- 820 0317 20       		.byte	32
- 821 0318 41       		.byte	65
- 822 0319 04       		.byte	4
- 823 031a 45       		.byte	69
- 824 031b D0       		.byte	-48
- 825 031c 46       		.byte	70
- 826 031d 10       		.byte	16
- 827 031e 47       		.byte	71
- 828 031f 25       		.byte	37
- 829 0320 48       		.byte	72
- 830 0321 3A       		.byte	58
- 831 0322 49       		.byte	73
- 832 0323 FF       		.byte	-1
- 833 0324 4A       		.byte	74
- 834 0325 FF       		.byte	-1
- 835 0326 4B       		.byte	75
- 836 0327 FF       		.byte	-1
- 837 0328 4D       		.byte	77
- 838 0329 A0       		.byte	-96
- 839 032a 4F       		.byte	79
- 840 032b 04       		.byte	4
- 841 032c 50       		.byte	80
- 842 032d 18       		.byte	24
- 843 032e 52       		.byte	82
- 844 032f 80       		.byte	-128
- 845 0330 54       		.byte	84
- 846 0331 07       		.byte	7
- 847 0332 58       		.byte	88
- 848 0333 04       		.byte	4
- 849 0334 59       		.byte	89
- 850 0335 04       		.byte	4
- 851 0336 5A       		.byte	90
- 852 0337 04       		.byte	4
- 853 0338 5B       		.byte	91
- 854 0339 04       		.byte	4
- 855 033a 5C       		.byte	92
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 16
+ 799 0302 8A       		.byte	-118
+ 800 0303 04       		.byte	4
+ 801 0304 8C       		.byte	-116
+ 802 0305 13       		.byte	19
+ 803 0306 8D       		.byte	-115
+ 804 0307 10       		.byte	16
+ 805 0308 8E       		.byte	-114
+ 806 0309 0C       		.byte	12
+ 807 030a 91       		.byte	-111
+ 808 030b 1C       		.byte	28
+ 809 030c 93       		.byte	-109
+ 810 030d 22       		.byte	34
+ 811 030e 95       		.byte	-107
+ 812 030f 18       		.byte	24
+ 813 0310 96       		.byte	-106
+ 814 0311 20       		.byte	32
+ 815 0312 99       		.byte	-103
+ 816 0313 1C       		.byte	28
+ 817 0314 9B       		.byte	-101
+ 818 0315 21       		.byte	33
+ 819 0316 9F       		.byte	-97
+ 820 0317 03       		.byte	3
+ 821 0318 A1       		.byte	-95
+ 822 0319 3F       		.byte	63
+ 823 031a A2       		.byte	-94
+ 824 031b 20       		.byte	32
+ 825 031c A5       		.byte	-91
+ 826 031d 04       		.byte	4
+ 827 031e A6       		.byte	-90
+ 828 031f 15       		.byte	21
+ 829 0320 A8       		.byte	-88
+ 830 0321 0A       		.byte	10
+ 831 0322 A9       		.byte	-87
+ 832 0323 27       		.byte	39
+ 833 0324 AA       		.byte	-86
+ 834 0325 14       		.byte	20
+ 835 0326 AB       		.byte	-85
+ 836 0327 18       		.byte	24
+ 837 0328 AE       		.byte	-82
+ 838 0329 08       		.byte	8
+ 839 032a B0       		.byte	-80
+ 840 032b 0F       		.byte	15
+ 841 032c B1       		.byte	-79
+ 842 032d 1F       		.byte	31
+ 843 032e B3       		.byte	-77
+ 844 032f 20       		.byte	32
+ 845 0330 B4       		.byte	-76
+ 846 0331 20       		.byte	32
+ 847 0332 B6       		.byte	-74
+ 848 0333 10       		.byte	16
+ 849 0334 B9       		.byte	-71
+ 850 0335 08       		.byte	8
+ 851 0336 BA       		.byte	-70
+ 852 0337 02       		.byte	2
+ 853 0338 BB       		.byte	-69
+ 854 0339 02       		.byte	2
+ 855 033a BE       		.byte	-66
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 16
 
 
- 856 033b 31       		.byte	49
- 857 033c 5D       		.byte	93
- 858 033d 33       		.byte	51
- 859 033e 5F       		.byte	95
- 860 033f 01       		.byte	1
- 861 0340 60       		.byte	96
- 862 0341 40       		.byte	64
- 863 0342 62       		.byte	98
- 864 0343 C0       		.byte	-64
- 865 0344 64       		.byte	100
- 866 0345 40       		.byte	64
- 867 0346 65       		.byte	101
- 868 0347 40       		.byte	64
- 869 0348 66       		.byte	102
- 870 0349 C0       		.byte	-64
- 871 034a 68       		.byte	104
- 872 034b C0       		.byte	-64
- 873 034c 6A       		.byte	106
- 874 034d C0       		.byte	-64
- 875 034e 6C       		.byte	108
- 876 034f C0       		.byte	-64
- 877 0350 6E       		.byte	110
- 878 0351 C0       		.byte	-64
- 879 0352 88       		.byte	-120
- 880 0353 01       		.byte	1
- 881 0354 91       		.byte	-111
- 882 0355 01       		.byte	1
- 883 0356 9A       		.byte	-102
- 884 0357 0C       		.byte	12
- 885 0358 9F       		.byte	-97
- 886 0359 02       		.byte	2
- 887 035a A6       		.byte	-90
- 888 035b 08       		.byte	8
- 889 035c AA       		.byte	-86
- 890 035d 07       		.byte	7
- 891 035e B0       		.byte	-80
- 892 035f 08       		.byte	8
- 893 0360 B2       		.byte	-78
- 894 0361 02       		.byte	2
- 895 0362 B4       		.byte	-76
- 896 0363 01       		.byte	1
- 897 0364 B5       		.byte	-75
- 898 0365 02       		.byte	2
- 899 0366 B6       		.byte	-74
- 900 0367 04       		.byte	4
- 901 0368 B7       		.byte	-73
- 902 0369 01       		.byte	1
- 903 036a BF       		.byte	-65
- 904 036b 40       		.byte	64
- 905 036c D6       		.byte	-42
- 906 036d 08       		.byte	8
- 907 036e D8       		.byte	-40
- 908 036f 04       		.byte	4
- 909 0370 D9       		.byte	-39
- 910 0371 04       		.byte	4
- 911 0372 DB       		.byte	-37
- 912 0373 04       		.byte	4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 17
+ 856 033b 50       		.byte	80
+ 857 033c D6       		.byte	-42
+ 858 033d 02       		.byte	2
+ 859 033e D7       		.byte	-41
+ 860 033f 13       		.byte	19
+ 861 0340 D8       		.byte	-40
+ 862 0341 04       		.byte	4
+ 863 0342 D9       		.byte	-39
+ 864 0343 04       		.byte	4
+ 865 0344 DB       		.byte	-37
+ 866 0345 04       		.byte	4
+ 867 0346 DC       		.byte	-36
+ 868 0347 11       		.byte	17
+ 869 0348 DD       		.byte	-35
+ 870 0349 10       		.byte	16
+ 871 034a DF       		.byte	-33
+ 872 034b 01       		.byte	1
+ 873 034c 01       		.byte	1
+ 874 034d 08       		.byte	8
+ 875 034e 03       		.byte	3
+ 876 034f 0A       		.byte	10
+ 877 0350 04       		.byte	4
+ 878 0351 40       		.byte	64
+ 879 0352 05       		.byte	5
+ 880 0353 10       		.byte	16
+ 881 0354 0B       		.byte	11
+ 882 0355 10       		.byte	16
+ 883 0356 0E       		.byte	14
+ 884 0357 20       		.byte	32
+ 885 0358 0F       		.byte	15
+ 886 0359 0A       		.byte	10
+ 887 035a 10       		.byte	16
+ 888 035b 04       		.byte	4
+ 889 035c 11       		.byte	17
+ 890 035d 08       		.byte	8
+ 891 035e 12       		.byte	18
+ 892 035f 42       		.byte	66
+ 893 0360 14       		.byte	20
+ 894 0361 44       		.byte	68
+ 895 0362 15       		.byte	21
+ 896 0363 08       		.byte	8
+ 897 0364 18       		.byte	24
+ 898 0365 04       		.byte	4
+ 899 0366 19       		.byte	25
+ 900 0367 80       		.byte	-128
+ 901 0368 1B       		.byte	27
+ 902 0369 03       		.byte	3
+ 903 036a 1D       		.byte	29
+ 904 036b 10       		.byte	16
+ 905 036c 1E       		.byte	30
+ 906 036d 20       		.byte	32
+ 907 036e 1F       		.byte	31
+ 908 036f 0C       		.byte	12
+ 909 0370 21       		.byte	33
+ 910 0371 02       		.byte	2
+ 911 0372 23       		.byte	35
+ 912 0373 10       		.byte	16
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 17
 
 
- 913 0374 DC       		.byte	-36
- 914 0375 23       		.byte	35
- 915 0376 DD       		.byte	-35
- 916 0377 20       		.byte	32
- 917 0378 DF       		.byte	-33
- 918 0379 01       		.byte	1
- 919 037a 00       		.byte	0
- 920 037b 10       		.byte	16
- 921 037c 06       		.byte	6
- 922 037d 45       		.byte	69
- 923 037e 09       		.byte	9
- 924 037f 20       		.byte	32
- 925 0380 0D       		.byte	13
- 926 0381 A0       		.byte	-96
- 927 0382 0E       		.byte	14
- 928 0383 10       		.byte	16
- 929 0384 10       		.byte	16
- 930 0385 28       		.byte	40
- 931 0386 14       		.byte	20
- 932 0387 40       		.byte	64
- 933 0388 15       		.byte	21
- 934 0389 20       		.byte	32
- 935 038a 18       		.byte	24
- 936 038b 10       		.byte	16
- 937 038c 19       		.byte	25
- 938 038d 20       		.byte	32
- 939 038e 1A       		.byte	26
- 940 038f 41       		.byte	65
- 941 0390 1C       		.byte	28
- 942 0391 40       		.byte	64
- 943 0392 1D       		.byte	29
- 944 0393 40       		.byte	64
- 945 0394 1E       		.byte	30
- 946 0395 04       		.byte	4
- 947 0396 1F       		.byte	31
- 948 0397 08       		.byte	8
- 949 0398 21       		.byte	33
+ 913 0374 24       		.byte	36
+ 914 0375 40       		.byte	64
+ 915 0376 26       		.byte	38
+ 916 0377 06       		.byte	6
+ 917 0378 27       		.byte	39
+ 918 0379 08       		.byte	8
+ 919 037a 28       		.byte	40
+ 920 037b A0       		.byte	-96
+ 921 037c 29       		.byte	41
+ 922 037d 20       		.byte	32
+ 923 037e 2C       		.byte	44
+ 924 037f C0       		.byte	-64
+ 925 0380 2F       		.byte	47
+ 926 0381 06       		.byte	6
+ 927 0382 31       		.byte	49
+ 928 0383 0B       		.byte	11
+ 929 0384 32       		.byte	50
+ 930 0385 10       		.byte	16
+ 931 0386 33       		.byte	51
+ 932 0387 80       		.byte	-128
+ 933 0388 34       		.byte	52
+ 934 0389 04       		.byte	4
+ 935 038a 36       		.byte	54
+ 936 038b 04       		.byte	4
+ 937 038c 38       		.byte	56
+ 938 038d A8       		.byte	-88
+ 939 038e 3C       		.byte	60
+ 940 038f 48       		.byte	72
+ 941 0390 3D       		.byte	61
+ 942 0391 08       		.byte	8
+ 943 0392 3F       		.byte	63
+ 944 0393 08       		.byte	8
+ 945 0394 5A       		.byte	90
+ 946 0395 02       		.byte	2
+ 947 0396 69       		.byte	105
+ 948 0397 14       		.byte	20
+ 949 0398 6A       		.byte	106
  950 0399 10       		.byte	16
- 951 039a 22       		.byte	34
- 952 039b 80       		.byte	-128
- 953 039c 25       		.byte	37
- 954 039d 20       		.byte	32
- 955 039e 26       		.byte	38
- 956 039f 04       		.byte	4
- 957 03a0 27       		.byte	39
- 958 03a1 81       		.byte	-127
- 959 03a2 28       		.byte	40
- 960 03a3 08       		.byte	8
- 961 03a4 2B       		.byte	43
- 962 03a5 08       		.byte	8
- 963 03a6 2F       		.byte	47
- 964 03a7 20       		.byte	32
- 965 03a8 31       		.byte	49
- 966 03a9 81       		.byte	-127
- 967 03aa 32       		.byte	50
- 968 03ab 01       		.byte	1
- 969 03ac 36       		.byte	54
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 18
+ 951 039a 6B       		.byte	107
+ 952 039b 11       		.byte	17
+ 953 039c 70       		.byte	112
+ 954 039d 70       		.byte	112
+ 955 039e 71       		.byte	113
+ 956 039f 08       		.byte	8
+ 957 03a0 72       		.byte	114
+ 958 03a1 01       		.byte	1
+ 959 03a2 91       		.byte	-111
+ 960 03a3 28       		.byte	40
+ 961 03a4 92       		.byte	-110
+ 962 03a5 22       		.byte	34
+ 963 03a6 93       		.byte	-109
+ 964 03a7 05       		.byte	5
+ 965 03a8 94       		.byte	-108
+ 966 03a9 80       		.byte	-128
+ 967 03aa 95       		.byte	-107
+ 968 03ab 40       		.byte	64
+ 969 03ac 96       		.byte	-106
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 18
 
 
- 970 03ad 20       		.byte	32
- 971 03ae 37       		.byte	55
- 972 03af 01       		.byte	1
- 973 03b0 3C       		.byte	60
- 974 03b1 02       		.byte	2
- 975 03b2 3F       		.byte	63
- 976 03b3 20       		.byte	32
- 977 03b4 45       		.byte	69
- 978 03b5 22       		.byte	34
- 979 03b6 4D       		.byte	77
- 980 03b7 01       		.byte	1
- 981 03b8 54       		.byte	84
- 982 03b9 28       		.byte	40
- 983 03ba 55       		.byte	85
- 984 03bb 02       		.byte	2
- 985 03bc 56       		.byte	86
- 986 03bd 01       		.byte	1
- 987 03be 57       		.byte	87
- 988 03bf 10       		.byte	16
- 989 03c0 5A       		.byte	90
- 990 03c1 88       		.byte	-120
- 991 03c2 5B       		.byte	91
- 992 03c3 20       		.byte	32
- 993 03c4 5D       		.byte	93
- 994 03c5 21       		.byte	33
- 995 03c6 5E       		.byte	94
- 996 03c7 04       		.byte	4
- 997 03c8 5F       		.byte	95
- 998 03c9 80       		.byte	-128
- 999 03ca 60       		.byte	96
- 1000 03cb 04       		.byte	4
- 1001 03cc 61       		.byte	97
+ 970 03ad 11       		.byte	17
+ 971 03ae 98       		.byte	-104
+ 972 03af 80       		.byte	-128
+ 973 03b0 99       		.byte	-103
+ 974 03b1 28       		.byte	40
+ 975 03b2 9A       		.byte	-102
+ 976 03b3 18       		.byte	24
+ 977 03b4 9C       		.byte	-100
+ 978 03b5 10       		.byte	16
+ 979 03b6 9D       		.byte	-99
+ 980 03b7 90       		.byte	-112
+ 981 03b8 9F       		.byte	-97
+ 982 03b9 11       		.byte	17
+ 983 03ba A2       		.byte	-94
+ 984 03bb 21       		.byte	33
+ 985 03bc A3       		.byte	-93
+ 986 03bd 80       		.byte	-128
+ 987 03be A4       		.byte	-92
+ 988 03bf 24       		.byte	36
+ 989 03c0 A5       		.byte	-91
+ 990 03c1 0A       		.byte	10
+ 991 03c2 A6       		.byte	-90
+ 992 03c3 08       		.byte	8
+ 993 03c4 A7       		.byte	-89
+ 994 03c5 0A       		.byte	10
+ 995 03c6 A8       		.byte	-88
+ 996 03c7 20       		.byte	32
+ 997 03c8 A9       		.byte	-87
+ 998 03c9 08       		.byte	8
+ 999 03ca AF       		.byte	-81
+ 1000 03cb 12       		.byte	18
+ 1001 03cc B7       		.byte	-73
  1002 03cd 80       		.byte	-128
- 1003 03ce 62       		.byte	98
- 1004 03cf 04       		.byte	4
- 1005 03d0 74       		.byte	116
- 1006 03d1 01       		.byte	1
- 1007 03d2 92       		.byte	-110
- 1008 03d3 98       		.byte	-104
- 1009 03d4 94       		.byte	-108
- 1010 03d5 40       		.byte	64
- 1011 03d6 96       		.byte	-106
- 1012 03d7 40       		.byte	64
- 1013 03d8 99       		.byte	-103
- 1014 03d9 01       		.byte	1
- 1015 03da 9A       		.byte	-102
- 1016 03db 40       		.byte	64
- 1017 03dc 9B       		.byte	-101
- 1018 03dd 20       		.byte	32
- 1019 03de 9E       		.byte	-98
- 1020 03df 04       		.byte	4
- 1021 03e0 A8       		.byte	-88
- 1022 03e1 40       		.byte	64
- 1023 03e2 AB       		.byte	-85
- 1024 03e3 20       		.byte	32
- 1025 03e4 AF       		.byte	-81
- 1026 03e5 80       		.byte	-128
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 19
+ 1003 03ce C0       		.byte	-64
+ 1004 03cf C7       		.byte	-57
+ 1005 03d0 C2       		.byte	-62
+ 1006 03d1 E4       		.byte	-28
+ 1007 03d2 C4       		.byte	-60
+ 1008 03d3 7F       		.byte	127
+ 1009 03d4 CA       		.byte	-54
+ 1010 03d5 B7       		.byte	-73
+ 1011 03d6 CC       		.byte	-52
+ 1012 03d7 4F       		.byte	79
+ 1013 03d8 CE       		.byte	-50
+ 1014 03d9 5E       		.byte	94
+ 1015 03da D6       		.byte	-42
+ 1016 03db 01       		.byte	1
+ 1017 03dc 01       		.byte	1
+ 1018 03dd 11       		.byte	17
+ 1019 03de 03       		.byte	3
+ 1020 03df 28       		.byte	40
+ 1021 03e0 05       		.byte	5
+ 1022 03e1 30       		.byte	48
+ 1023 03e2 09       		.byte	9
+ 1024 03e3 30       		.byte	48
+ 1025 03e4 13       		.byte	19
+ 1026 03e5 03       		.byte	3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 19
 
 
- 1027 03e6 B0       		.byte	-80
+ 1027 03e6 14       		.byte	20
  1028 03e7 08       		.byte	8
- 1029 03e8 B2       		.byte	-78
- 1030 03e9 80       		.byte	-128
- 1031 03ea C0       		.byte	-64
- 1032 03eb D2       		.byte	-46
- 1033 03ec C2       		.byte	-62
- 1034 03ed E2       		.byte	-30
- 1035 03ee C4       		.byte	-60
- 1036 03ef 56       		.byte	86
- 1037 03f0 CA       		.byte	-54
- 1038 03f1 40       		.byte	64
- 1039 03f2 CC       		.byte	-52
- 1040 03f3 A9       		.byte	-87
- 1041 03f4 CE       		.byte	-50
- 1042 03f5 A0       		.byte	-96
- 1043 03f6 D0       		.byte	-48
- 1044 03f7 A0       		.byte	-96
- 1045 03f8 D6       		.byte	-42
- 1046 03f9 FE       		.byte	-2
- 1047 03fa D8       		.byte	-40
- 1048 03fb 0E       		.byte	14
- 1049 03fc EE       		.byte	-18
- 1050 03fd 01       		.byte	1
- 1051 03fe E2       		.byte	-30
- 1052 03ff 02       		.byte	2
- 1053 0400 E4       		.byte	-28
- 1054 0401 60       		.byte	96
- 1055 0402 06       		.byte	6
- 1056 0403 01       		.byte	1
- 1057 0404 07       		.byte	7
+ 1029 03e8 15       		.byte	21
+ 1030 03e9 22       		.byte	34
+ 1031 03ea 16       		.byte	22
+ 1032 03eb 02       		.byte	2
+ 1033 03ec 17       		.byte	23
+ 1034 03ed 18       		.byte	24
+ 1035 03ee 18       		.byte	24
+ 1036 03ef 02       		.byte	2
+ 1037 03f0 1A       		.byte	26
+ 1038 03f1 0C       		.byte	12
+ 1039 03f2 1B       		.byte	27
+ 1040 03f3 03       		.byte	3
+ 1041 03f4 23       		.byte	35
+ 1042 03f5 03       		.byte	3
+ 1043 03f6 24       		.byte	36
+ 1044 03f7 0E       		.byte	14
+ 1045 03f8 25       		.byte	37
+ 1046 03f9 03       		.byte	3
+ 1047 03fa 27       		.byte	39
+ 1048 03fb 04       		.byte	4
+ 1049 03fc 28       		.byte	40
+ 1050 03fd 0E       		.byte	14
+ 1051 03fe 29       		.byte	41
+ 1052 03ff 03       		.byte	3
+ 1053 0400 2C       		.byte	44
+ 1054 0401 04       		.byte	4
+ 1055 0402 2D       		.byte	45
+ 1056 0403 03       		.byte	3
+ 1057 0404 2E       		.byte	46
  1058 0405 03       		.byte	3
- 1059 0406 0A       		.byte	10
- 1060 0407 08       		.byte	8
- 1061 0408 0D       		.byte	13
- 1062 0409 02       		.byte	2
- 1063 040a 0E       		.byte	14
- 1064 040b 0D       		.byte	13
- 1065 040c 12       		.byte	18
- 1066 040d 02       		.byte	2
- 1067 040e 15       		.byte	21
- 1068 040f 08       		.byte	8
- 1069 0410 22       		.byte	34
- 1070 0411 04       		.byte	4
- 1071 0412 2B       		.byte	43
- 1072 0413 0C       		.byte	12
- 1073 0414 30       		.byte	48
- 1074 0415 02       		.byte	2
- 1075 0416 31       		.byte	49
- 1076 0417 01       		.byte	1
- 1077 0418 32       		.byte	50
+ 1059 0406 31       		.byte	49
+ 1060 0407 03       		.byte	3
+ 1061 0408 32       		.byte	50
+ 1062 0409 0E       		.byte	14
+ 1063 040a 33       		.byte	51
+ 1064 040b 30       		.byte	48
+ 1065 040c 34       		.byte	52
+ 1066 040d 01       		.byte	1
+ 1067 040e 37       		.byte	55
+ 1068 040f 0C       		.byte	12
+ 1069 0410 3F       		.byte	63
+ 1070 0411 40       		.byte	64
+ 1071 0412 40       		.byte	64
+ 1072 0413 65       		.byte	101
+ 1073 0414 41       		.byte	65
+ 1074 0415 04       		.byte	4
+ 1075 0416 42       		.byte	66
+ 1076 0417 02       		.byte	2
+ 1077 0418 44       		.byte	68
  1078 0419 01       		.byte	1
- 1079 041a 33       		.byte	51
- 1080 041b 04       		.byte	4
- 1081 041c 34       		.byte	52
- 1082 041d 04       		.byte	4
- 1083 041e 35       		.byte	53
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 20
+ 1079 041a 46       		.byte	70
+ 1080 041b 0E       		.byte	14
+ 1081 041c 47       		.byte	71
+ 1082 041d 0C       		.byte	12
+ 1083 041e 48       		.byte	72
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 20
 
 
- 1084 041f 02       		.byte	2
- 1085 0420 36       		.byte	54
- 1086 0421 08       		.byte	8
- 1087 0422 37       		.byte	55
- 1088 0423 08       		.byte	8
- 1089 0424 3E       		.byte	62
- 1090 0425 10       		.byte	16
- 1091 0426 52       		.byte	82
- 1092 0427 80       		.byte	-128
- 1093 0428 54       		.byte	84
- 1094 0429 07       		.byte	7
- 1095 042a 58       		.byte	88
- 1096 042b 04       		.byte	4
- 1097 042c 59       		.byte	89
- 1098 042d 04       		.byte	4
- 1099 042e 5B       		.byte	91
- 1100 042f 04       		.byte	4
- 1101 0430 5F       		.byte	95
- 1102 0431 01       		.byte	1
- 1103 0432 80       		.byte	-128
- 1104 0433 01       		.byte	1
- 1105 0434 81       		.byte	-127
- 1106 0435 01       		.byte	1
- 1107 0436 82       		.byte	-126
- 1108 0437 0E       		.byte	14
- 1109 0438 87       		.byte	-121
- 1110 0439 01       		.byte	1
- 1111 043a 8F       		.byte	-113
- 1112 043b 02       		.byte	2
- 1113 043c 93       		.byte	-109
- 1114 043d 02       		.byte	2
- 1115 043e 94       		.byte	-108
- 1116 043f 44       		.byte	68
- 1117 0440 96       		.byte	-106
- 1118 0441 31       		.byte	49
- 1119 0442 98       		.byte	-104
- 1120 0443 22       		.byte	34
- 1121 0444 9A       		.byte	-102
- 1122 0445 51       		.byte	81
- 1123 0446 9B       		.byte	-101
- 1124 0447 01       		.byte	1
- 1125 0448 A4       		.byte	-92
- 1126 0449 67       		.byte	103
- 1127 044a A8       		.byte	-88
- 1128 044b 67       		.byte	103
- 1129 044c A9       		.byte	-87
- 1130 044d 01       		.byte	1
- 1131 044e B0       		.byte	-80
- 1132 044f 07       		.byte	7
- 1133 0450 B1       		.byte	-79
- 1134 0451 01       		.byte	1
- 1135 0452 B2       		.byte	-78
- 1136 0453 60       		.byte	96
- 1137 0454 B5       		.byte	-75
- 1138 0455 02       		.byte	2
- 1139 0456 B6       		.byte	-74
- 1140 0457 18       		.byte	24
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 21
+ 1084 041f 14       		.byte	20
+ 1085 0420 49       		.byte	73
+ 1086 0421 FF       		.byte	-1
+ 1087 0422 4A       		.byte	74
+ 1088 0423 FF       		.byte	-1
+ 1089 0424 4B       		.byte	75
+ 1090 0425 FF       		.byte	-1
+ 1091 0426 4C       		.byte	76
+ 1092 0427 62       		.byte	98
+ 1093 0428 4D       		.byte	77
+ 1094 0429 A0       		.byte	-96
+ 1095 042a 4E       		.byte	78
+ 1096 042b F0       		.byte	-16
+ 1097 042c 4F       		.byte	79
+ 1098 042d 41       		.byte	65
+ 1099 042e 50       		.byte	80
+ 1100 042f 0C       		.byte	12
+ 1101 0430 54       		.byte	84
+ 1102 0431 18       		.byte	24
+ 1103 0432 56       		.byte	86
+ 1104 0433 04       		.byte	4
+ 1105 0434 58       		.byte	88
+ 1106 0435 04       		.byte	4
+ 1107 0436 59       		.byte	89
+ 1108 0437 04       		.byte	4
+ 1109 0438 5A       		.byte	90
+ 1110 0439 04       		.byte	4
+ 1111 043a 5B       		.byte	91
+ 1112 043b 04       		.byte	4
+ 1113 043c 5C       		.byte	92
+ 1114 043d 11       		.byte	17
+ 1115 043e 5D       		.byte	93
+ 1116 043f 11       		.byte	17
+ 1117 0440 5F       		.byte	95
+ 1118 0441 01       		.byte	1
+ 1119 0442 66       		.byte	102
+ 1120 0443 40       		.byte	64
+ 1121 0444 67       		.byte	103
+ 1122 0445 02       		.byte	2
+ 1123 0446 69       		.byte	105
+ 1124 0447 10       		.byte	16
+ 1125 0448 6A       		.byte	106
+ 1126 0449 30       		.byte	48
+ 1127 044a 6B       		.byte	107
+ 1128 044b 10       		.byte	16
+ 1129 044c 6D       		.byte	109
+ 1130 044d 10       		.byte	16
+ 1131 044e 6E       		.byte	110
+ 1132 044f 10       		.byte	16
+ 1133 0450 6F       		.byte	111
+ 1134 0451 12       		.byte	18
+ 1135 0452 84       		.byte	-124
+ 1136 0453 04       		.byte	4
+ 1137 0454 8A       		.byte	-118
+ 1138 0455 03       		.byte	3
+ 1139 0456 98       		.byte	-104
+ 1140 0457 01       		.byte	1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 21
 
 
- 1141 0458 B9       		.byte	-71
- 1142 0459 02       		.byte	2
- 1143 045a BB       		.byte	-69
- 1144 045b 80       		.byte	-128
- 1145 045c BE       		.byte	-66
- 1146 045d 40       		.byte	64
- 1147 045e BF       		.byte	-65
- 1148 045f 10       		.byte	16
- 1149 0460 C0       		.byte	-64
- 1150 0461 45       		.byte	69
- 1151 0462 C1       		.byte	-63
- 1152 0463 06       		.byte	6
- 1153 0464 C2       		.byte	-62
- 1154 0465 02       		.byte	2
- 1155 0466 C4       		.byte	-60
- 1156 0467 01       		.byte	1
- 1157 0468 C6       		.byte	-58
- 1158 0469 CE       		.byte	-50
- 1159 046a C8       		.byte	-56
- 1160 046b 0C       		.byte	12
+ 1141 0458 A6       		.byte	-90
+ 1142 0459 08       		.byte	8
+ 1143 045a AA       		.byte	-86
+ 1144 045b 08       		.byte	8
+ 1145 045c AE       		.byte	-82
+ 1146 045d 04       		.byte	4
+ 1147 045e B0       		.byte	-80
+ 1148 045f 01       		.byte	1
+ 1149 0460 B2       		.byte	-78
+ 1150 0461 04       		.byte	4
+ 1151 0462 B4       		.byte	-76
+ 1152 0463 02       		.byte	2
+ 1153 0464 B6       		.byte	-74
+ 1154 0465 08       		.byte	8
+ 1155 0466 BE       		.byte	-66
+ 1156 0467 40       		.byte	64
+ 1157 0468 C0       		.byte	-64
+ 1158 0469 03       		.byte	3
+ 1159 046a C5       		.byte	-59
+ 1160 046b 40       		.byte	64
  1161 046c C9       		.byte	-55
  1162 046d FF       		.byte	-1
  1163 046e CA       		.byte	-54
- 1164 046f FF       		.byte	-1
+ 1164 046f 07       		.byte	7
  1165 0470 CB       		.byte	-53
  1166 0471 FF       		.byte	-1
  1167 0472 CC       		.byte	-52
- 1168 0473 62       		.byte	98
+ 1168 0473 40       		.byte	64
  1169 0474 CD       		.byte	-51
- 1170 0475 A0       		.byte	-96
+ 1170 0475 20       		.byte	32
  1171 0476 CE       		.byte	-50
  1172 0477 F0       		.byte	-16
  1173 0478 CF       		.byte	-49
- 1174 0479 41       		.byte	65
+ 1174 0479 05       		.byte	5
  1175 047a D0       		.byte	-48
- 1176 047b 0C       		.byte	12
+ 1176 047b 08       		.byte	8
  1177 047c D4       		.byte	-44
- 1178 047d 18       		.byte	24
- 1179 047e D6       		.byte	-42
+ 1178 047d 07       		.byte	7
+ 1179 047e D8       		.byte	-40
  1180 047f 04       		.byte	4
- 1181 0480 D8       		.byte	-40
+ 1181 0480 DA       		.byte	-38
  1182 0481 04       		.byte	4
- 1183 0482 D9       		.byte	-39
+ 1183 0482 DB       		.byte	-37
  1184 0483 04       		.byte	4
- 1185 0484 DA       		.byte	-38
- 1186 0485 04       		.byte	4
- 1187 0486 DB       		.byte	-37
- 1188 0487 04       		.byte	4
- 1189 0488 DC       		.byte	-36
- 1190 0489 11       		.byte	17
- 1191 048a DD       		.byte	-35
- 1192 048b 11       		.byte	17
- 1193 048c DF       		.byte	-33
- 1194 048d 01       		.byte	1
- 1195 048e E6       		.byte	-26
- 1196 048f 40       		.byte	64
- 1197 0490 E7       		.byte	-25
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 22
+ 1185 0484 DD       		.byte	-35
+ 1186 0485 01       		.byte	1
+ 1187 0486 DF       		.byte	-33
+ 1188 0487 01       		.byte	1
+ 1189 0488 E0       		.byte	-32
+ 1190 0489 40       		.byte	64
+ 1191 048a E1       		.byte	-31
+ 1192 048b A8       		.byte	-88
+ 1193 048c E2       		.byte	-30
+ 1194 048d 40       		.byte	64
+ 1195 048e E3       		.byte	-29
+ 1196 048f 20       		.byte	32
+ 1197 0490 06       		.byte	6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 22
 
 
- 1198 0491 02       		.byte	2
- 1199 0492 E9       		.byte	-23
+ 1198 0491 18       		.byte	24
+ 1199 0492 08       		.byte	8
  1200 0493 10       		.byte	16
- 1201 0494 EA       		.byte	-22
- 1202 0495 30       		.byte	48
- 1203 0496 EB       		.byte	-21
- 1204 0497 10       		.byte	16
- 1205 0498 ED       		.byte	-19
- 1206 0499 10       		.byte	16
- 1207 049a EE       		.byte	-18
- 1208 049b 10       		.byte	16
- 1209 049c EF       		.byte	-17
- 1210 049d 12       		.byte	18
- 1211 049e 00       		.byte	0
- 1212 049f 64       		.byte	100
- 1213 04a0 01       		.byte	1
- 1214 04a1 20       		.byte	32
- 1215 04a2 05       		.byte	5
- 1216 04a3 01       		.byte	1
- 1217 04a4 0A       		.byte	10
- 1218 04a5 40       		.byte	64
- 1219 04a6 0E       		.byte	14
- 1220 04a7 28       		.byte	40
- 1221 04a8 10       		.byte	16
- 1222 04a9 80       		.byte	-128
- 1223 04aa 13       		.byte	19
- 1224 04ab 0C       		.byte	12
- 1225 04ac 17       		.byte	23
- 1226 04ad 14       		.byte	20
- 1227 04ae 18       		.byte	24
- 1228 04af 40       		.byte	64
- 1229 04b0 1A       		.byte	26
- 1230 04b1 05       		.byte	5
- 1231 04b2 1B       		.byte	27
- 1232 04b3 04       		.byte	4
- 1233 04b4 1D       		.byte	29
- 1234 04b5 83       		.byte	-125
- 1235 04b6 1E       		.byte	30
- 1236 04b7 20       		.byte	32
- 1237 04b8 22       		.byte	34
- 1238 04b9 58       		.byte	88
- 1239 04ba 23       		.byte	35
- 1240 04bb 40       		.byte	64
- 1241 04bc 26       		.byte	38
- 1242 04bd 02       		.byte	2
- 1243 04be 27       		.byte	39
- 1244 04bf 09       		.byte	9
- 1245 04c0 29       		.byte	41
- 1246 04c1 20       		.byte	32
- 1247 04c2 2C       		.byte	44
+ 1201 0494 09       		.byte	9
+ 1202 0495 08       		.byte	8
+ 1203 0496 0E       		.byte	14
+ 1204 0497 08       		.byte	8
+ 1205 0498 11       		.byte	17
+ 1206 0499 54       		.byte	84
+ 1207 049a 14       		.byte	20
+ 1208 049b 02       		.byte	2
+ 1209 049c 15       		.byte	21
+ 1210 049d 28       		.byte	40
+ 1211 049e 18       		.byte	24
+ 1212 049f 08       		.byte	8
+ 1213 04a0 19       		.byte	25
+ 1214 04a1 04       		.byte	4
+ 1215 04a2 1D       		.byte	29
+ 1216 04a3 80       		.byte	-128
+ 1217 04a4 1E       		.byte	30
+ 1218 04a5 68       		.byte	104
+ 1219 04a6 20       		.byte	32
+ 1220 04a7 01       		.byte	1
+ 1221 04a8 21       		.byte	33
+ 1222 04a9 08       		.byte	8
+ 1223 04aa 22       		.byte	34
+ 1224 04ab 09       		.byte	9
+ 1225 04ac 28       		.byte	40
+ 1226 04ad 10       		.byte	16
+ 1227 04ae 29       		.byte	41
+ 1228 04af 25       		.byte	37
+ 1229 04b0 2B       		.byte	43
+ 1230 04b1 02       		.byte	2
+ 1231 04b2 30       		.byte	48
+ 1232 04b3 02       		.byte	2
+ 1233 04b4 31       		.byte	49
+ 1234 04b5 08       		.byte	8
+ 1235 04b6 32       		.byte	50
+ 1236 04b7 10       		.byte	16
+ 1237 04b8 38       		.byte	56
+ 1238 04b9 02       		.byte	2
+ 1239 04ba 39       		.byte	57
+ 1240 04bb 14       		.byte	20
+ 1241 04bc 40       		.byte	64
+ 1242 04bd 81       		.byte	-127
+ 1243 04be 41       		.byte	65
+ 1244 04bf 10       		.byte	16
+ 1245 04c0 43       		.byte	67
+ 1246 04c1 02       		.byte	2
+ 1247 04c2 47       		.byte	71
  1248 04c3 08       		.byte	8
- 1249 04c4 32       		.byte	50
- 1250 04c5 08       		.byte	8
- 1251 04c6 35       		.byte	53
- 1252 04c7 10       		.byte	16
- 1253 04c8 36       		.byte	54
- 1254 04c9 02       		.byte	2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 23
+ 1249 04c4 48       		.byte	72
+ 1250 04c5 02       		.byte	2
+ 1251 04c6 49       		.byte	73
+ 1252 04c7 20       		.byte	32
+ 1253 04c8 4A       		.byte	74
+ 1254 04c9 01       		.byte	1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 23
 
 
- 1255 04ca 38       		.byte	56
- 1256 04cb 0C       		.byte	12
- 1257 04cc 3B       		.byte	59
- 1258 04cd 40       		.byte	64
- 1259 04ce 3D       		.byte	61
- 1260 04cf 0A       		.byte	10
- 1261 04d0 3F       		.byte	63
- 1262 04d1 80       		.byte	-128
- 1263 04d2 45       		.byte	69
- 1264 04d3 91       		.byte	-111
- 1265 04d4 46       		.byte	70
- 1266 04d5 40       		.byte	64
- 1267 04d6 4C       		.byte	76
- 1268 04d7 08       		.byte	8
- 1269 04d8 4D       		.byte	77
- 1270 04d9 90       		.byte	-112
- 1271 04da 57       		.byte	87
- 1272 04db 60       		.byte	96
- 1273 04dc 59       		.byte	89
- 1274 04dd 02       		.byte	2
- 1275 04de 5A       		.byte	90
- 1276 04df A4       		.byte	-92
- 1277 04e0 5E       		.byte	94
- 1278 04e1 02       		.byte	2
- 1279 04e2 66       		.byte	102
- 1280 04e3 02       		.byte	2
- 1281 04e4 67       		.byte	103
- 1282 04e5 06       		.byte	6
- 1283 04e6 72       		.byte	114
+ 1255 04ca 4C       		.byte	76
+ 1256 04cb 80       		.byte	-128
+ 1257 04cc 51       		.byte	81
+ 1258 04cd 04       		.byte	4
+ 1259 04ce 52       		.byte	82
+ 1260 04cf 40       		.byte	64
+ 1261 04d0 57       		.byte	87
+ 1262 04d1 04       		.byte	4
+ 1263 04d2 5A       		.byte	90
+ 1264 04d3 02       		.byte	2
+ 1265 04d4 5E       		.byte	94
+ 1266 04d5 60       		.byte	96
+ 1267 04d6 5F       		.byte	95
+ 1268 04d7 05       		.byte	5
+ 1269 04d8 60       		.byte	96
+ 1270 04d9 04       		.byte	4
+ 1271 04da 61       		.byte	97
+ 1272 04db 80       		.byte	-128
+ 1273 04dc 63       		.byte	99
+ 1274 04dd 40       		.byte	64
+ 1275 04de 80       		.byte	-128
+ 1276 04df 02       		.byte	2
+ 1277 04e0 82       		.byte	-126
+ 1278 04e1 20       		.byte	32
+ 1279 04e2 87       		.byte	-121
+ 1280 04e3 40       		.byte	64
+ 1281 04e4 8C       		.byte	-116
+ 1282 04e5 21       		.byte	33
+ 1283 04e6 8D       		.byte	-115
  1284 04e7 40       		.byte	64
- 1285 04e8 79       		.byte	121
+ 1285 04e8 90       		.byte	-112
  1286 04e9 04       		.byte	4
- 1287 04ea 7A       		.byte	122
- 1288 04eb 10       		.byte	16
- 1289 04ec 83       		.byte	-125
- 1290 04ed 04       		.byte	4
- 1291 04ee 84       		.byte	-124
- 1292 04ef 08       		.byte	8
- 1293 04f0 86       		.byte	-122
- 1294 04f1 03       		.byte	3
- 1295 04f2 87       		.byte	-121
- 1296 04f3 01       		.byte	1
- 1297 04f4 88       		.byte	-120
- 1298 04f5 40       		.byte	64
- 1299 04f6 8E       		.byte	-114
- 1300 04f7 04       		.byte	4
- 1301 04f8 90       		.byte	-112
- 1302 04f9 08       		.byte	8
- 1303 04fa 93       		.byte	-109
- 1304 04fb 02       		.byte	2
- 1305 04fc 94       		.byte	-108
- 1306 04fd 40       		.byte	64
- 1307 04fe 95       		.byte	-107
- 1308 04ff 14       		.byte	20
- 1309 0500 99       		.byte	-103
- 1310 0501 92       		.byte	-110
- 1311 0502 9A       		.byte	-102
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 24
+ 1287 04ea 91       		.byte	-111
+ 1288 04eb 34       		.byte	52
+ 1289 04ec 92       		.byte	-110
+ 1290 04ed 20       		.byte	32
+ 1291 04ee 93       		.byte	-109
+ 1292 04ef 05       		.byte	5
+ 1293 04f0 94       		.byte	-108
+ 1294 04f1 08       		.byte	8
+ 1295 04f2 95       		.byte	-107
+ 1296 04f3 40       		.byte	64
+ 1297 04f4 98       		.byte	-104
+ 1298 04f5 80       		.byte	-128
+ 1299 04f6 99       		.byte	-103
+ 1300 04f7 21       		.byte	33
+ 1301 04f8 9A       		.byte	-102
+ 1302 04f9 18       		.byte	24
+ 1303 04fa 9B       		.byte	-101
+ 1304 04fb 08       		.byte	8
+ 1305 04fc 9C       		.byte	-100
+ 1306 04fd 30       		.byte	48
+ 1307 04fe 9E       		.byte	-98
+ 1308 04ff 40       		.byte	64
+ 1309 0500 A2       		.byte	-94
+ 1310 0501 21       		.byte	33
+ 1311 0502 A4       		.byte	-92
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 24
 
 
- 1312 0503 40       		.byte	64
- 1313 0504 9B       		.byte	-101
- 1314 0505 14       		.byte	20
- 1315 0506 9C       		.byte	-100
- 1316 0507 40       		.byte	64
- 1317 0508 9F       		.byte	-97
- 1318 0509 01       		.byte	1
- 1319 050a A0       		.byte	-96
- 1320 050b 90       		.byte	-112
- 1321 050c A1       		.byte	-95
- 1322 050d 14       		.byte	20
- 1323 050e A2       		.byte	-94
- 1324 050f 01       		.byte	1
- 1325 0510 A5       		.byte	-91
- 1326 0511 02       		.byte	2
- 1327 0512 A7       		.byte	-89
- 1328 0513 20       		.byte	32
- 1329 0514 C0       		.byte	-64
- 1330 0515 17       		.byte	23
- 1331 0516 C2       		.byte	-62
- 1332 0517 68       		.byte	104
- 1333 0518 C4       		.byte	-60
- 1334 0519 68       		.byte	104
- 1335 051a CA       		.byte	-54
- 1336 051b 24       		.byte	36
- 1337 051c CC       		.byte	-52
- 1338 051d A2       		.byte	-94
- 1339 051e CE       		.byte	-50
- 1340 051f DA       		.byte	-38
- 1341 0520 D0       		.byte	-48
- 1342 0521 B0       		.byte	-80
- 1343 0522 D2       		.byte	-46
- 1344 0523 30       		.byte	48
- 1345 0524 D6       		.byte	-42
- 1346 0525 8F       		.byte	-113
- 1347 0526 D8       		.byte	-40
- 1348 0527 B0       		.byte	-80
- 1349 0528 E0       		.byte	-32
- 1350 0529 08       		.byte	8
- 1351 052a E4       		.byte	-28
- 1352 052b 04       		.byte	4
- 1353 052c 00       		.byte	0
- 1354 052d 33       		.byte	51
- 1355 052e 01       		.byte	1
+ 1312 0503 80       		.byte	-128
+ 1313 0504 A6       		.byte	-90
+ 1314 0505 08       		.byte	8
+ 1315 0506 A7       		.byte	-89
+ 1316 0507 04       		.byte	4
+ 1317 0508 C0       		.byte	-64
+ 1318 0509 60       		.byte	96
+ 1319 050a C2       		.byte	-62
+ 1320 050b 46       		.byte	70
+ 1321 050c C4       		.byte	-60
+ 1322 050d E7       		.byte	-25
+ 1323 050e CA       		.byte	-54
+ 1324 050f 0F       		.byte	15
+ 1325 0510 CC       		.byte	-52
+ 1326 0511 07       		.byte	7
+ 1327 0512 CE       		.byte	-50
+ 1328 0513 07       		.byte	7
+ 1329 0514 D0       		.byte	-48
+ 1330 0515 4D       		.byte	77
+ 1331 0516 D2       		.byte	-46
+ 1332 0517 0C       		.byte	12
+ 1333 0518 D6       		.byte	-42
+ 1334 0519 F1       		.byte	-15
+ 1335 051a D8       		.byte	-40
+ 1336 051b 0D       		.byte	13
+ 1337 051c 30       		.byte	48
+ 1338 051d 20       		.byte	32
+ 1339 051e 33       		.byte	51
+ 1340 051f 08       		.byte	8
+ 1341 0520 36       		.byte	54
+ 1342 0521 10       		.byte	16
+ 1343 0522 CC       		.byte	-52
+ 1344 0523 70       		.byte	112
+ 1345 0524 84       		.byte	-124
+ 1346 0525 20       		.byte	32
+ 1347 0526 A4       		.byte	-92
+ 1348 0527 20       		.byte	32
+ 1349 0528 A6       		.byte	-90
+ 1350 0529 10       		.byte	16
+ 1351 052a A7       		.byte	-89
+ 1352 052b 08       		.byte	8
+ 1353 052c E2       		.byte	-30
+ 1354 052d 40       		.byte	64
+ 1355 052e 86       		.byte	-122
  1356 052f 10       		.byte	16
- 1357 0530 02       		.byte	2
- 1358 0531 0C       		.byte	12
- 1359 0532 04       		.byte	4
- 1360 0533 02       		.byte	2
- 1361 0534 05       		.byte	5
- 1362 0535 08       		.byte	8
- 1363 0536 08       		.byte	8
- 1364 0537 1F       		.byte	31
- 1365 0538 09       		.byte	9
- 1366 0539 3C       		.byte	60
- 1367 053a 0A       		.byte	10
- 1368 053b 20       		.byte	32
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 25
+ 1357 0530 A6       		.byte	-90
+ 1358 0531 10       		.byte	16
+ 1359 0532 A7       		.byte	-89
+ 1360 0533 08       		.byte	8
+ 1361 0534 E6       		.byte	-26
+ 1362 0535 10       		.byte	16
+ 1363 0536 A7       		.byte	-89
+ 1364 0537 08       		.byte	8
+ 1365 0538 0B       		.byte	11
+ 1366 0539 02       		.byte	2
+ 1367 053a 0F       		.byte	15
+ 1368 053b 08       		.byte	8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 25
 
 
- 1369 053c 0B       		.byte	11
- 1370 053d C2       		.byte	-62
- 1371 053e 0D       		.byte	13
- 1372 053f C0       		.byte	-64
- 1373 0540 0E       		.byte	14
- 1374 0541 23       		.byte	35
- 1375 0542 10       		.byte	16
+ 1369 053c 62       		.byte	98
+ 1370 053d 08       		.byte	8
+ 1371 053e 64       		.byte	100
+ 1372 053f 20       		.byte	32
+ 1373 0540 C2       		.byte	-62
+ 1374 0541 03       		.byte	3
+ 1375 0542 D8       		.byte	-40
  1376 0543 03       		.byte	3
- 1377 0544 11       		.byte	17
- 1378 0545 E7       		.byte	-25
- 1379 0546 13       		.byte	19
- 1380 0547 18       		.byte	24
- 1381 0548 14       		.byte	20
- 1382 0549 1C       		.byte	28
- 1383 054a 15       		.byte	21
- 1384 054b 18       		.byte	24
- 1385 054c 16       		.byte	22
- 1386 054d 23       		.byte	35
- 1387 054e 19       		.byte	25
- 1388 054f 1C       		.byte	28
- 1389 0550 1B       		.byte	27
- 1390 0551 E1       		.byte	-31
- 1391 0552 1C       		.byte	28
- 1392 0553 01       		.byte	1
- 1393 0554 1F       		.byte	31
+ 1377 0544 82       		.byte	-126
+ 1378 0545 08       		.byte	8
+ 1379 0546 83       		.byte	-125
+ 1380 0547 01       		.byte	1
+ 1381 0548 8C       		.byte	-116
+ 1382 0549 20       		.byte	32
+ 1383 054a 93       		.byte	-109
+ 1384 054b 02       		.byte	2
+ 1385 054c 9C       		.byte	-100
+ 1386 054d 20       		.byte	32
+ 1387 054e A3       		.byte	-93
+ 1388 054f 04       		.byte	4
+ 1389 0550 A6       		.byte	-90
+ 1390 0551 08       		.byte	8
+ 1391 0552 E0       		.byte	-32
+ 1392 0553 02       		.byte	2
+ 1393 0554 87       		.byte	-121
  1394 0555 04       		.byte	4
- 1395 0556 20       		.byte	32
- 1396 0557 3F       		.byte	63
- 1397 0558 21       		.byte	33
- 1398 0559 44       		.byte	68
- 1399 055a 24       		.byte	36
- 1400 055b 0C       		.byte	12
- 1401 055c 25       		.byte	37
- 1402 055d 80       		.byte	-128
- 1403 055e 28       		.byte	40
- 1404 055f 04       		.byte	4
- 1405 0560 29       		.byte	41
- 1406 0561 FF       		.byte	-1
- 1407 0562 2C       		.byte	44
- 1408 0563 08       		.byte	8
- 1409 0564 2F       		.byte	47
- 1410 0565 E3       		.byte	-29
- 1411 0566 30       		.byte	48
- 1412 0567 0F       		.byte	15
- 1413 0568 31       		.byte	49
- 1414 0569 C0       		.byte	-64
- 1415 056a 33       		.byte	51
- 1416 056b 1F       		.byte	31
- 1417 056c 34       		.byte	52
- 1418 056d 2C       		.byte	44
- 1419 056e 35       		.byte	53
- 1420 056f 38       		.byte	56
- 1421 0570 36       		.byte	54
- 1422 0571 10       		.byte	16
- 1423 0572 3A       		.byte	58
- 1424 0573 22       		.byte	34
- 1425 0574 3B       		.byte	59
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 26
+ 1395 0556 8B       		.byte	-117
+ 1396 0557 40       		.byte	64
+ 1397 0558 AB       		.byte	-85
+ 1398 0559 04       		.byte	4
+ 1399 055a E0       		.byte	-32
+ 1400 055b 04       		.byte	4
+ 1401 055c A7       		.byte	-89
+ 1402 055d 08       		.byte	8
+ 1403 055e 87       		.byte	-121
+ 1404 055f 08       		.byte	8
+ 1405 0560 A7       		.byte	-89
+ 1406 0561 08       		.byte	8
+ 1407 0562 E6       		.byte	-26
+ 1408 0563 40       		.byte	64
+ 1409 0564 5F       		.byte	95
+ 1410 0565 01       		.byte	1
+ 1411 0566 67       		.byte	103
+ 1412 0567 08       		.byte	8
+ 1413 0568 93       		.byte	-109
+ 1414 0569 49       		.byte	73
+ 1415 056a B7       		.byte	-73
+ 1416 056b 01       		.byte	1
+ 1417 056c D6       		.byte	-42
+ 1418 056d 01       		.byte	1
+ 1419 056e D8       		.byte	-40
+ 1420 056f 01       		.byte	1
+ 1421 0570 EC       		.byte	-20
+ 1422 0571 08       		.byte	8
+ 1423 0572 12       		.byte	18
+ 1424 0573 80       		.byte	-128
+ 1425 0574 73       		.byte	115
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 26
 
 
- 1426 0575 08       		.byte	8
- 1427 0576 3E       		.byte	62
- 1428 0577 40       		.byte	64
- 1429 0578 56       		.byte	86
- 1430 0579 02       		.byte	2
- 1431 057a 57       		.byte	87
- 1432 057b 13       		.byte	19
- 1433 057c 58       		.byte	88
- 1434 057d 04       		.byte	4
- 1435 057e 59       		.byte	89
- 1436 057f 04       		.byte	4
- 1437 0580 5B       		.byte	91
- 1438 0581 04       		.byte	4
- 1439 0582 5C       		.byte	92
- 1440 0583 11       		.byte	17
- 1441 0584 5D       		.byte	93
- 1442 0585 10       		.byte	16
- 1443 0586 5F       		.byte	95
- 1444 0587 01       		.byte	1
- 1445 0588 9C       		.byte	-100
- 1446 0589 01       		.byte	1
- 1447 058a A4       		.byte	-92
- 1448 058b 01       		.byte	1
- 1449 058c A8       		.byte	-88
- 1450 058d 01       		.byte	1
- 1451 058e B6       		.byte	-74
- 1452 058f 01       		.byte	1
- 1453 0590 C0       		.byte	-64
- 1454 0591 40       		.byte	64
- 1455 0592 C1       		.byte	-63
- 1456 0593 05       		.byte	5
- 1457 0594 C5       		.byte	-59
- 1458 0595 D1       		.byte	-47
- 1459 0596 C6       		.byte	-58
- 1460 0597 02       		.byte	2
- 1461 0598 C7       		.byte	-57
- 1462 0599 05       		.byte	5
- 1463 059a C8       		.byte	-56
- 1464 059b 17       		.byte	23
- 1465 059c C9       		.byte	-55
- 1466 059d FF       		.byte	-1
- 1467 059e CA       		.byte	-54
- 1468 059f FF       		.byte	-1
- 1469 05a0 CB       		.byte	-53
- 1470 05a1 FF       		.byte	-1
- 1471 05a2 CD       		.byte	-51
- 1472 05a3 A0       		.byte	-96
- 1473 05a4 CF       		.byte	-49
- 1474 05a5 04       		.byte	4
- 1475 05a6 D0       		.byte	-48
- 1476 05a7 18       		.byte	24
- 1477 05a8 D4       		.byte	-44
- 1478 05a9 20       		.byte	32
- 1479 05aa D6       		.byte	-42
- 1480 05ab 04       		.byte	4
- 1481 05ac D8       		.byte	-40
- 1482 05ad 04       		.byte	4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 27
+ 1426 0575 40       		.byte	64
+ 1427 0576 8E       		.byte	-114
+ 1428 0577 80       		.byte	-128
+ 1429 0578 93       		.byte	-109
+ 1430 0579 40       		.byte	64
+ 1431 057a C4       		.byte	-60
+ 1432 057b 08       		.byte	8
+ 1433 057c DC       		.byte	-36
+ 1434 057d 01       		.byte	1
+ 1435 057e E2       		.byte	-30
+ 1436 057f 02       		.byte	2
+ 1437 0580 00       		.byte	0
+ 1438 0581 0F       		.byte	15
+ 1439 0582 0C       		.byte	12
+ 1440 0583 0F       		.byte	15
+ 1441 0584 10       		.byte	16
+ 1442 0585 03       		.byte	3
+ 1443 0586 1C       		.byte	28
+ 1444 0587 03       		.byte	3
+ 1445 0588 00       		.byte	0
+ 1446 0589 3F       		.byte	63
+ 1447 058a 00       		.byte	0
+ 1448 058b 00       		.byte	0
+ 1449 058c 80       		.byte	-128
+ 1450 058d 00       		.byte	0
+ 1451 058e 40       		.byte	64
+ 1452 058f 80       		.byte	-128
+ 1453 0590 80       		.byte	-128
+ 1454 0591 00       		.byte	0
+ 1455 0592 80       		.byte	-128
+ 1456 0593 00       		.byte	0
+ 1457 0594 00       		.byte	0
+ 1458 0595 00       		.byte	0
+ 1459 0596 00       		.byte	0
+ 1460 0597 00       		.byte	0
+ 1461 0598 30       		.byte	48
+ 1462 0599 CB       		.byte	-53
+ 1463 059a CB       		.byte	-53
+ 1464 059b 00       		.byte	0
+ 1465 059c C0       		.byte	-64
+ 1466 059d 00       		.byte	0
+ 1467 059e 00       		.byte	0
+ 1468 059f 00       		.byte	0
+ 1469 05a0 C0       		.byte	-64
+ 1470 05a1 F0       		.byte	-16
+ 1471 05a2 30       		.byte	48
+ 1472 05a3 00       		.byte	0
+ 1473 05a4 30       		.byte	48
+ 1474 05a5 00       		.byte	0
+ 1475 05a6 00       		.byte	0
+ 1476 05a7 00       		.byte	0
+ 1477              		.section	.cywolatch,"a",%progbits
+ 1478              		.align	2
+ 1479              		.type	cy_meta_wonvl, %object
+ 1480              		.size	cy_meta_wonvl, 4
+ 1481              	cy_meta_wonvl:
+ 1482 0000 BC       		.byte	-68
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 27
 
 
- 1483 05ae DA       		.byte	-38
- 1484 05af 04       		.byte	4
- 1485 05b0 DB       		.byte	-37
- 1486 05b1 04       		.byte	4
- 1487 05b2 DC       		.byte	-36
- 1488 05b3 01       		.byte	1
- 1489 05b4 DD       		.byte	-35
- 1490 05b5 20       		.byte	32
- 1491 05b6 DF       		.byte	-33
- 1492 05b7 01       		.byte	1
- 1493 05b8 E0       		.byte	-32
- 1494 05b9 40       		.byte	64
- 1495 05ba E2       		.byte	-30
- 1496 05bb C0       		.byte	-64
- 1497 05bc E4       		.byte	-28
- 1498 05bd 40       		.byte	64
- 1499 05be E5       		.byte	-27
- 1500 05bf 40       		.byte	64
- 1501 05c0 E6       		.byte	-26
- 1502 05c1 C0       		.byte	-64
- 1503 05c2 E8       		.byte	-24
- 1504 05c3 C0       		.byte	-64
- 1505 05c4 EA       		.byte	-22
- 1506 05c5 C0       		.byte	-64
- 1507 05c6 EC       		.byte	-20
- 1508 05c7 C0       		.byte	-64
- 1509 05c8 EE       		.byte	-18
- 1510 05c9 C0       		.byte	-64
- 1511 05ca 05       		.byte	5
- 1512 05cb 99       		.byte	-103
- 1513 05cc 06       		.byte	6
- 1514 05cd 40       		.byte	64
- 1515 05ce 09       		.byte	9
- 1516 05cf 40       		.byte	64
- 1517 05d0 0C       		.byte	12
- 1518 05d1 40       		.byte	64
- 1519 05d2 0D       		.byte	13
- 1520 05d3 0A       		.byte	10
- 1521 05d4 0E       		.byte	14
- 1522 05d5 40       		.byte	64
- 1523 05d6 0F       		.byte	15
- 1524 05d7 20       		.byte	32
- 1525 05d8 10       		.byte	16
- 1526 05d9 28       		.byte	40
- 1527 05da 16       		.byte	22
- 1528 05db 1A       		.byte	26
- 1529 05dc 17       		.byte	23
- 1530 05dd 01       		.byte	1
- 1531 05de 19       		.byte	25
- 1532 05df 80       		.byte	-128
- 1533 05e0 1D       		.byte	29
- 1534 05e1 11       		.byte	17
- 1535 05e2 1E       		.byte	30
- 1536 05e3 01       		.byte	1
- 1537 05e4 25       		.byte	37
- 1538 05e5 1C       		.byte	28
- 1539 05e6 26       		.byte	38
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 28
+ 1483 0001 90       		.byte	-112
+ 1484 0002 AC       		.byte	-84
+ 1485 0003 AF       		.byte	-81
+ 1486              		.section	.cycustnvl,"a",%progbits
+ 1487              		.align	2
+ 1488              		.type	cy_meta_custnvl, %object
+ 1489              		.size	cy_meta_custnvl, 4
+ 1490              	cy_meta_custnvl:
+ 1491 0000 00       		.byte	0
+ 1492 0001 00       		.byte	0
+ 1493 0002 40       		.byte	64
+ 1494 0003 05       		.byte	5
+ 1495              		.section	.cymeta,"a",%progbits
+ 1496              		.align	2
+ 1497              		.type	cy_metadata, %object
+ 1498              		.size	cy_metadata, 12
+ 1499              	cy_metadata:
+ 1500 0000 00       		.byte	0
+ 1501 0001 01       		.byte	1
+ 1502 0002 2E       		.byte	46
+ 1503 0003 16       		.byte	22
+ 1504 0004 10       		.byte	16
+ 1505 0005 69       		.byte	105
+ 1506 0006 00       		.byte	0
+ 1507 0007 01       		.byte	1
+ 1508 0008 00       		.byte	0
+ 1509 0009 00       		.byte	0
+ 1510 000a 00       		.byte	0
+ 1511 000b 00       		.byte	0
+ 1512              		.section	.cyflashprotect,"a",%progbits
+ 1513              		.align	2
+ 1514              		.type	cy_meta_flashprotect, %object
+ 1515              		.size	cy_meta_flashprotect, 256
+ 1516              	cy_meta_flashprotect:
+ 1517 0000 00000000 		.space	256
+ 1517      00000000 
+ 1517      00000000 
+ 1517      00000000 
+ 1517      00000000 
+ 1518              		.text
+ 1519              	.Letext0:
+ 1520              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1521              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1522              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 1523              		.section	.debug_info,"",%progbits
+ 1524              	.Ldebug_info0:
+ 1525 0000 32010000 		.4byte	0x132
+ 1526 0004 0400     		.2byte	0x4
+ 1527 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1528 000a 04       		.byte	0x4
+ 1529 000b 01       		.uleb128 0x1
+ 1530 000c 7F000000 		.4byte	.LASF17
+ 1531 0010 0C       		.byte	0xc
+ 1532 0011 D9010000 		.4byte	.LASF18
+ 1533 0015 0A000000 		.4byte	.LASF19
+ 1534 0019 00000000 		.4byte	.Ldebug_line0
+ 1535 001d 02       		.uleb128 0x2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 28
 
 
- 1540 05e7 21       		.byte	33
- 1541 05e8 2C       		.byte	44
- 1542 05e9 40       		.byte	64
- 1543 05ea 2D       		.byte	45
- 1544 05eb 9C       		.byte	-100
- 1545 05ec 35       		.byte	53
- 1546 05ed 55       		.byte	85
- 1547 05ee 38       		.byte	56
- 1548 05ef 04       		.byte	4
- 1549 05f0 3A       		.byte	58
- 1550 05f1 04       		.byte	4
- 1551 05f2 3E       		.byte	62
- 1552 05f3 4A       		.byte	74
- 1553 05f4 3F       		.byte	63
- 1554 05f5 20       		.byte	32
- 1555 05f6 40       		.byte	64
- 1556 05f7 40       		.byte	64
- 1557 05f8 48       		.byte	72
- 1558 05f9 10       		.byte	16
- 1559 05fa 49       		.byte	73
- 1560 05fb 02       		.byte	2
- 1561 05fc 4B       		.byte	75
- 1562 05fd 80       		.byte	-128
- 1563 05fe 50       		.byte	80
- 1564 05ff 84       		.byte	-124
- 1565 0600 53       		.byte	83
- 1566 0601 40       		.byte	64
- 1567 0602 5A       		.byte	90
- 1568 0603 02       		.byte	2
- 1569 0604 5E       		.byte	94
- 1570 0605 01       		.byte	1
- 1571 0606 60       		.byte	96
- 1572 0607 08       		.byte	8
- 1573 0608 62       		.byte	98
- 1574 0609 84       		.byte	-124
- 1575 060a 63       		.byte	99
- 1576 060b 40       		.byte	64
- 1577 060c 6C       		.byte	108
- 1578 060d 28       		.byte	40
- 1579 060e 6D       		.byte	109
- 1580 060f 80       		.byte	-128
- 1581 0610 6F       		.byte	111
- 1582 0611 14       		.byte	20
- 1583 0612 75       		.byte	117
- 1584 0613 04       		.byte	4
- 1585 0614 76       		.byte	118
- 1586 0615 1A       		.byte	26
- 1587 0616 87       		.byte	-121
- 1588 0617 40       		.byte	64
- 1589 0618 90       		.byte	-112
- 1590 0619 04       		.byte	4
- 1591 061a 92       		.byte	-110
- 1592 061b 02       		.byte	2
- 1593 061c 93       		.byte	-109
- 1594 061d 02       		.byte	2
- 1595 061e 98       		.byte	-104
- 1596 061f 08       		.byte	8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 29
+ 1536 001e 01       		.byte	0x1
+ 1537 001f 06       		.byte	0x6
+ 1538 0020 CD010000 		.4byte	.LASF0
+ 1539 0024 03       		.uleb128 0x3
+ 1540 0025 00000000 		.4byte	.LASF9
+ 1541 0029 01       		.byte	0x1
+ 1542 002a 1D       		.byte	0x1d
+ 1543 002b 2F000000 		.4byte	0x2f
+ 1544 002f 02       		.uleb128 0x2
+ 1545 0030 01       		.byte	0x1
+ 1546 0031 08       		.byte	0x8
+ 1547 0032 71000000 		.4byte	.LASF1
+ 1548 0036 02       		.uleb128 0x2
+ 1549 0037 02       		.byte	0x2
+ 1550 0038 05       		.byte	0x5
+ 1551 0039 BA010000 		.4byte	.LASF2
+ 1552 003d 02       		.uleb128 0x2
+ 1553 003e 02       		.byte	0x2
+ 1554 003f 07       		.byte	0x7
+ 1555 0040 1F010000 		.4byte	.LASF3
+ 1556 0044 02       		.uleb128 0x2
+ 1557 0045 04       		.byte	0x4
+ 1558 0046 05       		.byte	0x5
+ 1559 0047 C4010000 		.4byte	.LASF4
+ 1560 004b 02       		.uleb128 0x2
+ 1561 004c 04       		.byte	0x4
+ 1562 004d 07       		.byte	0x7
+ 1563 004e 0D010000 		.4byte	.LASF5
+ 1564 0052 02       		.uleb128 0x2
+ 1565 0053 08       		.byte	0x8
+ 1566 0054 05       		.byte	0x5
+ 1567 0055 AC010000 		.4byte	.LASF6
+ 1568 0059 02       		.uleb128 0x2
+ 1569 005a 08       		.byte	0x8
+ 1570 005b 07       		.byte	0x7
+ 1571 005c 61010000 		.4byte	.LASF7
+ 1572 0060 04       		.uleb128 0x4
+ 1573 0061 04       		.byte	0x4
+ 1574 0062 05       		.byte	0x5
+ 1575 0063 696E7400 		.ascii	"int\000"
+ 1576 0067 02       		.uleb128 0x2
+ 1577 0068 04       		.byte	0x4
+ 1578 0069 07       		.byte	0x7
+ 1579 006a 54010000 		.4byte	.LASF8
+ 1580 006e 03       		.uleb128 0x3
+ 1581 006f 78010000 		.4byte	.LASF10
+ 1582 0073 02       		.byte	0x2
+ 1583 0074 18       		.byte	0x18
+ 1584 0075 24000000 		.4byte	0x24
+ 1585 0079 05       		.uleb128 0x5
+ 1586 007a 91000000 		.4byte	0x91
+ 1587 007e 8A000000 		.4byte	0x8a
+ 1588 0082 06       		.uleb128 0x6
+ 1589 0083 8A000000 		.4byte	0x8a
+ 1590 0087 A705     		.2byte	0x5a7
+ 1591 0089 00       		.byte	0
+ 1592 008a 02       		.uleb128 0x2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 29
 
 
- 1597 0620 99       		.byte	-103
- 1598 0621 40       		.byte	64
- 1599 0622 9C       		.byte	-100
- 1600 0623 40       		.byte	64
- 1601 0624 A2       		.byte	-94
- 1602 0625 80       		.byte	-128
- 1603 0626 A6       		.byte	-90
- 1604 0627 20       		.byte	32
- 1605 0628 A7       		.byte	-89
- 1606 0629 20       		.byte	32
- 1607 062a AA       		.byte	-86
- 1608 062b 04       		.byte	4
- 1609 062c AB       		.byte	-85
- 1610 062d 01       		.byte	1
- 1611 062e B2       		.byte	-78
- 1612 062f 01       		.byte	1
- 1613 0630 C0       		.byte	-64
- 1614 0631 F0       		.byte	-16
- 1615 0632 C2       		.byte	-62
- 1616 0633 B1       		.byte	-79
- 1617 0634 C4       		.byte	-60
- 1618 0635 F6       		.byte	-10
- 1619 0636 CA       		.byte	-54
- 1620 0637 F0       		.byte	-16
- 1621 0638 CC       		.byte	-52
- 1622 0639 F0       		.byte	-16
- 1623 063a CE       		.byte	-50
- 1624 063b F0       		.byte	-16
- 1625 063c D0       		.byte	-48
- 1626 063d 01       		.byte	1
- 1627 063e D2       		.byte	-46
- 1628 063f 08       		.byte	8
- 1629 0640 D6       		.byte	-42
- 1630 0641 81       		.byte	-127
- 1631 0642 D8       		.byte	-40
- 1632 0643 0F       		.byte	15
- 1633 0644 EC       		.byte	-20
- 1634 0645 80       		.byte	-128
- 1635 0646 E0       		.byte	-32
- 1636 0647 08       		.byte	8
- 1637 0648 E2       		.byte	-30
- 1638 0649 C0       		.byte	-64
- 1639 064a E4       		.byte	-28
- 1640 064b 04       		.byte	4
- 1641 064c 32       		.byte	50
- 1642 064d 44       		.byte	68
- 1643 064e 37       		.byte	55
- 1644 064f 82       		.byte	-126
- 1645 0650 3B       		.byte	59
- 1646 0651 10       		.byte	16
- 1647 0652 4E       		.byte	78
- 1648 0653 04       		.byte	4
- 1649 0654 4F       		.byte	79
- 1650 0655 10       		.byte	16
- 1651 0656 CC       		.byte	-52
- 1652 0657 F0       		.byte	-16
- 1653 0658 CE       		.byte	-50
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 30
+ 1593 008b 04       		.byte	0x4
+ 1594 008c 07       		.byte	0x7
+ 1595 008d A3010000 		.4byte	.LASF11
+ 1596 0091 07       		.uleb128 0x7
+ 1597 0092 6E000000 		.4byte	0x6e
+ 1598 0096 08       		.uleb128 0x8
+ 1599 0097 42010000 		.4byte	.LASF12
+ 1600 009b 03       		.byte	0x3
+ 1601 009c 1F       		.byte	0x1f
+ 1602 009d A7000000 		.4byte	0xa7
+ 1603 00a1 05       		.uleb128 0x5
+ 1604 00a2 03       		.byte	0x3
+ 1605 00a3 00000000 		.4byte	cy_meta_configecc
+ 1606 00a7 07       		.uleb128 0x7
+ 1607 00a8 79000000 		.4byte	0x79
+ 1608 00ac 05       		.uleb128 0x5
+ 1609 00ad 91000000 		.4byte	0x91
+ 1610 00b1 BC000000 		.4byte	0xbc
+ 1611 00b5 09       		.uleb128 0x9
+ 1612 00b6 8A000000 		.4byte	0x8a
+ 1613 00ba 03       		.byte	0x3
+ 1614 00bb 00       		.byte	0
+ 1615 00bc 08       		.uleb128 0x8
+ 1616 00bd 32010000 		.4byte	.LASF13
+ 1617 00c1 03       		.byte	0x3
+ 1618 00c2 E1       		.byte	0xe1
+ 1619 00c3 CD000000 		.4byte	0xcd
+ 1620 00c7 05       		.uleb128 0x5
+ 1621 00c8 03       		.byte	0x3
+ 1622 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1623 00cd 07       		.uleb128 0x7
+ 1624 00ce AC000000 		.4byte	0xac
+ 1625 00d2 08       		.uleb128 0x8
+ 1626 00d3 95010000 		.4byte	.LASF14
+ 1627 00d7 03       		.byte	0x3
+ 1628 00d8 EF       		.byte	0xef
+ 1629 00d9 E3000000 		.4byte	0xe3
+ 1630 00dd 05       		.uleb128 0x5
+ 1631 00de 03       		.byte	0x3
+ 1632 00df 00000000 		.4byte	cy_meta_wonvl
+ 1633 00e3 07       		.uleb128 0x7
+ 1634 00e4 AC000000 		.4byte	0xac
+ 1635 00e8 05       		.uleb128 0x5
+ 1636 00e9 91000000 		.4byte	0x91
+ 1637 00ed F8000000 		.4byte	0xf8
+ 1638 00f1 09       		.uleb128 0x9
+ 1639 00f2 8A000000 		.4byte	0x8a
+ 1640 00f6 FF       		.byte	0xff
+ 1641 00f7 00       		.byte	0
+ 1642 00f8 08       		.uleb128 0x8
+ 1643 00f9 80010000 		.4byte	.LASF15
+ 1644 00fd 03       		.byte	0x3
+ 1645 00fe FD       		.byte	0xfd
+ 1646 00ff 09010000 		.4byte	0x109
+ 1647 0103 05       		.uleb128 0x5
+ 1648 0104 03       		.byte	0x3
+ 1649 0105 00000000 		.4byte	cy_meta_flashprotect
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 30
 
 
- 1654 0659 10       		.byte	16
- 1655 065a 01       		.byte	1
- 1656 065b 20       		.byte	32
- 1657 065c 05       		.byte	5
- 1658 065d 08       		.byte	8
- 1659 065e 06       		.byte	6
- 1660 065f 04       		.byte	4
- 1661 0660 57       		.byte	87
- 1662 0661 20       		.byte	32
- 1663 0662 87       		.byte	-121
- 1664 0663 80       		.byte	-128
- 1665 0664 96       		.byte	-106
- 1666 0665 88       		.byte	-120
- 1667 0666 9F       		.byte	-97
- 1668 0667 82       		.byte	-126
- 1669 0668 C0       		.byte	-64
- 1670 0669 E0       		.byte	-32
- 1671 066a D4       		.byte	-44
- 1672 066b 40       		.byte	64
- 1673 066c E2       		.byte	-30
- 1674 066d 40       		.byte	64
- 1675 066e 85       		.byte	-123
- 1676 066f 20       		.byte	32
- 1677 0670 96       		.byte	-106
- 1678 0671 08       		.byte	8
- 1679 0672 99       		.byte	-103
- 1680 0673 20       		.byte	32
- 1681 0674 9F       		.byte	-97
- 1682 0675 02       		.byte	2
- 1683 0676 A7       		.byte	-89
- 1684 0677 20       		.byte	32
- 1685 0678 A9       		.byte	-87
- 1686 0679 08       		.byte	8
- 1687 067a AA       		.byte	-86
- 1688 067b 44       		.byte	68
- 1689 067c E4       		.byte	-28
- 1690 067d 40       		.byte	64
- 1691 067e E8       		.byte	-24
- 1692 067f 80       		.byte	-128
- 1693 0680 EC       		.byte	-20
- 1694 0681 20       		.byte	32
- 1695 0682 EE       		.byte	-18
- 1696 0683 80       		.byte	-128
- 1697 0684 96       		.byte	-106
- 1698 0685 08       		.byte	8
- 1699 0686 9F       		.byte	-97
- 1700 0687 02       		.byte	2
- 1701 0688 AF       		.byte	-81
- 1702 0689 20       		.byte	32
- 1703 068a EE       		.byte	-18
- 1704 068b 10       		.byte	16
- 1705 068c 7D       		.byte	125
- 1706 068d 80       		.byte	-128
- 1707 068e DE       		.byte	-34
- 1708 068f 04       		.byte	4
- 1709 0690 03       		.byte	3
- 1710 0691 08       		.byte	8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 31
+ 1650 0109 07       		.uleb128 0x7
+ 1651 010a E8000000 		.4byte	0xe8
+ 1652 010e 05       		.uleb128 0x5
+ 1653 010f 91000000 		.4byte	0x91
+ 1654 0113 1E010000 		.4byte	0x11e
+ 1655 0117 09       		.uleb128 0x9
+ 1656 0118 8A000000 		.4byte	0x8a
+ 1657 011c 0B       		.byte	0xb
+ 1658 011d 00       		.byte	0
+ 1659 011e 0A       		.uleb128 0xa
+ 1660 011f 65000000 		.4byte	.LASF16
+ 1661 0123 03       		.byte	0x3
+ 1662 0124 2A01     		.2byte	0x12a
+ 1663 0126 30010000 		.4byte	0x130
+ 1664 012a 05       		.uleb128 0x5
+ 1665 012b 03       		.byte	0x3
+ 1666 012c 00000000 		.4byte	cy_metadata
+ 1667 0130 07       		.uleb128 0x7
+ 1668 0131 0E010000 		.4byte	0x10e
+ 1669 0135 00       		.byte	0
+ 1670              		.section	.debug_abbrev,"",%progbits
+ 1671              	.Ldebug_abbrev0:
+ 1672 0000 01       		.uleb128 0x1
+ 1673 0001 11       		.uleb128 0x11
+ 1674 0002 01       		.byte	0x1
+ 1675 0003 25       		.uleb128 0x25
+ 1676 0004 0E       		.uleb128 0xe
+ 1677 0005 13       		.uleb128 0x13
+ 1678 0006 0B       		.uleb128 0xb
+ 1679 0007 03       		.uleb128 0x3
+ 1680 0008 0E       		.uleb128 0xe
+ 1681 0009 1B       		.uleb128 0x1b
+ 1682 000a 0E       		.uleb128 0xe
+ 1683 000b 10       		.uleb128 0x10
+ 1684 000c 17       		.uleb128 0x17
+ 1685 000d 00       		.byte	0
+ 1686 000e 00       		.byte	0
+ 1687 000f 02       		.uleb128 0x2
+ 1688 0010 24       		.uleb128 0x24
+ 1689 0011 00       		.byte	0
+ 1690 0012 0B       		.uleb128 0xb
+ 1691 0013 0B       		.uleb128 0xb
+ 1692 0014 3E       		.uleb128 0x3e
+ 1693 0015 0B       		.uleb128 0xb
+ 1694 0016 03       		.uleb128 0x3
+ 1695 0017 0E       		.uleb128 0xe
+ 1696 0018 00       		.byte	0
+ 1697 0019 00       		.byte	0
+ 1698 001a 03       		.uleb128 0x3
+ 1699 001b 16       		.uleb128 0x16
+ 1700 001c 00       		.byte	0
+ 1701 001d 03       		.uleb128 0x3
+ 1702 001e 0E       		.uleb128 0xe
+ 1703 001f 3A       		.uleb128 0x3a
+ 1704 0020 0B       		.uleb128 0xb
+ 1705 0021 3B       		.uleb128 0x3b
+ 1706 0022 0B       		.uleb128 0xb
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 31
 
 
- 1711 0692 0A       		.byte	10
- 1712 0693 04       		.byte	4
- 1713 0694 5D       		.byte	93
- 1714 0695 80       		.byte	-128
- 1715 0696 62       		.byte	98
- 1716 0697 08       		.byte	8
- 1717 0698 86       		.byte	-122
- 1718 0699 04       		.byte	4
- 1719 069a 89       		.byte	-119
- 1720 069b 40       		.byte	64
- 1721 069c 8E       		.byte	-114
- 1722 069d 08       		.byte	8
- 1723 069e A5       		.byte	-91
- 1724 069f 40       		.byte	64
- 1725 06a0 C0       		.byte	-64
- 1726 06a1 02       		.byte	2
- 1727 06a2 C2       		.byte	-62
- 1728 06a3 02       		.byte	2
- 1729 06a4 D6       		.byte	-42
- 1730 06a5 04       		.byte	4
- 1731 06a6 D8       		.byte	-40
- 1732 06a7 02       		.byte	2
- 1733 06a8 E4       		.byte	-28
- 1734 06a9 06       		.byte	6
- 1735 06aa 9D       		.byte	-99
- 1736 06ab 80       		.byte	-128
- 1737 06ac AB       		.byte	-85
- 1738 06ad 08       		.byte	8
- 1739 06ae 9D       		.byte	-99
- 1740 06af 80       		.byte	-128
- 1741 06b0 87       		.byte	-121
- 1742 06b1 02       		.byte	2
- 1743 06b2 96       		.byte	-106
- 1744 06b3 08       		.byte	8
- 1745 06b4 9F       		.byte	-97
- 1746 06b5 02       		.byte	2
- 1747 06b6 E6       		.byte	-26
- 1748 06b7 40       		.byte	64
- 1749 06b8 86       		.byte	-122
- 1750 06b9 04       		.byte	4
- 1751 06ba 96       		.byte	-106
- 1752 06bb 08       		.byte	8
- 1753 06bc E6       		.byte	-26
- 1754 06bd 10       		.byte	16
- 1755 06be 5B       		.byte	91
- 1756 06bf 08       		.byte	8
- 1757 06c0 64       		.byte	100
- 1758 06c1 20       		.byte	32
- 1759 06c2 B1       		.byte	-79
- 1760 06c3 80       		.byte	-128
- 1761 06c4 D6       		.byte	-42
- 1762 06c5 02       		.byte	2
- 1763 06c6 D8       		.byte	-40
- 1764 06c7 01       		.byte	1
- 1765 06c8 EC       		.byte	-20
- 1766 06c9 01       		.byte	1
- 1767 06ca 12       		.byte	18
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 32
+ 1707 0023 49       		.uleb128 0x49
+ 1708 0024 13       		.uleb128 0x13
+ 1709 0025 00       		.byte	0
+ 1710 0026 00       		.byte	0
+ 1711 0027 04       		.uleb128 0x4
+ 1712 0028 24       		.uleb128 0x24
+ 1713 0029 00       		.byte	0
+ 1714 002a 0B       		.uleb128 0xb
+ 1715 002b 0B       		.uleb128 0xb
+ 1716 002c 3E       		.uleb128 0x3e
+ 1717 002d 0B       		.uleb128 0xb
+ 1718 002e 03       		.uleb128 0x3
+ 1719 002f 08       		.uleb128 0x8
+ 1720 0030 00       		.byte	0
+ 1721 0031 00       		.byte	0
+ 1722 0032 05       		.uleb128 0x5
+ 1723 0033 01       		.uleb128 0x1
+ 1724 0034 01       		.byte	0x1
+ 1725 0035 49       		.uleb128 0x49
+ 1726 0036 13       		.uleb128 0x13
+ 1727 0037 01       		.uleb128 0x1
+ 1728 0038 13       		.uleb128 0x13
+ 1729 0039 00       		.byte	0
+ 1730 003a 00       		.byte	0
+ 1731 003b 06       		.uleb128 0x6
+ 1732 003c 21       		.uleb128 0x21
+ 1733 003d 00       		.byte	0
+ 1734 003e 49       		.uleb128 0x49
+ 1735 003f 13       		.uleb128 0x13
+ 1736 0040 2F       		.uleb128 0x2f
+ 1737 0041 05       		.uleb128 0x5
+ 1738 0042 00       		.byte	0
+ 1739 0043 00       		.byte	0
+ 1740 0044 07       		.uleb128 0x7
+ 1741 0045 26       		.uleb128 0x26
+ 1742 0046 00       		.byte	0
+ 1743 0047 49       		.uleb128 0x49
+ 1744 0048 13       		.uleb128 0x13
+ 1745 0049 00       		.byte	0
+ 1746 004a 00       		.byte	0
+ 1747 004b 08       		.uleb128 0x8
+ 1748 004c 34       		.uleb128 0x34
+ 1749 004d 00       		.byte	0
+ 1750 004e 03       		.uleb128 0x3
+ 1751 004f 0E       		.uleb128 0xe
+ 1752 0050 3A       		.uleb128 0x3a
+ 1753 0051 0B       		.uleb128 0xb
+ 1754 0052 3B       		.uleb128 0x3b
+ 1755 0053 0B       		.uleb128 0xb
+ 1756 0054 49       		.uleb128 0x49
+ 1757 0055 13       		.uleb128 0x13
+ 1758 0056 3F       		.uleb128 0x3f
+ 1759 0057 19       		.uleb128 0x19
+ 1760 0058 02       		.uleb128 0x2
+ 1761 0059 18       		.uleb128 0x18
+ 1762 005a 00       		.byte	0
+ 1763 005b 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 32
 
 
- 1768 06cb 80       		.byte	-128
- 1769 06cc 80       		.byte	-128
- 1770 06cd 20       		.byte	32
- 1771 06ce 87       		.byte	-121
- 1772 06cf 08       		.byte	8
- 1773 06d0 8A       		.byte	-118
- 1774 06d1 80       		.byte	-128
- 1775 06d2 8E       		.byte	-114
- 1776 06d3 80       		.byte	-128
- 1777 06d4 9C       		.byte	-100
- 1778 06d5 20       		.byte	32
- 1779 06d6 9F       		.byte	-97
- 1780 06d7 08       		.byte	8
- 1781 06d8 C4       		.byte	-60
- 1782 06d9 08       		.byte	8
- 1783 06da E2       		.byte	-30
- 1784 06db 03       		.byte	3
- 1785 06dc 00       		.byte	0
- 1786 06dd 0E       		.byte	14
- 1787 06de 08       		.byte	8
- 1788 06df 06       		.byte	6
- 1789 06e0 0A       		.byte	10
- 1790 06e1 0E       		.byte	14
- 1791 06e2 10       		.byte	16
- 1792 06e3 07       		.byte	7
- 1793 06e4 1A       		.byte	26
- 1794 06e5 07       		.byte	7
- 1795 06e6 00       		.byte	0
- 1796 06e7 FF       		.byte	-1
- 1797 06e8 01       		.byte	1
- 1798 06e9 03       		.byte	3
- 1799 06ea 00       		.byte	0
- 1800 06eb 00       		.byte	0
- 1801 06ec 0E       		.byte	14
- 1802 06ed 01       		.byte	1
- 1803 06ee 01       		.byte	1
- 1804 06ef 00       		.byte	0
- 1805 06f0 01       		.byte	1
- 1806 06f1 00       		.byte	0
- 1807 06f2 00       		.byte	0
- 1808 06f3 00       		.byte	0
- 1809 06f4 80       		.byte	-128
- 1810 06f5 00       		.byte	0
- 1811 06f6 40       		.byte	64
- 1812 06f7 80       		.byte	-128
- 1813 06f8 80       		.byte	-128
- 1814 06f9 00       		.byte	0
- 1815 06fa 80       		.byte	-128
- 1816 06fb 00       		.byte	0
- 1817 06fc 00       		.byte	0
- 1818 06fd 00       		.byte	0
- 1819 06fe 00       		.byte	0
- 1820 06ff 00       		.byte	0
- 1821 0700 30       		.byte	48
- 1822 0701 CB       		.byte	-53
- 1823 0702 CB       		.byte	-53
- 1824 0703 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 33
+ 1764 005c 09       		.uleb128 0x9
+ 1765 005d 21       		.uleb128 0x21
+ 1766 005e 00       		.byte	0
+ 1767 005f 49       		.uleb128 0x49
+ 1768 0060 13       		.uleb128 0x13
+ 1769 0061 2F       		.uleb128 0x2f
+ 1770 0062 0B       		.uleb128 0xb
+ 1771 0063 00       		.byte	0
+ 1772 0064 00       		.byte	0
+ 1773 0065 0A       		.uleb128 0xa
+ 1774 0066 34       		.uleb128 0x34
+ 1775 0067 00       		.byte	0
+ 1776 0068 03       		.uleb128 0x3
+ 1777 0069 0E       		.uleb128 0xe
+ 1778 006a 3A       		.uleb128 0x3a
+ 1779 006b 0B       		.uleb128 0xb
+ 1780 006c 3B       		.uleb128 0x3b
+ 1781 006d 05       		.uleb128 0x5
+ 1782 006e 49       		.uleb128 0x49
+ 1783 006f 13       		.uleb128 0x13
+ 1784 0070 3F       		.uleb128 0x3f
+ 1785 0071 19       		.uleb128 0x19
+ 1786 0072 02       		.uleb128 0x2
+ 1787 0073 18       		.uleb128 0x18
+ 1788 0074 00       		.byte	0
+ 1789 0075 00       		.byte	0
+ 1790 0076 00       		.byte	0
+ 1791              		.section	.debug_aranges,"",%progbits
+ 1792 0000 14000000 		.4byte	0x14
+ 1793 0004 0200     		.2byte	0x2
+ 1794 0006 00000000 		.4byte	.Ldebug_info0
+ 1795 000a 04       		.byte	0x4
+ 1796 000b 00       		.byte	0
+ 1797 000c 0000     		.2byte	0
+ 1798 000e 0000     		.2byte	0
+ 1799 0010 00000000 		.4byte	0
+ 1800 0014 00000000 		.4byte	0
+ 1801              		.section	.debug_line,"",%progbits
+ 1802              	.Ldebug_line0:
+ 1803 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 1803      02003701 
+ 1803      00000201 
+ 1803      FB0E0D00 
+ 1803      01010101 
+ 1804              	.LASF9:
+ 1805 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1805      6E74385F 
+ 1805      7400
+ 1806              	.LASF19:
+ 1807 000a 433A5C55 		.ascii	"C:\\Users\\jespe\\Desktop\\GIT\\iFollow\\Software\\"
+ 1807      73657273 
+ 1807      5C6A6573 
+ 1807      70655C44 
+ 1807      65736B74 
+ 1808 0036 50534F43 		.ascii	"PSOC\\Projekt_PSoC_Kode\\Projekt_PSoC_Kode.cydsn\000"
+ 1808      5C50726F 
+ 1808      6A656B74 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 33
 
 
- 1825 0704 C0       		.byte	-64
- 1826 0705 00       		.byte	0
- 1827 0706 00       		.byte	0
- 1828 0707 00       		.byte	0
- 1829 0708 44       		.byte	68
- 1830 0709 00       		.byte	0
- 1831 070a 00       		.byte	0
- 1832 070b 56       		.byte	86
- 1833 070c 12       		.byte	18
- 1834 070d 00       		.byte	0
- 1835 070e 12       		.byte	18
- 1836 070f 00       		.byte	0
- 1837 0710 00       		.byte	0
- 1838 0711 00       		.byte	0
- 1839 0712 00       		.byte	0
- 1840 0713 00       		.byte	0
- 1841              		.section	.cywolatch,"a",%progbits
- 1842              		.align	2
- 1843              		.type	cy_meta_wonvl, %object
- 1844              		.size	cy_meta_wonvl, 4
- 1845              	cy_meta_wonvl:
- 1846 0000 BC       		.byte	-68
- 1847 0001 90       		.byte	-112
- 1848 0002 AC       		.byte	-84
- 1849 0003 AF       		.byte	-81
- 1850              		.section	.cycustnvl,"a",%progbits
- 1851              		.align	2
- 1852              		.type	cy_meta_custnvl, %object
- 1853              		.size	cy_meta_custnvl, 4
- 1854              	cy_meta_custnvl:
- 1855 0000 00       		.byte	0
- 1856 0001 00       		.byte	0
- 1857 0002 40       		.byte	64
- 1858 0003 05       		.byte	5
- 1859              		.section	.cymeta,"a",%progbits
- 1860              		.align	2
- 1861              		.type	cy_metadata, %object
- 1862              		.size	cy_metadata, 12
- 1863              	cy_metadata:
- 1864 0000 00       		.byte	0
- 1865 0001 01       		.byte	1
- 1866 0002 2E       		.byte	46
- 1867 0003 16       		.byte	22
- 1868 0004 10       		.byte	16
- 1869 0005 69       		.byte	105
- 1870 0006 00       		.byte	0
- 1871 0007 01       		.byte	1
- 1872 0008 00       		.byte	0
- 1873 0009 00       		.byte	0
- 1874 000a 00       		.byte	0
- 1875 000b 00       		.byte	0
- 1876              		.section	.cyflashprotect,"a",%progbits
- 1877              		.align	2
- 1878              		.type	cy_meta_flashprotect, %object
- 1879              		.size	cy_meta_flashprotect, 256
- 1880              	cy_meta_flashprotect:
- 1881 0000 00000000 		.space	256
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 34
+ 1808      5F50536F 
+ 1808      435F4B6F 
+ 1809              	.LASF16:
+ 1810 0065 63795F6D 		.ascii	"cy_metadata\000"
+ 1810      65746164 
+ 1810      61746100 
+ 1811              	.LASF1:
+ 1812 0071 756E7369 		.ascii	"unsigned char\000"
+ 1812      676E6564 
+ 1812      20636861 
+ 1812      7200
+ 1813              	.LASF17:
+ 1814 007f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1814      43313120 
+ 1814      352E342E 
+ 1814      31203230 
+ 1814      31363036 
+ 1815 00b2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1815      20726576 
+ 1815      6973696F 
+ 1815      6E203233 
+ 1815      37373135 
+ 1816 00e5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1816      66756E63 
+ 1816      74696F6E 
+ 1816      2D736563 
+ 1816      74696F6E 
+ 1817              	.LASF5:
+ 1818 010d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1818      20756E73 
+ 1818      69676E65 
+ 1818      6420696E 
+ 1818      7400
+ 1819              	.LASF3:
+ 1820 011f 73686F72 		.ascii	"short unsigned int\000"
+ 1820      7420756E 
+ 1820      7369676E 
+ 1820      65642069 
+ 1820      6E7400
+ 1821              	.LASF13:
+ 1822 0132 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1822      6574615F 
+ 1822      63757374 
+ 1822      6E766C00 
+ 1823              	.LASF12:
+ 1824 0142 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1824      6574615F 
+ 1824      636F6E66 
+ 1824      69676563 
+ 1824      6300
+ 1825              	.LASF8:
+ 1826 0154 756E7369 		.ascii	"unsigned int\000"
+ 1826      676E6564 
+ 1826      20696E74 
+ 1826      00
+ 1827              	.LASF7:
+ 1828 0161 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccTO6IZp.s 			page 34
 
 
- 1881      00000000 
- 1881      00000000 
- 1881      00000000 
- 1881      00000000 
- 1882              		.text
- 1883              	.Letext0:
- 1884              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 1885              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 1886              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
- 1887              		.section	.debug_info,"",%progbits
- 1888              	.Ldebug_info0:
- 1889 0000 35010000 		.4byte	0x135
- 1890 0004 0400     		.2byte	0x4
- 1891 0006 00000000 		.4byte	.Ldebug_abbrev0
- 1892 000a 04       		.byte	0x4
- 1893 000b 01       		.uleb128 0x1
- 1894 000c 7F000000 		.4byte	.LASF17
- 1895 0010 0C       		.byte	0xc
- 1896 0011 D9010000 		.4byte	.LASF18
- 1897 0015 0A000000 		.4byte	.LASF19
- 1898 0019 00000000 		.4byte	.Ldebug_line0
- 1899 001d 02       		.uleb128 0x2
- 1900 001e 01       		.byte	0x1
- 1901 001f 06       		.byte	0x6
- 1902 0020 CD010000 		.4byte	.LASF0
- 1903 0024 03       		.uleb128 0x3
- 1904 0025 00000000 		.4byte	.LASF9
- 1905 0029 01       		.byte	0x1
- 1906 002a 1D       		.byte	0x1d
- 1907 002b 2F000000 		.4byte	0x2f
- 1908 002f 02       		.uleb128 0x2
- 1909 0030 01       		.byte	0x1
- 1910 0031 08       		.byte	0x8
- 1911 0032 71000000 		.4byte	.LASF1
- 1912 0036 02       		.uleb128 0x2
- 1913 0037 02       		.byte	0x2
- 1914 0038 05       		.byte	0x5
- 1915 0039 BA010000 		.4byte	.LASF2
- 1916 003d 02       		.uleb128 0x2
- 1917 003e 02       		.byte	0x2
- 1918 003f 07       		.byte	0x7
- 1919 0040 1F010000 		.4byte	.LASF3
- 1920 0044 02       		.uleb128 0x2
- 1921 0045 04       		.byte	0x4
- 1922 0046 05       		.byte	0x5
- 1923 0047 C4010000 		.4byte	.LASF4
- 1924 004b 02       		.uleb128 0x2
- 1925 004c 04       		.byte	0x4
- 1926 004d 07       		.byte	0x7
- 1927 004e 0D010000 		.4byte	.LASF5
- 1928 0052 02       		.uleb128 0x2
- 1929 0053 08       		.byte	0x8
- 1930 0054 05       		.byte	0x5
- 1931 0055 AC010000 		.4byte	.LASF6
- 1932 0059 02       		.uleb128 0x2
- 1933 005a 08       		.byte	0x8
- 1934 005b 07       		.byte	0x7
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 35
-
-
- 1935 005c 61010000 		.4byte	.LASF7
- 1936 0060 04       		.uleb128 0x4
- 1937 0061 04       		.byte	0x4
- 1938 0062 05       		.byte	0x5
- 1939 0063 696E7400 		.ascii	"int\000"
- 1940 0067 02       		.uleb128 0x2
- 1941 0068 04       		.byte	0x4
- 1942 0069 07       		.byte	0x7
- 1943 006a 54010000 		.4byte	.LASF8
- 1944 006e 03       		.uleb128 0x3
- 1945 006f 78010000 		.4byte	.LASF10
- 1946 0073 02       		.byte	0x2
- 1947 0074 18       		.byte	0x18
- 1948 0075 24000000 		.4byte	0x24
- 1949 0079 05       		.uleb128 0x5
- 1950 007a 91000000 		.4byte	0x91
- 1951 007e 8A000000 		.4byte	0x8a
- 1952 0082 06       		.uleb128 0x6
- 1953 0083 8A000000 		.4byte	0x8a
- 1954 0087 1307     		.2byte	0x713
- 1955 0089 00       		.byte	0
- 1956 008a 02       		.uleb128 0x2
- 1957 008b 04       		.byte	0x4
- 1958 008c 07       		.byte	0x7
- 1959 008d A3010000 		.4byte	.LASF11
- 1960 0091 07       		.uleb128 0x7
- 1961 0092 6E000000 		.4byte	0x6e
- 1962 0096 08       		.uleb128 0x8
- 1963 0097 42010000 		.4byte	.LASF12
- 1964 009b 03       		.byte	0x3
- 1965 009c 1F       		.byte	0x1f
- 1966 009d A7000000 		.4byte	0xa7
- 1967 00a1 05       		.uleb128 0x5
- 1968 00a2 03       		.byte	0x3
- 1969 00a3 00000000 		.4byte	cy_meta_configecc
- 1970 00a7 07       		.uleb128 0x7
- 1971 00a8 79000000 		.4byte	0x79
- 1972 00ac 05       		.uleb128 0x5
- 1973 00ad 91000000 		.4byte	0x91
- 1974 00b1 BC000000 		.4byte	0xbc
- 1975 00b5 09       		.uleb128 0x9
- 1976 00b6 8A000000 		.4byte	0x8a
- 1977 00ba 03       		.byte	0x3
- 1978 00bb 00       		.byte	0
- 1979 00bc 0A       		.uleb128 0xa
- 1980 00bd 32010000 		.4byte	.LASF13
- 1981 00c1 03       		.byte	0x3
- 1982 00c2 0F01     		.2byte	0x10f
- 1983 00c4 CE000000 		.4byte	0xce
- 1984 00c8 05       		.uleb128 0x5
- 1985 00c9 03       		.byte	0x3
- 1986 00ca 00000000 		.4byte	cy_meta_custnvl
- 1987 00ce 07       		.uleb128 0x7
- 1988 00cf AC000000 		.4byte	0xac
- 1989 00d3 0A       		.uleb128 0xa
- 1990 00d4 95010000 		.4byte	.LASF14
- 1991 00d8 03       		.byte	0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 36
-
-
- 1992 00d9 1D01     		.2byte	0x11d
- 1993 00db E5000000 		.4byte	0xe5
- 1994 00df 05       		.uleb128 0x5
- 1995 00e0 03       		.byte	0x3
- 1996 00e1 00000000 		.4byte	cy_meta_wonvl
- 1997 00e5 07       		.uleb128 0x7
- 1998 00e6 AC000000 		.4byte	0xac
- 1999 00ea 05       		.uleb128 0x5
- 2000 00eb 91000000 		.4byte	0x91
- 2001 00ef FA000000 		.4byte	0xfa
- 2002 00f3 09       		.uleb128 0x9
- 2003 00f4 8A000000 		.4byte	0x8a
- 2004 00f8 FF       		.byte	0xff
- 2005 00f9 00       		.byte	0
- 2006 00fa 0A       		.uleb128 0xa
- 2007 00fb 80010000 		.4byte	.LASF15
- 2008 00ff 03       		.byte	0x3
- 2009 0100 2B01     		.2byte	0x12b
- 2010 0102 0C010000 		.4byte	0x10c
- 2011 0106 05       		.uleb128 0x5
- 2012 0107 03       		.byte	0x3
- 2013 0108 00000000 		.4byte	cy_meta_flashprotect
- 2014 010c 07       		.uleb128 0x7
- 2015 010d EA000000 		.4byte	0xea
- 2016 0111 05       		.uleb128 0x5
- 2017 0112 91000000 		.4byte	0x91
- 2018 0116 21010000 		.4byte	0x121
- 2019 011a 09       		.uleb128 0x9
- 2020 011b 8A000000 		.4byte	0x8a
- 2021 011f 0B       		.byte	0xb
- 2022 0120 00       		.byte	0
- 2023 0121 0A       		.uleb128 0xa
- 2024 0122 65000000 		.4byte	.LASF16
- 2025 0126 03       		.byte	0x3
- 2026 0127 5801     		.2byte	0x158
- 2027 0129 33010000 		.4byte	0x133
- 2028 012d 05       		.uleb128 0x5
- 2029 012e 03       		.byte	0x3
- 2030 012f 00000000 		.4byte	cy_metadata
- 2031 0133 07       		.uleb128 0x7
- 2032 0134 11010000 		.4byte	0x111
- 2033 0138 00       		.byte	0
- 2034              		.section	.debug_abbrev,"",%progbits
- 2035              	.Ldebug_abbrev0:
- 2036 0000 01       		.uleb128 0x1
- 2037 0001 11       		.uleb128 0x11
- 2038 0002 01       		.byte	0x1
- 2039 0003 25       		.uleb128 0x25
- 2040 0004 0E       		.uleb128 0xe
- 2041 0005 13       		.uleb128 0x13
- 2042 0006 0B       		.uleb128 0xb
- 2043 0007 03       		.uleb128 0x3
- 2044 0008 0E       		.uleb128 0xe
- 2045 0009 1B       		.uleb128 0x1b
- 2046 000a 0E       		.uleb128 0xe
- 2047 000b 10       		.uleb128 0x10
- 2048 000c 17       		.uleb128 0x17
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 37
-
-
- 2049 000d 00       		.byte	0
- 2050 000e 00       		.byte	0
- 2051 000f 02       		.uleb128 0x2
- 2052 0010 24       		.uleb128 0x24
- 2053 0011 00       		.byte	0
- 2054 0012 0B       		.uleb128 0xb
- 2055 0013 0B       		.uleb128 0xb
- 2056 0014 3E       		.uleb128 0x3e
- 2057 0015 0B       		.uleb128 0xb
- 2058 0016 03       		.uleb128 0x3
- 2059 0017 0E       		.uleb128 0xe
- 2060 0018 00       		.byte	0
- 2061 0019 00       		.byte	0
- 2062 001a 03       		.uleb128 0x3
- 2063 001b 16       		.uleb128 0x16
- 2064 001c 00       		.byte	0
- 2065 001d 03       		.uleb128 0x3
- 2066 001e 0E       		.uleb128 0xe
- 2067 001f 3A       		.uleb128 0x3a
- 2068 0020 0B       		.uleb128 0xb
- 2069 0021 3B       		.uleb128 0x3b
- 2070 0022 0B       		.uleb128 0xb
- 2071 0023 49       		.uleb128 0x49
- 2072 0024 13       		.uleb128 0x13
- 2073 0025 00       		.byte	0
- 2074 0026 00       		.byte	0
- 2075 0027 04       		.uleb128 0x4
- 2076 0028 24       		.uleb128 0x24
- 2077 0029 00       		.byte	0
- 2078 002a 0B       		.uleb128 0xb
- 2079 002b 0B       		.uleb128 0xb
- 2080 002c 3E       		.uleb128 0x3e
- 2081 002d 0B       		.uleb128 0xb
- 2082 002e 03       		.uleb128 0x3
- 2083 002f 08       		.uleb128 0x8
- 2084 0030 00       		.byte	0
- 2085 0031 00       		.byte	0
- 2086 0032 05       		.uleb128 0x5
- 2087 0033 01       		.uleb128 0x1
- 2088 0034 01       		.byte	0x1
- 2089 0035 49       		.uleb128 0x49
- 2090 0036 13       		.uleb128 0x13
- 2091 0037 01       		.uleb128 0x1
- 2092 0038 13       		.uleb128 0x13
- 2093 0039 00       		.byte	0
- 2094 003a 00       		.byte	0
- 2095 003b 06       		.uleb128 0x6
- 2096 003c 21       		.uleb128 0x21
- 2097 003d 00       		.byte	0
- 2098 003e 49       		.uleb128 0x49
- 2099 003f 13       		.uleb128 0x13
- 2100 0040 2F       		.uleb128 0x2f
- 2101 0041 05       		.uleb128 0x5
- 2102 0042 00       		.byte	0
- 2103 0043 00       		.byte	0
- 2104 0044 07       		.uleb128 0x7
- 2105 0045 26       		.uleb128 0x26
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 38
-
-
- 2106 0046 00       		.byte	0
- 2107 0047 49       		.uleb128 0x49
- 2108 0048 13       		.uleb128 0x13
- 2109 0049 00       		.byte	0
- 2110 004a 00       		.byte	0
- 2111 004b 08       		.uleb128 0x8
- 2112 004c 34       		.uleb128 0x34
- 2113 004d 00       		.byte	0
- 2114 004e 03       		.uleb128 0x3
- 2115 004f 0E       		.uleb128 0xe
- 2116 0050 3A       		.uleb128 0x3a
- 2117 0051 0B       		.uleb128 0xb
- 2118 0052 3B       		.uleb128 0x3b
- 2119 0053 0B       		.uleb128 0xb
- 2120 0054 49       		.uleb128 0x49
- 2121 0055 13       		.uleb128 0x13
- 2122 0056 3F       		.uleb128 0x3f
- 2123 0057 19       		.uleb128 0x19
- 2124 0058 02       		.uleb128 0x2
- 2125 0059 18       		.uleb128 0x18
- 2126 005a 00       		.byte	0
- 2127 005b 00       		.byte	0
- 2128 005c 09       		.uleb128 0x9
- 2129 005d 21       		.uleb128 0x21
- 2130 005e 00       		.byte	0
- 2131 005f 49       		.uleb128 0x49
- 2132 0060 13       		.uleb128 0x13
- 2133 0061 2F       		.uleb128 0x2f
- 2134 0062 0B       		.uleb128 0xb
- 2135 0063 00       		.byte	0
- 2136 0064 00       		.byte	0
- 2137 0065 0A       		.uleb128 0xa
- 2138 0066 34       		.uleb128 0x34
- 2139 0067 00       		.byte	0
- 2140 0068 03       		.uleb128 0x3
- 2141 0069 0E       		.uleb128 0xe
- 2142 006a 3A       		.uleb128 0x3a
- 2143 006b 0B       		.uleb128 0xb
- 2144 006c 3B       		.uleb128 0x3b
- 2145 006d 05       		.uleb128 0x5
- 2146 006e 49       		.uleb128 0x49
- 2147 006f 13       		.uleb128 0x13
- 2148 0070 3F       		.uleb128 0x3f
- 2149 0071 19       		.uleb128 0x19
- 2150 0072 02       		.uleb128 0x2
- 2151 0073 18       		.uleb128 0x18
- 2152 0074 00       		.byte	0
- 2153 0075 00       		.byte	0
- 2154 0076 00       		.byte	0
- 2155              		.section	.debug_aranges,"",%progbits
- 2156 0000 14000000 		.4byte	0x14
- 2157 0004 0200     		.2byte	0x2
- 2158 0006 00000000 		.4byte	.Ldebug_info0
- 2159 000a 04       		.byte	0x4
- 2160 000b 00       		.byte	0
- 2161 000c 0000     		.2byte	0
- 2162 000e 0000     		.2byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 39
-
-
- 2163 0010 00000000 		.4byte	0
- 2164 0014 00000000 		.4byte	0
- 2165              		.section	.debug_line,"",%progbits
- 2166              	.Ldebug_line0:
- 2167 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
- 2167      02003701 
- 2167      00000201 
- 2167      FB0E0D00 
- 2167      01010101 
- 2168              	.LASF9:
- 2169 0000 5F5F7569 		.ascii	"__uint8_t\000"
- 2169      6E74385F 
- 2169      7400
- 2170              	.LASF19:
- 2171 000a 433A5C55 		.ascii	"C:\\Users\\jespe\\Desktop\\GIT\\iFollow\\Software\\"
- 2171      73657273 
- 2171      5C6A6573 
- 2171      70655C44 
- 2171      65736B74 
- 2172 0036 50534F43 		.ascii	"PSOC\\Projekt_PSoC_Kode\\Projekt_PSoC_Kode.cydsn\000"
- 2172      5C50726F 
- 2172      6A656B74 
- 2172      5F50536F 
- 2172      435F4B6F 
- 2173              	.LASF16:
- 2174 0065 63795F6D 		.ascii	"cy_metadata\000"
- 2174      65746164 
- 2174      61746100 
- 2175              	.LASF1:
- 2176 0071 756E7369 		.ascii	"unsigned char\000"
- 2176      676E6564 
- 2176      20636861 
- 2176      7200
- 2177              	.LASF17:
- 2178 007f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2178      43313120 
- 2178      352E342E 
- 2178      31203230 
- 2178      31363036 
- 2179 00b2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 2179      20726576 
- 2179      6973696F 
- 2179      6E203233 
- 2179      37373135 
- 2180 00e5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2180      66756E63 
- 2180      74696F6E 
- 2180      2D736563 
- 2180      74696F6E 
- 2181              	.LASF5:
- 2182 010d 6C6F6E67 		.ascii	"long unsigned int\000"
- 2182      20756E73 
- 2182      69676E65 
- 2182      6420696E 
- 2182      7400
- 2183              	.LASF3:
- 2184 011f 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 40
-
-
- 2184      7420756E 
- 2184      7369676E 
- 2184      65642069 
- 2184      6E7400
- 2185              	.LASF13:
- 2186 0132 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 2186      6574615F 
- 2186      63757374 
- 2186      6E766C00 
- 2187              	.LASF12:
- 2188 0142 63795F6D 		.ascii	"cy_meta_configecc\000"
- 2188      6574615F 
- 2188      636F6E66 
- 2188      69676563 
- 2188      6300
- 2189              	.LASF8:
- 2190 0154 756E7369 		.ascii	"unsigned int\000"
- 2190      676E6564 
- 2190      20696E74 
- 2190      00
- 2191              	.LASF7:
- 2192 0161 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2192      206C6F6E 
- 2192      6720756E 
- 2192      7369676E 
- 2192      65642069 
- 2193              	.LASF10:
- 2194 0178 75696E74 		.ascii	"uint8_t\000"
- 2194      385F7400 
- 2195              	.LASF15:
- 2196 0180 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 2196      6574615F 
- 2196      666C6173 
- 2196      6870726F 
- 2196      74656374 
- 2197              	.LASF14:
- 2198 0195 63795F6D 		.ascii	"cy_meta_wonvl\000"
- 2198      6574615F 
- 2198      776F6E76 
- 2198      6C00
- 2199              	.LASF11:
- 2200 01a3 73697A65 		.ascii	"sizetype\000"
- 2200      74797065 
- 2200      00
- 2201              	.LASF6:
- 2202 01ac 6C6F6E67 		.ascii	"long long int\000"
- 2202      206C6F6E 
- 2202      6720696E 
- 2202      7400
- 2203              	.LASF2:
- 2204 01ba 73686F72 		.ascii	"short int\000"
- 2204      7420696E 
- 2204      7400
- 2205              	.LASF4:
- 2206 01c4 6C6F6E67 		.ascii	"long int\000"
- 2206      20696E74 
- 2206      00
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccErl4Ne.s 			page 41
-
-
- 2207              	.LASF0:
- 2208 01cd 7369676E 		.ascii	"signed char\000"
- 2208      65642063 
- 2208      68617200 
- 2209              	.LASF18:
- 2210 01d9 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
- 2210      72617465 
- 2210      645F536F 
- 2210      75726365 
- 2210      5C50536F 
- 2211              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1828      206C6F6E 
+ 1828      6720756E 
+ 1828      7369676E 
+ 1828      65642069 
+ 1829              	.LASF10:
+ 1830 0178 75696E74 		.ascii	"uint8_t\000"
+ 1830      385F7400 
+ 1831              	.LASF15:
+ 1832 0180 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1832      6574615F 
+ 1832      666C6173 
+ 1832      6870726F 
+ 1832      74656374 
+ 1833              	.LASF14:
+ 1834 0195 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1834      6574615F 
+ 1834      776F6E76 
+ 1834      6C00
+ 1835              	.LASF11:
+ 1836 01a3 73697A65 		.ascii	"sizetype\000"
+ 1836      74797065 
+ 1836      00
+ 1837              	.LASF6:
+ 1838 01ac 6C6F6E67 		.ascii	"long long int\000"
+ 1838      206C6F6E 
+ 1838      6720696E 
+ 1838      7400
+ 1839              	.LASF2:
+ 1840 01ba 73686F72 		.ascii	"short int\000"
+ 1840      7420696E 
+ 1840      7400
+ 1841              	.LASF4:
+ 1842 01c4 6C6F6E67 		.ascii	"long int\000"
+ 1842      20696E74 
+ 1842      00
+ 1843              	.LASF0:
+ 1844 01cd 7369676E 		.ascii	"signed char\000"
+ 1844      65642063 
+ 1844      68617200 
+ 1845              	.LASF18:
+ 1846 01d9 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1846      72617465 
+ 1846      645F536F 
+ 1846      75726365 
+ 1846      5C50536F 
+ 1847              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

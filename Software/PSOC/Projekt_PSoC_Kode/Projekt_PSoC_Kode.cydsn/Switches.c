@@ -28,7 +28,7 @@ bool Switches::getSwitchStatus(char button) const
     {
          return PowerSwitch;
     }
-    else if (button == 'F' || button == 'f')
+    else if ((button == 'F' || button == 'f') && PowerSwitch == true)
     {
         return FollowSwitch;
     }

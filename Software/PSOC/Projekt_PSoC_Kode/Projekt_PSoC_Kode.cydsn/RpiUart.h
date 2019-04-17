@@ -22,22 +22,22 @@ extern "C"
 #ifdef __cplusplus
 }
 #endif
-    
-#include "MotorController.h"
+#define true 1
+#define false 0
 
-#define FORWARD 1
-#define BARCKWARD 0
+#include "MotorController.h"
 
 class RpiUart 
 {
 public:
    RpiUart();
    ~RpiUart();
-   void ReadData(MotorController * motorPtr);
-   void handleByteReceived(uint8_t byteReceived[], MotorController * motorPtr);
+   uint8_t ReadData(MotorController * motorPtr);
+   uint8_t handleByteReceived(uint8_t byteReceived[], MotorController * motorPtr);
    void TransmitData(uint8_t data[], uint8_t size);
 
 private:
+   uint8_t ControlModeActive = false;
     
  };
 
