@@ -23,14 +23,15 @@ extern "C" {
 #ifdef __cplusplus
 }
 #endif
+#include "time.h"
+#include "stdio.h"
 
 class ToF { 
-    public:
+public:
     ToF();
-    void start();
-    void stop();
-    static CY_ISR_PROTO(isr_handler);
-    private:
+    //void start();
+    //void stop();
+    void handleByte(uint8_t byte);
     uint16_t sensorLeft;
     uint16_t sensorRight;
     uint16_t sensorMid;

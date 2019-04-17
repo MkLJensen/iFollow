@@ -11,34 +11,26 @@
 */
 #include "ToF.h"
 
-ToF::ToF(){
-    sensorLeft = 1;
-    sensorRight = 1;
-    sensorMid = 1;
-}
-void ToF::start(){
-    CyGlobalIntEnable; /* Enable global interrupts. */
-     
+ToF::ToF(){}
+/*
+void ToF::start(){  
     // Init
     SPIS_Start();
-    isr_1_StartEx(&ToF.isr_handler);
+    
     UART_1_Start();
     UART_1_PutString("Terminal vindue er connected\n\r");
 }
 
-void ToF::stop(){
-    CyGlobalIntDisable; /* Enable global interrupts. */
-     
+void ToF::stop(){     
     // Init
     SPIS_Stop();
-    isr_1_StopEx(&ToF.isr_handler);
     UART_1_PutString("Terminal vindue er disconnected\n\r");
     UART_1_Stop();
-
 }
+*/
 
-CY_ISR(ToF::isr_handler){
-   byteR = SPIS_ReadRxData();                                          // Gemmer aflæsning af RX-buffer
+void ToF::handleByte(uint8_t byte){
+   byteR = byte;                                          
     
     if (byteR == 0)
         i = 0;
@@ -46,54 +38,51 @@ CY_ISR(ToF::isr_handler){
     switch (i)
     {
         case 0:
-        UART_1_PutString("Start modtaget \n\r");
+        //UART_1_PutString("Start modtaget \n\r");
         i++;
         break;
         
         case 1:
         byteR --;
-        s1 = byteR<<8;
+        sensorRight = byteR<<8;
         i++;
         break;
         
         case 2:
         byteR --;
-        s1 = s1|byteR;
-        sprintf(string, "Sensor 1: %d \n\r", s1);
-        UART_1_PutString(string);
+        sensorRight = sensorRight|byteR;
+        //sprintf(string, "Sensor right: %d \n\r", sensorRight);
+        //UART_1_PutString(string);
         i++;
         break;
         
         case 3:
         byteR --;
-        s2 = byteR<<8;
+        sensorMid = byteR<<8;
         i++;
         break;
         
         case 4:
         byteR --;
-        s2 = s2|byteR;
-        sprintf(string, "Sensor 2: %d \n\r", s2);
-        UART_1_PutString(string);
+        sensorMid = sensorMid|byteR;
+        //sprintf(string, "Sensor middle: %d \n\r", sensorMid);
+        //UART_1_PutString(string);
         i++;
         break;
         
         case 5:
         byteR --;
-        s3 = byteR<<8;
+        sensorLeft = byteR<<8;
         i++;
         break;
         
         case 6:
         byteR --;
-        s3 = s3|byteR;
-        sprintf(string, "Sensor 3: %d \n\r", s3);
-        UART_1_PutString(string);
+        sensorLeft = sensorLeft|byteR;
+        //sprintf(string, "Sensor left: %d \n\r", sensorLeft);
+        //UART_1_PutString(string);
         i++;
         break;
-        
-        default:
-            UART_1_PutString("Error! Ukendt Index");
     } 
 }
 /* [] END OF FILE */
