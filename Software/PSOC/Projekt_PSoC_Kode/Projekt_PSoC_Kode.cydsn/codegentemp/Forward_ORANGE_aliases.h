@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Backward.h  
+* File Name: Forward_ORANGE.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_Backward_ALIASES_H) /* Pins Backward_ALIASES_H */
-#define CY_PINS_Backward_ALIASES_H
+#if !defined(CY_PINS_Forward_ORANGE_ALIASES_H) /* Pins Forward_ORANGE_ALIASES_H */
+#define CY_PINS_Forward_ORANGE_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define Backward_0			(Backward__0__PC)
-#define Backward_0_INTR	((uint16)((uint16)0x0001u << Backward__0__SHIFT))
+#define Forward_ORANGE_0			(Forward_ORANGE__0__PC)
+#define Forward_ORANGE_0_INTR	((uint16)((uint16)0x0001u << Forward_ORANGE__0__SHIFT))
 
-#define Backward_INTR_ALL	 ((uint16)(Backward_0_INTR))
+#define Forward_ORANGE_INTR_ALL	 ((uint16)(Forward_ORANGE_0_INTR))
 
-#endif /* End Pins Backward_ALIASES_H */
+#endif /* End Pins Forward_ORANGE_ALIASES_H */
 
 
 /* [] END OF FILE */

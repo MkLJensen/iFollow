@@ -25,37 +25,70 @@ MotorController::~MotorController()
 
 void MotorController::GoForward(int pwm)
 {
-    setLeftPWM(pwm);
-    setRightPWM(pwm);
+    if (pwm == 0)
+    {
+        setLeftPWM(0);
+        setRightPWM(0);
+    }
+    else
+    {
+        setLeftPWM(500+(4*pwm));
+        setRightPWM(500+(4*pwm));
+    }
     setDir(FORWARD);
 }
     
 void MotorController::GoBackward(int pwm)
 {
-    setLeftPWM(pwm);
-    setRightPWM(pwm);
+     if (pwm == 0)
+    {
+        setLeftPWM(0);
+        setRightPWM(0);
+    }
+    else
+    {
+        setLeftPWM(500+(4*pwm));
+        setRightPWM(500+(4*pwm));
+    }
     setDir(BARCKWARD);
 }
       
 void MotorController::Turn(int pwm, char dir)
 {
+    int CMP = 500+(4*pwm);
     if (dir == 'l')
     {
-        if (Rightpwm_ > (100-pwm))
+        if ((Rightpwm_ - CMP) < 0)
         {
-            setLeftPWM(100-pwm);
+            setRightPWM(CMP+(CMP-Rightpwm_));
+            setLeftPWM(0);
         }
-        setRightPWM(pwm+Rightpwm_);
+        else 
+        {
+            setRightPWM(Rightpwm_-CMP);
+        }
         setDir(FORWARD);
     }
     else if (dir == 'r')
     {
+        if ((CMP + Leftpwm_) > 100)
+        {
+            setLeftPWM(100);
+            setRightPWM(100-CMP);
+        }
+        else 
+        {
+            setLeftPWM(Leftpwm_+CMP);
+        }
+        setDir(FORWARD);
+        /*
         if (Leftpwm_ > (100-pwm))
         {
             setRightPWM(100-pwm);
         }
         setLeftPWM(pwm+Leftpwm_);
         setDir(FORWARD); 
+        */
     }
 }
       
@@ -84,8 +117,8 @@ int MotorController::getRightPWM(void) const
 void MotorController::setDir(bool dir)
 {
     direction_ = dir;
-    Forward_Write(dir);
-    Backward_Write(!dir);
+    Forward_ORANGE_Write(dir);
+    Backward_GUL_Write(!dir);
 }
       
 bool MotorController::getDir(void) const

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Backward.c  
+* File Name: Forward_ORANGE.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "Backward.h"
+#include "Forward_ORANGE.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 Backward__PORT == 15 && ((Backward__MASK & 0xC0) != 0))
+	 Forward_ORANGE__PORT == 15 && ((Forward_ORANGE__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: Backward_Write
+* Function Name: Forward_ORANGE_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet Backward_SUT.c usage_Backward_Write
+*  \snippet Forward_ORANGE_SUT.c usage_Forward_ORANGE_Write
 *******************************************************************************/
-void Backward_Write(uint8 value)
+void Forward_ORANGE_Write(uint8 value)
 {
-    uint8 staticBits = (Backward_DR & (uint8)(~Backward_MASK));
-    Backward_DR = staticBits | ((uint8)(value << Backward_SHIFT) & Backward_MASK);
+    uint8 staticBits = (Forward_ORANGE_DR & (uint8)(~Forward_ORANGE_MASK));
+    Forward_ORANGE_DR = staticBits | ((uint8)(value << Forward_ORANGE_SHIFT) & Forward_ORANGE_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Backward_SetDriveMode
+* Function Name: Forward_ORANGE_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void Backward_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet Backward_SUT.c usage_Backward_SetDriveMode
+*  \snippet Forward_ORANGE_SUT.c usage_Forward_ORANGE_SetDriveMode
 *******************************************************************************/
-void Backward_SetDriveMode(uint8 mode)
+void Forward_ORANGE_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(Backward_0, mode);
+	CyPins_SetPinDriveMode(Forward_ORANGE_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: Backward_Read
+* Function Name: Forward_ORANGE_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void Backward_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet Backward_SUT.c usage_Backward_Read  
+*  \snippet Forward_ORANGE_SUT.c usage_Forward_ORANGE_Read  
 *******************************************************************************/
-uint8 Backward_Read(void)
+uint8 Forward_ORANGE_Read(void)
 {
-    return (Backward_PS & Backward_MASK) >> Backward_SHIFT;
+    return (Forward_ORANGE_PS & Forward_ORANGE_MASK) >> Forward_ORANGE_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: Backward_ReadDataReg
+* Function Name: Forward_ORANGE_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 Backward_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred Backward_Read() API because the 
-* Backward_ReadDataReg() reads the data register instead of the status 
+* preferred Forward_ORANGE_Read() API because the 
+* Forward_ORANGE_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 Backward_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet Backward_SUT.c usage_Backward_ReadDataReg 
+*  \snippet Forward_ORANGE_SUT.c usage_Forward_ORANGE_ReadDataReg 
 *******************************************************************************/
-uint8 Backward_ReadDataReg(void)
+uint8 Forward_ORANGE_ReadDataReg(void)
 {
-    return (Backward_DR & Backward_MASK) >> Backward_SHIFT;
+    return (Forward_ORANGE_DR & Forward_ORANGE_MASK) >> Forward_ORANGE_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(Backward_INTSTAT) 
+#if defined(Forward_ORANGE_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: Backward_SetInterruptMode
+    * Function Name: Forward_ORANGE_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 Backward_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use Backward_INTR_ALL to configure the
+    *  component. Or you may use Forward_ORANGE_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - Backward_0_INTR       (First pin in the list)
-    *  - Backward_1_INTR       (Second pin in the list)
+    *  - Forward_ORANGE_0_INTR       (First pin in the list)
+    *  - Forward_ORANGE_1_INTR       (Second pin in the list)
     *  - ...
-    *  - Backward_INTR_ALL     (All pins in Pins component)
+    *  - Forward_ORANGE_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 Backward_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet Backward_SUT.c usage_Backward_SetInterruptMode
+    *  \snippet Forward_ORANGE_SUT.c usage_Forward_ORANGE_SetInterruptMode
     *******************************************************************************/
-    void Backward_SetInterruptMode(uint16 position, uint16 mode)
+    void Forward_ORANGE_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & Backward_0_INTR) != 0u) 
+		if((position & Forward_ORANGE_0_INTR) != 0u) 
 		{ 
-			 Backward_0_INTTYPE_REG = (uint8)mode; 
+			 Forward_ORANGE_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: Backward_ClearInterrupt
+    * Function Name: Forward_ORANGE_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 Backward_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet Backward_SUT.c usage_Backward_ClearInterrupt
+    *  \snippet Forward_ORANGE_SUT.c usage_Forward_ORANGE_ClearInterrupt
     *******************************************************************************/
-    uint8 Backward_ClearInterrupt(void)
+    uint8 Forward_ORANGE_ClearInterrupt(void)
     {
-        return (Backward_INTSTAT & Backward_MASK) >> Backward_SHIFT;
+        return (Forward_ORANGE_INTSTAT & Forward_ORANGE_MASK) >> Forward_ORANGE_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

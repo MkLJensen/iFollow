@@ -29,7 +29,7 @@ CY_ISR_PROTO(PowerSwitch_Handler);
 CY_ISR_PROTO(FollowSwitch_Handler);
 
 uint8_t byteR = 0;
-ToF obj;
+ToF Sensor;
 RpiUart UARTcontroller;
 MotorController Motor;
 Switches Switchcontroller;
@@ -52,14 +52,13 @@ int main(void)
     
     Power_isr_StartEx(PowerSwitch_Handler);
     Follow_isr_StartEx(FollowSwitch_Handler);
-    //isr_SPI_rx_StartEx(ISR_SPI_rx_handler);
     
     LED Ledcontrol;
     PIDcontroller PIDcontrol(0.5, 0.01, 0.01, 50);
     
     UART_1_Start();
     
-    uint8_t Mode = Off;
+    uint8_t Mode = Off; 
    
     for(;;)
     {
@@ -134,9 +133,8 @@ int main(void)
 CY_ISR(isr_handler)
 {
     byteR = SPIS_ReadRxData();                                          // Gemmer aflæsning af RX-buffer
-    obj.handleByte(byteR);
+    Sensor.handleByte(byteR);
 }
-
 
 CY_ISR(PowerSwitch_Handler)
 {

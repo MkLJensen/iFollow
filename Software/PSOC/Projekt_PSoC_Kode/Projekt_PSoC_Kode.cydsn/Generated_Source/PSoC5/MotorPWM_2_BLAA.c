@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Forward.c  
+* File Name: MotorPWM_2_BLAA.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "Forward.h"
+#include "MotorPWM_2_BLAA.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 Forward__PORT == 15 && ((Forward__MASK & 0xC0) != 0))
+	 MotorPWM_2_BLAA__PORT == 15 && ((MotorPWM_2_BLAA__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: Forward_Write
+* Function Name: MotorPWM_2_BLAA_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet Forward_SUT.c usage_Forward_Write
+*  \snippet MotorPWM_2_BLAA_SUT.c usage_MotorPWM_2_BLAA_Write
 *******************************************************************************/
-void Forward_Write(uint8 value)
+void MotorPWM_2_BLAA_Write(uint8 value)
 {
-    uint8 staticBits = (Forward_DR & (uint8)(~Forward_MASK));
-    Forward_DR = staticBits | ((uint8)(value << Forward_SHIFT) & Forward_MASK);
+    uint8 staticBits = (MotorPWM_2_BLAA_DR & (uint8)(~MotorPWM_2_BLAA_MASK));
+    MotorPWM_2_BLAA_DR = staticBits | ((uint8)(value << MotorPWM_2_BLAA_SHIFT) & MotorPWM_2_BLAA_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Forward_SetDriveMode
+* Function Name: MotorPWM_2_BLAA_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void Forward_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet Forward_SUT.c usage_Forward_SetDriveMode
+*  \snippet MotorPWM_2_BLAA_SUT.c usage_MotorPWM_2_BLAA_SetDriveMode
 *******************************************************************************/
-void Forward_SetDriveMode(uint8 mode)
+void MotorPWM_2_BLAA_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(Forward_0, mode);
+	CyPins_SetPinDriveMode(MotorPWM_2_BLAA_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: Forward_Read
+* Function Name: MotorPWM_2_BLAA_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void Forward_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet Forward_SUT.c usage_Forward_Read  
+*  \snippet MotorPWM_2_BLAA_SUT.c usage_MotorPWM_2_BLAA_Read  
 *******************************************************************************/
-uint8 Forward_Read(void)
+uint8 MotorPWM_2_BLAA_Read(void)
 {
-    return (Forward_PS & Forward_MASK) >> Forward_SHIFT;
+    return (MotorPWM_2_BLAA_PS & MotorPWM_2_BLAA_MASK) >> MotorPWM_2_BLAA_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: Forward_ReadDataReg
+* Function Name: MotorPWM_2_BLAA_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 Forward_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred Forward_Read() API because the 
-* Forward_ReadDataReg() reads the data register instead of the status 
+* preferred MotorPWM_2_BLAA_Read() API because the 
+* MotorPWM_2_BLAA_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 Forward_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet Forward_SUT.c usage_Forward_ReadDataReg 
+*  \snippet MotorPWM_2_BLAA_SUT.c usage_MotorPWM_2_BLAA_ReadDataReg 
 *******************************************************************************/
-uint8 Forward_ReadDataReg(void)
+uint8 MotorPWM_2_BLAA_ReadDataReg(void)
 {
-    return (Forward_DR & Forward_MASK) >> Forward_SHIFT;
+    return (MotorPWM_2_BLAA_DR & MotorPWM_2_BLAA_MASK) >> MotorPWM_2_BLAA_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(Forward_INTSTAT) 
+#if defined(MotorPWM_2_BLAA_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: Forward_SetInterruptMode
+    * Function Name: MotorPWM_2_BLAA_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 Forward_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use Forward_INTR_ALL to configure the
+    *  component. Or you may use MotorPWM_2_BLAA_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - Forward_0_INTR       (First pin in the list)
-    *  - Forward_1_INTR       (Second pin in the list)
+    *  - MotorPWM_2_BLAA_0_INTR       (First pin in the list)
+    *  - MotorPWM_2_BLAA_1_INTR       (Second pin in the list)
     *  - ...
-    *  - Forward_INTR_ALL     (All pins in Pins component)
+    *  - MotorPWM_2_BLAA_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 Forward_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet Forward_SUT.c usage_Forward_SetInterruptMode
+    *  \snippet MotorPWM_2_BLAA_SUT.c usage_MotorPWM_2_BLAA_SetInterruptMode
     *******************************************************************************/
-    void Forward_SetInterruptMode(uint16 position, uint16 mode)
+    void MotorPWM_2_BLAA_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & Forward_0_INTR) != 0u) 
+		if((position & MotorPWM_2_BLAA_0_INTR) != 0u) 
 		{ 
-			 Forward_0_INTTYPE_REG = (uint8)mode; 
+			 MotorPWM_2_BLAA_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: Forward_ClearInterrupt
+    * Function Name: MotorPWM_2_BLAA_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 Forward_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet Forward_SUT.c usage_Forward_ClearInterrupt
+    *  \snippet MotorPWM_2_BLAA_SUT.c usage_MotorPWM_2_BLAA_ClearInterrupt
     *******************************************************************************/
-    uint8 Forward_ClearInterrupt(void)
+    uint8 MotorPWM_2_BLAA_ClearInterrupt(void)
     {
-        return (Forward_INTSTAT & Forward_MASK) >> Forward_SHIFT;
+        return (MotorPWM_2_BLAA_INTSTAT & MotorPWM_2_BLAA_MASK) >> MotorPWM_2_BLAA_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 
