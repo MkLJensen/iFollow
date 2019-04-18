@@ -8,6 +8,7 @@
 		#myMap {
 			width: window.innerWidth;
 			height: window.innerHeight;
+			z-index: 1;
 		}
 		</style>
 
@@ -16,23 +17,16 @@
 	<body>
 		<header>
 			<span>iFollow</span>
-			<span id="status" class="tab">Status</span>
-			<span id="controlPanel" class="tab">Control panel</span>
+			<span id="status" class="tab">View status</span>
+			<span id="controlPanel" class="tab">Control iFollow</span>
 		</header>
 
 		<div id="controls" class="controls">
-			<div id="forward" class="dirBtn">
-				<img src="arrowForward.png" width="100" height="100">
-			</div>
-			<span id="left" class="dirBtn">
-				<img src="arrowLeft.png" width="100" height="100">
-			</span>
-			<span id="right" class="dirBtn">
-				<img src="arrowRight.png" width="100" height="100">
-			</span>
-			<div id="backwards" class="dirBtn">
-				<img src="arrowBackwards.png" width="100" height="100">
-			</div>
+			<div id="forward" class="dirBtn">Forward</div>
+			<div id="left" class="dirBtn">Left</div>
+			<div id="right" class="dirBtn">Right</div>
+			<div id="backwards" class="dirBtn">Backwards</div>
+			
 		</div>
 
 		<div id="myMap"></div>

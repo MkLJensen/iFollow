@@ -5,18 +5,21 @@
 }
 
 body {
-	background-color: #24272E;
+	background-color: rgba(10, 10, 10, 0.10);
+	z-index: 2;
 }
 
 header {
+	background-color: #24272E;
 	padding: 20px;
 }
 
 header > span {
-	color: #e8d4b9;
+	color: #afd9cd;
 	text-align: left;
 	margin-top: 20px;
 	margin-left: 15px;
+	margin-right: 20px;
 	font-size: 25px;
 	font-family:'Segoe UI',Helvetica,Arial,Sans-Serif;
 }
@@ -24,48 +27,72 @@ header > span {
 .tab {
 	background: #24272E;
 	padding: 4px 10px;
-	border: 2px solid #e8d4b9;
+	border: 2px solid #afd9cd;
 	border-radius: 3px;
 	text-align: center;
-	color: #e8d4b9;
+	color: #afd9cd;
 	font-size: 18px;
 	font-family:'Segoe UI',Helvetica,Arial,Sans-Serif;
 	position: relative;
 	transition: all 0.3s ease;
+	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 
 }
 
 .tab:hover {
 	cursor:	 pointer;
 	background: #3b3f4a;
-
+	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.69), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .controls {
-	background: #e8d4b9;
+	border: 2px solid #afd9cd;
+	border-radius: 3px;
+	background: #32353d;
+	width: 413px;
+	height: 150px;
+	margin-right: 900px;
+	margin-left: 35px;
+	margin-bottom: 10px;
 }
 
 .dirBtn{
-	border: 2px solid #c78fb9;
+	width: 100px;
+	height: 50px;
+	border: 2px solid #afd9cd;
 	border-radius: 3px;
+	text-align: center;
+	background: #24272E;
+	color: #afd9cd;
+	font-family:'Segoe UI',Helvetica,Arial,Sans-Serif;
+	padding: 10px;
+	transition: all 0.3s ease;
 }
 
 .dirBtn:hover {
+	background: #3b3f4a;
 	cursor: pointer;
 }
 
 #Forward {
-	padding-left: 150px;
+	margin-top: 20px;
+	margin-left: 150px;
+	margin-bottom: 20px;
 }
 
 #Backwards {
-	padding-left: 150px;
+	margin-left: 150px;
+	margin-right: 150px;
+	float: center;
 }
 
 #Left {
-	padding-left: 50px;
+	margin-left: 50px;
+	float: left;
 }
 
 #Right {
-	padding-left: 100px;
+	margin-right: 50px;
+	float: right;
 }
