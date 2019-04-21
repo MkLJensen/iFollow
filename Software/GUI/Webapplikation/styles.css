@@ -36,8 +36,6 @@ header > span {
 	position: relative;
 	transition: all 0.3s ease;
 	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
-
 }
 
 .tab:hover {
@@ -50,11 +48,20 @@ header > span {
 	border: 2px solid #afd9cd;
 	border-radius: 3px;
 	background: #32353d;
-	width: 413px;
+	width: 400px;
 	height: 150px;
+	margin-top: 35px;
 	margin-right: 900px;
 	margin-left: 35px;
 	margin-bottom: 10px;
+	position: absolute;
+	z-index: 1;
+}
+
+#myMap {
+	width: window.innerWidth;
+	height: window.innerHeight;
+	z-index: 0;
 }
 
 .dirBtn{
@@ -76,23 +83,25 @@ header > span {
 }
 
 #Forward {
-	margin-top: 20px;
-	margin-left: 150px;
-	margin-bottom: 20px;
+	position: absolute;
+	left: 150px;
+	top: 10px;
 }
 
 #Backwards {
-	margin-left: 150px;
-	margin-right: 150px;
-	float: center;
+	position: absolute;
+	left: 150px;
+	top: 80px;
 }
 
 #Left {
-	margin-left: 50px;
-	float: left;
+	position: absolute;
+	left: 20px;
+	top: 80px;
 }
 
 #Right {
-	margin-right: 50px;
-	float: right;
+	position: absolute;
+	right: 20px;
+	top: 80px;
 }
