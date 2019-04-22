@@ -1,5 +1,5 @@
 #include "getGPS.hpp"
-#include <fstream>
+
 
 GPS::GPS(std::string str)
 {
@@ -12,57 +12,66 @@ GPS::~GPS(void)
 
 void GPS::updateCordinates(void)
 {
-    
-    bool readError = true; // fla for error check
-    char bufferChar_[300]; // buffer for string
-    std::size_t posOfComma1 = 0, posOfComma2;
+    char bufferChar_[75]; // buffer for string
+    std::string fileDescrip_ ="/dev/ttyAMA0";
 
-    std::ifstream inFile (fileDescrip_); //Opening file 
-    std::cout << fileDescrip_ << std::endl;
-    int longofFileDe = inFile.tellg(); // getting size of file
 
-    if (inFile.fail()) // checking if opening file has failed
+    int dev = open(fileDescrip_.c_str(), O_RDWR | O_NOCTTY | O_SYNC);
+
+
+
+    if (dev < 0) // checking if opening file has failed
     {
-        setLatitude("Failed to get latitude GPS Data"); // GPS example string : $GPGGA,091224.00,5610.35994,N,01011.51373,E,1,07,1.49,59.3,M,42.8,M,,*68
-        setLongitude("Failed to get Longitude GPS Data");
-        readError = true;
+        std::cout << "could not open file" << std::endl;
     }
-    readError = false;
-    inFile.read(bufferChar_,longofFileDe);
-    std::string bufferString_(bufferChar_);
+        std::cout << "file opened succesfully" << std::endl;
 
-    if(inFile)
-    {
-            while(bufferString_.substr(0,6) != "$GPGGA")
-            {    
-                inFile.read(bufferChar_,longofFileDe); // Reading 
-                std::string bufferString_(bufferChar_);
+while (1) {
+    int n = read(dev,bufferChar_,sizeof(bufferChar_));
+
+
+    bufferString_ = std::string(bufferChar_);
+
+    while(bufferString_.substr(0,6) != "$GPGGA")
+            {
+                n = read(dev,bufferChar_,sizeof(bufferChar_)); // Reading
+                bufferString_ = std::string(bufferChar_);
             }
 
+    bufferString_ = bufferString_.substr(0,72);
+    std::cout << bufferString_ << std::endl;
 
-        readError = false;
+  }
+
+    close (dev);
+
 
                        
-                while(bufferString_.substr(0,2) != "\0")
+while(bufferString_.substr(0,1) != "\0")
                 {
-                    char* nmeaCharBuffer_;
-                    char* caseBuffer_;
+                    char nmeaCharBuffer_[30];
+                    std::string caseBuffer_;
                     std::string nmeaStringBuffer_;
                     int difInPos;
-                    int numOfComma = 0;
+                    int posOfComma2;
+                    int posOfComma1 = 0;
+                    std::size_t length;
+                    size_t iFor;
 
-                    if (numOfComma != 3 || 4) 
+                    
+                    if (numOfComma == 2 || numOfComma == 3 || numOfComma == 7 || numOfComma == 8) 
                     {
-                       
                         posOfComma2 = bufferString_.find(",",posOfComma1+1);
 
                         numOfComma++;
 
                         difInPos = posOfComma2-posOfComma1;
 
-                        bufferString_.copy(nmeaCharBuffer_,difInPos+2,posOfComma1+1); 
+                        length = bufferString_.copy(nmeaCharBuffer_,(difInPos+1),posOfComma1+1); 
+                        nmeaCharBuffer_[length] = '\0';
 
-                        nmeaStringBuffer_ = std::string(nmeaCharBuffer_);
+
+                        nmeaStringBuffer_ = nmeaCharBuffer_;
 
                         posOfComma1 = posOfComma1+2;
                         posOfComma2 = posOfComma2+2;
@@ -72,63 +81,66 @@ void GPS::updateCordinates(void)
                         posOfComma2 = bufferString_.find(",",posOfComma1+1);
 
                         numOfComma++;
-
                         difInPos = posOfComma2-posOfComma1;
+                       
+                        length = bufferString_.copy(nmeaCharBuffer_,difInPos-1,posOfComma1+1); 
+                        nmeaCharBuffer_[length] = '\0';                     
 
-                        bufferString_.copy(nmeaCharBuffer_,difInPos,posOfComma1+1); 
-
-                        nmeaStringBuffer_ = std::string(nmeaCharBuffer_);
+                        nmeaStringBuffer_ = nmeaCharBuffer_;
                     }
                     
-                
-                    for(size_t i = 0; i < 10; i++)
-                    {
-                        nmeaStringBuffer_.copy(caseBuffer_,difInPos,posOfComma1+1);
-                        switch (i)
+
+                        caseBuffer_ = nmeaStringBuffer_;
+                        
+
+                        switch (iFor)
                         {
                             case 0: 
                                 setGpsType(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
                             case 1:
                                 setfixTime(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
                             case 2:
                                 setLatitude(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
                             case 3:
                                 setLongitude(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
                             case 4:
                                 setfixQuality(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
                             case 5:
                                 setnumofSats(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
                             case 6:
                                 sethDilutionofPos(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
                             case 7:
                                 setaltitudeMeters(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
                             case 8:
                                 sethOgGeoid(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
                             case 9:
-                                setcheckSum(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
                                 break;
+                            case 10:
+                                setcheckSum(caseBuffer_);
+                                bufferString_.replace(0,length+1,"");
+                                break;
+                                
                         }
-                    }
+                    iFor++;
                 }
-
-        inFile.close();
-        return;
-    }
-    if (readError = true) {
-        std::cout << "error reading. size of read data: " << inFile.gcount() <<std::endl;
-    }
-
-
-    inFile.close();
-
 
 }

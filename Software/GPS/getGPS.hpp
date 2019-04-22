@@ -4,6 +4,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
+#include <fstream>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include "NMEA_GPGGA.hpp"
 
     class GPS : public NMEA_GPGGA
@@ -14,6 +18,8 @@
         ~GPS();
     private:
         std::string fileDescrip_;
+        std::string bufferString_;
+        int numOfComma = 0;
 
         /*
         std::string gpsType_;
