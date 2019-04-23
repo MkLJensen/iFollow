@@ -27,6 +27,7 @@ extern "C"
 CY_ISR_PROTO(isr_handler);
 CY_ISR_PROTO(PowerSwitch_Handler);
 CY_ISR_PROTO(FollowSwitch_Handler);
+CY_ISR_PROTO(Control_timer_isr);
 
 uint8_t byteR = 0;
 ToF Sensor;
@@ -73,10 +74,12 @@ int main(void)
         if (Mode == Sleep && UARTcontroller.ReadData(&Motor) == 'o')
         {
             Mode = Control;
+            Timer_1_Start();
         }
         else if (Mode == Control && UARTcontroller.ReadData(&Motor) == 'c')
         {
             Mode = Sleep;
+            Timer_1_Stop();
         }
         if (Mode == Sleep && Switchcontroller.getSwitchStatus('f') == true)
         {
@@ -118,8 +121,8 @@ int main(void)
             {
                 Ledcontrol.turnOffLed('r');
                 Ledcontrol.blinkLed('g');
-                uint8_t Data[7] = {"Wallah"};
-                UARTcontroller.TransmitData(Data, sizeof(Data)/sizeof(uint8_t));
+                //uint8_t Data[7] = {"Wallah"};
+                //UARTcontroller.TransmitData(Data, sizeof(Data)/sizeof(uint8_t));
             }
             break;
             default :
@@ -144,6 +147,15 @@ CY_ISR(PowerSwitch_Handler)
 CY_ISR(FollowSwitch_Handler)
 {
     Switchcontroller.setSwitchStatus('F');
+}
+
+CY_ISR(Control_timer_isr)
+{
+    if (Motor.getOldPower() == Motor.getPower())
+    {
+        Motor.setPower(0);
+        Motor.setOldPower(0);
+    }
 }
 
 /* [] END OF FILE */

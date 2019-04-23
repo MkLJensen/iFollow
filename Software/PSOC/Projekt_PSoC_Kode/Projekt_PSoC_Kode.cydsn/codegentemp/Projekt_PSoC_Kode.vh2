@@ -2,7 +2,7 @@
 --	Conversion of Projekt_PSoC_Kode.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Apr 18 11:54:16 2019
+--	Mon Apr 22 22:41:16 2019
 --
 
 USE cypress.cypress.all;
@@ -828,7 +828,7 @@ SIGNAL tmpIO_0__FollowButton_net_0 : bit;
 TERMINAL tmpSIOVREF__FollowButton_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__FollowButton_net_0 : bit;
 SIGNAL \UART_1:Net_9\ : bit;
-SIGNAL Net_1788 : bit;
+SIGNAL Net_2933 : bit;
 SIGNAL \UART_1:Net_61\ : bit;
 SIGNAL \UART_1:BUART:clock_op\ : bit;
 SIGNAL \UART_1:BUART:reset_reg\ : bit;
@@ -845,7 +845,7 @@ SIGNAL \UART_1:BUART:reset_sr\ : bit;
 SIGNAL \UART_1:BUART:HalfDuplexSend_last\ : bit;
 SIGNAL Net_1781 : bit;
 SIGNAL \UART_1:BUART:txn\ : bit;
-SIGNAL Net_1787 : bit;
+SIGNAL Net_2932 : bit;
 SIGNAL \UART_1:BUART:tx_interrupt_out\ : bit;
 SIGNAL \UART_1:BUART:rx_interrupt_out\ : bit;
 SIGNAL \UART_1:BUART:tx_state_1\ : bit;
@@ -932,7 +932,7 @@ SIGNAL \UART_1:BUART:tx_status_0\ : bit;
 SIGNAL \UART_1:BUART:tx_status_1\ : bit;
 SIGNAL \UART_1:BUART:tx_status_2\ : bit;
 SIGNAL \UART_1:BUART:tx_status_3\ : bit;
-SIGNAL Net_1783 : bit;
+SIGNAL Net_2930 : bit;
 SIGNAL \UART_1:BUART:tx_bitclk\ : bit;
 SIGNAL \UART_1:BUART:tx_ctrl_mark_last\ : bit;
 SIGNAL \UART_1:BUART:tx_mark\ : bit;
@@ -1076,7 +1076,7 @@ SIGNAL \UART_1:BUART:rx_status_4\ : bit;
 SIGNAL \UART_1:BUART:rx_status_5\ : bit;
 SIGNAL \UART_1:BUART:rx_status_6\ : bit;
 SIGNAL \UART_1:BUART:rx_addr_match_status\ : bit;
-SIGNAL Net_1782 : bit;
+SIGNAL Net_2929 : bit;
 SIGNAL \UART_1:BUART:rx_markspace_pre\ : bit;
 SIGNAL \UART_1:BUART:rx_parity_error_pre\ : bit;
 SIGNAL \UART_1:BUART:rx_break_status\ : bit;
@@ -1337,6 +1337,16 @@ SIGNAL tmpOE__ss_net_0 : bit;
 SIGNAL tmpIO_0__ss_net_0 : bit;
 TERMINAL tmpSIOVREF__ss_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__ss_net_0 : bit;
+SIGNAL Net_10 : bit;
+SIGNAL Net_12 : bit;
+SIGNAL \Timer_1:Net_260\ : bit;
+SIGNAL \Timer_1:Net_266\ : bit;
+SIGNAL \Timer_1:Net_51\ : bit;
+SIGNAL \Timer_1:Net_261\ : bit;
+SIGNAL \Timer_1:Net_57\ : bit;
+SIGNAL Net_2939 : bit;
+SIGNAL Net_2946 : bit;
+SIGNAL \Timer_1:Net_102\ : bit;
 SIGNAL \PWM_1:PWMUDB:min_kill_reg\\D\ : bit;
 SIGNAL \PWM_1:PWMUDB:prevCapture\\D\ : bit;
 SIGNAL \PWM_1:PWMUDB:trig_last\\D\ : bit;
@@ -1376,7 +1386,7 @@ SIGNAL \UART_1:BUART:txn\\D\ : bit;
 SIGNAL \UART_1:BUART:tx_state_1\\D\ : bit;
 SIGNAL \UART_1:BUART:tx_state_0\\D\ : bit;
 SIGNAL \UART_1:BUART:tx_state_2\\D\ : bit;
-SIGNAL Net_1783D : bit;
+SIGNAL Net_2930D : bit;
 SIGNAL \UART_1:BUART:tx_bitclk\\D\ : bit;
 SIGNAL \UART_1:BUART:tx_ctrl_mark_last\\D\ : bit;
 SIGNAL \UART_1:BUART:tx_mark\\D\ : bit;
@@ -1467,7 +1477,7 @@ Net_1781 <= (not \UART_1:BUART:txn\);
 
 \UART_1:BUART:tx_status_2\ <= (not \UART_1:BUART:tx_fifo_notfull\);
 
-Net_1783D <= ((not \UART_1:BUART:reset_reg\ and \UART_1:BUART:tx_state_2\)
+Net_2930D <= ((not \UART_1:BUART:reset_reg\ and \UART_1:BUART:tx_state_2\)
 	OR (not \UART_1:BUART:reset_reg\ and \UART_1:BUART:tx_state_0\)
 	OR (not \UART_1:BUART:reset_reg\ and \UART_1:BUART:tx_state_1\));
 
@@ -2442,7 +2452,7 @@ FollowButton:cy_psoc3_pins_v1_10
 		id=>"b0162966-0060-4af5-82d1-fcb491ad7619/be0a0e37-ad17-42ca-b5a1-1a654d736358",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"2170138888.88889",
+		period=>"1085069444.44444",
 		is_direct=>'0',
 		is_digital=>'1')
 	PORT MAP(clock_out=>\UART_1:Net_9\,
@@ -2450,7 +2460,7 @@ FollowButton:cy_psoc3_pins_v1_10
 \UART_1:RXInternalInterrupt\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_1788);
+	PORT MAP(int_signal=>Net_2933);
 \UART_1:BUART:ClkSync\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
 	PORT MAP(clock_in=>\UART_1:Net_9\,
@@ -2745,12 +2755,12 @@ FollowButton:cy_psoc3_pins_v1_10
 		clock=>\UART_1:BUART:clock_op\,
 		status=>(zero, \UART_1:BUART:rx_status_5\, \UART_1:BUART:rx_status_4\, \UART_1:BUART:rx_status_3\,
 			\UART_1:BUART:rx_status_2\, zero, zero),
-		interrupt=>Net_1788);
+		interrupt=>Net_2933);
 Rx_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"ff5b6ce4-4ec8-4f67-b23e-0af8df059f0d",
-		drive_mode=>"001",
+		drive_mode=>"010",
 		ibuf_enabled=>"1",
-		init_dr_st=>"0",
+		init_dr_st=>"1",
 		input_sync=>"1",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",
@@ -3426,6 +3436,30 @@ ss:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__ss_net_0);
+timer_clock:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"c0fb34bd-1044-4931-9788-16b01ce89812",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"1000000000",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_10,
+		dig_domain_out=>open);
+\Timer_1:TimerHW\:cy_psoc3_timer_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_10,
+		kill=>zero,
+		enable=>one,
+		capture=>zero,
+		timer_reset=>zero,
+		tc=>Net_2946,
+		compare=>\Timer_1:Net_261\,
+		interrupt=>\Timer_1:Net_57\);
+Motor_timer_isr:cy_isr_v1_0
+	GENERIC MAP(int_type=>"00",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_2946);
 \PWM_1:PWMUDB:min_kill_reg\:cy_dsrff
 	PORT MAP(d=>one,
 		s=>zero,
@@ -3614,10 +3648,10 @@ ss:cy_psoc3_pins_v1_10
 	PORT MAP(d=>\UART_1:BUART:tx_state_2\\D\,
 		clk=>\UART_1:BUART:clock_op\,
 		q=>\UART_1:BUART:tx_state_2\);
-Net_1783:cy_dff
-	PORT MAP(d=>Net_1783D,
+Net_2930:cy_dff
+	PORT MAP(d=>Net_2930D,
 		clk=>\UART_1:BUART:clock_op\,
-		q=>Net_1783);
+		q=>Net_2930);
 \UART_1:BUART:tx_bitclk\:cy_dff
 	PORT MAP(d=>\UART_1:BUART:tx_bitclk\\D\,
 		clk=>\UART_1:BUART:clock_op\,

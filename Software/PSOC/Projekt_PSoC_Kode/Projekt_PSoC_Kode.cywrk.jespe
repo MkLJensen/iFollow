@@ -92,9 +92,9 @@
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\LED_Red</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\miso</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\mosi</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Motor_timer_isr</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\MotorPWM_1_BRUN</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\MotorPWM_2_BLAA</v>
-<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\Power_isr</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -145,6 +145,7 @@
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\miso.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\mosi.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Motor_timer_isr.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorController.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorPWM_1_BRUN.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorPWM_2_BLAA.lst</v>
@@ -162,6 +163,9 @@
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_PM.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\ss.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Switches.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\ToF.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
@@ -208,6 +212,7 @@
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\miso.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\mosi.lst</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\Motor_timer_isr.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorController.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorPWM_1_BRUN.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorPWM_2_BLAA.lst</v>
@@ -223,7 +228,6 @@
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_INT.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_IntClock.lst</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_PM.lst</v>
-<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\CortexM3\ARM_GCC_541\Debug\Listing Files\ss.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -250,6 +254,7 @@
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\PWM_v3_30</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\PWM_v3_30\PWM_v3_30.pdf</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\SPI_Slave_v2_70.pdf</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Timer_v2_80.pdf</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\UART_v2_50.pdf</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\ZeroTerminal</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\ZeroTerminal\ZeroTerminal.pdf</v>
@@ -272,6 +277,7 @@
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\PWM_v3_30</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\PWM_v3_30\PWM_v3_30.pdf</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\SPI_Slave_v2_70.pdf</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Timer_v2_80.pdf</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\UART_v2_50.pdf</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\ZeroTerminal</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\ZeroTerminal\ZeroTerminal.pdf</v>
@@ -302,11 +308,12 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Projekt_PSoC_Kode.cydsn\main.c" />
-<name v=".\Projekt_PSoC_Kode.cydsn\RpiUart.c" />
 <name v=".\Projekt_PSoC_Kode.cydsn\MotorController.c" />
-<name v=".\Projekt_PSoC_Kode.cydsn\Generated_Source\PSoC5\PWM_1.c" />
+<name v=".\Projekt_PSoC_Kode.cydsn\MotorController.h" />
+<name v=".\Projekt_PSoC_Kode.cydsn\RpiUart.c" />
+<name v=".\Projekt_PSoC_Kode.cydsn\main.c" />
 <name v=".\Projekt_PSoC_Kode.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Projekt_PSoC_Kode.cydsn\PIDcontroller.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -314,7 +321,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1339, 697" SelectedTabbedMdiWindow="c0d3bbcb-2ab4-4d36-b4f1-7e2432fa4cd5"><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\main.c" Guid="a577023b-c8f1-477f-92b7-a18b3ac1118f" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\RpiUart.c" Guid="60b9075d-885b-4d30-b29a-46d41a51910e" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\MotorController.c" Guid="26a306eb-6080-4e12-ac97-992667b959ed" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Generated_Source\PSoC5\PWM_1.c" Guid="3feb06f5-31aa-49cf-9c11-e99735149ebf" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\TopDesign\TopDesign.cysch" Guid="c0d3bbcb-2ab4-4d36-b4f1-7e2432fa4cd5" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4b092cf8-2597-4e9e-899e-42c869ca2181" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1476, 697" SelectedTabbedMdiWindow="f0d99f6d-6343-4d8a-ad44-33979226e973"><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\MotorController.c" Guid="f0d99f6d-6343-4d8a-ad44-33979226e973" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\MotorController.h" Guid="edeaba98-9002-48b1-86ce-7341cbbecff4" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\RpiUart.c" Guid="2f2b73c7-9609-434b-b4db-36da15432393" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\main.c" Guid="69d86d5e-5b49-4f0a-81f9-461cd4d7d254" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\TopDesign\TopDesign.cysch" Guid="12f1773c-3105-401b-91fe-39f574d06243" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\PIDcontroller.c" Guid="fe0ae46e-50f6-408b-b087-3ce8486378cf" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

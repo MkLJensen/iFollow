@@ -1,6 +1,6 @@
-C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Projekt_PSoC_Kode.cyprj|2b45a76a-171c-4a86-999b-1558e44a63e9
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|78a6fb38-eb9b-4fc1-8fba-2565b4b20827
-C:\Users\jespe\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|bac33e61-9f6b-4fcf-a303-b6671d9caa9b
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|922d8362-0683-419d-bb5c-a30d1bf09351
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|46fb1479-e445-4b43-90a2-f2a8beb51ea5
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|f6b24994-c96d-4c64-9a70-76869d16288a
+C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Projekt_PSoC_Kode.cyprj|89d6fe01-7607-42b0-a397-e84275164be4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|19ee5544-7b07-4044-98d6-239e9d59355f
+C:\Users\jespe\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|540af4f2-9910-4262-8572-374c6e5f6ba0
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|c6ef0849-2236-4333-87f7-7228e3bc6d63
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|697ef38e-20fa-4352-880f-b7f27744588a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c00c921b-2dd6-4111-8ef5-e7bad33517c2

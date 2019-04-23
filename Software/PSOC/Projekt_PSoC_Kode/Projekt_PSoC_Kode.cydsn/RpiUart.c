@@ -14,6 +14,8 @@
 
 #include "RpiUart.h"
 
+extern int power_;
+
 RpiUart::RpiUart()
 {
     
@@ -58,23 +60,16 @@ uint8_t RpiUart::handleByteReceived(uint8_t byteReceived[], MotorController * Mo
         {
             if (ControlModeActive == true)
             {
-                MotorPtr->GoForward(byteReceived[1]);
-                UART_1_PutString(" Going forward    ");
-                if (byteReceived[1] == 97)
-                {
-                     UART_1_PutChar(byteReceived[1]);
-                }
+                MotorPtr->Control(byteReceived[0]);
             }
             return 0;
         }
         break;
         case 'b' :
-        {
+        {  
             if (ControlModeActive == true)
             {
-                MotorPtr->GoBackward(byteReceived[1]);
-                UART_1_PutString("Going backward");
-                UART_1_PutChar(byteReceived[1]);
+                MotorPtr->Control(byteReceived[0]);
             }
             return 0;
         }
@@ -83,11 +78,7 @@ uint8_t RpiUart::handleByteReceived(uint8_t byteReceived[], MotorController * Mo
         {
             if (ControlModeActive == true)
             {
-                MotorPtr->Turn(byteReceived[1], 'l');
-                CyDelay(500);
-                MotorPtr->GoForward(0);
-                UART_1_PutString("Going left");
-                UART_1_PutChar(byteReceived[1]);
+                MotorPtr->Control(byteReceived[0]);
             }
             return 0;
         }
@@ -96,11 +87,7 @@ uint8_t RpiUart::handleByteReceived(uint8_t byteReceived[], MotorController * Mo
         {
             if (ControlModeActive == true)
             {
-                MotorPtr->Turn(byteReceived[1], 'r');
-                CyDelay(500);
-                MotorPtr->GoForward(0);
-                UART_1_PutString("Going right");
-                UART_1_PutChar(byteReceived[1]);
+                MotorPtr->Control(byteReceived[0]);
             }
             return 0;
         }
@@ -114,7 +101,7 @@ uint8_t RpiUart::handleByteReceived(uint8_t byteReceived[], MotorController * Mo
          case 'c' :
         {
             ControlModeActive = false;
-            MotorPtr->GoForward(0);
+            MotorPtr->Stop();
             return 'c';
         }
         break;        

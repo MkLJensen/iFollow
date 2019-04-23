@@ -1,5 +1,5 @@
 # Projekt_PSoC_Kode
-# 2019-04-18 09:54:17Z
+# 2019-04-22 20:41:17Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0

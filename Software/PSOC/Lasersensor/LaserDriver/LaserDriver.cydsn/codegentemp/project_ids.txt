@@ -1,6 +1,6 @@
-C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\LaserDriver.cyprj|384aafb1-cc12-40e2-8318-8f956abbb821
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|02533a14-e235-4fd5-94b2-aa3cb9c20b38
-C:\Users\jespe\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|338e462f-c73b-4505-9de1-f810e650726d
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d360a93a-9f6b-4113-8a29-cb94f0dca34f
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e0681401-8361-4510-8271-5a91312bca76
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|bc3e2daf-4068-467f-b406-af60efabd6aa
+C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\LaserDriver.cyprj|bc6d00e0-e7c3-42b9-a826-8b9119d9ec52
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9cabc954-8abf-4b0a-9952-d1bb10f054bf
+C:\Users\jespe\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|a8ff144b-8050-437f-aeae-c20266f55550
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0189b7eb-ef09-4a34-bb62-b7bfa6eb0e2d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|59fa99be-b2e3-4454-8de6-89745f4efcc8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b7972de6-e37a-4e1d-99a9-bcc0cac60c66

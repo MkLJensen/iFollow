@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LaserDriver\LaserDriver\Source Files\Laser.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LaserDriver\LaserDriver\TopDesign">
 <ExpandedNodeIds>
 <v>LaserDriver</v>
 <v>LaserDriver\LaserDriver</v>
@@ -88,6 +88,7 @@
 <v>LaserDriver\LaserDriver\Generated_Source\PSoC5\cyfitter_cfg.c</v>
 <v>LaserDriver\LaserDriver\Generated_Source\PSoC5\cyfitter_cfg.h</v>
 <v>LaserDriver\LaserDriver\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>LaserDriver\LaserDriver\Generated_Source\PSoC5\cyfitteriar.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -230,6 +231,9 @@
 <name v=".\LaserDriver.cydsn\Laser.h" />
 <name v=".\LaserDriver.cydsn\Laser.c" />
 <name v=".\LaserDriver.cydsn\i2c.h" />
+<name v=".\LaserDriver.cydsn\LaserDriver.cydwr" />
+<name v=".\LaserDriver.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\LaserDriver.cydsn\i2c.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -237,7 +241,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1033, 688" SelectedTabbedMdiWindow="7a8aaa46-1633-449b-af51-31c652adc328"><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\main.c" Guid="a77327f3-f639-4a5f-8164-89ddea34ffa9" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Laser.h" Guid="c9a6506c-e513-4f03-ae94-2c3176a3034a" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Laser.c" Guid="7a8aaa46-1633-449b-af51-31c652adc328" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\i2c.h" Guid="e0909b60-00c1-4fc4-a8f5-dd59ba053f5e" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4b092cf8-2597-4e9e-899e-42c869ca2181" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1476, 697" SelectedTabbedMdiWindow="a77327f3-f639-4a5f-8164-89ddea34ffa9"><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\main.c" Guid="a77327f3-f639-4a5f-8164-89ddea34ffa9" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Laser.h" Guid="c9a6506c-e513-4f03-ae94-2c3176a3034a" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\Laser.c" Guid="7a8aaa46-1633-449b-af51-31c652adc328" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\i2c.h" Guid="e0909b60-00c1-4fc4-a8f5-dd59ba053f5e" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\LaserDriver.cydwr" Guid="0e52e9b5-e39a-49d1-a9b0-6329be8ae52d" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\TopDesign\TopDesign.cysch" Guid="cc144a2c-c24f-4a78-ad7e-fb33a45e21fe" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Lasersensor\LaserDriver\LaserDriver.cydsn\i2c.c" Guid="6ecad711-cd18-4da3-bf1f-4e109b719ae2" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4b092cf8-2597-4e9e-899e-42c869ca2181" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

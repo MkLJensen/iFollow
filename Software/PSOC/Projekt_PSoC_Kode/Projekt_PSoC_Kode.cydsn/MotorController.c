@@ -52,44 +52,89 @@ void MotorController::GoBackward(int pwm)
     }
     setDir(BARCKWARD);
 }
-      
-void MotorController::Turn(int pwm, char dir)
+
+void MotorController::TurnRight(int pwm)
 {
     int CMP = 500+(4*pwm);
-    if (dir == 'l')
+    if ((Rightpwm_ - CMP) < 0)
     {
-        if ((Rightpwm_ - CMP) < 0)
-        {
-            setRightPWM(CMP+(CMP-Rightpwm_));
-            setLeftPWM(0);
-        }
-        else 
-        {
-            setRightPWM(Rightpwm_-CMP);
-        }
-        setDir(FORWARD);
+        setRightPWM(CMP+(CMP-Rightpwm_));
+        setLeftPWM(0);
+    }
+    else 
+    {
+        setRightPWM(Rightpwm_-CMP);
+    }
+    setDir(FORWARD);
+}
+
+void MotorController::TurnLeft(int pwm)
+{
+    int CMP = 500+(4*pwm);
+    if ((Leftpwm_ - CMP) < 0)
+    {
+        setLeftPWM(CMP+(CMP-Leftpwm_));
+        setRightPWM(0);
+    }
+    else 
+    {
+        setLeftPWM(Rightpwm_-CMP);
+    }
+    setDir(FORWARD);
+}
+
+void MotorController::Stop(void)
+{
+    setLeftPWM(0);
+    setRightPWM(0);
+}
+
+void MotorController::Control(char dir)
+{
+    setPower(getPower()+1);    
+    if (dir == 'f')
+    {
+        GoForward(power_);
+    }
+    else if (dir == 'b')
+    {
+        GoBackward(power_);
     }
     else if (dir == 'r')
     {
-        if ((CMP + Leftpwm_) > 100)
-        {
-            setLeftPWM(100);
-            setRightPWM(100-CMP);
-        }
-        else 
-        {
-            setLeftPWM(Leftpwm_+CMP);
-        }
-        setDir(FORWARD);
-        /*
-        if (Leftpwm_ > (100-pwm))
-        {
-            setRightPWM(100-pwm);
-        }
-        setLeftPWM(pwm+Leftpwm_);
-        setDir(FORWARD); 
-        */
+        TurnRight(power_);
     }
+    else if (dir == 'l')
+    {
+        TurnLeft(power_);
+    }
+}
+
+int MotorController::getPower(void) const
+{
+    return power_;
+}
+
+void MotorController::setPower(int power)
+{
+    if (power_ > 100)
+    {
+        power_ = 100; 
+    }
+    else
+    {
+        power_ = power;
+    }
+}
+
+int MotorController::getOldPower(void) const
+{
+    return oldpower_;
+}
+
+void MotorController::setOldPower(int power)
+{
+    oldpower_ = power;
 }
       
 void MotorController::setLeftPWM(int pwm)

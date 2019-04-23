@@ -1,6 +1,6 @@
 -- ======================================================================
 -- Projekt_PSoC_Kode.ctl generated from Projekt_PSoC_Kode
--- 04/18/2019 at 11:54
+-- 04/22/2019 at 22:41
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

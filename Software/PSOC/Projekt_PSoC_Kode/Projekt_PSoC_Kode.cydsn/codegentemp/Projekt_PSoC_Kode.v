@@ -1,6 +1,6 @@
 // ======================================================================
 // Projekt_PSoC_Kode.v generated from TopDesign.cysch
-// 04/18/2019 at 11:54
+// 04/22/2019 at 22:41
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -379,7 +379,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v"
 `endif
 
-// UART_v2_50(Address1=0, Address2=0, BaudRate=57600, BreakBitsRX=13, BreakBitsTX=13, BreakDetect=false, CRCoutputsEn=false, Enable_RX=1, Enable_RXIntInterrupt=1, Enable_TX=1, Enable_TXIntInterrupt=0, EnableHWAddress=0, EnIntRXInterrupt=true, EnIntTXInterrupt=false, FlowControl=0, HalfDuplexEn=false, HwTXEnSignal=true, InternalClock=true, InternalClockToleranceMinus=3.93736842105263, InternalClockTolerancePlus=3.93736842105263, InternalClockUsed=1, InterruptOnAddDetect=0, InterruptOnAddressMatch=0, InterruptOnBreak=0, InterruptOnByteRcvd=1, InterruptOnOverrunError=0, InterruptOnParityError=0, InterruptOnStopError=0, InterruptOnTXComplete=false, InterruptOnTXFifoEmpty=false, InterruptOnTXFifoFull=false, InterruptOnTXFifoNotFull=false, IntOnAddressDetect=false, IntOnAddressMatch=false, IntOnBreak=false, IntOnByteRcvd=true, IntOnOverrunError=false, IntOnParityError=false, IntOnStopError=false, NumDataBits=8, NumStopBits=1, OverSamplingRate=8, ParityType=0, ParityTypeSw=false, RequiredClock=460800, RXAddressMode=0, RXBufferSize=16, RxBuffRegSizeReplacementString=uint8, RXEnable=true, TXBitClkGenDP=true, TXBufferSize=4, TxBuffRegSizeReplacementString=uint8, TXEnable=true, Use23Polling=true, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=UART_v2_50, CY_CONFIG_TITLE=UART_1, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=UART_1, CY_INSTANCE_SHORT_NAME=UART_1, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=50, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.2, INSTANCE_NAME=UART_1, )
+// UART_v2_50(Address1=0, Address2=0, BaudRate=115200, BreakBitsRX=13, BreakBitsTX=13, BreakDetect=false, CRCoutputsEn=false, Enable_RX=1, Enable_RXIntInterrupt=1, Enable_TX=1, Enable_TXIntInterrupt=0, EnableHWAddress=0, EnIntRXInterrupt=true, EnIntTXInterrupt=false, FlowControl=0, HalfDuplexEn=false, HwTXEnSignal=true, InternalClock=true, InternalClockToleranceMinus=3.93736842105263, InternalClockTolerancePlus=3.93736842105263, InternalClockUsed=1, InterruptOnAddDetect=0, InterruptOnAddressMatch=0, InterruptOnBreak=0, InterruptOnByteRcvd=1, InterruptOnOverrunError=0, InterruptOnParityError=0, InterruptOnStopError=0, InterruptOnTXComplete=false, InterruptOnTXFifoEmpty=false, InterruptOnTXFifoFull=false, InterruptOnTXFifoNotFull=false, IntOnAddressDetect=false, IntOnAddressMatch=false, IntOnBreak=false, IntOnByteRcvd=true, IntOnOverrunError=false, IntOnParityError=false, IntOnStopError=false, NumDataBits=8, NumStopBits=1, OverSamplingRate=8, ParityType=0, ParityTypeSw=false, RequiredClock=921600, RXAddressMode=0, RXBufferSize=16, RxBuffRegSizeReplacementString=uint8, RXEnable=true, TXBitClkGenDP=true, TXBufferSize=4, TxBuffRegSizeReplacementString=uint8, TXEnable=true, Use23Polling=true, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=UART_v2_50, CY_CONFIG_TITLE=UART_1, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=UART_1, CY_INSTANCE_SHORT_NAME=UART_1, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=50, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.2, INSTANCE_NAME=UART_1, )
 module UART_v2_50_2 (
     cts_n,
     tx,
@@ -430,7 +430,7 @@ module UART_v2_50_2 (
 		#(.id("b0162966-0060-4af5-82d1-fcb491ad7619/be0a0e37-ad17-42ca-b5a1-1a654d736358"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("2170138888.88889"),
+		  .period("1085069444.44444"),
 		  .is_direct(0),
 		  .is_digital(1))
 		IntClock
@@ -599,9 +599,80 @@ module SPI_Slave_v2_70_3 (
 
 endmodule
 
+// Timer_v2_80(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=true, CaptureMode=1, CONTROL3=1, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=0, FF16=true, FF8=false, FixedFunction=true, FixedFunctionUsed=1, HWCaptureCounterEnabled=false, InterruptOnCapture=false, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=0, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=65535, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=0, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=false, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=0, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_80, CY_CONFIG_TITLE=Timer_1, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_1, CY_INSTANCE_SHORT_NAME=Timer_1, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=80, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.2, INSTANCE_NAME=Timer_1, )
+module Timer_v2_80_4 (
+    reset,
+    interrupt,
+    enable,
+    trigger,
+    capture,
+    capture_out,
+    tc,
+    clock);
+    input       reset;
+    output      interrupt;
+    input       enable;
+    input       trigger;
+    input       capture;
+    output      capture_out;
+    output      tc;
+    input       clock;
+
+    parameter CaptureCount = 2;
+    parameter CaptureCounterEnabled = 0;
+    parameter DeviceFamily = "PSoC5";
+    parameter InterruptOnCapture = 0;
+    parameter InterruptOnTC = 0;
+    parameter Resolution = 16;
+    parameter SiliconRevision = "0";
+
+          wire  Net_261;
+          wire  Net_260;
+          wire  Net_266;
+          wire  Net_102;
+          wire  Net_55;
+          wire  Net_57;
+          wire  Net_53;
+          wire  Net_51;
+
+    cy_psoc3_timer_v1_0 TimerHW (
+        .timer_reset(reset),
+        .capture(capture),
+        .enable(Net_266),
+        .kill(Net_260),
+        .clock(clock),
+        .tc(Net_51),
+        .compare(Net_261),
+        .interrupt(Net_57));
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_260));
+
+	// VirtualMux_2 (cy_virtualmux_v1_0)
+	assign interrupt = Net_57;
+
+	// VirtualMux_3 (cy_virtualmux_v1_0)
+	assign tc = Net_51;
+
+    OneTerminal OneTerminal_1 (
+        .o(Net_102));
+
+	// VirtualMux_1 (cy_virtualmux_v1_0)
+	assign Net_266 = Net_102;
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_2943;
+          wire  Net_2942;
+          wire  Net_2941;
+          wire  Net_2940;
+          wire  Net_2939;
+          wire  Net_2951;
           wire  Net_2927;
           wire  Net_2926;
           wire  Net_2925;
@@ -619,19 +690,19 @@ module top ;
           wire  Net_2902;
           wire  Net_2901;
           wire  Net_2908;
-          wire  Net_1792;
-          wire  Net_1791;
-          wire  Net_1790;
-          wire  Net_1789;
-          wire  Net_1788;
-          wire  Net_1787;
+          wire  Net_2937;
+          wire  Net_2936;
+          wire  Net_2935;
+          wire  Net_2934;
+          wire  Net_2933;
+          wire  Net_2932;
           wire  Net_1786;
           wire  Net_1785;
-          wire  Net_1784;
-          wire  Net_1783;
-          wire  Net_1782;
+          wire  Net_2931;
+          wire  Net_2930;
+          wire  Net_2929;
           wire  Net_1781;
-          wire  Net_1780;
+          wire  Net_2928;
           wire  Net_606;
           wire  Net_2886;
           wire  Net_2885;
@@ -657,6 +728,9 @@ module top ;
           wire  Net_1665;
           wire  Net_1679;
           wire  Net_1759;
+          wire  Net_2946;
+          wire  Net_12;
+          wire  Net_10;
           wire  Net_30;
           wire  Net_2898;
           wire  Net_2918;
@@ -1252,17 +1326,17 @@ module top ;
     UART_v2_50_2 UART_1 (
         .cts_n(1'b0),
         .tx(Net_1781),
-        .rts_n(Net_1782),
-        .tx_en(Net_1783),
+        .rts_n(Net_2929),
+        .tx_en(Net_2930),
         .clock(1'b0),
         .reset(Net_1785),
         .rx(Net_1786),
-        .tx_interrupt(Net_1787),
-        .rx_interrupt(Net_1788),
-        .tx_data(Net_1789),
-        .tx_clk(Net_1790),
-        .rx_data(Net_1791),
-        .rx_clk(Net_1792));
+        .tx_interrupt(Net_2932),
+        .rx_interrupt(Net_2933),
+        .tx_data(Net_2934),
+        .tx_clk(Net_2935),
+        .rx_data(Net_2936),
+        .rx_clk(Net_2937));
     defparam UART_1.Address1 = 0;
     defparam UART_1.Address2 = 0;
     defparam UART_1.EnIntRXInterrupt = 1;
@@ -1283,9 +1357,9 @@ module top ;
 
 	cy_psoc3_pins_v1_10
 		#(.id("ff5b6ce4-4ec8-4f67-b23e-0af8df059f0d"),
-		  .drive_mode(3'b001),
+		  .drive_mode(3'b010),
 		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b0),
+		  .init_dr_st(1'b1),
 		  .input_clk_en(0),
 		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
@@ -1879,6 +1953,45 @@ module top ;
 
     ZeroTerminal ZeroTerminal_2 (
         .z(Net_2927));
+
+
+	cy_clock_v1_0
+		#(.id("c0fb34bd-1044-4931-9788-16b01ce89812"),
+		  .source_clock_id(""),
+		  .divisor(0),
+		  .period("1000000000"),
+		  .is_direct(0),
+		  .is_digital(1))
+		timer_clock
+		 (.clock_out(Net_10));
+
+
+    ZeroTerminal ZeroTerminal_5 (
+        .z(Net_12));
+
+    Timer_v2_80_4 Timer_1 (
+        .reset(Net_12),
+        .interrupt(Net_2939),
+        .enable(1'b1),
+        .trigger(1'b1),
+        .capture(1'b0),
+        .capture_out(Net_2943),
+        .tc(Net_2946),
+        .clock(Net_10));
+    defparam Timer_1.CaptureCount = 2;
+    defparam Timer_1.CaptureCounterEnabled = 0;
+    defparam Timer_1.DeviceFamily = "PSoC5";
+    defparam Timer_1.InterruptOnCapture = 0;
+    defparam Timer_1.InterruptOnTC = 0;
+    defparam Timer_1.Resolution = 16;
+    defparam Timer_1.SiliconRevision = "0";
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b00))
+		Motor_timer_isr
+		 (.int_signal(Net_2946));
+
 
 
 

@@ -1,5 +1,5 @@
 -- Project:   Projekt_PSoC_Kode
--- Generated: 04/18/2019 11:54:17
+-- Generated: 04/22/2019 22:41:17
 -- PSoC Creator  4.2
 
 ENTITY Projekt_PSoC_Kode IS
@@ -49,11 +49,13 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     SIGNAL LED_Red(0)__PA : bit;
     SIGNAL MotorPWM_1_BRUN(0)__PA : bit;
     SIGNAL MotorPWM_2_BLAA(0)__PA : bit;
+    SIGNAL Net_10 : bit;
+    ATTRIBUTE global_signal OF Net_10 : SIGNAL IS true;
+    SIGNAL Net_10_local : bit;
     SIGNAL Net_1665 : bit;
     SIGNAL Net_1679 : bit;
     SIGNAL Net_1781 : bit;
     SIGNAL Net_1786 : bit;
-    SIGNAL Net_1788 : bit;
     SIGNAL Net_1862 : bit;
     SIGNAL Net_1903 : bit;
     SIGNAL Net_1926 : bit;
@@ -70,6 +72,8 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     SIGNAL Net_2918 : bit;
     SIGNAL Net_2921 : bit;
     SIGNAL Net_2925 : bit;
+    SIGNAL Net_2933 : bit;
+    SIGNAL Net_2946 : bit;
     SIGNAL Net_30 : bit;
     SIGNAL Net_8 : bit;
     SIGNAL Net_9 : bit;
@@ -144,6 +148,8 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     ATTRIBUTE udbclken_assigned OF \SPIS:Net_81\ : SIGNAL IS "True";
     ATTRIBUTE global_signal OF \SPIS:Net_81\ : SIGNAL IS true;
     SIGNAL \SPIS:Net_81_local\ : bit;
+    SIGNAL \Timer_1:Net_261\ : bit;
+    SIGNAL \Timer_1:Net_57\ : bit;
     SIGNAL \UART_1:BUART:counter_load_not\ : bit;
     SIGNAL \UART_1:BUART:pollcount_0\ : bit;
     SIGNAL \UART_1:BUART:pollcount_1\ : bit;
@@ -198,6 +204,7 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     SIGNAL ss(0)__PA : bit;
     SIGNAL zero : bit;
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
+    SIGNAL \ClockBlock.dclk_glb_ff_1__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
@@ -258,6 +265,7 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     ATTRIBUTE lib_model OF \SPIS:BSPIS:tx_status_0\ : LABEL IS "macrocell17";
     ATTRIBUTE lib_model OF \SPIS:BSPIS:rx_status_4\ : LABEL IS "macrocell18";
     ATTRIBUTE lib_model OF \SPIS:BSPIS:mosi_to_dp\ : LABEL IS "macrocell19";
+    ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell20";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell1";
@@ -273,41 +281,41 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     ATTRIBUTE lib_model OF \SPIS:BSPIS:TxStsReg\ : LABEL IS "statusicell5";
     ATTRIBUTE lib_model OF \SPIS:BSPIS:RxStsReg\ : LABEL IS "statusicell6";
     ATTRIBUTE lib_model OF \SPIS:BSPIS:sR8:Dp:u0\ : LABEL IS "datapathcell7";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell20";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare1\ : LABEL IS "macrocell21";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare2\ : LABEL IS "macrocell22";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_0\ : LABEL IS "macrocell23";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_1\ : LABEL IS "macrocell24";
-    ATTRIBUTE lib_model OF Net_1679 : LABEL IS "macrocell25";
-    ATTRIBUTE lib_model OF Net_1665 : LABEL IS "macrocell26";
-    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell27";
-    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:prevCompare1\ : LABEL IS "macrocell28";
-    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:prevCompare2\ : LABEL IS "macrocell29";
-    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:status_0\ : LABEL IS "macrocell30";
-    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:status_1\ : LABEL IS "macrocell31";
-    ATTRIBUTE lib_model OF Net_1862 : LABEL IS "macrocell32";
-    ATTRIBUTE lib_model OF Net_1903 : LABEL IS "macrocell33";
-    ATTRIBUTE lib_model OF \UART_1:BUART:txn\ : LABEL IS "macrocell34";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_1\ : LABEL IS "macrocell35";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_0\ : LABEL IS "macrocell36";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_2\ : LABEL IS "macrocell37";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_bitclk\ : LABEL IS "macrocell38";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell39";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_0\ : LABEL IS "macrocell40";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_load_fifo\ : LABEL IS "macrocell41";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_3\ : LABEL IS "macrocell42";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_2\ : LABEL IS "macrocell43";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_bitclk_enable\ : LABEL IS "macrocell44";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell45";
-    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_1\ : LABEL IS "macrocell46";
-    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_0\ : LABEL IS "macrocell47";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_3\ : LABEL IS "macrocell48";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_last\ : LABEL IS "macrocell49";
-    ATTRIBUTE lib_model OF Net_2917 : LABEL IS "macrocell50";
-    ATTRIBUTE lib_model OF Net_2908 : LABEL IS "macrocell51";
-    ATTRIBUTE lib_model OF \SPIS:BSPIS:dpcounter_one_reg\ : LABEL IS "macrocell52";
-    ATTRIBUTE lib_model OF \SPIS:BSPIS:mosi_buf_overrun_fin\ : LABEL IS "macrocell53";
-    ATTRIBUTE lib_model OF \SPIS:BSPIS:mosi_tmp\ : LABEL IS "macrocell54";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell21";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare1\ : LABEL IS "macrocell22";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare2\ : LABEL IS "macrocell23";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_0\ : LABEL IS "macrocell24";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_1\ : LABEL IS "macrocell25";
+    ATTRIBUTE lib_model OF Net_1679 : LABEL IS "macrocell26";
+    ATTRIBUTE lib_model OF Net_1665 : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:prevCompare1\ : LABEL IS "macrocell29";
+    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:prevCompare2\ : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:status_0\ : LABEL IS "macrocell31";
+    ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:status_1\ : LABEL IS "macrocell32";
+    ATTRIBUTE lib_model OF Net_1862 : LABEL IS "macrocell33";
+    ATTRIBUTE lib_model OF Net_1903 : LABEL IS "macrocell34";
+    ATTRIBUTE lib_model OF \UART_1:BUART:txn\ : LABEL IS "macrocell35";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_1\ : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_0\ : LABEL IS "macrocell37";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_2\ : LABEL IS "macrocell38";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_bitclk\ : LABEL IS "macrocell39";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell40";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_0\ : LABEL IS "macrocell41";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_load_fifo\ : LABEL IS "macrocell42";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_3\ : LABEL IS "macrocell43";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_2\ : LABEL IS "macrocell44";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_bitclk_enable\ : LABEL IS "macrocell45";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell46";
+    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_1\ : LABEL IS "macrocell47";
+    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_0\ : LABEL IS "macrocell48";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_3\ : LABEL IS "macrocell49";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_last\ : LABEL IS "macrocell50";
+    ATTRIBUTE lib_model OF Net_2917 : LABEL IS "macrocell51";
+    ATTRIBUTE lib_model OF Net_2908 : LABEL IS "macrocell52";
+    ATTRIBUTE lib_model OF \SPIS:BSPIS:dpcounter_one_reg\ : LABEL IS "macrocell53";
+    ATTRIBUTE lib_model OF \SPIS:BSPIS:mosi_buf_overrun_fin\ : LABEL IS "macrocell54";
+    ATTRIBUTE lib_model OF \SPIS:BSPIS:mosi_tmp\ : LABEL IS "macrocell55";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -644,6 +652,17 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     END COMPONENT;
     ATTRIBUTE udb_clk OF synccell : COMPONENT IS "clock,clock_n,extclk,extclk_n";
     ATTRIBUTE udb_clken OF synccell : COMPONENT IS "clk_en";
+    COMPONENT timercell
+        PORT (
+            clock : IN std_ulogic;
+            kill : IN std_ulogic;
+            enable : IN std_ulogic;
+            capture : IN std_ulogic;
+            timer_reset : IN std_ulogic;
+            tc : OUT std_ulogic;
+            cmp : OUT std_ulogic;
+            irq : OUT std_ulogic);
+    END COMPONENT;
 BEGIN
 
     ClockBlock:clockblockcell
@@ -663,12 +682,15 @@ BEGIN
             dsi_glb_div => open,
             dclk_glb_0 => \SPIS:Net_81\,
             dclk_0 => \SPIS:Net_81_local\,
-            dclk_glb_1 => \UART_1:Net_9\,
-            dclk_1 => \UART_1:Net_9_local\,
-            dclk_glb_2 => Net_1926,
-            dclk_2 => Net_1926_local,
-            dclk_glb_3 => Net_2899,
-            dclk_3 => Net_2899_local);
+            dclk_glb_1 => Net_10,
+            dclk_1 => Net_10_local,
+            dclk_glb_2 => \UART_1:Net_9\,
+            dclk_2 => \UART_1:Net_9_local\,
+            dclk_glb_3 => Net_1926,
+            dclk_3 => Net_1926_local,
+            dclk_glb_4 => Net_2899,
+            dclk_4 => Net_2899_local,
+            dclk_glb_ff_1 => \ClockBlock.dclk_glb_ff_1__sig\);
 
     MotorPWM_1_BRUN:logicalport
         GENERIC MAP(
@@ -1312,10 +1334,10 @@ BEGIN
 
     Rx_1:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "010",
             ibuf_enabled => "1",
             id => "ff5b6ce4-4ec8-4f67-b23e-0af8df059f0d",
-            init_dr_st => "0",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "1",
@@ -2153,6 +2175,14 @@ BEGIN
             main_4 => \SPIS:BSPIS:mosi_tmp\,
             main_5 => Net_8);
 
+    __ONE__:macrocell
+        GENERIC MAP(
+            eqn_main => "1'b0",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => __ONE__);
+
     \PWM_1:PWMUDB:genblk1:ctrlreg\:controlcell
         GENERIC MAP(
             cy_ctrl_mode_0 => "11111111",
@@ -2367,7 +2397,7 @@ BEGIN
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_1788,
+            interrupt => Net_2933,
             clock => ClockBlock_BUS_CLK);
 
     \UART_1:BUART:sTX:TxShifter:u0\:datapathcell
@@ -2540,7 +2570,7 @@ BEGIN
             status_2 => open,
             status_1 => open,
             status_0 => open,
-            interrupt => Net_1788);
+            interrupt => Net_2933);
 
     Power_isr:interrupt
         GENERIC MAP(
@@ -2698,6 +2728,27 @@ BEGIN
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_2925,
+            clock => ClockBlock_BUS_CLK);
+
+    \Timer_1:TimerHW\:timercell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => \ClockBlock.dclk_glb_ff_1__sig\,
+            kill => open,
+            enable => __ONE__,
+            capture => open,
+            timer_reset => open,
+            tc => Net_2946,
+            cmp => \Timer_1:Net_261\,
+            irq => \Timer_1:Net_57\);
+
+    Motor_timer_isr:interrupt
+        GENERIC MAP(
+            int_type => "00",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_2946,
             clock => ClockBlock_BUS_CLK);
 
     \PWM_1:PWMUDB:runmode_enable\:macrocell
