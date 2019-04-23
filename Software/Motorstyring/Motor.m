@@ -83,3 +83,8 @@ hold on
 step(1/s)
 hold off
 grid on
+
+%% z-transformering
+
+Gc_z = c2d((Kp*GLead*GLag),1,'tustin')
+
