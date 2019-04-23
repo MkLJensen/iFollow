@@ -27,8 +27,7 @@ step(feedback(G1,1))
 
 
 %%
-Kp = 15;
-G1_Kp = G1*Kp;
+G1_Kp = G1*15;
 
 figure(3)
 margin(G1_Kp); grid on
