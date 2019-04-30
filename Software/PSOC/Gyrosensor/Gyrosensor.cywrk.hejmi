@@ -30,17 +30,18 @@
 <v>Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\EEPROM</v>
 <v>Gyrosensor\GyrosensorProject\Header Files</v>
 <v>Gyrosensor\GyrosensorProject\Header Files\cyapicallbacks.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\Gyro.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\GyroDefs.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\i2c.h</v>
 <v>Gyrosensor\GyrosensorProject\Source Files</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\Gyro.c</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\GyroDefs.c</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\i2c.c</v>
 <v>Gyrosensor\GyrosensorProject\Source Files\main.c</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Gyrosensor</v>
-<v>Gyrosensor\GyrosensorProject</v>
-<v>Gyrosensor\GyrosensorProject\TopDesign</v>
-<v>Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr</v>
-<v>Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\Pins</v>
 <v>Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\Analog</v>
 <v>Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\Clocks</v>
 <v>Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\Interrupts</v>
@@ -51,7 +52,13 @@
 <v>Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\EEPROM</v>
 <v>Gyrosensor\GyrosensorProject\Header Files</v>
 <v>Gyrosensor\GyrosensorProject\Header Files\cyapicallbacks.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\Gyro.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\GyroDefs.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\i2c.h</v>
 <v>Gyrosensor\GyrosensorProject\Source Files</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\Gyro.c</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\GyroDefs.c</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\i2c.c</v>
 <v>Gyrosensor\GyrosensorProject\Source Files\main.c</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5</v>
@@ -117,6 +124,9 @@
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Gyro.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\GyroDefs.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\i2c.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
@@ -156,6 +166,9 @@
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Gyro.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\GyroDefs.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\i2c.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>

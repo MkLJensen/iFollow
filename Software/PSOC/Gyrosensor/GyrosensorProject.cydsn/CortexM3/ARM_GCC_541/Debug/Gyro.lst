@@ -1,0 +1,3494 @@
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Gyro.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text._Znwj,"ax",%progbits
+  20              		.align	2
+  21              		.global	_Znwj
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	_Znwj, %function
+  25              	_Znwj:
+  26              	.LFB69:
+  27              		.file 1 "Gyro.c"
+   1:Gyro.c        **** /* ========================================
+   2:Gyro.c        ****  *
+   3:Gyro.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:Gyro.c        ****  * All Rights Reserved
+   5:Gyro.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:Gyro.c        ****  *
+   7:Gyro.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:Gyro.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:Gyro.c        ****  *
+  10:Gyro.c        ****  * ========================================
+  11:Gyro.c        **** */
+  12:Gyro.c        **** #include "Gyro.h"
+  13:Gyro.c        **** 
+  14:Gyro.c        **** /*C++ new and delete operators*/
+  15:Gyro.c        **** void* operator new(size_t size) { 
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  16:Gyro.c        ****     return malloc(size); 
+  37              		.loc 1 16 0
+  38 0002 FFF7FEFF 		bl	malloc
+  39              	.LVL1:
+  17:Gyro.c        **** } 
+  40              		.loc 1 17 0
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 2
+
+
+  41 0006 08BD     		pop	{r3, pc}
+  42              		.cfi_endproc
+  43              	.LFE69:
+  44              		.size	_Znwj, .-_Znwj
+  45              		.section	.text._ZdlPv,"ax",%progbits
+  46              		.align	2
+  47              		.global	_ZdlPv
+  48              		.thumb
+  49              		.thumb_func
+  50              		.type	_ZdlPv, %function
+  51              	_ZdlPv:
+  52              	.LFB70:
+  18:Gyro.c        **** 
+  19:Gyro.c        **** void operator delete(void* ptr) {
+  53              		.loc 1 19 0
+  54              		.cfi_startproc
+  55              		@ args = 0, pretend = 0, frame = 0
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57              	.LVL2:
+  58 0000 08B5     		push	{r3, lr}
+  59              		.cfi_def_cfa_offset 8
+  60              		.cfi_offset 3, -8
+  61              		.cfi_offset 14, -4
+  20:Gyro.c        ****     free(ptr); 
+  62              		.loc 1 20 0
+  63 0002 FFF7FEFF 		bl	free
+  64              	.LVL3:
+  65 0006 08BD     		pop	{r3, pc}
+  66              		.cfi_endproc
+  67              	.LFE70:
+  68              		.size	_ZdlPv, .-_ZdlPv
+  69              		.section	.text._ZN4GyroD2Ev,"ax",%progbits
+  70              		.align	2
+  71              		.global	_ZN4GyroD2Ev
+  72              		.thumb
+  73              		.thumb_func
+  74              		.type	_ZN4GyroD2Ev, %function
+  75              	_ZN4GyroD2Ev:
+  76              	.LFB81:
+  21:Gyro.c        **** }
+  22:Gyro.c        **** 
+  23:Gyro.c        **** Gyro::Gyro(){
+  24:Gyro.c        **** 	/*Make I2C interface*/
+  25:Gyro.c        **** 	I2C = new i2c;
+  26:Gyro.c        **** 	
+  27:Gyro.c        **** 	/*Initialize pointers to structures*/
+  28:Gyro.c        **** 	acceldata_ = new acc_data;
+  29:Gyro.c        **** 	gyrodata_ = new gyro_data;
+  30:Gyro.c        **** 	sensordata_ = new sensor_data(gyrodata_,
+  31:Gyro.c        **** 		acceldata_,
+  32:Gyro.c        **** 		&temperature_);
+  33:Gyro.c        **** 	sensordata_->gyro_ = gyrodata_;
+  34:Gyro.c        **** 	
+  35:Gyro.c        **** 	initGyro();
+  36:Gyro.c        **** };
+  37:Gyro.c        ****     
+  38:Gyro.c        **** Gyro::~Gyro(){
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 3
+
+
+  77              		.loc 1 38 0
+  78              		.cfi_startproc
+  79              		@ args = 0, pretend = 0, frame = 0
+  80              		@ frame_needed = 0, uses_anonymous_args = 0
+  81              	.LVL4:
+  82 0000 10B5     		push	{r4, lr}
+  83              		.cfi_def_cfa_offset 8
+  84              		.cfi_offset 4, -8
+  85              		.cfi_offset 14, -4
+  86 0002 0446     		mov	r4, r0
+  87              	.LBB11:
+  39:Gyro.c        **** 	/*Free dynamically allocated memory*/
+  40:Gyro.c        **** 	delete I2C;
+  88              		.loc 1 40 0
+  89 0004 0068     		ldr	r0, [r0]
+  90              	.LVL5:
+  91 0006 FFF7FEFF 		bl	_ZdlPv
+  92              	.LVL6:
+  41:Gyro.c        **** 	delete acceldata_;
+  93              		.loc 1 41 0
+  94 000a A068     		ldr	r0, [r4, #8]
+  95 000c FFF7FEFF 		bl	_ZdlPv
+  96              	.LVL7:
+  42:Gyro.c        **** 	delete gyrodata_;
+  97              		.loc 1 42 0
+  98 0010 E068     		ldr	r0, [r4, #12]
+  99 0012 FFF7FEFF 		bl	_ZdlPv
+ 100              	.LVL8:
+  43:Gyro.c        **** 	delete sensordata_;
+ 101              		.loc 1 43 0
+ 102 0016 2069     		ldr	r0, [r4, #16]
+ 103 0018 FFF7FEFF 		bl	_ZdlPv
+ 104              	.LVL9:
+ 105              	.LBE11:
+  44:Gyro.c        **** };
+ 106              		.loc 1 44 0
+ 107 001c 2046     		mov	r0, r4
+ 108 001e 10BD     		pop	{r4, pc}
+ 109              		.cfi_endproc
+ 110              	.LFE81:
+ 111              		.size	_ZN4GyroD2Ev, .-_ZN4GyroD2Ev
+ 112              		.global	_ZN4GyroD1Ev
+ 113              		.thumb_set _ZN4GyroD1Ev,_ZN4GyroD2Ev
+ 114              		.section	.text._ZN4Gyro8initGyroEv,"ax",%progbits
+ 115              		.align	2
+ 116              		.global	_ZN4Gyro8initGyroEv
+ 117              		.thumb
+ 118              		.thumb_func
+ 119              		.type	_ZN4Gyro8initGyroEv, %function
+ 120              	_ZN4Gyro8initGyroEv:
+ 121              	.LFB83:
+  45:Gyro.c        **** 
+  46:Gyro.c        **** void Gyro::initGyro()
+  47:Gyro.c        **** {
+ 122              		.loc 1 47 0
+ 123              		.cfi_startproc
+ 124              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 4
+
+
+ 125              		@ frame_needed = 0, uses_anonymous_args = 0
+ 126              	.LVL10:
+ 127 0000 10B5     		push	{r4, lr}
+ 128              		.cfi_def_cfa_offset 8
+ 129              		.cfi_offset 4, -8
+ 130              		.cfi_offset 14, -4
+ 131 0002 0446     		mov	r4, r0
+  48:Gyro.c        ****     //Initializing MPU6050 -- Might need some tweaking
+  49:Gyro.c        ****     //UART_1_PutString("Intializing MPU6050..\r\n");
+  50:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD, PWR_MGMT_1, 0x00);
+ 132              		.loc 1 50 0
+ 133 0004 0023     		movs	r3, #0
+ 134 0006 6B22     		movs	r2, #107
+ 135 0008 6821     		movs	r1, #104
+ 136 000a 0068     		ldr	r0, [r0]
+ 137              	.LVL11:
+ 138 000c FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
+ 139              	.LVL12:
+  51:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,SMPRT_DIV,109);
+ 140              		.loc 1 51 0
+ 141 0010 6D23     		movs	r3, #109
+ 142 0012 1922     		movs	r2, #25
+ 143 0014 6821     		movs	r1, #104
+ 144 0016 2068     		ldr	r0, [r4]
+ 145 0018 FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
+ 146              	.LVL13:
+  52:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,GYRO_CONFIG,0x18); // FULLSCALE
+ 147              		.loc 1 52 0
+ 148 001c 1823     		movs	r3, #24
+ 149 001e 1B22     		movs	r2, #27
+ 150 0020 6821     		movs	r1, #104
+ 151 0022 2068     		ldr	r0, [r4]
+ 152 0024 FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
+ 153              	.LVL14:
+  53:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,USER_CTRL,0x20);
+ 154              		.loc 1 53 0
+ 155 0028 2023     		movs	r3, #32
+ 156 002a 6A22     		movs	r2, #106
+ 157 002c 6821     		movs	r1, #104
+ 158 002e 2068     		ldr	r0, [r4]
+ 159 0030 FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
+ 160              	.LVL15:
+  54:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,INT_PIN_CFG,0x37);
+ 161              		.loc 1 54 0
+ 162 0034 3723     		movs	r3, #55
+ 163 0036 1A46     		mov	r2, r3
+ 164 0038 6821     		movs	r1, #104
+ 165 003a 2068     		ldr	r0, [r4]
+ 166 003c FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
+ 167              	.LVL16:
+  55:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,CONFIG,6);         //6 very slow
+ 168              		.loc 1 55 0
+ 169 0040 0623     		movs	r3, #6
+ 170 0042 1A22     		movs	r2, #26
+ 171 0044 6821     		movs	r1, #104
+ 172 0046 2068     		ldr	r0, [r4]
+ 173 0048 FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 5
+
+
+ 174              	.LVL17:
+ 175 004c 10BD     		pop	{r4, pc}
+ 176              		.cfi_endproc
+ 177              	.LFE83:
+ 178              		.size	_ZN4Gyro8initGyroEv, .-_ZN4Gyro8initGyroEv
+ 179 004e 00BF     		.section	.text._ZN4GyroC2Ev,"ax",%progbits
+ 180              		.align	2
+ 181              		.global	_ZN4GyroC2Ev
+ 182              		.thumb
+ 183              		.thumb_func
+ 184              		.type	_ZN4GyroC2Ev, %function
+ 185              	_ZN4GyroC2Ev:
+ 186              	.LFB78:
+  23:Gyro.c        **** 	/*Make I2C interface*/
+ 187              		.loc 1 23 0
+ 188              		.cfi_startproc
+ 189              		@ args = 0, pretend = 0, frame = 0
+ 190              		@ frame_needed = 0, uses_anonymous_args = 0
+ 191              	.LVL18:
+ 192 0000 70B5     		push	{r4, r5, r6, lr}
+ 193              		.cfi_def_cfa_offset 16
+ 194              		.cfi_offset 4, -16
+ 195              		.cfi_offset 5, -12
+ 196              		.cfi_offset 6, -8
+ 197              		.cfi_offset 14, -4
+ 198 0002 0446     		mov	r4, r0
+ 199              	.LBB12:
+  23:Gyro.c        **** 	/*Make I2C interface*/
+ 200              		.loc 1 23 0
+ 201 0004 0026     		movs	r6, #0
+ 202 0006 4660     		str	r6, [r0, #4]	@ float
+ 203 0008 0025     		movs	r5, #0
+ 204 000a 8560     		str	r5, [r0, #8]
+ 205 000c C560     		str	r5, [r0, #12]
+ 206 000e 0561     		str	r5, [r0, #16]
+  25:Gyro.c        **** 	
+ 207              		.loc 1 25 0
+ 208 0010 0120     		movs	r0, #1
+ 209              	.LVL19:
+ 210 0012 FFF7FEFF 		bl	_Znwj
+ 211              	.LVL20:
+ 212 0016 2060     		str	r0, [r4]
+  28:Gyro.c        **** 	gyrodata_ = new gyro_data;
+ 213              		.loc 1 28 0
+ 214 0018 1420     		movs	r0, #20
+ 215 001a FFF7FEFF 		bl	_Znwj
+ 216              	.LVL21:
+ 217              	.LBB13:
+ 218              	.LBB14:
+ 219              		.file 2 "GyroDefs.h"
+   1:GyroDefs.h    **** /* ========================================
+   2:GyroDefs.h    ****  *
+   3:GyroDefs.h    ****  * Copyright YOUR COMPANY, THE YEAR
+   4:GyroDefs.h    ****  * All Rights Reserved
+   5:GyroDefs.h    ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:GyroDefs.h    ****  *
+   7:GyroDefs.h    ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 6
+
+
+   8:GyroDefs.h    ****  * WHICH IS THE PROPERTY OF your company.
+   9:GyroDefs.h    ****  *
+  10:GyroDefs.h    ****  * ========================================
+  11:GyroDefs.h    **** */
+  12:GyroDefs.h    **** 
+  13:GyroDefs.h    **** #ifndef GYRODEFS_H
+  14:GyroDefs.h    **** #define GYRODEFS_H
+  15:GyroDefs.h    **** 
+  16:GyroDefs.h    **** #ifdef __cplusplus
+  17:GyroDefs.h    **** extern "C" {
+  18:GyroDefs.h    **** #endif
+  19:GyroDefs.h    ****     // PSoC include, this has to be wrapped
+  20:GyroDefs.h    ****     #include "project.h"
+  21:GyroDefs.h    **** 
+  22:GyroDefs.h    **** #ifdef __cplusplus
+  23:GyroDefs.h    **** }
+  24:GyroDefs.h    **** #endif
+  25:GyroDefs.h    **** 
+  26:GyroDefs.h    **** #include <stdlib.h>
+  27:GyroDefs.h    **** 
+  28:GyroDefs.h    **** /*ADDRESSES FOR I2C-COMMUNICATION WITH MPU6050*/
+  29:GyroDefs.h    **** #define MPU6050_ADD     (0x68)      // Device / Slave Address
+  30:GyroDefs.h    **** #define PWR_MGMT_1      (0x6B)      // Reset with 0x00 to wakeup
+  31:GyroDefs.h    **** #define SMPRT_DIV       (0x19)      // Register for holding sample rate 109
+  32:GyroDefs.h    **** #define GYRO_CONFIG     (0x1b)      // Register for self-test and scale 0x18 for fullscale
+  33:GyroDefs.h    **** #define ACCEL_CONFIG    (0x1c)      // --||-- 0x08 fullscale +- 4g
+  34:GyroDefs.h    **** #define USER_CTRL       (0x6a)      // 0x00 to disable master mode | 0x20 to enable
+  35:GyroDefs.h    **** #define INT_PIN_CFG     (0x37)      // 0x02 I2C bypass enable
+  36:GyroDefs.h    **** #define CONFIG          (0x1A)      // For setting DLPF - fast or slow
+  37:GyroDefs.h    **** #define START_GYRO_DATA (0x43)      // First address in gyro registers      | 6bytes long
+  38:GyroDefs.h    **** #define START_ACC_DATA  (0x3b)      // First address in accelerometer       | 6bytes long
+  39:GyroDefs.h    **** #define START_TEMP_DATA (0x41)      // First address in temperature sensor  | 2bytes long
+  40:GyroDefs.h    **** 
+  41:GyroDefs.h    **** /***********Typedefs************/
+  42:GyroDefs.h    **** /*Structure for gyrosensor data*/
+  43:GyroDefs.h    **** typedef struct gyro_data {
+  44:GyroDefs.h    ****     int16_t x = 0;
+  45:GyroDefs.h    ****     int16_t y = 0;
+  46:GyroDefs.h    ****     int16_t z = 0;
+  47:GyroDefs.h    ****     float x_rad = 0.0f;
+  48:GyroDefs.h    ****     float y_rad = 0.0f;
+  49:GyroDefs.h    ****     float z_rad = 0.0f;
+  50:GyroDefs.h    **** } gyro_data;
+  51:GyroDefs.h    **** 
+  52:GyroDefs.h    **** /*Structure for accelerometer data*/
+  53:GyroDefs.h    **** typedef struct acc_data {
+ 220              		.loc 2 53 0
+ 221 001e 0580     		strh	r5, [r0]	@ movhi
+ 222 0020 4580     		strh	r5, [r0, #2]	@ movhi
+ 223 0022 8580     		strh	r5, [r0, #4]	@ movhi
+ 224 0024 8660     		str	r6, [r0, #8]	@ float
+ 225 0026 C660     		str	r6, [r0, #12]	@ float
+ 226 0028 0661     		str	r6, [r0, #16]	@ float
+ 227              	.LVL22:
+ 228              	.LBE14:
+ 229              	.LBE13:
+  28:Gyro.c        **** 	gyrodata_ = new gyro_data;
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 7
+
+
+ 230              		.loc 1 28 0
+ 231 002a A060     		str	r0, [r4, #8]
+  29:Gyro.c        **** 	sensordata_ = new sensor_data(gyrodata_,
+ 232              		.loc 1 29 0
+ 233 002c 1420     		movs	r0, #20
+ 234 002e FFF7FEFF 		bl	_Znwj
+ 235              	.LVL23:
+ 236              	.LBB15:
+ 237              	.LBB16:
+  43:GyroDefs.h    ****     int16_t x = 0;
+ 238              		.loc 2 43 0
+ 239 0032 0580     		strh	r5, [r0]	@ movhi
+ 240 0034 4580     		strh	r5, [r0, #2]	@ movhi
+ 241 0036 8580     		strh	r5, [r0, #4]	@ movhi
+ 242 0038 8660     		str	r6, [r0, #8]	@ float
+ 243 003a C660     		str	r6, [r0, #12]	@ float
+ 244 003c 0661     		str	r6, [r0, #16]	@ float
+ 245              	.LVL24:
+ 246              	.LBE16:
+ 247              	.LBE15:
+  29:Gyro.c        **** 	sensordata_ = new sensor_data(gyrodata_,
+ 248              		.loc 1 29 0
+ 249 003e E060     		str	r0, [r4, #12]
+  32:Gyro.c        **** 	sensordata_->gyro_ = gyrodata_;
+ 250              		.loc 1 32 0
+ 251 0040 0C20     		movs	r0, #12
+ 252 0042 FFF7FEFF 		bl	_Znwj
+ 253              	.LVL25:
+ 254 0046 0546     		mov	r5, r0
+ 255 0048 231D     		adds	r3, r4, #4
+ 256 004a A268     		ldr	r2, [r4, #8]
+ 257 004c E168     		ldr	r1, [r4, #12]
+ 258 004e FFF7FEFF 		bl	_ZN11sensor_dataC1EP9gyro_dataP8acc_dataPf
+ 259              	.LVL26:
+ 260 0052 2561     		str	r5, [r4, #16]
+  33:Gyro.c        **** 	
+ 261              		.loc 1 33 0
+ 262 0054 E368     		ldr	r3, [r4, #12]
+ 263 0056 2B60     		str	r3, [r5]
+  35:Gyro.c        **** };
+ 264              		.loc 1 35 0
+ 265 0058 2046     		mov	r0, r4
+ 266 005a FFF7FEFF 		bl	_ZN4Gyro8initGyroEv
+ 267              	.LVL27:
+ 268              	.LBE12:
+  36:Gyro.c        ****     
+ 269              		.loc 1 36 0
+ 270 005e 2046     		mov	r0, r4
+ 271 0060 70BD     		pop	{r4, r5, r6, pc}
+ 272              		.cfi_endproc
+ 273              	.LFE78:
+ 274              		.size	_ZN4GyroC2Ev, .-_ZN4GyroC2Ev
+ 275              		.global	_ZN4GyroC1Ev
+ 276              		.thumb_set _ZN4GyroC1Ev,_ZN4GyroC2Ev
+ 277              		.global	__aeabi_i2f
+ 278              		.global	__aeabi_fmul
+ 279 0062 00BF     		.section	.text._ZN4Gyro10getAccDataEv,"ax",%progbits
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 8
+
+
+ 280              		.align	2
+ 281              		.global	_ZN4Gyro10getAccDataEv
+ 282              		.thumb
+ 283              		.thumb_func
+ 284              		.type	_ZN4Gyro10getAccDataEv, %function
+ 285              	_ZN4Gyro10getAccDataEv:
+ 286              	.LFB84:
+  56:Gyro.c        ****     
+  57:Gyro.c        **** }
+  58:Gyro.c        **** 
+  59:Gyro.c        **** acc_data* Gyro::getAccData()
+  60:Gyro.c        **** {
+ 287              		.loc 1 60 0
+ 288              		.cfi_startproc
+ 289              		@ args = 0, pretend = 0, frame = 8
+ 290              		@ frame_needed = 0, uses_anonymous_args = 0
+ 291              	.LVL28:
+ 292 0000 30B5     		push	{r4, r5, lr}
+ 293              		.cfi_def_cfa_offset 12
+ 294              		.cfi_offset 4, -12
+ 295              		.cfi_offset 5, -8
+ 296              		.cfi_offset 14, -4
+ 297 0002 85B0     		sub	sp, sp, #20
+ 298              		.cfi_def_cfa_offset 32
+ 299 0004 0446     		mov	r4, r0
+  61:Gyro.c        **** 	//Buffer for sensor data
+  62:Gyro.c        ****     uint8_t rx_buffer[6];
+  63:Gyro.c        **** 
+  64:Gyro.c        ****     /*Read data into buffer*/
+  65:Gyro.c        ****     I2C->ReadBytes(MPU6050_ADD,START_ACC_DATA, 6, rx_buffer);
+ 300              		.loc 1 65 0
+ 301 0006 02AB     		add	r3, sp, #8
+ 302 0008 0093     		str	r3, [sp]
+ 303 000a 0623     		movs	r3, #6
+ 304 000c 3B22     		movs	r2, #59
+ 305 000e 6821     		movs	r1, #104
+ 306 0010 0068     		ldr	r0, [r0]
+ 307              	.LVL29:
+ 308 0012 FFF7FEFF 		bl	_ZN3i2c9ReadBytesEhhhPh
+ 309              	.LVL30:
+  66:Gyro.c        ****     
+  67:Gyro.c        ****     //Extract raw data
+  68:Gyro.c        ****     acceldata_->x = rx_buffer[0] << 8 | rx_buffer[1];
+ 310              		.loc 1 68 0
+ 311 0016 A268     		ldr	r2, [r4, #8]
+ 312 0018 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 313 001c 9DF80930 		ldrb	r3, [sp, #9]	@ zero_extendqisi2
+ 314 0020 43EA0123 		orr	r3, r3, r1, lsl #8
+ 315 0024 1380     		strh	r3, [r2]	@ movhi
+  69:Gyro.c        ****     acceldata_->y = rx_buffer[2] << 8 | rx_buffer[3];
+ 316              		.loc 1 69 0
+ 317 0026 A268     		ldr	r2, [r4, #8]
+ 318 0028 9DF80A10 		ldrb	r1, [sp, #10]	@ zero_extendqisi2
+ 319 002c 9DF80B30 		ldrb	r3, [sp, #11]	@ zero_extendqisi2
+ 320 0030 43EA0123 		orr	r3, r3, r1, lsl #8
+ 321 0034 5380     		strh	r3, [r2, #2]	@ movhi
+  70:Gyro.c        ****     acceldata_->z = rx_buffer[4] << 8 | rx_buffer[5];
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 9
+
+
+ 322              		.loc 1 70 0
+ 323 0036 A268     		ldr	r2, [r4, #8]
+ 324 0038 9DF80C10 		ldrb	r1, [sp, #12]	@ zero_extendqisi2
+ 325 003c 9DF80D30 		ldrb	r3, [sp, #13]	@ zero_extendqisi2
+ 326 0040 43EA0123 		orr	r3, r3, r1, lsl #8
+ 327 0044 9380     		strh	r3, [r2, #4]	@ movhi
+  71:Gyro.c        ****     
+  72:Gyro.c        ****     /*Convert into G's*/
+  73:Gyro.c        ****     acceldata_->x_G = acceldata_->x / 8192.0f;
+ 328              		.loc 1 73 0
+ 329 0046 A568     		ldr	r5, [r4, #8]
+ 330 0048 B5F90000 		ldrsh	r0, [r5]
+ 331 004c FFF7FEFF 		bl	__aeabi_i2f
+ 332              	.LVL31:
+ 333 0050 4FF06451 		mov	r1, #956301312
+ 334 0054 FFF7FEFF 		bl	__aeabi_fmul
+ 335              	.LVL32:
+ 336 0058 A860     		str	r0, [r5, #8]	@ float
+  74:Gyro.c        ****     acceldata_->y_G = acceldata_->y / 8192.0f;
+ 337              		.loc 1 74 0
+ 338 005a A568     		ldr	r5, [r4, #8]
+ 339 005c B5F90200 		ldrsh	r0, [r5, #2]
+ 340 0060 FFF7FEFF 		bl	__aeabi_i2f
+ 341              	.LVL33:
+ 342 0064 4FF06451 		mov	r1, #956301312
+ 343 0068 FFF7FEFF 		bl	__aeabi_fmul
+ 344              	.LVL34:
+ 345 006c E860     		str	r0, [r5, #12]	@ float
+  75:Gyro.c        ****     acceldata_->z_G = acceldata_->z / 8192.0f;
+ 346              		.loc 1 75 0
+ 347 006e A568     		ldr	r5, [r4, #8]
+ 348 0070 B5F90400 		ldrsh	r0, [r5, #4]
+ 349 0074 FFF7FEFF 		bl	__aeabi_i2f
+ 350              	.LVL35:
+ 351 0078 4FF06451 		mov	r1, #956301312
+ 352 007c FFF7FEFF 		bl	__aeabi_fmul
+ 353              	.LVL36:
+ 354 0080 2861     		str	r0, [r5, #16]	@ float
+  76:Gyro.c        **** 	
+  77:Gyro.c        **** 	return acceldata_;
+  78:Gyro.c        **** }
+ 355              		.loc 1 78 0
+ 356 0082 A068     		ldr	r0, [r4, #8]
+ 357 0084 05B0     		add	sp, sp, #20
+ 358              		.cfi_def_cfa_offset 12
+ 359              		@ sp needed
+ 360 0086 30BD     		pop	{r4, r5, pc}
+ 361              		.cfi_endproc
+ 362              	.LFE84:
+ 363              		.size	_ZN4Gyro10getAccDataEv, .-_ZN4Gyro10getAccDataEv
+ 364              		.global	__aeabi_fdiv
+ 365              		.global	__aeabi_fadd
+ 366              		.section	.text._ZN4Gyro7getTempEv,"ax",%progbits
+ 367              		.align	2
+ 368              		.global	_ZN4Gyro7getTempEv
+ 369              		.thumb
+ 370              		.thumb_func
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 10
+
+
+ 371              		.type	_ZN4Gyro7getTempEv, %function
+ 372              	_ZN4Gyro7getTempEv:
+ 373              	.LFB85:
+  79:Gyro.c        **** 
+  80:Gyro.c        **** float Gyro::getTemp()
+  81:Gyro.c        **** {
+ 374              		.loc 1 81 0
+ 375              		.cfi_startproc
+ 376              		@ args = 0, pretend = 0, frame = 8
+ 377              		@ frame_needed = 0, uses_anonymous_args = 0
+ 378              	.LVL37:
+ 379 0000 10B5     		push	{r4, lr}
+ 380              		.cfi_def_cfa_offset 8
+ 381              		.cfi_offset 4, -8
+ 382              		.cfi_offset 14, -4
+ 383 0002 84B0     		sub	sp, sp, #16
+ 384              		.cfi_def_cfa_offset 24
+ 385 0004 0446     		mov	r4, r0
+  82:Gyro.c        ****     uint8_t rx_buffer[2];
+  83:Gyro.c        ****     uint16_t temp_buffer;
+  84:Gyro.c        ****     
+  85:Gyro.c        ****     /*Read data into buffer*/
+  86:Gyro.c        ****     I2C->ReadBytes(MPU6050_ADD,START_TEMP_DATA, 2, rx_buffer);
+ 386              		.loc 1 86 0
+ 387 0006 03AB     		add	r3, sp, #12
+ 388 0008 0093     		str	r3, [sp]
+ 389 000a 0223     		movs	r3, #2
+ 390 000c 4122     		movs	r2, #65
+ 391 000e 6821     		movs	r1, #104
+ 392 0010 0068     		ldr	r0, [r0]
+ 393              	.LVL38:
+ 394 0012 FFF7FEFF 		bl	_ZN3i2c9ReadBytesEhhhPh
+ 395              	.LVL39:
+  87:Gyro.c        ****     
+  88:Gyro.c        ****     /*Extract raw data*/
+  89:Gyro.c        ****     temp_buffer = rx_buffer[0] << 8 | rx_buffer[1];
+ 396              		.loc 1 89 0
+ 397 0016 9DF80C00 		ldrb	r0, [sp, #12]	@ zero_extendqisi2
+ 398 001a 9DF80D30 		ldrb	r3, [sp, #13]	@ zero_extendqisi2
+ 399              	.LVL40:
+  90:Gyro.c        ****     
+  91:Gyro.c        ****     /*Convert to celsius*/
+  92:Gyro.c        ****     temperature_ = temp_buffer / 340.0f + 36.53f;
+ 400              		.loc 1 92 0
+ 401 001e 43EA0020 		orr	r0, r3, r0, lsl #8
+ 402              	.LVL41:
+ 403 0022 FFF7FEFF 		bl	__aeabi_i2f
+ 404              	.LVL42:
+ 405 0026 0449     		ldr	r1, .L15
+ 406 0028 FFF7FEFF 		bl	__aeabi_fdiv
+ 407              	.LVL43:
+ 408 002c 0349     		ldr	r1, .L15+4
+ 409 002e FFF7FEFF 		bl	__aeabi_fadd
+ 410              	.LVL44:
+ 411 0032 6060     		str	r0, [r4, #4]	@ float
+  93:Gyro.c        **** 	return temperature_;
+  94:Gyro.c        **** }
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 11
+
+
+ 412              		.loc 1 94 0
+ 413 0034 04B0     		add	sp, sp, #16
+ 414              		.cfi_def_cfa_offset 8
+ 415              		@ sp needed
+ 416 0036 10BD     		pop	{r4, pc}
+ 417              	.LVL45:
+ 418              	.L16:
+ 419              		.align	2
+ 420              	.L15:
+ 421 0038 0000AA43 		.word	1135214592
+ 422 003c B81E1242 		.word	1108483768
+ 423              		.cfi_endproc
+ 424              	.LFE85:
+ 425              		.size	_ZN4Gyro7getTempEv, .-_ZN4Gyro7getTempEv
+ 426              		.section	.text._ZN4Gyro11getGyroDataEv,"ax",%progbits
+ 427              		.align	2
+ 428              		.global	_ZN4Gyro11getGyroDataEv
+ 429              		.thumb
+ 430              		.thumb_func
+ 431              		.type	_ZN4Gyro11getGyroDataEv, %function
+ 432              	_ZN4Gyro11getGyroDataEv:
+ 433              	.LFB87:
+  95:Gyro.c        **** 
+  96:Gyro.c        **** sensor_data* Gyro::getSensorData()
+  97:Gyro.c        **** {
+  98:Gyro.c        **** 	/*Get new values from sensor!*/
+  99:Gyro.c        **** 	getAccData();
+ 100:Gyro.c        **** 	getTemp();
+ 101:Gyro.c        **** 	getGyroData();
+ 102:Gyro.c        **** 	
+ 103:Gyro.c        **** 	/*Return sensor struct*/
+ 104:Gyro.c        **** 	return sensordata_;
+ 105:Gyro.c        **** }
+ 106:Gyro.c        **** 
+ 107:Gyro.c        **** gyro_data* Gyro::getGyroData()
+ 108:Gyro.c        **** {
+ 434              		.loc 1 108 0
+ 435              		.cfi_startproc
+ 436              		@ args = 0, pretend = 0, frame = 8
+ 437              		@ frame_needed = 0, uses_anonymous_args = 0
+ 438              	.LVL46:
+ 439 0000 30B5     		push	{r4, r5, lr}
+ 440              		.cfi_def_cfa_offset 12
+ 441              		.cfi_offset 4, -12
+ 442              		.cfi_offset 5, -8
+ 443              		.cfi_offset 14, -4
+ 444 0002 85B0     		sub	sp, sp, #20
+ 445              		.cfi_def_cfa_offset 32
+ 446 0004 0446     		mov	r4, r0
+ 109:Gyro.c        **** 	//Buffer for sensor data
+ 110:Gyro.c        ****     uint8_t rx_buffer[6];
+ 111:Gyro.c        **** 
+ 112:Gyro.c        ****     /*Read data into buffer*/
+ 113:Gyro.c        ****     I2C->ReadBytes(MPU6050_ADD,START_GYRO_DATA, 6, rx_buffer);
+ 447              		.loc 1 113 0
+ 448 0006 02AB     		add	r3, sp, #8
+ 449 0008 0093     		str	r3, [sp]
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 12
+
+
+ 450 000a 0623     		movs	r3, #6
+ 451 000c 4322     		movs	r2, #67
+ 452 000e 6821     		movs	r1, #104
+ 453 0010 0068     		ldr	r0, [r0]
+ 454              	.LVL47:
+ 455 0012 FFF7FEFF 		bl	_ZN3i2c9ReadBytesEhhhPh
+ 456              	.LVL48:
+ 114:Gyro.c        ****     
+ 115:Gyro.c        ****     //Extract raw data
+ 116:Gyro.c        ****     gyrodata_->x = rx_buffer[0] << 8 | rx_buffer[1];
+ 457              		.loc 1 116 0
+ 458 0016 E268     		ldr	r2, [r4, #12]
+ 459 0018 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 460 001c 9DF80930 		ldrb	r3, [sp, #9]	@ zero_extendqisi2
+ 461 0020 43EA0123 		orr	r3, r3, r1, lsl #8
+ 462 0024 1380     		strh	r3, [r2]	@ movhi
+ 117:Gyro.c        ****     gyrodata_->y = rx_buffer[2] << 8 | rx_buffer[3];
+ 463              		.loc 1 117 0
+ 464 0026 E268     		ldr	r2, [r4, #12]
+ 465 0028 9DF80A10 		ldrb	r1, [sp, #10]	@ zero_extendqisi2
+ 466 002c 9DF80B30 		ldrb	r3, [sp, #11]	@ zero_extendqisi2
+ 467 0030 43EA0123 		orr	r3, r3, r1, lsl #8
+ 468 0034 5380     		strh	r3, [r2, #2]	@ movhi
+ 118:Gyro.c        ****     gyrodata_->z = rx_buffer[4] << 8 | rx_buffer[5];
+ 469              		.loc 1 118 0
+ 470 0036 E268     		ldr	r2, [r4, #12]
+ 471 0038 9DF80C10 		ldrb	r1, [sp, #12]	@ zero_extendqisi2
+ 472 003c 9DF80D30 		ldrb	r3, [sp, #13]	@ zero_extendqisi2
+ 473 0040 43EA0123 		orr	r3, r3, r1, lsl #8
+ 474 0044 9380     		strh	r3, [r2, #4]	@ movhi
+ 119:Gyro.c        ****     
+ 120:Gyro.c        ****     /*Convert into radians per second*/
+ 121:Gyro.c        ****     gyrodata_->x_rad = gyrodata_->x / 939.650784f;
+ 475              		.loc 1 121 0
+ 476 0046 E568     		ldr	r5, [r4, #12]
+ 477 0048 B5F90000 		ldrsh	r0, [r5]
+ 478 004c FFF7FEFF 		bl	__aeabi_i2f
+ 479              	.LVL49:
+ 480 0050 0C49     		ldr	r1, .L19
+ 481 0052 FFF7FEFF 		bl	__aeabi_fdiv
+ 482              	.LVL50:
+ 483 0056 A860     		str	r0, [r5, #8]	@ float
+ 122:Gyro.c        ****     gyrodata_->y_rad = gyrodata_->y / 939.650784f;
+ 484              		.loc 1 122 0
+ 485 0058 E568     		ldr	r5, [r4, #12]
+ 486 005a B5F90200 		ldrsh	r0, [r5, #2]
+ 487 005e FFF7FEFF 		bl	__aeabi_i2f
+ 488              	.LVL51:
+ 489 0062 0849     		ldr	r1, .L19
+ 490 0064 FFF7FEFF 		bl	__aeabi_fdiv
+ 491              	.LVL52:
+ 492 0068 E860     		str	r0, [r5, #12]	@ float
+ 123:Gyro.c        ****     gyrodata_->z_rad = gyrodata_->z / 939.650784f;
+ 493              		.loc 1 123 0
+ 494 006a E568     		ldr	r5, [r4, #12]
+ 495 006c B5F90400 		ldrsh	r0, [r5, #4]
+ 496 0070 FFF7FEFF 		bl	__aeabi_i2f
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 13
+
+
+ 497              	.LVL53:
+ 498 0074 0349     		ldr	r1, .L19
+ 499 0076 FFF7FEFF 		bl	__aeabi_fdiv
+ 500              	.LVL54:
+ 501 007a 2861     		str	r0, [r5, #16]	@ float
+ 124:Gyro.c        **** 	
+ 125:Gyro.c        **** 	return gyrodata_;
+ 126:Gyro.c        **** }
+ 502              		.loc 1 126 0
+ 503 007c E068     		ldr	r0, [r4, #12]
+ 504 007e 05B0     		add	sp, sp, #20
+ 505              		.cfi_def_cfa_offset 12
+ 506              		@ sp needed
+ 507 0080 30BD     		pop	{r4, r5, pc}
+ 508              	.LVL55:
+ 509              	.L20:
+ 510 0082 00BF     		.align	2
+ 511              	.L19:
+ 512 0084 A6E96A44 		.word	1147857318
+ 513              		.cfi_endproc
+ 514              	.LFE87:
+ 515              		.size	_ZN4Gyro11getGyroDataEv, .-_ZN4Gyro11getGyroDataEv
+ 516              		.section	.text._ZN4Gyro13getSensorDataEv,"ax",%progbits
+ 517              		.align	2
+ 518              		.global	_ZN4Gyro13getSensorDataEv
+ 519              		.thumb
+ 520              		.thumb_func
+ 521              		.type	_ZN4Gyro13getSensorDataEv, %function
+ 522              	_ZN4Gyro13getSensorDataEv:
+ 523              	.LFB86:
+  97:Gyro.c        **** 	/*Get new values from sensor!*/
+ 524              		.loc 1 97 0
+ 525              		.cfi_startproc
+ 526              		@ args = 0, pretend = 0, frame = 0
+ 527              		@ frame_needed = 0, uses_anonymous_args = 0
+ 528              	.LVL56:
+ 529 0000 10B5     		push	{r4, lr}
+ 530              		.cfi_def_cfa_offset 8
+ 531              		.cfi_offset 4, -8
+ 532              		.cfi_offset 14, -4
+ 533 0002 0446     		mov	r4, r0
+  99:Gyro.c        **** 	getTemp();
+ 534              		.loc 1 99 0
+ 535 0004 FFF7FEFF 		bl	_ZN4Gyro10getAccDataEv
+ 536              	.LVL57:
+ 100:Gyro.c        **** 	getGyroData();
+ 537              		.loc 1 100 0
+ 538 0008 2046     		mov	r0, r4
+ 539 000a FFF7FEFF 		bl	_ZN4Gyro7getTempEv
+ 540              	.LVL58:
+ 101:Gyro.c        **** 	
+ 541              		.loc 1 101 0
+ 542 000e 2046     		mov	r0, r4
+ 543 0010 FFF7FEFF 		bl	_ZN4Gyro11getGyroDataEv
+ 544              	.LVL59:
+ 105:Gyro.c        **** 
+ 545              		.loc 1 105 0
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 14
+
+
+ 546 0014 2069     		ldr	r0, [r4, #16]
+ 547 0016 10BD     		pop	{r4, pc}
+ 548              		.cfi_endproc
+ 549              	.LFE86:
+ 550              		.size	_ZN4Gyro13getSensorDataEv, .-_ZN4Gyro13getSensorDataEv
+ 551              		.text
+ 552              	.Letext0:
+ 553              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 554              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 555              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 556              		.file 6 "i2c.h"
+ 557              		.file 7 "Gyro.h"
+ 558              		.file 8 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 559              		.file 9 "Generated_Source\\PSoC5/core_cm3.h"
+ 560              		.section	.debug_info,"",%progbits
+ 561              	.Ldebug_info0:
+ 562 0000 EA090000 		.4byte	0x9ea
+ 563 0004 0400     		.2byte	0x4
+ 564 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 565 000a 04       		.byte	0x4
+ 566 000b 01       		.uleb128 0x1
+ 567 000c A8020000 		.4byte	.LASF78
+ 568 0010 04       		.byte	0x4
+ 569 0011 8C030000 		.4byte	.LASF79
+ 570 0015 DF030000 		.4byte	.LASF80
+ 571 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 572 001d 00000000 		.4byte	0
+ 573 0021 00000000 		.4byte	.Ldebug_line0
+ 574 0025 02       		.uleb128 0x2
+ 575 0026 01       		.byte	0x1
+ 576 0027 06       		.byte	0x6
+ 577 0028 60020000 		.4byte	.LASF0
+ 578 002c 03       		.uleb128 0x3
+ 579 002d FF010000 		.4byte	.LASF2
+ 580 0031 03       		.byte	0x3
+ 581 0032 1D       		.byte	0x1d
+ 582 0033 37000000 		.4byte	0x37
+ 583 0037 02       		.uleb128 0x2
+ 584 0038 01       		.byte	0x1
+ 585 0039 08       		.byte	0x8
+ 586 003a 4C020000 		.4byte	.LASF1
+ 587 003e 03       		.uleb128 0x3
+ 588 003f AE040000 		.4byte	.LASF3
+ 589 0043 03       		.byte	0x3
+ 590 0044 29       		.byte	0x29
+ 591 0045 49000000 		.4byte	0x49
+ 592 0049 02       		.uleb128 0x2
+ 593 004a 02       		.byte	0x2
+ 594 004b 05       		.byte	0x5
+ 595 004c 45000000 		.4byte	.LASF4
+ 596 0050 03       		.uleb128 0x3
+ 597 0051 CA000000 		.4byte	.LASF5
+ 598 0055 03       		.byte	0x3
+ 599 0056 2B       		.byte	0x2b
+ 600 0057 5B000000 		.4byte	0x5b
+ 601 005b 02       		.uleb128 0x2
+ 602 005c 02       		.byte	0x2
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 15
+
+
+ 603 005d 07       		.byte	0x7
+ 604 005e 63030000 		.4byte	.LASF6
+ 605 0062 03       		.uleb128 0x3
+ 606 0063 8A040000 		.4byte	.LASF7
+ 607 0067 03       		.byte	0x3
+ 608 0068 3F       		.byte	0x3f
+ 609 0069 6D000000 		.4byte	0x6d
+ 610 006d 02       		.uleb128 0x2
+ 611 006e 04       		.byte	0x4
+ 612 006f 05       		.byte	0x5
+ 613 0070 AB010000 		.4byte	.LASF8
+ 614 0074 02       		.uleb128 0x2
+ 615 0075 04       		.byte	0x4
+ 616 0076 07       		.byte	0x7
+ 617 0077 29040000 		.4byte	.LASF9
+ 618 007b 02       		.uleb128 0x2
+ 619 007c 08       		.byte	0x8
+ 620 007d 05       		.byte	0x5
+ 621 007e 23050000 		.4byte	.LASF10
+ 622 0082 02       		.uleb128 0x2
+ 623 0083 08       		.byte	0x8
+ 624 0084 07       		.byte	0x7
+ 625 0085 6C020000 		.4byte	.LASF11
+ 626 0089 04       		.uleb128 0x4
+ 627 008a 04       		.byte	0x4
+ 628 008b 05       		.byte	0x5
+ 629 008c 696E7400 		.ascii	"int\000"
+ 630 0090 02       		.uleb128 0x2
+ 631 0091 04       		.byte	0x4
+ 632 0092 07       		.byte	0x7
+ 633 0093 83020000 		.4byte	.LASF12
+ 634 0097 03       		.uleb128 0x3
+ 635 0098 02010000 		.4byte	.LASF13
+ 636 009c 04       		.byte	0x4
+ 637 009d 18       		.byte	0x18
+ 638 009e 2C000000 		.4byte	0x2c
+ 639 00a2 03       		.uleb128 0x3
+ 640 00a3 BA030000 		.4byte	.LASF14
+ 641 00a7 04       		.byte	0x4
+ 642 00a8 20       		.byte	0x20
+ 643 00a9 3E000000 		.4byte	0x3e
+ 644 00ad 03       		.uleb128 0x3
+ 645 00ae 9F020000 		.4byte	.LASF15
+ 646 00b2 04       		.byte	0x4
+ 647 00b3 24       		.byte	0x24
+ 648 00b4 50000000 		.4byte	0x50
+ 649 00b8 03       		.uleb128 0x3
+ 650 00b9 A8030000 		.4byte	.LASF16
+ 651 00bd 04       		.byte	0x4
+ 652 00be 2C       		.byte	0x2c
+ 653 00bf 62000000 		.4byte	0x62
+ 654 00c3 02       		.uleb128 0x2
+ 655 00c4 04       		.byte	0x4
+ 656 00c5 04       		.byte	0x4
+ 657 00c6 5E010000 		.4byte	.LASF17
+ 658 00ca 02       		.uleb128 0x2
+ 659 00cb 08       		.byte	0x8
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 16
+
+
+ 660 00cc 04       		.byte	0x4
+ 661 00cd 3B040000 		.4byte	.LASF18
+ 662 00d1 02       		.uleb128 0x2
+ 663 00d2 01       		.byte	0x1
+ 664 00d3 08       		.byte	0x8
+ 665 00d4 93030000 		.4byte	.LASF19
+ 666 00d8 03       		.uleb128 0x3
+ 667 00d9 0A010000 		.4byte	.LASF20
+ 668 00dd 05       		.byte	0x5
+ 669 00de D8       		.byte	0xd8
+ 670 00df 90000000 		.4byte	0x90
+ 671 00e3 02       		.uleb128 0x2
+ 672 00e4 04       		.byte	0x4
+ 673 00e5 07       		.byte	0x7
+ 674 00e6 8C000000 		.4byte	.LASF21
+ 675 00ea 05       		.uleb128 0x5
+ 676 00eb 04       		.byte	0x4
+ 677 00ec 06       		.uleb128 0x6
+ 678 00ed 69326300 		.ascii	"i2c\000"
+ 679 00f1 01       		.byte	0x1
+ 680 00f2 06       		.byte	0x6
+ 681 00f3 1A       		.byte	0x1a
+ 682 00f4 6F020000 		.4byte	0x26f
+ 683 00f8 07       		.uleb128 0x7
+ 684 00f9 69326300 		.ascii	"i2c\000"
+ 685 00fd 06       		.byte	0x6
+ 686 00fe 1C       		.byte	0x1c
+ 687 00ff 0E000000 		.4byte	.LASF81
+ 688 0103 6F020000 		.4byte	0x26f
+ 689 0107 01       		.byte	0x1
+ 690 0108 10010000 		.4byte	0x110
+ 691 010c 16010000 		.4byte	0x116
+ 692 0110 08       		.uleb128 0x8
+ 693 0111 6F020000 		.4byte	0x26f
+ 694 0115 00       		.byte	0
+ 695 0116 09       		.uleb128 0x9
+ 696 0117 EB000000 		.4byte	.LASF22
+ 697 011b 06       		.byte	0x6
+ 698 011c 1D       		.byte	0x1d
+ 699 011d E7010000 		.4byte	.LASF24
+ 700 0121 01       		.byte	0x1
+ 701 0122 2A010000 		.4byte	0x12a
+ 702 0126 44010000 		.4byte	0x144
+ 703 012a 08       		.uleb128 0x8
+ 704 012b 6F020000 		.4byte	0x26f
+ 705 012f 0A       		.uleb128 0xa
+ 706 0130 97000000 		.4byte	0x97
+ 707 0134 0A       		.uleb128 0xa
+ 708 0135 97000000 		.4byte	0x97
+ 709 0139 0A       		.uleb128 0xa
+ 710 013a 97000000 		.4byte	0x97
+ 711 013e 0A       		.uleb128 0xa
+ 712 013f 75020000 		.4byte	0x275
+ 713 0143 00       		.byte	0
+ 714 0144 09       		.uleb128 0x9
+ 715 0145 DE010000 		.4byte	.LASF23
+ 716 0149 06       		.byte	0x6
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 17
+
+
+ 717 014a 1E       		.byte	0x1e
+ 718 014b 74040000 		.4byte	.LASF25
+ 719 014f 01       		.byte	0x1
+ 720 0150 58010000 		.4byte	0x158
+ 721 0154 6D010000 		.4byte	0x16d
+ 722 0158 08       		.uleb128 0x8
+ 723 0159 6F020000 		.4byte	0x26f
+ 724 015d 0A       		.uleb128 0xa
+ 725 015e 97000000 		.4byte	0x97
+ 726 0162 0A       		.uleb128 0xa
+ 727 0163 97000000 		.4byte	0x97
+ 728 0167 0A       		.uleb128 0xa
+ 729 0168 75020000 		.4byte	0x275
+ 730 016c 00       		.byte	0
+ 731 016d 09       		.uleb128 0x9
+ 732 016e 4F000000 		.4byte	.LASF26
+ 733 0172 06       		.byte	0x6
+ 734 0173 1F       		.byte	0x1f
+ 735 0174 FC040000 		.4byte	.LASF27
+ 736 0178 01       		.byte	0x1
+ 737 0179 81010000 		.4byte	0x181
+ 738 017d 9B010000 		.4byte	0x19b
+ 739 0181 08       		.uleb128 0x8
+ 740 0182 6F020000 		.4byte	0x26f
+ 741 0186 0A       		.uleb128 0xa
+ 742 0187 97000000 		.4byte	0x97
+ 743 018b 0A       		.uleb128 0xa
+ 744 018c 97000000 		.4byte	0x97
+ 745 0190 0A       		.uleb128 0xa
+ 746 0191 97000000 		.4byte	0x97
+ 747 0195 0A       		.uleb128 0xa
+ 748 0196 75020000 		.4byte	0x275
+ 749 019a 00       		.byte	0
+ 750 019b 09       		.uleb128 0x9
+ 751 019c 31050000 		.4byte	.LASF28
+ 752 01a0 06       		.byte	0x6
+ 753 01a1 20       		.byte	0x20
+ 754 01a2 76030000 		.4byte	.LASF29
+ 755 01a6 01       		.byte	0x1
+ 756 01a7 AF010000 		.4byte	0x1af
+ 757 01ab C4010000 		.4byte	0x1c4
+ 758 01af 08       		.uleb128 0x8
+ 759 01b0 6F020000 		.4byte	0x26f
+ 760 01b4 0A       		.uleb128 0xa
+ 761 01b5 97000000 		.4byte	0x97
+ 762 01b9 0A       		.uleb128 0xa
+ 763 01ba 97000000 		.4byte	0x97
+ 764 01be 0A       		.uleb128 0xa
+ 765 01bf 97000000 		.4byte	0x97
+ 766 01c3 00       		.byte	0
+ 767 01c4 09       		.uleb128 0x9
+ 768 01c5 98030000 		.4byte	.LASF30
+ 769 01c9 06       		.byte	0x6
+ 770 01ca 21       		.byte	0x21
+ 771 01cb AB000000 		.4byte	.LASF31
+ 772 01cf 01       		.byte	0x1
+ 773 01d0 D8010000 		.4byte	0x1d8
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 18
+
+
+ 774 01d4 F2010000 		.4byte	0x1f2
+ 775 01d8 08       		.uleb128 0x8
+ 776 01d9 6F020000 		.4byte	0x26f
+ 777 01dd 0A       		.uleb128 0xa
+ 778 01de 97000000 		.4byte	0x97
+ 779 01e2 0A       		.uleb128 0xa
+ 780 01e3 AD000000 		.4byte	0xad
+ 781 01e7 0A       		.uleb128 0xa
+ 782 01e8 97000000 		.4byte	0x97
+ 783 01ec 0A       		.uleb128 0xa
+ 784 01ed 75020000 		.4byte	0x275
+ 785 01f1 00       		.byte	0
+ 786 01f2 09       		.uleb128 0x9
+ 787 01f3 6F010000 		.4byte	.LASF32
+ 788 01f7 06       		.byte	0x6
+ 789 01f8 22       		.byte	0x22
+ 790 01f9 11010000 		.4byte	.LASF33
+ 791 01fd 01       		.byte	0x1
+ 792 01fe 06020000 		.4byte	0x206
+ 793 0202 1B020000 		.4byte	0x21b
+ 794 0206 08       		.uleb128 0x8
+ 795 0207 6F020000 		.4byte	0x26f
+ 796 020b 0A       		.uleb128 0xa
+ 797 020c 97000000 		.4byte	0x97
+ 798 0210 0A       		.uleb128 0xa
+ 799 0211 AD000000 		.4byte	0xad
+ 800 0215 0A       		.uleb128 0xa
+ 801 0216 97000000 		.4byte	0x97
+ 802 021a 00       		.byte	0
+ 803 021b 09       		.uleb128 0x9
+ 804 021c 1A000000 		.4byte	.LASF34
+ 805 0220 06       		.byte	0x6
+ 806 0221 23       		.byte	0x23
+ 807 0222 32010000 		.4byte	.LASF35
+ 808 0226 01       		.byte	0x1
+ 809 0227 2F020000 		.4byte	0x22f
+ 810 022b 49020000 		.4byte	0x249
+ 811 022f 08       		.uleb128 0x8
+ 812 0230 6F020000 		.4byte	0x26f
+ 813 0234 0A       		.uleb128 0xa
+ 814 0235 97000000 		.4byte	0x97
+ 815 0239 0A       		.uleb128 0xa
+ 816 023a AD000000 		.4byte	0xad
+ 817 023e 0A       		.uleb128 0xa
+ 818 023f 97000000 		.4byte	0x97
+ 819 0243 0A       		.uleb128 0xa
+ 820 0244 75020000 		.4byte	0x275
+ 821 0248 00       		.byte	0
+ 822 0249 0B       		.uleb128 0xb
+ 823 024a 90020000 		.4byte	.LASF48
+ 824 024e 06       		.byte	0x6
+ 825 024f 24       		.byte	0x24
+ 826 0250 52040000 		.4byte	.LASF49
+ 827 0254 01       		.byte	0x1
+ 828 0255 59020000 		.4byte	0x259
+ 829 0259 08       		.uleb128 0x8
+ 830 025a 6F020000 		.4byte	0x26f
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 19
+
+
+ 831 025e 0A       		.uleb128 0xa
+ 832 025f 97000000 		.4byte	0x97
+ 833 0263 0A       		.uleb128 0xa
+ 834 0264 AD000000 		.4byte	0xad
+ 835 0268 0A       		.uleb128 0xa
+ 836 0269 75020000 		.4byte	0x275
+ 837 026d 00       		.byte	0
+ 838 026e 00       		.byte	0
+ 839 026f 0C       		.uleb128 0xc
+ 840 0270 04       		.byte	0x4
+ 841 0271 EC000000 		.4byte	0xec
+ 842 0275 0C       		.uleb128 0xc
+ 843 0276 04       		.byte	0x4
+ 844 0277 97000000 		.4byte	0x97
+ 845 027b 0D       		.uleb128 0xd
+ 846 027c B8040000 		.4byte	.LASF39
+ 847 0280 14       		.byte	0x14
+ 848 0281 02       		.byte	0x2
+ 849 0282 2B       		.byte	0x2b
+ 850 0283 E1020000 		.4byte	0x2e1
+ 851 0287 0E       		.uleb128 0xe
+ 852 0288 7800     		.ascii	"x\000"
+ 853 028a 02       		.byte	0x2
+ 854 028b 2C       		.byte	0x2c
+ 855 028c A2000000 		.4byte	0xa2
+ 856 0290 00       		.byte	0
+ 857 0291 0E       		.uleb128 0xe
+ 858 0292 7900     		.ascii	"y\000"
+ 859 0294 02       		.byte	0x2
+ 860 0295 2D       		.byte	0x2d
+ 861 0296 A2000000 		.4byte	0xa2
+ 862 029a 02       		.byte	0x2
+ 863 029b 0E       		.uleb128 0xe
+ 864 029c 7A00     		.ascii	"z\000"
+ 865 029e 02       		.byte	0x2
+ 866 029f 2E       		.byte	0x2e
+ 867 02a0 A2000000 		.4byte	0xa2
+ 868 02a4 04       		.byte	0x4
+ 869 02a5 0F       		.uleb128 0xf
+ 870 02a6 5A020000 		.4byte	.LASF36
+ 871 02aa 02       		.byte	0x2
+ 872 02ab 2F       		.byte	0x2f
+ 873 02ac C3000000 		.4byte	0xc3
+ 874 02b0 08       		.byte	0x8
+ 875 02b1 0F       		.uleb128 0xf
+ 876 02b2 D1030000 		.4byte	.LASF37
+ 877 02b6 02       		.byte	0x2
+ 878 02b7 30       		.byte	0x30
+ 879 02b8 C3000000 		.4byte	0xc3
+ 880 02bc 0C       		.byte	0xc
+ 881 02bd 0F       		.uleb128 0xf
+ 882 02be 2A000000 		.4byte	.LASF38
+ 883 02c2 02       		.byte	0x2
+ 884 02c3 31       		.byte	0x31
+ 885 02c4 C3000000 		.4byte	0xc3
+ 886 02c8 10       		.byte	0x10
+ 887 02c9 10       		.uleb128 0x10
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 20
+
+
+ 888 02ca B8040000 		.4byte	.LASF39
+ 889 02ce CC010000 		.4byte	.LASF41
+ 890 02d2 16050000 		.4byte	0x516
+ 891 02d6 DA020000 		.4byte	0x2da
+ 892 02da 08       		.uleb128 0x8
+ 893 02db 16050000 		.4byte	0x516
+ 894 02df 00       		.byte	0
+ 895 02e0 00       		.byte	0
+ 896 02e1 03       		.uleb128 0x3
+ 897 02e2 B8040000 		.4byte	.LASF39
+ 898 02e6 02       		.byte	0x2
+ 899 02e7 32       		.byte	0x32
+ 900 02e8 7B020000 		.4byte	0x27b
+ 901 02ec 0D       		.uleb128 0xd
+ 902 02ed D4040000 		.4byte	.LASF40
+ 903 02f1 14       		.byte	0x14
+ 904 02f2 02       		.byte	0x2
+ 905 02f3 35       		.byte	0x35
+ 906 02f4 52030000 		.4byte	0x352
+ 907 02f8 0E       		.uleb128 0xe
+ 908 02f9 7800     		.ascii	"x\000"
+ 909 02fb 02       		.byte	0x2
+ 910 02fc 36       		.byte	0x36
+ 911 02fd A2000000 		.4byte	0xa2
+ 912 0301 00       		.byte	0
+ 913 0302 0E       		.uleb128 0xe
+ 914 0303 7900     		.ascii	"y\000"
+ 915 0305 02       		.byte	0x2
+ 916 0306 37       		.byte	0x37
+ 917 0307 A2000000 		.4byte	0xa2
+ 918 030b 02       		.byte	0x2
+ 919 030c 0E       		.uleb128 0xe
+ 920 030d 7A00     		.ascii	"z\000"
+ 921 030f 02       		.byte	0x2
+ 922 0310 38       		.byte	0x38
+ 923 0311 A2000000 		.4byte	0xa2
+ 924 0315 04       		.byte	0x4
+ 925 0316 0E       		.uleb128 0xe
+ 926 0317 785F4700 		.ascii	"x_G\000"
+ 927 031b 02       		.byte	0x2
+ 928 031c 39       		.byte	0x39
+ 929 031d C3000000 		.4byte	0xc3
+ 930 0321 08       		.byte	0x8
+ 931 0322 0E       		.uleb128 0xe
+ 932 0323 795F4700 		.ascii	"y_G\000"
+ 933 0327 02       		.byte	0x2
+ 934 0328 3A       		.byte	0x3a
+ 935 0329 C3000000 		.4byte	0xc3
+ 936 032d 0C       		.byte	0xc
+ 937 032e 0E       		.uleb128 0xe
+ 938 032f 7A5F4700 		.ascii	"z_G\000"
+ 939 0333 02       		.byte	0x2
+ 940 0334 3B       		.byte	0x3b
+ 941 0335 C3000000 		.4byte	0xc3
+ 942 0339 10       		.byte	0x10
+ 943 033a 10       		.uleb128 0x10
+ 944 033b D4040000 		.4byte	.LASF40
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 21
+
+
+ 945 033f 52030000 		.4byte	.LASF42
+ 946 0343 3B050000 		.4byte	0x53b
+ 947 0347 4B030000 		.4byte	0x34b
+ 948 034b 08       		.uleb128 0x8
+ 949 034c 3B050000 		.4byte	0x53b
+ 950 0350 00       		.byte	0
+ 951 0351 00       		.byte	0
+ 952 0352 03       		.uleb128 0x3
+ 953 0353 D4040000 		.4byte	.LASF40
+ 954 0357 02       		.byte	0x2
+ 955 0358 3C       		.byte	0x3c
+ 956 0359 EC020000 		.4byte	0x2ec
+ 957 035d 0D       		.uleb128 0xd
+ 958 035e C0010000 		.4byte	.LASF43
+ 959 0362 0C       		.byte	0xc
+ 960 0363 02       		.byte	0x2
+ 961 0364 3F       		.byte	0x3f
+ 962 0365 D3030000 		.4byte	0x3d3
+ 963 0369 0F       		.uleb128 0xf
+ 964 036a 7E010000 		.4byte	.LASF44
+ 965 036e 02       		.byte	0x2
+ 966 036f 40       		.byte	0x40
+ 967 0370 D3030000 		.4byte	0x3d3
+ 968 0374 00       		.byte	0
+ 969 0375 0F       		.uleb128 0xf
+ 970 0376 9B000000 		.4byte	.LASF45
+ 971 037a 02       		.byte	0x2
+ 972 037b 41       		.byte	0x41
+ 973 037c D9030000 		.4byte	0x3d9
+ 974 0380 04       		.byte	0x4
+ 975 0381 0F       		.uleb128 0xf
+ 976 0382 51010000 		.4byte	.LASF46
+ 977 0386 02       		.byte	0x2
+ 978 0387 42       		.byte	0x42
+ 979 0388 DF030000 		.4byte	0x3df
+ 980 038c 08       		.byte	0x8
+ 981 038d 11       		.uleb128 0x11
+ 982 038e C0010000 		.4byte	.LASF43
+ 983 0392 02       		.byte	0x2
+ 984 0393 43       		.byte	0x43
+ 985 0394 61000000 		.4byte	.LASF47
+ 986 0398 E5030000 		.4byte	0x3e5
+ 987 039c A4030000 		.4byte	0x3a4
+ 988 03a0 B9030000 		.4byte	0x3b9
+ 989 03a4 08       		.uleb128 0x8
+ 990 03a5 E5030000 		.4byte	0x3e5
+ 991 03a9 0A       		.uleb128 0xa
+ 992 03aa D3030000 		.4byte	0x3d3
+ 993 03ae 0A       		.uleb128 0xa
+ 994 03af D9030000 		.4byte	0x3d9
+ 995 03b3 0A       		.uleb128 0xa
+ 996 03b4 DF030000 		.4byte	0x3df
+ 997 03b8 00       		.byte	0
+ 998 03b9 12       		.uleb128 0x12
+ 999 03ba C0010000 		.4byte	.LASF43
+ 1000 03be 02       		.byte	0x2
+ 1001 03bf 44       		.byte	0x44
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 22
+
+
+ 1002 03c0 30000000 		.4byte	.LASF50
+ 1003 03c4 E5030000 		.4byte	0x3e5
+ 1004 03c8 CC030000 		.4byte	0x3cc
+ 1005 03cc 08       		.uleb128 0x8
+ 1006 03cd E5030000 		.4byte	0x3e5
+ 1007 03d1 00       		.byte	0
+ 1008 03d2 00       		.byte	0
+ 1009 03d3 0C       		.uleb128 0xc
+ 1010 03d4 04       		.byte	0x4
+ 1011 03d5 E1020000 		.4byte	0x2e1
+ 1012 03d9 0C       		.uleb128 0xc
+ 1013 03da 04       		.byte	0x4
+ 1014 03db 52030000 		.4byte	0x352
+ 1015 03df 0C       		.uleb128 0xc
+ 1016 03e0 04       		.byte	0x4
+ 1017 03e1 C3000000 		.4byte	0xc3
+ 1018 03e5 0C       		.uleb128 0xc
+ 1019 03e6 04       		.byte	0x4
+ 1020 03e7 5D030000 		.4byte	0x35d
+ 1021 03eb 03       		.uleb128 0x3
+ 1022 03ec C0010000 		.4byte	.LASF43
+ 1023 03f0 02       		.byte	0x2
+ 1024 03f1 45       		.byte	0x45
+ 1025 03f2 5D030000 		.4byte	0x35d
+ 1026 03f6 13       		.uleb128 0x13
+ 1027 03f7 F7040000 		.4byte	.LASF51
+ 1028 03fb 14       		.byte	0x14
+ 1029 03fc 07       		.byte	0x7
+ 1030 03fd 1C       		.byte	0x1c
+ 1031 03fe 0A050000 		.4byte	0x50a
+ 1032 0402 0E       		.uleb128 0xe
+ 1033 0403 49324300 		.ascii	"I2C\000"
+ 1034 0407 07       		.byte	0x7
+ 1035 0408 28       		.byte	0x28
+ 1036 0409 6F020000 		.4byte	0x26f
+ 1037 040d 00       		.byte	0
+ 1038 040e 0F       		.uleb128 0xf
+ 1039 040f 51010000 		.4byte	.LASF46
+ 1040 0413 07       		.byte	0x7
+ 1041 0414 29       		.byte	0x29
+ 1042 0415 C3000000 		.4byte	0xc3
+ 1043 0419 04       		.byte	0x4
+ 1044 041a 0F       		.uleb128 0xf
+ 1045 041b 64010000 		.4byte	.LASF52
+ 1046 041f 07       		.byte	0x7
+ 1047 0420 2A       		.byte	0x2a
+ 1048 0421 D9030000 		.4byte	0x3d9
+ 1049 0425 08       		.byte	0x8
+ 1050 0426 0F       		.uleb128 0xf
+ 1051 0427 1F040000 		.4byte	.LASF53
+ 1052 042b 07       		.byte	0x7
+ 1053 042c 2B       		.byte	0x2b
+ 1054 042d D3030000 		.4byte	0x3d3
+ 1055 0431 0C       		.byte	0xc
+ 1056 0432 0F       		.uleb128 0xf
+ 1057 0433 46030000 		.4byte	.LASF54
+ 1058 0437 07       		.byte	0x7
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 23
+
+
+ 1059 0438 2C       		.byte	0x2c
+ 1060 0439 0A050000 		.4byte	0x50a
+ 1061 043d 10       		.byte	0x10
+ 1062 043e 14       		.uleb128 0x14
+ 1063 043f F7040000 		.4byte	.LASF51
+ 1064 0443 07       		.byte	0x7
+ 1065 0444 20       		.byte	0x20
+ 1066 0445 16050000 		.4byte	.LASF56
+ 1067 0449 10050000 		.4byte	0x510
+ 1068 044d 01       		.byte	0x1
+ 1069 044e 56040000 		.4byte	0x456
+ 1070 0452 5C040000 		.4byte	0x45c
+ 1071 0456 08       		.uleb128 0x8
+ 1072 0457 10050000 		.4byte	0x510
+ 1073 045b 00       		.byte	0
+ 1074 045c 14       		.uleb128 0x14
+ 1075 045d CE040000 		.4byte	.LASF55
+ 1076 0461 07       		.byte	0x7
+ 1077 0462 21       		.byte	0x21
+ 1078 0463 F5000000 		.4byte	.LASF57
+ 1079 0467 EA000000 		.4byte	0xea
+ 1080 046b 01       		.byte	0x1
+ 1081 046c 74040000 		.4byte	0x474
+ 1082 0470 7F040000 		.4byte	0x47f
+ 1083 0474 08       		.uleb128 0x8
+ 1084 0475 10050000 		.4byte	0x510
+ 1085 0479 08       		.uleb128 0x8
+ 1086 047a 89000000 		.4byte	0x89
+ 1087 047e 00       		.byte	0
+ 1088 047f 14       		.uleb128 0x14
+ 1089 0480 00000000 		.4byte	.LASF58
+ 1090 0484 07       		.byte	0x7
+ 1091 0485 24       		.byte	0x24
+ 1092 0486 94040000 		.4byte	.LASF59
+ 1093 048a 0A050000 		.4byte	0x50a
+ 1094 048e 01       		.byte	0x1
+ 1095 048f 97040000 		.4byte	0x497
+ 1096 0493 9D040000 		.4byte	0x49d
+ 1097 0497 08       		.uleb128 0x8
+ 1098 0498 10050000 		.4byte	0x510
+ 1099 049c 00       		.byte	0
+ 1100 049d 11       		.uleb128 0x11
+ 1101 049e A0000000 		.4byte	.LASF60
+ 1102 04a2 07       		.byte	0x7
+ 1103 04a3 2F       		.byte	0x2f
+ 1104 04a4 35020000 		.4byte	.LASF61
+ 1105 04a8 D9030000 		.4byte	0x3d9
+ 1106 04ac B4040000 		.4byte	0x4b4
+ 1107 04b0 BA040000 		.4byte	0x4ba
+ 1108 04b4 08       		.uleb128 0x8
+ 1109 04b5 10050000 		.4byte	0x510
+ 1110 04b9 00       		.byte	0
+ 1111 04ba 11       		.uleb128 0x11
+ 1112 04bb D7030000 		.4byte	.LASF62
+ 1113 04bf 07       		.byte	0x7
+ 1114 04c0 30       		.byte	0x30
+ 1115 04c1 84010000 		.4byte	.LASF63
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 24
+
+
+ 1116 04c5 C3000000 		.4byte	0xc3
+ 1117 04c9 D1040000 		.4byte	0x4d1
+ 1118 04cd D7040000 		.4byte	0x4d7
+ 1119 04d1 08       		.uleb128 0x8
+ 1120 04d2 10050000 		.4byte	0x510
+ 1121 04d6 00       		.byte	0
+ 1122 04d7 11       		.uleb128 0x11
+ 1123 04d8 B4010000 		.4byte	.LASF64
+ 1124 04dc 07       		.byte	0x7
+ 1125 04dd 31       		.byte	0x31
+ 1126 04de 09020000 		.4byte	.LASF65
+ 1127 04e2 D3030000 		.4byte	0x3d3
+ 1128 04e6 EE040000 		.4byte	0x4ee
+ 1129 04ea F4040000 		.4byte	0x4f4
+ 1130 04ee 08       		.uleb128 0x8
+ 1131 04ef 10050000 		.4byte	0x510
+ 1132 04f3 00       		.byte	0
+ 1133 04f4 15       		.uleb128 0x15
+ 1134 04f5 D5000000 		.4byte	.LASF66
+ 1135 04f9 07       		.byte	0x7
+ 1136 04fa 32       		.byte	0x32
+ 1137 04fb 97010000 		.4byte	.LASF82
+ 1138 04ff 03050000 		.4byte	0x503
+ 1139 0503 08       		.uleb128 0x8
+ 1140 0504 10050000 		.4byte	0x510
+ 1141 0508 00       		.byte	0
+ 1142 0509 00       		.byte	0
+ 1143 050a 0C       		.uleb128 0xc
+ 1144 050b 04       		.byte	0x4
+ 1145 050c EB030000 		.4byte	0x3eb
+ 1146 0510 0C       		.uleb128 0xc
+ 1147 0511 04       		.byte	0x4
+ 1148 0512 F6030000 		.4byte	0x3f6
+ 1149 0516 0C       		.uleb128 0xc
+ 1150 0517 04       		.byte	0x4
+ 1151 0518 7B020000 		.4byte	0x27b
+ 1152 051c 16       		.uleb128 0x16
+ 1153 051d C9020000 		.4byte	0x2c9
+ 1154 0521 02       		.byte	0x2
+ 1155 0522 2B       		.byte	0x2b
+ 1156 0523 03       		.byte	0x3
+ 1157 0524 2C050000 		.4byte	0x52c
+ 1158 0528 36050000 		.4byte	0x536
+ 1159 052c 17       		.uleb128 0x17
+ 1160 052d C2030000 		.4byte	.LASF67
+ 1161 0531 36050000 		.4byte	0x536
+ 1162 0535 00       		.byte	0
+ 1163 0536 18       		.uleb128 0x18
+ 1164 0537 16050000 		.4byte	0x516
+ 1165 053b 0C       		.uleb128 0xc
+ 1166 053c 04       		.byte	0x4
+ 1167 053d EC020000 		.4byte	0x2ec
+ 1168 0541 16       		.uleb128 0x16
+ 1169 0542 3A030000 		.4byte	0x33a
+ 1170 0546 02       		.byte	0x2
+ 1171 0547 35       		.byte	0x35
+ 1172 0548 03       		.byte	0x3
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 25
+
+
+ 1173 0549 51050000 		.4byte	0x551
+ 1174 054d 5B050000 		.4byte	0x55b
+ 1175 0551 17       		.uleb128 0x17
+ 1176 0552 C2030000 		.4byte	.LASF67
+ 1177 0556 5B050000 		.4byte	0x55b
+ 1178 055a 00       		.byte	0
+ 1179 055b 18       		.uleb128 0x18
+ 1180 055c 3B050000 		.4byte	0x53b
+ 1181 0560 19       		.uleb128 0x19
+ 1182 0561 F8000000 		.4byte	0xf8
+ 1183 0565 03       		.byte	0x3
+ 1184 0566 6E050000 		.4byte	0x56e
+ 1185 056a 78050000 		.4byte	0x578
+ 1186 056e 17       		.uleb128 0x17
+ 1187 056f C2030000 		.4byte	.LASF67
+ 1188 0573 78050000 		.4byte	0x578
+ 1189 0577 00       		.byte	0
+ 1190 0578 18       		.uleb128 0x18
+ 1191 0579 6F020000 		.4byte	0x26f
+ 1192 057d 1A       		.uleb128 0x1a
+ 1193 057e DD040000 		.4byte	.LASF83
+ 1194 0582 01       		.byte	0x1
+ 1195 0583 0F       		.byte	0xf
+ 1196 0584 95000000 		.4byte	.LASF84
+ 1197 0588 EA000000 		.4byte	0xea
+ 1198 058c 00000000 		.4byte	.LFB69
+ 1199 0590 08000000 		.4byte	.LFE69-.LFB69
+ 1200 0594 01       		.uleb128 0x1
+ 1201 0595 9C       		.byte	0x9c
+ 1202 0596 BB050000 		.4byte	0x5bb
+ 1203 059a 1B       		.uleb128 0x1b
+ 1204 059b 6F040000 		.4byte	.LASF70
+ 1205 059f 01       		.byte	0x1
+ 1206 05a0 0F       		.byte	0xf
+ 1207 05a1 D8000000 		.4byte	0xd8
+ 1208 05a5 00000000 		.4byte	.LLST0
+ 1209 05a9 1C       		.uleb128 0x1c
+ 1210 05aa 06000000 		.4byte	.LVL1
+ 1211 05ae D7090000 		.4byte	0x9d7
+ 1212 05b2 1D       		.uleb128 0x1d
+ 1213 05b3 01       		.uleb128 0x1
+ 1214 05b4 50       		.byte	0x50
+ 1215 05b5 03       		.uleb128 0x3
+ 1216 05b6 F3       		.byte	0xf3
+ 1217 05b7 01       		.uleb128 0x1
+ 1218 05b8 50       		.byte	0x50
+ 1219 05b9 00       		.byte	0
+ 1220 05ba 00       		.byte	0
+ 1221 05bb 1E       		.uleb128 0x1e
+ 1222 05bc 42040000 		.4byte	.LASF68
+ 1223 05c0 01       		.byte	0x1
+ 1224 05c1 13       		.byte	0x13
+ 1225 05c2 2E020000 		.4byte	.LASF69
+ 1226 05c6 00000000 		.4byte	.LFB70
+ 1227 05ca 08000000 		.4byte	.LFE70-.LFB70
+ 1228 05ce 01       		.uleb128 0x1
+ 1229 05cf 9C       		.byte	0x9c
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 26
+
+
+ 1230 05d0 F5050000 		.4byte	0x5f5
+ 1231 05d4 1F       		.uleb128 0x1f
+ 1232 05d5 70747200 		.ascii	"ptr\000"
+ 1233 05d9 01       		.byte	0x1
+ 1234 05da 13       		.byte	0x13
+ 1235 05db EA000000 		.4byte	0xea
+ 1236 05df 21000000 		.4byte	.LLST1
+ 1237 05e3 1C       		.uleb128 0x1c
+ 1238 05e4 06000000 		.4byte	.LVL3
+ 1239 05e8 E2090000 		.4byte	0x9e2
+ 1240 05ec 1D       		.uleb128 0x1d
+ 1241 05ed 01       		.uleb128 0x1
+ 1242 05ee 50       		.byte	0x50
+ 1243 05ef 03       		.uleb128 0x3
+ 1244 05f0 F3       		.byte	0xf3
+ 1245 05f1 01       		.uleb128 0x1
+ 1246 05f2 50       		.byte	0x50
+ 1247 05f3 00       		.byte	0
+ 1248 05f4 00       		.byte	0
+ 1249 05f5 16       		.uleb128 0x16
+ 1250 05f6 5C040000 		.4byte	0x45c
+ 1251 05fa 01       		.byte	0x1
+ 1252 05fb 26       		.byte	0x26
+ 1253 05fc 00       		.byte	0
+ 1254 05fd 05060000 		.4byte	0x605
+ 1255 0601 18060000 		.4byte	0x618
+ 1256 0605 17       		.uleb128 0x17
+ 1257 0606 C2030000 		.4byte	.LASF67
+ 1258 060a 18060000 		.4byte	0x618
+ 1259 060e 17       		.uleb128 0x17
+ 1260 060f B0030000 		.4byte	.LASF71
+ 1261 0613 1D060000 		.4byte	0x61d
+ 1262 0617 00       		.byte	0
+ 1263 0618 18       		.uleb128 0x18
+ 1264 0619 10050000 		.4byte	0x510
+ 1265 061d 18       		.uleb128 0x18
+ 1266 061e 89000000 		.4byte	0x89
+ 1267 0622 20       		.uleb128 0x20
+ 1268 0623 F5050000 		.4byte	0x5f5
+ 1269 0627 21020000 		.4byte	.LASF72
+ 1270 062b 00000000 		.4byte	.LFB81
+ 1271 062f 20000000 		.4byte	.LFE81-.LFB81
+ 1272 0633 01       		.uleb128 0x1
+ 1273 0634 9C       		.byte	0x9c
+ 1274 0635 3D060000 		.4byte	0x63d
+ 1275 0639 6B060000 		.4byte	0x66b
+ 1276 063d 21       		.uleb128 0x21
+ 1277 063e 05060000 		.4byte	0x605
+ 1278 0642 42000000 		.4byte	.LLST2
+ 1279 0646 22       		.uleb128 0x22
+ 1280 0647 0A000000 		.4byte	.LVL6
+ 1281 064b BB050000 		.4byte	0x5bb
+ 1282 064f 22       		.uleb128 0x22
+ 1283 0650 10000000 		.4byte	.LVL7
+ 1284 0654 BB050000 		.4byte	0x5bb
+ 1285 0658 22       		.uleb128 0x22
+ 1286 0659 16000000 		.4byte	.LVL8
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 27
+
+
+ 1287 065d BB050000 		.4byte	0x5bb
+ 1288 0661 22       		.uleb128 0x22
+ 1289 0662 1C000000 		.4byte	.LVL9
+ 1290 0666 BB050000 		.4byte	0x5bb
+ 1291 066a 00       		.byte	0
+ 1292 066b 23       		.uleb128 0x23
+ 1293 066c F4040000 		.4byte	0x4f4
+ 1294 0670 01       		.byte	0x1
+ 1295 0671 2E       		.byte	0x2e
+ 1296 0672 00000000 		.4byte	.LFB83
+ 1297 0676 4E000000 		.4byte	.LFE83-.LFB83
+ 1298 067a 01       		.uleb128 0x1
+ 1299 067b 9C       		.byte	0x9c
+ 1300 067c 84060000 		.4byte	0x684
+ 1301 0680 48070000 		.4byte	0x748
+ 1302 0684 24       		.uleb128 0x24
+ 1303 0685 C2030000 		.4byte	.LASF67
+ 1304 0689 18060000 		.4byte	0x618
+ 1305 068d 60000000 		.4byte	.LLST3
+ 1306 0691 25       		.uleb128 0x25
+ 1307 0692 10000000 		.4byte	.LVL12
+ 1308 0696 9B010000 		.4byte	0x19b
+ 1309 069a B0060000 		.4byte	0x6b0
+ 1310 069e 1D       		.uleb128 0x1d
+ 1311 069f 01       		.uleb128 0x1
+ 1312 06a0 51       		.byte	0x51
+ 1313 06a1 02       		.uleb128 0x2
+ 1314 06a2 08       		.byte	0x8
+ 1315 06a3 68       		.byte	0x68
+ 1316 06a4 1D       		.uleb128 0x1d
+ 1317 06a5 01       		.uleb128 0x1
+ 1318 06a6 52       		.byte	0x52
+ 1319 06a7 02       		.uleb128 0x2
+ 1320 06a8 08       		.byte	0x8
+ 1321 06a9 6B       		.byte	0x6b
+ 1322 06aa 1D       		.uleb128 0x1d
+ 1323 06ab 01       		.uleb128 0x1
+ 1324 06ac 53       		.byte	0x53
+ 1325 06ad 01       		.uleb128 0x1
+ 1326 06ae 30       		.byte	0x30
+ 1327 06af 00       		.byte	0
+ 1328 06b0 25       		.uleb128 0x25
+ 1329 06b1 1C000000 		.4byte	.LVL13
+ 1330 06b5 9B010000 		.4byte	0x19b
+ 1331 06b9 CF060000 		.4byte	0x6cf
+ 1332 06bd 1D       		.uleb128 0x1d
+ 1333 06be 01       		.uleb128 0x1
+ 1334 06bf 51       		.byte	0x51
+ 1335 06c0 02       		.uleb128 0x2
+ 1336 06c1 08       		.byte	0x8
+ 1337 06c2 68       		.byte	0x68
+ 1338 06c3 1D       		.uleb128 0x1d
+ 1339 06c4 01       		.uleb128 0x1
+ 1340 06c5 52       		.byte	0x52
+ 1341 06c6 01       		.uleb128 0x1
+ 1342 06c7 49       		.byte	0x49
+ 1343 06c8 1D       		.uleb128 0x1d
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 28
+
+
+ 1344 06c9 01       		.uleb128 0x1
+ 1345 06ca 53       		.byte	0x53
+ 1346 06cb 02       		.uleb128 0x2
+ 1347 06cc 08       		.byte	0x8
+ 1348 06cd 6D       		.byte	0x6d
+ 1349 06ce 00       		.byte	0
+ 1350 06cf 25       		.uleb128 0x25
+ 1351 06d0 28000000 		.4byte	.LVL14
+ 1352 06d4 9B010000 		.4byte	0x19b
+ 1353 06d8 ED060000 		.4byte	0x6ed
+ 1354 06dc 1D       		.uleb128 0x1d
+ 1355 06dd 01       		.uleb128 0x1
+ 1356 06de 51       		.byte	0x51
+ 1357 06df 02       		.uleb128 0x2
+ 1358 06e0 08       		.byte	0x8
+ 1359 06e1 68       		.byte	0x68
+ 1360 06e2 1D       		.uleb128 0x1d
+ 1361 06e3 01       		.uleb128 0x1
+ 1362 06e4 52       		.byte	0x52
+ 1363 06e5 01       		.uleb128 0x1
+ 1364 06e6 4B       		.byte	0x4b
+ 1365 06e7 1D       		.uleb128 0x1d
+ 1366 06e8 01       		.uleb128 0x1
+ 1367 06e9 53       		.byte	0x53
+ 1368 06ea 01       		.uleb128 0x1
+ 1369 06eb 48       		.byte	0x48
+ 1370 06ec 00       		.byte	0
+ 1371 06ed 25       		.uleb128 0x25
+ 1372 06ee 34000000 		.4byte	.LVL15
+ 1373 06f2 9B010000 		.4byte	0x19b
+ 1374 06f6 0D070000 		.4byte	0x70d
+ 1375 06fa 1D       		.uleb128 0x1d
+ 1376 06fb 01       		.uleb128 0x1
+ 1377 06fc 51       		.byte	0x51
+ 1378 06fd 02       		.uleb128 0x2
+ 1379 06fe 08       		.byte	0x8
+ 1380 06ff 68       		.byte	0x68
+ 1381 0700 1D       		.uleb128 0x1d
+ 1382 0701 01       		.uleb128 0x1
+ 1383 0702 52       		.byte	0x52
+ 1384 0703 02       		.uleb128 0x2
+ 1385 0704 08       		.byte	0x8
+ 1386 0705 6A       		.byte	0x6a
+ 1387 0706 1D       		.uleb128 0x1d
+ 1388 0707 01       		.uleb128 0x1
+ 1389 0708 53       		.byte	0x53
+ 1390 0709 02       		.uleb128 0x2
+ 1391 070a 08       		.byte	0x8
+ 1392 070b 20       		.byte	0x20
+ 1393 070c 00       		.byte	0
+ 1394 070d 25       		.uleb128 0x25
+ 1395 070e 40000000 		.4byte	.LVL16
+ 1396 0712 9B010000 		.4byte	0x19b
+ 1397 0716 2D070000 		.4byte	0x72d
+ 1398 071a 1D       		.uleb128 0x1d
+ 1399 071b 01       		.uleb128 0x1
+ 1400 071c 51       		.byte	0x51
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 29
+
+
+ 1401 071d 02       		.uleb128 0x2
+ 1402 071e 08       		.byte	0x8
+ 1403 071f 68       		.byte	0x68
+ 1404 0720 1D       		.uleb128 0x1d
+ 1405 0721 01       		.uleb128 0x1
+ 1406 0722 52       		.byte	0x52
+ 1407 0723 02       		.uleb128 0x2
+ 1408 0724 08       		.byte	0x8
+ 1409 0725 37       		.byte	0x37
+ 1410 0726 1D       		.uleb128 0x1d
+ 1411 0727 01       		.uleb128 0x1
+ 1412 0728 53       		.byte	0x53
+ 1413 0729 02       		.uleb128 0x2
+ 1414 072a 08       		.byte	0x8
+ 1415 072b 37       		.byte	0x37
+ 1416 072c 00       		.byte	0
+ 1417 072d 1C       		.uleb128 0x1c
+ 1418 072e 4C000000 		.4byte	.LVL17
+ 1419 0732 9B010000 		.4byte	0x19b
+ 1420 0736 1D       		.uleb128 0x1d
+ 1421 0737 01       		.uleb128 0x1
+ 1422 0738 51       		.byte	0x51
+ 1423 0739 02       		.uleb128 0x2
+ 1424 073a 08       		.byte	0x8
+ 1425 073b 68       		.byte	0x68
+ 1426 073c 1D       		.uleb128 0x1d
+ 1427 073d 01       		.uleb128 0x1
+ 1428 073e 52       		.byte	0x52
+ 1429 073f 01       		.uleb128 0x1
+ 1430 0740 4A       		.byte	0x4a
+ 1431 0741 1D       		.uleb128 0x1d
+ 1432 0742 01       		.uleb128 0x1
+ 1433 0743 53       		.byte	0x53
+ 1434 0744 01       		.uleb128 0x1
+ 1435 0745 36       		.byte	0x36
+ 1436 0746 00       		.byte	0
+ 1437 0747 00       		.byte	0
+ 1438 0748 16       		.uleb128 0x16
+ 1439 0749 3E040000 		.4byte	0x43e
+ 1440 074d 01       		.byte	0x1
+ 1441 074e 17       		.byte	0x17
+ 1442 074f 00       		.byte	0
+ 1443 0750 58070000 		.4byte	0x758
+ 1444 0754 62070000 		.4byte	0x762
+ 1445 0758 17       		.uleb128 0x17
+ 1446 0759 C2030000 		.4byte	.LASF67
+ 1447 075d 18060000 		.4byte	0x618
+ 1448 0761 00       		.byte	0
+ 1449 0762 20       		.uleb128 0x20
+ 1450 0763 48070000 		.4byte	0x748
+ 1451 0767 DE000000 		.4byte	.LASF73
+ 1452 076b 00000000 		.4byte	.LFB78
+ 1453 076f 62000000 		.4byte	.LFE78-.LFB78
+ 1454 0773 01       		.uleb128 0x1
+ 1455 0774 9C       		.byte	0x9c
+ 1456 0775 7D070000 		.4byte	0x77d
+ 1457 0779 33080000 		.4byte	0x833
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 30
+
+
+ 1458 077d 21       		.uleb128 0x21
+ 1459 077e 58070000 		.4byte	0x758
+ 1460 0782 7E000000 		.4byte	.LLST4
+ 1461 0786 26       		.uleb128 0x26
+ 1462 0787 41050000 		.4byte	0x541
+ 1463 078b 1E000000 		.4byte	.LBB13
+ 1464 078f 0C000000 		.4byte	.LBE13-.LBB13
+ 1465 0793 01       		.byte	0x1
+ 1466 0794 1C       		.byte	0x1c
+ 1467 0795 A3070000 		.4byte	0x7a3
+ 1468 0799 21       		.uleb128 0x21
+ 1469 079a 51050000 		.4byte	0x551
+ 1470 079e 9C000000 		.4byte	.LLST5
+ 1471 07a2 00       		.byte	0
+ 1472 07a3 26       		.uleb128 0x26
+ 1473 07a4 1C050000 		.4byte	0x51c
+ 1474 07a8 32000000 		.4byte	.LBB15
+ 1475 07ac 0C000000 		.4byte	.LBE15-.LBB15
+ 1476 07b0 01       		.byte	0x1
+ 1477 07b1 1D       		.byte	0x1d
+ 1478 07b2 C0070000 		.4byte	0x7c0
+ 1479 07b6 21       		.uleb128 0x21
+ 1480 07b7 2C050000 		.4byte	0x52c
+ 1481 07bb AF000000 		.4byte	.LLST6
+ 1482 07bf 00       		.byte	0
+ 1483 07c0 25       		.uleb128 0x25
+ 1484 07c1 16000000 		.4byte	.LVL20
+ 1485 07c5 7D050000 		.4byte	0x57d
+ 1486 07c9 D3070000 		.4byte	0x7d3
+ 1487 07cd 1D       		.uleb128 0x1d
+ 1488 07ce 01       		.uleb128 0x1
+ 1489 07cf 50       		.byte	0x50
+ 1490 07d0 01       		.uleb128 0x1
+ 1491 07d1 31       		.byte	0x31
+ 1492 07d2 00       		.byte	0
+ 1493 07d3 25       		.uleb128 0x25
+ 1494 07d4 1E000000 		.4byte	.LVL21
+ 1495 07d8 7D050000 		.4byte	0x57d
+ 1496 07dc E6070000 		.4byte	0x7e6
+ 1497 07e0 1D       		.uleb128 0x1d
+ 1498 07e1 01       		.uleb128 0x1
+ 1499 07e2 50       		.byte	0x50
+ 1500 07e3 01       		.uleb128 0x1
+ 1501 07e4 44       		.byte	0x44
+ 1502 07e5 00       		.byte	0
+ 1503 07e6 25       		.uleb128 0x25
+ 1504 07e7 32000000 		.4byte	.LVL23
+ 1505 07eb 7D050000 		.4byte	0x57d
+ 1506 07ef F9070000 		.4byte	0x7f9
+ 1507 07f3 1D       		.uleb128 0x1d
+ 1508 07f4 01       		.uleb128 0x1
+ 1509 07f5 50       		.byte	0x50
+ 1510 07f6 01       		.uleb128 0x1
+ 1511 07f7 44       		.byte	0x44
+ 1512 07f8 00       		.byte	0
+ 1513 07f9 25       		.uleb128 0x25
+ 1514 07fa 46000000 		.4byte	.LVL25
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 31
+
+
+ 1515 07fe 7D050000 		.4byte	0x57d
+ 1516 0802 0C080000 		.4byte	0x80c
+ 1517 0806 1D       		.uleb128 0x1d
+ 1518 0807 01       		.uleb128 0x1
+ 1519 0808 50       		.byte	0x50
+ 1520 0809 01       		.uleb128 0x1
+ 1521 080a 3C       		.byte	0x3c
+ 1522 080b 00       		.byte	0
+ 1523 080c 27       		.uleb128 0x27
+ 1524 080d 52000000 		.4byte	.LVL26
+ 1525 0811 22080000 		.4byte	0x822
+ 1526 0815 1D       		.uleb128 0x1d
+ 1527 0816 01       		.uleb128 0x1
+ 1528 0817 50       		.byte	0x50
+ 1529 0818 02       		.uleb128 0x2
+ 1530 0819 75       		.byte	0x75
+ 1531 081a 00       		.sleb128 0
+ 1532 081b 1D       		.uleb128 0x1d
+ 1533 081c 01       		.uleb128 0x1
+ 1534 081d 53       		.byte	0x53
+ 1535 081e 02       		.uleb128 0x2
+ 1536 081f 74       		.byte	0x74
+ 1537 0820 04       		.sleb128 4
+ 1538 0821 00       		.byte	0
+ 1539 0822 1C       		.uleb128 0x1c
+ 1540 0823 5E000000 		.4byte	.LVL27
+ 1541 0827 6B060000 		.4byte	0x66b
+ 1542 082b 1D       		.uleb128 0x1d
+ 1543 082c 01       		.uleb128 0x1
+ 1544 082d 50       		.byte	0x50
+ 1545 082e 02       		.uleb128 0x2
+ 1546 082f 74       		.byte	0x74
+ 1547 0830 00       		.sleb128 0
+ 1548 0831 00       		.byte	0
+ 1549 0832 00       		.byte	0
+ 1550 0833 28       		.uleb128 0x28
+ 1551 0834 9D040000 		.4byte	0x49d
+ 1552 0838 01       		.byte	0x1
+ 1553 0839 3B       		.byte	0x3b
+ 1554 083a 00000000 		.4byte	.LFB84
+ 1555 083e 88000000 		.4byte	.LFE84-.LFB84
+ 1556 0842 01       		.uleb128 0x1
+ 1557 0843 9C       		.byte	0x9c
+ 1558 0844 4C080000 		.4byte	0x84c
+ 1559 0848 8A080000 		.4byte	0x88a
+ 1560 084c 24       		.uleb128 0x24
+ 1561 084d C2030000 		.4byte	.LASF67
+ 1562 0851 18060000 		.4byte	0x618
+ 1563 0855 C2000000 		.4byte	.LLST7
+ 1564 0859 29       		.uleb128 0x29
+ 1565 085a C7030000 		.4byte	.LASF74
+ 1566 085e 01       		.byte	0x1
+ 1567 085f 3E       		.byte	0x3e
+ 1568 0860 8A080000 		.4byte	0x88a
+ 1569 0864 02       		.uleb128 0x2
+ 1570 0865 91       		.byte	0x91
+ 1571 0866 68       		.sleb128 -24
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 32
+
+
+ 1572 0867 1C       		.uleb128 0x1c
+ 1573 0868 16000000 		.4byte	.LVL30
+ 1574 086c 16010000 		.4byte	0x116
+ 1575 0870 1D       		.uleb128 0x1d
+ 1576 0871 01       		.uleb128 0x1
+ 1577 0872 51       		.byte	0x51
+ 1578 0873 02       		.uleb128 0x2
+ 1579 0874 08       		.byte	0x8
+ 1580 0875 68       		.byte	0x68
+ 1581 0876 1D       		.uleb128 0x1d
+ 1582 0877 01       		.uleb128 0x1
+ 1583 0878 52       		.byte	0x52
+ 1584 0879 02       		.uleb128 0x2
+ 1585 087a 08       		.byte	0x8
+ 1586 087b 3B       		.byte	0x3b
+ 1587 087c 1D       		.uleb128 0x1d
+ 1588 087d 01       		.uleb128 0x1
+ 1589 087e 53       		.byte	0x53
+ 1590 087f 01       		.uleb128 0x1
+ 1591 0880 36       		.byte	0x36
+ 1592 0881 1D       		.uleb128 0x1d
+ 1593 0882 02       		.uleb128 0x2
+ 1594 0883 7D       		.byte	0x7d
+ 1595 0884 00       		.sleb128 0
+ 1596 0885 02       		.uleb128 0x2
+ 1597 0886 91       		.byte	0x91
+ 1598 0887 68       		.sleb128 -24
+ 1599 0888 00       		.byte	0
+ 1600 0889 00       		.byte	0
+ 1601 088a 2A       		.uleb128 0x2a
+ 1602 088b 97000000 		.4byte	0x97
+ 1603 088f 9A080000 		.4byte	0x89a
+ 1604 0893 2B       		.uleb128 0x2b
+ 1605 0894 E3000000 		.4byte	0xe3
+ 1606 0898 05       		.byte	0x5
+ 1607 0899 00       		.byte	0
+ 1608 089a 28       		.uleb128 0x28
+ 1609 089b BA040000 		.4byte	0x4ba
+ 1610 089f 01       		.byte	0x1
+ 1611 08a0 50       		.byte	0x50
+ 1612 08a1 00000000 		.4byte	.LFB85
+ 1613 08a5 40000000 		.4byte	.LFE85-.LFB85
+ 1614 08a9 01       		.uleb128 0x1
+ 1615 08aa 9C       		.byte	0x9c
+ 1616 08ab B3080000 		.4byte	0x8b3
+ 1617 08af 00090000 		.4byte	0x900
+ 1618 08b3 24       		.uleb128 0x24
+ 1619 08b4 C2030000 		.4byte	.LASF67
+ 1620 08b8 18060000 		.4byte	0x618
+ 1621 08bc E0000000 		.4byte	.LLST8
+ 1622 08c0 29       		.uleb128 0x29
+ 1623 08c1 C7030000 		.4byte	.LASF74
+ 1624 08c5 01       		.byte	0x1
+ 1625 08c6 52       		.byte	0x52
+ 1626 08c7 00090000 		.4byte	0x900
+ 1627 08cb 02       		.uleb128 0x2
+ 1628 08cc 91       		.byte	0x91
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 33
+
+
+ 1629 08cd 74       		.sleb128 -12
+ 1630 08ce 2C       		.uleb128 0x2c
+ 1631 08cf C2040000 		.4byte	.LASF75
+ 1632 08d3 01       		.byte	0x1
+ 1633 08d4 53       		.byte	0x53
+ 1634 08d5 AD000000 		.4byte	0xad
+ 1635 08d9 0C010000 		.4byte	.LLST9
+ 1636 08dd 1C       		.uleb128 0x1c
+ 1637 08de 16000000 		.4byte	.LVL39
+ 1638 08e2 16010000 		.4byte	0x116
+ 1639 08e6 1D       		.uleb128 0x1d
+ 1640 08e7 01       		.uleb128 0x1
+ 1641 08e8 51       		.byte	0x51
+ 1642 08e9 02       		.uleb128 0x2
+ 1643 08ea 08       		.byte	0x8
+ 1644 08eb 68       		.byte	0x68
+ 1645 08ec 1D       		.uleb128 0x1d
+ 1646 08ed 01       		.uleb128 0x1
+ 1647 08ee 52       		.byte	0x52
+ 1648 08ef 02       		.uleb128 0x2
+ 1649 08f0 08       		.byte	0x8
+ 1650 08f1 41       		.byte	0x41
+ 1651 08f2 1D       		.uleb128 0x1d
+ 1652 08f3 01       		.uleb128 0x1
+ 1653 08f4 53       		.byte	0x53
+ 1654 08f5 01       		.uleb128 0x1
+ 1655 08f6 32       		.byte	0x32
+ 1656 08f7 1D       		.uleb128 0x1d
+ 1657 08f8 02       		.uleb128 0x2
+ 1658 08f9 7D       		.byte	0x7d
+ 1659 08fa 00       		.sleb128 0
+ 1660 08fb 02       		.uleb128 0x2
+ 1661 08fc 91       		.byte	0x91
+ 1662 08fd 74       		.sleb128 -12
+ 1663 08fe 00       		.byte	0
+ 1664 08ff 00       		.byte	0
+ 1665 0900 2A       		.uleb128 0x2a
+ 1666 0901 97000000 		.4byte	0x97
+ 1667 0905 10090000 		.4byte	0x910
+ 1668 0909 2B       		.uleb128 0x2b
+ 1669 090a E3000000 		.4byte	0xe3
+ 1670 090e 01       		.byte	0x1
+ 1671 090f 00       		.byte	0
+ 1672 0910 28       		.uleb128 0x28
+ 1673 0911 D7040000 		.4byte	0x4d7
+ 1674 0915 01       		.byte	0x1
+ 1675 0916 6B       		.byte	0x6b
+ 1676 0917 00000000 		.4byte	.LFB87
+ 1677 091b 88000000 		.4byte	.LFE87-.LFB87
+ 1678 091f 01       		.uleb128 0x1
+ 1679 0920 9C       		.byte	0x9c
+ 1680 0921 29090000 		.4byte	0x929
+ 1681 0925 67090000 		.4byte	0x967
+ 1682 0929 24       		.uleb128 0x24
+ 1683 092a C2030000 		.4byte	.LASF67
+ 1684 092e 18060000 		.4byte	0x618
+ 1685 0932 3D010000 		.4byte	.LLST10
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 34
+
+
+ 1686 0936 29       		.uleb128 0x29
+ 1687 0937 C7030000 		.4byte	.LASF74
+ 1688 093b 01       		.byte	0x1
+ 1689 093c 6E       		.byte	0x6e
+ 1690 093d 8A080000 		.4byte	0x88a
+ 1691 0941 02       		.uleb128 0x2
+ 1692 0942 91       		.byte	0x91
+ 1693 0943 68       		.sleb128 -24
+ 1694 0944 1C       		.uleb128 0x1c
+ 1695 0945 16000000 		.4byte	.LVL48
+ 1696 0949 16010000 		.4byte	0x116
+ 1697 094d 1D       		.uleb128 0x1d
+ 1698 094e 01       		.uleb128 0x1
+ 1699 094f 51       		.byte	0x51
+ 1700 0950 02       		.uleb128 0x2
+ 1701 0951 08       		.byte	0x8
+ 1702 0952 68       		.byte	0x68
+ 1703 0953 1D       		.uleb128 0x1d
+ 1704 0954 01       		.uleb128 0x1
+ 1705 0955 52       		.byte	0x52
+ 1706 0956 02       		.uleb128 0x2
+ 1707 0957 08       		.byte	0x8
+ 1708 0958 43       		.byte	0x43
+ 1709 0959 1D       		.uleb128 0x1d
+ 1710 095a 01       		.uleb128 0x1
+ 1711 095b 53       		.byte	0x53
+ 1712 095c 01       		.uleb128 0x1
+ 1713 095d 36       		.byte	0x36
+ 1714 095e 1D       		.uleb128 0x1d
+ 1715 095f 02       		.uleb128 0x2
+ 1716 0960 7D       		.byte	0x7d
+ 1717 0961 00       		.sleb128 0
+ 1718 0962 02       		.uleb128 0x2
+ 1719 0963 91       		.byte	0x91
+ 1720 0964 68       		.sleb128 -24
+ 1721 0965 00       		.byte	0
+ 1722 0966 00       		.byte	0
+ 1723 0967 23       		.uleb128 0x23
+ 1724 0968 7F040000 		.4byte	0x47f
+ 1725 096c 01       		.byte	0x1
+ 1726 096d 60       		.byte	0x60
+ 1727 096e 00000000 		.4byte	.LFB86
+ 1728 0972 18000000 		.4byte	.LFE86-.LFB86
+ 1729 0976 01       		.uleb128 0x1
+ 1730 0977 9C       		.byte	0x9c
+ 1731 0978 80090000 		.4byte	0x980
+ 1732 097c C6090000 		.4byte	0x9c6
+ 1733 0980 24       		.uleb128 0x24
+ 1734 0981 C2030000 		.4byte	.LASF67
+ 1735 0985 18060000 		.4byte	0x618
+ 1736 0989 69010000 		.4byte	.LLST11
+ 1737 098d 25       		.uleb128 0x25
+ 1738 098e 08000000 		.4byte	.LVL57
+ 1739 0992 33080000 		.4byte	0x833
+ 1740 0996 A1090000 		.4byte	0x9a1
+ 1741 099a 1D       		.uleb128 0x1d
+ 1742 099b 01       		.uleb128 0x1
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 35
+
+
+ 1743 099c 50       		.byte	0x50
+ 1744 099d 02       		.uleb128 0x2
+ 1745 099e 74       		.byte	0x74
+ 1746 099f 00       		.sleb128 0
+ 1747 09a0 00       		.byte	0
+ 1748 09a1 25       		.uleb128 0x25
+ 1749 09a2 0E000000 		.4byte	.LVL58
+ 1750 09a6 9A080000 		.4byte	0x89a
+ 1751 09aa B5090000 		.4byte	0x9b5
+ 1752 09ae 1D       		.uleb128 0x1d
+ 1753 09af 01       		.uleb128 0x1
+ 1754 09b0 50       		.byte	0x50
+ 1755 09b1 02       		.uleb128 0x2
+ 1756 09b2 74       		.byte	0x74
+ 1757 09b3 00       		.sleb128 0
+ 1758 09b4 00       		.byte	0
+ 1759 09b5 1C       		.uleb128 0x1c
+ 1760 09b6 14000000 		.4byte	.LVL59
+ 1761 09ba 10090000 		.4byte	0x910
+ 1762 09be 1D       		.uleb128 0x1d
+ 1763 09bf 01       		.uleb128 0x1
+ 1764 09c0 50       		.byte	0x50
+ 1765 09c1 02       		.uleb128 0x2
+ 1766 09c2 74       		.byte	0x74
+ 1767 09c3 00       		.sleb128 0
+ 1768 09c4 00       		.byte	0
+ 1769 09c5 00       		.byte	0
+ 1770 09c6 2D       		.uleb128 0x2d
+ 1771 09c7 EA040000 		.4byte	.LASF85
+ 1772 09cb 09       		.byte	0x9
+ 1773 09cc 1207     		.2byte	0x712
+ 1774 09ce D2090000 		.4byte	0x9d2
+ 1775 09d2 2E       		.uleb128 0x2e
+ 1776 09d3 B8000000 		.4byte	0xb8
+ 1777 09d7 2F       		.uleb128 0x2f
+ 1778 09d8 5A000000 		.4byte	.LASF76
+ 1779 09dc 5A000000 		.4byte	.LASF76
+ 1780 09e0 08       		.byte	0x8
+ 1781 09e1 64       		.byte	0x64
+ 1782 09e2 2F       		.uleb128 0x2f
+ 1783 09e3 2D010000 		.4byte	.LASF77
+ 1784 09e7 2D010000 		.4byte	.LASF77
+ 1785 09eb 08       		.byte	0x8
+ 1786 09ec 59       		.byte	0x59
+ 1787 09ed 00       		.byte	0
+ 1788              		.section	.debug_abbrev,"",%progbits
+ 1789              	.Ldebug_abbrev0:
+ 1790 0000 01       		.uleb128 0x1
+ 1791 0001 11       		.uleb128 0x11
+ 1792 0002 01       		.byte	0x1
+ 1793 0003 25       		.uleb128 0x25
+ 1794 0004 0E       		.uleb128 0xe
+ 1795 0005 13       		.uleb128 0x13
+ 1796 0006 0B       		.uleb128 0xb
+ 1797 0007 03       		.uleb128 0x3
+ 1798 0008 0E       		.uleb128 0xe
+ 1799 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 36
+
+
+ 1800 000a 0E       		.uleb128 0xe
+ 1801 000b 55       		.uleb128 0x55
+ 1802 000c 17       		.uleb128 0x17
+ 1803 000d 11       		.uleb128 0x11
+ 1804 000e 01       		.uleb128 0x1
+ 1805 000f 10       		.uleb128 0x10
+ 1806 0010 17       		.uleb128 0x17
+ 1807 0011 00       		.byte	0
+ 1808 0012 00       		.byte	0
+ 1809 0013 02       		.uleb128 0x2
+ 1810 0014 24       		.uleb128 0x24
+ 1811 0015 00       		.byte	0
+ 1812 0016 0B       		.uleb128 0xb
+ 1813 0017 0B       		.uleb128 0xb
+ 1814 0018 3E       		.uleb128 0x3e
+ 1815 0019 0B       		.uleb128 0xb
+ 1816 001a 03       		.uleb128 0x3
+ 1817 001b 0E       		.uleb128 0xe
+ 1818 001c 00       		.byte	0
+ 1819 001d 00       		.byte	0
+ 1820 001e 03       		.uleb128 0x3
+ 1821 001f 16       		.uleb128 0x16
+ 1822 0020 00       		.byte	0
+ 1823 0021 03       		.uleb128 0x3
+ 1824 0022 0E       		.uleb128 0xe
+ 1825 0023 3A       		.uleb128 0x3a
+ 1826 0024 0B       		.uleb128 0xb
+ 1827 0025 3B       		.uleb128 0x3b
+ 1828 0026 0B       		.uleb128 0xb
+ 1829 0027 49       		.uleb128 0x49
+ 1830 0028 13       		.uleb128 0x13
+ 1831 0029 00       		.byte	0
+ 1832 002a 00       		.byte	0
+ 1833 002b 04       		.uleb128 0x4
+ 1834 002c 24       		.uleb128 0x24
+ 1835 002d 00       		.byte	0
+ 1836 002e 0B       		.uleb128 0xb
+ 1837 002f 0B       		.uleb128 0xb
+ 1838 0030 3E       		.uleb128 0x3e
+ 1839 0031 0B       		.uleb128 0xb
+ 1840 0032 03       		.uleb128 0x3
+ 1841 0033 08       		.uleb128 0x8
+ 1842 0034 00       		.byte	0
+ 1843 0035 00       		.byte	0
+ 1844 0036 05       		.uleb128 0x5
+ 1845 0037 0F       		.uleb128 0xf
+ 1846 0038 00       		.byte	0
+ 1847 0039 0B       		.uleb128 0xb
+ 1848 003a 0B       		.uleb128 0xb
+ 1849 003b 00       		.byte	0
+ 1850 003c 00       		.byte	0
+ 1851 003d 06       		.uleb128 0x6
+ 1852 003e 02       		.uleb128 0x2
+ 1853 003f 01       		.byte	0x1
+ 1854 0040 03       		.uleb128 0x3
+ 1855 0041 08       		.uleb128 0x8
+ 1856 0042 0B       		.uleb128 0xb
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 37
+
+
+ 1857 0043 0B       		.uleb128 0xb
+ 1858 0044 3A       		.uleb128 0x3a
+ 1859 0045 0B       		.uleb128 0xb
+ 1860 0046 3B       		.uleb128 0x3b
+ 1861 0047 0B       		.uleb128 0xb
+ 1862 0048 01       		.uleb128 0x1
+ 1863 0049 13       		.uleb128 0x13
+ 1864 004a 00       		.byte	0
+ 1865 004b 00       		.byte	0
+ 1866 004c 07       		.uleb128 0x7
+ 1867 004d 2E       		.uleb128 0x2e
+ 1868 004e 01       		.byte	0x1
+ 1869 004f 3F       		.uleb128 0x3f
+ 1870 0050 19       		.uleb128 0x19
+ 1871 0051 03       		.uleb128 0x3
+ 1872 0052 08       		.uleb128 0x8
+ 1873 0053 3A       		.uleb128 0x3a
+ 1874 0054 0B       		.uleb128 0xb
+ 1875 0055 3B       		.uleb128 0x3b
+ 1876 0056 0B       		.uleb128 0xb
+ 1877 0057 6E       		.uleb128 0x6e
+ 1878 0058 0E       		.uleb128 0xe
+ 1879 0059 49       		.uleb128 0x49
+ 1880 005a 13       		.uleb128 0x13
+ 1881 005b 32       		.uleb128 0x32
+ 1882 005c 0B       		.uleb128 0xb
+ 1883 005d 3C       		.uleb128 0x3c
+ 1884 005e 19       		.uleb128 0x19
+ 1885 005f 64       		.uleb128 0x64
+ 1886 0060 13       		.uleb128 0x13
+ 1887 0061 01       		.uleb128 0x1
+ 1888 0062 13       		.uleb128 0x13
+ 1889 0063 00       		.byte	0
+ 1890 0064 00       		.byte	0
+ 1891 0065 08       		.uleb128 0x8
+ 1892 0066 05       		.uleb128 0x5
+ 1893 0067 00       		.byte	0
+ 1894 0068 49       		.uleb128 0x49
+ 1895 0069 13       		.uleb128 0x13
+ 1896 006a 34       		.uleb128 0x34
+ 1897 006b 19       		.uleb128 0x19
+ 1898 006c 00       		.byte	0
+ 1899 006d 00       		.byte	0
+ 1900 006e 09       		.uleb128 0x9
+ 1901 006f 2E       		.uleb128 0x2e
+ 1902 0070 01       		.byte	0x1
+ 1903 0071 3F       		.uleb128 0x3f
+ 1904 0072 19       		.uleb128 0x19
+ 1905 0073 03       		.uleb128 0x3
+ 1906 0074 0E       		.uleb128 0xe
+ 1907 0075 3A       		.uleb128 0x3a
+ 1908 0076 0B       		.uleb128 0xb
+ 1909 0077 3B       		.uleb128 0x3b
+ 1910 0078 0B       		.uleb128 0xb
+ 1911 0079 6E       		.uleb128 0x6e
+ 1912 007a 0E       		.uleb128 0xe
+ 1913 007b 32       		.uleb128 0x32
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 38
+
+
+ 1914 007c 0B       		.uleb128 0xb
+ 1915 007d 3C       		.uleb128 0x3c
+ 1916 007e 19       		.uleb128 0x19
+ 1917 007f 64       		.uleb128 0x64
+ 1918 0080 13       		.uleb128 0x13
+ 1919 0081 01       		.uleb128 0x1
+ 1920 0082 13       		.uleb128 0x13
+ 1921 0083 00       		.byte	0
+ 1922 0084 00       		.byte	0
+ 1923 0085 0A       		.uleb128 0xa
+ 1924 0086 05       		.uleb128 0x5
+ 1925 0087 00       		.byte	0
+ 1926 0088 49       		.uleb128 0x49
+ 1927 0089 13       		.uleb128 0x13
+ 1928 008a 00       		.byte	0
+ 1929 008b 00       		.byte	0
+ 1930 008c 0B       		.uleb128 0xb
+ 1931 008d 2E       		.uleb128 0x2e
+ 1932 008e 01       		.byte	0x1
+ 1933 008f 3F       		.uleb128 0x3f
+ 1934 0090 19       		.uleb128 0x19
+ 1935 0091 03       		.uleb128 0x3
+ 1936 0092 0E       		.uleb128 0xe
+ 1937 0093 3A       		.uleb128 0x3a
+ 1938 0094 0B       		.uleb128 0xb
+ 1939 0095 3B       		.uleb128 0x3b
+ 1940 0096 0B       		.uleb128 0xb
+ 1941 0097 6E       		.uleb128 0x6e
+ 1942 0098 0E       		.uleb128 0xe
+ 1943 0099 32       		.uleb128 0x32
+ 1944 009a 0B       		.uleb128 0xb
+ 1945 009b 3C       		.uleb128 0x3c
+ 1946 009c 19       		.uleb128 0x19
+ 1947 009d 64       		.uleb128 0x64
+ 1948 009e 13       		.uleb128 0x13
+ 1949 009f 00       		.byte	0
+ 1950 00a0 00       		.byte	0
+ 1951 00a1 0C       		.uleb128 0xc
+ 1952 00a2 0F       		.uleb128 0xf
+ 1953 00a3 00       		.byte	0
+ 1954 00a4 0B       		.uleb128 0xb
+ 1955 00a5 0B       		.uleb128 0xb
+ 1956 00a6 49       		.uleb128 0x49
+ 1957 00a7 13       		.uleb128 0x13
+ 1958 00a8 00       		.byte	0
+ 1959 00a9 00       		.byte	0
+ 1960 00aa 0D       		.uleb128 0xd
+ 1961 00ab 13       		.uleb128 0x13
+ 1962 00ac 01       		.byte	0x1
+ 1963 00ad 03       		.uleb128 0x3
+ 1964 00ae 0E       		.uleb128 0xe
+ 1965 00af 0B       		.uleb128 0xb
+ 1966 00b0 0B       		.uleb128 0xb
+ 1967 00b1 3A       		.uleb128 0x3a
+ 1968 00b2 0B       		.uleb128 0xb
+ 1969 00b3 3B       		.uleb128 0x3b
+ 1970 00b4 0B       		.uleb128 0xb
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 39
+
+
+ 1971 00b5 01       		.uleb128 0x1
+ 1972 00b6 13       		.uleb128 0x13
+ 1973 00b7 00       		.byte	0
+ 1974 00b8 00       		.byte	0
+ 1975 00b9 0E       		.uleb128 0xe
+ 1976 00ba 0D       		.uleb128 0xd
+ 1977 00bb 00       		.byte	0
+ 1978 00bc 03       		.uleb128 0x3
+ 1979 00bd 08       		.uleb128 0x8
+ 1980 00be 3A       		.uleb128 0x3a
+ 1981 00bf 0B       		.uleb128 0xb
+ 1982 00c0 3B       		.uleb128 0x3b
+ 1983 00c1 0B       		.uleb128 0xb
+ 1984 00c2 49       		.uleb128 0x49
+ 1985 00c3 13       		.uleb128 0x13
+ 1986 00c4 38       		.uleb128 0x38
+ 1987 00c5 0B       		.uleb128 0xb
+ 1988 00c6 00       		.byte	0
+ 1989 00c7 00       		.byte	0
+ 1990 00c8 0F       		.uleb128 0xf
+ 1991 00c9 0D       		.uleb128 0xd
+ 1992 00ca 00       		.byte	0
+ 1993 00cb 03       		.uleb128 0x3
+ 1994 00cc 0E       		.uleb128 0xe
+ 1995 00cd 3A       		.uleb128 0x3a
+ 1996 00ce 0B       		.uleb128 0xb
+ 1997 00cf 3B       		.uleb128 0x3b
+ 1998 00d0 0B       		.uleb128 0xb
+ 1999 00d1 49       		.uleb128 0x49
+ 2000 00d2 13       		.uleb128 0x13
+ 2001 00d3 38       		.uleb128 0x38
+ 2002 00d4 0B       		.uleb128 0xb
+ 2003 00d5 00       		.byte	0
+ 2004 00d6 00       		.byte	0
+ 2005 00d7 10       		.uleb128 0x10
+ 2006 00d8 2E       		.uleb128 0x2e
+ 2007 00d9 01       		.byte	0x1
+ 2008 00da 3F       		.uleb128 0x3f
+ 2009 00db 19       		.uleb128 0x19
+ 2010 00dc 03       		.uleb128 0x3
+ 2011 00dd 0E       		.uleb128 0xe
+ 2012 00de 6E       		.uleb128 0x6e
+ 2013 00df 0E       		.uleb128 0xe
+ 2014 00e0 49       		.uleb128 0x49
+ 2015 00e1 13       		.uleb128 0x13
+ 2016 00e2 34       		.uleb128 0x34
+ 2017 00e3 19       		.uleb128 0x19
+ 2018 00e4 3C       		.uleb128 0x3c
+ 2019 00e5 19       		.uleb128 0x19
+ 2020 00e6 64       		.uleb128 0x64
+ 2021 00e7 13       		.uleb128 0x13
+ 2022 00e8 00       		.byte	0
+ 2023 00e9 00       		.byte	0
+ 2024 00ea 11       		.uleb128 0x11
+ 2025 00eb 2E       		.uleb128 0x2e
+ 2026 00ec 01       		.byte	0x1
+ 2027 00ed 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 40
+
+
+ 2028 00ee 19       		.uleb128 0x19
+ 2029 00ef 03       		.uleb128 0x3
+ 2030 00f0 0E       		.uleb128 0xe
+ 2031 00f1 3A       		.uleb128 0x3a
+ 2032 00f2 0B       		.uleb128 0xb
+ 2033 00f3 3B       		.uleb128 0x3b
+ 2034 00f4 0B       		.uleb128 0xb
+ 2035 00f5 6E       		.uleb128 0x6e
+ 2036 00f6 0E       		.uleb128 0xe
+ 2037 00f7 49       		.uleb128 0x49
+ 2038 00f8 13       		.uleb128 0x13
+ 2039 00f9 3C       		.uleb128 0x3c
+ 2040 00fa 19       		.uleb128 0x19
+ 2041 00fb 64       		.uleb128 0x64
+ 2042 00fc 13       		.uleb128 0x13
+ 2043 00fd 01       		.uleb128 0x1
+ 2044 00fe 13       		.uleb128 0x13
+ 2045 00ff 00       		.byte	0
+ 2046 0100 00       		.byte	0
+ 2047 0101 12       		.uleb128 0x12
+ 2048 0102 2E       		.uleb128 0x2e
+ 2049 0103 01       		.byte	0x1
+ 2050 0104 3F       		.uleb128 0x3f
+ 2051 0105 19       		.uleb128 0x19
+ 2052 0106 03       		.uleb128 0x3
+ 2053 0107 0E       		.uleb128 0xe
+ 2054 0108 3A       		.uleb128 0x3a
+ 2055 0109 0B       		.uleb128 0xb
+ 2056 010a 3B       		.uleb128 0x3b
+ 2057 010b 0B       		.uleb128 0xb
+ 2058 010c 6E       		.uleb128 0x6e
+ 2059 010d 0E       		.uleb128 0xe
+ 2060 010e 49       		.uleb128 0x49
+ 2061 010f 13       		.uleb128 0x13
+ 2062 0110 3C       		.uleb128 0x3c
+ 2063 0111 19       		.uleb128 0x19
+ 2064 0112 64       		.uleb128 0x64
+ 2065 0113 13       		.uleb128 0x13
+ 2066 0114 00       		.byte	0
+ 2067 0115 00       		.byte	0
+ 2068 0116 13       		.uleb128 0x13
+ 2069 0117 02       		.uleb128 0x2
+ 2070 0118 01       		.byte	0x1
+ 2071 0119 03       		.uleb128 0x3
+ 2072 011a 0E       		.uleb128 0xe
+ 2073 011b 0B       		.uleb128 0xb
+ 2074 011c 0B       		.uleb128 0xb
+ 2075 011d 3A       		.uleb128 0x3a
+ 2076 011e 0B       		.uleb128 0xb
+ 2077 011f 3B       		.uleb128 0x3b
+ 2078 0120 0B       		.uleb128 0xb
+ 2079 0121 01       		.uleb128 0x1
+ 2080 0122 13       		.uleb128 0x13
+ 2081 0123 00       		.byte	0
+ 2082 0124 00       		.byte	0
+ 2083 0125 14       		.uleb128 0x14
+ 2084 0126 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 41
+
+
+ 2085 0127 01       		.byte	0x1
+ 2086 0128 3F       		.uleb128 0x3f
+ 2087 0129 19       		.uleb128 0x19
+ 2088 012a 03       		.uleb128 0x3
+ 2089 012b 0E       		.uleb128 0xe
+ 2090 012c 3A       		.uleb128 0x3a
+ 2091 012d 0B       		.uleb128 0xb
+ 2092 012e 3B       		.uleb128 0x3b
+ 2093 012f 0B       		.uleb128 0xb
+ 2094 0130 6E       		.uleb128 0x6e
+ 2095 0131 0E       		.uleb128 0xe
+ 2096 0132 49       		.uleb128 0x49
+ 2097 0133 13       		.uleb128 0x13
+ 2098 0134 32       		.uleb128 0x32
+ 2099 0135 0B       		.uleb128 0xb
+ 2100 0136 3C       		.uleb128 0x3c
+ 2101 0137 19       		.uleb128 0x19
+ 2102 0138 64       		.uleb128 0x64
+ 2103 0139 13       		.uleb128 0x13
+ 2104 013a 01       		.uleb128 0x1
+ 2105 013b 13       		.uleb128 0x13
+ 2106 013c 00       		.byte	0
+ 2107 013d 00       		.byte	0
+ 2108 013e 15       		.uleb128 0x15
+ 2109 013f 2E       		.uleb128 0x2e
+ 2110 0140 01       		.byte	0x1
+ 2111 0141 3F       		.uleb128 0x3f
+ 2112 0142 19       		.uleb128 0x19
+ 2113 0143 03       		.uleb128 0x3
+ 2114 0144 0E       		.uleb128 0xe
+ 2115 0145 3A       		.uleb128 0x3a
+ 2116 0146 0B       		.uleb128 0xb
+ 2117 0147 3B       		.uleb128 0x3b
+ 2118 0148 0B       		.uleb128 0xb
+ 2119 0149 6E       		.uleb128 0x6e
+ 2120 014a 0E       		.uleb128 0xe
+ 2121 014b 3C       		.uleb128 0x3c
+ 2122 014c 19       		.uleb128 0x19
+ 2123 014d 64       		.uleb128 0x64
+ 2124 014e 13       		.uleb128 0x13
+ 2125 014f 00       		.byte	0
+ 2126 0150 00       		.byte	0
+ 2127 0151 16       		.uleb128 0x16
+ 2128 0152 2E       		.uleb128 0x2e
+ 2129 0153 01       		.byte	0x1
+ 2130 0154 47       		.uleb128 0x47
+ 2131 0155 13       		.uleb128 0x13
+ 2132 0156 3A       		.uleb128 0x3a
+ 2133 0157 0B       		.uleb128 0xb
+ 2134 0158 3B       		.uleb128 0x3b
+ 2135 0159 0B       		.uleb128 0xb
+ 2136 015a 20       		.uleb128 0x20
+ 2137 015b 0B       		.uleb128 0xb
+ 2138 015c 64       		.uleb128 0x64
+ 2139 015d 13       		.uleb128 0x13
+ 2140 015e 01       		.uleb128 0x1
+ 2141 015f 13       		.uleb128 0x13
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 42
+
+
+ 2142 0160 00       		.byte	0
+ 2143 0161 00       		.byte	0
+ 2144 0162 17       		.uleb128 0x17
+ 2145 0163 05       		.uleb128 0x5
+ 2146 0164 00       		.byte	0
+ 2147 0165 03       		.uleb128 0x3
+ 2148 0166 0E       		.uleb128 0xe
+ 2149 0167 49       		.uleb128 0x49
+ 2150 0168 13       		.uleb128 0x13
+ 2151 0169 34       		.uleb128 0x34
+ 2152 016a 19       		.uleb128 0x19
+ 2153 016b 00       		.byte	0
+ 2154 016c 00       		.byte	0
+ 2155 016d 18       		.uleb128 0x18
+ 2156 016e 26       		.uleb128 0x26
+ 2157 016f 00       		.byte	0
+ 2158 0170 49       		.uleb128 0x49
+ 2159 0171 13       		.uleb128 0x13
+ 2160 0172 00       		.byte	0
+ 2161 0173 00       		.byte	0
+ 2162 0174 19       		.uleb128 0x19
+ 2163 0175 2E       		.uleb128 0x2e
+ 2164 0176 01       		.byte	0x1
+ 2165 0177 47       		.uleb128 0x47
+ 2166 0178 13       		.uleb128 0x13
+ 2167 0179 20       		.uleb128 0x20
+ 2168 017a 0B       		.uleb128 0xb
+ 2169 017b 64       		.uleb128 0x64
+ 2170 017c 13       		.uleb128 0x13
+ 2171 017d 01       		.uleb128 0x1
+ 2172 017e 13       		.uleb128 0x13
+ 2173 017f 00       		.byte	0
+ 2174 0180 00       		.byte	0
+ 2175 0181 1A       		.uleb128 0x1a
+ 2176 0182 2E       		.uleb128 0x2e
+ 2177 0183 01       		.byte	0x1
+ 2178 0184 3F       		.uleb128 0x3f
+ 2179 0185 19       		.uleb128 0x19
+ 2180 0186 03       		.uleb128 0x3
+ 2181 0187 0E       		.uleb128 0xe
+ 2182 0188 3A       		.uleb128 0x3a
+ 2183 0189 0B       		.uleb128 0xb
+ 2184 018a 3B       		.uleb128 0x3b
+ 2185 018b 0B       		.uleb128 0xb
+ 2186 018c 6E       		.uleb128 0x6e
+ 2187 018d 0E       		.uleb128 0xe
+ 2188 018e 49       		.uleb128 0x49
+ 2189 018f 13       		.uleb128 0x13
+ 2190 0190 11       		.uleb128 0x11
+ 2191 0191 01       		.uleb128 0x1
+ 2192 0192 12       		.uleb128 0x12
+ 2193 0193 06       		.uleb128 0x6
+ 2194 0194 40       		.uleb128 0x40
+ 2195 0195 18       		.uleb128 0x18
+ 2196 0196 9742     		.uleb128 0x2117
+ 2197 0198 19       		.uleb128 0x19
+ 2198 0199 01       		.uleb128 0x1
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 43
+
+
+ 2199 019a 13       		.uleb128 0x13
+ 2200 019b 00       		.byte	0
+ 2201 019c 00       		.byte	0
+ 2202 019d 1B       		.uleb128 0x1b
+ 2203 019e 05       		.uleb128 0x5
+ 2204 019f 00       		.byte	0
+ 2205 01a0 03       		.uleb128 0x3
+ 2206 01a1 0E       		.uleb128 0xe
+ 2207 01a2 3A       		.uleb128 0x3a
+ 2208 01a3 0B       		.uleb128 0xb
+ 2209 01a4 3B       		.uleb128 0x3b
+ 2210 01a5 0B       		.uleb128 0xb
+ 2211 01a6 49       		.uleb128 0x49
+ 2212 01a7 13       		.uleb128 0x13
+ 2213 01a8 02       		.uleb128 0x2
+ 2214 01a9 17       		.uleb128 0x17
+ 2215 01aa 00       		.byte	0
+ 2216 01ab 00       		.byte	0
+ 2217 01ac 1C       		.uleb128 0x1c
+ 2218 01ad 898201   		.uleb128 0x4109
+ 2219 01b0 01       		.byte	0x1
+ 2220 01b1 11       		.uleb128 0x11
+ 2221 01b2 01       		.uleb128 0x1
+ 2222 01b3 31       		.uleb128 0x31
+ 2223 01b4 13       		.uleb128 0x13
+ 2224 01b5 00       		.byte	0
+ 2225 01b6 00       		.byte	0
+ 2226 01b7 1D       		.uleb128 0x1d
+ 2227 01b8 8A8201   		.uleb128 0x410a
+ 2228 01bb 00       		.byte	0
+ 2229 01bc 02       		.uleb128 0x2
+ 2230 01bd 18       		.uleb128 0x18
+ 2231 01be 9142     		.uleb128 0x2111
+ 2232 01c0 18       		.uleb128 0x18
+ 2233 01c1 00       		.byte	0
+ 2234 01c2 00       		.byte	0
+ 2235 01c3 1E       		.uleb128 0x1e
+ 2236 01c4 2E       		.uleb128 0x2e
+ 2237 01c5 01       		.byte	0x1
+ 2238 01c6 3F       		.uleb128 0x3f
+ 2239 01c7 19       		.uleb128 0x19
+ 2240 01c8 03       		.uleb128 0x3
+ 2241 01c9 0E       		.uleb128 0xe
+ 2242 01ca 3A       		.uleb128 0x3a
+ 2243 01cb 0B       		.uleb128 0xb
+ 2244 01cc 3B       		.uleb128 0x3b
+ 2245 01cd 0B       		.uleb128 0xb
+ 2246 01ce 6E       		.uleb128 0x6e
+ 2247 01cf 0E       		.uleb128 0xe
+ 2248 01d0 11       		.uleb128 0x11
+ 2249 01d1 01       		.uleb128 0x1
+ 2250 01d2 12       		.uleb128 0x12
+ 2251 01d3 06       		.uleb128 0x6
+ 2252 01d4 40       		.uleb128 0x40
+ 2253 01d5 18       		.uleb128 0x18
+ 2254 01d6 9742     		.uleb128 0x2117
+ 2255 01d8 19       		.uleb128 0x19
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 44
+
+
+ 2256 01d9 01       		.uleb128 0x1
+ 2257 01da 13       		.uleb128 0x13
+ 2258 01db 00       		.byte	0
+ 2259 01dc 00       		.byte	0
+ 2260 01dd 1F       		.uleb128 0x1f
+ 2261 01de 05       		.uleb128 0x5
+ 2262 01df 00       		.byte	0
+ 2263 01e0 03       		.uleb128 0x3
+ 2264 01e1 08       		.uleb128 0x8
+ 2265 01e2 3A       		.uleb128 0x3a
+ 2266 01e3 0B       		.uleb128 0xb
+ 2267 01e4 3B       		.uleb128 0x3b
+ 2268 01e5 0B       		.uleb128 0xb
+ 2269 01e6 49       		.uleb128 0x49
+ 2270 01e7 13       		.uleb128 0x13
+ 2271 01e8 02       		.uleb128 0x2
+ 2272 01e9 17       		.uleb128 0x17
+ 2273 01ea 00       		.byte	0
+ 2274 01eb 00       		.byte	0
+ 2275 01ec 20       		.uleb128 0x20
+ 2276 01ed 2E       		.uleb128 0x2e
+ 2277 01ee 01       		.byte	0x1
+ 2278 01ef 31       		.uleb128 0x31
+ 2279 01f0 13       		.uleb128 0x13
+ 2280 01f1 6E       		.uleb128 0x6e
+ 2281 01f2 0E       		.uleb128 0xe
+ 2282 01f3 11       		.uleb128 0x11
+ 2283 01f4 01       		.uleb128 0x1
+ 2284 01f5 12       		.uleb128 0x12
+ 2285 01f6 06       		.uleb128 0x6
+ 2286 01f7 40       		.uleb128 0x40
+ 2287 01f8 18       		.uleb128 0x18
+ 2288 01f9 64       		.uleb128 0x64
+ 2289 01fa 13       		.uleb128 0x13
+ 2290 01fb 9742     		.uleb128 0x2117
+ 2291 01fd 19       		.uleb128 0x19
+ 2292 01fe 01       		.uleb128 0x1
+ 2293 01ff 13       		.uleb128 0x13
+ 2294 0200 00       		.byte	0
+ 2295 0201 00       		.byte	0
+ 2296 0202 21       		.uleb128 0x21
+ 2297 0203 05       		.uleb128 0x5
+ 2298 0204 00       		.byte	0
+ 2299 0205 31       		.uleb128 0x31
+ 2300 0206 13       		.uleb128 0x13
+ 2301 0207 02       		.uleb128 0x2
+ 2302 0208 17       		.uleb128 0x17
+ 2303 0209 00       		.byte	0
+ 2304 020a 00       		.byte	0
+ 2305 020b 22       		.uleb128 0x22
+ 2306 020c 898201   		.uleb128 0x4109
+ 2307 020f 00       		.byte	0
+ 2308 0210 11       		.uleb128 0x11
+ 2309 0211 01       		.uleb128 0x1
+ 2310 0212 31       		.uleb128 0x31
+ 2311 0213 13       		.uleb128 0x13
+ 2312 0214 00       		.byte	0
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 45
+
+
+ 2313 0215 00       		.byte	0
+ 2314 0216 23       		.uleb128 0x23
+ 2315 0217 2E       		.uleb128 0x2e
+ 2316 0218 01       		.byte	0x1
+ 2317 0219 47       		.uleb128 0x47
+ 2318 021a 13       		.uleb128 0x13
+ 2319 021b 3A       		.uleb128 0x3a
+ 2320 021c 0B       		.uleb128 0xb
+ 2321 021d 3B       		.uleb128 0x3b
+ 2322 021e 0B       		.uleb128 0xb
+ 2323 021f 11       		.uleb128 0x11
+ 2324 0220 01       		.uleb128 0x1
+ 2325 0221 12       		.uleb128 0x12
+ 2326 0222 06       		.uleb128 0x6
+ 2327 0223 40       		.uleb128 0x40
+ 2328 0224 18       		.uleb128 0x18
+ 2329 0225 64       		.uleb128 0x64
+ 2330 0226 13       		.uleb128 0x13
+ 2331 0227 9742     		.uleb128 0x2117
+ 2332 0229 19       		.uleb128 0x19
+ 2333 022a 01       		.uleb128 0x1
+ 2334 022b 13       		.uleb128 0x13
+ 2335 022c 00       		.byte	0
+ 2336 022d 00       		.byte	0
+ 2337 022e 24       		.uleb128 0x24
+ 2338 022f 05       		.uleb128 0x5
+ 2339 0230 00       		.byte	0
+ 2340 0231 03       		.uleb128 0x3
+ 2341 0232 0E       		.uleb128 0xe
+ 2342 0233 49       		.uleb128 0x49
+ 2343 0234 13       		.uleb128 0x13
+ 2344 0235 34       		.uleb128 0x34
+ 2345 0236 19       		.uleb128 0x19
+ 2346 0237 02       		.uleb128 0x2
+ 2347 0238 17       		.uleb128 0x17
+ 2348 0239 00       		.byte	0
+ 2349 023a 00       		.byte	0
+ 2350 023b 25       		.uleb128 0x25
+ 2351 023c 898201   		.uleb128 0x4109
+ 2352 023f 01       		.byte	0x1
+ 2353 0240 11       		.uleb128 0x11
+ 2354 0241 01       		.uleb128 0x1
+ 2355 0242 31       		.uleb128 0x31
+ 2356 0243 13       		.uleb128 0x13
+ 2357 0244 01       		.uleb128 0x1
+ 2358 0245 13       		.uleb128 0x13
+ 2359 0246 00       		.byte	0
+ 2360 0247 00       		.byte	0
+ 2361 0248 26       		.uleb128 0x26
+ 2362 0249 1D       		.uleb128 0x1d
+ 2363 024a 01       		.byte	0x1
+ 2364 024b 31       		.uleb128 0x31
+ 2365 024c 13       		.uleb128 0x13
+ 2366 024d 11       		.uleb128 0x11
+ 2367 024e 01       		.uleb128 0x1
+ 2368 024f 12       		.uleb128 0x12
+ 2369 0250 06       		.uleb128 0x6
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 46
+
+
+ 2370 0251 58       		.uleb128 0x58
+ 2371 0252 0B       		.uleb128 0xb
+ 2372 0253 59       		.uleb128 0x59
+ 2373 0254 0B       		.uleb128 0xb
+ 2374 0255 01       		.uleb128 0x1
+ 2375 0256 13       		.uleb128 0x13
+ 2376 0257 00       		.byte	0
+ 2377 0258 00       		.byte	0
+ 2378 0259 27       		.uleb128 0x27
+ 2379 025a 898201   		.uleb128 0x4109
+ 2380 025d 01       		.byte	0x1
+ 2381 025e 11       		.uleb128 0x11
+ 2382 025f 01       		.uleb128 0x1
+ 2383 0260 01       		.uleb128 0x1
+ 2384 0261 13       		.uleb128 0x13
+ 2385 0262 00       		.byte	0
+ 2386 0263 00       		.byte	0
+ 2387 0264 28       		.uleb128 0x28
+ 2388 0265 2E       		.uleb128 0x2e
+ 2389 0266 01       		.byte	0x1
+ 2390 0267 47       		.uleb128 0x47
+ 2391 0268 13       		.uleb128 0x13
+ 2392 0269 3A       		.uleb128 0x3a
+ 2393 026a 0B       		.uleb128 0xb
+ 2394 026b 3B       		.uleb128 0x3b
+ 2395 026c 0B       		.uleb128 0xb
+ 2396 026d 11       		.uleb128 0x11
+ 2397 026e 01       		.uleb128 0x1
+ 2398 026f 12       		.uleb128 0x12
+ 2399 0270 06       		.uleb128 0x6
+ 2400 0271 40       		.uleb128 0x40
+ 2401 0272 18       		.uleb128 0x18
+ 2402 0273 64       		.uleb128 0x64
+ 2403 0274 13       		.uleb128 0x13
+ 2404 0275 9642     		.uleb128 0x2116
+ 2405 0277 19       		.uleb128 0x19
+ 2406 0278 01       		.uleb128 0x1
+ 2407 0279 13       		.uleb128 0x13
+ 2408 027a 00       		.byte	0
+ 2409 027b 00       		.byte	0
+ 2410 027c 29       		.uleb128 0x29
+ 2411 027d 34       		.uleb128 0x34
+ 2412 027e 00       		.byte	0
+ 2413 027f 03       		.uleb128 0x3
+ 2414 0280 0E       		.uleb128 0xe
+ 2415 0281 3A       		.uleb128 0x3a
+ 2416 0282 0B       		.uleb128 0xb
+ 2417 0283 3B       		.uleb128 0x3b
+ 2418 0284 0B       		.uleb128 0xb
+ 2419 0285 49       		.uleb128 0x49
+ 2420 0286 13       		.uleb128 0x13
+ 2421 0287 02       		.uleb128 0x2
+ 2422 0288 18       		.uleb128 0x18
+ 2423 0289 00       		.byte	0
+ 2424 028a 00       		.byte	0
+ 2425 028b 2A       		.uleb128 0x2a
+ 2426 028c 01       		.uleb128 0x1
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 47
+
+
+ 2427 028d 01       		.byte	0x1
+ 2428 028e 49       		.uleb128 0x49
+ 2429 028f 13       		.uleb128 0x13
+ 2430 0290 01       		.uleb128 0x1
+ 2431 0291 13       		.uleb128 0x13
+ 2432 0292 00       		.byte	0
+ 2433 0293 00       		.byte	0
+ 2434 0294 2B       		.uleb128 0x2b
+ 2435 0295 21       		.uleb128 0x21
+ 2436 0296 00       		.byte	0
+ 2437 0297 49       		.uleb128 0x49
+ 2438 0298 13       		.uleb128 0x13
+ 2439 0299 2F       		.uleb128 0x2f
+ 2440 029a 0B       		.uleb128 0xb
+ 2441 029b 00       		.byte	0
+ 2442 029c 00       		.byte	0
+ 2443 029d 2C       		.uleb128 0x2c
+ 2444 029e 34       		.uleb128 0x34
+ 2445 029f 00       		.byte	0
+ 2446 02a0 03       		.uleb128 0x3
+ 2447 02a1 0E       		.uleb128 0xe
+ 2448 02a2 3A       		.uleb128 0x3a
+ 2449 02a3 0B       		.uleb128 0xb
+ 2450 02a4 3B       		.uleb128 0x3b
+ 2451 02a5 0B       		.uleb128 0xb
+ 2452 02a6 49       		.uleb128 0x49
+ 2453 02a7 13       		.uleb128 0x13
+ 2454 02a8 02       		.uleb128 0x2
+ 2455 02a9 17       		.uleb128 0x17
+ 2456 02aa 00       		.byte	0
+ 2457 02ab 00       		.byte	0
+ 2458 02ac 2D       		.uleb128 0x2d
+ 2459 02ad 34       		.uleb128 0x34
+ 2460 02ae 00       		.byte	0
+ 2461 02af 03       		.uleb128 0x3
+ 2462 02b0 0E       		.uleb128 0xe
+ 2463 02b1 3A       		.uleb128 0x3a
+ 2464 02b2 0B       		.uleb128 0xb
+ 2465 02b3 3B       		.uleb128 0x3b
+ 2466 02b4 05       		.uleb128 0x5
+ 2467 02b5 49       		.uleb128 0x49
+ 2468 02b6 13       		.uleb128 0x13
+ 2469 02b7 3F       		.uleb128 0x3f
+ 2470 02b8 19       		.uleb128 0x19
+ 2471 02b9 3C       		.uleb128 0x3c
+ 2472 02ba 19       		.uleb128 0x19
+ 2473 02bb 00       		.byte	0
+ 2474 02bc 00       		.byte	0
+ 2475 02bd 2E       		.uleb128 0x2e
+ 2476 02be 35       		.uleb128 0x35
+ 2477 02bf 00       		.byte	0
+ 2478 02c0 49       		.uleb128 0x49
+ 2479 02c1 13       		.uleb128 0x13
+ 2480 02c2 00       		.byte	0
+ 2481 02c3 00       		.byte	0
+ 2482 02c4 2F       		.uleb128 0x2f
+ 2483 02c5 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 48
+
+
+ 2484 02c6 00       		.byte	0
+ 2485 02c7 3F       		.uleb128 0x3f
+ 2486 02c8 19       		.uleb128 0x19
+ 2487 02c9 3C       		.uleb128 0x3c
+ 2488 02ca 19       		.uleb128 0x19
+ 2489 02cb 6E       		.uleb128 0x6e
+ 2490 02cc 0E       		.uleb128 0xe
+ 2491 02cd 03       		.uleb128 0x3
+ 2492 02ce 0E       		.uleb128 0xe
+ 2493 02cf 3A       		.uleb128 0x3a
+ 2494 02d0 0B       		.uleb128 0xb
+ 2495 02d1 3B       		.uleb128 0x3b
+ 2496 02d2 0B       		.uleb128 0xb
+ 2497 02d3 00       		.byte	0
+ 2498 02d4 00       		.byte	0
+ 2499 02d5 00       		.byte	0
+ 2500              		.section	.debug_loc,"",%progbits
+ 2501              	.Ldebug_loc0:
+ 2502              	.LLST0:
+ 2503 0000 00000000 		.4byte	.LVL0
+ 2504 0004 05000000 		.4byte	.LVL1-1
+ 2505 0008 0100     		.2byte	0x1
+ 2506 000a 50       		.byte	0x50
+ 2507 000b 05000000 		.4byte	.LVL1-1
+ 2508 000f 08000000 		.4byte	.LFE69
+ 2509 0013 0400     		.2byte	0x4
+ 2510 0015 F3       		.byte	0xf3
+ 2511 0016 01       		.uleb128 0x1
+ 2512 0017 50       		.byte	0x50
+ 2513 0018 9F       		.byte	0x9f
+ 2514 0019 00000000 		.4byte	0
+ 2515 001d 00000000 		.4byte	0
+ 2516              	.LLST1:
+ 2517 0021 00000000 		.4byte	.LVL2
+ 2518 0025 05000000 		.4byte	.LVL3-1
+ 2519 0029 0100     		.2byte	0x1
+ 2520 002b 50       		.byte	0x50
+ 2521 002c 05000000 		.4byte	.LVL3-1
+ 2522 0030 08000000 		.4byte	.LFE70
+ 2523 0034 0400     		.2byte	0x4
+ 2524 0036 F3       		.byte	0xf3
+ 2525 0037 01       		.uleb128 0x1
+ 2526 0038 50       		.byte	0x50
+ 2527 0039 9F       		.byte	0x9f
+ 2528 003a 00000000 		.4byte	0
+ 2529 003e 00000000 		.4byte	0
+ 2530              	.LLST2:
+ 2531 0042 00000000 		.4byte	.LVL4
+ 2532 0046 06000000 		.4byte	.LVL5
+ 2533 004a 0100     		.2byte	0x1
+ 2534 004c 50       		.byte	0x50
+ 2535 004d 06000000 		.4byte	.LVL5
+ 2536 0051 20000000 		.4byte	.LFE81
+ 2537 0055 0100     		.2byte	0x1
+ 2538 0057 54       		.byte	0x54
+ 2539 0058 00000000 		.4byte	0
+ 2540 005c 00000000 		.4byte	0
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 49
+
+
+ 2541              	.LLST3:
+ 2542 0060 00000000 		.4byte	.LVL10
+ 2543 0064 0C000000 		.4byte	.LVL11
+ 2544 0068 0100     		.2byte	0x1
+ 2545 006a 50       		.byte	0x50
+ 2546 006b 0C000000 		.4byte	.LVL11
+ 2547 006f 4E000000 		.4byte	.LFE83
+ 2548 0073 0100     		.2byte	0x1
+ 2549 0075 54       		.byte	0x54
+ 2550 0076 00000000 		.4byte	0
+ 2551 007a 00000000 		.4byte	0
+ 2552              	.LLST4:
+ 2553 007e 00000000 		.4byte	.LVL18
+ 2554 0082 12000000 		.4byte	.LVL19
+ 2555 0086 0100     		.2byte	0x1
+ 2556 0088 50       		.byte	0x50
+ 2557 0089 12000000 		.4byte	.LVL19
+ 2558 008d 62000000 		.4byte	.LFE78
+ 2559 0091 0100     		.2byte	0x1
+ 2560 0093 54       		.byte	0x54
+ 2561 0094 00000000 		.4byte	0
+ 2562 0098 00000000 		.4byte	0
+ 2563              	.LLST5:
+ 2564 009c 1E000000 		.4byte	.LVL21
+ 2565 00a0 2A000000 		.4byte	.LVL22
+ 2566 00a4 0100     		.2byte	0x1
+ 2567 00a6 50       		.byte	0x50
+ 2568 00a7 00000000 		.4byte	0
+ 2569 00ab 00000000 		.4byte	0
+ 2570              	.LLST6:
+ 2571 00af 32000000 		.4byte	.LVL23
+ 2572 00b3 3E000000 		.4byte	.LVL24
+ 2573 00b7 0100     		.2byte	0x1
+ 2574 00b9 50       		.byte	0x50
+ 2575 00ba 00000000 		.4byte	0
+ 2576 00be 00000000 		.4byte	0
+ 2577              	.LLST7:
+ 2578 00c2 00000000 		.4byte	.LVL28
+ 2579 00c6 12000000 		.4byte	.LVL29
+ 2580 00ca 0100     		.2byte	0x1
+ 2581 00cc 50       		.byte	0x50
+ 2582 00cd 12000000 		.4byte	.LVL29
+ 2583 00d1 88000000 		.4byte	.LFE84
+ 2584 00d5 0100     		.2byte	0x1
+ 2585 00d7 54       		.byte	0x54
+ 2586 00d8 00000000 		.4byte	0
+ 2587 00dc 00000000 		.4byte	0
+ 2588              	.LLST8:
+ 2589 00e0 00000000 		.4byte	.LVL37
+ 2590 00e4 12000000 		.4byte	.LVL38
+ 2591 00e8 0100     		.2byte	0x1
+ 2592 00ea 50       		.byte	0x50
+ 2593 00eb 12000000 		.4byte	.LVL38
+ 2594 00ef 38000000 		.4byte	.LVL45
+ 2595 00f3 0100     		.2byte	0x1
+ 2596 00f5 54       		.byte	0x54
+ 2597 00f6 38000000 		.4byte	.LVL45
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 50
+
+
+ 2598 00fa 40000000 		.4byte	.LFE85
+ 2599 00fe 0400     		.2byte	0x4
+ 2600 0100 F3       		.byte	0xf3
+ 2601 0101 01       		.uleb128 0x1
+ 2602 0102 50       		.byte	0x50
+ 2603 0103 9F       		.byte	0x9f
+ 2604 0104 00000000 		.4byte	0
+ 2605 0108 00000000 		.4byte	0
+ 2606              	.LLST9:
+ 2607 010c 1E000000 		.4byte	.LVL40
+ 2608 0110 22000000 		.4byte	.LVL41
+ 2609 0114 0800     		.2byte	0x8
+ 2610 0116 70       		.byte	0x70
+ 2611 0117 00       		.sleb128 0
+ 2612 0118 38       		.byte	0x38
+ 2613 0119 24       		.byte	0x24
+ 2614 011a 73       		.byte	0x73
+ 2615 011b 00       		.sleb128 0
+ 2616 011c 21       		.byte	0x21
+ 2617 011d 9F       		.byte	0x9f
+ 2618 011e 22000000 		.4byte	.LVL41
+ 2619 0122 25000000 		.4byte	.LVL42-1
+ 2620 0126 0D00     		.2byte	0xd
+ 2621 0128 91       		.byte	0x91
+ 2622 0129 74       		.sleb128 -12
+ 2623 012a 94       		.byte	0x94
+ 2624 012b 01       		.byte	0x1
+ 2625 012c 08       		.byte	0x8
+ 2626 012d FF       		.byte	0xff
+ 2627 012e 1A       		.byte	0x1a
+ 2628 012f 38       		.byte	0x38
+ 2629 0130 24       		.byte	0x24
+ 2630 0131 73       		.byte	0x73
+ 2631 0132 00       		.sleb128 0
+ 2632 0133 21       		.byte	0x21
+ 2633 0134 9F       		.byte	0x9f
+ 2634 0135 00000000 		.4byte	0
+ 2635 0139 00000000 		.4byte	0
+ 2636              	.LLST10:
+ 2637 013d 00000000 		.4byte	.LVL46
+ 2638 0141 12000000 		.4byte	.LVL47
+ 2639 0145 0100     		.2byte	0x1
+ 2640 0147 50       		.byte	0x50
+ 2641 0148 12000000 		.4byte	.LVL47
+ 2642 014c 82000000 		.4byte	.LVL55
+ 2643 0150 0100     		.2byte	0x1
+ 2644 0152 54       		.byte	0x54
+ 2645 0153 82000000 		.4byte	.LVL55
+ 2646 0157 88000000 		.4byte	.LFE87
+ 2647 015b 0400     		.2byte	0x4
+ 2648 015d F3       		.byte	0xf3
+ 2649 015e 01       		.uleb128 0x1
+ 2650 015f 50       		.byte	0x50
+ 2651 0160 9F       		.byte	0x9f
+ 2652 0161 00000000 		.4byte	0
+ 2653 0165 00000000 		.4byte	0
+ 2654              	.LLST11:
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 51
+
+
+ 2655 0169 00000000 		.4byte	.LVL56
+ 2656 016d 07000000 		.4byte	.LVL57-1
+ 2657 0171 0100     		.2byte	0x1
+ 2658 0173 50       		.byte	0x50
+ 2659 0174 07000000 		.4byte	.LVL57-1
+ 2660 0178 18000000 		.4byte	.LFE86
+ 2661 017c 0100     		.2byte	0x1
+ 2662 017e 54       		.byte	0x54
+ 2663 017f 00000000 		.4byte	0
+ 2664 0183 00000000 		.4byte	0
+ 2665              		.section	.debug_aranges,"",%progbits
+ 2666 0000 5C000000 		.4byte	0x5c
+ 2667 0004 0200     		.2byte	0x2
+ 2668 0006 00000000 		.4byte	.Ldebug_info0
+ 2669 000a 04       		.byte	0x4
+ 2670 000b 00       		.byte	0
+ 2671 000c 0000     		.2byte	0
+ 2672 000e 0000     		.2byte	0
+ 2673 0010 00000000 		.4byte	.LFB69
+ 2674 0014 08000000 		.4byte	.LFE69-.LFB69
+ 2675 0018 00000000 		.4byte	.LFB70
+ 2676 001c 08000000 		.4byte	.LFE70-.LFB70
+ 2677 0020 00000000 		.4byte	.LFB81
+ 2678 0024 20000000 		.4byte	.LFE81-.LFB81
+ 2679 0028 00000000 		.4byte	.LFB83
+ 2680 002c 4E000000 		.4byte	.LFE83-.LFB83
+ 2681 0030 00000000 		.4byte	.LFB78
+ 2682 0034 62000000 		.4byte	.LFE78-.LFB78
+ 2683 0038 00000000 		.4byte	.LFB84
+ 2684 003c 88000000 		.4byte	.LFE84-.LFB84
+ 2685 0040 00000000 		.4byte	.LFB85
+ 2686 0044 40000000 		.4byte	.LFE85-.LFB85
+ 2687 0048 00000000 		.4byte	.LFB87
+ 2688 004c 88000000 		.4byte	.LFE87-.LFB87
+ 2689 0050 00000000 		.4byte	.LFB86
+ 2690 0054 18000000 		.4byte	.LFE86-.LFB86
+ 2691 0058 00000000 		.4byte	0
+ 2692 005c 00000000 		.4byte	0
+ 2693              		.section	.debug_ranges,"",%progbits
+ 2694              	.Ldebug_ranges0:
+ 2695 0000 00000000 		.4byte	.LFB69
+ 2696 0004 08000000 		.4byte	.LFE69
+ 2697 0008 00000000 		.4byte	.LFB70
+ 2698 000c 08000000 		.4byte	.LFE70
+ 2699 0010 00000000 		.4byte	.LFB81
+ 2700 0014 20000000 		.4byte	.LFE81
+ 2701 0018 00000000 		.4byte	.LFB83
+ 2702 001c 4E000000 		.4byte	.LFE83
+ 2703 0020 00000000 		.4byte	.LFB78
+ 2704 0024 62000000 		.4byte	.LFE78
+ 2705 0028 00000000 		.4byte	.LFB84
+ 2706 002c 88000000 		.4byte	.LFE84
+ 2707 0030 00000000 		.4byte	.LFB85
+ 2708 0034 40000000 		.4byte	.LFE85
+ 2709 0038 00000000 		.4byte	.LFB87
+ 2710 003c 88000000 		.4byte	.LFE87
+ 2711 0040 00000000 		.4byte	.LFB86
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 52
+
+
+ 2712 0044 18000000 		.4byte	.LFE86
+ 2713 0048 00000000 		.4byte	0
+ 2714 004c 00000000 		.4byte	0
+ 2715              		.section	.debug_line,"",%progbits
+ 2716              	.Ldebug_line0:
+ 2717 0000 28030000 		.section	.debug_str,"MS",%progbits,1
+ 2717      02005602 
+ 2717      00000201 
+ 2717      FB0E0D00 
+ 2717      01010101 
+ 2718              	.LASF58:
+ 2719 0000 67657453 		.ascii	"getSensorData\000"
+ 2719      656E736F 
+ 2719      72446174 
+ 2719      6100
+ 2720              	.LASF81:
+ 2721 000e 5F5A4E33 		.ascii	"_ZN3i2cC4Ev\000"
+ 2721      69326343 
+ 2721      34457600 
+ 2722              	.LASF34:
+ 2723 001a 52656164 		.ascii	"ReadBytes16bits\000"
+ 2723      42797465 
+ 2723      73313662 
+ 2723      69747300 
+ 2724              	.LASF38:
+ 2725 002a 7A5F7261 		.ascii	"z_rad\000"
+ 2725      6400
+ 2726              	.LASF50:
+ 2727 0030 5F5A4E31 		.ascii	"_ZN11sensor_dataC4Ev\000"
+ 2727      3173656E 
+ 2727      736F725F 
+ 2727      64617461 
+ 2727      43344576 
+ 2728              	.LASF4:
+ 2729 0045 73686F72 		.ascii	"short int\000"
+ 2729      7420696E 
+ 2729      7400
+ 2730              	.LASF26:
+ 2731 004f 57726974 		.ascii	"WriteBytes\000"
+ 2731      65427974 
+ 2731      657300
+ 2732              	.LASF76:
+ 2733 005a 6D616C6C 		.ascii	"malloc\000"
+ 2733      6F6300
+ 2734              	.LASF47:
+ 2735 0061 5F5A4E31 		.ascii	"_ZN11sensor_dataC4EP9gyro_dataP8acc_dataPf\000"
+ 2735      3173656E 
+ 2735      736F725F 
+ 2735      64617461 
+ 2735      43344550 
+ 2736              	.LASF21:
+ 2737 008c 73697A65 		.ascii	"sizetype\000"
+ 2737      74797065 
+ 2737      00
+ 2738              	.LASF84:
+ 2739 0095 5F5A6E77 		.ascii	"_Znwj\000"
+ 2739      6A00
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 53
+
+
+ 2740              	.LASF45:
+ 2741 009b 6163635F 		.ascii	"acc_\000"
+ 2741      00
+ 2742              	.LASF60:
+ 2743 00a0 67657441 		.ascii	"getAccData\000"
+ 2743      63634461 
+ 2743      746100
+ 2744              	.LASF31:
+ 2745 00ab 5F5A4E33 		.ascii	"_ZN3i2c15WriteBytes16bitEhthPh\000"
+ 2745      69326331 
+ 2745      35577269 
+ 2745      74654279 
+ 2745      74657331 
+ 2746              	.LASF5:
+ 2747 00ca 5F5F7569 		.ascii	"__uint16_t\000"
+ 2747      6E743136 
+ 2747      5F7400
+ 2748              	.LASF66:
+ 2749 00d5 696E6974 		.ascii	"initGyro\000"
+ 2749      4779726F 
+ 2749      00
+ 2750              	.LASF73:
+ 2751 00de 5F5A4E34 		.ascii	"_ZN4GyroC2Ev\000"
+ 2751      4779726F 
+ 2751      43324576 
+ 2751      00
+ 2752              	.LASF22:
+ 2753 00eb 52656164 		.ascii	"ReadBytes\000"
+ 2753      42797465 
+ 2753      7300
+ 2754              	.LASF57:
+ 2755 00f5 5F5A4E34 		.ascii	"_ZN4GyroD4Ev\000"
+ 2755      4779726F 
+ 2755      44344576 
+ 2755      00
+ 2756              	.LASF13:
+ 2757 0102 75696E74 		.ascii	"uint8_t\000"
+ 2757      385F7400 
+ 2758              	.LASF20:
+ 2759 010a 73697A65 		.ascii	"size_t\000"
+ 2759      5F7400
+ 2760              	.LASF33:
+ 2761 0111 5F5A4E33 		.ascii	"_ZN3i2c14WriteByte16bitEhth\000"
+ 2761      69326331 
+ 2761      34577269 
+ 2761      74654279 
+ 2761      74653136 
+ 2762              	.LASF77:
+ 2763 012d 66726565 		.ascii	"free\000"
+ 2763      00
+ 2764              	.LASF35:
+ 2765 0132 5F5A4E33 		.ascii	"_ZN3i2c15ReadBytes16bitsEhthPh\000"
+ 2765      69326331 
+ 2765      35526561 
+ 2765      64427974 
+ 2765      65733136 
+ 2766              	.LASF46:
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 54
+
+
+ 2767 0151 74656D70 		.ascii	"temperature_\000"
+ 2767      65726174 
+ 2767      7572655F 
+ 2767      00
+ 2768              	.LASF17:
+ 2769 015e 666C6F61 		.ascii	"float\000"
+ 2769      7400
+ 2770              	.LASF52:
+ 2771 0164 61636365 		.ascii	"acceldata_\000"
+ 2771      6C646174 
+ 2771      615F00
+ 2772              	.LASF32:
+ 2773 016f 57726974 		.ascii	"WriteByte16bit\000"
+ 2773      65427974 
+ 2773      65313662 
+ 2773      697400
+ 2774              	.LASF44:
+ 2775 017e 6779726F 		.ascii	"gyro_\000"
+ 2775      5F00
+ 2776              	.LASF63:
+ 2777 0184 5F5A4E34 		.ascii	"_ZN4Gyro7getTempEv\000"
+ 2777      4779726F 
+ 2777      37676574 
+ 2777      54656D70 
+ 2777      457600
+ 2778              	.LASF82:
+ 2779 0197 5F5A4E34 		.ascii	"_ZN4Gyro8initGyroEv\000"
+ 2779      4779726F 
+ 2779      38696E69 
+ 2779      74477972 
+ 2779      6F457600 
+ 2780              	.LASF8:
+ 2781 01ab 6C6F6E67 		.ascii	"long int\000"
+ 2781      20696E74 
+ 2781      00
+ 2782              	.LASF64:
+ 2783 01b4 67657447 		.ascii	"getGyroData\000"
+ 2783      79726F44 
+ 2783      61746100 
+ 2784              	.LASF43:
+ 2785 01c0 73656E73 		.ascii	"sensor_data\000"
+ 2785      6F725F64 
+ 2785      61746100 
+ 2786              	.LASF41:
+ 2787 01cc 5F5A4E39 		.ascii	"_ZN9gyro_dataC4Ev\000"
+ 2787      6779726F 
+ 2787      5F646174 
+ 2787      61433445 
+ 2787      7600
+ 2788              	.LASF23:
+ 2789 01de 52656164 		.ascii	"ReadByte\000"
+ 2789      42797465 
+ 2789      00
+ 2790              	.LASF24:
+ 2791 01e7 5F5A4E33 		.ascii	"_ZN3i2c9ReadBytesEhhhPh\000"
+ 2791      69326339 
+ 2791      52656164 
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 55
+
+
+ 2791      42797465 
+ 2791      73456868 
+ 2792              	.LASF2:
+ 2793 01ff 5F5F7569 		.ascii	"__uint8_t\000"
+ 2793      6E74385F 
+ 2793      7400
+ 2794              	.LASF65:
+ 2795 0209 5F5A4E34 		.ascii	"_ZN4Gyro11getGyroDataEv\000"
+ 2795      4779726F 
+ 2795      31316765 
+ 2795      74477972 
+ 2795      6F446174 
+ 2796              	.LASF72:
+ 2797 0221 5F5A4E34 		.ascii	"_ZN4GyroD2Ev\000"
+ 2797      4779726F 
+ 2797      44324576 
+ 2797      00
+ 2798              	.LASF69:
+ 2799 022e 5F5A646C 		.ascii	"_ZdlPv\000"
+ 2799      507600
+ 2800              	.LASF61:
+ 2801 0235 5F5A4E34 		.ascii	"_ZN4Gyro10getAccDataEv\000"
+ 2801      4779726F 
+ 2801      31306765 
+ 2801      74416363 
+ 2801      44617461 
+ 2802              	.LASF1:
+ 2803 024c 756E7369 		.ascii	"unsigned char\000"
+ 2803      676E6564 
+ 2803      20636861 
+ 2803      7200
+ 2804              	.LASF36:
+ 2805 025a 785F7261 		.ascii	"x_rad\000"
+ 2805      6400
+ 2806              	.LASF0:
+ 2807 0260 7369676E 		.ascii	"signed char\000"
+ 2807      65642063 
+ 2807      68617200 
+ 2808              	.LASF11:
+ 2809 026c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2809      206C6F6E 
+ 2809      6720756E 
+ 2809      7369676E 
+ 2809      65642069 
+ 2810              	.LASF12:
+ 2811 0283 756E7369 		.ascii	"unsigned int\000"
+ 2811      676E6564 
+ 2811      20696E74 
+ 2811      00
+ 2812              	.LASF48:
+ 2813 0290 52656164 		.ascii	"ReadByte16bits\000"
+ 2813      42797465 
+ 2813      31366269 
+ 2813      747300
+ 2814              	.LASF15:
+ 2815 029f 75696E74 		.ascii	"uint16_t\000"
+ 2815      31365F74 
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 56
+
+
+ 2815      00
+ 2816              	.LASF78:
+ 2817 02a8 474E5520 		.ascii	"GNU C++ 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2817      432B2B20 
+ 2817      352E342E 
+ 2817      31203230 
+ 2817      31363036 
+ 2818 02db 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2818      20726576 
+ 2818      6973696F 
+ 2818      6E203233 
+ 2818      37373135 
+ 2819 030e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects -fno-except"
+ 2819      66756E63 
+ 2819      74696F6E 
+ 2819      2D736563 
+ 2819      74696F6E 
+ 2820 0341 696F6E73 		.ascii	"ions\000"
+ 2820      00
+ 2821              	.LASF54:
+ 2822 0346 73656E73 		.ascii	"sensordata_\000"
+ 2822      6F726461 
+ 2822      74615F00 
+ 2823              	.LASF42:
+ 2824 0352 5F5A4E38 		.ascii	"_ZN8acc_dataC4Ev\000"
+ 2824      6163635F 
+ 2824      64617461 
+ 2824      43344576 
+ 2824      00
+ 2825              	.LASF6:
+ 2826 0363 73686F72 		.ascii	"short unsigned int\000"
+ 2826      7420756E 
+ 2826      7369676E 
+ 2826      65642069 
+ 2826      6E7400
+ 2827              	.LASF29:
+ 2828 0376 5F5A4E33 		.ascii	"_ZN3i2c9WriteByteEhhh\000"
+ 2828      69326339 
+ 2828      57726974 
+ 2828      65427974 
+ 2828      65456868 
+ 2829              	.LASF79:
+ 2830 038c 4779726F 		.ascii	"Gyro.c\000"
+ 2830      2E6300
+ 2831              	.LASF19:
+ 2832 0393 63686172 		.ascii	"char\000"
+ 2832      00
+ 2833              	.LASF30:
+ 2834 0398 57726974 		.ascii	"WriteBytes16bit\000"
+ 2834      65427974 
+ 2834      65733136 
+ 2834      62697400 
+ 2835              	.LASF16:
+ 2836 03a8 696E7433 		.ascii	"int32_t\000"
+ 2836      325F7400 
+ 2837              	.LASF71:
+ 2838 03b0 5F5F696E 		.ascii	"__in_chrg\000"
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 57
+
+
+ 2838      5F636872 
+ 2838      6700
+ 2839              	.LASF14:
+ 2840 03ba 696E7431 		.ascii	"int16_t\000"
+ 2840      365F7400 
+ 2841              	.LASF67:
+ 2842 03c2 74686973 		.ascii	"this\000"
+ 2842      00
+ 2843              	.LASF74:
+ 2844 03c7 72785F62 		.ascii	"rx_buffer\000"
+ 2844      75666665 
+ 2844      7200
+ 2845              	.LASF37:
+ 2846 03d1 795F7261 		.ascii	"y_rad\000"
+ 2846      6400
+ 2847              	.LASF62:
+ 2848 03d7 67657454 		.ascii	"getTemp\000"
+ 2848      656D7000 
+ 2849              	.LASF80:
+ 2850 03df 443A5C47 		.ascii	"D:\\Git\\iFollow\\Software\\PSOC\\Gyrosensor\\Gyros"
+ 2850      69745C69 
+ 2850      466F6C6C 
+ 2850      6F775C53 
+ 2850      6F667477 
+ 2851 040c 656E736F 		.ascii	"ensorProject.cydsn\000"
+ 2851      7250726F 
+ 2851      6A656374 
+ 2851      2E637964 
+ 2851      736E00
+ 2852              	.LASF53:
+ 2853 041f 6779726F 		.ascii	"gyrodata_\000"
+ 2853      64617461 
+ 2853      5F00
+ 2854              	.LASF9:
+ 2855 0429 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2855      20756E73 
+ 2855      69676E65 
+ 2855      6420696E 
+ 2855      7400
+ 2856              	.LASF18:
+ 2857 043b 646F7562 		.ascii	"double\000"
+ 2857      6C6500
+ 2858              	.LASF68:
+ 2859 0442 6F706572 		.ascii	"operator delete\000"
+ 2859      61746F72 
+ 2859      2064656C 
+ 2859      65746500 
+ 2860              	.LASF49:
+ 2861 0452 5F5A4E33 		.ascii	"_ZN3i2c14ReadByte16bitsEhtPh\000"
+ 2861      69326331 
+ 2861      34526561 
+ 2861      64427974 
+ 2861      65313662 
+ 2862              	.LASF70:
+ 2863 046f 73697A65 		.ascii	"size\000"
+ 2863      00
+ 2864              	.LASF25:
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 58
+
+
+ 2865 0474 5F5A4E33 		.ascii	"_ZN3i2c8ReadByteEhhPh\000"
+ 2865      69326338 
+ 2865      52656164 
+ 2865      42797465 
+ 2865      45686850 
+ 2866              	.LASF7:
+ 2867 048a 5F5F696E 		.ascii	"__int32_t\000"
+ 2867      7433325F 
+ 2867      7400
+ 2868              	.LASF59:
+ 2869 0494 5F5A4E34 		.ascii	"_ZN4Gyro13getSensorDataEv\000"
+ 2869      4779726F 
+ 2869      31336765 
+ 2869      7453656E 
+ 2869      736F7244 
+ 2870              	.LASF3:
+ 2871 04ae 5F5F696E 		.ascii	"__int16_t\000"
+ 2871      7431365F 
+ 2871      7400
+ 2872              	.LASF39:
+ 2873 04b8 6779726F 		.ascii	"gyro_data\000"
+ 2873      5F646174 
+ 2873      6100
+ 2874              	.LASF75:
+ 2875 04c2 74656D70 		.ascii	"temp_buffer\000"
+ 2875      5F627566 
+ 2875      66657200 
+ 2876              	.LASF55:
+ 2877 04ce 7E477972 		.ascii	"~Gyro\000"
+ 2877      6F00
+ 2878              	.LASF40:
+ 2879 04d4 6163635F 		.ascii	"acc_data\000"
+ 2879      64617461 
+ 2879      00
+ 2880              	.LASF83:
+ 2881 04dd 6F706572 		.ascii	"operator new\000"
+ 2881      61746F72 
+ 2881      206E6577 
+ 2881      00
+ 2882              	.LASF85:
+ 2883 04ea 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2883      52784275 
+ 2883      66666572 
+ 2883      00
+ 2884              	.LASF51:
+ 2885 04f7 4779726F 		.ascii	"Gyro\000"
+ 2885      00
+ 2886              	.LASF27:
+ 2887 04fc 5F5A4E33 		.ascii	"_ZN3i2c10WriteBytesEhhhPh\000"
+ 2887      69326331 
+ 2887      30577269 
+ 2887      74654279 
+ 2887      74657345 
+ 2888              	.LASF56:
+ 2889 0516 5F5A4E34 		.ascii	"_ZN4GyroC4Ev\000"
+ 2889      4779726F 
+ 2889      43344576 
+ARM GAS  C:\Users\hejmi\AppData\Local\Temp\cc627AQH.s 			page 59
+
+
+ 2889      00
+ 2890              	.LASF10:
+ 2891 0523 6C6F6E67 		.ascii	"long long int\000"
+ 2891      206C6F6E 
+ 2891      6720696E 
+ 2891      7400
+ 2892              	.LASF28:
+ 2893 0531 57726974 		.ascii	"WriteByte\000"
+ 2893      65427974 
+ 2893      6500
+ 2894              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

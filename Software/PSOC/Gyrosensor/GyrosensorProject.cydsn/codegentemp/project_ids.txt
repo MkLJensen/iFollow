@@ -1,6 +1,6 @@
-C:\Users\SYFO\Documents\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\GyrosensorProject.cyprj|3440c773-ab75-4a1a-b372-93cfa2121e72
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d209eeb4-7068-4143-bf9e-6b60e283bd50
-C:\Users\SYFO\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|300384c8-4407-430b-8dbe-8c6d944c2e94
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2e83aa9f-eea1-4764-8f98-b4d37d6839de
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|007949fb-2566-4537-ad1f-f74d7998e9eb
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|75692608-207f-4cb0-adc9-4a1094a584bb
+D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\GyrosensorProject.cyprj|fad7b679-3eeb-4972-b715-8a3214baa705
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|70cc97e9-1a6f-4cc1-9dbc-a8373ce75e32
+C:\Users\hejmi\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|5e39ff7f-593e-4aba-81c0-588a92d5943d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|6a1fa78d-fd66-4e8e-b7cd-00d8dac86a3d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|34f4a88f-f654-4036-8301-b607af9de781
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ccaa5306-28eb-4d03-ae52-d4bb95fe484b

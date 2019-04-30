@@ -1,58 +1,68 @@
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1_PVT.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1_aliases.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1_aliases.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_armcc.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_compiler.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_gcc.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/project.h C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/main.c 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/CortexM3/ARM_GCC_541/Debug/Gyro.o : D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyDmac.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyFlash.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyLib.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CySpc.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1_PVT.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1_aliases.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1_aliases.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_armcc.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_compiler.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_gcc.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyPm.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydisabledsheets.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cypins.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cytypes.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/project.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Gyro.c D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Gyro.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/GyroDefs.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/i2c.h 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyDmac.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyFlash.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyLib.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyLib.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CySpc.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CySpc.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1_PVT.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1_PVT.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1_aliases.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1_aliases.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1_aliases.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1_aliases.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyPm.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyPm.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cypins.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cypins.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cytypes.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cytypes.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/project.h : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/project.h : 
 
-C:/Users/SYFO/Documents/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/main.c : 
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Gyro.c : 
+
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Gyro.h : 
+
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/GyroDefs.h : 
+
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/i2c.h : 
+
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyDmac.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyFlash.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CyLib.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/CySpc.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/I2C_1_PVT.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SCL_1_aliases.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/SDA_1_aliases.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_armcc.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_compiler.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cmsis_gcc.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyPm.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cydisabledsheets.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cypins.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/cytypes.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Generated_Source/PSoC5/project.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/Gyro.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/GyroDefs.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/i2c.h D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/main.c 
+
+D:/Git/iFollow/Software/PSOC/Gyrosensor/GyrosensorProject.cydsn/main.c : 
 
