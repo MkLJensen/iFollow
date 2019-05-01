@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\Pins">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Gyrosensor\GyrosensorProject\Source Files\Gyro.c">
 <ExpandedNodeIds>
 <v>Gyrosensor</v>
 <v>Gyrosensor\GyrosensorProject</v>
@@ -51,7 +51,13 @@
 <v>Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\EEPROM</v>
 <v>Gyrosensor\GyrosensorProject\Header Files</v>
 <v>Gyrosensor\GyrosensorProject\Header Files\cyapicallbacks.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\Gyro.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\GyroDefs.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\i2c.h</v>
 <v>Gyrosensor\GyrosensorProject\Source Files</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\Gyro.c</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\GyroDefs.c</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\i2c.c</v>
 <v>Gyrosensor\GyrosensorProject\Source Files\main.c</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5</v>
@@ -66,12 +72,6 @@
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cydevice.h</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cydevice_trm.h</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cydevicegnu.inc</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cydeviceiar.inc</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cydevicerv.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -107,6 +107,9 @@
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Gyro.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\GyroDefs.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\i2c.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
@@ -146,6 +149,9 @@
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Gyro.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\GyroDefs.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\i2c.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
@@ -162,9 +168,6 @@
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\GyrosensorProject.elf</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\GyrosensorProject.hex</v>
-<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\GyrosensorProject.map</v>
-<v>Gyrosensor\GyrosensorProject\GyrosensorProject.gpdsc</v>
-<v>Gyrosensor\GyrosensorProject\GyrosensorProject.rpt</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

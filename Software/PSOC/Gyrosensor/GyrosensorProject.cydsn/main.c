@@ -38,14 +38,20 @@ int main(void)
     UART_1_PutString("Done intializing UART and I2C!\r\n");
 	
 	Gyro gyro;
-	gyro.getSensorData();
+	sensor_data* SensorData = gyro.getSensorData();
     
     for(;;)
     {
-
         /*Delay so it is possible to read the data!*/
         CyDelay(WAIT_DELAY);
-    }
+    	sprintf(buf,"ACC X: %.3f\r\nACC Y: %.3f\r\nACC Z: %.3f\r\nFALLEN:%d\r\n",
+			SensorData->acc_->x_G,
+			SensorData->acc_->y_G,
+			SensorData->acc_->z_G,
+			gyro.hasFallen());
+		UART_1_PutString(CLEAR_SCREEN);UART_1_PutString(buf);
+		//SensorData = gyro.getSensorData();
+	}
     
     return 0;
 }

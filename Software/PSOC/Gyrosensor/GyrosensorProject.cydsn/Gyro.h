@@ -34,7 +34,8 @@ public:
     
 	/*Methods*/
 	sensor_data* getSensorData();
-    
+    int hasFallen();
+	
 private:
 	/*PRIVATE ATTRIBUTES*/
 	i2c* I2C;

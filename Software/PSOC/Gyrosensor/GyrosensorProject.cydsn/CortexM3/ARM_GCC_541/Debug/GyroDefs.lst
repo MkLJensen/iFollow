@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
   39              		.loc 1 16 0
   40 0002 0160     		str	r1, [r0]
   17:GyroDefs.c    **** 	acc_=acc;
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 2
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 2
 
 
   41              		.loc 1 17 0
@@ -93,37 +93,37 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
   68 0006 00000000 		.4byte	.Ldebug_abbrev0
   69 000a 04       		.byte	0x4
   70 000b 01       		.uleb128 0x1
-  71 000c C0010000 		.4byte	.LASF28
+  71 000c D5010000 		.4byte	.LASF28
   72 0010 04       		.byte	0x4
-  73 0011 C1000000 		.4byte	.LASF29
-  74 0015 CC000000 		.4byte	.LASF30
+  73 0011 BA000000 		.4byte	.LASF29
+  74 0015 C5000000 		.4byte	.LASF30
   75 0019 00000000 		.4byte	.Ldebug_ranges0+0
   76 001d 00000000 		.4byte	0
   77 0021 00000000 		.4byte	.Ldebug_line0
   78 0025 02       		.uleb128 0x2
   79 0026 01       		.byte	0x1
   80 0027 06       		.byte	0x6
-  81 0028 61020000 		.4byte	.LASF0
+  81 0028 76020000 		.4byte	.LASF0
   82 002c 02       		.uleb128 0x2
   83 002d 01       		.byte	0x1
   84 002e 08       		.byte	0x8
-  85 002f 77000000 		.4byte	.LASF1
+  85 002f 70000000 		.4byte	.LASF1
   86 0033 03       		.uleb128 0x3
-  87 0034 0C010000 		.4byte	.LASF4
+  87 0034 21010000 		.4byte	.LASF4
   88 0038 02       		.byte	0x2
   89 0039 29       		.byte	0x29
   90 003a 3E000000 		.4byte	0x3e
   91 003e 02       		.uleb128 0x2
   92 003f 02       		.byte	0x2
   93 0040 05       		.byte	0x5
-  94 0041 A1010000 		.4byte	.LASF2
+  94 0041 B6010000 		.4byte	.LASF2
   95 0045 02       		.uleb128 0x2
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 3
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 3
 
 
   96 0046 02       		.byte	0x2
   97 0047 07       		.byte	0x7
-  98 0048 A1000000 		.4byte	.LASF3
+  98 0048 9A000000 		.4byte	.LASF3
   99 004c 03       		.uleb128 0x3
  100 004d 3E000000 		.4byte	.LASF5
  101 0051 02       		.byte	0x2
@@ -132,19 +132,19 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  104 0057 02       		.uleb128 0x2
  105 0058 04       		.byte	0x4
  106 0059 05       		.byte	0x5
- 107 005a 4E020000 		.4byte	.LASF6
+ 107 005a 63020000 		.4byte	.LASF6
  108 005e 02       		.uleb128 0x2
  109 005f 04       		.byte	0x4
  110 0060 07       		.byte	0x7
- 111 0061 8F000000 		.4byte	.LASF7
+ 111 0061 88000000 		.4byte	.LASF7
  112 0065 02       		.uleb128 0x2
  113 0066 08       		.byte	0x8
  114 0067 05       		.byte	0x5
- 115 0068 8E010000 		.4byte	.LASF8
+ 115 0068 A3010000 		.4byte	.LASF8
  116 006c 02       		.uleb128 0x2
  117 006d 08       		.byte	0x8
  118 006e 07       		.byte	0x7
- 119 006f 60010000 		.4byte	.LASF9
+ 119 006f 75010000 		.4byte	.LASF9
  120 0073 04       		.uleb128 0x4
  121 0074 04       		.byte	0x4
  122 0075 05       		.byte	0x5
@@ -152,14 +152,14 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  124 007a 02       		.uleb128 0x2
  125 007b 04       		.byte	0x4
  126 007c 07       		.byte	0x7
- 127 007d 28010000 		.4byte	.LASF10
+ 127 007d 3D010000 		.4byte	.LASF10
  128 0081 03       		.uleb128 0x3
- 129 0082 77010000 		.4byte	.LASF11
+ 129 0082 8C010000 		.4byte	.LASF11
  130 0086 03       		.byte	0x3
  131 0087 20       		.byte	0x20
  132 0088 33000000 		.4byte	0x33
  133 008c 03       		.uleb128 0x3
- 134 008d 55000000 		.4byte	.LASF12
+ 134 008d 4E000000 		.4byte	.LASF12
  135 0091 03       		.byte	0x3
  136 0092 2C       		.byte	0x2c
  137 0093 4C000000 		.4byte	0x4c
@@ -170,20 +170,20 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  142 009e 02       		.uleb128 0x2
  143 009f 08       		.byte	0x8
  144 00a0 04       		.byte	0x4
- 145 00a1 4E000000 		.4byte	.LASF14
+ 145 00a1 1A010000 		.4byte	.LASF14
  146 00a5 02       		.uleb128 0x2
  147 00a6 01       		.byte	0x1
  148 00a7 08       		.byte	0x8
- 149 00a8 9C010000 		.4byte	.LASF15
+ 149 00a8 B1010000 		.4byte	.LASF15
  150 00ac 02       		.uleb128 0x2
  151 00ad 04       		.byte	0x4
  152 00ae 07       		.byte	0x7
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 4
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 4
 
 
- 153 00af 85010000 		.4byte	.LASF16
+ 153 00af 9A010000 		.4byte	.LASF16
  154 00b3 05       		.uleb128 0x5
- 155 00b4 57020000 		.4byte	.LASF20
+ 155 00b4 6C020000 		.4byte	.LASF20
  156 00b8 14       		.byte	0x14
  157 00b9 04       		.byte	0x4
  158 00ba 2B       		.byte	0x2b
@@ -207,13 +207,13 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  176 00d8 81000000 		.4byte	0x81
  177 00dc 04       		.byte	0x4
  178 00dd 07       		.uleb128 0x7
- 179 00de 7F010000 		.4byte	.LASF17
+ 179 00de 94010000 		.4byte	.LASF17
  180 00e2 04       		.byte	0x4
  181 00e3 2F       		.byte	0x2f
  182 00e4 97000000 		.4byte	0x97
  183 00e8 08       		.byte	0x8
  184 00e9 07       		.uleb128 0x7
- 185 00ea 6D020000 		.4byte	.LASF18
+ 185 00ea 82020000 		.4byte	.LASF18
  186 00ee 04       		.byte	0x4
  187 00ef 30       		.byte	0x30
  188 00f0 97000000 		.4byte	0x97
@@ -226,19 +226,19 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  195 0100 10       		.byte	0x10
  196 0101 00       		.byte	0
  197 0102 03       		.uleb128 0x3
- 198 0103 57020000 		.4byte	.LASF20
+ 198 0103 6C020000 		.4byte	.LASF20
  199 0107 04       		.byte	0x4
  200 0108 32       		.byte	0x32
  201 0109 B3000000 		.4byte	0xb3
  202 010d 05       		.uleb128 0x5
- 203 010e 5D000000 		.4byte	.LASF21
+ 203 010e 56000000 		.4byte	.LASF21
  204 0112 14       		.byte	0x14
  205 0113 04       		.byte	0x4
  206 0114 35       		.byte	0x35
  207 0115 5C010000 		.4byte	0x15c
  208 0119 06       		.uleb128 0x6
  209 011a 7800     		.ascii	"x\000"
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 5
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 5
 
 
  210 011c 04       		.byte	0x4
@@ -277,28 +277,28 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  243 015a 10       		.byte	0x10
  244 015b 00       		.byte	0
  245 015c 03       		.uleb128 0x3
- 246 015d 5D000000 		.4byte	.LASF21
+ 246 015d 56000000 		.4byte	.LASF21
  247 0161 04       		.byte	0x4
  248 0162 3C       		.byte	0x3c
  249 0163 0D010000 		.4byte	0x10d
  250 0167 05       		.uleb128 0x5
- 251 0168 1C010000 		.4byte	.LASF22
+ 251 0168 31010000 		.4byte	.LASF22
  252 016c 0C       		.byte	0xc
  253 016d 04       		.byte	0x4
  254 016e 3F       		.byte	0x3f
  255 016f DD010000 		.4byte	0x1dd
  256 0173 07       		.uleb128 0x7
- 257 0174 16010000 		.4byte	.LASF23
+ 257 0174 2B010000 		.4byte	.LASF23
  258 0178 04       		.byte	0x4
  259 0179 40       		.byte	0x40
  260 017a DD010000 		.4byte	0x1dd
  261 017e 00       		.byte	0
  262 017f 07       		.uleb128 0x7
- 263 0180 8A000000 		.4byte	.LASF24
+ 263 0180 83000000 		.4byte	.LASF24
  264 0184 04       		.byte	0x4
  265 0185 41       		.byte	0x41
  266 0186 E3010000 		.4byte	0x1e3
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 6
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 6
 
 
  267 018a 04       		.byte	0x4
@@ -309,7 +309,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  272 0192 E9010000 		.4byte	0x1e9
  273 0196 08       		.byte	0x8
  274 0197 08       		.uleb128 0x8
- 275 0198 1C010000 		.4byte	.LASF22
+ 275 0198 31010000 		.4byte	.LASF22
  276 019c 04       		.byte	0x4
  277 019d 43       		.byte	0x43
  278 019e 0D000000 		.4byte	.LASF31
@@ -326,10 +326,10 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  289 01be E9010000 		.4byte	0x1e9
  290 01c2 00       		.byte	0
  291 01c3 0B       		.uleb128 0xb
- 292 01c4 1C010000 		.4byte	.LASF22
+ 292 01c4 31010000 		.4byte	.LASF22
  293 01c8 04       		.byte	0x4
  294 01c9 44       		.byte	0x44
- 295 01ca AB010000 		.4byte	.LASF32
+ 295 01ca C0010000 		.4byte	.LASF32
  296 01ce EF010000 		.4byte	0x1ef
  297 01d2 D6010000 		.4byte	0x1d6
  298 01d6 09       		.uleb128 0x9
@@ -356,13 +356,13 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  319 01fd 05020000 		.4byte	0x205
  320 0201 30020000 		.4byte	0x230
  321 0205 0E       		.uleb128 0xe
- 322 0206 85000000 		.4byte	.LASF33
+ 322 0206 7E000000 		.4byte	.LASF33
  323 020a 30020000 		.4byte	0x230
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 7
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 7
 
 
  324 020e 0F       		.uleb128 0xf
- 325 020f 72000000 		.4byte	.LASF26
+ 325 020f 6B000000 		.4byte	.LASF26
  326 0213 01       		.byte	0x1
  327 0214 0E       		.byte	0xe
  328 0215 DD010000 		.4byte	0x1dd
@@ -372,7 +372,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  332 021f 0E       		.byte	0xe
  333 0220 E3010000 		.4byte	0x1e3
  334 0224 0F       		.uleb128 0xf
- 335 0225 66000000 		.4byte	.LASF27
+ 335 0225 5F000000 		.4byte	.LASF27
  336 0229 01       		.byte	0x1
  337 022a 0E       		.byte	0xe
  338 022b E9010000 		.4byte	0x1e9
@@ -381,7 +381,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  341 0231 EF010000 		.4byte	0x1ef
  342 0235 12       		.uleb128 0x12
  343 0236 F5010000 		.4byte	0x1f5
- 344 023a 35010000 		.4byte	.LASF34
+ 344 023a 4A010000 		.4byte	.LASF34
  345 023e 00000000 		.4byte	.LFB67
  346 0242 0C000000 		.4byte	.LFE67-.LFB67
  347 0246 01       		.uleb128 0x1
@@ -406,7 +406,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  366 026b 53       		.byte	0x53
  367 026c 00       		.byte	0
  368 026d 14       		.uleb128 0x14
- 369 026e B4000000 		.4byte	.LASF35
+ 369 026e AD000000 		.4byte	.LASF35
  370 0272 05       		.byte	0x5
  371 0273 1207     		.2byte	0x712
  372 0275 79020000 		.4byte	0x279
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  378 0000 01       		.uleb128 0x1
  379 0001 11       		.uleb128 0x11
  380 0002 01       		.byte	0x1
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 8
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 8
 
 
  381 0003 25       		.uleb128 0x25
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  435 0039 03       		.uleb128 0x3
  436 003a 0E       		.uleb128 0xe
  437 003b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 9
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 9
 
 
  438 003c 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  492 0072 3C       		.uleb128 0x3c
  493 0073 19       		.uleb128 0x19
  494 0074 64       		.uleb128 0x64
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 10
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 10
 
 
  495 0075 13       		.uleb128 0x13
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  549 00ab 47       		.uleb128 0x47
  550 00ac 13       		.uleb128 0x13
  551 00ad 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 11
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 11
 
 
  552 00ae 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  606 00e4 00       		.byte	0
  607 00e5 12       		.uleb128 0x12
  608 00e6 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 12
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 12
 
 
  609 00e7 01       		.byte	0x1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  663 0000 1C000000 		.4byte	0x1c
  664 0004 0200     		.2byte	0x2
  665 0006 00000000 		.4byte	.Ldebug_info0
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 13
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 13
 
 
  666 000a 04       		.byte	0x4
@@ -763,160 +763,160 @@ ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 1
  691              	.LASF19:
  692 0048 7A5F7261 		.ascii	"z_rad\000"
  692      6400
- 693              	.LASF14:
- 694 004e 646F7562 		.ascii	"double\000"
- 694      6C6500
- 695              	.LASF12:
- 696 0055 696E7433 		.ascii	"int32_t\000"
- 696      325F7400 
- 697              	.LASF21:
- 698 005d 6163635F 		.ascii	"acc_data\000"
- 698      64617461 
- 698      00
- 699              	.LASF27:
- 700 0066 74656D70 		.ascii	"temperature\000"
- 700      65726174 
- 700      75726500 
- 701              	.LASF26:
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 14
+ 693              	.LASF12:
+ 694 004e 696E7433 		.ascii	"int32_t\000"
+ 694      325F7400 
+ 695              	.LASF21:
+ 696 0056 6163635F 		.ascii	"acc_data\000"
+ 696      64617461 
+ 696      00
+ 697              	.LASF27:
+ 698 005f 74656D70 		.ascii	"temperature\000"
+ 698      65726174 
+ 698      75726500 
+ 699              	.LASF26:
+ 700 006b 6779726F 		.ascii	"gyro\000"
+ 700      00
+ 701              	.LASF1:
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 14
 
 
- 702 0072 6779726F 		.ascii	"gyro\000"
- 702      00
- 703              	.LASF1:
- 704 0077 756E7369 		.ascii	"unsigned char\000"
- 704      676E6564 
- 704      20636861 
- 704      7200
- 705              	.LASF33:
- 706 0085 74686973 		.ascii	"this\000"
+ 702 0070 756E7369 		.ascii	"unsigned char\000"
+ 702      676E6564 
+ 702      20636861 
+ 702      7200
+ 703              	.LASF33:
+ 704 007e 74686973 		.ascii	"this\000"
+ 704      00
+ 705              	.LASF24:
+ 706 0083 6163635F 		.ascii	"acc_\000"
  706      00
- 707              	.LASF24:
- 708 008a 6163635F 		.ascii	"acc_\000"
- 708      00
- 709              	.LASF7:
- 710 008f 6C6F6E67 		.ascii	"long unsigned int\000"
- 710      20756E73 
- 710      69676E65 
- 710      6420696E 
- 710      7400
- 711              	.LASF3:
- 712 00a1 73686F72 		.ascii	"short unsigned int\000"
- 712      7420756E 
- 712      7369676E 
- 712      65642069 
- 712      6E7400
- 713              	.LASF35:
- 714 00b4 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 714      52784275 
- 714      66666572 
- 714      00
- 715              	.LASF29:
- 716 00c1 4779726F 		.ascii	"GyroDefs.c\000"
- 716      44656673 
- 716      2E6300
- 717              	.LASF30:
- 718 00cc 443A5C47 		.ascii	"D:\\Git\\iFollow\\Software\\PSOC\\Gyrosensor\\Gyros"
- 718      69745C69 
- 718      466F6C6C 
- 718      6F775C53 
- 718      6F667477 
- 719 00f9 656E736F 		.ascii	"ensorProject.cydsn\000"
- 719      7250726F 
- 719      6A656374 
- 719      2E637964 
- 719      736E00
+ 707              	.LASF7:
+ 708 0088 6C6F6E67 		.ascii	"long unsigned int\000"
+ 708      20756E73 
+ 708      69676E65 
+ 708      6420696E 
+ 708      7400
+ 709              	.LASF3:
+ 710 009a 73686F72 		.ascii	"short unsigned int\000"
+ 710      7420756E 
+ 710      7369676E 
+ 710      65642069 
+ 710      6E7400
+ 711              	.LASF35:
+ 712 00ad 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 712      52784275 
+ 712      66666572 
+ 712      00
+ 713              	.LASF29:
+ 714 00ba 4779726F 		.ascii	"GyroDefs.c\000"
+ 714      44656673 
+ 714      2E6300
+ 715              	.LASF30:
+ 716 00c5 433A5C55 		.ascii	"C:\\Users\\SYFO\\Documents\\Git\\iFollow\\Software\\"
+ 716      73657273 
+ 716      5C535946 
+ 716      4F5C446F 
+ 716      63756D65 
+ 717 00f2 50534F43 		.ascii	"PSOC\\Gyrosensor\\GyrosensorProject.cydsn\000"
+ 717      5C477972 
+ 717      6F73656E 
+ 717      736F725C 
+ 717      4779726F 
+ 718              	.LASF14:
+ 719 011a 646F7562 		.ascii	"double\000"
+ 719      6C6500
  720              	.LASF4:
- 721 010c 5F5F696E 		.ascii	"__int16_t\000"
+ 721 0121 5F5F696E 		.ascii	"__int16_t\000"
  721      7431365F 
  721      7400
  722              	.LASF23:
- 723 0116 6779726F 		.ascii	"gyro_\000"
+ 723 012b 6779726F 		.ascii	"gyro_\000"
  723      5F00
  724              	.LASF22:
- 725 011c 73656E73 		.ascii	"sensor_data\000"
+ 725 0131 73656E73 		.ascii	"sensor_data\000"
  725      6F725F64 
  725      61746100 
  726              	.LASF10:
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 15
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 15
 
 
- 727 0128 756E7369 		.ascii	"unsigned int\000"
+ 727 013d 756E7369 		.ascii	"unsigned int\000"
  727      676E6564 
  727      20696E74 
  727      00
  728              	.LASF34:
- 729 0135 5F5A4E31 		.ascii	"_ZN11sensor_dataC2EP9gyro_dataP8acc_dataPf\000"
+ 729 014a 5F5A4E31 		.ascii	"_ZN11sensor_dataC2EP9gyro_dataP8acc_dataPf\000"
  729      3173656E 
  729      736F725F 
  729      64617461 
  729      43324550 
  730              	.LASF9:
- 731 0160 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 731 0175 6C6F6E67 		.ascii	"long long unsigned int\000"
  731      206C6F6E 
  731      6720756E 
  731      7369676E 
  731      65642069 
  732              	.LASF11:
- 733 0177 696E7431 		.ascii	"int16_t\000"
+ 733 018c 696E7431 		.ascii	"int16_t\000"
  733      365F7400 
  734              	.LASF17:
- 735 017f 785F7261 		.ascii	"x_rad\000"
+ 735 0194 785F7261 		.ascii	"x_rad\000"
  735      6400
  736              	.LASF16:
- 737 0185 73697A65 		.ascii	"sizetype\000"
+ 737 019a 73697A65 		.ascii	"sizetype\000"
  737      74797065 
  737      00
  738              	.LASF8:
- 739 018e 6C6F6E67 		.ascii	"long long int\000"
+ 739 01a3 6C6F6E67 		.ascii	"long long int\000"
  739      206C6F6E 
  739      6720696E 
  739      7400
  740              	.LASF15:
- 741 019c 63686172 		.ascii	"char\000"
+ 741 01b1 63686172 		.ascii	"char\000"
  741      00
  742              	.LASF2:
- 743 01a1 73686F72 		.ascii	"short int\000"
+ 743 01b6 73686F72 		.ascii	"short int\000"
  743      7420696E 
  743      7400
  744              	.LASF32:
- 745 01ab 5F5A4E31 		.ascii	"_ZN11sensor_dataC4Ev\000"
+ 745 01c0 5F5A4E31 		.ascii	"_ZN11sensor_dataC4Ev\000"
  745      3173656E 
  745      736F725F 
  745      64617461 
  745      43344576 
  746              	.LASF28:
- 747 01c0 474E5520 		.ascii	"GNU C++ 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 747 01d5 474E5520 		.ascii	"GNU C++ 5.4.1 20160609 (release) [ARM/embedded-5-br"
  747      432B2B20 
  747      352E342E 
  747      31203230 
  747      31363036 
- 748 01f3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 748 0208 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
  748      20726576 
  748      6973696F 
  748      6E203233 
  748      37373135 
- 749 0226 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 749 023b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  749      66756E63 
-ARM GAS  C:\Users\hejmi\AppData\Local\Temp\ccRxpvG0.s 			page 16
+ARM GAS  C:\Users\SYFO\AppData\Local\Temp\ccpuYiSa.s 			page 16
 
 
  749      74696F6E 
  749      2D736563 
  749      74696F6E 
  750              	.LASF6:
- 751 024e 6C6F6E67 		.ascii	"long int\000"
+ 751 0263 6C6F6E67 		.ascii	"long int\000"
  751      20696E74 
  751      00
  752              	.LASF20:
- 753 0257 6779726F 		.ascii	"gyro_data\000"
+ 753 026c 6779726F 		.ascii	"gyro_data\000"
  753      5F646174 
  753      6100
  754              	.LASF0:
- 755 0261 7369676E 		.ascii	"signed char\000"
+ 755 0276 7369676E 		.ascii	"signed char\000"
  755      65642063 
  755      68617200 
  756              	.LASF18:
- 757 026d 795F7261 		.ascii	"y_rad\000"
+ 757 0282 795F7261 		.ascii	"y_rad\000"
  757      6400
  758              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

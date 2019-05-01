@@ -43,6 +43,13 @@ Gyro::~Gyro(){
 	delete sensordata_;
 };
 
+int Gyro::hasFallen()
+{
+	getAccData();
+	//return 1;
+	return acceldata_->z_G < 0 ? 1 : 0;
+}
+
 void Gyro::initGyro()
 {
     //Initializing MPU6050 -- Might need some tweaking
