@@ -51,7 +51,13 @@
 <v>Gyrosensor\GyrosensorProject\GyrosensorProject.cydwr\EEPROM</v>
 <v>Gyrosensor\GyrosensorProject\Header Files</v>
 <v>Gyrosensor\GyrosensorProject\Header Files\cyapicallbacks.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\Gyro.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\GyroDefs.h</v>
+<v>Gyrosensor\GyrosensorProject\Header Files\i2c.h</v>
 <v>Gyrosensor\GyrosensorProject\Source Files</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\Gyro.c</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\GyroDefs.c</v>
+<v>Gyrosensor\GyrosensorProject\Source Files\i2c.c</v>
 <v>Gyrosensor\GyrosensorProject\Source Files\main.c</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5</v>
@@ -78,10 +84,6 @@
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cyfitter_cfg.c</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cyfitter_cfg.h</v>
 <v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cyfittergnu.inc</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cyfitteriar.inc</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cyfitterrv.inc</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\cymetadata.c</v>
-<v>Gyrosensor\GyrosensorProject\Generated_Source\PSoC5\project.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -156,6 +158,9 @@
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Gyro.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\GyroDefs.lst</v>
+<v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\i2c.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
 <v>Gyrosensor\GyrosensorProject\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
@@ -190,11 +195,6 @@
 <v>Gyrosensor\GyrosensorProject\PSoC 5LP Architecture TRM</v>
 <v>Gyrosensor\GyrosensorProject\CY8C58LP Family Datasheet</v>
 <v>Gyrosensor\GyrosensorProject\System Reference Guides</v>
-<v>Gyrosensor\GyrosensorProject\System Reference Guides\cy_boot_v5_70</v>
-<v>Gyrosensor\GyrosensorProject\cy_pins_v2_20</v>
-<v>Gyrosensor\GyrosensorProject\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Gyrosensor\GyrosensorProject\I2C_v3_50.pdf</v>
-<v>Gyrosensor\GyrosensorProject\UART_v2_50.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Gyrosensor</v>
@@ -202,11 +202,6 @@
 <v>Gyrosensor\GyrosensorProject\PSoC 5LP Architecture TRM</v>
 <v>Gyrosensor\GyrosensorProject\CY8C58LP Family Datasheet</v>
 <v>Gyrosensor\GyrosensorProject\System Reference Guides</v>
-<v>Gyrosensor\GyrosensorProject\System Reference Guides\cy_boot_v5_70</v>
-<v>Gyrosensor\GyrosensorProject\cy_pins_v2_20</v>
-<v>Gyrosensor\GyrosensorProject\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Gyrosensor\GyrosensorProject\I2C_v3_50.pdf</v>
-<v>Gyrosensor\GyrosensorProject\UART_v2_50.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -218,6 +213,7 @@
 <OpenDocs>
 <name v=".\GyrosensorProject.cydsn\main.c" />
 <name v=".\GyrosensorProject.cydsn\GyrosensorProject.cydwr" />
+<name v=".\GyrosensorProject.cydsn\Gyro.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -225,7 +221,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1287, 688" SelectedTabbedMdiWindow="1edea7ee-9f06-4953-9ad8-c8d4c2b40287"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4b092cf8-2597-4e9e-899e-42c869ca2181" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\main.c" Guid="8b1c4304-1854-494b-8033-5a7555f4daf0" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\GyrosensorProject.cydwr" Guid="1edea7ee-9f06-4953-9ad8-c8d4c2b40287" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1476, 697" SelectedTabbedMdiWindow="971065f0-d956-4a1f-a3ca-74c648396a41"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4b092cf8-2597-4e9e-899e-42c869ca2181" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\main.c" Guid="8b1c4304-1854-494b-8033-5a7555f4daf0" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\GyrosensorProject.cydwr" Guid="1edea7ee-9f06-4953-9ad8-c8d4c2b40287" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\Gyro.c" Guid="971065f0-d956-4a1f-a3ca-74c648396a41" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
