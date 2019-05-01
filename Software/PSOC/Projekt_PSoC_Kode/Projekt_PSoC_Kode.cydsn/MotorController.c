@@ -91,7 +91,15 @@ void MotorController::Stop(void)
 
 void MotorController::Control(char dir)
 {
-    setPower(getPower()+1);    
+    if (power_ < 25)
+    {
+        setPower(25); 
+    }
+    else
+    {
+        setPower(getPower() + 10);
+    }
+    setOldPower();
     if (dir == 'f')
     {
         GoForward(power_);
@@ -117,9 +125,13 @@ int MotorController::getPower(void) const
 
 void MotorController::setPower(int power)
 {
-    if (power_ > 100)
+    if (power > 100)
     {
         power_ = 100; 
+    }
+    else if (power <= 0)
+    {
+        power_ = 0;
     }
     else
     {
@@ -132,9 +144,9 @@ int MotorController::getOldPower(void) const
     return oldpower_;
 }
 
-void MotorController::setOldPower(int power)
+void MotorController::setOldPower(void)
 {
-    oldpower_ = power;
+    oldpower_ = power_;
 }
       
 void MotorController::setLeftPWM(int pwm)

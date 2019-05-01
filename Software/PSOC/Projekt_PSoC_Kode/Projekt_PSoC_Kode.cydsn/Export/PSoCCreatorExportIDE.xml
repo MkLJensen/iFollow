@@ -37,14 +37,14 @@
       <Folder BuildType="STRICT" Path="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn">
         <Files Root="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
-          <File BuildType="BUILD" Toolchain="">RpiUart.c</File>
+          <File BuildType="BUILD" Toolchain="">RpiSPI.c</File>
           <File BuildType="BUILD" Toolchain="">PIDcontroller.c</File>
           <File BuildType="BUILD" Toolchain="">MotorController.c</File>
           <File BuildType="BUILD" Toolchain="">Switches.c</File>
           <File BuildType="BUILD" Toolchain="">LED.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\ToF\Design01.cydsn\ToF.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
-          <File BuildType="BUILD" Toolchain="">RpiUart.h</File>
+          <File BuildType="BUILD" Toolchain="">RpiSPI.h</File>
           <File BuildType="BUILD" Toolchain="">PIDcontroller.h</File>
           <File BuildType="BUILD" Toolchain="">MotorController.h</File>
           <File BuildType="BUILD" Toolchain="">Switches.h</File>

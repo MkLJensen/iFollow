@@ -18,20 +18,20 @@ extern "C"
 }
 #endif
 #include "MotorController.h"
-#include "RpiUart.h"
+#include "RpiSPI.h"
 #include "PIDcontroller.h"
 #include "LED.h"
 #include "Switches.h"
 #include "ToF.h"
 
-CY_ISR_PROTO(isr_handler);
+CY_ISR_PROTO(isr_spi_handler);
 CY_ISR_PROTO(PowerSwitch_Handler);
 CY_ISR_PROTO(FollowSwitch_Handler);
 CY_ISR_PROTO(Control_timer_isr);
 
 uint8_t byteR = 0;
-ToF Sensor;
-RpiUart UARTcontroller;
+
+RpiSPI SPIcontroller;
 MotorController Motor;
 Switches Switchcontroller;
 
@@ -40,11 +40,9 @@ enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4};
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */ 
-    
-    /*Start kom med ToF
-    
+       
     SPIS_Start();
-    isr_1_StartEx(isr_handler); */
+    isr_spi_StartEx(isr_spi_handler); 
     
     /*Stop kom med ToF
     
@@ -53,11 +51,14 @@ int main(void)
     
     Power_isr_StartEx(PowerSwitch_Handler);
     Follow_isr_StartEx(FollowSwitch_Handler);
+    Motor_timer_isr_StartEx(Control_timer_isr);
     
     LED Ledcontrol;
     PIDcontroller PIDcontrol(0.5, 0.01, 0.01, 50);
     
     UART_1_Start();
+    
+    UART_1_PutString("LulUmomGay    ");
     
     uint8_t Mode = Off; 
    
@@ -71,12 +72,12 @@ int main(void)
         {
             Mode = Off;
         }
-        if (Mode == Sleep && UARTcontroller.ReadData(&Motor) == 'o')
+        if (Mode == Sleep && SPIcontroller.ReadData(&Motor) == 'o')
         {
             Mode = Control;
             Timer_1_Start();
         }
-        else if (Mode == Control && UARTcontroller.ReadData(&Motor) == 'c')
+        else if (Mode == Control && SPIcontroller.ReadData(&Motor) == 'c')
         {
             Mode = Sleep;
             Timer_1_Stop();
@@ -122,7 +123,7 @@ int main(void)
                 Ledcontrol.turnOffLed('r');
                 Ledcontrol.blinkLed('g');
                 //uint8_t Data[7] = {"Wallah"};
-                //UARTcontroller.TransmitData(Data, sizeof(Data)/sizeof(uint8_t));
+                //SPIcontroller.TransmitData(Data, sizeof(Data)/sizeof(uint8_t));
             }
             break;
             default :
@@ -133,10 +134,10 @@ int main(void)
         }
     }
 }
-CY_ISR(isr_handler)
+CY_ISR(isr_spi_handler)
 {
-    byteR = SPIS_ReadRxData();                                          // Gemmer aflæsning af RX-buffer
-    Sensor.handleByte(byteR);
+    //byteR = SPIS_ReadRxData();                                          // Gemmer aflæsning af RX-buffer
+    //Sensor.handleByte(byteR);
 }
 
 CY_ISR(PowerSwitch_Handler)
@@ -153,8 +154,26 @@ CY_ISR(Control_timer_isr)
 {
     if (Motor.getOldPower() == Motor.getPower())
     {
-        Motor.setPower(0);
-        Motor.setOldPower(0);
+        
+        //if (MotorPwr >= 10)
+        {
+            Motor.setPower(Motor.getPower()-10); 
+        }
+        /*else if(MotorPwr < 10 && MotorPwr > 0)
+        {
+            Motor.setPower(Motor.getPower()-1);
+        }*/
+        Motor.setOldPower();
+        if (Motor.getPower() > 0)
+        {
+            PWM_1_WriteCompare1(500+4*Motor.getPower());
+            PWM_1_WriteCompare2(500+4*Motor.getPower());
+        }
+        else  
+        {
+            PWM_1_WriteCompare1(0);
+            PWM_1_WriteCompare2(0);
+        }
     }
 }
 

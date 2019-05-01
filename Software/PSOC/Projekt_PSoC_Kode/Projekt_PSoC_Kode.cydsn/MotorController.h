@@ -49,7 +49,7 @@ public:
    int getPower(void) const;
    void setPower(int);
    int getOldPower(void) const;
-   void setOldPower(int);
+   void setOldPower(void);
 
 private:
     int Leftpwm_ = 0, Rightpwm_ = 0;
