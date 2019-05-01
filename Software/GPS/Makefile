@@ -4,7 +4,7 @@ OBJECTS=$(addprefix $(BUILD_DIR)/,$(SOURCES:.cpp=.o))
 DEPS=$(addprefix $(BUILD_DIR)/,$(SOURCES:.cpp=.d))
 EXE=$(BUILD_BIN)/prog
 CXXFLAGS=-I.
-LDFLAGS=
+LDFLAGS=-L/usr/lib/arm-linux-gnueabihf -lmariadbclient -lpthread -lz -lm -ldl
 
 #----------Valg imellem host og target--------
 # Making for host
