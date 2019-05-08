@@ -13,6 +13,7 @@
     class GPS : public NMEA_GPGGA
     {
     public:
+        GPS(void);
         GPS(std::string);
         void updateCoordinates(void);
         ~GPS();

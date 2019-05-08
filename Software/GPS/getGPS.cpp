@@ -1,5 +1,10 @@
 #include "getGPS.hpp"
 
+GPS::GPS(void)
+{
+    fileDescrip_ = "/dev/ttyAMA0";
+}
+
 
 GPS::GPS(std::string str)
 {
