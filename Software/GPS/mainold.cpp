@@ -2,9 +2,14 @@
 #include <iostream>
 
 //SQL Includes
-#include "mySQLGPS.hpp"
 
 
+#include <mysql_connection.h>
+
+#include <cppconn/driver.h>
+#include <cppconn/exception.h>
+#include <cppconn/resultset.h>
+#include <cppconn/statement.h>
 
 #define DBHOST "tcp://10.192.139.5:3306"
 #define USER "Jesus"
@@ -12,19 +17,28 @@
 #define DATABASE "DatabaseGPS"
 
 
-
 int main(void)
 {
     GPS myGPS("/dev/ttyAMA0");
 
     //SQL Declerations
-    mySQLGPS sqlGPS(DBHOST, USER, PASSWORD, DATABASE);
+    sql::Driver *driver;
+    sql::Connection *conn;
+    sql::Statement *stmt;
+    sql::ResultSet *res;
 
-    /*Updating Coordinates */
-    myGPS.updateCoordinates();
+    /*Create a Connection*/
+    driver = get_driver_instance();
+    conn = driver->connect(DBHOST,USER,PASSWORD);
 
-    /* Making QUERY String */
-    char executeQueryChar[300];
+    /*Connecting to mySQL database */
+    conn->setSchema(DATABASE);
+
+    char executeQueryChar[1000];
+
+    myGPS.updateCordinates();
+
+    
     int n = sprintf(executeQueryChar,"INSERT INTO `GPSData`(`nmeaType`, `fixTime`, `Latitude`, `Longitude`, `fixQuality`, `numOfSats`, `horizDilofPos`, `Altitude`, `heightofGeoID`, `checkSum`) VALUES (`%s`,`%s`,`%s`,`%s`,`%s`,`%s`,`%s`,`%s`,`%s`,`%s`);",
         myGPS.getGpsType().c_str(),
         myGPS.getfixTime().c_str(),
@@ -37,15 +51,16 @@ int main(void)
         myGPS.gethOgGeoid().c_str(),
         myGPS.getcheckSum().c_str()
         );
+
+    std::string executeQueryString = executeQueryChar;
     
-    /* Connecting to DATABASE */
-    sqlGPS.mysql_connect();
+    stmt = conn->createStatement();
+    res = stmt->executeQuery(executeQueryString);
 
-    /* Sending QUERY */
-    sqlGPS.mysql_sendQUERY(executeQueryChar);
 
-    /* Closing Connecting to SQL Server */
-    sqlGPS.mysql_disconnect();
+    delete res;
+    delete stmt;
+    delete conn;
 
     return 0;
 }

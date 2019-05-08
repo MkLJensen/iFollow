@@ -14,7 +14,7 @@
     {
     public:
         GPS(std::string);
-        void updateCordinates(void);
+        void updateCoordinates(void);
         ~GPS();
     private:
         std::string fileDescrip_;

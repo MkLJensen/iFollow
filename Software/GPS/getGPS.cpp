@@ -10,7 +10,7 @@ GPS::~GPS(void)
 {
 }
 
-void GPS::updateCordinates(void)
+void GPS::updateCoordinates(void)
 {
     char bufferChar_[75]; // buffer for string
     size_t iFor = 0;
