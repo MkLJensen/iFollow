@@ -76,8 +76,6 @@
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\sclk_aliases.h" value="HEADER;;;;;sclk" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\sclk.c" value="SOURCE_C;CortexM3;;;;sclk" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\sclk.h" value="HEADER;;;;;sclk" />
-  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\isr_spi.c" value="SOURCE_C;CortexM3;;;;isr_spi" />
-  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\isr_spi.h" value="HEADER;;;;;isr_spi" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\ss_aliases.h" value="HEADER;;;;;ss" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\ss.c" value="SOURCE_C;CortexM3;;;;ss" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\ss.h" value="HEADER;;;;;ss" />
@@ -94,11 +92,6 @@
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\SCL_1_aliases.h" value="HEADER;;;;;SCL_1" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\SCL_1.c" value="SOURCE_C;CortexM3;;;;SCL_1" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\SCL_1.h" value="HEADER;;;;;SCL_1" />
-  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\Clock_3.c" value="SOURCE_C;CortexM3;;;;Clock_3" />
-  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\Clock_3.h" value="HEADER;;;;;Clock_3" />
-  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\RST_1_aliases.h" value="HEADER;;;;;RST_1" />
-  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\RST_1.c" value="SOURCE_C;CortexM3;;;;RST_1" />
-  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\RST_1.h" value="HEADER;;;;;RST_1" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\I2C_1.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\I2C_1.h" value="HEADER;;;;;I2C_1" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\I2C_1_BOOT.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
@@ -111,6 +104,8 @@
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\UART_1_IntClock.h" value="HEADER;;;;;UART_1_IntClock" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\SPIS_IntClock.c" value="SOURCE_C;CortexM3;;;;SPIS_IntClock" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\SPIS_IntClock.h" value="HEADER;;;;;SPIS_IntClock" />
+  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
+  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cy_em_eeprom.h" value="HEADER;;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\Cm3RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\Cm3Start.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
@@ -138,8 +133,6 @@
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cmsis_armcc.h" value="HEADER;;;;;cy_boot" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cmsis_gcc.h" value="HEADER;;;;;cy_boot" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cmsis_compiler.h" value="HEADER;;;;;cy_boot" />
-  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
-  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cy_em_eeprom.h" value="HEADER;;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />

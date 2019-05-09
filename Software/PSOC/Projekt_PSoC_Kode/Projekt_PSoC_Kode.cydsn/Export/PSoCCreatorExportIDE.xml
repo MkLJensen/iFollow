@@ -42,14 +42,18 @@
           <File BuildType="BUILD" Toolchain="">MotorController.c</File>
           <File BuildType="BUILD" Toolchain="">Switches.c</File>
           <File BuildType="BUILD" Toolchain="">LED.c</File>
-          <File BuildType="BUILD" Toolchain="">..\..\ToF\Design01.cydsn\ToF.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\Gyrosensor\GyrosensorProject.cydsn\GyroDefs.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\Gyrosensor\GyrosensorProject.cydsn\i2c.c</File>
+          <File BuildType="BUILD" Toolchain="">Gyro.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">RpiSPI.h</File>
           <File BuildType="BUILD" Toolchain="">PIDcontroller.h</File>
           <File BuildType="BUILD" Toolchain="">MotorController.h</File>
           <File BuildType="BUILD" Toolchain="">Switches.h</File>
           <File BuildType="BUILD" Toolchain="">LED.h</File>
-          <File BuildType="BUILD" Toolchain="">..\..\ToF\Design01.cydsn\ToF.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\Gyrosensor\GyrosensorProject.cydsn\Gyro.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\Gyrosensor\GyrosensorProject.cydsn\GyroDefs.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\Gyrosensor\GyrosensorProject.cydsn\i2c.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Generated_Source\PSoC5">
@@ -73,8 +77,22 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_SLAVE.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_MASTER.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_PVT.h</File>
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">Generated_Source\PSoC5\cm3gcc.ld</File>
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">Generated_Source\PSoC5\Cm3RealView.scat</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Cm3Start.c</File>
@@ -151,8 +169,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\sclk_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\sclk.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\sclk.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ss_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ss.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ss.h</File>

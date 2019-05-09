@@ -26,20 +26,26 @@ extern "C"
 
 #include "MotorController.h"
 
-class PIDcontroller 
+class PIDcontroller : public MotorController
 {
 public:
-   PIDcontroller(float P, float I, float D, float goal);
+   PIDcontroller(float a0, float a1, float b1, float reference, MotorController *MotorPtr);
    ~PIDcontroller();      
-   void setGoal(float Goal);
-   float getGoal(void) const;
+   void setReference(float reference);
+   float getReference(void) const;
+   void setMeasurement(float sensorData);
+   float getMeasurement(void) const;
    void calculateError(float Signal);
-   float calculateControl(MotorController * MotorPtr);
+   float calculateControl();
+   void setControlSignal(float control);
+   void setControl();
 
 private:
-   float kp_ = 0, ki_ = 0, kd_ = 0;
-   float goal_ = 0;
-   float error_ = 0, last_error_ = 0, integral_ = 0, derivative_ = 0, control_ = 0;
+   float a0_ = 0, a1_ = 0, b1_ = 0;
+   float ref_ = 0, data_ = 0;
+   float error_ = 0, old_error_ = 0;
+   float control_ = 0, old_control_ = 0;
+   MotorController *MotorPtr_;
 
 };
 

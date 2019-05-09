@@ -14,44 +14,54 @@
 
 #include "PIDcontroller.h"
 
-PIDcontroller::PIDcontroller(float P, float I, float D, float goal)
+PIDcontroller::PIDcontroller(float a0, float a1, float b1, float reference, MotorController *MotorPtr)
 {
-    kp_ = P;
-    ki_ = I;
-    kd_ = D;
-    goal_ = goal;
+    *MotorPtr_ = *MotorPtr;
+    a0_ = a0;
+    a1_ = a1;
+    b1_ = b1;
 }
 
 PIDcontroller::~PIDcontroller()
 {
 }
 
-void PIDcontroller::setGoal(float goal)
+void PIDcontroller::setReference(float reference)
 {
-    goal_ = goal;
+    ref_ = reference;
 }
 
-float PIDcontroller::getGoal(void) const
+float PIDcontroller::getReference(void) const
 {
-    return goal_;
+    return ref_;
+}
+
+void PIDcontroller::setMeasurement(float sensorData)
+{
+    data_ = sensorData;
+}
+
+float PIDcontroller::getMeasurement(void) const
+{
+    return data_;
 }
 
 void PIDcontroller::calculateError(float Signal)
 {
     /*Calculate Error (P)*/
-	error_ = goal_ - Signal;
+	error_ = ref_ - data_;
 }
 
-float PIDcontroller::calculateControl(MotorController * MotorPtr)
+float PIDcontroller::calculateControl()
 {
     /*Calculate integral (I)*/
-	integral_ += error_;
+	//integral_ += error_;
 
     /*Calculate the derivative (D)*/
-	derivative_ = error_ - last_error_;
+	//derivative_ = error_ - last_error_;
 
 	/*Calculate the control variable*/
-	control_ = (kp_*error_) + (ki_*integral_) + (kd_*derivative_);
+	control_ = (b1_*old_control_) + (a0_*error_) + (a1_*old_error_); 
     
     /*Limit control*/
 	if (control_ > 100) 
@@ -65,12 +75,15 @@ float PIDcontroller::calculateControl(MotorController * MotorPtr)
     
     if (control_ >= 0)
     {
-        MotorPtr->GoForward(control_);
+        MotorPtr_->GoForward(control_);
     }
     else
     {
-        MotorPtr->GoBackward(control_*-1);
+        MotorPtr_->GoBackward(control_*-1);
     }
+    
+    old_error_ = error_;
+    old_control_ = control_;
     
     return control_;
 }

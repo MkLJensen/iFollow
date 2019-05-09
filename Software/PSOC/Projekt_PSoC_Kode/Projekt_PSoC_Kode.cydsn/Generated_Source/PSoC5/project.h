@@ -50,7 +50,6 @@
 #include "mosi.h"
 #include "sclk_aliases.h"
 #include "sclk.h"
-#include "isr_spi.h"
 #include "ss_aliases.h"
 #include "ss.h"
 #include "timer_clock.h"
@@ -60,13 +59,11 @@
 #include "SDA_1.h"
 #include "SCL_1_aliases.h"
 #include "SCL_1.h"
-#include "Clock_3.h"
-#include "RST_1_aliases.h"
-#include "RST_1.h"
 #include "I2C_1.h"
 #include "I2C_1_PVT.h"
 #include "UART_1_IntClock.h"
 #include "SPIS_IntClock.h"
+#include "cy_em_eeprom.h"
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"
 #include "CyFlash.h"
@@ -75,7 +72,6 @@
 #include "cyPm.h"
 #include "CySpc.h"
 #include "cytypes.h"
-#include "cy_em_eeprom.h"
 
 /*[]*/
 

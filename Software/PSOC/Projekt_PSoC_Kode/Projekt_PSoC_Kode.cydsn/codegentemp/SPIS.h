@@ -170,7 +170,7 @@ extern uint8 SPIS_initVar;
                                             SPIS_INT_ON_BYTE_COMP)
 
 #define SPIS_INT_ON_RX_EMPTY     (uint8)(0u << SPIS_STS_RX_FIFO_EMPTY_SHIFT)
-#define SPIS_INT_ON_RX_NOT_EMPTY (uint8)(1u << SPIS_STS_RX_FIFO_NOT_EMPTY_SHIFT)
+#define SPIS_INT_ON_RX_NOT_EMPTY (uint8)(0u << SPIS_STS_RX_FIFO_NOT_EMPTY_SHIFT)
 #define SPIS_INT_ON_RX_OVER      (uint8)(0u << SPIS_STS_RX_FIFO_OVERRUN_SHIFT)
 #define SPIS_INT_ON_RX_FULL      (uint8)(0u << SPIS_STS_RX_FIFO_FULL_SHIFT)
 

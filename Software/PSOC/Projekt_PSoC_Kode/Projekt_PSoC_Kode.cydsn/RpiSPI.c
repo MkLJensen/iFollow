@@ -16,9 +16,11 @@
 
 extern int power_;
 
-RpiSPI::RpiSPI()
+RpiSPI::RpiSPI(Gyro * Gyro, MotorController * Motor)
 {
-    
+    MotorPtr_ = Motor;
+    GyroPtr_ = Gyro;
+    SPIS_WriteTxDataZero(GyroState_);
 }
 
 RpiSPI::~RpiSPI()
@@ -32,47 +34,54 @@ void RpiSPI::TransmitData(uint8_t data[], uint8_t size)
     {       
         UART_1_PutChar(data[i]);
     }
-    
 }
 
-uint8_t RpiSPI::ReadData(MotorController * motorPtr)
+uint8_t RpiSPI::ReadData()
 {     
-    if (SPIS_ReadTxStatus() == SPIS_STS_TX_FIFO_EMPTY)
+    int State = GyroPtr_->hasFallen();
+    
+    if (SPIS_GetTxBufferSize() == 0)
     {
-        //GET SENSOR DATA!!!!
-        SPIS_WriteTxData(0/*SENSORDATA*/);
+        GyroState_ = State;
+        SPIS_WriteTxData(GyroState_);
         
     }
-    //else if (//GET SONSOR DATA != OLD SENSOR DATA)
+    else if (State != GyroState_)
     {
         SPIS_ClearTxBuffer();
-        SPIS_WriteTxData(1/*SENSORDATA*/);
+        GyroState_ = State;
+        SPIS_WriteTxData(State);
     }
-    if(SPIS_ReadRxStatus() == SPIS_STS_RX_FIFO_NOT_EMPTY)
+    if(SPIS_GetRxBufferSize() > 0)
     {
-        int DataLen = 10;
-            uint8_t byteReceived[DataLen];
+        uint8_t byteReceived;
+        byteReceived = SPIS_ReadRxData();
+        /*uint8_t byteReceived[SPIS_GetRxBufferSize()];
         int i = 0;
-        while(SPIS_ReadRxStatus() != SPIS_STS_RX_FIFO_EMPTY)        
+        while(SPIS_GetRxBufferSize() != 0)        
         {
-            byteReceived[i] = UART_1_ReadRxData();
+            byteReceived[i] = SPIS_ReadRxData();
             i++;
-        }
-        return handleByteReceived(byteReceived, motorPtr);
+        }*/
+        
+        UART_1_PutString("Modtaget char er: ");
+        UART_1_PutChar(byteReceived);
+        UART_1_PutString("\r\n");
+        return handleByteReceived(byteReceived);
     }
     return 0;
     
 }
 
-uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived[], MotorController * MotorPtr)
+uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived)
 {
-    switch(byteReceived[0])
+    switch(byteReceived)
     {
         case 'f' :
         {
             if (ControlModeActive == true)
             {
-                MotorPtr->Control(byteReceived[0]);
+                MotorPtr_->Control(byteReceived);
             }
             return 0;
         }
@@ -81,7 +90,7 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived[], MotorController * Mot
         {  
             if (ControlModeActive == true)
             {
-                MotorPtr->Control(byteReceived[0]);
+                MotorPtr_->Control(byteReceived);
             }
             return 0;
         }
@@ -90,7 +99,7 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived[], MotorController * Mot
         {
             if (ControlModeActive == true)
             {
-                MotorPtr->Control(byteReceived[0]);
+                MotorPtr_->Control(byteReceived);
             }
             return 0;
         }
@@ -99,7 +108,7 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived[], MotorController * Mot
         {
             if (ControlModeActive == true)
             {
-                MotorPtr->Control(byteReceived[0]);
+                MotorPtr_->Control(byteReceived);
             }
             return 0;
         }
@@ -113,7 +122,7 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived[], MotorController * Mot
          case 'c' :
         {
             ControlModeActive = false;
-            MotorPtr->Stop();
+            MotorPtr_->Stop();
             return 'c';
         }
         break;        

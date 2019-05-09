@@ -26,18 +26,22 @@ extern "C"
 #define false 0
 
 #include "MotorController.h"
+#include "Gyro.h"
 
 class RpiSPI 
 {
 public:
-   RpiSPI();
+   RpiSPI(Gyro * GyroPtr, MotorController * MotorPtr);
    ~RpiSPI();
-   uint8_t ReadData(MotorController * motorPtr);
-   uint8_t handleByteReceived(uint8_t byteReceived[], MotorController * motorPtr);
+   uint8_t ReadData();
+   uint8_t handleByteReceived(uint8_t byteReceived);
    void TransmitData(uint8_t data[], uint8_t size);
 
 private:
    uint8_t ControlModeActive = false;
+   MotorController * MotorPtr_;
+   Gyro * GyroPtr_;
+   int GyroState_ = 0;
     
  };
 

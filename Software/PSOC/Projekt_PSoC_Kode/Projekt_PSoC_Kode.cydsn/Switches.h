@@ -35,9 +35,7 @@ public:
 
 private:
    bool PowerSwitch = false;
-   //bool PowerSwitchPressed = false;
    bool FollowSwitch = false;
-   //bool FollowSwitchPressed = false;
     
 };
 
