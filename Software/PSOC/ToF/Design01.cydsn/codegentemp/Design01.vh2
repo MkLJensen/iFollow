@@ -2,7 +2,7 @@
 --	Conversion of Design01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Apr 16 15:16:56 2019
+--	Wed May 01 14:06:47 2019
 --
 
 USE cypress.cypress.all;
@@ -87,7 +87,7 @@ SIGNAL \SPIS:BSPIS:count_1\ : bit;
 SIGNAL \SPIS:BSPIS:count_0\ : bit;
 SIGNAL \SPIS:BSPIS:dpcounter_zero\ : bit;
 SIGNAL Net_31 : bit;
-SIGNAL Net_15 : bit;
+SIGNAL Net_52 : bit;
 SIGNAL \SPIS:BSPIS:mosi_tmp\ : bit;
 SIGNAL \SPIS:BSPIS:mosi_to_dp\ : bit;
 SIGNAL \SPIS:BSPIS:reset\ : bit;
@@ -879,7 +879,7 @@ miso:cy_psoc3_pins_v1_10
 		clock=>\SPIS:BSPIS:clock_fin\,
 		status=>(\SPIS:BSPIS:dpMOSI_fifo_full_reg\, \SPIS:BSPIS:rx_buf_overrun\, \SPIS:BSPIS:rx_status_4\, \SPIS:BSPIS:dpMOSI_fifo_not_empty\,
 			zero, zero, zero),
-		interrupt=>Net_15);
+		interrupt=>Net_52);
 \SPIS:BSPIS:sR8:Dp:u0\:cy_psoc3_dp
 	GENERIC MAP(cy_dpconfig=>"0000000000000000000000000000000000000000000000000000000000000000000000010100000000000001110000000000000000000000000000000000000011111111111111111111111111111111000000000010001000001100111100000001000010001100",
 		d0_init=>"00000000",
@@ -966,12 +966,16 @@ miso:cy_psoc3_pins_v1_10
 		pi=>(zero, zero, zero, zero,
 			zero, zero, zero, zero),
 		po=>open);
+\SPIS:RxInternalInterrupt\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_52);
 \SPIS:IntClock\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"d93e9c45-54c2-47ca-9dae-2e4aa6dff2de/426fcbe0-714d-4404-8fa8-581ff40c30f1",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"50000000",
+		period=>"250000000",
 		is_direct=>'0',
 		is_digital=>'1')
 	PORT MAP(clock_out=>\SPIS:Net_81\,
@@ -1119,7 +1123,7 @@ led:cy_psoc3_pins_v1_10
 isr_1:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_15);
+	PORT MAP(int_signal=>Net_52);
 \UART_1:IntClock\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"b0162966-0060-4af5-82d1-fcb491ad7619/be0a0e37-ad17-42ca-b5a1-1a654d736358",

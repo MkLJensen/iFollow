@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf2ctNb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
   28:Generated_Source\PSoC5/SPIS_1_INT.c **** /*******************************************************************************
   29:Generated_Source\PSoC5/SPIS_1_INT.c **** * Function Name: SPIS_1_TX_ISR
   30:Generated_Source\PSoC5/SPIS_1_INT.c **** *
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 2
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf2ctNb.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPIS_1_INT.c **** * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
   68:Generated_Source\PSoC5/SPIS_1_INT.c ****         /* Component interrupt service code */
   69:Generated_Source\PSoC5/SPIS_1_INT.c **** 
   70:Generated_Source\PSoC5/SPIS_1_INT.c ****         /* See if TX data buffer is not empty and there is space in TX FIFO */
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 3
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf2ctNb.s 			page 3
 
 
   71:Generated_Source\PSoC5/SPIS_1_INT.c ****         while(SPIS_1_txBufferRead != SPIS_1_txBufferWrite)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
  125:Generated_Source\PSoC5/SPIS_1_INT.c **** *  Interrupt Service Routine for RX portion of the SPI Slave.
  126:Generated_Source\PSoC5/SPIS_1_INT.c **** *
  127:Generated_Source\PSoC5/SPIS_1_INT.c **** * Parameters:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 4
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf2ctNb.s 			page 4
 
 
  128:Generated_Source\PSoC5/SPIS_1_INT.c **** *  None.
@@ -217,40 +217,40 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
   60 0006 00000000 		.4byte	.Ldebug_abbrev0
   61 000a 04       		.byte	0x4
   62 000b 01       		.uleb128 0x1
-  63 000c 5B000000 		.4byte	.LASF16
+  63 000c B7000000 		.4byte	.LASF16
   64 0010 0C       		.byte	0xc
   65 0011 37000000 		.4byte	.LASF17
-  66 0015 3B010000 		.4byte	.LASF18
+  66 0015 5B000000 		.4byte	.LASF18
   67 0019 00000000 		.4byte	.Ldebug_ranges0+0
   68 001d 00000000 		.4byte	0
   69 0021 00000000 		.4byte	.Ldebug_line0
   70 0025 02       		.uleb128 0x2
   71 0026 01       		.byte	0x1
   72 0027 06       		.byte	0x6
-  73 0028 99010000 		.4byte	.LASF0
+  73 0028 AA010000 		.4byte	.LASF0
   74 002c 02       		.uleb128 0x2
   75 002d 01       		.byte	0x1
   76 002e 08       		.byte	0x8
-  77 002f 18010000 		.4byte	.LASF1
+  77 002f 74010000 		.4byte	.LASF1
   78 0033 02       		.uleb128 0x2
   79 0034 02       		.byte	0x2
   80 0035 05       		.byte	0x5
-  81 0036 B1010000 		.4byte	.LASF2
+  81 0036 C2010000 		.4byte	.LASF2
   82 003a 02       		.uleb128 0x2
   83 003b 02       		.byte	0x2
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 5
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf2ctNb.s 			page 5
 
 
   84 003c 07       		.byte	0x7
-  85 003d 86010000 		.4byte	.LASF3
+  85 003d 97010000 		.4byte	.LASF3
   86 0041 02       		.uleb128 0x2
   87 0042 04       		.byte	0x4
   88 0043 05       		.byte	0x5
-  89 0044 2B010000 		.4byte	.LASF4
+  89 0044 87010000 		.4byte	.LASF4
   90 0048 02       		.uleb128 0x2
   91 0049 04       		.byte	0x4
   92 004a 07       		.byte	0x7
-  93 004b E9000000 		.4byte	.LASF5
+  93 004b 45010000 		.4byte	.LASF5
   94 004f 02       		.uleb128 0x2
   95 0050 08       		.byte	0x8
   96 0051 05       		.byte	0x5
@@ -258,7 +258,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
   98 0056 02       		.uleb128 0x2
   99 0057 08       		.byte	0x8
  100 0058 07       		.byte	0x7
- 101 0059 FB000000 		.4byte	.LASF7
+ 101 0059 57010000 		.4byte	.LASF7
  102 005d 03       		.uleb128 0x3
  103 005e 04       		.byte	0x4
  104 005f 05       		.byte	0x5
@@ -270,23 +270,23 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
  110 006b 02       		.uleb128 0x2
  111 006c 04       		.byte	0x4
  112 006d 04       		.byte	0x4
- 113 006e 12010000 		.4byte	.LASF9
+ 113 006e 6E010000 		.4byte	.LASF9
  114 0072 02       		.uleb128 0x2
  115 0073 08       		.byte	0x8
  116 0074 04       		.byte	0x4
- 117 0075 34010000 		.4byte	.LASF10
+ 117 0075 90010000 		.4byte	.LASF10
  118 0079 02       		.uleb128 0x2
  119 007a 01       		.byte	0x1
  120 007b 08       		.byte	0x8
- 121 007c 26010000 		.4byte	.LASF11
+ 121 007c 82010000 		.4byte	.LASF11
  122 0080 02       		.uleb128 0x2
  123 0081 08       		.byte	0x8
  124 0082 04       		.byte	0x4
- 125 0083 A5010000 		.4byte	.LASF12
+ 125 0083 B6010000 		.4byte	.LASF12
  126 0087 02       		.uleb128 0x2
  127 0088 04       		.byte	0x4
  128 0089 07       		.byte	0x7
- 129 008a BB010000 		.4byte	.LASF13
+ 129 008a CC010000 		.4byte	.LASF13
  130 008e 04       		.uleb128 0x4
  131 008f 29000000 		.4byte	.LASF14
  132 0093 01       		.byte	0x1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
  138 009f 04       		.uleb128 0x4
  139 00a0 1B000000 		.4byte	.LASF15
  140 00a4 01       		.byte	0x1
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 6
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf2ctNb.s 			page 6
 
 
  141 00a5 90       		.byte	0x90
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
  195 002e 03       		.uleb128 0x3
  196 002f 0E       		.uleb128 0xe
  197 0030 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 7
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf2ctNb.s 			page 7
 
 
  198 0031 0B       		.uleb128 0xb
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
  242      00
  243              	.LASF15:
  244 001b 53504953 		.ascii	"SPIS_1_RX_ISR\000"
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 8
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf2ctNb.s 			page 8
 
 
  244      5F315F52 
@@ -435,86 +435,87 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 1
  248      645F536F 
  248      75726365 
  248      5C50536F 
- 249              	.LASF16:
- 250 005b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 250      43313120 
- 250      352E342E 
- 250      31203230 
- 250      31363036 
- 251 008e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 251      20726576 
- 251      6973696F 
- 251      6E203233 
- 251      37373135 
- 252 00c1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 252      66756E63 
- 252      74696F6E 
- 252      2D736563 
- 252      74696F6E 
- 253              	.LASF5:
- 254 00e9 6C6F6E67 		.ascii	"long unsigned int\000"
- 254      20756E73 
- 254      69676E65 
- 254      6420696E 
- 254      7400
- 255              	.LASF7:
- 256 00fb 6C6F6E67 		.ascii	"long long unsigned int\000"
- 256      206C6F6E 
- 256      6720756E 
- 256      7369676E 
- 256      65642069 
- 257              	.LASF9:
- 258 0112 666C6F61 		.ascii	"float\000"
+ 249              	.LASF18:
+ 250 005b 433A5C55 		.ascii	"C:\\Users\\Mathias\\Desktop\\Uni\\4. Semester\\Proj"
+ 250      73657273 
+ 250      5C4D6174 
+ 250      68696173 
+ 250      5C446573 
+ 251 0088 656B7420 		.ascii	"ekt 4\\iFollow\\Software\\PSOC\\ToF\\Design01.cydsn"
+ 251      345C6946 
+ 251      6F6C6C6F 
+ 251      775C536F 
+ 251      66747761 
+ 252 00b6 00       		.ascii	"\000"
+ 253              	.LASF16:
+ 254 00b7 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 254      43313120 
+ 254      352E342E 
+ 254      31203230 
+ 254      31363036 
+ 255 00ea 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 255      20726576 
+ 255      6973696F 
+ 255      6E203233 
+ 255      37373135 
+ 256 011d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 256      66756E63 
+ 256      74696F6E 
+ 256      2D736563 
+ 256      74696F6E 
+ 257              	.LASF5:
+ 258 0145 6C6F6E67 		.ascii	"long unsigned int\000"
+ 258      20756E73 
+ 258      69676E65 
+ 258      6420696E 
  258      7400
- 259              	.LASF1:
- 260 0118 756E7369 		.ascii	"unsigned char\000"
- 260      676E6564 
- 260      20636861 
- 260      7200
- 261              	.LASF11:
- 262 0126 63686172 		.ascii	"char\000"
- 262      00
- 263              	.LASF4:
- 264 012b 6C6F6E67 		.ascii	"long int\000"
- 264      20696E74 
- 264      00
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\cci3vQr3.s 			page 9
+ 259              	.LASF7:
+ 260 0157 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 260      206C6F6E 
+ 260      6720756E 
+ 260      7369676E 
+ 260      65642069 
+ 261              	.LASF9:
+ 262 016e 666C6F61 		.ascii	"float\000"
+ 262      7400
+ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf2ctNb.s 			page 9
 
 
- 265              	.LASF10:
- 266 0134 646F7562 		.ascii	"double\000"
- 266      6C6500
- 267              	.LASF18:
- 268 013b 433A5C55 		.ascii	"C:\\Users\\Mathias\\Desktop\\Uni\\3. Semester\\GFV\\"
- 268      73657273 
- 268      5C4D6174 
- 268      68696173 
- 268      5C446573 
- 269 0168 45782032 		.ascii	"Ex 2\\SPI_Slave\\Design01.cydsn\000"
- 269      5C535049 
- 269      5F536C61 
- 269      76655C44 
- 269      65736967 
- 270              	.LASF3:
- 271 0186 73686F72 		.ascii	"short unsigned int\000"
- 271      7420756E 
- 271      7369676E 
- 271      65642069 
- 271      6E7400
- 272              	.LASF0:
- 273 0199 7369676E 		.ascii	"signed char\000"
- 273      65642063 
- 273      68617200 
- 274              	.LASF12:
- 275 01a5 6C6F6E67 		.ascii	"long double\000"
- 275      20646F75 
- 275      626C6500 
- 276              	.LASF2:
- 277 01b1 73686F72 		.ascii	"short int\000"
- 277      7420696E 
- 277      7400
- 278              	.LASF13:
- 279 01bb 73697A65 		.ascii	"sizetype\000"
- 279      74797065 
- 279      00
- 280              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 263              	.LASF1:
+ 264 0174 756E7369 		.ascii	"unsigned char\000"
+ 264      676E6564 
+ 264      20636861 
+ 264      7200
+ 265              	.LASF11:
+ 266 0182 63686172 		.ascii	"char\000"
+ 266      00
+ 267              	.LASF4:
+ 268 0187 6C6F6E67 		.ascii	"long int\000"
+ 268      20696E74 
+ 268      00
+ 269              	.LASF10:
+ 270 0190 646F7562 		.ascii	"double\000"
+ 270      6C6500
+ 271              	.LASF3:
+ 272 0197 73686F72 		.ascii	"short unsigned int\000"
+ 272      7420756E 
+ 272      7369676E 
+ 272      65642069 
+ 272      6E7400
+ 273              	.LASF0:
+ 274 01aa 7369676E 		.ascii	"signed char\000"
+ 274      65642063 
+ 274      68617200 
+ 275              	.LASF12:
+ 276 01b6 6C6F6E67 		.ascii	"long double\000"
+ 276      20646F75 
+ 276      626C6500 
+ 277              	.LASF2:
+ 278 01c2 73686F72 		.ascii	"short int\000"
+ 278      7420696E 
+ 278      7400
+ 279              	.LASF13:
+ 280 01cc 73697A65 		.ascii	"sizetype\000"
+ 280      74797065 
+ 280      00
+ 281              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

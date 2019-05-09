@@ -1,5 +1,5 @@
 -- Project:   Design01
--- Generated: 04/16/2019 15:16:58
+-- Generated: 05/01/2019 14:06:48
 -- PSoC Creator  4.2
 
 ENTITY Design01 IS
@@ -34,11 +34,11 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL ClockBlock_PLL_OUT : bit;
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
-    SIGNAL Net_15 : bit;
     SIGNAL Net_30 : bit;
     SIGNAL Net_34 : bit;
     SIGNAL Net_39 : bit;
     SIGNAL Net_51 : bit;
+    SIGNAL Net_52 : bit;
     SIGNAL Net_8 : bit;
     SIGNAL Net_9 : bit;
     ATTRIBUTE udbclken_assigned OF Net_9 : SIGNAL IS "False";
@@ -1443,7 +1443,7 @@ BEGIN
             status_2 => open,
             status_1 => open,
             status_0 => open,
-            interrupt => Net_15);
+            interrupt => Net_52);
 
     \SPIS:BSPIS:sR8:Dp:u0\:datapathcell
         GENERIC MAP(
@@ -1485,12 +1485,20 @@ BEGIN
             f1_blk_stat_comb => \SPIS:BSPIS:dpMOSI_fifo_full\,
             busclk => ClockBlock_BUS_CLK);
 
+    \SPIS:RxInternalInterrupt\:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_52,
+            clock => ClockBlock_BUS_CLK);
+
     isr_1:interrupt
         GENERIC MAP(
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_15,
+            interrupt => Net_52,
             clock => ClockBlock_BUS_CLK);
 
     \UART_1:BUART:sTX:TxShifter:u0\:datapathcell

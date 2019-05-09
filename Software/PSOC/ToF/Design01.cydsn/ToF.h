@@ -36,7 +36,8 @@ public:
     uint16_t sensorRight;
     uint16_t sensorMid;
     uint8_t i;
-    uint8_t byteR;  
+    uint8_t byteR_; 
+    uint8_t sensor1, sensor2, sensor3, sensor4, sensor5, sensor6;
     char string[50];
 };
 

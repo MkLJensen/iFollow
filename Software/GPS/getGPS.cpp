@@ -1,5 +1,10 @@
 #include "getGPS.hpp"
 
+GPS::GPS(void)
+{
+    fileDescrip_ = "/dev/ttyAMA0";
+}
+
 
 GPS::GPS(std::string str)
 {
@@ -10,7 +15,7 @@ GPS::~GPS(void)
 {
 }
 
-void GPS::updateCordinates(void)
+void GPS::updateCoordinates(void)
 {
     char bufferChar_[75]; // buffer for string
     size_t iFor = 0;
