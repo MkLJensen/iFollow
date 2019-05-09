@@ -1,11 +1,12 @@
 #include "mySQLGPS.hpp"
 
-mySQLGPS::mySQLGPS(std::string DBHOST, std::string USER, std::string PASSWORD, std::string DATABASE)
+mySQLGPS::mySQLGPS(std::string DBHOST, std::string USER, std::string PASSWORD, std::string DATABASE, unsigned int PORT)
 {
 	strcpy(DBHOST_,DBHOST.c_str());
 	strcpy(USER_, USER.c_str());
 	strcpy(PASSWORD_, PASSWORD.c_str());
 	strcpy(DATABASE_, DATABASE.c_str());
+	unsigned int PORT_ = PORT;
 }
 
 
@@ -19,7 +20,7 @@ void mySQLGPS::mysql_connect(void)
     		return;
     	}
 
-    	if(mysql_real_connect(mySQL, DBHOST_, USER_, PASSWORD_, DATABASE_, 0 , NULL, 0) ==  NULL )
+    	if(mysql_real_connect(mySQL, DBHOST_, USER_, PASSWORD_, DATABASE_, PORT_ , NULL, 0) ==  NULL )
 		{
 			std::cout << mysql_error(mySQL) << std::endl;
 		}
@@ -39,6 +40,7 @@ void mySQLGPS::mysql_sendQUERY(std::string QUERY)
 		if(mysql_query(mySQL, QUERY.c_str()))
 		{
 			std::cout << mysql_error(mySQL) << std::endl;
+			std::cout << "QUERY ADDED TO DATABASE" << std::endl;
 			return;
 		}
 	}

@@ -1,12 +1,14 @@
 #include "getGPS.hpp"
 #include <iostream>
+#include <unistd.h>
 
 //SQL Includes
 #include "mySQLGPS.hpp"
 
 
 
-#define DBHOST "tcp://10.192.139.5:3306"
+#define DBHOST "localhost"
+#define PORT 0
 #define USER "Jesus"
 #define PASSWORD "pi"
 #define DATABASE "DatabaseGPS"
@@ -15,17 +17,22 @@
 
 int main(void)
 {
+
+    while (1)
+    {
+
     GPS myGPS("/dev/ttyAMA0");
 
     //SQL Declerations
-    mySQLGPS sqlGPS(DBHOST, USER, PASSWORD, DATABASE);
+    mySQLGPS sqlGPS(DBHOST, USER, PASSWORD, DATABASE, PORT);
 
+    
     /*Updating Coordinates */
     myGPS.updateCoordinates();
 
     /* Making QUERY String */
     char executeQueryChar[300];
-    int n = sprintf(executeQueryChar,"INSERT INTO `GPSData`(`nmeaType`, `fixTime`, `Latitude`, `Longitude`, `fixQuality`, `numOfSats`, `horizDilofPos`, `Altitude`, `heightofGeoID`, `checkSum`) VALUES (`%s`,`%s`,`%s`,`%s`,`%s`,`%s`,`%s`,`%s`,`%s`,`%s`);",
+    int n = sprintf(executeQueryChar,"INSERT INTO `GPSData`(`nmeaType`, `fixTime`, `Latitude`, `Longitude`, `fixQuality`, `numOfSats`, `horizDilofPos`, `Altitude`, `heightofGeoID`, `checkSum`) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');",
         myGPS.getGpsType().c_str(),
         myGPS.getfixTime().c_str(),
         myGPS.getLatitude().c_str(),
@@ -38,14 +45,26 @@ int main(void)
         myGPS.getcheckSum().c_str()
         );
     
+
     /* Connecting to DATABASE */
     sqlGPS.mysql_connect();
 
+    std::cout << "Connected to mySQL Server" << std::endl;
+
     /* Sending QUERY */
-    sqlGPS.mysql_sendQUERY(executeQueryChar);
+    sqlGPS.mysql_secure_sendQUERY(executeQueryChar, myGPS);
+
+    std::cout << "QUERY SENT" << std::endl;
 
     /* Closing Connecting to SQL Server */
     sqlGPS.mysql_disconnect();
+
+    std::cout << "Diconnected from mySQL Server" << std::endl;
+   
+    sleep(30);
+
+    }
+
 
     return 0;
 }
