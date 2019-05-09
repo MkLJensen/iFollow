@@ -122,11 +122,11 @@ void read_three_ranges(){
   }
 
   //Split each range_ data into two uint8_t and update to global array
-  sensorData[1] = (range_1>>8);
+  sensorData[1] = (range_1>>8)+1;
   sensorData[2] = range_1;
-  sensorData[3] = (range_2>>8);
+  sensorData[3] = (range_2>>8)+1;
   sensorData[4] = range_2;
-  sensorData[5] = (range_3>>8);
+  sensorData[5] = (range_3>>8)+1;
   sensorData[6] = range_3;
 
   uint16_t toReceive = (sensorData[1]<<8)|sensorData[2]; 
@@ -210,15 +210,22 @@ void loop() {
   SPI.beginTransaction(slaveSettings);
   digitalWrite (slavePin, LOW);
   SPI.transfer(sensorData[0]); // Start byte
+  delay(3);
   SPI.transfer(sensorData[1]); // 8 MSB's of sensor 1
+  delay(3);
   SPI.transfer(sensorData[2]); // 8 LSB's of sensor 1
+  delay(3);
   SPI.transfer(sensorData[3]); // 8 MSB's of sensor 2
+  delay(3);
   SPI.transfer(sensorData[4]); // 8 LSB's of sensor 2
+  delay(3);
   SPI.transfer(sensorData[5]); // 8 MSB's of sensor 3
+  delay(3);
   SPI.transfer(sensorData[6]); // 8 LSB's of sensor 3
+  delay(3);
   digitalWrite (slavePin, HIGH);
   SPI.endTransaction();
   Serial.println("Sending...");
-  delay(100);
+  //delay(10);
 
 }

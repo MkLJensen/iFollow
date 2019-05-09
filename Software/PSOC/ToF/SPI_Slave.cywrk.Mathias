@@ -38,15 +38,6 @@
 <v>SPI_Slave\Design01\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>SPI_Slave</v>
-<v>SPI_Slave\Design01</v>
-<v>SPI_Slave\Design01\TopDesign</v>
-<v>SPI_Slave\Design01\Design01.cydwr</v>
-<v>SPI_Slave\Design01\Design01.cydwr\Pins</v>
-<v>SPI_Slave\Design01\Design01.cydwr\Analog</v>
-<v>SPI_Slave\Design01\Design01.cydwr\Clocks</v>
-<v>SPI_Slave\Design01\Design01.cydwr\Interrupts</v>
-<v>SPI_Slave\Design01\Design01.cydwr\DMA</v>
 <v>SPI_Slave\Design01\Design01.cydwr\System</v>
 <v>SPI_Slave\Design01\Design01.cydwr\Directives</v>
 <v>SPI_Slave\Design01\Design01.cydwr\Flash Security</v>
@@ -75,6 +66,15 @@
 <v>SPI_Slave\Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>SPI_Slave\Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 <v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevice.h</v>
+<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>SPI_Slave\Design01\Generated_Source\PSoC5\cyfitter.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -219,6 +219,7 @@
 <name v=".\Design01.cydsn\ToF.c" />
 <name v=".\Design01.cydsn\main.c" />
 <name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design01.cydsn\Design01.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -226,7 +227,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="939, 521" SelectedTabbedMdiWindow="7db0e0c5-ba69-4f06-ae7c-0fc1e0d2c749"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="45a27879-ae3f-47f5-9889-c19acb24c568" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\ToF.h" Guid="f97c63c0-2685-4c1f-be53-cbd4bdce5b56" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\ToF.c" Guid="e81e8dc0-fd4b-4764-b4bf-b9c0ca1d5654" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\main.c" Guid="7db0e0c5-ba69-4f06-ae7c-0fc1e0d2c749" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="980e42a6-4caf-42e8-8ed4-fe8b750f9049" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="939, 521" SelectedTabbedMdiWindow="7db0e0c5-ba69-4f06-ae7c-0fc1e0d2c749"><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\ToF.h" Guid="f97c63c0-2685-4c1f-be53-cbd4bdce5b56" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\ToF.c" Guid="e81e8dc0-fd4b-4764-b4bf-b9c0ca1d5654" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\main.c" Guid="7db0e0c5-ba69-4f06-ae7c-0fc1e0d2c749" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="980e42a6-4caf-42e8-8ed4-fe8b750f9049" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="45a27879-ae3f-47f5-9889-c19acb24c568" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\Design01.cydwr" Guid="c4693a02-cbe9-4b61-b9a2-d068d627cc12" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
