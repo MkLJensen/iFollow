@@ -37,45 +37,7 @@
 <v>SPI_Slave\Design01\Generated_Source</v>
 <v>SPI_Slave\Design01\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>SPI_Slave\Design01\Design01.cydwr\System</v>
-<v>SPI_Slave\Design01\Design01.cydwr\Directives</v>
-<v>SPI_Slave\Design01\Design01.cydwr\Flash Security</v>
-<v>SPI_Slave\Design01\Design01.cydwr\EEPROM</v>
-<v>SPI_Slave\Design01\Header Files</v>
-<v>SPI_Slave\Design01\Header Files\cyapicallbacks.h</v>
-<v>SPI_Slave\Design01\Header Files\ToF.h</v>
-<v>SPI_Slave\Design01\Source Files</v>
-<v>SPI_Slave\Design01\Source Files\main.c</v>
-<v>SPI_Slave\Design01\Source Files\ToF.c</v>
-<v>SPI_Slave\Design01\Generated_Source</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cy_boot</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\isr_1</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\led</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\miso</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\mosi</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\sclk</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\SPIS</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\SPIS_IntClock</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\ss</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\UART_1</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\UART_1_IntClock</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevice.h</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevice_trm.h</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicegnu.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydeviceiar.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicerv.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydisabledsheets.h</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cyfitter.h</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -84,12 +46,7 @@
 <v>SPI_Slave\Design01\TopDesign</v>
 <v>SPI_Slave\Design01\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>SPI_Slave</v>
-<v>SPI_Slave\Design01</v>
-<v>SPI_Slave\Design01\TopDesign</v>
-<v>SPI_Slave\Design01\TopDesign\TopDesign.cysch</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -135,45 +92,7 @@
 <v>SPI_Slave\Design01\Design01.rpt</v>
 <v>SPI_Slave\Design01\Design01_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>SPI_Slave</v>
-<v>SPI_Slave\Design01</v>
-<v>SPI_Slave\Design01\CortexM3</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\led.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\miso.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\mosi.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\sclk.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_BOOT.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_INT.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_IntClock.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_PM.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ss.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ToF.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.elf</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.hex</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -194,19 +113,7 @@
 <v>SPI_Slave\Design01\SPI_Slave_v2_70.pdf</v>
 <v>SPI_Slave\Design01\UART_v2_50.pdf</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>SPI_Slave</v>
-<v>SPI_Slave\Design01</v>
-<v>SPI_Slave\Design01\PSoC 5LP Architecture TRM</v>
-<v>SPI_Slave\Design01\CY8C58LP Family Datasheet</v>
-<v>SPI_Slave\Design01\System Reference Guides</v>
-<v>SPI_Slave\Design01\System Reference Guides\cy_boot_v5_80</v>
-<v>SPI_Slave\Design01\cy_isr_v1_70.pdf</v>
-<v>SPI_Slave\Design01\cy_pins_v2_20</v>
-<v>SPI_Slave\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>SPI_Slave\Design01\SPI_Slave_v2_70.pdf</v>
-<v>SPI_Slave\Design01\UART_v2_50.pdf</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
@@ -227,7 +134,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="939, 521" SelectedTabbedMdiWindow="7db0e0c5-ba69-4f06-ae7c-0fc1e0d2c749"><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\ToF.h" Guid="f97c63c0-2685-4c1f-be53-cbd4bdce5b56" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\ToF.c" Guid="e81e8dc0-fd4b-4764-b4bf-b9c0ca1d5654" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\main.c" Guid="7db0e0c5-ba69-4f06-ae7c-0fc1e0d2c749" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="980e42a6-4caf-42e8-8ed4-fe8b750f9049" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="45a27879-ae3f-47f5-9889-c19acb24c568" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\Design01.cydwr" Guid="c4693a02-cbe9-4b61-b9a2-d068d627cc12" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="939, 521" SelectedTabbedMdiWindow="e81e8dc0-fd4b-4764-b4bf-b9c0ca1d5654"><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\ToF.h" Guid="f97c63c0-2685-4c1f-be53-cbd4bdce5b56" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\ToF.c" Guid="e81e8dc0-fd4b-4764-b4bf-b9c0ca1d5654" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\main.c" Guid="7db0e0c5-ba69-4f06-ae7c-0fc1e0d2c749" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="980e42a6-4caf-42e8-8ed4-fe8b750f9049" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="45a27879-ae3f-47f5-9889-c19acb24c568" /><DocumentWindow Key="C:\Users\Mathias\Desktop\Uni\4. Semester\Projekt 4\iFollow\Software\PSOC\ToF\Design01.cydsn\Design01.cydwr" Guid="c4693a02-cbe9-4b61-b9a2-d068d627cc12" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
