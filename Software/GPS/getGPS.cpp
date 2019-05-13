@@ -38,7 +38,7 @@ void GPS::updateCoordinates(void)
 
     bufferString_ = std::string(bufferChar_);
 
-    while(bufferString_.substr(0,6) != "$GPGGA")
+    while((bufferString_.substr(0,6) != "$GPGGA") || (n < 70))
             {
                 n = read(dev,bufferChar_,sizeof(bufferChar_)); // Reading
                 bufferString_ = std::string(bufferChar_);
