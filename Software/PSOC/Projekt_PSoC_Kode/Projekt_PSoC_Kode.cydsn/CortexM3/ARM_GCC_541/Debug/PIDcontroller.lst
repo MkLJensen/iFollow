@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 2
 
 
   32              	.LVL0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
   79              		.loc 1 17 0
   80              		.cfi_startproc
   81              		@ args = 8, pretend = 0, frame = 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 3
 
 
   82              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  129              		.thumb_set _ZN13PIDcontrollerC1EffffP15MotorController,_ZN13PIDcontrollerC2EffffP15MotorController
  130 0032 00BF     		.section	.text._ZNK13PIDcontroller12getReferenceEv,"ax",%progbits
  131              		.align	2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 4
 
 
  132              		.global	_ZNK13PIDcontroller12getReferenceEv
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  176              		.type	_ZNK13PIDcontroller14getMeasurementEv, %function
  177              	_ZNK13PIDcontroller14getMeasurementEv:
  178              	.LFB72:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 5
 
 
   43:PIDcontroller.c **** }
@@ -282,9 +282,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  208              		.cfi_offset 4, -8
  209              		.cfi_offset 14, -4
  210 0002 0446     		mov	r4, r0
-  52:PIDcontroller.c ****     /*Calculate Error (P)*/
-  53:PIDcontroller.c **** 	error_ = ref_ - Signal;
- 211              		.loc 1 53 0
+  52:PIDcontroller.c ****     error_ = ref_ - Signal;
+ 211              		.loc 1 52 0
  212 0004 006A     		ldr	r0, [r0, #32]	@ float
  213              	.LVL12:
  214 0006 FFF7FEFF 		bl	__aeabi_fsub
@@ -298,10 +297,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  222              		.global	__aeabi_fadd
  223              		.global	__aeabi_fcmpgt
  224              		.global	__aeabi_fcmplt
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 6
-
-
  225              		.global	__aeabi_fcmpge
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 6
+
+
  226              		.global	__aeabi_f2iz
  227 000e 00BF     		.section	.text._ZN13PIDcontroller16calculateControlEv,"ax",%progbits
  228              		.align	2
@@ -311,11 +310,11 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  232              		.type	_ZN13PIDcontroller16calculateControlEv, %function
  233              	_ZN13PIDcontroller16calculateControlEv:
  234              	.LFB74:
-  54:PIDcontroller.c **** }
-  55:PIDcontroller.c **** 
-  56:PIDcontroller.c **** float PIDcontroller::calculateControl()
-  57:PIDcontroller.c **** {
- 235              		.loc 1 57 0
+  53:PIDcontroller.c **** }
+  54:PIDcontroller.c **** 
+  55:PIDcontroller.c **** float PIDcontroller::calculateControl()
+  56:PIDcontroller.c **** {
+ 235              		.loc 1 56 0
  236              		.cfi_startproc
  237              		@ args = 0, pretend = 0, frame = 0
  238              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -327,15 +326,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  244              		.cfi_offset 6, -8
  245              		.cfi_offset 14, -4
  246 0002 0446     		mov	r4, r0
-  58:PIDcontroller.c ****     /*Calculate integral (I)*/
-  59:PIDcontroller.c **** 	//integral_ += error_;
-  60:PIDcontroller.c **** 
-  61:PIDcontroller.c ****     /*Calculate the derivative (D)*/
-  62:PIDcontroller.c **** 	//derivative_ = error_ - last_error_;
-  63:PIDcontroller.c **** 
-  64:PIDcontroller.c **** 	/*Calculate the control variable*/
-  65:PIDcontroller.c **** 	control_ = (b1_*old_control_) + (a0_*error_) + (a1_*old_error_); 
- 247              		.loc 1 65 0
+  57:PIDcontroller.c **** 	/*Calculate the control variable*/
+  58:PIDcontroller.c **** 	control_ = (b1_*old_control_) + (a0_*error_) + (a1_*old_error_); 
+ 247              		.loc 1 58 0
  248 0004 416B     		ldr	r1, [r0, #52]	@ float
  249 0006 C069     		ldr	r0, [r0, #28]	@ float
  250              	.LVL15:
@@ -358,54 +351,54 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  267 0028 0146     		mov	r1, r0
  268 002a 2846     		mov	r0, r5
  269 002c FFF7FEFF 		bl	__aeabi_fadd
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 7
-
-
  270              	.LVL20:
  271 0030 0546     		mov	r5, r0
  272 0032 2063     		str	r0, [r4, #48]	@ float
-  66:PIDcontroller.c ****     
-  67:PIDcontroller.c ****     /*Limit control*/
-  68:PIDcontroller.c **** 	if (control_ > 100) 
- 273              		.loc 1 68 0
+  59:PIDcontroller.c ****     
+  60:PIDcontroller.c ****     /*Limit control*/
+  61:PIDcontroller.c **** 	if (control_ > 100) 
+ 273              		.loc 1 61 0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 7
+
+
  274 0034 1549     		ldr	r1, .L25
  275 0036 FFF7FEFF 		bl	__aeabi_fcmpgt
  276              	.LVL21:
  277 003a 10B1     		cbz	r0, .L22
-  69:PIDcontroller.c ****     {
-  70:PIDcontroller.c ****         control_ = 100;
- 278              		.loc 1 70 0
+  62:PIDcontroller.c ****     {
+  63:PIDcontroller.c ****         control_ = 100;
+ 278              		.loc 1 63 0
  279 003c 134B     		ldr	r3, .L25
  280 003e 2363     		str	r3, [r4, #48]	@ float
  281 0040 06E0     		b	.L14
  282              	.L22:
-  71:PIDcontroller.c **** 	}
-  72:PIDcontroller.c ****     else if (control_ < -100) 
- 283              		.loc 1 72 0
+  64:PIDcontroller.c **** 	}
+  65:PIDcontroller.c ****     else if (control_ < -100) 
+ 283              		.loc 1 65 0
  284 0042 1349     		ldr	r1, .L25+4
  285 0044 2846     		mov	r0, r5
  286 0046 FFF7FEFF 		bl	__aeabi_fcmplt
  287              	.LVL22:
  288 004a 08B1     		cbz	r0, .L14
-  73:PIDcontroller.c ****     {
-  74:PIDcontroller.c ****         control_ = -100;
- 289              		.loc 1 74 0
+  66:PIDcontroller.c ****     {
+  67:PIDcontroller.c ****         control_ = -100;
+ 289              		.loc 1 67 0
  290 004c 104B     		ldr	r3, .L25+4
  291 004e 2363     		str	r3, [r4, #48]	@ float
  292              	.L14:
-  75:PIDcontroller.c ****     }
-  76:PIDcontroller.c ****     
-  77:PIDcontroller.c ****     if (control_ >= 0)
- 293              		.loc 1 77 0
+  68:PIDcontroller.c ****     }
+  69:PIDcontroller.c ****     
+  70:PIDcontroller.c ****     if (control_ >= 0)
+ 293              		.loc 1 70 0
  294 0050 256B     		ldr	r5, [r4, #48]	@ float
  295 0052 0021     		movs	r1, #0
  296 0054 2846     		mov	r0, r5
  297 0056 FFF7FEFF 		bl	__aeabi_fcmpge
  298              	.LVL23:
  299 005a 40B1     		cbz	r0, .L23
-  78:PIDcontroller.c ****     {
-  79:PIDcontroller.c ****         MotorPtr_->GoForward(control_);
- 300              		.loc 1 79 0
+  71:PIDcontroller.c ****     {
+  72:PIDcontroller.c ****         MotorPtr_->GoForward(control_);
+ 300              		.loc 1 72 0
  301 005c A66B     		ldr	r6, [r4, #56]
  302 005e 2846     		mov	r0, r5
  303 0060 FFF7FEFF 		bl	__aeabi_f2iz
@@ -416,37 +409,37 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  308              	.LVL25:
  309 006c 08E0     		b	.L18
  310              	.L23:
-  80:PIDcontroller.c ****     }
-  81:PIDcontroller.c ****     else
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 8
-
-
-  82:PIDcontroller.c ****     {
-  83:PIDcontroller.c ****         MotorPtr_->GoBackward(control_*-1);
- 311              		.loc 1 83 0
+  73:PIDcontroller.c ****     }
+  74:PIDcontroller.c ****     else
+  75:PIDcontroller.c ****     {
+  76:PIDcontroller.c ****         MotorPtr_->GoBackward(control_*-1);
+ 311              		.loc 1 76 0
  312 006e A66B     		ldr	r6, [r4, #56]
  313 0070 05F10040 		add	r0, r5, #-2147483648
  314 0074 FFF7FEFF 		bl	__aeabi_f2iz
  315              	.LVL26:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 8
+
+
  316 0078 0146     		mov	r1, r0
  317 007a 3046     		mov	r0, r6
  318 007c FFF7FEFF 		bl	_ZN15MotorController10GoBackwardEi
  319              	.LVL27:
  320              	.L18:
-  84:PIDcontroller.c ****     }
-  85:PIDcontroller.c ****     
-  86:PIDcontroller.c ****     old_error_ = error_;
- 321              		.loc 1 86 0
+  77:PIDcontroller.c ****     }
+  78:PIDcontroller.c ****     
+  79:PIDcontroller.c ****     old_error_ = error_;
+ 321              		.loc 1 79 0
  322 0080 A36A     		ldr	r3, [r4, #40]	@ float
  323 0082 E362     		str	r3, [r4, #44]	@ float
-  87:PIDcontroller.c ****     old_control_ = control_;
- 324              		.loc 1 87 0
+  80:PIDcontroller.c ****     old_control_ = control_;
+ 324              		.loc 1 80 0
  325 0084 206B     		ldr	r0, [r4, #48]	@ float
  326 0086 6063     		str	r0, [r4, #52]	@ float
-  88:PIDcontroller.c ****     
-  89:PIDcontroller.c ****     return control_;
-  90:PIDcontroller.c **** }...
- 327              		.loc 1 90 0
+  81:PIDcontroller.c ****     
+  82:PIDcontroller.c ****     return control_;
+  83:PIDcontroller.c **** }...
+ 327              		.loc 1 83 0
  328 0088 70BD     		pop	{r4, r5, r6, pc}
  329              	.LVL28:
  330              	.L26:
@@ -478,9 +471,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  356 0019 00000000 		.4byte	.Ldebug_ranges0+0
  357 001d 00000000 		.4byte	0
  358 0021 00000000 		.4byte	.Ldebug_line0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 9
-
-
  359 0025 02       		.uleb128 0x2
  360 0026 04       		.byte	0x4
  361 0027 04       		.byte	0x4
@@ -488,6 +478,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  363 002c 02       		.uleb128 0x2
  364 002d 01       		.byte	0x1
  365 002e 06       		.byte	0x6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 9
+
+
  366 002f C9010000 		.4byte	.LASF1
  367 0033 02       		.uleb128 0x2
  368 0034 01       		.byte	0x1
@@ -538,9 +531,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  413 0088 02       		.uleb128 0x2
  414 0089 08       		.byte	0x8
  415 008a 04       		.byte	0x4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 10
-
-
  416 008b 0D060000 		.4byte	.LASF12
  417 008f 02       		.uleb128 0x2
  418 0090 01       		.byte	0x1
@@ -548,6 +538,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  420 0092 5E020000 		.4byte	.LASF13
  421 0096 02       		.uleb128 0x2
  422 0097 08       		.byte	0x8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 10
+
+
  423 0098 04       		.byte	0x4
  424 0099 23030000 		.4byte	.LASF14
  425 009d 05       		.uleb128 0x5
@@ -598,9 +591,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  470 00f4 25010000 		.4byte	.LASF21
  471 00f8 04       		.byte	0x4
  472 00f9 20       		.byte	0x20
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 11
-
-
  473 00fa 9E030000 		.4byte	.LASF23
  474 00fe 19030000 		.4byte	0x319
  475 0102 01       		.byte	0x1
@@ -608,6 +598,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  477 0107 11010000 		.4byte	0x111
  478 010b 0A       		.uleb128 0xa
  479 010c 19030000 		.4byte	0x319
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 11
+
+
  480 0110 00       		.byte	0
  481 0111 09       		.uleb128 0x9
  482 0112 14070000 		.4byte	.LASF22
@@ -658,9 +651,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  527 017e 86010000 		.4byte	0x186
  528 0182 91010000 		.4byte	0x191
  529 0186 0A       		.uleb128 0xa
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 12
-
-
  530 0187 19030000 		.4byte	0x319
  531 018b 0C       		.uleb128 0xc
  532 018c 6F000000 		.4byte	0x6f
@@ -668,6 +658,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  534 0191 0B       		.uleb128 0xb
  535 0192 8D050000 		.4byte	.LASF31
  536 0196 04       		.byte	0x4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 12
+
+
  537 0197 25       		.byte	0x25
  538 0198 72030000 		.4byte	.LASF32
  539 019c 01       		.byte	0x1
@@ -718,9 +711,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  584 0208 09       		.uleb128 0x9
  585 0209 A1050000 		.4byte	.LASF39
  586 020d 04       		.byte	0x4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 13
-
-
  587 020e 2A       		.byte	0x2a
  588 020f A0010000 		.4byte	.LASF40
  589 0213 6F000000 		.4byte	0x6f
@@ -728,6 +718,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  591 0218 20020000 		.4byte	0x220
  592 021c 26020000 		.4byte	0x226
  593 0220 0A       		.uleb128 0xa
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 13
+
+
  594 0221 1F030000 		.4byte	0x31f
  595 0225 00       		.byte	0
  596 0226 0B       		.uleb128 0xb
@@ -778,9 +771,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  641 0292 9A020000 		.4byte	0x29a
  642 0296 A0020000 		.4byte	0x2a0
  643 029a 0A       		.uleb128 0xa
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 14
-
-
  644 029b 1F030000 		.4byte	0x31f
  645 029f 00       		.byte	0
  646 02a0 09       		.uleb128 0x9
@@ -788,6 +778,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  648 02a5 04       		.byte	0x4
  649 02a6 31       		.byte	0x31
  650 02a7 F3060000 		.4byte	.LASF50
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 14
+
+
  651 02ab 6F000000 		.4byte	0x6f
  652 02af 01       		.byte	0x1
  653 02b0 B8020000 		.4byte	0x2b8
@@ -838,9 +831,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  698 0319 0E       		.uleb128 0xe
  699 031a 04       		.byte	0x4
  700 031b AB000000 		.4byte	0xab
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 15
-
-
  701 031f 0E       		.uleb128 0xe
  702 0320 04       		.byte	0x4
  703 0321 25030000 		.4byte	0x325
@@ -848,6 +838,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  705 0326 AB000000 		.4byte	0xab
  706 032a 07       		.uleb128 0x7
  707 032b 9F070000 		.4byte	.LASF56
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 15
+
+
  708 032f 3C       		.byte	0x3c
  709 0330 05       		.byte	0x5
  710 0331 1D       		.byte	0x1d
@@ -898,9 +891,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  755 038b 2E       		.byte	0x2e
  756 038c 25000000 		.4byte	0x25
  757 0390 2C       		.byte	0x2c
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 16
-
-
  758 0391 08       		.uleb128 0x8
  759 0392 88010000 		.4byte	.LASF61
  760 0396 05       		.byte	0x5
@@ -908,6 +898,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  762 0398 25000000 		.4byte	0x25
  763 039c 30       		.byte	0x30
  764 039d 08       		.uleb128 0x8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 16
+
+
  765 039e A9060000 		.4byte	.LASF62
  766 03a2 05       		.byte	0x5
  767 03a3 2F       		.byte	0x2f
@@ -958,9 +951,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  812 040f 0B       		.uleb128 0xb
  813 0410 F2040000 		.4byte	.LASF67
  814 0414 05       		.byte	0x5
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 17
-
-
  815 0415 22       		.byte	0x22
  816 0416 2A020000 		.4byte	.LASF68
  817 041a 01       		.byte	0x1
@@ -968,6 +958,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  819 041f 2E040000 		.4byte	0x42e
  820 0423 0A       		.uleb128 0xa
  821 0424 FC040000 		.4byte	0x4fc
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 17
+
+
  822 0428 0C       		.uleb128 0xc
  823 0429 25000000 		.4byte	0x25
  824 042d 00       		.byte	0
@@ -1018,9 +1011,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  869 0499 A8040000 		.4byte	0x4a8
  870 049d 0A       		.uleb128 0xa
  871 049e FC040000 		.4byte	0x4fc
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 18
-
-
  872 04a2 0C       		.uleb128 0xc
  873 04a3 25000000 		.4byte	0x25
  874 04a7 00       		.byte	0
@@ -1028,6 +1018,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  876 04a9 D8020000 		.4byte	.LASF77
  877 04ad 05       		.byte	0x5
  878 04ae 27       		.byte	0x27
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 18
+
+
  879 04af D5010000 		.4byte	.LASF78
  880 04b3 25000000 		.4byte	0x25
  881 04b7 01       		.byte	0x1
@@ -1078,9 +1071,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  926 051d 13       		.uleb128 0x13
  927 051e 69050000 		.4byte	.LASF85
  928 0522 30050000 		.4byte	0x530
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 19
-
-
  929 0526 13       		.uleb128 0x13
  930 0527 5F050000 		.4byte	.LASF86
  931 052b 35050000 		.4byte	0x535
@@ -1088,6 +1078,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  933 0530 0F       		.uleb128 0xf
  934 0531 FC040000 		.4byte	0x4fc
  935 0535 0F       		.uleb128 0xf
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 19
+
+
  936 0536 6F000000 		.4byte	0x6f
  937 053a 14       		.uleb128 0x14
  938 053b 0D050000 		.4byte	0x50d
@@ -1138,9 +1131,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  983 059e B5030000 		.4byte	0x3b5
  984 05a2 01       		.byte	0x1
  985 05a3 11       		.byte	0x11
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 20
-
-
  986 05a4 00       		.byte	0
  987 05a5 AD050000 		.4byte	0x5ad
  988 05a9 EB050000 		.4byte	0x5eb
@@ -1148,6 +1138,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  990 05ae 69050000 		.4byte	.LASF85
  991 05b2 30050000 		.4byte	0x530
  992 05b6 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 20
+
+
  993 05b7 613000   		.ascii	"a0\000"
  994 05ba 01       		.byte	0x1
  995 05bb 11       		.byte	0x11
@@ -1198,9 +1191,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1040 062b D4050000 		.4byte	0x5d4
  1041 062f 02       		.uleb128 0x2
  1042 0630 91       		.byte	0x91
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 21
-
-
  1043 0631 00       		.sleb128 0
  1044 0632 1D       		.uleb128 0x1d
  1045 0633 DF050000 		.4byte	0x5df
@@ -1208,6 +1198,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1047 0638 91       		.byte	0x91
  1048 0639 04       		.sleb128 4
  1049 063a 1E       		.uleb128 0x1e
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 21
+
+
  1050 063b 0E000000 		.4byte	.LVL4
  1051 063f 4A060000 		.4byte	0x64a
  1052 0643 17       		.uleb128 0x17
@@ -1258,9 +1251,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1097 0694 01       		.byte	0x1
  1098 0695 28       		.byte	0x28
  1099 0696 00000000 		.4byte	.LFB71
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 22
-
-
  1100 069a 04000000 		.4byte	.LFE71-.LFB71
  1101 069e 01       		.uleb128 0x1
  1102 069f 9C       		.byte	0x9c
@@ -1268,6 +1258,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1104 06a4 C1060000 		.4byte	0x6c1
  1105 06a8 19       		.uleb128 0x19
  1106 06a9 69050000 		.4byte	.LASF85
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 22
+
+
  1107 06ad 30050000 		.4byte	0x530
  1108 06b1 01       		.uleb128 0x1
  1109 06b2 50       		.byte	0x50
@@ -1318,16 +1311,16 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1154 071e 22       		.uleb128 0x22
  1155 071f A8040000 		.4byte	0x4a8
  1156 0723 01       		.byte	0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 23
-
-
- 1157 0724 38       		.byte	0x38
+ 1157 0724 37       		.byte	0x37
  1158 0725 00000000 		.4byte	.LFB74
  1159 0729 94000000 		.4byte	.LFE74-.LFB74
  1160 072d 01       		.uleb128 0x1
  1161 072e 9C       		.byte	0x9c
  1162 072f 37070000 		.4byte	0x737
  1163 0733 69070000 		.4byte	0x769
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 23
+
+
  1164 0737 21       		.uleb128 0x21
  1165 0738 69050000 		.4byte	.LASF85
  1166 073c 30050000 		.4byte	0x530
@@ -1378,9 +1371,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1211 000b 55       		.uleb128 0x55
  1212 000c 17       		.uleb128 0x17
  1213 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 24
-
-
  1214 000e 01       		.uleb128 0x1
  1215 000f 10       		.uleb128 0x10
  1216 0010 17       		.uleb128 0x17
@@ -1388,6 +1378,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1218 0012 00       		.byte	0
  1219 0013 02       		.uleb128 0x2
  1220 0014 24       		.uleb128 0x24
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 24
+
+
  1221 0015 00       		.byte	0
  1222 0016 0B       		.uleb128 0xb
  1223 0017 0B       		.uleb128 0xb
@@ -1438,9 +1431,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1268 0044 07       		.uleb128 0x7
  1269 0045 02       		.uleb128 0x2
  1270 0046 01       		.byte	0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 25
-
-
  1271 0047 03       		.uleb128 0x3
  1272 0048 0E       		.uleb128 0xe
  1273 0049 0B       		.uleb128 0xb
@@ -1448,6 +1438,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1275 004b 3A       		.uleb128 0x3a
  1276 004c 0B       		.uleb128 0xb
  1277 004d 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 25
+
+
  1278 004e 0B       		.uleb128 0xb
  1279 004f 01       		.uleb128 0x1
  1280 0050 13       		.uleb128 0x13
@@ -1498,9 +1491,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1325 007d 00       		.byte	0
  1326 007e 49       		.uleb128 0x49
  1327 007f 13       		.uleb128 0x13
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 26
-
-
  1328 0080 34       		.uleb128 0x34
  1329 0081 19       		.uleb128 0x19
  1330 0082 00       		.byte	0
@@ -1508,6 +1498,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1332 0084 0B       		.uleb128 0xb
  1333 0085 2E       		.uleb128 0x2e
  1334 0086 01       		.byte	0x1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 26
+
+
  1335 0087 3F       		.uleb128 0x3f
  1336 0088 19       		.uleb128 0x19
  1337 0089 03       		.uleb128 0x3
@@ -1558,9 +1551,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1382 00b6 00       		.byte	0
  1383 00b7 0E       		.uleb128 0xe
  1384 00b8 0F       		.uleb128 0xf
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 27
-
-
  1385 00b9 00       		.byte	0
  1386 00ba 0B       		.uleb128 0xb
  1387 00bb 0B       		.uleb128 0xb
@@ -1568,6 +1558,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1389 00bd 13       		.uleb128 0x13
  1390 00be 00       		.byte	0
  1391 00bf 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 27
+
+
  1392 00c0 0F       		.uleb128 0xf
  1393 00c1 26       		.uleb128 0x26
  1394 00c2 00       		.byte	0
@@ -1618,9 +1611,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1439 00ef 13       		.uleb128 0x13
  1440 00f0 00       		.byte	0
  1441 00f1 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 28
-
-
  1442 00f2 13       		.uleb128 0x13
  1443 00f3 05       		.uleb128 0x5
  1444 00f4 00       		.byte	0
@@ -1628,6 +1618,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1446 00f6 0E       		.uleb128 0xe
  1447 00f7 49       		.uleb128 0x49
  1448 00f8 13       		.uleb128 0x13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 28
+
+
  1449 00f9 34       		.uleb128 0x34
  1450 00fa 19       		.uleb128 0x19
  1451 00fb 00       		.byte	0
@@ -1678,9 +1671,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1496 012e 18       		.uleb128 0x18
  1497 012f 00       		.byte	0
  1498 0130 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 29
-
-
  1499 0131 18       		.uleb128 0x18
  1500 0132 2E       		.uleb128 0x2e
  1501 0133 01       		.byte	0x1
@@ -1688,6 +1678,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1503 0135 13       		.uleb128 0x13
  1504 0136 3A       		.uleb128 0x3a
  1505 0137 0B       		.uleb128 0xb
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 29
+
+
  1506 0138 3B       		.uleb128 0x3b
  1507 0139 0B       		.uleb128 0xb
  1508 013a 11       		.uleb128 0x11
@@ -1738,9 +1731,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1553 0168 03       		.uleb128 0x3
  1554 0169 08       		.uleb128 0x8
  1555 016a 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 30
-
-
  1556 016b 0B       		.uleb128 0xb
  1557 016c 3B       		.uleb128 0x3b
  1558 016d 0B       		.uleb128 0xb
@@ -1748,6 +1738,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1560 016f 13       		.uleb128 0x13
  1561 0170 00       		.byte	0
  1562 0171 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 30
+
+
  1563 0172 1C       		.uleb128 0x1c
  1564 0173 05       		.uleb128 0x5
  1565 0174 00       		.byte	0
@@ -1798,9 +1791,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1610 01a5 11       		.uleb128 0x11
  1611 01a6 01       		.uleb128 0x1
  1612 01a7 12       		.uleb128 0x12
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 31
-
-
  1613 01a8 06       		.uleb128 0x6
  1614 01a9 40       		.uleb128 0x40
  1615 01aa 18       		.uleb128 0x18
@@ -1808,6 +1798,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1617 01ac 13       		.uleb128 0x13
  1618 01ad 9742     		.uleb128 0x2117
  1619 01af 19       		.uleb128 0x19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 31
+
+
  1620 01b0 01       		.uleb128 0x1
  1621 01b1 13       		.uleb128 0x13
  1622 01b2 00       		.byte	0
@@ -1858,9 +1851,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1667 01e0 3B       		.uleb128 0x3b
  1668 01e1 0B       		.uleb128 0xb
  1669 01e2 49       		.uleb128 0x49
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 32
-
-
  1670 01e3 13       		.uleb128 0x13
  1671 01e4 02       		.uleb128 0x2
  1672 01e5 17       		.uleb128 0x17
@@ -1868,6 +1858,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1674 01e7 00       		.byte	0
  1675 01e8 24       		.uleb128 0x24
  1676 01e9 898201   		.uleb128 0x4109
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 32
+
+
  1677 01ec 01       		.byte	0x1
  1678 01ed 11       		.uleb128 0x11
  1679 01ee 01       		.uleb128 0x1
@@ -1918,9 +1911,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1724              	.LLST1:
  1725 001e 00000000 		.4byte	.LVL3
  1726 0022 0D000000 		.4byte	.LVL4-1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 33
-
-
  1727 0026 0100     		.2byte	0x1
  1728 0028 50       		.byte	0x50
  1729 0029 0D000000 		.4byte	.LVL4-1
@@ -1928,6 +1918,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1731 0031 0100     		.2byte	0x1
  1732 0033 54       		.byte	0x54
  1733 0034 00000000 		.4byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 33
+
+
  1734 0038 00000000 		.4byte	0
  1735              	.LLST2:
  1736 003c 00000000 		.4byte	.LVL3
@@ -1978,9 +1971,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1781 00b3 00000000 		.4byte	0
  1782              	.LLST6:
  1783 00b7 00000000 		.4byte	.LVL9
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 34
-
-
  1784 00bb 02000000 		.4byte	.LVL10
  1785 00bf 0100     		.2byte	0x1
  1786 00c1 50       		.byte	0x50
@@ -1988,6 +1978,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1788 00c6 04000000 		.4byte	.LFE72
  1789 00ca 0400     		.2byte	0x4
  1790 00cc F3       		.byte	0xf3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 34
+
+
  1791 00cd 01       		.uleb128 0x1
  1792 00ce 50       		.byte	0x50
  1793 00cf 9F       		.byte	0x9f
@@ -2038,9 +2031,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1838 013c 9F       		.byte	0x9f
  1839 013d 00000000 		.4byte	0
  1840 0141 00000000 		.4byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 35
-
-
  1841              		.section	.debug_aranges,"",%progbits
  1842 0000 54000000 		.4byte	0x54
  1843 0004 0200     		.2byte	0x2
@@ -2048,6 +2038,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1845 000a 04       		.byte	0x4
  1846 000b 00       		.byte	0
  1847 000c 0000     		.2byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 35
+
+
  1848 000e 0000     		.2byte	0
  1849 0010 00000000 		.4byte	.LFB67
  1850 0014 0C000000 		.4byte	.LFE67-.LFB67
@@ -2098,9 +2091,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1891 0000 5F5A4E31 		.ascii	"_ZN15MotorController10setLeftPWMEi\000"
  1891      354D6F74 
  1891      6F72436F 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 36
-
-
  1891      6E74726F 
  1891      6C6C6572 
  1892              	.LASF0:
@@ -2108,6 +2098,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1893      7400
  1894              	.LASF96:
  1895 0029 6465636C 		.ascii	"decltype(nullptr)\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 36
+
+
  1895      74797065 
  1895      286E756C 
  1895      6C707472 
@@ -2158,9 +2151,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1914      435F4B6F 
  1915              	.LASF81:
  1916 0119 7365744F 		.ascii	"setOldPower\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 37
-
-
  1916      6C64506F 
  1916      77657200 
  1917              	.LASF21:
@@ -2168,6 +2158,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1918      72436F6E 
  1918      74726F6C 
  1918      6C657200 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 37
+
+
  1919              	.LASF88:
  1920 0135 4D6F746F 		.ascii	"MotorPtr\000"
  1920      72507472 
@@ -2218,9 +2211,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1938      65723136 
  1939              	.LASF52:
  1940 01fc 5F5A4E31 		.ascii	"_ZN15MotorController8setPowerEi\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 38
-
-
  1940      354D6F74 
  1940      6F72436F 
  1940      6E74726F 
@@ -2228,6 +2218,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1941              	.LASF7:
  1942 021c 6C6F6E67 		.ascii	"long long int\000"
  1942      206C6F6E 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 38
+
+
  1942      6720696E 
  1942      7400
  1943              	.LASF68:
@@ -2278,9 +2271,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1962      756C6174 
  1962      65436F6E 
  1962      74726F6C 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 39
-
-
  1962      00
  1963              	.LASF34:
  1964 02e9 5F5A4E31 		.ascii	"_ZN15MotorController4StopEv\000"
@@ -2288,6 +2278,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1964      6F72436F 
  1964      6E74726F 
  1964      6C6C6572 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 39
+
+
  1965              	.LASF46:
  1966 0305 5F5A4E31 		.ascii	"_ZN15MotorController6setDirEb\000"
  1966      354D6F74 
@@ -2338,9 +2331,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1983              	.LASF54:
  1984 03ce 5F5A4E4B 		.ascii	"_ZNK15MotorController11getOldPowerEv\000"
  1984      31354D6F 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 40
-
-
  1984      746F7243 
  1984      6F6E7472 
  1984      6F6C6C65 
@@ -2348,6 +2338,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  1986 03f3 474E5520 		.ascii	"GNU C++14 5.4.1 20160609 (release) [ARM/embedded-5-"
  1986      432B2B31 
  1986      3420352E 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 40
+
+
  1986      342E3120 
  1986      32303136 
  1987 0426 6272616E 		.ascii	"branch revision 237715] -mcpu=cortex-m3 -mthumb -g "
@@ -2398,9 +2391,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  2003      6400
  2004              	.LASF67:
  2005 04f2 73657452 		.ascii	"setReference\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 41
-
-
  2005      65666572 
  2005      656E6365 
  2005      00
@@ -2408,6 +2398,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  2007 04ff 73686F72 		.ascii	"short unsigned int\000"
  2007      7420756E 
  2007      7369676E 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 41
+
+
  2007      65642069 
  2007      6E7400
  2008              	.LASF45:
@@ -2458,9 +2451,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  2031      7400
  2032              	.LASF17:
  2033 0597 52696768 		.ascii	"Rightpwm_\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 42
-
-
  2033      7470776D 
  2033      5F00
  2034              	.LASF39:
@@ -2468,6 +2458,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  2035      65667450 
  2035      574D00
  2036              	.LASF28:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 42
+
+
  2037 05ac 5F5A4E31 		.ascii	"_ZN15MotorController10GoBackwardEi\000"
  2037      354D6F74 
  2037      6F72436F 
@@ -2518,9 +2511,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  2054              	.LASF72:
  2055 0684 5F5A4E31 		.ascii	"_ZN13PIDcontroller14setMeasurementEf\000"
  2055      33504944 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 43
-
-
  2055      636F6E74 
  2055      726F6C6C 
  2055      65723134 
@@ -2528,6 +2518,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  2057 06a9 6F6C645F 		.ascii	"old_control_\000"
  2057      636F6E74 
  2057      726F6C5F 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 43
+
+
  2057      00
  2058              	.LASF36:
  2059 06b6 5F5A4E31 		.ascii	"_ZN15MotorController7ControlEc\000"
@@ -2578,9 +2571,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  2077 076f 73697A65 		.ascii	"sizetype\000"
  2077      74797065 
  2077      00
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 44
-
-
  2078              	.LASF71:
  2079 0778 7365744D 		.ascii	"setMeasurement\000"
  2079      65617375 
@@ -2588,6 +2578,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccMGhVap.s 			page 1
  2079      6E7400
  2080              	.LASF73:
  2081 0787 6765744D 		.ascii	"getMeasurement\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccVOwuzL.s 			page 44
+
+
  2081      65617375 
  2081      72656D65 
  2081      6E7400

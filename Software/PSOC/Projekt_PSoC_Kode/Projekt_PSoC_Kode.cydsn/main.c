@@ -28,10 +28,13 @@ extern "C"
 CY_ISR_PROTO(PowerSwitch_Handler);
 CY_ISR_PROTO(FollowSwitch_Handler);
 CY_ISR_PROTO(Control_timer_isr);
+CY_ISR_PROTO(isr_handler);
 
 enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4, Fallen = 5};
 uint8_t Mode = Off; 
+uint8_t byteR;
 
+ToF obj;
 Switches Switchcontroller;
 MotorController Motor;
 
@@ -42,6 +45,8 @@ int main(void)
     I2C_1_Start();
     UART_1_Start();
     SPIS_Start();
+    SPIS_1_Start();
+    isr_1_StartEx(isr_handler);
     Power_isr_StartEx(PowerSwitch_Handler);
     Follow_isr_StartEx(FollowSwitch_Handler);
     Motor_timer_isr_StartEx(Control_timer_isr);
@@ -50,36 +55,7 @@ int main(void)
     RpiSPI SPIcontroller(&GyroController, &Motor);
     LED Ledcontrol;
     PIDcontroller PIDcontrol(142.9, -136.2, -0.693, 50, &Motor );
-                   
-    UART_1_PutString("Say Hello To my LIttle FRIEND!");
-    
-    /*while(1)
-    {
-        for(int i = 0; i < 100; i++)
-        {
-            Motor.GoForward(i);
-            CyDelay(200);
-        }
-        Motor.GoForward(0);
-        for(int i = 0; i < 100; i++)
-        {
-            Motor.GoBackward(i);
-            CyDelay(200);
-        }
-        Motor.GoForward(0);
-        for(int i = 0; i < 100; i++)
-        {
-            Motor.TurnLeft(i);
-            CyDelay(200);
-        }
-        Motor.GoForward(0);
-        for(int i = 0; i < 100; i++)
-        {
-            Motor.TurnRight(i);
-            CyDelay(200);
-        }
-        Motor.GoForward(0);
-    }*/
+                       
     for(;;)
     {
         if(Mode == Off && Switchcontroller.getSwitchStatus('p') == true)
@@ -118,6 +94,7 @@ int main(void)
             {
                 Ledcontrol.turnOffLed('g');
                 Ledcontrol.turnOffLed('r');
+                SPIcontroller.ReadData();
             }
             break;
             case Init :
@@ -145,9 +122,9 @@ int main(void)
                 Ledcontrol.turnOffLed('r');
                 Ledcontrol.blinkLed('g');
                 
-                //Getsonsordata
-                
-                PIDcontrol.calculateError(51);
+                SPIcontroller.ReadData();
+                           
+                PIDcontrol.calculateError(obj.getMidSensor());
                 PIDcontrol.calculateControl();
             }
             break;
@@ -187,6 +164,12 @@ CY_ISR(Control_timer_isr)
             PWM_1_WriteCompare2(0);
         }
     }
+}
+
+CY_ISR_PROTO(isr_handler)
+{
+   byteR = SPIS_1_ReadRxData();                                                             // Gemmer aflæsning af RX-buffer
+   obj.handleByte(byteR);
 }
 
 /* [] END OF FILE */

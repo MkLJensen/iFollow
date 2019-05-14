@@ -37,43 +37,20 @@ void RpiSPI::TransmitData(uint8_t Data)
 
 uint8_t RpiSPI::ReadData()
 {
-    GyroState_ = GyroPtr_->hasFallen();
-    if (GyroState_ == 1)
-    {
-        TransmitData(Fallen);
-    }
-    else
-    {
-        TransmitData(Mode);
-    }
-    /*  
-    int State = GyroPtr_->hasFallen();
-    
-    if (SPIS_GetTxBufferSize() == 0)
-    {
-        SPIS_ClearTxBuffer();
-        GyroState_ = State;
-        SPIS_WriteTxData(GyroState_);
-        
-    }
-    else if (State != GyroState_)
-    {
-        SPIS_ClearTxBuffer();
-        GyroState_ = State;
-        SPIS_WriteTxData(State);
-    }*/
     if(SPIS_GetRxBufferSize() > 0)
     {
-        uint8_t byteReceived;
-        byteReceived = SPIS_ReadRxData();
-        /*uint8_t byteReceived[SPIS_GetRxBufferSize()];
-        int i = 0;
-        while(SPIS_GetRxBufferSize() != 0)        
+        uint8_t byteReceived = SPIS_ReadRxData();
+        
+        GyroState_ = GyroPtr_->hasFallen();
+        if (GyroState_ == 1)
         {
-            byteReceived[i] = SPIS_ReadRxData();
-            i++;
-        }*/
-
+            TransmitData(Fallen);
+        }
+        else
+        {
+            TransmitData(Mode);
+        }
+        
         return handleByteReceived(byteReceived);
     }
     return 0;

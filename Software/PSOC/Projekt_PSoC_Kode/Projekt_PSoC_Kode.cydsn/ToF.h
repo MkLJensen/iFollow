@@ -32,11 +32,17 @@ public:
     //void start();
     //void stop();
     void handleByte(uint8_t byte);
+    uint16_t getLeftSensor(void) const;
+    uint16_t getMidSensor(void) const;
+    uint16_t getRightSensor(void) const;
+    
+    private:
     uint16_t sensorLeft;
     uint16_t sensorRight;
     uint16_t sensorMid;
     uint8_t i;
-    uint8_t byteR;  
+    uint8_t byteR_; 
+    uint8_t sensor1, sensor2, sensor3, sensor4, sensor5, sensor6;
     char string[50];
 };
 
