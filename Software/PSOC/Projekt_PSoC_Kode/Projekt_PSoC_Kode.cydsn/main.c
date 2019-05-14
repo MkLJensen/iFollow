@@ -29,11 +29,9 @@ CY_ISR_PROTO(PowerSwitch_Handler);
 CY_ISR_PROTO(FollowSwitch_Handler);
 CY_ISR_PROTO(Control_timer_isr);
 
-uint8_t byteR = 0;
+enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4, Fallen = 5};
+uint8_t Mode = Off; 
 
-enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4};
-
-//Have to be declared here to able to use in ISR!!!
 Switches Switchcontroller;
 MotorController Motor;
 
@@ -47,15 +45,12 @@ int main(void)
     Power_isr_StartEx(PowerSwitch_Handler);
     Follow_isr_StartEx(FollowSwitch_Handler);
     Motor_timer_isr_StartEx(Control_timer_isr);
-    
-    
+       
     Gyro GyroController;
     RpiSPI SPIcontroller(&GyroController, &Motor);
     LED Ledcontrol;
     PIDcontroller PIDcontrol(142.9, -136.2, -0.693, 50, &Motor );
-                
-    uint8_t Mode = Off; 
-    
+                   
     UART_1_PutString("Say Hello To my LIttle FRIEND!");
     
     /*while(1)
@@ -97,36 +92,26 @@ int main(void)
         else if (Mode == Sleep && Switchcontroller.getSwitchStatus('p') == false)
         {
             Mode = Off;
-            Ledcontrol.turnOffLed('g');
-            Ledcontrol.turnOffLed('r');
         }
         if (Mode == Sleep && SPIcontroller.ReadData() == 'o')
         {
             Mode = Control;
             Timer_1_Start();
-            Ledcontrol.turnOffLed('r');
-            Ledcontrol.blinkLed('g');
         }
         else if (Mode == Control && SPIcontroller.ReadData() == 'c')
         {
             Mode = Sleep;
             Timer_1_Stop();
-            Ledcontrol.turnOffLed('r');
-            Ledcontrol.turnOnLed('g');
         }
         if (Mode == Sleep && Switchcontroller.getSwitchStatus('f') == true)
         {
             Mode = Follow;
-            Ledcontrol.turnOffLed('r');
-            Ledcontrol.blinkLed('g');
         }
         else if (Mode == Follow && Switchcontroller.getSwitchStatus('f') == false)
         {
             Mode = Sleep;
-            Ledcontrol.turnOffLed('r');
-            Ledcontrol.turnOnLed('g');
         }
-        /*     
+        
         switch(Mode)
         {
             case Off :
@@ -146,6 +131,7 @@ int main(void)
             {
                 Ledcontrol.turnOffLed('r');
                 Ledcontrol.turnOnLed('g');
+                Motor.GoForward(0);
             }
             break;
             case Control :
@@ -158,6 +144,11 @@ int main(void)
             {
                 Ledcontrol.turnOffLed('r');
                 Ledcontrol.blinkLed('g');
+                
+                //Getsonsordata
+                
+                PIDcontrol.calculateError(51);
+                PIDcontrol.calculateControl();
             }
             break;
             default :
@@ -165,7 +156,7 @@ int main(void)
                 
             }
             break;
-        }*/
+        }
     }
 }
 

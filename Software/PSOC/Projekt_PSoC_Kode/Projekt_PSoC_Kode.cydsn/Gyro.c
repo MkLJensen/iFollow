@@ -58,7 +58,7 @@ void Gyro::initGyro()
     I2C->WriteByte(MPU6050_ADD,SMPRT_DIV,109);
     I2C->WriteByte(MPU6050_ADD,GYRO_CONFIG,0x18); // FULLSCALE
     I2C->WriteByte(MPU6050_ADD,USER_CTRL,0x20);
-    I2C->WriteByte(MPU6050_ADD,INT_PIN_CFG,0x37);
+        I2C->WriteByte(MPU6050_ADD,INT_PIN_CFG,0x37);
     I2C->WriteByte(MPU6050_ADD,CONFIG,6);         //6 very slow
     
 }

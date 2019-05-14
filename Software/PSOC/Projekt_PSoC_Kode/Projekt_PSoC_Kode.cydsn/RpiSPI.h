@@ -35,7 +35,7 @@ public:
    ~RpiSPI();
    uint8_t ReadData();
    uint8_t handleByteReceived(uint8_t byteReceived);
-   void TransmitData(uint8_t data[], uint8_t size);
+   void TransmitData(uint8_t Data);
 
 private:
    uint8_t ControlModeActive = false;
