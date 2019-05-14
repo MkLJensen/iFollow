@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
   29:Generated_Source\PSoC5/cyfitter_cfg.c **** 
   30:Generated_Source\PSoC5/cyfitter_cfg.c **** #if defined(__GNUC__) || defined(__ARMCC_VERSION)
   31:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 2
 
 
   32:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED_ATTR __attribute__ ((packed))
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
   86:Generated_Source\PSoC5/cyfitter_cfg.c **** 	(void)memcpy(dest, src, n);
   87:Generated_Source\PSoC5/cyfitter_cfg.c **** }
   88:Generated_Source\PSoC5/cyfitter_cfg.c **** CY_CFG_UNUSED
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 3
 
 
   89:Generated_Source\PSoC5/cyfitter_cfg.c **** static void CYCONFIGCPYCODE(void *dest, const void *src, size_t n);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
   41              		.thumb
   42              		.thumb_func
   43              		.type	cfg_write_bytes32, %function
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 4
 
 
   44              	cfg_write_bytes32:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  181:Generated_Source\PSoC5/cyfitter_cfg.c **** *  This function is used for setting up the chip configuration areas that
  182:Generated_Source\PSoC5/cyfitter_cfg.c **** *  contain relatively sparse data.
  183:Generated_Source\PSoC5/cyfitter_cfg.c **** *
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 5
 
 
  184:Generated_Source\PSoC5/cyfitter_cfg.c **** * Parameters:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
   80              		.loc 1 203 0
   81 0014 01EB4205 		add	r5, r1, r2, lsl #1
   82 0018 11F81240 		ldrb	r4, [r1, r2, lsl #1]	@ zero_extendqisi2
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 6
 
 
   83 001c 6D78     		ldrb	r5, [r5, #1]	@ zero_extendqisi2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  214:Generated_Source\PSoC5/cyfitter_cfg.c **** * Summary:
  215:Generated_Source\PSoC5/cyfitter_cfg.c **** *  Performs the initialization of all of the clocks in the device based on the
  216:Generated_Source\PSoC5/cyfitter_cfg.c **** *  settings in the Clock tab of the DWR.  This includes enabling the requested
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 7
 
 
  217:Generated_Source\PSoC5/cyfitter_cfg.c **** *  clocks and setting the necessary dividers to produce the desired frequency. 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  271:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_PM_ACT_CFG2), ((CY_GET_XTND_REG8((void CYFAR *)CYREG_PM_ACT_
  272:Generated_Source\PSoC5/cyfitter_cfg.c **** }
  273:Generated_Source\PSoC5/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 8
 
 
  274:Generated_Source\PSoC5/cyfitter_cfg.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  152 0020 6E580040 		.word	1073764462
  153 0024 76580040 		.word	1073764470
  154              		.cfi_endproc
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 9
 
 
  155              	.LFE6:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  204              		.loc 1 235 0
  205 0008 1823     		movs	r3, #24
  206 000a 264A     		ldr	r2, .L20+4
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 10
 
 
  207 000c 1370     		strb	r3, [r2]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  250 004c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  251 004e 03F00103 		and	r3, r3, #1
  252 0052 43EA4404 		orr	r4, r3, r4, lsl #1
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 11
 
 
  253              	.LVL19:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  295 008c 0222     		movs	r2, #2
  296 008e 033B     		subs	r3, r3, #3
  297 0090 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 12
 
 
  271:Generated_Source\PSoC5/cyfitter_cfg.c **** }
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  349              		.type	SetAnalogRoutingPumps, %function
  350              	SetAnalogRoutingPumps:
  351              	.LFB7:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 13
 
 
  300:Generated_Source\PSoC5/cyfitter_cfg.c **** }
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  374              		.align	2
  375              		.global	cyfitter_cfg
  376              		.thumb
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 14
 
 
  377              		.thumb_func
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  400 0006 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  401 0008 43F00403 		orr	r3, r3, #4
  402 000c 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 15
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 15
 
 
  403              	.LVL29:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  416 001a 1146     		mov	r1, r2
  417 001c 2A44     		add	r2, r2, r5
  418 001e 0846     		mov	r0, r1
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 16
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 16
 
 
  419 0020 9188     		ldrh	r1, [r2, #4]
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  460              	.L30:
  407:Generated_Source\PSoC5/cyfitter_cfg.c **** 		{
  461              		.loc 1 407 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 17
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 17
 
 
  462 004e 012C     		cmp	r4, #1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  497 008e 0A22     		movs	r2, #10
  498 0090 1949     		ldr	r1, .L33+28
  499 0092 1A48     		ldr	r0, .L33+32
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 18
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 18
 
 
  500 0094 FFF7FEFF 		bl	CYCONFIGCPY
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  536              		.loc 1 450 0
  537 00ce 0E22     		movs	r2, #14
  538 00d0 2146     		mov	r1, r4
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 19
 
 
  539 00d2 1248     		ldr	r0, .L33+64
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  593              	cfg_memcpy_list.5019:
  594 0038 60520040 		.word	1073762912
  595 003c EC040048 		.word	1207960812
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 20
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 20
 
 
  596 0040 0600     		.short	6
@@ -1157,10 +1157,10 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  609 0006 00000000 		.4byte	.Ldebug_abbrev0
  610 000a 04       		.byte	0x4
  611 000b 01       		.uleb128 0x1
- 612 000c 2C020000 		.4byte	.LASF53
+ 612 000c 14020000 		.4byte	.LASF53
  613 0010 0C       		.byte	0xc
- 614 0011 19030000 		.4byte	.LASF54
- 615 0015 B9000000 		.4byte	.LASF55
+ 614 0011 01030000 		.4byte	.LASF54
+ 615 0015 97010000 		.4byte	.LASF55
  616 0019 00000000 		.4byte	.Ldebug_ranges0+0
  617 001d 00000000 		.4byte	0
  618 0021 00000000 		.4byte	.Ldebug_line0
@@ -1176,7 +1176,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  628 0037 04       		.uleb128 0x4
  629 0038 04       		.byte	0x4
  630 0039 07       		.byte	0x7
- 631 003a 4F010000 		.4byte	.LASF0
+ 631 003a F3000000 		.4byte	.LASF0
  632 003e 04       		.uleb128 0x4
  633 003f 08       		.byte	0x8
  634 0040 05       		.byte	0x5
@@ -1184,7 +1184,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  636 0045 04       		.uleb128 0x4
  637 0046 08       		.byte	0x8
  638 0047 04       		.byte	0x4
- 639 0048 B3010000 		.4byte	.LASF2
+ 639 0048 57010000 		.4byte	.LASF2
  640 004c 04       		.uleb128 0x4
  641 004d 01       		.byte	0x1
  642 004e 06       		.byte	0x6
@@ -1192,18 +1192,18 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  644 0053 04       		.uleb128 0x4
  645 0054 01       		.byte	0x1
  646 0055 08       		.byte	0x8
- 647 0056 14020000 		.4byte	.LASF4
+ 647 0056 FC010000 		.4byte	.LASF4
  648 005a 04       		.uleb128 0x4
  649 005b 02       		.byte	0x2
  650 005c 05       		.byte	0x5
- 651 005d 22020000 		.4byte	.LASF5
+ 651 005d 0A020000 		.4byte	.LASF5
  652 0061 04       		.uleb128 0x4
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 21
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 21
 
 
  653 0062 02       		.byte	0x2
  654 0063 07       		.byte	0x7
- 655 0064 91010000 		.4byte	.LASF6
+ 655 0064 35010000 		.4byte	.LASF6
  656 0068 04       		.uleb128 0x4
  657 0069 04       		.byte	0x4
  658 006a 05       		.byte	0x5
@@ -1211,7 +1211,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  660 006f 04       		.uleb128 0x4
  661 0070 04       		.byte	0x4
  662 0071 07       		.byte	0x7
- 663 0072 65010000 		.4byte	.LASF8
+ 663 0072 09010000 		.4byte	.LASF8
  664 0076 04       		.uleb128 0x4
  665 0077 08       		.byte	0x8
  666 0078 07       		.byte	0x7
@@ -1219,15 +1219,15 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  668 007d 04       		.uleb128 0x4
  669 007e 04       		.byte	0x4
  670 007f 07       		.byte	0x7
- 671 0080 AA010000 		.4byte	.LASF10
+ 671 0080 4E010000 		.4byte	.LASF10
  672 0084 05       		.uleb128 0x5
  673 0085 04       		.byte	0x4
  674 0086 04       		.uleb128 0x4
  675 0087 01       		.byte	0x1
  676 0088 08       		.byte	0x8
- 677 0089 D5020000 		.4byte	.LASF11
+ 677 0089 BD020000 		.4byte	.LASF11
  678 008d 06       		.uleb128 0x6
- 679 008e 22010000 		.4byte	.LASF13
+ 679 008e C6000000 		.4byte	.LASF13
  680 0092 03       		.byte	0x3
  681 0093 E401     		.2byte	0x1e4
  682 0095 53000000 		.4byte	0x53
@@ -1237,28 +1237,28 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  686 009f E501     		.2byte	0x1e5
  687 00a1 61000000 		.4byte	0x61
  688 00a5 06       		.uleb128 0x6
- 689 00a6 39010000 		.4byte	.LASF15
+ 689 00a6 DD000000 		.4byte	.LASF15
  690 00aa 03       		.byte	0x3
  691 00ab E601     		.2byte	0x1e6
  692 00ad 6F000000 		.4byte	0x6f
  693 00b1 04       		.uleb128 0x4
  694 00b2 04       		.byte	0x4
  695 00b3 04       		.byte	0x4
- 696 00b4 F3010000 		.4byte	.LASF16
+ 696 00b4 DB010000 		.4byte	.LASF16
  697 00b8 04       		.uleb128 0x4
  698 00b9 08       		.byte	0x8
  699 00ba 04       		.byte	0x4
- 700 00bb 28010000 		.4byte	.LASF17
+ 700 00bb CC000000 		.4byte	.LASF17
  701 00bf 06       		.uleb128 0x6
- 702 00c0 0F020000 		.4byte	.LASF18
+ 702 00c0 F7010000 		.4byte	.LASF18
  703 00c4 03       		.byte	0x3
  704 00c5 8E02     		.2byte	0x28e
  705 00c7 CB000000 		.4byte	0xcb
  706 00cb 07       		.uleb128 0x7
  707 00cc 8D000000 		.4byte	0x8d
  708 00d0 06       		.uleb128 0x6
- 709 00d1 15010000 		.4byte	.LASF19
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 22
+ 709 00d1 B9000000 		.4byte	.LASF19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 22
 
 
  710 00d5 03       		.byte	0x3
@@ -1267,7 +1267,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  713 00dc 07       		.uleb128 0x7
  714 00dd 99000000 		.4byte	0x99
  715 00e1 06       		.uleb128 0x6
- 716 00e2 A4010000 		.4byte	.LASF20
+ 716 00e2 48010000 		.4byte	.LASF20
  717 00e6 03       		.byte	0x3
  718 00e7 9002     		.2byte	0x290
  719 00e9 ED000000 		.4byte	0xed
@@ -1279,20 +1279,20 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  725 00f5 98       		.byte	0x98
  726 00f6 13010000 		.4byte	0x113
  727 00fa 09       		.uleb128 0x9
- 728 00fb F7020000 		.4byte	.LASF21
+ 728 00fb DF020000 		.4byte	.LASF21
  729 00ff 01       		.byte	0x1
  730 0100 9A       		.byte	0x9a
  731 0101 8D000000 		.4byte	0x8d
  732 0105 00       		.byte	0
  733 0106 09       		.uleb128 0x9
- 734 0107 49010000 		.4byte	.LASF22
+ 734 0107 ED000000 		.4byte	.LASF22
  735 010b 01       		.byte	0x1
  736 010c 9B       		.byte	0x9b
  737 010d 8D000000 		.4byte	0x8d
  738 0111 01       		.byte	0x1
  739 0112 00       		.byte	0
  740 0113 03       		.uleb128 0x3
- 741 0114 C2020000 		.4byte	.LASF23
+ 741 0114 AA020000 		.4byte	.LASF23
  742 0118 01       		.byte	0x1
  743 0119 9C       		.byte	0x9c
  744 011a F2000000 		.4byte	0xf2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  764 0146 01       		.byte	0x1
  765 0147 C0       		.byte	0xc0
  766 0148 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 23
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 23
 
 
  767 014c 34000000 		.4byte	.LFE4-.LFB4
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  821 01c0 C4010000 		.4byte	0x1c4
  822 01c4 11       		.uleb128 0x11
  823 01c5 13010000 		.4byte	0x113
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 24
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 24
 
 
  824 01c9 12       		.uleb128 0x12
@@ -1391,14 +1391,14 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  831 01da 9C       		.byte	0x9c
  832 01db F0010000 		.4byte	0x1f0
  833 01df 13       		.uleb128 0x13
- 834 01e0 BF010000 		.4byte	.LASF31
+ 834 01e0 63010000 		.4byte	.LASF31
  835 01e4 01       		.byte	0x1
  836 01e5 2801     		.2byte	0x128
  837 01e7 8D000000 		.4byte	0x8d
  838 01eb 6F000000 		.4byte	.LLST4
  839 01ef 00       		.byte	0
  840 01f0 0C       		.uleb128 0xc
- 841 01f1 2F010000 		.4byte	.LASF32
+ 841 01f1 D3000000 		.4byte	.LASF32
  842 01f5 01       		.byte	0x1
  843 01f6 4D       		.byte	0x4d
  844 01f7 00000000 		.4byte	.LFB0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  878 0236 52       		.byte	0x52
  879 0237 03       		.uleb128 0x3
  880 0238 F3       		.byte	0xf3
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 25
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 25
 
 
  881 0239 01       		.uleb128 0x1
@@ -1455,13 +1455,13 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  892 024d 9C       		.byte	0x9c
  893 024e 95020000 		.4byte	0x295
  894 0252 0F       		.uleb128 0xf
- 895 0253 77010000 		.4byte	.LASF34
+ 895 0253 1B010000 		.4byte	.LASF34
  896 0257 01       		.byte	0x1
  897 0258 E5       		.byte	0xe5
  898 0259 A5000000 		.4byte	0xa5
  899 025d CF000000 		.4byte	.LLST7
  900 0261 0F       		.uleb128 0xf
- 901 0262 BA020000 		.4byte	.LASF35
+ 901 0262 A2020000 		.4byte	.LASF35
  902 0266 01       		.byte	0x1
  903 0267 E6       		.byte	0xe6
  904 0268 8D000000 		.4byte	0x8d
@@ -1488,7 +1488,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  925 0293 00       		.byte	0
  926 0294 00       		.byte	0
  927 0295 0C       		.uleb128 0xc
- 928 0296 0D030000 		.4byte	.LASF36
+ 928 0296 F5020000 		.4byte	.LASF36
  929 029a 01       		.byte	0x1
  930 029b 54       		.byte	0x54
  931 029c 00000000 		.4byte	.LFB1
@@ -1497,8 +1497,8 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  934 02a5 9C       		.byte	0x9c
  935 02a6 F5020000 		.4byte	0x2f5
  936 02aa 18       		.uleb128 0x18
- 937 02ab EE010000 		.4byte	.LASF37
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 26
+ 937 02ab 92010000 		.4byte	.LASF37
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 26
 
 
  938 02af 01       		.byte	0x1
@@ -1548,7 +1548,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  982 02f7 FB020000 		.4byte	0x2fb
  983 02fb 19       		.uleb128 0x19
  984 02fc 1A       		.uleb128 0x1a
- 985 02fd E1020000 		.4byte	.LASF40
+ 985 02fd C9020000 		.4byte	.LASF40
  986 0301 01       		.byte	0x1
  987 0302 4001     		.2byte	0x140
  988 0304 00000000 		.4byte	.LFB7
@@ -1557,8 +1557,8 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  991 030d 9C       		.byte	0x9c
  992 030e 2F030000 		.4byte	0x32f
  993 0312 1B       		.uleb128 0x1b
- 994 0313 FE020000 		.4byte	.LASF38
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 27
+ 994 0313 E6020000 		.4byte	.LASF38
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 27
 
 
  995 0317 01       		.byte	0x1
@@ -1567,7 +1567,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  998 031e 01       		.uleb128 0x1
  999 031f 50       		.byte	0x50
  1000 0320 1C       		.uleb128 0x1c
- 1001 0321 40010000 		.4byte	.LASF39
+ 1001 0321 E4000000 		.4byte	.LASF39
  1002 0325 01       		.byte	0x1
  1003 0326 4201     		.2byte	0x142
  1004 0328 8D000000 		.4byte	0x8d
@@ -1575,7 +1575,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1006 032d 53       		.byte	0x53
  1007 032e 00       		.byte	0
  1008 032f 1A       		.uleb128 0x1a
- 1009 0330 57030000 		.4byte	.LASF41
+ 1009 0330 3F030000 		.4byte	.LASF41
  1010 0334 01       		.byte	0x1
  1011 0335 6201     		.2byte	0x162
  1012 0337 00000000 		.4byte	.LFB8
@@ -1593,20 +1593,20 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1024 0355 6E01     		.2byte	0x16e
  1025 0357 76030000 		.4byte	0x376
  1026 035b 1F       		.uleb128 0x1f
- 1027 035c 3F030000 		.4byte	.LASF42
+ 1027 035c 27030000 		.4byte	.LASF42
  1028 0360 01       		.byte	0x1
  1029 0361 6F01     		.2byte	0x16f
  1030 0363 84000000 		.4byte	0x84
  1031 0367 00       		.byte	0
  1032 0368 1F       		.uleb128 0x1f
- 1033 0369 8C010000 		.4byte	.LASF43
+ 1033 0369 30010000 		.4byte	.LASF43
  1034 036d 01       		.byte	0x1
  1035 036e 7001     		.2byte	0x170
  1036 0370 99000000 		.4byte	0x99
  1037 0374 04       		.byte	0x4
  1038 0375 00       		.byte	0
  1039 0376 06       		.uleb128 0x6
- 1040 0377 D1010000 		.4byte	.LASF44
+ 1040 0377 75010000 		.4byte	.LASF44
  1041 037b 01       		.byte	0x1
  1042 037c 7101     		.2byte	0x171
  1043 037e 52030000 		.4byte	0x352
@@ -1616,9 +1616,9 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1047 0385 7401     		.2byte	0x174
  1048 0387 B3030000 		.4byte	0x3b3
  1049 038b 1F       		.uleb128 0x1f
- 1050 038c EE010000 		.4byte	.LASF37
+ 1050 038c 92010000 		.4byte	.LASF37
  1051 0390 01       		.byte	0x1
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 28
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 28
 
 
  1052 0391 7501     		.2byte	0x175
@@ -1631,14 +1631,14 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1059 03a0 F5020000 		.4byte	0x2f5
  1060 03a4 04       		.byte	0x4
  1061 03a5 1F       		.uleb128 0x1f
- 1062 03a6 8C010000 		.4byte	.LASF43
+ 1062 03a6 30010000 		.4byte	.LASF43
  1063 03aa 01       		.byte	0x1
  1064 03ab 7701     		.2byte	0x177
  1065 03ad 99000000 		.4byte	0x99
  1066 03b1 08       		.byte	0x8
  1067 03b2 00       		.byte	0
  1068 03b3 06       		.uleb128 0x6
- 1069 03b4 7F010000 		.4byte	.LASF45
+ 1069 03b4 23010000 		.4byte	.LASF45
  1070 03b8 01       		.byte	0x1
  1071 03b9 7801     		.2byte	0x178
  1072 03bb 82030000 		.4byte	0x382
@@ -1652,7 +1652,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1080 03cf 11       		.uleb128 0x11
  1081 03d0 76030000 		.4byte	0x376
  1082 03d4 1C       		.uleb128 0x1c
- 1083 03d5 DE010000 		.4byte	.LASF46
+ 1083 03d5 82010000 		.4byte	.LASF46
  1084 03d9 01       		.byte	0x1
  1085 03da 7A01     		.2byte	0x17a
  1086 03dc E6030000 		.4byte	0x3e6
@@ -1671,14 +1671,14 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1099 03fb 11       		.uleb128 0x11
  1100 03fc B3030000 		.4byte	0x3b3
  1101 0400 1C       		.uleb128 0x1c
- 1102 0401 47030000 		.4byte	.LASF47
+ 1102 0401 2F030000 		.4byte	.LASF47
  1103 0405 01       		.byte	0x1
  1104 0406 8701     		.2byte	0x187
  1105 0408 12040000 		.4byte	0x412
  1106 040c 05       		.uleb128 0x5
  1107 040d 03       		.byte	0x3
  1108 040e 38000000 		.4byte	cfg_memcpy_list.5019
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 29
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 29
 
 
  1109 0412 11       		.uleb128 0x11
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1163 0478 6D6300   		.ascii	"mc\000"
  1164 047b 01       		.byte	0x1
  1165 047c 9901     		.2byte	0x199
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 30
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 30
 
 
  1166 047e 86040000 		.4byte	0x486
@@ -1747,19 +1747,19 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1169 0487 04       		.byte	0x4
  1170 0488 FB030000 		.4byte	0x3fb
  1171 048c 13       		.uleb128 0x13
- 1172 048d 07020000 		.4byte	.LASF48
+ 1172 048d EF010000 		.4byte	.LASF48
  1173 0491 01       		.byte	0x1
  1174 0492 9A01     		.2byte	0x19a
  1175 0494 84000000 		.4byte	0x84
  1176 0498 1F020000 		.4byte	.LLST15
  1177 049c 13       		.uleb128 0x13
- 1178 049d DA020000 		.4byte	.LASF49
+ 1178 049d C2020000 		.4byte	.LASF49
  1179 04a1 01       		.byte	0x1
  1180 04a2 9B01     		.2byte	0x19b
  1181 04a4 F5020000 		.4byte	0x2f5
  1182 04a8 32020000 		.4byte	.LLST16
  1183 04ac 13       		.uleb128 0x13
- 1184 04ad 5C010000 		.4byte	.LASF50
+ 1184 04ad 00010000 		.4byte	.LASF50
  1185 04b1 01       		.byte	0x1
  1186 04b2 9C01     		.2byte	0x19c
  1187 04b4 99000000 		.4byte	0x99
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1220 04eb 50       		.byte	0x50
  1221 04ec 03       		.uleb128 0x3
  1222 04ed 42       		.byte	0x42
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 31
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 31
 
 
  1223 04ee 4A       		.byte	0x4a
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1277 0545 17       		.uleb128 0x17
  1278 0546 AC000000 		.4byte	.LVL46
  1279 054a 95020000 		.4byte	0x295
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 32
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 32
 
 
  1280 054e 6A050000 		.4byte	0x56a
@@ -1909,19 +1909,19 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1325 0599 00       		.byte	0
  1326 059a 00       		.byte	0
  1327 059b 25       		.uleb128 0x25
- 1328 059c 06030000 		.4byte	.LASF51
- 1329 05a0 06030000 		.4byte	.LASF51
+ 1328 059c EE020000 		.4byte	.LASF51
+ 1329 05a0 EE020000 		.4byte	.LASF51
  1330 05a4 26       		.uleb128 0x26
- 1331 05a5 F9010000 		.4byte	.LASF57
- 1332 05a9 F9010000 		.4byte	.LASF57
+ 1331 05a5 E1010000 		.4byte	.LASF57
+ 1332 05a9 E1010000 		.4byte	.LASF57
  1333 05ad 04       		.byte	0x4
  1334 05ae 79       		.byte	0x79
  1335 05af 25       		.uleb128 0x25
- 1336 05b0 1B010000 		.4byte	.LASF52
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 33
+ 1336 05b0 BF000000 		.4byte	.LASF52
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 33
 
 
- 1337 05b4 1B010000 		.4byte	.LASF52
+ 1337 05b4 BF000000 		.4byte	.LASF52
  1338 05b8 00       		.byte	0
  1339              		.section	.debug_abbrev,"",%progbits
  1340              	.Ldebug_abbrev0:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1391 0032 03       		.uleb128 0x3
  1392 0033 0E       		.uleb128 0xe
  1393 0034 00       		.byte	0
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 34
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 34
 
 
  1394 0035 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1448 006b 00       		.byte	0
  1449 006c 00       		.byte	0
  1450 006d 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 35
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 35
 
 
  1451 006e 2E       		.uleb128 0x2e
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1505 00a6 40       		.uleb128 0x40
  1506 00a7 18       		.uleb128 0x18
  1507 00a8 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 36
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 36
 
 
  1508 00aa 19       		.uleb128 0x19
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1562 00e0 26       		.uleb128 0x26
  1563 00e1 00       		.byte	0
  1564 00e2 49       		.uleb128 0x49
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 37
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 37
 
 
  1565 00e3 13       		.uleb128 0x13
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1619 011a 00       		.byte	0
  1620 011b 00       		.byte	0
  1621 011c 15       		.uleb128 0x15
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 38
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 38
 
 
  1622 011d 898201   		.uleb128 0x4109
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1676 015a 0E       		.uleb128 0xe
  1677 015b 3A       		.uleb128 0x3a
  1678 015c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 39
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 39
 
 
  1679 015d 3B       		.uleb128 0x3b
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1733 0194 13       		.uleb128 0x13
  1734 0195 00       		.byte	0
  1735 0196 00       		.byte	0
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 40
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 40
 
 
  1736 0197 1E       		.uleb128 0x1e
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1790 01cd 00       		.byte	0
  1791 01ce 49       		.uleb128 0x49
  1792 01cf 13       		.uleb128 0x13
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 41
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 41
 
 
  1793 01d0 2F       		.uleb128 0x2f
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1847 0208 3B       		.uleb128 0x3b
  1848 0209 0B       		.uleb128 0xb
  1849 020a 00       		.byte	0
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 42
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 42
 
 
  1850 020b 00       		.byte	0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1904 0082 00000000 		.4byte	.LVL14
  1905 0086 09000000 		.4byte	.LVL16-1
  1906 008a 0100     		.2byte	0x1
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 43
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 43
 
 
  1907 008c 50       		.byte	0x50
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  1961 0110 00000000 		.4byte	0
  1962 0114 00000000 		.4byte	0
  1963              	.LLST9:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 44
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 44
 
 
  1964 0118 00000000 		.4byte	.LVL25
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  2018 019c 54       		.byte	0x54
  2019 019d 34000000 		.4byte	.LVL35
  2020 01a1 4C000000 		.4byte	.LVL40
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 45
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 45
 
 
  2021 01a5 0100     		.2byte	0x1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  2075 0215 22       		.byte	0x22
  2076 0216 9F       		.byte	0x9f
  2077 0217 00000000 		.4byte	0
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 46
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 46
 
 
  2078 021b 00000000 		.4byte	0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  2132 000a 04       		.byte	0x4
  2133 000b 00       		.byte	0
  2134 000c 0000     		.2byte	0
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 47
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 47
 
 
  2135 000e 0000     		.2byte	0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  2182      41646472 
  2182      00
  2183              	.LASF12:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 48
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 48
 
 
  2184 0016 73697A65 		.ascii	"size_t\000"
@@ -2876,208 +2876,207 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 1
  2206 00b0 6C6F6E67 		.ascii	"long int\000"
  2206      20696E74 
  2206      00
- 2207              	.LASF55:
- 2208 00b9 433A5C55 		.ascii	"C:\\Users\\Mathias\\Desktop\\Uni\\4. Semester\\Proj"
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 49
+ 2207              	.LASF19:
+ 2208 00b9 72656731 		.ascii	"reg16\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 49
 
 
- 2208      73657273 
- 2208      5C4D6174 
- 2208      68696173 
- 2208      5C446573 
- 2209 00e6 656B7420 		.ascii	"ekt 4\\iFollow\\Software\\PSOC\\ToF\\Design01.cydsn"
- 2209      345C6946 
- 2209      6F6C6C6F 
- 2209      775C536F 
- 2209      66747761 
- 2210 0114 00       		.ascii	"\000"
- 2211              	.LASF19:
- 2212 0115 72656731 		.ascii	"reg16\000"
- 2212      3600
- 2213              	.LASF52:
- 2214 011b 6D656D63 		.ascii	"memcpy\000"
- 2214      707900
- 2215              	.LASF13:
- 2216 0122 75696E74 		.ascii	"uint8\000"
- 2216      3800
- 2217              	.LASF17:
- 2218 0128 646F7562 		.ascii	"double\000"
- 2218      6C6500
- 2219              	.LASF32:
- 2220 012f 43594D45 		.ascii	"CYMEMZERO\000"
- 2220      4D5A4552 
- 2220      4F00
- 2221              	.LASF15:
- 2222 0139 75696E74 		.ascii	"uint32\000"
- 2222      333200
- 2223              	.LASF39:
- 2224 0140 72656756 		.ascii	"regValue\000"
- 2224      616C7565 
+ 2208      3600
+ 2209              	.LASF52:
+ 2210 00bf 6D656D63 		.ascii	"memcpy\000"
+ 2210      707900
+ 2211              	.LASF13:
+ 2212 00c6 75696E74 		.ascii	"uint8\000"
+ 2212      3800
+ 2213              	.LASF17:
+ 2214 00cc 646F7562 		.ascii	"double\000"
+ 2214      6C6500
+ 2215              	.LASF32:
+ 2216 00d3 43594D45 		.ascii	"CYMEMZERO\000"
+ 2216      4D5A4552 
+ 2216      4F00
+ 2217              	.LASF15:
+ 2218 00dd 75696E74 		.ascii	"uint32\000"
+ 2218      333200
+ 2219              	.LASF39:
+ 2220 00e4 72656756 		.ascii	"regValue\000"
+ 2220      616C7565 
+ 2220      00
+ 2221              	.LASF22:
+ 2222 00ed 76616C75 		.ascii	"value\000"
+ 2222      6500
+ 2223              	.LASF0:
+ 2224 00f3 756E7369 		.ascii	"unsigned int\000"
+ 2224      676E6564 
+ 2224      20696E74 
  2224      00
- 2225              	.LASF22:
- 2226 0149 76616C75 		.ascii	"value\000"
- 2226      6500
- 2227              	.LASF0:
- 2228 014f 756E7369 		.ascii	"unsigned int\000"
- 2228      676E6564 
- 2228      20696E74 
- 2228      00
- 2229              	.LASF50:
- 2230 015c 6E756D42 		.ascii	"numBytes\000"
- 2230      79746573 
- 2230      00
- 2231              	.LASF8:
- 2232 0165 6C6F6E67 		.ascii	"long unsigned int\000"
- 2232      20756E73 
- 2232      69676E65 
- 2232      6420696E 
- 2232      7400
- 2233              	.LASF34:
- 2234 0177 74696D65 		.ascii	"timeout\000"
- 2234      6F757400 
- 2235              	.LASF45:
- 2236 017f 6366675F 		.ascii	"cfg_memcpy_t\000"
- 2236      6D656D63 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 50
+ 2225              	.LASF50:
+ 2226 0100 6E756D42 		.ascii	"numBytes\000"
+ 2226      79746573 
+ 2226      00
+ 2227              	.LASF8:
+ 2228 0109 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2228      20756E73 
+ 2228      69676E65 
+ 2228      6420696E 
+ 2228      7400
+ 2229              	.LASF34:
+ 2230 011b 74696D65 		.ascii	"timeout\000"
+ 2230      6F757400 
+ 2231              	.LASF45:
+ 2232 0123 6366675F 		.ascii	"cfg_memcpy_t\000"
+ 2232      6D656D63 
+ 2232      70795F74 
+ 2232      00
+ 2233              	.LASF43:
+ 2234 0130 73697A65 		.ascii	"size\000"
+ 2234      00
+ 2235              	.LASF6:
+ 2236 0135 73686F72 		.ascii	"short unsigned int\000"
+ 2236      7420756E 
+ 2236      7369676E 
+ 2236      65642069 
+ 2236      6E7400
+ 2237              	.LASF20:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 50
 
 
- 2236      70795F74 
- 2236      00
- 2237              	.LASF43:
- 2238 018c 73697A65 		.ascii	"size\000"
- 2238      00
- 2239              	.LASF6:
- 2240 0191 73686F72 		.ascii	"short unsigned int\000"
- 2240      7420756E 
- 2240      7369676E 
- 2240      65642069 
- 2240      6E7400
- 2241              	.LASF20:
- 2242 01a4 72656733 		.ascii	"reg32\000"
- 2242      3200
- 2243              	.LASF10:
- 2244 01aa 73697A65 		.ascii	"sizetype\000"
- 2244      74797065 
- 2244      00
- 2245              	.LASF2:
- 2246 01b3 6C6F6E67 		.ascii	"long double\000"
- 2246      20646F75 
- 2246      626C6500 
- 2247              	.LASF31:
- 2248 01bf 62675F78 		.ascii	"bg_xover_inl_trim\000"
- 2248      6F766572 
- 2248      5F696E6C 
- 2248      5F747269 
- 2248      6D00
- 2249              	.LASF44:
- 2250 01d1 6366675F 		.ascii	"cfg_memset_t\000"
- 2250      6D656D73 
- 2250      65745F74 
+ 2238 0148 72656733 		.ascii	"reg32\000"
+ 2238      3200
+ 2239              	.LASF10:
+ 2240 014e 73697A65 		.ascii	"sizetype\000"
+ 2240      74797065 
+ 2240      00
+ 2241              	.LASF2:
+ 2242 0157 6C6F6E67 		.ascii	"long double\000"
+ 2242      20646F75 
+ 2242      626C6500 
+ 2243              	.LASF31:
+ 2244 0163 62675F78 		.ascii	"bg_xover_inl_trim\000"
+ 2244      6F766572 
+ 2244      5F696E6C 
+ 2244      5F747269 
+ 2244      6D00
+ 2245              	.LASF44:
+ 2246 0175 6366675F 		.ascii	"cfg_memset_t\000"
+ 2246      6D656D73 
+ 2246      65745F74 
+ 2246      00
+ 2247              	.LASF46:
+ 2248 0182 6366675F 		.ascii	"cfg_memset_list\000"
+ 2248      6D656D73 
+ 2248      65745F6C 
+ 2248      69737400 
+ 2249              	.LASF37:
+ 2250 0192 64657374 		.ascii	"dest\000"
  2250      00
- 2251              	.LASF46:
- 2252 01de 6366675F 		.ascii	"cfg_memset_list\000"
- 2252      6D656D73 
- 2252      65745F6C 
- 2252      69737400 
- 2253              	.LASF37:
- 2254 01ee 64657374 		.ascii	"dest\000"
- 2254      00
- 2255              	.LASF16:
- 2256 01f3 666C6F61 		.ascii	"float\000"
- 2256      7400
- 2257              	.LASF57:
- 2258 01f9 43794465 		.ascii	"CyDelayCycles\000"
- 2258      6C617943 
- 2258      79636C65 
- 2258      7300
- 2259              	.LASF48:
- 2260 0207 64657374 		.ascii	"destPtr\000"
- 2260      50747200 
- 2261              	.LASF18:
- 2262 020f 72656738 		.ascii	"reg8\000"
- 2262      00
- 2263              	.LASF4:
- 2264 0214 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 51
+ 2251              	.LASF55:
+ 2252 0197 433A5C55 		.ascii	"C:\\Users\\jespe\\Desktop\\GIT\\iFollow\\Software\\"
+ 2252      73657273 
+ 2252      5C6A6573 
+ 2252      70655C44 
+ 2252      65736B74 
+ 2253 01c3 50534F43 		.ascii	"PSOC\\ToF\\Design01.cydsn\000"
+ 2253      5C546F46 
+ 2253      5C446573 
+ 2253      69676E30 
+ 2253      312E6379 
+ 2254              	.LASF16:
+ 2255 01db 666C6F61 		.ascii	"float\000"
+ 2255      7400
+ 2256              	.LASF57:
+ 2257 01e1 43794465 		.ascii	"CyDelayCycles\000"
+ 2257      6C617943 
+ 2257      79636C65 
+ 2257      7300
+ 2258              	.LASF48:
+ 2259 01ef 64657374 		.ascii	"destPtr\000"
+ 2259      50747200 
+ 2260              	.LASF18:
+ 2261 01f7 72656738 		.ascii	"reg8\000"
+ 2261      00
+ 2262              	.LASF4:
+ 2263 01fc 756E7369 		.ascii	"unsigned char\000"
+ 2263      676E6564 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 51
 
 
- 2264      676E6564 
- 2264      20636861 
- 2264      7200
- 2265              	.LASF5:
- 2266 0222 73686F72 		.ascii	"short int\000"
- 2266      7420696E 
- 2266      7400
- 2267              	.LASF53:
- 2268 022c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2268      43313120 
- 2268      352E342E 
- 2268      31203230 
- 2268      31363036 
- 2269 025f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 2269      20726576 
- 2269      6973696F 
- 2269      6E203233 
- 2269      37373135 
- 2270 0292 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2270      66756E63 
- 2270      74696F6E 
- 2270      2D736563 
- 2270      74696F6E 
- 2271              	.LASF35:
- 2272 02ba 706C6C4C 		.ascii	"pllLock\000"
- 2272      6F636B00 
- 2273              	.LASF23:
- 2274 02c2 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
- 2274      66675F61 
- 2274      64647276 
- 2274      616C7565 
- 2274      5F7400
- 2275              	.LASF11:
- 2276 02d5 63686172 		.ascii	"char\000"
- 2276      00
- 2277              	.LASF49:
- 2278 02da 73726350 		.ascii	"srcPtr\000"
- 2278      747200
- 2279              	.LASF40:
- 2280 02e1 53657441 		.ascii	"SetAnalogRoutingPumps\000"
- 2280      6E616C6F 
- 2280      67526F75 
- 2280      74696E67 
- 2280      50756D70 
- 2281              	.LASF21:
- 2282 02f7 6F666673 		.ascii	"offset\000"
- 2282      657400
- 2283              	.LASF38:
- 2284 02fe 656E6162 		.ascii	"enabled\000"
- 2284      6C656400 
- 2285              	.LASF51:
- 2286 0306 6D656D73 		.ascii	"memset\000"
- 2286      657400
- 2287              	.LASF36:
- 2288 030d 4359434F 		.ascii	"CYCONFIGCPY\000"
- 2288      4E464947 
- 2288      43505900 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccD5HZRO.s 			page 52
+ 2263      20636861 
+ 2263      7200
+ 2264              	.LASF5:
+ 2265 020a 73686F72 		.ascii	"short int\000"
+ 2265      7420696E 
+ 2265      7400
+ 2266              	.LASF53:
+ 2267 0214 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2267      43313120 
+ 2267      352E342E 
+ 2267      31203230 
+ 2267      31363036 
+ 2268 0247 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2268      20726576 
+ 2268      6973696F 
+ 2268      6E203233 
+ 2268      37373135 
+ 2269 027a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2269      66756E63 
+ 2269      74696F6E 
+ 2269      2D736563 
+ 2269      74696F6E 
+ 2270              	.LASF35:
+ 2271 02a2 706C6C4C 		.ascii	"pllLock\000"
+ 2271      6F636B00 
+ 2272              	.LASF23:
+ 2273 02aa 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
+ 2273      66675F61 
+ 2273      64647276 
+ 2273      616C7565 
+ 2273      5F7400
+ 2274              	.LASF11:
+ 2275 02bd 63686172 		.ascii	"char\000"
+ 2275      00
+ 2276              	.LASF49:
+ 2277 02c2 73726350 		.ascii	"srcPtr\000"
+ 2277      747200
+ 2278              	.LASF40:
+ 2279 02c9 53657441 		.ascii	"SetAnalogRoutingPumps\000"
+ 2279      6E616C6F 
+ 2279      67526F75 
+ 2279      74696E67 
+ 2279      50756D70 
+ 2280              	.LASF21:
+ 2281 02df 6F666673 		.ascii	"offset\000"
+ 2281      657400
+ 2282              	.LASF38:
+ 2283 02e6 656E6162 		.ascii	"enabled\000"
+ 2283      6C656400 
+ 2284              	.LASF51:
+ 2285 02ee 6D656D73 		.ascii	"memset\000"
+ 2285      657400
+ 2286              	.LASF36:
+ 2287 02f5 4359434F 		.ascii	"CYCONFIGCPY\000"
+ 2287      4E464947 
+ 2287      43505900 
+ 2288              	.LASF54:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUseswc.s 			page 52
 
 
- 2289              	.LASF54:
- 2290 0319 47656E65 		.ascii	"Generated_Source\\PSoC5\\cyfitter_cfg.c\000"
- 2290      72617465 
- 2290      645F536F 
- 2290      75726365 
- 2290      5C50536F 
- 2291              	.LASF42:
- 2292 033f 61646472 		.ascii	"address\000"
- 2292      65737300 
- 2293              	.LASF47:
- 2294 0347 6366675F 		.ascii	"cfg_memcpy_list\000"
- 2294      6D656D63 
- 2294      70795F6C 
- 2294      69737400 
- 2295              	.LASF41:
- 2296 0357 63796669 		.ascii	"cyfitter_cfg\000"
- 2296      74746572 
- 2296      5F636667 
- 2296      00
- 2297              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2289 0301 47656E65 		.ascii	"Generated_Source\\PSoC5\\cyfitter_cfg.c\000"
+ 2289      72617465 
+ 2289      645F536F 
+ 2289      75726365 
+ 2289      5C50536F 
+ 2290              	.LASF42:
+ 2291 0327 61646472 		.ascii	"address\000"
+ 2291      65737300 
+ 2292              	.LASF47:
+ 2293 032f 6366675F 		.ascii	"cfg_memcpy_list\000"
+ 2293      6D656D63 
+ 2293      70795F6C 
+ 2293      69737400 
+ 2294              	.LASF41:
+ 2295 033f 63796669 		.ascii	"cyfitter_cfg\000"
+ 2295      74746572 
+ 2295      5F636667 
+ 2295      00
+ 2296              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

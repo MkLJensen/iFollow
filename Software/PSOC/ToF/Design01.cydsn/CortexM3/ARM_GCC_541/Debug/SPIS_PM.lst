@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
   28:Generated_Source\PSoC5/SPIS_PM.c **** * Function Name: SPIS_SaveConfig
   29:Generated_Source\PSoC5/SPIS_PM.c **** ********************************************************************************
   30:Generated_Source\PSoC5/SPIS_PM.c **** *
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPIS_PM.c **** * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
   50 0000 7047     		bx	lr
   51              		.cfi_endproc
   52              	.LFE1:
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 3
 
 
   53              		.size	SPIS_RestoreConfig, .-SPIS_RestoreConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
   77 000c 0122     		movs	r2, #1
   78 000e 054B     		ldr	r3, .L7+4
   79 0010 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 4
 
 
   80 0012 02E0     		b	.L5
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  120:Generated_Source\PSoC5/SPIS_PM.c **** *  zero.
  121:Generated_Source\PSoC5/SPIS_PM.c **** *  SPIS_txBufferRead - modified every function call - resets to
  122:Generated_Source\PSoC5/SPIS_PM.c **** *  zero.
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 5
 
 
  123:Generated_Source\PSoC5/SPIS_PM.c **** *  SPIS_rxBufferWrite - modified every function call - resets to
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  152:Generated_Source\PSoC5/SPIS_PM.c ****          SPIS_Enable();
  132              		.loc 1 152 0
  133 001a FFF7FEFF 		bl	SPIS_Enable
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 6
 
 
  134              	.LVL2:
@@ -337,14 +337,14 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  167 000c 7A000000 		.4byte	.LASF29
  168 0010 0C       		.byte	0xc
  169 0011 45000000 		.4byte	.LASF30
- 170 0015 89010000 		.4byte	.LASF31
+ 170 0015 2C010000 		.4byte	.LASF31
  171 0019 00000000 		.4byte	.Ldebug_ranges0+0
  172 001d 00000000 		.4byte	0
  173 0021 00000000 		.4byte	.Ldebug_line0
  174 0025 02       		.uleb128 0x2
  175 0026 01       		.byte	0x1
  176 0027 06       		.byte	0x6
- 177 0028 58020000 		.4byte	.LASF0
+ 177 0028 40020000 		.4byte	.LASF0
  178 002c 02       		.uleb128 0x2
  179 002d 01       		.byte	0x1
  180 002e 08       		.byte	0x8
@@ -352,18 +352,18 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  182 0033 02       		.uleb128 0x2
  183 0034 02       		.byte	0x2
  184 0035 05       		.byte	0x5
- 185 0036 13020000 		.4byte	.LASF2
+ 185 0036 FB010000 		.4byte	.LASF2
  186 003a 02       		.uleb128 0x2
  187 003b 02       		.byte	0x2
  188 003c 07       		.byte	0x7
  189 003d 1F000000 		.4byte	.LASF3
  190 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 7
 
 
  191 0042 04       		.byte	0x4
  192 0043 05       		.byte	0x5
- 193 0044 28020000 		.4byte	.LASF4
+ 193 0044 10020000 		.4byte	.LASF4
  194 0048 02       		.uleb128 0x2
  195 0049 04       		.byte	0x4
  196 004a 07       		.byte	0x7
@@ -371,11 +371,11 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  198 004f 02       		.uleb128 0x2
  199 0050 08       		.byte	0x8
  200 0051 05       		.byte	0x5
- 201 0052 00020000 		.4byte	.LASF6
+ 201 0052 E8010000 		.4byte	.LASF6
  202 0056 02       		.uleb128 0x2
  203 0057 08       		.byte	0x8
  204 0058 07       		.byte	0x7
- 205 0059 72010000 		.4byte	.LASF7
+ 205 0059 B6010000 		.4byte	.LASF7
  206 005d 03       		.uleb128 0x3
  207 005e 04       		.byte	0x4
  208 005f 05       		.byte	0x5
@@ -383,7 +383,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  210 0064 02       		.uleb128 0x2
  211 0065 04       		.byte	0x4
  212 0066 07       		.byte	0x7
- 213 0067 55010000 		.4byte	.LASF8
+ 213 0067 99010000 		.4byte	.LASF8
  214 006b 04       		.uleb128 0x4
  215 006c 1F010000 		.4byte	.LASF12
  216 0070 02       		.byte	0x2
@@ -400,7 +400,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  227 0085 02       		.uleb128 0x2
  228 0086 01       		.byte	0x1
  229 0087 08       		.byte	0x8
- 230 0088 0E020000 		.4byte	.LASF11
+ 230 0088 F6010000 		.4byte	.LASF11
  231 008c 04       		.uleb128 0x4
  232 008d 08010000 		.4byte	.LASF13
  233 0091 02       		.byte	0x2
@@ -411,27 +411,27 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  238 009d 02       		.uleb128 0x2
  239 009e 08       		.byte	0x8
  240 009f 04       		.byte	0x4
- 241 00a0 4C020000 		.4byte	.LASF14
+ 241 00a0 34020000 		.4byte	.LASF14
  242 00a4 02       		.uleb128 0x2
  243 00a5 04       		.byte	0x4
  244 00a6 07       		.byte	0x7
- 245 00a7 F7010000 		.4byte	.LASF15
+ 245 00a7 DF010000 		.4byte	.LASF15
  246 00ab 06       		.uleb128 0x6
  247 00ac 02       		.byte	0x2
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 8
 
 
  248 00ad 03       		.byte	0x3
  249 00ae 39       		.byte	0x39
  250 00af CC000000 		.4byte	0xcc
  251 00b3 07       		.uleb128 0x7
- 252 00b4 31020000 		.4byte	.LASF16
+ 252 00b4 19020000 		.4byte	.LASF16
  253 00b8 03       		.byte	0x3
  254 00b9 3B       		.byte	0x3b
  255 00ba 6B000000 		.4byte	0x6b
  256 00be 00       		.byte	0
  257 00bf 07       		.uleb128 0x7
- 258 00c0 38010000 		.4byte	.LASF17
+ 258 00c0 7C010000 		.4byte	.LASF17
  259 00c4 03       		.byte	0x3
  260 00c5 3C       		.byte	0x3c
  261 00c6 6B000000 		.4byte	0x6b
@@ -443,7 +443,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  267 00d2 3D       		.byte	0x3d
  268 00d3 AB000000 		.4byte	0xab
  269 00d7 09       		.uleb128 0x9
- 270 00d8 62010000 		.4byte	.LASF19
+ 270 00d8 A6010000 		.4byte	.LASF19
  271 00dc 01       		.byte	0x1
  272 00dd 29       		.byte	0x29
  273 00de 00000000 		.4byte	.LFB0
@@ -459,7 +459,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  283 00f7 01       		.uleb128 0x1
  284 00f8 9C       		.byte	0x9c
  285 00f9 0A       		.uleb128 0xa
- 286 00fa 1D020000 		.4byte	.LASF21
+ 286 00fa 05020000 		.4byte	.LASF21
  287 00fe 01       		.byte	0x1
  288 00ff 57       		.byte	0x57
  289 0100 00000000 		.4byte	.LFB2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  302 011f 00000000 		.4byte	.LFB3
  303 0123 30000000 		.4byte	.LFE3-.LFB3
  304 0127 01       		.uleb128 0x1
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 9
 
 
  305 0128 9C       		.byte	0x9c
@@ -491,7 +491,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  312 013b 88010000 		.4byte	0x188
  313 013f 00       		.byte	0
  314 0140 0C       		.uleb128 0xc
- 315 0141 81020000 		.4byte	.LASF32
+ 315 0141 69020000 		.4byte	.LASF32
  316 0145 01       		.byte	0x1
  317 0146 14       		.byte	0x14
  318 0147 CC000000 		.4byte	0xcc
@@ -499,33 +499,33 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  320 014c 03       		.byte	0x3
  321 014d 00000000 		.4byte	SPIS_backup
  322 0151 0D       		.uleb128 0xd
- 323 0152 E5010000 		.4byte	.LASF23
+ 323 0152 CD010000 		.4byte	.LASF23
  324 0156 04       		.byte	0x4
  325 0157 26       		.byte	0x26
  326 0158 98000000 		.4byte	0x98
  327 015c 0D       		.uleb128 0xd
- 328 015d 6E020000 		.4byte	.LASF24
+ 328 015d 56020000 		.4byte	.LASF24
  329 0161 04       		.byte	0x4
  330 0162 27       		.byte	0x27
  331 0163 98000000 		.4byte	0x98
  332 0167 0D       		.uleb128 0xd
- 333 0168 43010000 		.4byte	.LASF25
+ 333 0168 87010000 		.4byte	.LASF25
  334 016c 04       		.byte	0x4
  335 016d 28       		.byte	0x28
  336 016e 98000000 		.4byte	0x98
  337 0172 0E       		.uleb128 0xe
- 338 0173 64020000 		.4byte	.LASF26
- 339 0177 64020000 		.4byte	.LASF26
+ 338 0173 4C020000 		.4byte	.LASF26
+ 339 0177 4C020000 		.4byte	.LASF26
  340 017b 03       		.byte	0x3
  341 017c 47       		.byte	0x47
  342 017d 0E       		.uleb128 0xe
- 343 017e 3D020000 		.4byte	.LASF27
- 344 0182 3D020000 		.4byte	.LASF27
+ 343 017e 25020000 		.4byte	.LASF27
+ 344 0182 25020000 		.4byte	.LASF27
  345 0186 03       		.byte	0x3
  346 0187 63       		.byte	0x63
  347 0188 0E       		.uleb128 0xe
- 348 0189 2C010000 		.4byte	.LASF28
- 349 018d 2C010000 		.4byte	.LASF28
+ 348 0189 70010000 		.4byte	.LASF28
+ 349 018d 70010000 		.4byte	.LASF28
  350 0191 03       		.byte	0x3
  351 0192 45       		.byte	0x45
  352 0193 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  359 0004 0E       		.uleb128 0xe
  360 0005 13       		.uleb128 0x13
  361 0006 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 10
 
 
  362 0007 03       		.uleb128 0x3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  416 003d 06       		.uleb128 0x6
  417 003e 13       		.uleb128 0x13
  418 003f 01       		.byte	0x1
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 11
 
 
  419 0040 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  473 0076 06       		.uleb128 0x6
  474 0077 40       		.uleb128 0x40
  475 0078 18       		.uleb128 0x18
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 12
 
 
  476 0079 9742     		.uleb128 0x2117
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  530 00b3 34       		.uleb128 0x34
  531 00b4 00       		.byte	0
  532 00b5 03       		.uleb128 0x3
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 13
 
 
  533 00b6 0E       		.uleb128 0xe
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  587 000c 02000000 		.4byte	.LFE1
  588 0010 00000000 		.4byte	.LFB2
  589 0014 28000000 		.4byte	.LFE2
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 14
 
 
  590 0018 00000000 		.4byte	.LFB3
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  613      20726576 
  613      6973696F 
  613      6E203233 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 15
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 15
 
 
  613      37373135 
@@ -862,113 +862,112 @@ ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 1
  621              	.LASF10:
  622 0125 646F7562 		.ascii	"double\000"
  622      6C6500
- 623              	.LASF28:
- 624 012c 53504953 		.ascii	"SPIS_Enable\000"
- 624      5F456E61 
- 624      626C6500 
- 625              	.LASF17:
- 626 0138 636E7472 		.ascii	"cntrPeriod\000"
- 626      50657269 
- 626      6F6400
- 627              	.LASF25:
- 628 0143 53504953 		.ascii	"SPIS_rxBufferFull\000"
- 628      5F727842 
- 628      75666665 
- 628      7246756C 
- 628      6C00
- 629              	.LASF8:
- 630 0155 756E7369 		.ascii	"unsigned int\000"
- 630      676E6564 
- 630      20696E74 
- 630      00
- 631              	.LASF19:
- 632 0162 53504953 		.ascii	"SPIS_SaveConfig\000"
- 632      5F536176 
- 632      65436F6E 
- 632      66696700 
- 633              	.LASF7:
- 634 0172 6C6F6E67 		.ascii	"long long unsigned int\000"
- 634      206C6F6E 
- 634      6720756E 
- 634      7369676E 
- 634      65642069 
- 635              	.LASF31:
- 636 0189 433A5C55 		.ascii	"C:\\Users\\Mathias\\Desktop\\Uni\\4. Semester\\Proj"
- 636      73657273 
- 636      5C4D6174 
- 636      68696173 
- 636      5C446573 
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 16
+ 623              	.LASF31:
+ 624 012c 433A5C55 		.ascii	"C:\\Users\\jespe\\Desktop\\GIT\\iFollow\\Software\\"
+ 624      73657273 
+ 624      5C6A6573 
+ 624      70655C44 
+ 624      65736B74 
+ 625 0158 50534F43 		.ascii	"PSOC\\ToF\\Design01.cydsn\000"
+ 625      5C546F46 
+ 625      5C446573 
+ 625      69676E30 
+ 625      312E6379 
+ 626              	.LASF28:
+ 627 0170 53504953 		.ascii	"SPIS_Enable\000"
+ 627      5F456E61 
+ 627      626C6500 
+ 628              	.LASF17:
+ 629 017c 636E7472 		.ascii	"cntrPeriod\000"
+ 629      50657269 
+ 629      6F6400
+ 630              	.LASF25:
+ 631 0187 53504953 		.ascii	"SPIS_rxBufferFull\000"
+ 631      5F727842 
+ 631      75666665 
+ 631      7246756C 
+ 631      6C00
+ 632              	.LASF8:
+ 633 0199 756E7369 		.ascii	"unsigned int\000"
+ 633      676E6564 
+ 633      20696E74 
+ 633      00
+ 634              	.LASF19:
+ 635 01a6 53504953 		.ascii	"SPIS_SaveConfig\000"
+ 635      5F536176 
+ 635      65436F6E 
+ 635      66696700 
+ 636              	.LASF7:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 16
 
 
- 637 01b6 656B7420 		.ascii	"ekt 4\\iFollow\\Software\\PSOC\\ToF\\Design01.cydsn"
- 637      345C6946 
- 637      6F6C6C6F 
- 637      775C536F 
- 637      66747761 
- 638 01e4 00       		.ascii	"\000"
- 639              	.LASF23:
- 640 01e5 53504953 		.ascii	"SPIS_rxBufferRead\000"
- 640      5F727842 
- 640      75666665 
- 640      72526561 
- 640      6400
- 641              	.LASF15:
- 642 01f7 73697A65 		.ascii	"sizetype\000"
- 642      74797065 
- 642      00
- 643              	.LASF6:
- 644 0200 6C6F6E67 		.ascii	"long long int\000"
- 644      206C6F6E 
- 644      6720696E 
- 644      7400
- 645              	.LASF11:
- 646 020e 63686172 		.ascii	"char\000"
- 646      00
- 647              	.LASF2:
- 648 0213 73686F72 		.ascii	"short int\000"
- 648      7420696E 
- 648      7400
- 649              	.LASF21:
- 650 021d 53504953 		.ascii	"SPIS_Sleep\000"
- 650      5F536C65 
- 650      657000
- 651              	.LASF4:
- 652 0228 6C6F6E67 		.ascii	"long int\000"
- 652      20696E74 
- 652      00
- 653              	.LASF16:
- 654 0231 656E6162 		.ascii	"enableState\000"
- 654      6C655374 
- 654      61746500 
- 655              	.LASF27:
- 656 023d 53504953 		.ascii	"SPIS_ClearFIFO\000"
- 656      5F436C65 
- 656      61724649 
- 656      464F00
- 657              	.LASF14:
- 658 024c 6C6F6E67 		.ascii	"long double\000"
- 658      20646F75 
- 658      626C6500 
- 659              	.LASF0:
- 660 0258 7369676E 		.ascii	"signed char\000"
- 660      65642063 
- 660      68617200 
- 661              	.LASF26:
- 662 0264 53504953 		.ascii	"SPIS_Stop\000"
- 662      5F53746F 
- 662      7000
-ARM GAS  C:\Users\Mathias\AppData\Local\Temp\ccf4vta2.s 			page 17
+ 637 01b6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 637      206C6F6E 
+ 637      6720756E 
+ 637      7369676E 
+ 637      65642069 
+ 638              	.LASF23:
+ 639 01cd 53504953 		.ascii	"SPIS_rxBufferRead\000"
+ 639      5F727842 
+ 639      75666665 
+ 639      72526561 
+ 639      6400
+ 640              	.LASF15:
+ 641 01df 73697A65 		.ascii	"sizetype\000"
+ 641      74797065 
+ 641      00
+ 642              	.LASF6:
+ 643 01e8 6C6F6E67 		.ascii	"long long int\000"
+ 643      206C6F6E 
+ 643      6720696E 
+ 643      7400
+ 644              	.LASF11:
+ 645 01f6 63686172 		.ascii	"char\000"
+ 645      00
+ 646              	.LASF2:
+ 647 01fb 73686F72 		.ascii	"short int\000"
+ 647      7420696E 
+ 647      7400
+ 648              	.LASF21:
+ 649 0205 53504953 		.ascii	"SPIS_Sleep\000"
+ 649      5F536C65 
+ 649      657000
+ 650              	.LASF4:
+ 651 0210 6C6F6E67 		.ascii	"long int\000"
+ 651      20696E74 
+ 651      00
+ 652              	.LASF16:
+ 653 0219 656E6162 		.ascii	"enableState\000"
+ 653      6C655374 
+ 653      61746500 
+ 654              	.LASF27:
+ 655 0225 53504953 		.ascii	"SPIS_ClearFIFO\000"
+ 655      5F436C65 
+ 655      61724649 
+ 655      464F00
+ 656              	.LASF14:
+ 657 0234 6C6F6E67 		.ascii	"long double\000"
+ 657      20646F75 
+ 657      626C6500 
+ 658              	.LASF0:
+ 659 0240 7369676E 		.ascii	"signed char\000"
+ 659      65642063 
+ 659      68617200 
+ 660              	.LASF26:
+ 661 024c 53504953 		.ascii	"SPIS_Stop\000"
+ 661      5F53746F 
+ 661      7000
+ 662              	.LASF24:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cclPr2af.s 			page 17
 
 
- 663              	.LASF24:
- 664 026e 53504953 		.ascii	"SPIS_rxBufferWrite\000"
- 664      5F727842 
- 664      75666665 
- 664      72577269 
- 664      746500
- 665              	.LASF32:
- 666 0281 53504953 		.ascii	"SPIS_backup\000"
- 666      5F626163 
- 666      6B757000 
- 667              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 663 0256 53504953 		.ascii	"SPIS_rxBufferWrite\000"
+ 663      5F727842 
+ 663      75666665 
+ 663      72577269 
+ 663      746500
+ 664              	.LASF32:
+ 665 0269 53504953 		.ascii	"SPIS_backup\000"
+ 665      5F626163 
+ 665      6B757000 
+ 666              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
