@@ -35,7 +35,6 @@ void ToF::handleByte(uint8_t byte){
     if (byteR_ == 0)
         i = 0;
     
-    /*
     switch (i)
     {
         case 0:
@@ -88,9 +87,9 @@ void ToF::handleByte(uint8_t byte){
         default: 
         //UART_1_PutString("Unknown index!\n\r");
         break;
-    }*/
-
-    
+    }
+}
+    /*
     //TEST!!
     switch (i)
     {
@@ -144,6 +143,5 @@ void ToF::handleByte(uint8_t byte){
         default: 
         UART_1_PutString("Unknown index!\n\r");
         break;
-    } 
-}
+    } */
 /* [] END OF FILE */
