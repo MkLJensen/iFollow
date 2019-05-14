@@ -14,7 +14,8 @@
 
 #include "RpiSPI.h"
 
-extern int power_;
+extern uint8_t Mode;
+enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4, Fallen = 5};
 
 RpiSPI::RpiSPI(Gyro * Gyro, MotorController * Motor)
 {
@@ -28,20 +29,29 @@ RpiSPI::~RpiSPI()
     
 }
 
-void RpiSPI::TransmitData(uint8_t data[], uint8_t size)
+void RpiSPI::TransmitData(uint8_t Data)
 {
-    for (uint8_t i = 0; i <= size; i++)
-    {       
-        UART_1_PutChar(data[i]);
-    }
+    SPIS_ClearTxBuffer();
+    SPIS_WriteTxData(Data);
 }
 
 uint8_t RpiSPI::ReadData()
-{     
+{
+    GyroState_ = GyroPtr_->hasFallen();
+    if (GyroState_ == 1)
+    {
+        TransmitData(Fallen);
+    }
+    else
+    {
+        TransmitData(Mode);
+    }
+    /*  
     int State = GyroPtr_->hasFallen();
     
     if (SPIS_GetTxBufferSize() == 0)
     {
+        SPIS_ClearTxBuffer();
         GyroState_ = State;
         SPIS_WriteTxData(GyroState_);
         
@@ -51,7 +61,7 @@ uint8_t RpiSPI::ReadData()
         SPIS_ClearTxBuffer();
         GyroState_ = State;
         SPIS_WriteTxData(State);
-    }
+    }*/
     if(SPIS_GetRxBufferSize() > 0)
     {
         uint8_t byteReceived;
@@ -63,10 +73,7 @@ uint8_t RpiSPI::ReadData()
             byteReceived[i] = SPIS_ReadRxData();
             i++;
         }*/
-        
-        UART_1_PutString("Modtaget char er: ");
-        UART_1_PutChar(byteReceived);
-        UART_1_PutString("\r\n");
+
         return handleByteReceived(byteReceived);
     }
     return 0;

@@ -16,10 +16,11 @@
 
 PIDcontroller::PIDcontroller(float a0, float a1, float b1, float reference, MotorController *MotorPtr)
 {
-    *MotorPtr_ = *MotorPtr;
+    MotorPtr_ = MotorPtr;
     a0_ = a0;
     a1_ = a1;
     b1_ = b1;
+    setReference(reference);
 }
 
 PIDcontroller::~PIDcontroller()
@@ -48,18 +49,11 @@ float PIDcontroller::getMeasurement(void) const
 
 void PIDcontroller::calculateError(float Signal)
 {
-    /*Calculate Error (P)*/
-	error_ = ref_ - data_;
+    error_ = ref_ - Signal;
 }
 
 float PIDcontroller::calculateControl()
 {
-    /*Calculate integral (I)*/
-	//integral_ += error_;
-
-    /*Calculate the derivative (D)*/
-	//derivative_ = error_ - last_error_;
-
 	/*Calculate the control variable*/
 	control_ = (b1_*old_control_) + (a0_*error_) + (a1_*old_error_); 
     

@@ -1,5 +1,5 @@
 -- Project:   Projekt_PSoC_Kode
--- Generated: 05/08/2019 13:51:27
+-- Generated: 05/13/2019 14:42:23
 -- PSoC Creator  4.2
 
 ENTITY Projekt_PSoC_Kode IS
@@ -2111,7 +2111,7 @@ BEGIN
 
     SDA_1:logicalport
         GENERIC MAP(
-            drive_mode => "100",
+            drive_mode => "010",
             ibuf_enabled => "1",
             id => "22863ebe-a37b-476f-b252-6e49a8c00b12",
             init_dr_st => "1",
@@ -2205,7 +2205,7 @@ BEGIN
 
     SCL_1:logicalport
         GENERIC MAP(
-            drive_mode => "100",
+            drive_mode => "010",
             ibuf_enabled => "1",
             id => "02f2cf2c-2c7a-49df-9246-7a3435c21be3",
             init_dr_st => "1",

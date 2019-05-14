@@ -2,7 +2,7 @@
 --	Conversion of Projekt_PSoC_Kode.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed May 08 13:51:25 2019
+--	Mon May 13 14:42:21 2019
 --
 
 USE cypress.cypress.all;
@@ -3494,7 +3494,7 @@ Motor_timer_isr:cy_isr_v1_0
 	PORT MAP(int_signal=>Net_2946);
 SDA_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"22863ebe-a37b-476f-b252-6e49a8c00b12",
-		drive_mode=>"100",
+		drive_mode=>"010",
 		ibuf_enabled=>"1",
 		init_dr_st=>"1",
 		input_sync=>"1",
@@ -3564,7 +3564,7 @@ SDA_1:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__SDA_1_net_0);
 SCL_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"02f2cf2c-2c7a-49df-9246-7a3435c21be3",
-		drive_mode=>"100",
+		drive_mode=>"010",
 		ibuf_enabled=>"1",
 		init_dr_st=>"1",
 		input_sync=>"1",
