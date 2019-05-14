@@ -16,6 +16,8 @@
     		void mysql_connect(void);
 			void mysql_disconnect(void);
 			void mysql_sendQUERY(std::string);
+			unsigned int mysql_COUNT(void);
+			void mysql_send_delete_row(void);
 
 			void mysql_secure_sendQUERY(std::string,GPS);
 
