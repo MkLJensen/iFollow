@@ -13,22 +13,32 @@
 #define PASSWORD "pi"
 #define DATABASE "DatabaseGPS"
 
+std::string LongitudeOld = "00000000";
+std::string LatitudeOld = "00000000";
+
 
 
 int main(void)
 {
-
-    while (1)
-    {
 
     GPS myGPS("/dev/ttyAMA0");
 
     //SQL Declerations
     mySQLGPS sqlGPS(DBHOST, USER, PASSWORD, DATABASE, PORT);
 
-    
+    myGPS.updateCoordinates();
+
+    while (1)
+    {
+
+    while( (myGPS.getLongitude().substr(0,8) == LongitudeOld.substr(0,8)) || (myGPS.getLatitude().substr(0,7) == LatitudeOld.substr(0,7)) )
+    {    
     /*Updating Coordinates */
     myGPS.updateCoordinates();
+    }
+
+    LongitudeOld = myGPS.getLongitude();
+    LatitudeOld = myGPS.getLatitude();
 
     /* Making QUERY String */
     char executeQueryChar[300];
@@ -51,6 +61,13 @@ int main(void)
 
     std::cout << "Connected to mySQL Server" << std::endl;
 
+    /*CHECKING COUNT */
+    while(sqlGPS.mysql_COUNT() >= 25)
+    {
+        sqlGPS.mysql_send_delete_row();
+    }
+
+
     /* Sending QUERY */
     sqlGPS.mysql_secure_sendQUERY(executeQueryChar, myGPS);
 
@@ -61,7 +78,7 @@ int main(void)
 
     std::cout << "Diconnected from mySQL Server" << std::endl;
    
-    sleep(30);
+    sleep(4);
 
     }
 

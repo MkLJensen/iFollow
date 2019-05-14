@@ -17,6 +17,7 @@ GPS::~GPS(void)
 
 void GPS::updateCoordinates(void)
 {
+    numOfComma = 0;
     char bufferChar_[75]; // buffer for string
     size_t iFor = 0;
     std::string fileDescrip_ ="/dev/ttyAMA0";
@@ -34,7 +35,6 @@ void GPS::updateCoordinates(void)
 
 
     int n = read(dev,bufferChar_,sizeof(bufferChar_));
-
 
     bufferString_ = std::string(bufferChar_);
 
@@ -60,6 +60,7 @@ while(bufferString_.substr(0,1) != "\0")
                     int posOfComma2;
                     int posOfComma1 = 0;
                     std::size_t length;
+                    
 
                     if (numOfComma == 2 || numOfComma == 3 || numOfComma == 7 || numOfComma == 8)
                     {

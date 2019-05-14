@@ -46,6 +46,23 @@ void mySQLGPS::mysql_sendQUERY(std::string QUERY)
 	}
 }
 
+unsigned int mySQLGPS::mysql_COUNT(void)
+{
+	mysql_query(mySQL,"SELECT COUNT(*) FROM GPSData");
+	MYSQL_RES *res = mysql_store_result(mySQL);
+	MYSQL_ROW row;
+
+    if(row=mysql_fetch_row(res)){
+		return (unsigned int) std::stoi(row[0]);
+    }
+
+}
+
+void mySQLGPS::mysql_send_delete_row(void)
+{
+	mysql_query(mySQL, "DELETE FROM GPSData LIMIT 1");
+}
+
 
 void mySQLGPS::mysql_secure_sendQUERY(std::string QUERY, GPS myGPS)
 {

@@ -8,7 +8,7 @@ uint8_t sensorData[7] = {0,0,0,0,0,0,0};
 const int slavePin = 53;
 
 //Speed, data order and data mode - to be matched with PSoC creator settings
-SPISettings MasterSettings(2000000, MSBFIRST, SPI_MODE0);
+SPISettings slaveSettings(2000000, MSBFIRST, SPI_MODE0);
 
 // address we will assign if dual sensor is present
 #define LOX1_ADDRESS 0x30
@@ -30,8 +30,14 @@ VL53L0X_RangingMeasurementData_t measure1;
 VL53L0X_RangingMeasurementData_t measure2;
 VL53L0X_RangingMeasurementData_t measure3;
 
-
-
+/*
+    Reset all sensors by setting all of their XSHUT pins low for delay(10), then set all XSHUT high to bring out of reset
+    Keep sensor #1 awake by keeping XSHUT pin high
+    Put all other sensors into shutdown by pulling XSHUT pins low
+    Initialize sensor #1 with lox.begin(new_i2c_address) Pick any number but 0x29 and it must be under 0x7F. Going with 0x30 to 0x3F is probably OK.
+    Keep sensor #1 awake, and now bring sensor #2 out of reset by setting its XSHUT pin high.
+    Initialize sensor #2 with lox.begin(new_i2c_address) Pick any number but 0x29 and whatever you set the first sensor to
+ */
 void setID() {
   // all reset
   digitalWrite(SHT_LOX1, LOW);    
@@ -128,9 +134,49 @@ void read_three_ranges(){
   Serial.println();
 }
 
+void read_dual_sensors() {
+  
+  lox1.rangingTest(&measure1, false); // pass in 'true' to get debug data printout!
+  lox2.rangingTest(&measure2, false); // pass in 'true' to get debug data printout!
+  lox3.rangingTest(&measure3, false); // pass in 'true' to get debug data printout!
+
+  // print sensor one reading
+  Serial.print("1: ");
+  if(measure1.RangeStatus != 4) {     // if not out of range
+    Serial.print(measure1.RangeMilliMeter);
+  } else {
+    Serial.print("Out of range");
+  }
+  
+  Serial.print(" ");
+
+  // print sensor two reading
+  Serial.print("2: ");
+  if(measure2.RangeStatus != 4) {
+    Serial.print(measure2.RangeMilliMeter);
+  } else {
+    Serial.print("Out of range");
+  }
+
+  Serial.print(" ");
+  
+  // print sensor three reading
+  Serial.print("3: ");
+  if(measure3.RangeStatus != 4) {
+    Serial.print(measure3.RangeMilliMeter);
+  } else {
+    Serial.print("Out of range");
+  }
+  
+  Serial.println();
+}
+
 void setup() {
   //SS pin set to output
   pinMode (slavePin, OUTPUT);
+  // initialize SPI:
+  SPI.begin();
+  // initialize UART:
   Serial.begin(115200);
 
   // wait until serial port opens for native USB devices
@@ -147,20 +193,21 @@ void setup() {
   digitalWrite(SHT_LOX3, LOW);
 
   Serial.println("Both in reset mode...(pins are low)");
-
-
-  while (! Serial) {
-    delay(1);
-  }
+  
+  
   Serial.println("Starting...");
   setID();
   Serial.println("ID's set");
-
+ 
 }
 
 void loop() { 
+  // read_dual_sensors();
+  read_three_ranges();
+  delay(100);
+
   read_three_ranges(); // Update global array sensorData
-  SPI.beginTransaction(MasterSettings);
+  SPI.beginTransaction(slaveSettings);
   digitalWrite (slavePin, LOW);
   SPI.transfer(sensorData[0]); // Start byte
   delay(3);
@@ -180,4 +227,5 @@ void loop() {
   SPI.endTransaction();
   Serial.println("Sending...");
   //delay(10);
+
 }
