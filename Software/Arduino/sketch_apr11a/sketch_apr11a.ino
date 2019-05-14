@@ -131,16 +131,31 @@ void read_three_ranges(){
 void setup() {
   //SS pin set to output
   pinMode (slavePin, OUTPUT);
-  // initialize SPI:
-  SPI.begin();
-  // initialize UART:
   Serial.begin(115200);
 
   // wait until serial port opens for native USB devices
+  while (! Serial) { delay(1); }
+
+  pinMode(SHT_LOX1, OUTPUT);
+  pinMode(SHT_LOX2, OUTPUT);
+  pinMode(SHT_LOX3, OUTPUT);
+
+  Serial.println("Shutdown pins inited...");
+
+  digitalWrite(SHT_LOX1, LOW);
+  digitalWrite(SHT_LOX2, LOW);
+  digitalWrite(SHT_LOX3, LOW);
+
+  Serial.println("Both in reset mode...(pins are low)");
+
+
   while (! Serial) {
     delay(1);
   }
   Serial.println("Starting...");
+  setID();
+  Serial.println("ID's set");
+
 }
 
 void loop() { 
