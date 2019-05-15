@@ -28,9 +28,10 @@ void ToF::stop(){
     UART_1_Stop();
 }
 */
-uint16_t ToF::getLeftSensor(void) const
+
+uint16_t ToF::getRightSensor(void) const
 {
-    return sensorLeft;
+    return sensorRight;
 }
 
 uint16_t ToF::getMidSensor(void) const
@@ -38,9 +39,9 @@ uint16_t ToF::getMidSensor(void) const
     return sensorMid;
 }
 
-uint16_t ToF::getRightSensor(void) const
+uint16_t ToF::getLeftSensor(void) const
 {
-    return sensorRight;
+    return sensorLeft;
 }
 
 void ToF::handleByte(uint8_t byte){
@@ -65,6 +66,10 @@ void ToF::handleByte(uint8_t byte){
         case 2:
         //byteR --;
         sensorRight = sensorRight|byteR_;
+        if (sensorRight == 1 || sensorRight > 1000)
+        {
+            sensorRight = 1000;
+        }
         //sprintf(string, "Sensor Right: %d \n\r", sensorRight);
         //UART_1_PutString(string);
         i++;
@@ -79,8 +84,12 @@ void ToF::handleByte(uint8_t byte){
         case 4:
         //byteR --;
         sensorMid = sensorMid|byteR_;
-        //sprintf(string, "Sensor Middle: %d \n\r", sensorMid);
-        //UART_1_PutString(string);
+        if (sensorMid == 1 || sensorMid > 1000)
+        {
+            sensorMid = 1000;
+        }
+        sprintf(string, "Sensor Middle: %d \n\r", sensorMid);
+        UART_1_PutString(string);
         i++;
         break;
         
@@ -93,6 +102,10 @@ void ToF::handleByte(uint8_t byte){
         case 6:
         //byteR --;
         sensorLeft = sensorLeft|byteR_;
+        if (sensorLeft == 1 || sensorLeft > 1000)
+        {
+            sensorLeft = 1000;
+        }
         //sprintf(string, "Sensor Left: %d \n\r", sensorLeft);
         //UART_1_PutString(string);
         i++;

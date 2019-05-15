@@ -1,5 +1,5 @@
 -- Project:   Projekt_PSoC_Kode
--- Generated: 05/14/2019 12:53:19
+-- Generated: 05/14/2019 15:35:01
 -- PSoC Creator  4.2
 
 ENTITY Projekt_PSoC_Kode IS
@@ -268,15 +268,15 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
     ATTRIBUTE lib_model OF MotorPWM_1_BRUN(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF MotorPWM_1_BRUN(0) : LABEL IS "P1[7]";
+    ATTRIBUTE Location OF MotorPWM_1_BRUN(0) : LABEL IS "P3[0]";
     ATTRIBUTE lib_model OF Forward_ORANGE(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF Forward_ORANGE(0) : LABEL IS "P1[5]";
+    ATTRIBUTE Location OF Forward_ORANGE(0) : LABEL IS "P3[2]";
     ATTRIBUTE lib_model OF LED_Red(0) : LABEL IS "iocell3";
     ATTRIBUTE Location OF LED_Red(0) : LABEL IS "P0[4]";
     ATTRIBUTE lib_model OF LED_Green(0) : LABEL IS "iocell4";
     ATTRIBUTE Location OF LED_Green(0) : LABEL IS "P0[5]";
     ATTRIBUTE lib_model OF MotorPWM_2_BLAA(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF MotorPWM_2_BLAA(0) : LABEL IS "P1[6]";
+    ATTRIBUTE Location OF MotorPWM_2_BLAA(0) : LABEL IS "P3[1]";
     ATTRIBUTE lib_model OF PowerButton(0) : LABEL IS "iocell6";
     ATTRIBUTE Location OF PowerButton(0) : LABEL IS "P0[7]";
     ATTRIBUTE lib_model OF FollowButton(0) : LABEL IS "iocell7";
@@ -286,7 +286,7 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     ATTRIBUTE lib_model OF Tx_1(0) : LABEL IS "iocell9";
     ATTRIBUTE Location OF Tx_1(0) : LABEL IS "P12[7]";
     ATTRIBUTE lib_model OF Backward_GUL(0) : LABEL IS "iocell10";
-    ATTRIBUTE Location OF Backward_GUL(0) : LABEL IS "P1[4]";
+    ATTRIBUTE Location OF Backward_GUL(0) : LABEL IS "P3[3]";
     ATTRIBUTE lib_model OF miso(0) : LABEL IS "iocell11";
     ATTRIBUTE Location OF miso(0) : LABEL IS "P2[3]";
     ATTRIBUTE lib_model OF mosi(0) : LABEL IS "iocell12";
@@ -298,13 +298,13 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     ATTRIBUTE lib_model OF SCL_1(0) : LABEL IS "iocell15";
     ATTRIBUTE Location OF SCL_1(0) : LABEL IS "P12[0]";
     ATTRIBUTE lib_model OF miso_1(0) : LABEL IS "iocell16";
-    ATTRIBUTE Location OF miso_1(0) : LABEL IS "P0[0]";
+    ATTRIBUTE Location OF miso_1(0) : LABEL IS "P1[7]";
     ATTRIBUTE lib_model OF mosi_1(0) : LABEL IS "iocell17";
-    ATTRIBUTE Location OF mosi_1(0) : LABEL IS "P0[1]";
+    ATTRIBUTE Location OF mosi_1(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF sclk_1(0) : LABEL IS "iocell18";
-    ATTRIBUTE Location OF sclk_1(0) : LABEL IS "P0[2]";
+    ATTRIBUTE Location OF sclk_1(0) : LABEL IS "P1[5]";
     ATTRIBUTE lib_model OF ss(0) : LABEL IS "iocell19";
-    ATTRIBUTE Location OF ss(0) : LABEL IS "P0[3]";
+    ATTRIBUTE Location OF ss(0) : LABEL IS "P1[4]";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_2\ : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \LED_PWM:PWMUDB:status_2\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF Net_1781 : LABEL IS "macrocell3";

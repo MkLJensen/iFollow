@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
   28:Generated_Source\PSoC5/SPIS_1_INT.c **** /*******************************************************************************
   29:Generated_Source\PSoC5/SPIS_1_INT.c **** * Function Name: SPIS_1_TX_ISR
   30:Generated_Source\PSoC5/SPIS_1_INT.c **** *
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPIS_1_INT.c **** * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
   68:Generated_Source\PSoC5/SPIS_1_INT.c ****         /* Component interrupt service code */
   69:Generated_Source\PSoC5/SPIS_1_INT.c **** 
   70:Generated_Source\PSoC5/SPIS_1_INT.c ****         /* See if TX data buffer is not empty and there is space in TX FIFO */
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 3
 
 
   71:Generated_Source\PSoC5/SPIS_1_INT.c ****         while(SPIS_1_txBufferRead != SPIS_1_txBufferWrite)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  125:Generated_Source\PSoC5/SPIS_1_INT.c **** *  Interrupt Service Routine for RX portion of the SPI Slave.
  126:Generated_Source\PSoC5/SPIS_1_INT.c **** *
  127:Generated_Source\PSoC5/SPIS_1_INT.c **** * Parameters:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 4
 
 
  128:Generated_Source\PSoC5/SPIS_1_INT.c **** *  None.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
   62              	.LVL1:
   63              	.L7:
  165:Generated_Source\PSoC5/SPIS_1_INT.c ****         {
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 5
 
 
  166:Generated_Source\PSoC5/SPIS_1_INT.c ****             rxData = CY_GET_REG8(SPIS_1_RXDATA_PTR);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  105 004e 072B     		cmp	r3, #7
  106 0050 02D9     		bls	.L6
  179:Generated_Source\PSoC5/SPIS_1_INT.c ****                 {
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 6
 
 
  180:Generated_Source\PSoC5/SPIS_1_INT.c ****                     SPIS_1_rxBufferRead = 0u;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  199:Generated_Source\PSoC5/SPIS_1_INT.c ****         SPIS_1_RX_ISR_ExitCallback();
  200:Generated_Source\PSoC5/SPIS_1_INT.c ****     #endif /* SPIS_1_RX_ISR_EXIT_CALLBACK */
  201:Generated_Source\PSoC5/SPIS_1_INT.c **** }
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 7
 
 
  141              		.loc 1 201 0
@@ -366,9 +366,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  143              	.L9:
  144              		.align	2
  145              	.L8:
- 146 0084 67640040 		.word	1073767527
+ 146 0084 67650040 		.word	1073767783
  147 0088 00000000 		.word	SPIS_1_swStatusRx
- 148 008c 52640040 		.word	1073767506
+ 148 008c 5B640040 		.word	1073767515
  149 0090 00000000 		.word	SPIS_1_rxBufferWrite
  150 0094 00000000 		.word	SPIS_1_rxBufferRead
  151 0098 00000000 		.word	SPIS_1_rxBufferFull
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  195 0049 04       		.byte	0x4
  196 004a 07       		.byte	0x7
  197 004b F9000000 		.4byte	.LASF5
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 8
 
 
  198 004f 02       		.uleb128 0x2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  252 00ba 01       		.uleb128 0x1
  253 00bb 9C       		.byte	0x9c
  254 00bc 07       		.uleb128 0x7
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 9
 
 
  255 00bd 20000000 		.4byte	.LASF27
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  309 0138 98000000 		.4byte	0x98
  310 013c 00       		.byte	0
  311              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 10
 
 
  312              	.Ldebug_abbrev0:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  366 0035 00       		.byte	0
  367 0036 05       		.uleb128 0x5
  368 0037 35       		.uleb128 0x35
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 11
 
 
  369 0038 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  423 0070 34       		.uleb128 0x34
  424 0071 00       		.byte	0
  425 0072 03       		.uleb128 0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 12
 
 
  426 0073 0E       		.uleb128 0xe
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  480 000b 12000000 		.4byte	.LVL1
  481 000f 16000000 		.4byte	.LVL2
  482 0013 0200     		.2byte	0x2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 13
 
 
  483 0015 72       		.byte	0x72
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  530              	.LASF18:
  531 000e 53504953 		.ascii	"SPIS_1_swStatusRx\000"
  531      5F315F73 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 14
 
 
  531      77537461 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  551 0122 666C6F61 		.ascii	"float\000"
  551      7400
  552              	.LASF19:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 15
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 15
 
 
  553 0128 53504953 		.ascii	"SPIS_1_rxBuffer\000"
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 1
  576 01fa 756E7369 		.ascii	"unsigned int\000"
  576      676E6564 
  576      20696E74 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccx7Abxv.s 			page 16
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccPRxjSp.s 			page 16
 
 
  576      00

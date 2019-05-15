@@ -45,7 +45,6 @@ int main(void)
     I2C_1_Start();
     UART_1_Start();
     SPIS_Start();
-    SPIS_1_Start();
     isr_1_StartEx(isr_handler);
     Power_isr_StartEx(PowerSwitch_Handler);
     Follow_isr_StartEx(FollowSwitch_Handler);
@@ -54,8 +53,8 @@ int main(void)
     Gyro GyroController;
     RpiSPI SPIcontroller(&GyroController, &Motor);
     LED Ledcontrol;
-    PIDcontroller PIDcontrol(142.9, -136.2, -0.693, 50, &Motor );
-                       
+    PIDcontroller PIDcontrol(142.9, -136.2, -0.693, 1000, &Motor );
+               
     for(;;)
     {
         if(Mode == Off && Switchcontroller.getSwitchStatus('p') == true)
@@ -82,10 +81,12 @@ int main(void)
         if (Mode == Sleep && Switchcontroller.getSwitchStatus('f') == true)
         {
             Mode = Follow;
+            SPIS_1_Start();
         }
         else if (Mode == Follow && Switchcontroller.getSwitchStatus('f') == false)
         {
             Mode = Sleep;
+            SPIS_1_Stop();
         }
         
         switch(Mode)
@@ -166,7 +167,7 @@ CY_ISR(Control_timer_isr)
     }
 }
 
-CY_ISR_PROTO(isr_handler)
+CY_ISR(isr_handler)
 {
    byteR = SPIS_1_ReadRxData();                                                             // Gemmer aflæsning af RX-buffer
    obj.handleByte(byteR);
