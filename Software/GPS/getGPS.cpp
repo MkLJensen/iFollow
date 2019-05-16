@@ -17,27 +17,27 @@ GPS::~GPS(void)
 
 void GPS::updateCoordinates(void)
 {
-    numOfComma = 0;
+    numOfComma = 0; // Keeping track of Comma length
     char bufferChar_[75]; // buffer for string
-    size_t iFor = 0;
-    std::string fileDescrip_ ="/dev/ttyAMA0";
+    size_t iFor = 0; // Times gone through case
+    std::string fileDescrip_ ="/dev/ttyAMA0"; // fileDescripter */ TEST FÆRDIG MED BRUG AF KLASSE FILEdeCTOÅ
 
-
+    /* Opening UART File to read */
     int dev = open(fileDescrip_.c_str(), O_RDWR | O_NOCTTY | O_SYNC);
 
 
-
-    if (dev < 0) // checking if opening file has failed
+    /* Error Check for if file has opened */
+    if (dev < 0)
     {
-        std::cout << "could not open file" << std::endl;
+        std::cout << "could not open file. ERROR: " << dev << std::endl;
     }
         std::cout << "file opened succesfully" << std::endl;
 
-
+    /* Reading from UART file */
     int n = read(dev,bufferChar_,sizeof(bufferChar_));
 
     bufferString_ = std::string(bufferChar_);
-
+    /* Keep reading until correct NMEA Type */
     while((bufferString_.substr(0,6) != "$GPGGA") || (n < 70))
             {
                 n = read(dev,bufferChar_,sizeof(bufferChar_)); // Reading
@@ -48,9 +48,10 @@ void GPS::updateCoordinates(void)
     std::cout << bufferString_ << std::endl;
 
 
-
+    /* Closing device UART file */
     close (dev);
 
+    /* Splitting data into types */
 while(bufferString_.substr(0,1) != "\0")
                 {
                     char nmeaCharBuffer_[30];
@@ -61,7 +62,7 @@ while(bufferString_.substr(0,1) != "\0")
                     int posOfComma1 = 0;
                     std::size_t length;
                     
-
+                    /* Handling Data Types consisting of comma */
                     if (numOfComma == 2 || numOfComma == 3 || numOfComma == 7 || numOfComma == 8)
                     {
                         posOfComma2 = bufferString_.find(",",posOfComma1+1);
@@ -80,6 +81,7 @@ while(bufferString_.substr(0,1) != "\0")
                     }
                     else
                     {
+                        /*Handling default data types */
                         posOfComma2 = bufferString_.find(",",posOfComma1+1);
 
                         numOfComma++;
@@ -93,7 +95,7 @@ while(bufferString_.substr(0,1) != "\0")
 
 
                         caseBuffer_ = nmeaStringBuffer_;
-
+                        /* Switching for putting data into correct buffer */
                         switch (iFor)
                         {
                             case 0:
