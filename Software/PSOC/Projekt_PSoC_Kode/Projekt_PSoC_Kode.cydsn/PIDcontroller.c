@@ -52,7 +52,7 @@ void PIDcontroller::calculateError(float Signal)
     error_ = ref_ - Signal;
 }
 
-float PIDcontroller::calculateControl()
+void PIDcontroller::calculateControl(float leftSensor, float rightSensor)
 {
 	/*Calculate the control variable*/
 	control_ = (b1_*old_control_) + (a0_*error_) + (a1_*old_error_); 
@@ -69,15 +69,13 @@ float PIDcontroller::calculateControl()
     
     if (control_ >= 0)
     {
-        MotorPtr_->GoForward(control_);
+        MotorPtr_->GoBackward(control_);
     }
     else
     {
-        MotorPtr_->GoBackward(control_*-1);
+        MotorPtr_->GoForward(control_*-1);
     }
     
     old_error_ = error_;
     old_control_ = control_;
-    
-    return control_;
 }

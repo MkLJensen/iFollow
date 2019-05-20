@@ -44,10 +44,12 @@ uint8_t RpiSPI::ReadData()
         GyroState_ = GyroPtr_->hasFallen();
         if (GyroState_ == 1)
         {
+            Mode = Fallen;
             TransmitData(Fallen);
         }
         else
         {
+            Mode = Control;
             TransmitData(Mode);
         }
         

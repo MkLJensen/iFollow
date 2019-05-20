@@ -37,6 +37,7 @@ uint8_t byteR;
 ToF obj;
 Switches Switchcontroller;
 MotorController Motor;
+PIDcontroller PIDcontrol(142.9, -136.2, -0.693, 500, &Motor );
 
 int main(void)
 {
@@ -53,7 +54,6 @@ int main(void)
     Gyro GyroController;
     RpiSPI SPIcontroller(&GyroController, &Motor);
     LED Ledcontrol;
-    PIDcontroller PIDcontrol(142.9, -136.2, -0.693, 1000, &Motor );
                
     for(;;)
     {
@@ -124,9 +124,12 @@ int main(void)
                 Ledcontrol.blinkLed('g');
                 
                 SPIcontroller.ReadData();
-                           
-                PIDcontrol.calculateError(obj.getMidSensor());
-                PIDcontrol.calculateControl();
+            }
+            break;
+            case Fallen :
+            {
+                Ledcontrol.turnOffLed('g');
+                Ledcontrol.blinkLed('r');
             }
             break;
             default :
@@ -171,6 +174,8 @@ CY_ISR(isr_handler)
 {
    byteR = SPIS_1_ReadRxData();                                                             // Gemmer aflæsning af RX-buffer
    obj.handleByte(byteR);
+   PIDcontrol.calculateError(obj.getMidSensor());
+   PIDcontrol.calculateControl(obj.getLeftSensor(), obj.getRightSensor());
 }
 
 /* [] END OF FILE */

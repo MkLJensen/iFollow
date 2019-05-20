@@ -35,8 +35,8 @@ public:
    float getReference(void) const;
    void setMeasurement(float sensorData);
    float getMeasurement(void) const;
-   void calculateError(float Signal);
-   float calculateControl();
+   void calculateError(float midSensor);
+   void calculateControl(float leftSensor, float rightSensor);
    void setControlSignal(float control);
    void setControl();
 
