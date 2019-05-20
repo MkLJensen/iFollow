@@ -2,17 +2,18 @@
 #include <iostream>
 #include <unistd.h>
 
-//SQL Includes
+/*SQL Includes */
 #include "mySQLGPS.hpp"
 
 
-
+/* Defines for mySQL Server */
 #define DBHOST "localhost"
 #define PORT 0
 #define USER "Jesus"
 #define PASSWORD "pi"
 #define DATABASE "DatabaseGPS"
 
+/* Storeing last known position */
 std::string LongitudeOld = "00000000";
 std::string LatitudeOld = "00000000";
 
@@ -20,23 +21,23 @@ std::string LatitudeOld = "00000000";
 
 int main(void)
 {
-
+    /* Creating GPS device */
     GPS myGPS("/dev/ttyAMA0");
 
-    //SQL Declerations
+    /*SQL Declerations */
     mySQLGPS sqlGPS(DBHOST, USER, PASSWORD, DATABASE, PORT);
-
+    /* Updating first Coordinate */
     myGPS.updateCoordinates();
 
     while (1)
     {
-
+    /*Keep updating untill position has changed */
     while( (myGPS.getLongitude().substr(0,8) == LongitudeOld.substr(0,8)) || (myGPS.getLatitude().substr(0,7) == LatitudeOld.substr(0,7)) )
     {    
     /*Updating Coordinates */
     myGPS.updateCoordinates();
     }
-
+    /* Setting last known position that will be stored */
     LongitudeOld = myGPS.getLongitude();
     LatitudeOld = myGPS.getLatitude();
 

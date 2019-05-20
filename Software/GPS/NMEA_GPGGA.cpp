@@ -4,7 +4,7 @@ NMEA_GPGGA::NMEA_GPGGA(void)
 {
 
 }
-
+/*Simple set and get Methods */
 void NMEA_GPGGA::setGpsType(std::string str)
 {
     gpsType_ = str;
