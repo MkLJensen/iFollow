@@ -1,6 +1,6 @@
 s=tf('s');  
 G1 = (82.049903762029746282/(s+30.13312094819631417))*1/s;
-G2 = (274/(s+101))*1/s;
+G2 = (292/(s+107))*1/s;
 
 figure(1)
 margin(G1); grid on
@@ -32,7 +32,7 @@ step(feedback(G1,1))
 % 1 sekund, hvilket svarer til 1Hz båndbredde. Derfor designes Kp til en
 % fasemargins frekvens der er 10 gange højere = 10 Hz. 
 
-Kp = 50;
+Kp = 50.1187;
 G1_Kp = G1*Kp;
 
 figure(3)
@@ -61,38 +61,6 @@ G1_Kp_GLead = G1_Kp*GLead;
 figure(6)
 margin(G1_Kp_GLead)
 grid on
-
-%% Lag regulator
-
-% Vi vælger ikke at lave en Lag regulator, da vores steady state fejl
-% allerede ligger på 0. 
-
-%T = 30/10; %74.3 rad/s
-
-%Vi fjerner (s+(1/(alpha*T))) fra nævneren fordi at vi ønsker en
-%forstærkning på uendelig!!! Grunden til dette virker og vi fjerner den
-%stationære fejl er fordi at vi tilføjer et nyt S led til vores
-%overførselsfunktion = type 1 istedet for type 0!
-%Lag = (s+(1/T))/s;
-
-%figure(4)
-%margin(Lag)
-%grid on
-
-%% Apply regulator
-%G1_Kp_Lead_Lag = G1_Kp_GLead*Lag;
-
-%figure(5)
-%margin(G1_Kp_Lead_Lag)
-%grid on;
-
-%figure(6)
-%step(feedback(G1_Kp_Lead_Lag,1)*1/s)
-%hold on
-%step(1/s)
-%hold off
-%grid on
-
 
 %% fasemargins tab grundet Sample hold. 
 Ts = 0.002;
