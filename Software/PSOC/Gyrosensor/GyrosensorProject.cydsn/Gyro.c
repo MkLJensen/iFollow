@@ -11,15 +11,30 @@
 */
 #include "Gyro.h"
 
-/*C++ new and delete operators*/
+/***************************************************
+* Hack for using the c++ new-operator in PSoC
+* @param <size of desired allocation>
+* @return byte pointer
+****************************************************/
 void* operator new(size_t size) { 
     return malloc(size); 
 } 
 
+/***************************************************
+* Hack for using the c++ delete-operator in PSoC
+* @param <desired dynamic allocated byte>
+* @return void
+****************************************************/
 void operator delete(void* ptr) {
     free(ptr); 
 }
 
+/***************************************************
+* Default constructor for object creation. Initalizes
+* member-variables and sensors.
+* @param  none
+* @return void
+****************************************************/
 Gyro::Gyro(){
 	/*Make I2C interface*/
 	I2C = new i2c;
@@ -34,7 +49,13 @@ Gyro::Gyro(){
 	
 	initGyro();
 };
-    
+
+/***************************************************
+* Destructor for object-destruction, deletes
+* dynamically allocated variables
+* @param none
+* @return void
+****************************************************/
 Gyro::~Gyro(){
 	/*Free dynamically allocated memory*/
 	delete I2C;
@@ -43,6 +64,12 @@ Gyro::~Gyro(){
 	delete sensordata_;
 };
 
+/***************************************************
+* Retrieve if gyroscope is upside down. Used to detect
+* if robot has fallen.
+* @param none
+* @return < 1 if fallen, 0 if not fallen >
+****************************************************/
 int Gyro::hasFallen()
 {
 	getAccData();
@@ -50,6 +77,11 @@ int Gyro::hasFallen()
 	return acceldata_->z_G < 0 ? 1 : 0;
 }
 
+/***************************************************
+* Initialize sensors
+* @param none
+* @return void
+****************************************************/
 void Gyro::initGyro()
 {
     //Initializing MPU6050 -- Might need some tweaking
@@ -63,6 +95,11 @@ void Gyro::initGyro()
     
 }
 
+/***************************************************
+* Used to update and retrieve member accelerometer data
+* @param none
+* @return <pointer to member accelerometer-object (acceldata_)>
+****************************************************/
 acc_data* Gyro::getAccData()
 {
 	//Buffer for sensor data
@@ -84,6 +121,11 @@ acc_data* Gyro::getAccData()
 	return acceldata_;
 }
 
+/***************************************************
+* Used to update and retrieve member temperature data
+* @param none
+* @return <current sensor temperature>
+****************************************************/
 float Gyro::getTemp()
 {
     uint8_t rx_buffer[2];
@@ -100,6 +142,11 @@ float Gyro::getTemp()
 	return temperature_;
 }
 
+/***************************************************
+* Used to update and retrieve all sensors data
+* @param none
+* @return <pointer to member sensor_data object>
+****************************************************/
 sensor_data* Gyro::getSensorData()
 {
 	/*Get new values from sensor!*/
@@ -111,6 +158,11 @@ sensor_data* Gyro::getSensorData()
 	return sensordata_;
 }
 
+/***************************************************
+* Used to update and retrieve gyro data
+* @param none
+* @return <pointer to member gyro-data object (gyrodata_)>
+****************************************************/
 gyro_data* Gyro::getGyroData()
 {
 	//Buffer for sensor data

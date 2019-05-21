@@ -230,6 +230,13 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\GyrosensorProject.cydsn\main.c" />
+<name v=".\GyrosensorProject.cydsn\Gyro.c" />
+<name v=".\GyrosensorProject.cydsn\GyroDefs.h" />
+<name v=".\GyrosensorProject.cydsn\GyroDefs.c" />
+<name v=".\GyrosensorProject.cydsn\i2c.c" />
+<name v=".\GyrosensorProject.cydsn\Gyro.h" />
+<name v=".\GyrosensorProject.cydsn\cyapicallbacks.h" />
+<name v=".\GyrosensorProject.cydsn\Generated_Source\PSoC5\project.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -237,7 +244,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="d8193ddc-91ef-46b1-bc46-c914dd60711a"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4a7b3963-9a9f-4f4b-96d6-e49bfe016557" /><DocumentWindow Key="D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\main.c" Guid="d8193ddc-91ef-46b1-bc46-c914dd60711a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="682, 694" SelectedTabbedMdiWindow="d8193ddc-91ef-46b1-bc46-c914dd60711a"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4a7b3963-9a9f-4f4b-96d6-e49bfe016557" /><DocumentWindow Key="D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\main.c" Guid="d8193ddc-91ef-46b1-bc46-c914dd60711a" /><DocumentWindow Key="D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\Gyro.c" Guid="c9ced014-4257-439a-9112-b419c51a9689" /><DocumentWindow Key="D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\GyroDefs.h" Guid="6c318dfe-51b1-45da-bdac-925c3d023911" /><DocumentWindow Key="D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\GyroDefs.c" Guid="aeaff094-3a6e-47b3-a834-9f3ca892fd8a" /><DocumentWindow Key="D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\i2c.c" Guid="31938935-cab2-49af-a3f9-03de123cd161" /><DocumentWindow Key="D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\Gyro.h" Guid="ff3dd919-d1f5-4897-ba22-114df5c1d518" /><DocumentWindow Key="D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\cyapicallbacks.h" Guid="67c60534-84bf-4119-a020-c404499ee8f8" /><DocumentWindow Key="D:\Git\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\Generated_Source\PSoC5\project.h" Guid="42fa6c78-a538-400a-a414-553f6c282227" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
