@@ -108,7 +108,6 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived)
          case 'c' :
         {
             ControlModeActive = false;
-            MotorPtr_->Stop();
             return 'c';
         }
         break;        

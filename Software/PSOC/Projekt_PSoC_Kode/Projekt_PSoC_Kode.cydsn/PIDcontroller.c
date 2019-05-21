@@ -37,16 +37,6 @@ float PIDcontroller::getReference(void) const
     return ref_;
 }
 
-void PIDcontroller::setMeasurement(float sensorData)
-{
-    data_ = sensorData;
-}
-
-float PIDcontroller::getMeasurement(void) const
-{
-    return data_;
-}
-
 void PIDcontroller::calculateError(float Signal)
 {
     error_ = ref_ - Signal;

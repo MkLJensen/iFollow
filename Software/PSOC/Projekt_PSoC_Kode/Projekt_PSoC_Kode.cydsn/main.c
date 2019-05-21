@@ -37,7 +37,7 @@ uint8_t byteR;
 ToF obj;
 Switches Switchcontroller;
 MotorController Motor;
-PIDcontroller PIDcontrol(142.9, -136.2, -0.693, 500, &Motor );
+PIDcontroller PIDcontrol(142.9, -136.2, 0.693, 500, &Motor );
 
 int main(void)
 {

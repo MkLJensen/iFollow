@@ -63,18 +63,6 @@ void MotorController::TurnRight(int pwm)
     {
         setRightPWM(0);
     }
-    
-    /*
-    int CMP = 500+(4*pwm);
-    if ((Rightpwm_ - CMP) < 0)
-    {
-        setRightPWM(CMP+(CMP-Rightpwm_));
-        setLeftPWM(0);
-    }
-    else 
-    {
-        setRightPWM(Rightpwm_-CMP);
-    }*/
     setDir(FORWARD);
 }
 
@@ -98,12 +86,6 @@ void MotorController::TurnLeft(int pwm)
         setLeftPWM(Rightpwm_-CMP);
     }*/
     setDir(FORWARD);
-}
-
-void MotorController::Stop(void)
-{
-    setLeftPWM(0);
-    setRightPWM(0);
 }
 
 void MotorController::Control(char dir)

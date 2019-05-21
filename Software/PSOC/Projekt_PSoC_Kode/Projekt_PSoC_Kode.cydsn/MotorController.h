@@ -35,7 +35,6 @@ public:
    void GoBackward(int pwm = 0);
    void TurnLeft(int pwm = 0);
    void TurnRight(int pwm = 0);
-   void Stop(void);
    void Control(char dir);
 
    void setLeftPWM(int pwm);

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\PIDcontroller.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Projekt_PSoC_Kode\Projekt_PSoC_Kode\Header Files\MotorController.h">
 <ExpandedNodeIds>
 <v>Projekt_PSoC_Kode</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
@@ -55,6 +55,9 @@
 <v>Projekt_PSoC_Kode\CE195352_PSoC_5LP_Blinking_LED.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode</v>
+<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\TopDesign</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Pins</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydwr\Analog</v>
@@ -100,9 +103,6 @@
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\I2C_1</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\isr_1</v>
 <v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\LED_Green</v>
-<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\LED_PWM</v>
-<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\LED_Red</v>
-<v>Projekt_PSoC_Kode\Projekt_PSoC_Kode\Generated_Source\PSoC5\miso</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -339,21 +339,9 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Projekt_PSoC_Kode.cydsn\main.c" />
-<name v=".\Projekt_PSoC_Kode.cydsn\RpiSPI.c" />
-<name v=".\Projekt_PSoC_Kode.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Projekt_PSoC_Kode.cydsn\PIDcontroller.c" />
 <name v=".\Projekt_PSoC_Kode.cydsn\PIDcontroller.h" />
-<name v=".\Projekt_PSoC_Kode.cydsn\Projekt_PSoC_Kode.cydwr" />
-<name v=".\Projekt_PSoC_Kode.cydsn\ToF.c" />
-<name v=".\Projekt_PSoC_Kode.cydsn\Generated_Source\PSoC5\SPIS_1.c" />
-<name v=".\Projekt_PSoC_Kode.cydsn\Switches.h" />
-<name v=".\Projekt_PSoC_Kode.cydsn\ToF.h" />
-<name v="..\Gyrosensor\GyrosensorProject.cydsn\Gyro.h" />
-<name v=".\Projekt_PSoC_Kode.cydsn\RpiSPI.h" />
+<name v=".\Projekt_PSoC_Kode.cydsn\PIDcontroller.c" />
 <name v=".\Projekt_PSoC_Kode.cydsn\MotorController.h" />
-<name v=".\Projekt_PSoC_Kode.cydsn\LED.h" />
-<name v=".\Projekt_PSoC_Kode.cydsn\Switches.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -361,7 +349,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1393, 697" SelectedTabbedMdiWindow="4e27fa1f-0eed-4764-a388-6377a3db6e5b"><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\main.c" Guid="4e27fa1f-0eed-4764-a388-6377a3db6e5b" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\RpiSPI.c" Guid="c18f33b5-3698-428c-a119-566dd09052b4" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\TopDesign\TopDesign.cysch" Guid="c452117a-1981-4573-a568-3dde21c000cd" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\PIDcontroller.c" Guid="f8159a53-c661-419e-b50e-febaa36e70f2" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\PIDcontroller.h" Guid="c6556d5f-481d-423b-ac3c-7f178281126a" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Projekt_PSoC_Kode.cydwr" Guid="133826e5-4e05-4ff8-be7e-d9af74a28f84" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\ToF.c" Guid="eb8dca80-7606-4e24-bebc-9b159635dbe5" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Generated_Source\PSoC5\SPIS_1.c" Guid="84468468-5a81-49a8-92d4-667fb15ae3c4" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Switches.h" Guid="de8b7488-8022-4ffd-aa22-96e5c69e19cc" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\ToF.h" Guid="00b2a60a-11fb-4426-bc61-c24a16fd0df7" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Gyrosensor\GyrosensorProject.cydsn\Gyro.h" Guid="713ab440-418a-4ba1-aea3-e6a6dd9efbd0" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\RpiSPI.h" Guid="2af5314d-7178-483d-b024-b0474e4befc0" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\MotorController.h" Guid="5737480c-4d06-44bb-b91b-1c825339ee34" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\LED.h" Guid="2595b05c-6f4a-47c6-b99d-73bc3fae06a3" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\Switches.c" Guid="942ab4f5-73c8-4494-8063-73c6019ee2d9" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4b092cf8-2597-4e9e-899e-42c869ca2181" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1393, 697" SelectedTabbedMdiWindow="a165d57a-a18f-455d-9f40-5c926e676975"><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\PIDcontroller.h" Guid="923f7ee0-907b-4411-9ee6-36601ead708a" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\PIDcontroller.c" Guid="4066edc6-b900-48c4-a107-7b861cd68548" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4b092cf8-2597-4e9e-899e-42c869ca2181" /><DocumentWindow Key="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\MotorController.h" Guid="a165d57a-a18f-455d-9f40-5c926e676975" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
