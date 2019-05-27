@@ -29,6 +29,21 @@ void ToF::stop(){
 }
 */
 
+void ToF::setRightSensor(uint16_t value)
+{
+    sensorRight = value;
+}
+
+void ToF::setMidSensor(uint16_t value)
+{
+    sensorMid = value;
+}
+
+void ToF::setLeftSensor(uint16_t value)
+{
+    sensorLeft = value;
+}
+
 uint16_t ToF::getRightSensor(void) const
 {
     return sensorRight;
@@ -44,131 +59,52 @@ uint16_t ToF::getLeftSensor(void) const
     return sensorLeft;
 }
 
-void ToF::handleByte(uint8_t byte){
-   byteR_ = byte;                                          
-    
-    if (byteR_ == 0)
-        i = 0;
-    
-    switch (i)
+uint8_t ToF::getCounter(void) const
+{
+    return counter_;
+}
+void ToF::setCounter(uint8_t value)
+{
+    counter_ = value;
+}
+
+void ToF::handleByte(uint16_t byte){
+  
+    if (byte == 0)
     {
-        case 0:
-        //UART_1_PutString("Start modtaget \n\r");
-        i++;
-        break;
-        
+        setCounter(1);
+        return;
+    }
+    char string[50];
+    switch (counter_)
+    {       
         case 1:
-        byteR_ --;
-        sensorRight = byteR_<<8;
-        i++;
+        setRightSensor(byte);
+        setCounter(2);
+        
+        sprintf(string, "Sensor right is: %d \n\r", byte);
+        UART_1_PutString(string);
         break;
         
         case 2:
-        //byteR --;
-        sensorRight = sensorRight|byteR_;
-        if (sensorRight == 1 || sensorRight > 1000)
-        {
-            sensorRight = 1000;
-        }
-        //sprintf(string, "Sensor Right: %d \n\r", sensorRight);
-        //UART_1_PutString(string);
-        i++;
+        setMidSensor(byte);
+        setCounter(3);
+      
+        sprintf(string, "Sensor middle is: %d \n\r", byte);
+        UART_1_PutString(string);
         break;
         
         case 3:
-        byteR_ --;
-        sensorMid = byteR_<<8;
-        i++;
-        break;
+        setLeftSensor(byte);
+        setCounter(0);
         
-        case 4:
-        //byteR --;
-        sensorMid = sensorMid|byteR_;
-        if (sensorMid == 1 || sensorMid > 1000)
-        {
-            sensorMid = 1000;
-        }
-        sprintf(string, "Sensor Middle: %d \n\r", sensorMid);
+        sprintf(string, "Sensor left is: %d \n\r", byte);
         UART_1_PutString(string);
-        i++;
         break;
-        
-        case 5:
-        byteR_ --;
-        sensorLeft = byteR_<<8;
-        i++;
-        break;
-        
-        case 6:
-        //byteR --;
-        sensorLeft = sensorLeft|byteR_;
-        if (sensorLeft == 1 || sensorLeft > 1000)
-        {
-            sensorLeft = 1000;
-        }
-        //sprintf(string, "Sensor Left: %d \n\r", sensorLeft);
-        //UART_1_PutString(string);
-        i++;
-        break;
-        
+                
         default: 
         //UART_1_PutString("Unknown index!\n\r");
         break;
     }
 }
-    /*
-    //TEST!!
-    switch (i)
-    {
-        case 0:
-        UART_1_PutString("Start modtaget \n\r");
-        i++;
-        break;
-        
-        case 1:
-        sensor1 = byteR_;
-        sprintf(string, "Sensor Nr. 1: %d \n\r", sensor1);
-        UART_1_PutString(string);
-        i++;
-        break;
-        
-        case 2:
-        sensor2 = byteR_;
-        sprintf(string, "Sensor Nr. 2: %d \n\r", sensor2);
-        UART_1_PutString(string);
-        i++;
-        break;
-        
-        case 3:
-        sensor3 = byteR_;
-        sprintf(string, "Sensor Nr. 3: %d \n\r", sensor3);
-        UART_1_PutString(string);
-        i++;
-        break;
-        
-        case 4:
-        sensor4 = byteR_;
-        sprintf(string, "Sensor Nr. 4: %d \n\r", sensor4);
-        UART_1_PutString(string);
-        i++;
-        break;
-        
-        case 5:
-        sensor5 = byteR_;
-        sprintf(string, "Sensor Nr. 5: %d \n\r", sensor5);
-        UART_1_PutString(string);
-        i++;
-        break;
-        
-        case 6:
-        sensor6 = byteR_;
-        sprintf(string, "Sensor Nr. 6: %d \n\r", sensor6);
-        UART_1_PutString(string);
-        i++;
-        break;
-        
-        default: 
-        UART_1_PutString("Unknown index!\n\r");
-        break;
-    } */
 /* [] END OF FILE */

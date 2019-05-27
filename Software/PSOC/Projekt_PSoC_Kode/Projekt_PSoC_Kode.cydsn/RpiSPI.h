@@ -41,7 +41,7 @@ private:
    uint8_t ControlModeActive = false;
    MotorController * MotorPtr_;
    Gyro * GyroPtr_;
-   int GyroState_ = 0;
+   bool GyroState_ = 0;
     
  };
 

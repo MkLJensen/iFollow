@@ -28,7 +28,7 @@
 *   Conditional Compilation Parameters
 ***************************************/
 
-#define SPIS_1_DATA_WIDTH                  (8u)
+#define SPIS_1_DATA_WIDTH                  (16u)
 #define SPIS_1_INTERNAL_TX_INT_ENABLED     (0u)
 #define SPIS_1_INTERNAL_RX_INT_ENABLED     (1u)
 #define SPIS_1_MODE_USE_ZERO               (1u)
@@ -77,14 +77,14 @@ void  SPIS_1_SetTxInterruptMode(uint8 intSrc) ;
 void  SPIS_1_SetRxInterruptMode(uint8 intSrc) ;
 uint8 SPIS_1_ReadTxStatus(void) ;
 uint8 SPIS_1_ReadRxStatus(void) ;
-void  SPIS_1_WriteTxData(uint8 txData);
+void  SPIS_1_WriteTxData(uint16 txData);
 
 #if(SPIS_1_MODE_USE_ZERO != 0u)
-    void  SPIS_1_WriteTxDataZero(uint8 txDataByte) \
+    void  SPIS_1_WriteTxDataZero(uint16 txDataByte) \
                                               ;
 #endif /* (SPIS_1_MODE_USE_ZERO != 0u) */
 
-uint8 SPIS_1_ReadRxData(void) ;
+uint16 SPIS_1_ReadRxData(void) ;
 uint8 SPIS_1_GetRxBufferSize(void) ;
 uint8 SPIS_1_GetTxBufferSize(void) ;
 void  SPIS_1_ClearRxBuffer(void) ;
@@ -95,7 +95,7 @@ void  SPIS_1_ClearTxBuffer(void) ;
     void  SPIS_1_TxDisable(void) ;
 #endif /* SPIS_1_BIDIRECTIONAL_MODE != 0u */
 
-void  SPIS_1_PutArray(const uint8 buffer[], uint8 byteCount) ;
+void  SPIS_1_PutArray(const uint16 buffer[], uint8 byteCount) ;
 void  SPIS_1_ClearFIFO(void) ;
 void  SPIS_1_Sleep(void) ;
 void  SPIS_1_Wakeup(void) ;
@@ -202,102 +202,102 @@ extern uint8 SPIS_1_initVar;
 *             Registers
 ***************************************/
 #if(CY_PSOC3 || CY_PSOC5)
-    #define SPIS_1_TXDATA_ZERO_REG          (* (reg8  *) \
-            SPIS_1_BSPIS_sR8_Dp_u0__A0_REG)
+    #define SPIS_1_TXDATA_ZERO_REG          (* (reg16  *) \
+            SPIS_1_BSPIS_sR16_Dp_u0__A0_REG)
 
-    #define SPIS_1_TXDATA_ZERO_PTR           (  (reg8  *) \
-            SPIS_1_BSPIS_sR8_Dp_u0__A0_REG)
+    #define SPIS_1_TXDATA_ZERO_PTR           (  (reg16  *) \
+            SPIS_1_BSPIS_sR16_Dp_u0__A0_REG)
 
-    #define SPIS_1_RXDATA_ZERO_REG           (* (reg8  *) \
-            SPIS_1_BSPIS_sR8_Dp_u0__A0_REG)
+    #define SPIS_1_RXDATA_ZERO_REG           (* (reg16  *) \
+            SPIS_1_BSPIS_sR16_Dp_u0__A0_REG)
 
-    #define SPIS_1_RXDATA_ZERO_PTR           (  (reg8  *) \
-            SPIS_1_BSPIS_sR8_Dp_u0__A0_REG)
+    #define SPIS_1_RXDATA_ZERO_PTR           (  (reg16  *) \
+            SPIS_1_BSPIS_sR16_Dp_u0__A0_REG)
 
-    #define SPIS_1_TXDATA_REG                (* (reg8  *) \
-            SPIS_1_BSPIS_sR8_Dp_u0__F0_REG)
+    #define SPIS_1_TXDATA_REG                (* (reg16  *) \
+            SPIS_1_BSPIS_sR16_Dp_u0__F0_REG)
 
-    #define SPIS_1_TXDATA_PTR                (  (reg8  *) \
-            SPIS_1_BSPIS_sR8_Dp_u0__F0_REG)
+    #define SPIS_1_TXDATA_PTR                (  (reg16  *) \
+            SPIS_1_BSPIS_sR16_Dp_u0__F0_REG)
 
-    #define SPIS_1_RXDATA_REG                (* (reg8  *) \
-            SPIS_1_BSPIS_sR8_Dp_u0__F1_REG)
+    #define SPIS_1_RXDATA_REG                (* (reg16  *) \
+            SPIS_1_BSPIS_sR16_Dp_u0__F1_REG)
 
-    #define SPIS_1_RXDATA_PTR                (  (reg8  *) \
-            SPIS_1_BSPIS_sR8_Dp_u0__F1_REG)
+    #define SPIS_1_RXDATA_PTR                (  (reg16  *) \
+            SPIS_1_BSPIS_sR16_Dp_u0__F1_REG)
 #else
     #if(SPIS_1_DATA_WIDTH <= 8u) /* 8bit - SPIS */
         #define SPIS_1_TXDATA_ZERO_REG           (* (reg8 *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__A0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__A0_REG)
 
         #define SPIS_1_TXDATA_ZERO_PTR           (  (reg8  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__A0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__A0_REG)
 
         #define SPIS_1_RXDATA_ZERO_REG           (* (reg8  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__A0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__A0_REG)
 
         #define SPIS_1_RXDATA_ZERO_PTR           (  (reg8 *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__A0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__A0_REG)
 
         #define SPIS_1_TXDATA_REG                (* (reg8  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__F0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__F0_REG)
 
         #define SPIS_1_TXDATA_PTR                (  (reg8  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__F0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__F0_REG)
 
         #define SPIS_1_RXDATA_REG                (* (reg8  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__F1_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__F1_REG)
 
         #define SPIS_1_RXDATA_PTR                (  (reg8  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__F1_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__F1_REG)
     #else /* 16bit - SPIS */
         #define SPIS_1_TXDATA_ZERO_REG           (* (reg16  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__16BIT_A0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__16BIT_A0_REG)
 
         #define SPIS_1_TXDATA_ZERO_PTR           (  (reg16  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__16BIT_A0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__16BIT_A0_REG)
 
         #define SPIS_1_RXDATA_ZERO_REG           (* (reg16  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__16BIT_A0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__16BIT_A0_REG)
 
         #define SPIS_1_RXDATA_ZERO_PTR           (  (reg16  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__16BIT_A0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__16BIT_A0_REG)
 
         #define SPIS_1_TXDATA_REG                (* (reg16  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__16BIT_F0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__16BIT_F0_REG)
 
         #define SPIS_1_TXDATA_PTR                (  (reg16  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__16BIT_F0_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__16BIT_F0_REG)
 
         #define SPIS_1_RXDATA_REG                (* (reg16  *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__16BIT_F1_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__16BIT_F1_REG)
 
         #define SPIS_1_RXDATA_PTR                (  (reg16 *) \
-                SPIS_1_BSPIS_sR8_Dp_u0__16BIT_F1_REG)
+                SPIS_1_BSPIS_sR16_Dp_u0__16BIT_F1_REG)
     #endif /* (SPIS_1_DATA_WIDTH <= 8u) */
 #endif     /* (CY_PSOC3 || CY_PSOC5) */
 
 #define SPIS_1_TX_AUX_CONTROL_DP0_REG       (* (reg8 *) \
-        SPIS_1_BSPIS_sR8_Dp_u0__DP_AUX_CTL_REG)
+        SPIS_1_BSPIS_sR16_Dp_u0__DP_AUX_CTL_REG)
 #define SPIS_1_TX_AUX_CONTROL_DP0_PTR       (  (reg8 *) \
-        SPIS_1_BSPIS_sR8_Dp_u0__DP_AUX_CTL_REG)
+        SPIS_1_BSPIS_sR16_Dp_u0__DP_AUX_CTL_REG)
 
 #define SPIS_1_RX_AUX_CONTROL_DP0_REG       (* (reg8 *) \
-        SPIS_1_BSPIS_sR8_Dp_u0__DP_AUX_CTL_REG)
+        SPIS_1_BSPIS_sR16_Dp_u0__DP_AUX_CTL_REG)
 #define SPIS_1_RX_AUX_CONTROL_DP0_PTR       (  (reg8 *) \
-        SPIS_1_BSPIS_sR8_Dp_u0__DP_AUX_CTL_REG)
+        SPIS_1_BSPIS_sR16_Dp_u0__DP_AUX_CTL_REG)
 
 #if(SPIS_1_DATA_WIDTH > 8u)
 
     #define SPIS_1_TX_AUX_CONTROL_DP1_REG   (* (reg8 *) \
-            SPIS_1_BSPIS_sR8_Dp_u1__DP_AUX_CTL_REG)
+            SPIS_1_BSPIS_sR16_Dp_u1__DP_AUX_CTL_REG)
     #define SPIS_1_TX_AUX_CONTROL_DP1_PTR   (  (reg8 *) \
-            SPIS_1_BSPIS_sR8_Dp_u1__DP_AUX_CTL_REG)
+            SPIS_1_BSPIS_sR16_Dp_u1__DP_AUX_CTL_REG)
 
     #define SPIS_1_RX_AUX_CONTROL_DP1_REG   (* (reg8 *) \
-            SPIS_1_BSPIS_sR8_Dp_u1__DP_AUX_CTL_REG)
+            SPIS_1_BSPIS_sR16_Dp_u1__DP_AUX_CTL_REG)
     #define SPIS_1_RX_AUX_CONTROL_DP1_PTR   (  (reg8 *) \
-            SPIS_1_BSPIS_sR8_Dp_u1__DP_AUX_CTL_REG)
+            SPIS_1_BSPIS_sR16_Dp_u1__DP_AUX_CTL_REG)
 
 #endif /* SPIS_1_DATA_WIDTH > 8u */
 

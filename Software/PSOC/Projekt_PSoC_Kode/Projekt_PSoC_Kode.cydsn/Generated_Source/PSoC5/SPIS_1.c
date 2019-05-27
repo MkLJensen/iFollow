@@ -19,7 +19,7 @@
 
 #if (SPIS_1_TX_SOFTWARE_BUF_ENABLED)
 
-    volatile uint8 SPIS_1_txBuffer[SPIS_1_TX_BUFFER_SIZE];
+    volatile uint16 SPIS_1_txBuffer[SPIS_1_TX_BUFFER_SIZE];
     volatile uint8 SPIS_1_txBufferRead;
     volatile uint8 SPIS_1_txBufferWrite;
     volatile uint8 SPIS_1_txBufferFull;
@@ -28,7 +28,7 @@
 
 #if (SPIS_1_RX_SOFTWARE_BUF_ENABLED)
 
-    volatile uint8 SPIS_1_rxBuffer[SPIS_1_RX_BUFFER_SIZE];
+    volatile uint16 SPIS_1_rxBuffer[SPIS_1_RX_BUFFER_SIZE];
     volatile uint8 SPIS_1_rxBufferRead;
     volatile uint8 SPIS_1_rxBufferWrite;
     volatile uint8 SPIS_1_rxBufferFull;
@@ -521,7 +521,7 @@ uint8 SPIS_1_ReadRxStatus(void)
 *  No.
 *
 *******************************************************************************/
-void SPIS_1_WriteTxData(uint8 txData) 
+void SPIS_1_WriteTxData(uint16 txData) 
 {
     #if(SPIS_1_TX_SOFTWARE_BUF_ENABLED)
 
@@ -554,7 +554,7 @@ void SPIS_1_WriteTxData(uint8 txData)
             (0u != (SPIS_1_swStatusTx & SPIS_1_STS_TX_FIFO_NOT_FULL)))
         {
             /* Put data element into the TX FIFO */
-            CY_SET_REG8(SPIS_1_TXDATA_PTR, txData);
+            CY_SET_REG16(SPIS_1_TXDATA_PTR, txData);
         }
         else
         {
@@ -590,7 +590,7 @@ void SPIS_1_WriteTxData(uint8 txData)
         }
 
         /* Put data element into the TX FIFO */
-        CY_SET_REG8(SPIS_1_TXDATA_PTR, txData);
+        CY_SET_REG16(SPIS_1_TXDATA_PTR, txData);
         
     #endif /* SPIS_1_TX_SOFTWARE_BUF_ENABLED */
 }
@@ -616,10 +616,10 @@ void SPIS_1_WriteTxData(uint8 txData)
     *  status register of the component.
     *
     *******************************************************************************/
-    void SPIS_1_WriteTxDataZero(uint8 txDataByte)
+    void SPIS_1_WriteTxDataZero(uint16 txDataByte)
                                         
     {
-        CY_SET_REG8(SPIS_1_TXDATA_ZERO_PTR, txDataByte);
+        CY_SET_REG16(SPIS_1_TXDATA_ZERO_PTR, txDataByte);
     }
 
 #endif /* (SPIS_1_MODE_USE_ZERO != 0u) */
@@ -658,9 +658,9 @@ void SPIS_1_WriteTxData(uint8 txData)
 *  No.
 *
 *******************************************************************************/
-uint8 SPIS_1_ReadRxData(void) 
+uint16 SPIS_1_ReadRxData(void) 
 {
-    uint8 rxData;
+    uint16 rxData;
 
     #if(SPIS_1_RX_SOFTWARE_BUF_ENABLED)
 
@@ -690,7 +690,7 @@ uint8 SPIS_1_ReadRxData(void)
 
     #else /* !SPIS_1_RX_SOFTWARE_BUF_ENABLED */
 
-        rxData = CY_GET_REG8(SPIS_1_RXDATA_PTR);
+        rxData = CY_GET_REG16(SPIS_1_RXDATA_PTR);
 
     #endif /* SPIS_1_RX_SOFTWARE_BUF_ENABLED */
 
@@ -876,7 +876,7 @@ void SPIS_1_ClearRxBuffer(void)
     /* Clear Hardware RX FIFO */
     while((SPIS_1_RX_STATUS_REG & SPIS_1_STS_RX_FIFO_NOT_EMPTY) != 0u)
     {
-        CY_GET_REG8(SPIS_1_RXDATA_PTR);
+        CY_GET_REG16(SPIS_1_RXDATA_PTR);
     }
 
     #if(SPIS_1_RX_SOFTWARE_BUF_ENABLED)
@@ -1044,7 +1044,7 @@ void SPIS_1_ClearTxBuffer(void)
 *  No.
 *
 *******************************************************************************/
-void SPIS_1_PutArray(const uint8 buffer[], uint8 byteCount)
+void SPIS_1_PutArray(const uint16 buffer[], uint8 byteCount)
                                                                     
 {
     uint8 bufIndex;
@@ -1082,7 +1082,7 @@ void SPIS_1_ClearFIFO(void)
 
     while((SPIS_1_RX_STATUS_REG & SPIS_1_STS_RX_FIFO_NOT_EMPTY) != 0u)
     {
-        CY_GET_REG8(SPIS_1_RXDATA_PTR);
+        CY_GET_REG16(SPIS_1_RXDATA_PTR);
     }
 
     enableInterrupts = CyEnterCriticalSection();

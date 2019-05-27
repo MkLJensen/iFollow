@@ -29,107 +29,121 @@ CY_ISR_PROTO(PowerSwitch_Handler);
 CY_ISR_PROTO(FollowSwitch_Handler);
 CY_ISR_PROTO(Control_timer_isr);
 CY_ISR_PROTO(isr_handler);
+int lul = 0, lul2 = 0;
+CY_ISR_PROTO(Tester1)
+    {
+        UART_1_PutChar(lul);
+        lul = 0;
+        lul2 = 0;
+    }
 
+//Enum to make states easier to read
 enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4, Fallen = 5};
-uint8_t Mode = Off; 
-uint8_t byteR;
 
+//Declare global variable
+uint8_t Mode = Off, oldMode = Off; 
+
+//Declare objects used in interrupts
 ToF obj;
 Switches Switchcontroller;
 MotorController Motor;
-PIDcontroller PIDcontrol(142.9, -136.2, 0.693, 500, &Motor );
+PIDcontroller PIDcontrol(6.842, -3.296, -0.2332, 500, &Motor);
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
            
-    I2C_1_Start();
+    I2C_1_Start();                                      //Start I2C 
+    SPIS_Start();                                       //Start SPI (RPI-PSoC)
+    isr_1_StartEx(isr_handler);                         //Start SPI interrupt
+    Power_isr_StartEx(PowerSwitch_Handler);             //Start PowerBtn interrupt
+    Follow_isr_StartEx(FollowSwitch_Handler);           //Start FollowBtn interrupt
+    Motor_timer_isr_StartEx(Control_timer_isr);         //Start MotorControl timer interrupt
+    
     UART_1_Start();
-    SPIS_Start();
-    isr_1_StartEx(isr_handler);
-    Power_isr_StartEx(PowerSwitch_Handler);
-    Follow_isr_StartEx(FollowSwitch_Handler);
-    Motor_timer_isr_StartEx(Control_timer_isr);
+    
+    UART_1_PutString("HEEEJ");
+    Tester_StartEx(Tester1);
        
+    // Declare objects
     Gyro GyroController;
     RpiSPI SPIcontroller(&GyroController, &Motor);
     LED Ledcontrol;
                
     for(;;)
-    {
-        if(Mode == Off && Switchcontroller.getSwitchStatus('p') == true)
+    {                    
+        if(Mode == Off && Switchcontroller.getSwitchStatus('p') == true)            //Check powerbutton and mode is off
         {
-            Mode = Init;
-            Ledcontrol.blinkLed('r');
-            CyDelay(1000);
-            Mode = Sleep;
+            Mode = Init;                    //Set mode init
         }
-        else if (Mode == Sleep && Switchcontroller.getSwitchStatus('p') == false)
+        else if (Mode == Sleep && Switchcontroller.getSwitchStatus('p') == false)   //Check powerbutton and mode sleep
         {
-            Mode = Off;
+            Mode = Off;                     //Set mode off
         }
-        if (Mode == Sleep && SPIcontroller.ReadData() == 'o')
+        if (Mode == Sleep && SPIcontroller.ReadData() == 'o')                       //Check if data recived is 'o' and mode is sleep
         {
-            Mode = Control;
-            Timer_1_Start();
+            Mode = Control;                 //Set mode control
+            Timer_1_Start();                //Start motor timer
         }
-        else if (Mode == Control && SPIcontroller.ReadData() == 'c')
+        else if (Mode == Control && SPIcontroller.ReadData() == 'c')                //Check if data recived is 'c' and mode is control
         {
-            Mode = Sleep;
-            Timer_1_Stop();
+            Mode = Sleep;                   //Set mode sleep
+            Timer_1_Stop();                 //Stop motor timer
         }
-        if (Mode == Sleep && Switchcontroller.getSwitchStatus('f') == true)
+        if (Mode == Sleep && Switchcontroller.getSwitchStatus('f') == true)         //Check followbutton and mode sleep
         {
-            Mode = Follow;
-            SPIS_1_Start();
+            Mode = Follow;                  //Set mode follow
+            SPIS_1_Start();                 //Start SPI to arduino
+            //Timer_2_Start();
         }
-        else if (Mode == Follow && Switchcontroller.getSwitchStatus('f') == false)
+        else if (Mode == Follow && Switchcontroller.getSwitchStatus('f') == false)  //Check followbutton and mode follow
         {
-            Mode = Sleep;
-            SPIS_1_Stop();
+            Mode = Sleep;                   //Set mode follow
+            SPIS_1_Stop();                  //Stop SPI to arduino
         }
         
         switch(Mode)
         {
             case Off :
             {
-                Ledcontrol.turnOffLed('g');
-                Ledcontrol.turnOffLed('r');
-                SPIcontroller.ReadData();
+                Ledcontrol.turnOffLed('g');     //Turn off green LED
+                Ledcontrol.turnOffLed('r');     //Turn off red LED
+                SPIcontroller.TransmitData(Mode);
             }
             break;
             case Init :
             {
-                Ledcontrol.blinkLed('r');
+                Ledcontrol.blinkLed('r');       //Blink red LED
                 CyDelay(1000);
-                Mode = Sleep;
+                Mode = Sleep;                   //Set mode to sleep
             }
             break;
             case Sleep :
             {
-                Ledcontrol.turnOffLed('r');
-                Ledcontrol.turnOnLed('g');
-                Motor.GoForward(0);
+                Ledcontrol.turnOffLed('r');     //Turn off Red LED
+                Ledcontrol.turnOnLed('g');      //Turn on green LED
+                Motor.GoForward(0);             //Stop motor if running
             }
             break;
             case Control :
             {
-                Ledcontrol.turnOffLed('r');
-                Ledcontrol.blinkLed('g');
+                Ledcontrol.turnOffLed('r');     //Turn off red LED
+                Ledcontrol.blinkLed('g');       //Blink green LED
             }
             break;
             case Follow :
             {
-                Ledcontrol.turnOffLed('r');
-                Ledcontrol.blinkLed('g');
-                
+                Ledcontrol.turnOffLed('r');     //Turn off red LED
+                Ledcontrol.blinkLed('g');       //Blink green LED
                 SPIcontroller.ReadData();
+                Timer_2_Start();
             }
             break;
             case Fallen :
             {
-                Ledcontrol.turnOffLed('g');
-                Ledcontrol.blinkLed('r');
+                Ledcontrol.turnOffLed('g');     //Turn off green LED
+                Ledcontrol.blinkLed('r');       //Blink red LED
+                SPIcontroller.ReadData();
             }
             break;
             default :
@@ -143,39 +157,51 @@ int main(void)
 
 CY_ISR(PowerSwitch_Handler)
 {
-    Switchcontroller.setSwitchStatus('P');
+    Switchcontroller.setSwitchStatus('P');          //Set switch status
 }
 
 CY_ISR(FollowSwitch_Handler)
 {
-    Switchcontroller.setSwitchStatus('F');
+    Switchcontroller.setSwitchStatus('F');          //Set switch status
 }
 
 CY_ISR(Control_timer_isr)
-{
-    if (Motor.getOldPower() == Motor.getPower())
+{                                                       //This timer is used to make iFollow ramp up when controlling it
+    if (Motor.getOldPower() == Motor.getPower())        //If motor.control() havent been called they will be equal
     {
-        Motor.setPower(Motor.getPower()-10); 
-        Motor.setOldPower();
-        if (Motor.getPower() > 0)
+        Motor.setPower(Motor.getPower()-10);            //Set power lower
+        Motor.setOldPower();                            //Set old power to new power
+        if (Motor.getPower() > 0)                       //If power is greater than 0 set pwm to power value
         {
-            PWM_1_WriteCompare1(500+4*Motor.getPower());
-            PWM_1_WriteCompare2(500+4*Motor.getPower());
+            Motor.setLeftPWM(500+4*Motor.getPower());
+            Motor.setRightPWM(500+4*Motor.getPower());
         }
-        else  
+        else                                            //else set it to 0
         {
-            PWM_1_WriteCompare1(0);
-            PWM_1_WriteCompare2(0);
+            Motor.setLeftPWM(0);
+            Motor.setRightPWM(0);
         }
     }
 }
 
 CY_ISR(isr_handler)
 {
-   byteR = SPIS_1_ReadRxData();                                                             // Gemmer aflæsning af RX-buffer
-   obj.handleByte(byteR);
-   PIDcontrol.calculateError(obj.getMidSensor());
-   PIDcontrol.calculateControl(obj.getLeftSensor(), obj.getRightSensor());
+    bool regulate = false;
+    if (SPIS_1_GetRxBufferSize() >= 4)
+    {
+        lul++;
+        for(uint8_t i; i < 4; i++)
+        {
+            obj.handleByte(SPIS_1_ReadRxData()); 
+        }
+        regulate = true;
+    }
+    if (regulate == true)
+    {
+        PIDcontrol.calculateError(obj.getLeftSensor());                               //Calculate error
+        PIDcontrol.calculateControl(obj.getLeftSensor(), obj.getRightSensor());       //Regulate iFollow 
+        lul2++;
+    }
 }
 
 /* [] END OF FILE */

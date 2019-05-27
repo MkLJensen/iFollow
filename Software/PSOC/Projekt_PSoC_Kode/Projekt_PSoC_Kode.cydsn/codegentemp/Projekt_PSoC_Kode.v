@@ -1,6 +1,6 @@
 // ======================================================================
 // Projekt_PSoC_Kode.v generated from TopDesign.cysch
-// 05/14/2019 at 15:34
+// 05/27/2019 at 10:41
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -826,7 +826,7 @@ module I2C_v3_50_5 (
 
 endmodule
 
-// SPI_Slave_v2_70(BidirectMode=false, ClockInternal=true, ControlFileName=SPI_Slave_Default.ctl, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG8, CyGetRegReplacementString_1=CY_GET_REG8, CyGetRegReplacementString_2=CY_GET_REG8, CySetRegReplacementString=CY_SET_REG8, DesiredBitRate=2000000, FixedPlacementEnabled=false, InternalInterruptEnabled=0, InternalRxInterruptEnabled=1, InternalTxInterruptEnabled=0, InterruptOnByteComplete=false, InterruptOnDone=false, InterruptOnRXEmpty=false, InterruptOnRXFull=false, InterruptOnRXNotEmpty=true, InterruptOnRXOverrun=false, InterruptOnTXEmpty=false, InterruptOnTXFull=false, InterruptOnTXNotFull=false, IntOnByteComp=0, IntOnRXEmpty=0, IntOnRXFull=0, IntOnRXNotEmpty=1, IntOnRXOver=0, IntOnSPIDone=0, IntOnTXEmpty=0, IntOnTXFull=0, IntOnTXNotFull=0, Mode=0, ModeUseZero=1, MultiSlaveEnable=false, NumberOfDataBits=8, PSoC3_ES2_PSoC5_ES1=false, RegDefReplacementString=reg8, RegSizeReplacementString=uint8, RxBufferSize=8, ShiftDir=0, SiliconRevisionReplacementString=es3, TxBufferSize=4, UseInternalInterrupt=false, UseRxInternalInterrupt=true, UseTxInternalInterrupt=false, VerilogSectionReplacementString=sR8, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=SPI_Slave_v2_70, CY_CONFIG_TITLE=SPIS_1, CY_CONST_CONFIG=true, CY_CONTROL_FILE=SPI_Slave_Default.ctl, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=SPIS_1, CY_INSTANCE_SHORT_NAME=SPIS_1, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.2, INSTANCE_NAME=SPIS_1, )
+// SPI_Slave_v2_70(BidirectMode=false, ClockInternal=true, ControlFileName=SPI_Slave_Default.ctl, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CyGetRegReplacementString_1=CY_GET_REG16, CyGetRegReplacementString_2=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DesiredBitRate=8000000, FixedPlacementEnabled=false, InternalInterruptEnabled=0, InternalRxInterruptEnabled=1, InternalTxInterruptEnabled=0, InterruptOnByteComplete=false, InterruptOnDone=false, InterruptOnRXEmpty=false, InterruptOnRXFull=false, InterruptOnRXNotEmpty=true, InterruptOnRXOverrun=false, InterruptOnTXEmpty=false, InterruptOnTXFull=false, InterruptOnTXNotFull=false, IntOnByteComp=0, IntOnRXEmpty=0, IntOnRXFull=0, IntOnRXNotEmpty=1, IntOnRXOver=0, IntOnSPIDone=0, IntOnTXEmpty=0, IntOnTXFull=0, IntOnTXNotFull=0, Mode=0, ModeUseZero=1, MultiSlaveEnable=false, NumberOfDataBits=16, PSoC3_ES2_PSoC5_ES1=false, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, RxBufferSize=8, ShiftDir=0, SiliconRevisionReplacementString=es3, TxBufferSize=4, UseInternalInterrupt=false, UseRxInternalInterrupt=true, UseTxInternalInterrupt=false, VerilogSectionReplacementString=sR16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=SPI_Slave_v2_70, CY_CONFIG_TITLE=SPIS_1, CY_CONST_CONFIG=true, CY_CONTROL_FILE=SPI_Slave_Default.ctl, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=SPIS_1, CY_INSTANCE_SHORT_NAME=SPIS_1, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.2, INSTANCE_NAME=SPIS_1, )
 module SPI_Slave_v2_70_6 (
     mosi,
     sclk,
@@ -849,7 +849,7 @@ module SPI_Slave_v2_70_6 (
     output      miso_oe;
     input       reset;
 
-    parameter NumberOfDataBits = 8;
+    parameter NumberOfDataBits = 16;
     parameter ShiftDir = 0;
 
           wire  Net_177;
@@ -872,7 +872,7 @@ module SPI_Slave_v2_70_6 (
     defparam BSPIS.BidirectMode = 0;
     defparam BSPIS.ModeCPHA = 0;
     defparam BSPIS.ModePOL = 0;
-    defparam BSPIS.NumberOfDataBits = 8;
+    defparam BSPIS.NumberOfDataBits = 16;
     defparam BSPIS.ShiftDir = 0;
 
 
@@ -893,7 +893,7 @@ module SPI_Slave_v2_70_6 (
 		#(.id("14564dd8-9112-44f2-9b81-92a342e63ff4/426fcbe0-714d-4404-8fa8-581ff40c30f1"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("250000000"),
+		  .period("62500000"),
 		  .is_direct(0),
 		  .is_digital(1))
 		IntClock
@@ -907,9 +907,80 @@ module SPI_Slave_v2_70_6 (
 
 endmodule
 
+// Timer_v2_80(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=true, CaptureMode=1, CONTROL3=1, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=0, FF16=true, FF8=false, FixedFunction=true, FixedFunctionUsed=1, HWCaptureCounterEnabled=false, InterruptOnCapture=false, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=0, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=9999, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=0, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=false, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=0, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_80, CY_CONFIG_TITLE=Timer_2, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_2, CY_INSTANCE_SHORT_NAME=Timer_2, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=80, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.2, INSTANCE_NAME=Timer_2, )
+module Timer_v2_80_7 (
+    reset,
+    interrupt,
+    enable,
+    trigger,
+    capture,
+    capture_out,
+    tc,
+    clock);
+    input       reset;
+    output      interrupt;
+    input       enable;
+    input       trigger;
+    input       capture;
+    output      capture_out;
+    output      tc;
+    input       clock;
+
+    parameter CaptureCount = 2;
+    parameter CaptureCounterEnabled = 0;
+    parameter DeviceFamily = "PSoC5";
+    parameter InterruptOnCapture = 0;
+    parameter InterruptOnTC = 0;
+    parameter Resolution = 16;
+    parameter SiliconRevision = "0";
+
+          wire  Net_261;
+          wire  Net_260;
+          wire  Net_266;
+          wire  Net_102;
+          wire  Net_55;
+          wire  Net_57;
+          wire  Net_53;
+          wire  Net_51;
+
+    cy_psoc3_timer_v1_0 TimerHW (
+        .timer_reset(reset),
+        .capture(capture),
+        .enable(Net_266),
+        .kill(Net_260),
+        .clock(clock),
+        .tc(Net_51),
+        .compare(Net_261),
+        .interrupt(Net_57));
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_260));
+
+	// VirtualMux_2 (cy_virtualmux_v1_0)
+	assign interrupt = Net_57;
+
+	// VirtualMux_3 (cy_virtualmux_v1_0)
+	assign tc = Net_51;
+
+    OneTerminal OneTerminal_1 (
+        .o(Net_102));
+
+	// VirtualMux_1 (cy_virtualmux_v1_0)
+	assign Net_266 = Net_102;
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_3093;
+          wire  Net_3092;
+          wire  Net_3091;
+          wire  Net_3090;
+          wire  Net_3089;
+          wire  Net_3095;
           wire  Net_3085;
           wire  Net_3084;
           wire  Net_3083;
@@ -987,6 +1058,9 @@ module top ;
           wire  Net_1665;
           wire  Net_1679;
           wire  Net_1759;
+          wire  Net_3094;
+          wire  Net_3088;
+          wire  Net_3086;
           wire  Net_52;
           wire  Net_51;
           wire  Net_3079;
@@ -2351,7 +2425,7 @@ module top ;
         .rx_interrupt(Net_52),
         .miso_oe(Net_3084),
         .reset(1'b0));
-    defparam SPIS_1.NumberOfDataBits = 8;
+    defparam SPIS_1.NumberOfDataBits = 16;
     defparam SPIS_1.ShiftDir = 0;
 
 	wire [0:0] tmpOE__miso_1_net;
@@ -2657,6 +2731,45 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__ss_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_clock_v1_0
+		#(.id("d5125a1b-c4b0-4c0a-8600-a77ed406425c"),
+		  .source_clock_id(""),
+		  .divisor(0),
+		  .period("1000000000000"),
+		  .is_direct(0),
+		  .is_digital(1))
+		timer_clock_1
+		 (.clock_out(Net_3086));
+
+
+    ZeroTerminal ZeroTerminal_7 (
+        .z(Net_3088));
+
+    Timer_v2_80_7 Timer_2 (
+        .reset(Net_3088),
+        .interrupt(Net_3089),
+        .enable(1'b1),
+        .trigger(1'b1),
+        .capture(1'b0),
+        .capture_out(Net_3093),
+        .tc(Net_3094),
+        .clock(Net_3086));
+    defparam Timer_2.CaptureCount = 2;
+    defparam Timer_2.CaptureCounterEnabled = 0;
+    defparam Timer_2.DeviceFamily = "PSoC5";
+    defparam Timer_2.InterruptOnCapture = 0;
+    defparam Timer_2.InterruptOnTC = 0;
+    defparam Timer_2.Resolution = 16;
+    defparam Timer_2.SiliconRevision = "0";
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b00))
+		Tester
+		 (.int_signal(Net_3094));
+
 
 
 

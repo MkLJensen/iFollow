@@ -18,7 +18,8 @@
 extern "C"
 {
 #endif
-#include "project.h"
+    // PSoC include, this has to be wrapped
+    #include "project.h"
 #ifdef __cplusplus
 }
 #endif
@@ -29,8 +30,11 @@ extern "C"
 class MotorController 
 {
 public:
+   /*Constructor and destructor*/
    MotorController();
    ~MotorController();      
+    
+   /*Methods*/
    void GoForward(int pwm = 0);
    void GoBackward(int pwm = 0);
    void TurnLeft(int pwm = 0);
@@ -51,9 +55,11 @@ public:
    void setOldPower(void);
 
 private:
+    /*PRIVATE ATTRIBUTES*/
     int Leftpwm_ = 0, Rightpwm_ = 0;
     bool direction_ = FORWARD;
     int power_ = 0, oldpower_ = 0;
+    char oldDir_;
     
 };
 

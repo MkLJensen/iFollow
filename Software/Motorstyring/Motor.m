@@ -32,7 +32,7 @@ step(feedback(G1,1))
 % 1 sekund, hvilket svarer til 1Hz båndbredde. Derfor designes Kp til en
 % fasemargins frekvens der er 10 gange højere = 10 Hz. 
 
-Kp = 50;
+Kp = 6.16595;
 G1_Kp = G1*Kp;
 
 figure(3)
@@ -45,8 +45,8 @@ step(feedback(G1_Kp,1))
 %Design lead - pm skal hæves 50 deg;
 %50 deg = 0,872664626 rad!!
 
-rad = 0.872664626;
-w0 = 66;
+rad = 0.698131701;
+w0 = 15;
 Beta = (1-sin(rad))/(1+sin(rad));
 T=1/(w0*sqrt(Beta));
 kc = sqrt(Beta);
@@ -95,7 +95,7 @@ grid on
 
 
 %% fasemargins tab grundet Sample hold. 
-Ts = 0.002;
+Ts = 0.1;
 Gsh = exp(-s*Ts/2);
 
 margin(G1_Kp_GLead*Gsh)

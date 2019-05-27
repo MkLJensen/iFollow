@@ -203,9 +203,6 @@ void setup() {
 
 void loop() { 
   // read_dual_sensors();
-  read_three_ranges();
-  delay(100);
-
   read_three_ranges(); // Update global array sensorData
   SPI.beginTransaction(slaveSettings);
   digitalWrite (slavePin, LOW);

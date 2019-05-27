@@ -34,7 +34,7 @@ extern volatile uint8 SPIS_1_swStatusRx;
 
 #if (SPIS_1_RX_SOFTWARE_BUF_ENABLED)
 
-    extern volatile uint8 SPIS_1_rxBuffer[SPIS_1_RX_BUFFER_SIZE];
+    extern volatile uint16 SPIS_1_rxBuffer[SPIS_1_RX_BUFFER_SIZE];
     extern volatile uint8 SPIS_1_rxBufferRead;
     extern volatile uint8 SPIS_1_rxBufferWrite;
     extern volatile uint8 SPIS_1_rxBufferFull;
@@ -43,7 +43,7 @@ extern volatile uint8 SPIS_1_swStatusRx;
 
 #if (SPIS_1_TX_SOFTWARE_BUF_ENABLED)
 
-    extern volatile uint8 SPIS_1_txBuffer[SPIS_1_TX_BUFFER_SIZE];
+    extern volatile uint16 SPIS_1_txBuffer[SPIS_1_TX_BUFFER_SIZE];
     extern volatile uint8 SPIS_1_txBufferRead;
     extern volatile uint8 SPIS_1_txBufferWrite;
     extern volatile uint8 SPIS_1_txBufferFull;

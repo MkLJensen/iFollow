@@ -1,5 +1,5 @@
 # Projekt_PSoC_Kode
-# 2019-05-14 13:35:03Z
+# 2019-05-27 08:41:54Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -27,106 +27,109 @@ set_io "miso_1(0)" iocell 1 7
 set_io "mosi_1(0)" iocell 1 6
 set_io "sclk_1(0)" iocell 1 5
 set_io "ss(0)" iocell 1 4
-set_location "\PWM_1:PWMUDB:status_2\" 2 0 0 3
-set_location "\LED_PWM:PWMUDB:status_2\" 3 4 0 0
-set_location "Net_1781" 2 3 1 3
-set_location "\UART_1:BUART:counter_load_not\" 2 4 1 0
-set_location "\UART_1:BUART:tx_status_0\" 2 5 0 3
-set_location "\UART_1:BUART:tx_status_2\" 2 5 1 1
-set_location "\UART_1:BUART:rx_counter_load\" 3 3 0 0
-set_location "\UART_1:BUART:rx_postpoll\" 3 1 1 3
-set_location "\UART_1:BUART:rx_status_4\" 3 1 0 2
-set_location "\UART_1:BUART:rx_status_5\" 3 2 0 2
-set_location "\SPIS:BSPIS:tx_load\" 2 3 0 2
-set_location "\SPIS:BSPIS:byte_complete\" 2 4 1 2
-set_location "\SPIS:BSPIS:rx_buf_overrun\" 2 2 0 3
-set_location "\SPIS:BSPIS:mosi_buf_overrun\" 2 2 1 0
-set_location "\SPIS:BSPIS:tx_status_0\" 3 4 0 1
-set_location "\SPIS:BSPIS:rx_status_4\" 3 2 1 1
-set_location "\SPIS:BSPIS:mosi_to_dp\" 2 3 1 2
-set_location "\SPIS_1:BSPIS:inv_ss\" 1 3 0 2
-set_location "\SPIS_1:BSPIS:tx_load\" 0 3 1 3
-set_location "\SPIS_1:BSPIS:byte_complete\" 1 3 0 0
-set_location "\SPIS_1:BSPIS:rx_buf_overrun\" 2 2 0 2
-set_location "Net_3080" 2 1 0 3
-set_location "\SPIS_1:BSPIS:mosi_buf_overrun\" 1 3 0 3
-set_location "\SPIS_1:BSPIS:tx_status_0\" 2 4 0 3
-set_location "\SPIS_1:BSPIS:rx_status_4\" 2 3 0 1
-set_location "\SPIS_1:BSPIS:mosi_to_dp\" 1 3 1 0
-set_location "__ONE__" 2 1 1 1
+set_location "\PWM_1:PWMUDB:status_2\" 3 0 1 1
+set_location "\LED_PWM:PWMUDB:status_2\" 3 4 0 2
+set_location "Net_1781" 0 0 0 1
+set_location "\UART_1:BUART:counter_load_not\" 1 3 0 1
+set_location "\UART_1:BUART:tx_status_0\" 2 4 1 1
+set_location "\UART_1:BUART:tx_status_2\" 3 1 1 1
+set_location "\UART_1:BUART:rx_counter_load\" 1 3 1 1
+set_location "\UART_1:BUART:rx_postpoll\" 0 1 0 2
+set_location "\UART_1:BUART:rx_status_4\" 0 1 1 0
+set_location "\UART_1:BUART:rx_status_5\" 0 2 1 3
+set_location "\SPIS:BSPIS:tx_load\" 0 1 1 1
+set_location "\SPIS:BSPIS:byte_complete\" 0 3 0 2
+set_location "\SPIS:BSPIS:rx_buf_overrun\" 1 2 1 2
+set_location "\SPIS:BSPIS:mosi_buf_overrun\" 0 0 1 3
+set_location "\SPIS:BSPIS:tx_status_0\" 0 0 0 0
+set_location "\SPIS:BSPIS:rx_status_4\" 1 3 0 3
+set_location "\SPIS:BSPIS:mosi_to_dp\" 0 1 0 1
+set_location "\SPIS_1:BSPIS:inv_ss\" 2 4 0 1
+set_location "\SPIS_1:BSPIS:tx_load\" 2 0 0 2
+set_location "\SPIS_1:BSPIS:byte_complete\" 1 3 0 2
+set_location "\SPIS_1:BSPIS:rx_buf_overrun\" 1 1 1 0
+set_location "Net_3080" 0 0 0 3
+set_location "\SPIS_1:BSPIS:mosi_buf_overrun\" 2 0 0 3
+set_location "\SPIS_1:BSPIS:tx_status_0\" 1 2 0 3
+set_location "\SPIS_1:BSPIS:rx_status_4\" 1 1 0 1
+set_location "\SPIS_1:BSPIS:mosi_to_dp\" 2 0 0 0
+set_location "__ONE__" 2 2 0 3
 set_location "\PWM_1:PWMUDB:genblk1:ctrlreg\" 3 0 6
 set_location "\PWM_1:PWMUDB:genblk8:stsreg\" 3 0 4
 set_location "\PWM_1:PWMUDB:sP16:pwmdp:u0\" 2 0 2
 set_location "\PWM_1:PWMUDB:sP16:pwmdp:u1\" 3 0 2
-set_location "\LED_PWM:PWMUDB:genblk1:ctrlreg\" 3 5 6
-set_location "\LED_PWM:PWMUDB:genblk8:stsreg\" 3 5 4
-set_location "\LED_PWM:PWMUDB:sP8:pwmdp:u0\" 3 5 2
-set_location "\UART_1:RXInternalInterrupt\" interrupt -1 -1 4
-set_location "\UART_1:BUART:sTX:TxShifter:u0\" 2 5 2
-set_location "\UART_1:BUART:sTX:sCLOCK:TxBitClkGen\" 2 1 2
-set_location "\UART_1:BUART:sTX:TxSts\" 2 5 4
-set_location "\UART_1:BUART:sRX:RxShifter:u0\" 3 1 2
-set_location "\UART_1:BUART:sRX:RxBitCounter\" 3 1 7
-set_location "\UART_1:BUART:sRX:RxSts\" 2 0 4
+set_location "\LED_PWM:PWMUDB:genblk1:ctrlreg\" 3 4 6
+set_location "\LED_PWM:PWMUDB:genblk8:stsreg\" 3 4 4
+set_location "\LED_PWM:PWMUDB:sP8:pwmdp:u0\" 3 4 2
+set_location "\UART_1:RXInternalInterrupt\" interrupt -1 -1 5
+set_location "\UART_1:BUART:sTX:TxShifter:u0\" 2 1 2
+set_location "\UART_1:BUART:sTX:sCLOCK:TxBitClkGen\" 1 2 2
+set_location "\UART_1:BUART:sTX:TxSts\" 3 1 4
+set_location "\UART_1:BUART:sRX:RxShifter:u0\" 0 1 2
+set_location "\UART_1:BUART:sRX:RxBitCounter\" 1 2 7
+set_location "\UART_1:BUART:sRX:RxSts\" 0 2 4
 set_location "Power_isr" interrupt -1 -1 2
 set_location "Follow_isr" interrupt -1 -1 0
-set_location "\SPIS:BSPIS:sync_1\" 3 3 5 2
-set_location "\SPIS:BSPIS:sync_2\" 3 3 5 0
-set_location "\SPIS:BSPIS:sync_3\" 3 3 5 3
-set_location "\SPIS:BSPIS:sync_4\" 3 3 5 1
-set_location "\SPIS:BSPIS:BitCounter\" 2 2 7
-set_location "\SPIS:BSPIS:TxStsReg\" 3 4 4
-set_location "\SPIS:BSPIS:RxStsReg\" 3 2 4
-set_location "\SPIS:BSPIS:sR8:Dp:u0\" 2 4 2
+set_location "\SPIS:BSPIS:sync_1\" 0 3 5 0
+set_location "\SPIS:BSPIS:sync_2\" 1 0 5 0
+set_location "\SPIS:BSPIS:sync_3\" 1 0 5 2
+set_location "\SPIS:BSPIS:sync_4\" 1 0 5 1
+set_location "\SPIS:BSPIS:BitCounter\" 0 1 7
+set_location "\SPIS:BSPIS:TxStsReg\" 0 0 4
+set_location "\SPIS:BSPIS:RxStsReg\" 1 3 4
+set_location "\SPIS:BSPIS:sR8:Dp:u0\" 0 3 2
 set_location "\Timer_1:TimerHW\" timercell -1 -1 0
 set_location "Motor_timer_isr" interrupt -1 -1 1
 set_location "\I2C_1:I2C_IRQ\" interrupt -1 -1 15
 set_location "\I2C_1:I2C_FF\" i2ccell -1 -1 0
-set_location "\SPIS_1:BSPIS:sync_1\" 0 3 5 0
-set_location "\SPIS_1:BSPIS:sync_2\" 2 3 5 2
-set_location "\SPIS_1:BSPIS:sync_3\" 2 3 5 1
-set_location "\SPIS_1:BSPIS:sync_4\" 2 3 5 0
-set_location "\SPIS_1:BSPIS:BitCounter\" 1 3 7
+set_location "\SPIS_1:BSPIS:sync_1\" 2 1 5 2
+set_location "\SPIS_1:BSPIS:sync_2\" 2 1 5 3
+set_location "\SPIS_1:BSPIS:sync_3\" 2 1 5 1
+set_location "\SPIS_1:BSPIS:sync_4\" 2 1 5 0
+set_location "\SPIS_1:BSPIS:BitCounter\" 2 0 7
 set_location "\SPIS_1:BSPIS:TxStsReg\" 2 4 4
-set_location "\SPIS_1:BSPIS:RxStsReg\" 2 1 4
-set_location "\SPIS_1:BSPIS:sR8:Dp:u0\" 1 3 2
-set_location "\SPIS_1:RxInternalInterrupt\" interrupt -1 -1 3
-set_location "isr_1" interrupt -1 -1 5
-set_location "\PWM_1:PWMUDB:runmode_enable\" 3 0 0 0
-set_location "\PWM_1:PWMUDB:prevCompare1\" 2 0 0 0
-set_location "\PWM_1:PWMUDB:prevCompare2\" 2 0 0 2
-set_location "\PWM_1:PWMUDB:status_0\" 2 0 0 1
-set_location "\PWM_1:PWMUDB:status_1\" 3 0 0 1
-set_location "Net_1679" 3 0 0 3
-set_location "Net_1665" 3 0 0 2
-set_location "\LED_PWM:PWMUDB:runmode_enable\" 3 4 1 2
-set_location "\LED_PWM:PWMUDB:prevCompare1\" 3 5 0 1
-set_location "\LED_PWM:PWMUDB:prevCompare2\" 2 3 1 1
-set_location "\LED_PWM:PWMUDB:status_0\" 3 5 0 2
-set_location "\LED_PWM:PWMUDB:status_1\" 3 4 1 1
-set_location "Net_1862" 3 4 1 0
-set_location "Net_1903" 3 3 1 2
-set_location "\UART_1:BUART:txn\" 2 5 1 3
-set_location "\UART_1:BUART:tx_state_1\" 2 2 0 0
-set_location "\UART_1:BUART:tx_state_0\" 3 3 0 3
-set_location "\UART_1:BUART:tx_state_2\" 2 5 0 1
-set_location "\UART_1:BUART:tx_bitclk\" 3 5 1 0
-set_location "\UART_1:BUART:tx_ctrl_mark_last\" 3 4 0 2
-set_location "\UART_1:BUART:rx_state_0\" 3 2 1 0
-set_location "\UART_1:BUART:rx_load_fifo\" 3 1 1 1
-set_location "\UART_1:BUART:rx_state_3\" 3 2 1 3
-set_location "\UART_1:BUART:rx_state_2\" 3 1 1 0
-set_location "\UART_1:BUART:rx_bitclk_enable\" 3 1 0 1
-set_location "\UART_1:BUART:rx_state_stop1_reg\" 3 2 1 2
-set_location "\UART_1:BUART:pollcount_1\" 3 0 1 2
-set_location "\UART_1:BUART:pollcount_0\" 3 0 1 0
-set_location "\UART_1:BUART:rx_status_3\" 3 0 1 3
-set_location "\UART_1:BUART:rx_last\" 3 0 1 1
-set_location "Net_2917" 2 4 0 1
-set_location "Net_2908" 1 3 1 2
-set_location "\SPIS:BSPIS:dpcounter_one_reg\" 2 3 0 0
-set_location "\SPIS:BSPIS:mosi_buf_overrun_fin\" 2 2 1 3
-set_location "\SPIS:BSPIS:mosi_tmp\" 2 4 1 1
-set_location "\SPIS_1:BSPIS:dpcounter_one_reg\" 0 3 1 2
-set_location "\SPIS_1:BSPIS:mosi_buf_overrun_fin\" 2 1 0 1
-set_location "\SPIS_1:BSPIS:mosi_tmp\" 1 3 0 1
+set_location "\SPIS_1:BSPIS:RxStsReg\" 1 1 4
+set_location "\SPIS_1:BSPIS:sR16:Dp:u0\" 0 0 2
+set_location "\SPIS_1:BSPIS:sR16:Dp:u1\" 1 0 2
+set_location "\SPIS_1:RxInternalInterrupt\" interrupt -1 -1 4
+set_location "isr_1" interrupt -1 -1 6
+set_location "\Timer_2:TimerHW\" timercell -1 -1 1
+set_location "Tester" interrupt -1 -1 3
+set_location "\PWM_1:PWMUDB:runmode_enable\" 3 1 1 3
+set_location "\PWM_1:PWMUDB:prevCompare1\" 3 0 1 0
+set_location "\PWM_1:PWMUDB:prevCompare2\" 3 0 1 2
+set_location "\PWM_1:PWMUDB:status_0\" 3 0 1 3
+set_location "\PWM_1:PWMUDB:status_1\" 3 0 0 0
+set_location "Net_1679" 3 0 0 1
+set_location "Net_1665" 3 1 1 2
+set_location "\LED_PWM:PWMUDB:runmode_enable\" 3 4 0 1
+set_location "\LED_PWM:PWMUDB:prevCompare1\" 3 4 1 2
+set_location "\LED_PWM:PWMUDB:prevCompare2\" 3 4 0 3
+set_location "\LED_PWM:PWMUDB:status_0\" 3 4 1 3
+set_location "\LED_PWM:PWMUDB:status_1\" 3 4 1 0
+set_location "Net_1862" 3 4 1 1
+set_location "Net_1903" 3 4 0 0
+set_location "\UART_1:BUART:txn\" 2 1 0 0
+set_location "\UART_1:BUART:tx_state_1\" 2 1 0 1
+set_location "\UART_1:BUART:tx_state_0\" 1 2 1 3
+set_location "\UART_1:BUART:tx_state_2\" 2 4 0 3
+set_location "\UART_1:BUART:tx_bitclk\" 1 1 0 0
+set_location "\UART_1:BUART:tx_ctrl_mark_last\" 1 1 0 2
+set_location "\UART_1:BUART:rx_state_0\" 2 1 1 0
+set_location "\UART_1:BUART:rx_load_fifo\" 0 3 0 3
+set_location "\UART_1:BUART:rx_state_3\" 2 1 1 2
+set_location "\UART_1:BUART:rx_state_2\" 0 2 0 0
+set_location "\UART_1:BUART:rx_bitclk_enable\" 1 2 0 2
+set_location "\UART_1:BUART:rx_state_stop1_reg\" 0 3 0 0
+set_location "\UART_1:BUART:pollcount_1\" 0 0 1 2
+set_location "\UART_1:BUART:pollcount_0\" 0 0 1 1
+set_location "\UART_1:BUART:rx_status_3\" 0 2 0 2
+set_location "\UART_1:BUART:rx_last\" 0 0 1 0
+set_location "Net_2917" 2 0 1 3
+set_location "Net_2908" 2 4 1 0
+set_location "\SPIS:BSPIS:dpcounter_one_reg\" 0 1 0 0
+set_location "\SPIS:BSPIS:mosi_buf_overrun_fin\" 1 0 0 2
+set_location "\SPIS:BSPIS:mosi_tmp\" 0 3 1 0
+set_location "\SPIS_1:BSPIS:dpcounter_one_reg\" 1 3 1 0
+set_location "\SPIS_1:BSPIS:mosi_buf_overrun_fin\" 1 3 1 2
+set_location "\SPIS_1:BSPIS:mosi_tmp\" 2 0 0 1

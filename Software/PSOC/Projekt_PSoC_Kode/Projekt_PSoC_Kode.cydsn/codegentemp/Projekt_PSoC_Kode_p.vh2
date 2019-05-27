@@ -1,5 +1,5 @@
 -- Project:   Projekt_PSoC_Kode
--- Generated: 05/14/2019 15:35:01
+-- Generated: 05/27/2019 10:41:52
 -- PSoC Creator  4.2
 
 ENTITY Projekt_PSoC_Kode IS
@@ -82,6 +82,10 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     SIGNAL Net_3079 : bit;
     ATTRIBUTE udbclken_assigned OF Net_3079 : SIGNAL IS "False";
     SIGNAL Net_3080 : bit;
+    SIGNAL Net_3086 : bit;
+    ATTRIBUTE global_signal OF Net_3086 : SIGNAL IS true;
+    SIGNAL Net_3086_local : bit;
+    SIGNAL Net_3094 : bit;
     SIGNAL Net_51 : bit;
     SIGNAL Net_52 : bit;
     SIGNAL Net_8 : bit;
@@ -128,6 +132,7 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     SIGNAL \PWM_1:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_1:PWMUDB:prevCompare2\ : bit;
     SIGNAL \PWM_1:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.ce0__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:status_0\ : bit;
     SIGNAL \PWM_1:PWMUDB:status_1\ : bit;
     SIGNAL \PWM_1:PWMUDB:status_2\ : bit;
@@ -195,6 +200,8 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     SIGNAL \SPIS_1:Net_81_local\ : bit;
     SIGNAL \Timer_1:Net_261\ : bit;
     SIGNAL \Timer_1:Net_57\ : bit;
+    SIGNAL \Timer_2:Net_261\ : bit;
+    SIGNAL \Timer_2:Net_57\ : bit;
     SIGNAL \UART_1:BUART:counter_load_not\ : bit;
     SIGNAL \UART_1:BUART:pollcount_0\ : bit;
     SIGNAL \UART_1:BUART:pollcount_1\ : bit;
@@ -254,6 +261,7 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     SIGNAL \ClockBlock.clk_bus_glb_ff__sig\ : bit;
     SIGNAL \ClockBlock.dclk_glb_ff_3__sig\ : bit;
+    SIGNAL \ClockBlock.dclk_glb_ff_5__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
@@ -267,6 +275,18 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
     SIGNAL \PWM_1:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.cl0__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.z0__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.ff0__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.ce1__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.cl1__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.z1__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.ff1__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.co_msb__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.sol_msb__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u0.cfbo__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u1.sor__sig\ : bit;
+    SIGNAL \SPIS_1:BSPIS:sR16:Dp:u1.cmsbo__sig\ : bit;
     ATTRIBUTE lib_model OF MotorPWM_1_BRUN(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF MotorPWM_1_BRUN(0) : LABEL IS "P3[0]";
     ATTRIBUTE lib_model OF Forward_ORANGE(0) : LABEL IS "iocell2";
@@ -349,7 +369,8 @@ ARCHITECTURE __DEFAULT__ OF Projekt_PSoC_Kode IS
     ATTRIBUTE lib_model OF \SPIS:BSPIS:sR8:Dp:u0\ : LABEL IS "datapathcell7";
     ATTRIBUTE lib_model OF \SPIS_1:BSPIS:TxStsReg\ : LABEL IS "statusicell7";
     ATTRIBUTE lib_model OF \SPIS_1:BSPIS:RxStsReg\ : LABEL IS "statusicell8";
-    ATTRIBUTE lib_model OF \SPIS_1:BSPIS:sR8:Dp:u0\ : LABEL IS "datapathcell8";
+    ATTRIBUTE lib_model OF \SPIS_1:BSPIS:sR16:Dp:u0\ : LABEL IS "datapathcell8";
+    ATTRIBUTE lib_model OF \SPIS_1:BSPIS:sR16:Dp:u1\ : LABEL IS "datapathcell9";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell28";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare1\ : LABEL IS "macrocell29";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare2\ : LABEL IS "macrocell30";
@@ -771,10 +792,13 @@ BEGIN
             dclk_3 => Net_10_local,
             dclk_glb_4 => Net_1926,
             dclk_4 => Net_1926_local,
-            dclk_glb_5 => Net_2899,
-            dclk_5 => Net_2899_local,
+            dclk_glb_5 => Net_3086,
+            dclk_5 => Net_3086_local,
+            dclk_glb_6 => Net_2899,
+            dclk_6 => Net_2899_local,
             clk_bus_glb_ff => \ClockBlock.clk_bus_glb_ff__sig\,
-            dclk_glb_ff_3 => \ClockBlock.dclk_glb_ff_3__sig\);
+            dclk_glb_ff_3 => \ClockBlock.dclk_glb_ff_3__sig\,
+            dclk_glb_ff_5 => \ClockBlock.dclk_glb_ff_5__sig\);
 
     MotorPWM_1_BRUN:logicalport
         GENERIC MAP(
@@ -3425,7 +3449,7 @@ BEGIN
         GENERIC MAP(
             cy_alt_mode => 0,
             cy_init_value => "0000000",
-            cy_period => "0000111",
+            cy_period => "0001111",
             cy_route_en => 1,
             cy_route_ld => 0,
             clk_inv => '1',
@@ -3479,7 +3503,7 @@ BEGIN
             status_0 => open,
             interrupt => Net_52);
 
-    \SPIS_1:BSPIS:sR8:Dp:u0\:datapathcell
+    \SPIS_1:BSPIS:sR16:Dp:u0\:datapathcell
         GENERIC MAP(
             a0_init => "00000000",
             a1_init => "00000000",
@@ -3489,7 +3513,55 @@ BEGIN
             cl1_sync => 1,
             cmsb_sync => 1,
             co_msb_sync => 1,
-            cy_dpconfig => "0000000000000000000000000000000000000000000000000000000000000000000000010100000000000001110000000000000000000000000000000000000011111111111111111111111111111111000000000010001000001100111100000001000010001100",
+            cy_dpconfig => "0000000000000000000000000000000000000000000000000000000000000000000000010100000000000001110000000000000000000000000000000000000011111111000000001111111111111111000000000000001000001100011100000001000010001100",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '1',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_3079,
+            cs_addr_2 => \SPIS_1:BSPIS:inv_ss\,
+            cs_addr_0 => \SPIS_1:BSPIS:tx_load\,
+            route_si => \SPIS_1:BSPIS:mosi_to_dp\,
+            f1_load => \SPIS_1:BSPIS:tx_load\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \SPIS_1:BSPIS:sR16:Dp:u0.ce0__sig\,
+            cl0 => \SPIS_1:BSPIS:sR16:Dp:u0.cl0__sig\,
+            z0 => \SPIS_1:BSPIS:sR16:Dp:u0.z0__sig\,
+            ff0 => \SPIS_1:BSPIS:sR16:Dp:u0.ff0__sig\,
+            ce1 => \SPIS_1:BSPIS:sR16:Dp:u0.ce1__sig\,
+            cl1 => \SPIS_1:BSPIS:sR16:Dp:u0.cl1__sig\,
+            z1 => \SPIS_1:BSPIS:sR16:Dp:u0.z1__sig\,
+            ff1 => \SPIS_1:BSPIS:sR16:Dp:u0.ff1__sig\,
+            co_msb => \SPIS_1:BSPIS:sR16:Dp:u0.co_msb__sig\,
+            sol_msb => \SPIS_1:BSPIS:sR16:Dp:u0.sol_msb__sig\,
+            cfbo => \SPIS_1:BSPIS:sR16:Dp:u0.cfbo__sig\,
+            sil => \SPIS_1:BSPIS:sR16:Dp:u1.sor__sig\,
+            cmsbi => \SPIS_1:BSPIS:sR16:Dp:u1.cmsbo__sig\);
+
+    \SPIS_1:BSPIS:sR16:Dp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000000000000000000000000000000000000000000000000000000000000000000010100000000000001110000000000000000000000000000000000000011111111000000001111111111111111000000000010001100001100111100000001000010001100",
             d0_init => "00000000",
             d1_init => "00000000",
             f0_blk_sync => 1,
@@ -3517,7 +3589,20 @@ BEGIN
             f0_blk_stat_comb => \SPIS_1:BSPIS:dpMISO_fifo_empty\,
             f1_bus_stat_comb => \SPIS_1:BSPIS:dpMOSI_fifo_not_empty\,
             f1_blk_stat_comb => \SPIS_1:BSPIS:dpMOSI_fifo_full\,
-            busclk => ClockBlock_BUS_CLK);
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \SPIS_1:BSPIS:sR16:Dp:u0.ce0__sig\,
+            cl0i => \SPIS_1:BSPIS:sR16:Dp:u0.cl0__sig\,
+            z0i => \SPIS_1:BSPIS:sR16:Dp:u0.z0__sig\,
+            ff0i => \SPIS_1:BSPIS:sR16:Dp:u0.ff0__sig\,
+            ce1i => \SPIS_1:BSPIS:sR16:Dp:u0.ce1__sig\,
+            cl1i => \SPIS_1:BSPIS:sR16:Dp:u0.cl1__sig\,
+            z1i => \SPIS_1:BSPIS:sR16:Dp:u0.z1__sig\,
+            ff1i => \SPIS_1:BSPIS:sR16:Dp:u0.ff1__sig\,
+            ci => \SPIS_1:BSPIS:sR16:Dp:u0.co_msb__sig\,
+            sir => \SPIS_1:BSPIS:sR16:Dp:u0.sol_msb__sig\,
+            cfbi => \SPIS_1:BSPIS:sR16:Dp:u0.cfbo__sig\,
+            sor => \SPIS_1:BSPIS:sR16:Dp:u1.sor__sig\,
+            cmsbo => \SPIS_1:BSPIS:sR16:Dp:u1.cmsbo__sig\);
 
     \SPIS_1:RxInternalInterrupt\:interrupt
         GENERIC MAP(
@@ -3533,6 +3618,27 @@ BEGIN
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_52,
+            clock => ClockBlock_BUS_CLK);
+
+    \Timer_2:TimerHW\:timercell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => \ClockBlock.dclk_glb_ff_5__sig\,
+            kill => open,
+            enable => __ONE__,
+            capture => open,
+            timer_reset => open,
+            tc => Net_3094,
+            cmp => \Timer_2:Net_261\,
+            irq => \Timer_2:Net_57\);
+
+    Tester:interrupt
+        GENERIC MAP(
+            int_type => "00",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_3094,
             clock => ClockBlock_BUS_CLK);
 
     \PWM_1:PWMUDB:runmode_enable\:macrocell

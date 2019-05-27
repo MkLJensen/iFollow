@@ -15,6 +15,7 @@
 #include "RpiSPI.h"
 
 extern uint8_t Mode;
+extern uint8_t oldMode;
 enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4, Fallen = 5};
 
 RpiSPI::RpiSPI(Gyro * Gyro, MotorController * Motor)
@@ -41,18 +42,25 @@ uint8_t RpiSPI::ReadData()
     {
         uint8_t byteReceived = SPIS_ReadRxData();
         
-        GyroState_ = GyroPtr_->hasFallen();
-        if (GyroState_ == 1)
+        if (GyroPtr_->hasFallen() == 1)        //Check if fallen
         {
-            Mode = Fallen;
-            TransmitData(Fallen);
+            if (Mode != Fallen)
+            {
+                oldMode = Mode;                     //Save old mode
+            }
+            Mode = Fallen;                          //Set mode to fallen
+            TransmitData(Mode);       //transmit mode
         }
-        else
+        if (GyroPtr_->hasFallen() == 0 && Mode == Fallen)        //Check if not fallen
         {
-            Mode = Control;
-            TransmitData(Mode);
+            Mode = oldMode;                         //Reset mode
+            TransmitData(Mode);       //Transmit mode
         }
-        
+        else  
+        {
+            TransmitData(Mode);       //Transmit mode
+        }
+               
         return handleByteReceived(byteReceived);
     }
     return 0;
@@ -65,7 +73,7 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived)
     {
         case 'f' :
         {
-            if (ControlModeActive == true)
+            if (ControlModeActive == true && Mode == Control)
             {
                 MotorPtr_->Control(byteReceived);
             }
@@ -74,7 +82,7 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived)
         break;
         case 'b' :
         {  
-            if (ControlModeActive == true)
+            if (ControlModeActive == true && Mode == Control)
             {
                 MotorPtr_->Control(byteReceived);
             }
@@ -83,7 +91,7 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived)
         break;
         case 'l' :
         {
-            if (ControlModeActive == true)
+            if (ControlModeActive == true && Mode == Control)
             {
                 MotorPtr_->Control(byteReceived);
             }
@@ -92,7 +100,7 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived)
         break;
         case 'r' :
         {
-            if (ControlModeActive == true)
+            if (ControlModeActive == true && Mode == Control)
             {
                 MotorPtr_->Control(byteReceived);
             }
@@ -108,6 +116,7 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived)
          case 'c' :
         {
             ControlModeActive = false;
+            MotorPtr_->GoForward(0);
             return 'c';
         }
         break;        
@@ -118,4 +127,3 @@ uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived)
         break;
     }
 }
-

@@ -117,6 +117,13 @@
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\ss_aliases.h" value="HEADER;;;;;ss" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\ss.c" value="SOURCE_C;CortexM3;;;;ss" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\ss.h" value="HEADER;;;;;ss" />
+  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\timer_clock_1.c" value="SOURCE_C;CortexM3;;;;timer_clock_1" />
+  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\timer_clock_1.h" value="HEADER;;;;;timer_clock_1" />
+  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\Timer_2.c" value="SOURCE_C;CortexM3;;;;Timer_2" />
+  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\Timer_2.h" value="HEADER;;;;;Timer_2" />
+  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\Timer_2_PM.c" value="SOURCE_C;CortexM3;;;;Timer_2" />
+  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\Tester.c" value="SOURCE_C;CortexM3;;;;Tester" />
+  <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\Tester.h" value="HEADER;;;;;Tester" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\UART_1_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_1_IntClock" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\UART_1_IntClock.h" value="HEADER;;;;;UART_1_IntClock" />
   <file name="C:\Users\jespe\Desktop\GIT\iFollow\Software\PSOC\Projekt_PSoC_Kode\Projekt_PSoC_Kode.cydsn\codegentemp\SPIS_IntClock.c" value="SOURCE_C;CortexM3;;;;SPIS_IntClock" />
