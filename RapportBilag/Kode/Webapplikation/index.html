@@ -1,0 +1,565 @@
+<html>
+	<head>
+		<title>iFollow</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=Aqh7_Rmh7zsYgkI0lrr8CEe6aYz3BCH0bieH5fSjYZbqeO9VTxkdvGenGKQCa99L&callback=loadMapScenario'></script> <!--Bing maps API key-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>	<!--Socket.io library-->	
+		<style>
+		* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	background-color: #24272E;
+	padding: 20px;
+}
+
+header > span {
+	color: #afd9cd;
+	text-align: left;
+	margin: 0 15px; 				/*15px on both sides of spans*/
+	font-size: 25px; 				/*Deafault font size of spans (title)*/
+	font-family:'Segoe UI',Helvetica,Arial,Sans-Serif;
+}
+
+/*********** CSS STYLING OF GUI **********/
+
+.tab { 								/*DEFAULT LAYOUT FOR HEADER BUTTONS*/
+	background: #24272E; 			/*Default color button background*/
+	padding: 4px 10px;				/*Sizes button after text size with 4px top-buttom and 10px left-right padding*/
+	border: 2px solid #afd9cd; 		/*Thickness and color of button border*/
+	border-radius: 3px;				/*Make corners of button rounded*/
+	text-align: center;
+	color: #afd9cd; 				/*Text color*/
+	font-size: 18px;
+	font-family:'Segoe UI',Helvetica,Arial,Sans-Serif;
+	position: relative;
+	transition: all 0.3s ease; 		/*Make appearance changes transistion over 0.3s*/
+	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /*Default weak shadow*/
+}
+
+.tab:hover { 						/*LAYOUT FOR MOUSE-HOVER OVER HEADER BUTTONS*/
+	cursor:	 pointer; 				/*Changes cursor appearence*/
+	background: #3b3f4a; 			/*Makes button background lighter*/
+	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.69), 0 10px 25px 0 rgba(0,0,0,0.19); /*Makes dropshadow stronger*/
+}
+
+.controls {							/*DEFAULT LAYOUT FOR HEADER BUTTONS*/
+	border: 2px solid #afd9cd;
+	border-radius: 3px;
+	background: #32353d;
+	width: 400px;					/*Fixed width*/
+	height: 150px;					/*Fixed height*/
+	margin-top: 35px;				/*35px margin under header*/
+	margin-left: 35px;				/*35px margin from left side*/
+	text-align: left;				/*Aligns "control panel" text*/
+	color: #afd9cd;
+	font-size: 18px;
+	font-family:'Segoe UI',Helvetica,Arial,Sans-Serif;
+	position: absolute;
+	z-index: 1;						/*Layer on top of map*/
+	display: none;					/*Hide control panel as default*/
+}
+
+.statusWindow {						/*LAYOUT FOR STATUS WINDOW*/
+	border: 2px solid #afd9cd;
+	border-radius: 3px;
+	background: #32353d;
+	width: 250px;
+	height: 120px;
+	bottom: 45px;					/*Makes margin to bottom*/
+	right: 30px;					/*Makes margin to right*/
+	color: #afd9cd;
+	font-size: 18px;
+	font-family:'Segoe UI',Helvetica,Arial,Sans-Serif;
+	position: absolute;
+	z-index: 1;
+	display: none;					/*Hide status window default/on-load*/
+}
+
+.statusInfo{						/*LAYOUT FOR STATUS INFO*/
+	padding-left: 15px;				/*Padding for status window text elements*/
+}
+
+#myMap {							/*DEFAULT LAYOUT FOR MAP*/
+	width: 100%;					/*Size map width to full width of window*/
+	height: calc(100% - 73px); 		/*Resize height of map to fit under header*/
+	z-index: 0; 					/*Put map on buttom layer*/
+}
+
+.windowText{						/*LAYOUT FOR WINDOW TEXT*/
+	padding: 15px;					/*15px padding on all edges*/
+	text-shadow: 2px 2px 2px #101010;
+}
+
+.title{ /*Styling of iFollow title text*/
+	color: #afd9cd;
+	text-shadow: 2px 3px 2px #101010;
+}
+
+.dirBtn{							/*DEFAULT LAYOUT DIRECTION BUTTONS (same as tab buttons)*/
+	width: 100px;
+	height: 50px;
+	border: 2px solid #afd9cd;
+	border-radius: 3px;
+	text-align: center;
+	background: #24272E;
+	padding: 10px;
+	transition: all 0.3s ease;
+	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+
+}
+
+.dirBtn:hover {						/*ON MOUSE HOVER LAYOUT DIRECTION BUTTONS (same as tab buttons)*/
+	background: #3b3f4a;
+	cursor: pointer;
+	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.69), 0 10px 25px 0 rgba(0,0,0,0.19);
+}
+
+#Forward {							/*FORWARD BUTTON LAYOUT*/
+	position: absolute;
+	left: 150px;					/*Centered in control panel window*/
+	top: 10px;						/*in top of control panel window*/
+}
+
+#Backwards {						/*BACKWARDS BUTTON LAYOUT*/
+	position: absolute;				
+	left: 150px;					
+	top: 80px;						/*centered under forward button*/
+}
+
+#Left {								/*LEFT BUTTON LAYOUT*/
+	position: absolute;
+	left: 20px;						/*20px from left side of control panel*/
+	top: 80px;						/*Same height as backwards button*/
+}
+
+#Right {							/*RIGHT BUTTON LAYOUT*/
+	position: absolute;
+	right: 20px;					/*20px from right side of control panel*/
+	top: 80px;						/*Same height as backwards button*/
+}
+		</style>
+		
+	</head>
+
+	<body>
+		<header> 									<!-- TOP MENU BAR -->
+			<span id="iFollow" class="title">iFollow</span> 				<!-- Title of application -->
+			<span id="controlPanel" class="tab">Control iFollow</span> 		<!-- Tab/button for control panel -->
+			<span id="viewStatus" class="tab">View status</span> 			<!-- Tab/button for view status -->
+		</header>
+
+		<div id="controls" class="controls"> 		<!-- CONTROL PANEL WINDOW -->
+			<div id="CPtext" class="windowText">Control panel</div> 		<!-- window text -->
+			<div id="forward" class="dirBtn">Forward</div>					<!-- direction buttons inside control panel -->
+			<div id="left" class="dirBtn">Left</div>
+			<div id="right" class="dirBtn">Right</div>
+			<div id="backwards" class="dirBtn">Backwards</div>
+		</div>
+
+		<div id="status" class="statusWindow"> 		<!-- STATUS WINDOW -->
+			<div id="statusText" class="windowText">Status</div> 			<!-- window text -->
+			<div id="statusInfo" class="statusInfo">iFollow status: </div>	<!-- text element for status -->
+			<div id="runtimeInfo" class="statusInfo">Runtime: </div>		<!-- text element for system runtime -->
+		</div>
+
+		<div id="myMap"></div> <!-- MAP -->
+
+		<script type='text/javascript'>
+		/***************************************************
+		*		     MAIN CALLS		           *
+		****************************************************/
+		/**** Global variables *****/
+		var map;				// Global map object
+		var map_loaded = false;	// Global map_loaded boolean
+		var socket = io(); 		// Load socket.io-client and connect to the host that serves the page
+		var mousedown = false;	// Global mouse-down boolean
+
+		/* Add eventlistener on window load */
+		window.addEventListener("load", function(){ //when page loads
+			/* Initalize/Hook events */
+			initWebsite();
+		});
+
+		/***************************************************
+		*		     FUNCTIONS		           				*
+		****************************************************/
+		/***************************************************
+		* For initalizing the neccesary hooks on website.
+		* @param void
+		* @return void
+		****************************************************/
+		function initWebsite()
+		{
+			/* Hook all keyboard,button and socket events */
+			hookEvents();
+			hookSocketEvents();
+		}
+
+		/***************************************************
+		* Eventhandler for mouseDown-events, emits direction
+		* to server.
+		* @param <desired direction>
+		* @return void
+		****************************************************/
+		function mouseDown(direction){ // Continuously controls motor if mouseclick is holding down a direction button
+				if(mousedown)
+				{
+					switch(direction){
+						case 1:
+							socket.emit('motor-controls', 1); // Control motor forward
+							break;
+						case 2:
+							socket.emit('motor-controls', 2); // Control motor backwards
+							break;
+						case 3:
+							socket.emit('motor-controls', 3); // Control motor left
+							break;
+						case 4:
+							socket.emit('motor-controls', 4); // Control motor right
+							break;
+						default:
+							console.log("Not defined");
+
+					}
+				setTimeout(mouseDown,100,direction); // Calls itself after 100ms to check again for mouseclick
+				}
+			}
+
+		/***************************************************
+		* Callback function for when map is loaded on website.
+		* @param void
+		* @return void
+		****************************************************/
+		function loadMapScenario() {
+			map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+				zoom: 19, 										// Sets default zoom on map
+				mapTypeId: Microsoft.Maps.MapTypeId.aerial		// Sets 'aerial as default mapping option
+			});
+			map_loaded = true;
+		};
+
+		/***************************************************
+		* For testing various functions, creates 10 randomly
+		* located pushpins
+		* @param void
+		* @return <Array of random locations>
+		****************************************************/
+		function getRandomLocation() /*For test purposes - creates 10 randomly located pushpins*/
+		{
+			var locationArray = new Array();
+			for(var i=0; i<10; i++){
+					locationArray.push(map.getCenter());
+					locationArray[i].latitude = Math.random()+locationArray[i].latitude;
+					locationArray[i].longitude = Math.random()+locationArray[i].longitude;
+				}
+			return locationArray;
+		}
+
+		/***************************************************
+		* Used for calculating the angle between 2 locations,
+		* used for orientation of pinpoint on map.
+		* @param <First position with latitude and longitude><Second position with latitude and longitude>
+		* @return <Resulting angle>
+		****************************************************/
+		function getAngleLatLon(p1,p2){ // Calculates angle between 2 locations from latitude and longitude
+			var delta_x = (p2.longitude-p1.longitude);
+			var delta_y = (p2.latitude-p1.latitude);
+			var res_angle = 90-(Math.atan2(delta_y,delta_x))*180/Math.PI; // Formatted to match 'heading' argument in pushpin-functions
+			return res_angle;
+		}
+
+		/***************************************************
+		* Used for adding pushpins to map, from Position-array.
+		* @param <Array of positions>
+		* @return void
+		****************************************************/
+		function addPushpin(locArray)
+		{
+			if (locArray.length == 0) return 0;
+		
+				
+			for(var i=0; i<locArray.length-1; i++){ // Add circle pushpins to all locations except last in array
+				var pushpin = new Microsoft.Maps.Pushpin(locArray[i],{
+					icon: createCircle(),
+					anchor: new Microsoft.Maps.Point(6,6)
+				});
+				map.entities.push(pushpin);
+			
+			
+			}
+
+			var pushpin = new Microsoft.Maps.Pushpin(locArray[locArray.length-1],{ // Add red arrow pushpin for last location in array
+				icon: createRedArrow(getAngleLatLon(locArray[locArray.length-2],
+													locArray[locArray.length-1])),
+				anchor: new Microsoft.Maps.Point(12,12)
+				})
+
+			map.entities.push(pushpin);
+			var polyline = new Microsoft.Maps.Polyline(locArray,null); // Creates polylines connecting locations
+			map.entities.push(polyline);
+			
+			map.setView({ // Changes map centering to match last location of array
+				center: new Microsoft.Maps.Location(locArray[locArray.length-1].latitude, locArray[locArray.length-1].longitude)
+			});
+		}
+
+		/***************************************************
+		* Clears all pushpins from global map.
+		* @param void
+		* @return void
+		****************************************************/
+		function clearPushpins(){ // For test purposes - clears pushpins, polylines etc.
+			map.entities.clear();
+		}
+
+		/***************************************************
+		* For hooking custom socket events - used for signaling to server
+		* @param <Direction of arrow>
+		* @return <Red arrow base64 image URL>
+		*
+		* CREDIT TO: https://docs.microsoft.com/en-us/bingmaps/v8-web-control/map-control-concepts/pushpins/custom-canvas-pushpin-example
+		****************************************************/
+		function createRedArrow(heading) { // Creates red arrow with specified direction/heading
+			var c = document.createElement('canvas'); // Create canvas element
+			c.width = 24;
+			c.height = 24;
+
+			var ctx = c.getContext('2d');
+		
+			//Offset the canvas such that we will rotate around the center of our arrow
+			ctx.translate(c.width * 0.5, c.height * 0.5);
+
+			//Rotate the canvas by the desired heading
+			ctx.rotate(heading * Math.PI / 180);
+
+			//Return the canvas offset back to it's original position
+			ctx.translate(-c.width * 0.5, -c.height * 0.5);
+		
+			ctx.fillStyle = '#f00';
+
+			//Draw a path in the shape of an arrow.
+			ctx.beginPath();
+			ctx.moveTo(12, 0);
+			ctx.lineTo(5, 20);
+			ctx.lineTo(12, 15);
+			ctx.lineTo(19, 20);
+			ctx.lineTo(12, 0);
+			ctx.closePath();
+			ctx.fill();
+			ctx.stroke();
+
+			//Generate the base64 image URL from the canvas.
+			return c.toDataURL();
+		}
+
+		/***************************************************
+		* For creating blue circles for old locations
+		* @param void
+		* @return <CIRCLE base64 image URL>
+		****************************************************/
+		function createCircle() { // Creates blue circle
+			var c = document.createElement('canvas'); // Creates canvas element
+			c.width = 12;
+			c.height = 12;
+
+			var ctx = c.getContext('2d');
+		
+			//Offset the canvas such that we will rotate around the center of circle
+			ctx.translate(c.width * 0.5, c.height * 0.5);
+
+			//Return the canvas offset back to it's original position
+			ctx.translate(-c.width * 0.5, -c.height * 0.5);
+		
+			ctx.fillStyle = 'blue';
+
+			//Draw a path in the shape of a ball.
+			ctx.beginPath();
+			ctx.arc(6, 6, 5, 0, 2 * Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			//Generate the base64 image URL from the canvas.
+			return c.toDataURL();
+			}
+
+		/***************************************************
+		* Formats a number of seconds to HH-MM-SS
+		* @param <SECONDS>
+		* @return <FORMATTED TIMESTAMP>
+		*
+		* CREDIT TO: https://www.tutorialspoint.com/How-to-convert-seconds-to-HH-MM-SS-with-JavaScript
+		****************************************************/
+		function convertSeconds(sec) {
+			var hrs = Math.floor(sec / 3600);
+			var min = Math.floor((sec - (hrs * 3600)) / 60);
+			var seconds = sec - (hrs * 3600) - (min * 60);
+			seconds = Math.floor(Math.round(seconds * 100) / 100);
+
+			var result = (hrs < 10 ? "0" + hrs : hrs);
+			result += "h-" + (min < 10 ? "0" + min : min + "m");
+			result += "-" + (seconds < 10 ? "0" + seconds : seconds + "s");
+			return result;
+		}
+		
+		/***************************************************
+		* For hooking custom input events
+		* @param void
+		* @return void
+		****************************************************/
+		function hookEvents()
+		{
+			/* Hook controlpanel button */
+			var button = document.getElementById("controlPanel");
+			button.addEventListener("click", function() { //add event listener for when checkbox changes
+				$(".controls").fadeToggle("fast","linear");
+				socket.emit('control_event',1); //send button status to server (as 1 or 0); TODO: CHANGE THIS EVENTNAME
+			});
+
+			/* Hook viewStatus button */
+			var button2 = document.getElementById("viewStatus");
+			button2.addEventListener("click", function() { //add event listener for when checkbox changes
+				$(".statusWindow").fadeToggle("fast","linear");
+			});	
+			
+			/* Hook forward-button */
+			var up = document.getElementById("forward"); // Creates up object from ID of forward button
+			up.addEventListener("click", function() { // Event listener for a single mouseclick
+				socket.emit('motor-controls', 1); // Control motor forward
+			});
+			up.addEventListener("mousedown",function(){ // Event listener for mousedown
+				mousedown = true;
+				setTimeout(mouseDown,0,1); // Sets timeout of 100ms for function call
+			});
+			up.addEventListener("mouseup",function(){ // Event listener for mouseup
+				mousedown = false;
+			});
+
+			/* Hook backwards-button */
+			var down = document.getElementById("backwards");
+			down.addEventListener("click", function(){		// On normal onetime click
+				socket.emit('motor-controls', 2);
+			});
+			down.addEventListener("mousedown",function(){	// On mouse held down
+				mousedown = true;
+				setTimeout(mouseDown,0,2);	// Async call to mouseDown
+			});
+			down.addEventListener("mouseup",function(){		// On mouse released
+				mousedown = false;
+			});
+
+			/* Hook left-button */
+			var left = document.getElementById("left");
+			left.addEventListener("click", function() { 	// On normal onetime click
+				socket.emit('motor-controls', 3);
+			});
+			left.addEventListener("mousedown",function(){ 	// On mouse held down
+				mousedown = true;
+				setTimeout(mouseDown,0,3);	// Async call to mouseDown
+			});
+			left.addEventListener("mouseup",function(){		// On mouse released
+				mousedown = false;
+			});
+
+			/* Hook right-button */
+			var right = document.getElementById("right");
+			right.addEventListener("click", function() {	// On normal onetime click
+				socket.emit('motor-controls', 4);
+			});
+			right.addEventListener("mousedown",function(){	// On mouse held down
+				mousedown = true;
+				setTimeout(mouseDown,0,4);	// Async call to mouseDown
+			});
+			right.addEventListener("mouseup",function(){	// On mouse released
+				mousedown = false;
+			});
+			
+			/* Hook keyboard-buttons */
+			document.addEventListener('keydown', function(event){
+				switch(event.keyCode){ // Switch on arrow keycodes
+					case 38: // Up
+						socket.emit('motor-controls', 1);
+						break;
+					case 40: // Down
+						socket.emit('motor-controls', 2);
+						break;
+					case 37: // Left
+						socket.emit('motor-controls', 3);
+						break;
+					case 39: // Right
+						socket.emit('motor-controls', 4);
+						break;
+					default:
+						return;
+				}
+			});
+		}
+
+		/***************************************************
+		* For hooking custom socket events - used for signaling to server
+		* @param void
+		* @return void
+		****************************************************/
+		function hookSocketEvents()
+		{
+			/* Hook on updatePositions, its emitted when new data is available */
+			socket.on('updatePositions', function(data) {
+				updateMap(data)
+			});
+			
+			/* Hook on updateStatus, its emitted when new data is available */
+			socket.on('updateStatus', function(uptime,status){
+				/* Call functions async */
+				setTimeout(setRuntimeText,0, convertSeconds(uptime));
+				setTimeout(setStatusInfoText,0, status);
+			});
+
+			/* Hook on client connection to socket */
+			socket.on('connect', function(socket){
+				console.log("Client connected to SOCKET!");
+			});
+			
+		}
+
+		/***************************************************
+		* For setting Status-info text in info-panel
+		* @param <Text to apply>
+		* @return void
+		****************************************************/
+		function setStatusInfoText(text)
+		{
+			$(document).ready(function(){
+				$("#statusInfo").text("Runtime: " + text);
+			});
+		}
+
+		/***************************************************
+		* For setting Runtime-info text in info-panel
+		* @param <Text to apply>
+		* @return void
+		****************************************************/
+		function setRuntimeText(text)
+		{
+			$(document).ready(function(){
+					$("#runtimeInfo").text("iFollow status: " + text);
+			});
+		}
+
+		/***************************************************
+		* Used for updating map, when new positions
+		* are available.
+		* @param <Position array>
+		* @return void
+		****************************************************/
+		function updateMap(positions)
+		{
+			console.log(positions);
+			clearPushpins();
+			addPushpin(positions);
+			
+		}
+		</script>
+	</body>
+</html>

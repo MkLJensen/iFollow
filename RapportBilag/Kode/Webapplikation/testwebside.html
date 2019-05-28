@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<style>
+.motor_controls {
+	position: absolute;
+	left: 50%;
+	top: 10%;
+}
+
+.arrow-right {
+	position: absolute;
+	top:182px;
+	left: 300px;
+	margin-left: -100px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 100px 0 100px 173.2px;
+	border-color: transparent transparent transparent #007bff;
+}
+
+.arrow-up {
+	position: absolute;
+	top:10px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 100px 173.2px 100px;
+	border-color: transparent transparent #007bff transparent;
+}
+
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 173.2px 100px 0 100px;
+	border-color: #007bff transparent transparent transparent;
+	position: absolute;
+	top:382px;
+}
+
+.arrow-left {
+	position: absolute;
+	top:182px;
+	right: 100px;
+	margin-right: -100px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 100px 173.2px 100px 0;
+	border-color: transparent #007bff transparent transparent;
+}
+
+.arrow-left:hover {border-color: transparent #bcdcff transparent transparent;}
+.arrow-right:hover {border-color: transparent transparent transparent #bcdcff;}
+.arrow-up:hover {border-color: transparent transparent #bcdcff transparent;}
+.arrow-down:hover {border-color: #bcdcff transparent transparent transparent;}
+
+</style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<h1 style="text-align:center;color:red">iFollow</h1>
+<button id="but1" style="text-align:center;width:90%;height:90%;">LED 1</button>
+<button id="but2" style="text-align:center;width:90%;height:90%;">LED 2</button>
+<button id="but3" style="text-align:center;width:90%;height:90%;">LED 3</button>
+
+<p id="led1status">LED1</p>
+<p id="led2status">LED2</p>
+<p id="led3status">LED3</p>
+
+<div class="motor_controls">
+	<div class="arrow-up" id="up"></div>
+	<div class="arrow-down" id="down"></div>
+	<div class="arrow-left" id="left"></div>
+	<div class="arrow-right" id="right"></div>
+</div>
+
+<script>
+var socket = io(); //load socket.io-client and connect to the host that serves the page
+
+/*** ADD EVENT LISTENERS FOR HTML ELEMENTS****/
+window.addEventListener("load", function(){ //when page loads
+	/***Event listeners***/
+	/*LED-Buttons*/
+	var button = document.getElementById("but1"); 
+	button.addEventListener("click", function() { //add event listener for when checkbox changes
+		socket.emit('light',1); //send button status to server (as 1 or 0);  
+	});
+	var button2 = document.getElementById("but2");
+	button2.addEventListener("click", function() { //add event listener for when c$
+		socket.emit('light',2); //send button status to server (as 1 or 0);
+	});
+	var button3 = document.getElementById("but3");
+	button3.addEventListener("click", function() { //add event listener for when c$
+		socket.emit('light',3); //send button status to server (as 1 or 0);
+	});	
+	/*MOTOR-Controls*/
+	var up = document.getElementById("up");
+	up.addEventListener("click", function() {
+		socket.emit('motor-controls', 1);
+	});
+	var down = document.getElementById("down");
+        down.addEventListener("click", function() {
+                socket.emit('motor-controls', 2);
+        });
+	var left = document.getElementById("left");
+        left.addEventListener("click", function() {
+                socket.emit('motor-controls', 3);
+        });
+	var right = document.getElementById("right");
+        right.addEventListener("click", function() {
+                socket.emit('motor-controls', 4);
+        });
+});
+
+/**** KEY LISTENERS ****/
+document.addEventListener('keydown', function(event){
+	switch(event.keyCode){
+		case 38:
+			socket.emit('motor-controls', 1);
+			break;
+		case 40:
+			socket.emit('motor-controls', 2);
+			break;
+		case 37:
+			socket.emit('motor-controls', 3);
+			break;
+		case 39:
+			socket.emit('motor-controls', 4);
+			break;
+		default:
+			return;	
+	}
+} );
+
+socket.on('light', function(data,num) { //get light switch status from client
+	//console.log("client-side click!\n");
+	$(document).ready(function(){
+		if (num == 1) $("#led1status").text("LED1 is " + data + ".\n");
+        	if (num == 2) $("#led2status").text("LED2 is " + data + ".\n");
+		if (num == 3) $("#led3status").text("LED3 is " + data + ".\n");
+   	 });
+});
+
+//TODO: FIRST RESTORE POSITION AND TRANSFORMATION ON RELEASE!
+
+socket.on('motor-animate', function(data) {
+	$(document).ready(function(){
+		console.log("Client click on up!");
+		/*DELAY TIME IN MS*/
+		var delay = 1;
+		/*Handle specific button*/
+		switch(data){
+			case 1:	
+				var button = $("#up");
+				button.animate({borderWidth: '0 90px 155.9px 90px', left: '10px', top: '20px'}, delay);
+				button.animate({borderWidth: '0 100px 173.2px 100px', left: '0', top: '10px'}, delay);
+				break;
+			case 2:
+				var button = $("#down");
+                                button.animate({borderWidth: '155.9px 90px 0 90px', left: '10px', top: '372px'}, delay);
+                                button.animate({borderWidth: '173.2px 100px 0 100px', left: '0', top: '382px'}, delay);
+                                break;
+			case 3:
+                                var button = $("#left");
+                                button.animate({borderWidth: '85px 147.2px 85px 0', top: '192px'}, delay);
+                                button.animate({borderWidth: '100px 173.2px 100px 0', top: '182px'}, delay);
+                                break;
+			case 4:
+                                var button = $("#right");
+                                button.animate({borderWidth: '85px 0 85px 147.2px', top: '192px'}, delay);
+                                button.animate({borderWidth: '100px 0 100px 173.2px', top: '182px'}, delay);
+                                break;
+
+			default:
+				return;
+
+		}
+	});
+});
+
+</script>
+
+</body>
+</html>
