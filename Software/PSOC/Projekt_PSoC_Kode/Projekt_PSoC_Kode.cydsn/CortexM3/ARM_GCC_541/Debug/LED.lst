@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 1
 
 
    1              		.syntax unified
@@ -43,9 +43,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
   13:LED.c         **** /* [] END OF FILE */
   14:LED.c         **** 
   15:LED.c         **** #include "LED.h"
-  16:LED.c         **** 
-  17:LED.c         **** LED::LED()
-  28              		.loc 1 17 0
+  16:LED.c         **** /***************************************************
+  17:LED.c         **** * Default constructor for object creation. Initalizes
+  18:LED.c         **** * member-variables
+  19:LED.c         **** * @param  none
+  20:LED.c         **** * @return void
+  21:LED.c         **** ****************************************************/
+  22:LED.c         **** LED::LED()
+  28              		.loc 1 22 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -53,20 +58,20 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
   33 0000 10B5     		push	{r4, lr}
   34              		.cfi_def_cfa_offset 8
   35              		.cfi_offset 4, -8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 2
+
+
   36              		.cfi_offset 14, -4
   37 0002 0446     		mov	r4, r0
   38              	.LBB2:
-  18:LED.c         **** {
-  19:LED.c         ****     LED_PWM_Start();
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 2
-
-
-  39              		.loc 1 19 0
+  23:LED.c         **** {
+  24:LED.c         ****     LED_PWM_Start();
+  39              		.loc 1 24 0
   40 0004 FFF7FEFF 		bl	LED_PWM_Start
   41              	.LVL1:
   42              	.LBE2:
-  20:LED.c         **** }
-  43              		.loc 1 20 0
+  25:LED.c         **** }
+  43              		.loc 1 25 0
   44 0008 2046     		mov	r0, r4
   45 000a 10BD     		pop	{r4, pc}
   46              		.cfi_endproc
@@ -82,17 +87,22 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
   56              		.type	_ZN3LEDD2Ev, %function
   57              	_ZN3LEDD2Ev:
   58              	.LFB67:
-  21:LED.c         **** 
-  22:LED.c         **** LED::~LED()
-  59              		.loc 1 22 0
+  26:LED.c         **** /***************************************************
+  27:LED.c         **** * Destructor for object-destruction, deletes
+  28:LED.c         **** * dynamically allocated variables
+  29:LED.c         **** * @param none
+  30:LED.c         **** * @return void
+  31:LED.c         **** ****************************************************/
+  32:LED.c         **** LED::~LED()
+  59              		.loc 1 32 0
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 0
   62              		@ frame_needed = 0, uses_anonymous_args = 0
   63              		@ link register save eliminated.
   64              	.LVL2:
-  23:LED.c         **** {
-  24:LED.c         **** }
-  65              		.loc 1 24 0
+  33:LED.c         **** {
+  34:LED.c         **** }
+  65              		.loc 1 34 0
   66 0000 7047     		bx	lr
   67              		.cfi_endproc
   68              	.LFE67:
@@ -107,10 +117,18 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
   77              		.type	_ZN3LED9turnOnLedEc, %function
   78              	_ZN3LED9turnOnLedEc:
   79              	.LFB69:
-  25:LED.c         **** 
-  26:LED.c         **** void LED::turnOnLed(char Color)
-  27:LED.c         **** {
-  80              		.loc 1 27 0
+  35:LED.c         **** 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 3
+
+
+  36:LED.c         **** /***************************************************
+  37:LED.c         **** * Used to turn on LED 
+  38:LED.c         **** * @param color of LED - R or G
+  39:LED.c         **** * @return none
+  40:LED.c         **** ****************************************************/
+  41:LED.c         **** void LED::turnOnLed(char Color)
+  42:LED.c         **** {
+  80              		.loc 1 42 0
   81              		.cfi_startproc
   82              		@ args = 0, pretend = 0, frame = 0
   83              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,54 +136,54 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
   85 0000 08B5     		push	{r3, lr}
   86              		.cfi_def_cfa_offset 8
   87              		.cfi_offset 3, -8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 3
-
-
   88              		.cfi_offset 14, -4
-  28:LED.c         ****     if (Color == 'g' || Color == 'G')
-  89              		.loc 1 28 0
+  43:LED.c         ****     if (Color == 'g' || Color == 'G')
+  89              		.loc 1 43 0
   90 0002 6729     		cmp	r1, #103
   91 0004 01D0     		beq	.L5
-  92              		.loc 1 28 0 is_stmt 0 discriminator 1
+  92              		.loc 1 43 0 is_stmt 0 discriminator 1
   93 0006 4729     		cmp	r1, #71
   94 0008 07D1     		bne	.L6
   95              	.L5:
-  29:LED.c         ****     {
-  30:LED.c         ****         if (LED_PWM_ReadCompare2() != 255)
-  96              		.loc 1 30 0 is_stmt 1
+  44:LED.c         ****     {
+  45:LED.c         ****         if (LED_PWM_ReadCompare2() != 255)
+  96              		.loc 1 45 0 is_stmt 1
   97 000a FFF7FEFF 		bl	LED_PWM_ReadCompare2
   98              	.LVL4:
   99 000e FF28     		cmp	r0, #255
  100 0010 0ED0     		beq	.L4
-  31:LED.c         ****         {
-  32:LED.c         ****             LED_PWM_WriteCompare2(255);
- 101              		.loc 1 32 0
+  46:LED.c         ****         {
+  47:LED.c         ****             LED_PWM_WriteCompare2(255);
+ 101              		.loc 1 47 0
  102 0012 FF20     		movs	r0, #255
  103 0014 FFF7FEFF 		bl	LED_PWM_WriteCompare2
  104              	.LVL5:
  105 0018 08BD     		pop	{r3, pc}
  106              	.LVL6:
  107              	.L6:
-  33:LED.c         ****         }
-  34:LED.c         ****     }
-  35:LED.c         ****     else if(Color == 'r' || Color == 'R')
- 108              		.loc 1 35 0
+  48:LED.c         ****         }
+  49:LED.c         ****     }
+  50:LED.c         ****     else if(Color == 'r' || Color == 'R')
+ 108              		.loc 1 50 0
  109 001a 7229     		cmp	r1, #114
  110 001c 01D0     		beq	.L8
- 111              		.loc 1 35 0 is_stmt 0 discriminator 1
+ 111              		.loc 1 50 0 is_stmt 0 discriminator 1
  112 001e 5229     		cmp	r1, #82
  113 0020 06D1     		bne	.L4
  114              	.L8:
-  36:LED.c         ****     {
-  37:LED.c         ****         if (LED_PWM_ReadCompare1() != 255)
- 115              		.loc 1 37 0 is_stmt 1
+  51:LED.c         ****     {
+  52:LED.c         ****         if (LED_PWM_ReadCompare1() != 255)
+ 115              		.loc 1 52 0 is_stmt 1
  116 0022 FFF7FEFF 		bl	LED_PWM_ReadCompare1
  117              	.LVL7:
  118 0026 FF28     		cmp	r0, #255
  119 0028 02D0     		beq	.L4
-  38:LED.c         ****         {
-  39:LED.c         ****             LED_PWM_WriteCompare1(255); 
- 120              		.loc 1 39 0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 4
+
+
+  53:LED.c         ****         {
+  54:LED.c         ****             LED_PWM_WriteCompare1(255); 
+ 120              		.loc 1 54 0
  121 002a FF20     		movs	r0, #255
  122 002c FFF7FEFF 		bl	LED_PWM_WriteCompare1
  123              	.LVL8:
@@ -178,20 +196,22 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  130              		.align	2
  131              		.global	_ZN3LED10turnOffLedEc
  132              		.thumb
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 4
-
-
  133              		.thumb_func
  134              		.type	_ZN3LED10turnOffLedEc, %function
  135              	_ZN3LED10turnOffLedEc:
  136              	.LFB70:
-  40:LED.c         ****         }
-  41:LED.c         ****     }
-  42:LED.c         **** }
-  43:LED.c         **** 
-  44:LED.c         **** void LED::turnOffLed(char Color)
-  45:LED.c         **** {
- 137              		.loc 1 45 0
+  55:LED.c         ****         }
+  56:LED.c         ****     }
+  57:LED.c         **** }
+  58:LED.c         **** 
+  59:LED.c         **** /***************************************************
+  60:LED.c         **** * Used to turn off LED 
+  61:LED.c         **** * @param color of LED - R or G
+  62:LED.c         **** * @return none
+  63:LED.c         **** ****************************************************/
+  64:LED.c         **** void LED::turnOffLed(char Color)
+  65:LED.c         **** {
+ 137              		.loc 1 65 0
  138              		.cfi_startproc
  139              		@ args = 0, pretend = 0, frame = 0
  140              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -200,17 +220,17 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  143              		.cfi_def_cfa_offset 8
  144              		.cfi_offset 3, -8
  145              		.cfi_offset 14, -4
-  46:LED.c         ****     if (Color == 'g' || Color == 'G')
- 146              		.loc 1 46 0
+  66:LED.c         ****     if (Color == 'g' || Color == 'G')
+ 146              		.loc 1 66 0
  147 0002 6729     		cmp	r1, #103
  148 0004 01D0     		beq	.L11
- 149              		.loc 1 46 0 is_stmt 0 discriminator 1
+ 149              		.loc 1 66 0 is_stmt 0 discriminator 1
  150 0006 4729     		cmp	r1, #71
  151 0008 03D1     		bne	.L12
  152              	.L11:
-  47:LED.c         ****     {
-  48:LED.c         ****         LED_PWM_WriteCompare2(0);
- 153              		.loc 1 48 0 is_stmt 1
+  67:LED.c         ****     {
+  68:LED.c         ****         LED_PWM_WriteCompare2(0);
+ 153              		.loc 1 68 0 is_stmt 1
  154 000a 0020     		movs	r0, #0
  155              	.LVL10:
  156 000c FFF7FEFF 		bl	LED_PWM_WriteCompare2
@@ -218,18 +238,21 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  158 0010 08BD     		pop	{r3, pc}
  159              	.LVL12:
  160              	.L12:
-  49:LED.c         ****     }
-  50:LED.c         ****     else if(Color == 'r' || Color == 'R')
- 161              		.loc 1 50 0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 5
+
+
+  69:LED.c         ****     }
+  70:LED.c         ****     else if(Color == 'r' || Color == 'R')
+ 161              		.loc 1 70 0
  162 0012 7229     		cmp	r1, #114
  163 0014 01D0     		beq	.L14
- 164              		.loc 1 50 0 is_stmt 0 discriminator 1
+ 164              		.loc 1 70 0 is_stmt 0 discriminator 1
  165 0016 5229     		cmp	r1, #82
  166 0018 02D1     		bne	.L10
  167              	.L14:
-  51:LED.c         ****     {
-  52:LED.c         ****         LED_PWM_WriteCompare1(0);
- 168              		.loc 1 52 0 is_stmt 1
+  71:LED.c         ****     {
+  72:LED.c         ****         LED_PWM_WriteCompare1(0);
+ 168              		.loc 1 72 0 is_stmt 1
  169 001a 0020     		movs	r0, #0
  170              	.LVL13:
  171 001c FFF7FEFF 		bl	LED_PWM_WriteCompare1
@@ -238,9 +261,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  174 0020 08BD     		pop	{r3, pc}
  175              		.cfi_endproc
  176              	.LFE70:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 5
-
-
  177              		.size	_ZN3LED10turnOffLedEc, .-_ZN3LED10turnOffLedEc
  178 0022 00BF     		.section	.text._ZN3LED8blinkLedEc,"ax",%progbits
  179              		.align	2
@@ -250,12 +270,17 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  183              		.type	_ZN3LED8blinkLedEc, %function
  184              	_ZN3LED8blinkLedEc:
  185              	.LFB71:
-  53:LED.c         ****     }
-  54:LED.c         **** }
-  55:LED.c         **** 
-  56:LED.c         **** void LED::blinkLed(char Color)
-  57:LED.c         **** {
- 186              		.loc 1 57 0
+  73:LED.c         ****     }
+  74:LED.c         **** }
+  75:LED.c         **** 
+  76:LED.c         **** /***************************************************
+  77:LED.c         **** * Used to blink LED 
+  78:LED.c         **** * @param color of LED - R or G
+  79:LED.c         **** * @return none
+  80:LED.c         **** ****************************************************/
+  81:LED.c         **** void LED::blinkLed(char Color)
+  82:LED.c         **** {
+ 186              		.loc 1 82 0
  187              		.cfi_startproc
  188              		@ args = 0, pretend = 0, frame = 0
  189              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -264,17 +289,20 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  192              		.cfi_def_cfa_offset 8
  193              		.cfi_offset 3, -8
  194              		.cfi_offset 14, -4
-  58:LED.c         ****     if (Color == 'g' || Color == 'G')
- 195              		.loc 1 58 0
+  83:LED.c         ****     if (Color == 'g' || Color == 'G')
+ 195              		.loc 1 83 0
  196 0002 6729     		cmp	r1, #103
  197 0004 01D0     		beq	.L17
- 198              		.loc 1 58 0 is_stmt 0 discriminator 1
+ 198              		.loc 1 83 0 is_stmt 0 discriminator 1
  199 0006 4729     		cmp	r1, #71
  200 0008 03D1     		bne	.L18
  201              	.L17:
-  59:LED.c         ****     {
-  60:LED.c         ****         LED_PWM_WriteCompare2(122);
- 202              		.loc 1 60 0 is_stmt 1
+  84:LED.c         ****     {
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 6
+
+
+  85:LED.c         ****         LED_PWM_WriteCompare2(122);
+ 202              		.loc 1 85 0 is_stmt 1
  203 000a 7A20     		movs	r0, #122
  204              	.LVL16:
  205 000c FFF7FEFF 		bl	LED_PWM_WriteCompare2
@@ -282,25 +310,22 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  207 0010 08BD     		pop	{r3, pc}
  208              	.LVL18:
  209              	.L18:
-  61:LED.c         ****     }
-  62:LED.c         ****     else if(Color == 'r' || Color == 'R')
- 210              		.loc 1 62 0
+  86:LED.c         ****     }
+  87:LED.c         ****     else if(Color == 'r' || Color == 'R')
+ 210              		.loc 1 87 0
  211 0012 7229     		cmp	r1, #114
  212 0014 01D0     		beq	.L20
- 213              		.loc 1 62 0 is_stmt 0 discriminator 1
+ 213              		.loc 1 87 0 is_stmt 0 discriminator 1
  214 0016 5229     		cmp	r1, #82
  215 0018 02D1     		bne	.L16
  216              	.L20:
-  63:LED.c         ****     {
-  64:LED.c         ****         LED_PWM_WriteCompare1(122);        
- 217              		.loc 1 64 0 is_stmt 1
+  88:LED.c         ****     {
+  89:LED.c         ****         LED_PWM_WriteCompare1(122);        
+ 217              		.loc 1 89 0 is_stmt 1
  218 001a 7A20     		movs	r0, #122
  219              	.LVL19:
  220 001c FFF7FEFF 		bl	LED_PWM_WriteCompare1
  221              	.LVL20:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 6
-
-
  222              	.L16:
  223 0020 08BD     		pop	{r3, pc}
  224              		.cfi_endproc
@@ -333,6 +358,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  251 0028 3A020000 		.4byte	.LASF0
  252 002c 02       		.uleb128 0x2
  253 002d 01       		.byte	0x1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 7
+
+
  254 002e 08       		.byte	0x8
  255 002f 2C010000 		.4byte	.LASF1
  256 0033 02       		.uleb128 0x2
@@ -358,9 +386,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  276 0056 B4000000 		.4byte	.LASF5
  277 005a 02       		.uleb128 0x2
  278 005b 08       		.byte	0x8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 7
-
-
  279 005c 05       		.byte	0x5
  280 005d BC010000 		.4byte	.LASF6
  281 0061 02       		.uleb128 0x2
@@ -393,6 +418,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  308 0091 08       		.byte	0x8
  309 0092 D0010000 		.4byte	.LASF13
  310 0096 02       		.uleb128 0x2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 8
+
+
  311 0097 08       		.byte	0x8
  312 0098 04       		.byte	0x4
  313 0099 2E020000 		.4byte	.LASF14
@@ -418,9 +446,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  333 00c2 52010000 		.4byte	0x152
  334 00c6 01       		.byte	0x1
  335 00c7 CF000000 		.4byte	0xcf
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 8
-
-
  336 00cb D5000000 		.4byte	0xd5
  337 00cf 09       		.uleb128 0x9
  338 00d0 52010000 		.4byte	0x152
@@ -453,6 +478,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  365 0112 8F000000 		.4byte	0x8f
  366 0116 00       		.byte	0
  367 0117 0B       		.uleb128 0xb
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 9
+
+
  368 0118 FB010000 		.4byte	.LASF18
  369 011c 04       		.byte	0x4
  370 011d 20       		.byte	0x20
@@ -478,16 +506,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  390 014c 8F000000 		.4byte	0x8f
  391 0150 00       		.byte	0
  392 0151 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 9
-
-
  393 0152 0E       		.uleb128 0xe
  394 0153 04       		.byte	0x4
  395 0154 AB000000 		.4byte	0xab
  396 0158 0F       		.uleb128 0xf
  397 0159 B7000000 		.4byte	0xb7
  398 015d 01       		.byte	0x1
- 399 015e 11       		.byte	0x11
+ 399 015e 16       		.byte	0x16
  400 015f 00       		.byte	0
  401 0160 68010000 		.4byte	0x168
  402 0164 72010000 		.4byte	0x172
@@ -513,10 +538,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  422 019c 08000000 		.4byte	.LVL1
  423 01a0 1F030000 		.4byte	0x31f
  424 01a4 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 10
+
+
  425 01a5 0F       		.uleb128 0xf
  426 01a6 D5000000 		.4byte	0xd5
  427 01aa 01       		.byte	0x1
- 428 01ab 16       		.byte	0x16
+ 428 01ab 20       		.byte	0x20
  429 01ac 00       		.byte	0
  430 01ad B5010000 		.4byte	0x1b5
  431 01b1 C8010000 		.4byte	0x1c8
@@ -538,9 +566,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  447 01df 9C       		.byte	0x9c
  448 01e0 E8010000 		.4byte	0x1e8
  449 01e4 F0010000 		.4byte	0x1f0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 10
-
-
  450 01e8 15       		.uleb128 0x15
  451 01e9 B5010000 		.4byte	0x1b5
  452 01ed 01       		.uleb128 0x1
@@ -549,7 +574,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  455 01f0 16       		.uleb128 0x16
  456 01f1 F8000000 		.4byte	0xf8
  457 01f5 01       		.byte	0x1
- 458 01f6 1A       		.byte	0x1a
+ 458 01f6 29       		.byte	0x29
  459 01f7 00000000 		.4byte	.LFB69
  460 01fb 32000000 		.4byte	.LFE69-.LFB69
  461 01ff 01       		.uleb128 0x1
@@ -563,7 +588,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  469 0216 18       		.uleb128 0x18
  470 0217 CA010000 		.4byte	.LASF25
  471 021b 01       		.byte	0x1
- 472 021c 1A       		.byte	0x1a
+ 472 021c 29       		.byte	0x29
  473 021d 8F000000 		.4byte	0x8f
  474 0221 58000000 		.4byte	.LLST2
  475 0225 14       		.uleb128 0x14
@@ -573,6 +598,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  479 022f 18000000 		.4byte	.LVL5
  480 0233 35030000 		.4byte	0x335
  481 0237 42020000 		.4byte	0x242
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 11
+
+
  482 023b 1A       		.uleb128 0x1a
  483 023c 01       		.uleb128 0x1
  484 023d 50       		.byte	0x50
@@ -597,10 +625,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  503 025c 16       		.uleb128 0x16
  504 025d 17010000 		.4byte	0x117
  505 0261 01       		.byte	0x1
- 506 0262 2C       		.byte	0x2c
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 11
-
-
+ 506 0262 40       		.byte	0x40
  507 0263 00000000 		.4byte	.LFB70
  508 0267 22000000 		.4byte	.LFE70-.LFB70
  509 026b 01       		.uleb128 0x1
@@ -614,7 +639,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  517 0282 18       		.uleb128 0x18
  518 0283 CA010000 		.4byte	.LASF25
  519 0287 01       		.byte	0x1
- 520 0288 2C       		.byte	0x2c
+ 520 0288 40       		.byte	0x40
  521 0289 8F000000 		.4byte	0x8f
  522 028d CC000000 		.4byte	.LLST4
  523 0291 19       		.uleb128 0x19
@@ -633,6 +658,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  536 02ad 1A       		.uleb128 0x1a
  537 02ae 01       		.uleb128 0x1
  538 02af 50       		.byte	0x50
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 12
+
+
  539 02b0 01       		.uleb128 0x1
  540 02b1 30       		.byte	0x30
  541 02b2 00       		.byte	0
@@ -640,7 +668,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  543 02b4 16       		.uleb128 0x16
  544 02b5 36010000 		.4byte	0x136
  545 02b9 01       		.byte	0x1
- 546 02ba 38       		.byte	0x38
+ 546 02ba 51       		.byte	0x51
  547 02bb 00000000 		.4byte	.LFB71
  548 02bf 22000000 		.4byte	.LFE71-.LFB71
  549 02c3 01       		.uleb128 0x1
@@ -654,13 +682,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  557 02da 18       		.uleb128 0x18
  558 02db CA010000 		.4byte	.LASF25
  559 02df 01       		.byte	0x1
- 560 02e0 38       		.byte	0x38
+ 560 02e0 51       		.byte	0x51
  561 02e1 8F000000 		.4byte	0x8f
  562 02e5 40010000 		.4byte	.LLST6
  563 02e9 19       		.uleb128 0x19
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 12
-
-
  564 02ea 10000000 		.4byte	.LVL17
  565 02ee 35030000 		.4byte	0x335
  566 02f2 FD020000 		.4byte	0x2fd
@@ -693,6 +718,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  593 0320 0D010000 		.4byte	.LASF26
  594 0324 0D010000 		.4byte	.LASF26
  595 0328 05       		.byte	0x5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 13
+
+
  596 0329 92       		.byte	0x92
  597 032a 1E       		.uleb128 0x1e
  598 032b 87010000 		.4byte	.LASF27
@@ -718,9 +746,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  618              		.section	.debug_abbrev,"",%progbits
  619              	.Ldebug_abbrev0:
  620 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 13
-
-
  621 0001 11       		.uleb128 0x11
  622 0002 01       		.byte	0x1
  623 0003 25       		.uleb128 0x25
@@ -753,6 +778,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  650 001e 03       		.uleb128 0x3
  651 001f 16       		.uleb128 0x16
  652 0020 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 14
+
+
  653 0021 03       		.uleb128 0x3
  654 0022 0E       		.uleb128 0xe
  655 0023 3A       		.uleb128 0x3a
@@ -778,9 +806,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  675 0037 3B       		.uleb128 0x3b
  676 0038 00       		.byte	0
  677 0039 03       		.uleb128 0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 14
-
-
  678 003a 0E       		.uleb128 0xe
  679 003b 00       		.byte	0
  680 003c 00       		.byte	0
@@ -813,6 +838,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  707 0057 19       		.uleb128 0x19
  708 0058 03       		.uleb128 0x3
  709 0059 08       		.uleb128 0x8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 15
+
+
  710 005a 3A       		.uleb128 0x3a
  711 005b 0B       		.uleb128 0xb
  712 005c 3B       		.uleb128 0x3b
@@ -838,9 +866,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  732 0070 13       		.uleb128 0x13
  733 0071 34       		.uleb128 0x34
  734 0072 19       		.uleb128 0x19
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 15
-
-
  735 0073 00       		.byte	0
  736 0074 00       		.byte	0
  737 0075 0A       		.uleb128 0xa
@@ -873,6 +898,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  764 0090 01       		.byte	0x1
  765 0091 3F       		.uleb128 0x3f
  766 0092 19       		.uleb128 0x19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 16
+
+
  767 0093 03       		.uleb128 0x3
  768 0094 0E       		.uleb128 0xe
  769 0095 3A       		.uleb128 0x3a
@@ -898,9 +926,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  789 00a9 13       		.uleb128 0x13
  790 00aa 00       		.byte	0
  791 00ab 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 16
-
-
  792 00ac 0D       		.uleb128 0xd
  793 00ad 2E       		.uleb128 0x2e
  794 00ae 01       		.byte	0x1
@@ -933,6 +958,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  821 00c9 00       		.byte	0
  822 00ca 0F       		.uleb128 0xf
  823 00cb 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 17
+
+
  824 00cc 01       		.byte	0x1
  825 00cd 47       		.uleb128 0x47
  826 00ce 13       		.uleb128 0x13
@@ -958,9 +986,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  846 00e2 34       		.uleb128 0x34
  847 00e3 19       		.uleb128 0x19
  848 00e4 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 17
-
-
  849 00e5 00       		.byte	0
  850 00e6 11       		.uleb128 0x11
  851 00e7 26       		.uleb128 0x26
@@ -993,6 +1018,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  878 0103 13       		.uleb128 0x13
  879 0104 05       		.uleb128 0x5
  880 0105 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 18
+
+
  881 0106 31       		.uleb128 0x31
  882 0107 13       		.uleb128 0x13
  883 0108 02       		.uleb128 0x2
@@ -1018,9 +1046,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  903 011e 00       		.byte	0
  904 011f 00       		.byte	0
  905 0120 16       		.uleb128 0x16
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 18
-
-
  906 0121 2E       		.uleb128 0x2e
  907 0122 01       		.byte	0x1
  908 0123 47       		.uleb128 0x47
@@ -1053,6 +1078,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  935 013f 34       		.uleb128 0x34
  936 0140 19       		.uleb128 0x19
  937 0141 02       		.uleb128 0x2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 19
+
+
  938 0142 17       		.uleb128 0x17
  939 0143 00       		.byte	0
  940 0144 00       		.byte	0
@@ -1078,9 +1106,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  960 015a 01       		.uleb128 0x1
  961 015b 31       		.uleb128 0x31
  962 015c 13       		.uleb128 0x13
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 19
-
-
  963 015d 01       		.uleb128 0x1
  964 015e 13       		.uleb128 0x13
  965 015f 00       		.byte	0
@@ -1113,6 +1138,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  992 017f 3B       		.uleb128 0x3b
  993 0180 05       		.uleb128 0x5
  994 0181 49       		.uleb128 0x49
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 20
+
+
  995 0182 13       		.uleb128 0x13
  996 0183 3F       		.uleb128 0x3f
  997 0184 19       		.uleb128 0x19
@@ -1138,9 +1166,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1017 0198 0E       		.uleb128 0xe
  1018 0199 03       		.uleb128 0x3
  1019 019a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 20
-
-
  1020 019b 3A       		.uleb128 0x3a
  1021 019c 0B       		.uleb128 0xb
  1022 019d 3B       		.uleb128 0x3b
@@ -1173,6 +1198,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1049 0034 01       		.uleb128 0x1
  1050 0035 50       		.byte	0x50
  1051 0036 9F       		.byte	0x9f
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 21
+
+
  1052 0037 1A000000 		.4byte	.LVL6
  1053 003b 25000000 		.4byte	.LVL7-1
  1054 003f 0100     		.2byte	0x1
@@ -1198,9 +1226,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1074 006e 01       		.uleb128 0x1
  1075 006f 51       		.byte	0x51
  1076 0070 9F       		.byte	0x9f
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 21
-
-
  1077 0071 1A000000 		.4byte	.LVL6
  1078 0075 25000000 		.4byte	.LVL7-1
  1079 0079 0100     		.2byte	0x1
@@ -1233,6 +1258,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1106 00b6 1C000000 		.4byte	.LVL13
  1107 00ba 22000000 		.4byte	.LFE70
  1108 00be 0400     		.2byte	0x4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 22
+
+
  1109 00c0 F3       		.byte	0xf3
  1110 00c1 01       		.uleb128 0x1
  1111 00c2 50       		.byte	0x50
@@ -1258,9 +1286,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1131 00f0 1F000000 		.4byte	.LVL14-1
  1132 00f4 22000000 		.4byte	.LFE70
  1133 00f8 0400     		.2byte	0x4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 22
-
-
  1134 00fa F3       		.byte	0xf3
  1135 00fb 01       		.uleb128 0x1
  1136 00fc 51       		.byte	0x51
@@ -1293,6 +1318,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1163 0138 00000000 		.4byte	0
  1164 013c 00000000 		.4byte	0
  1165              	.LLST6:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 23
+
+
  1166 0140 00000000 		.4byte	.LVL15
  1167 0144 0F000000 		.4byte	.LVL17-1
  1168 0148 0100     		.2byte	0x1
@@ -1318,9 +1346,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1188 0172 00000000 		.4byte	0
  1189 0176 00000000 		.4byte	0
  1190              		.section	.debug_aranges,"",%progbits
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 23
-
-
  1191 0000 3C000000 		.4byte	0x3c
  1192 0004 0200     		.2byte	0x2
  1193 0006 00000000 		.4byte	.Ldebug_info0
@@ -1353,10 +1378,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1220 0020 00000000 		.4byte	.LFB71
  1221 0024 22000000 		.4byte	.LFE71
  1222 0028 00000000 		.4byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 24
+
+
  1223 002c 00000000 		.4byte	0
  1224              		.section	.debug_line,"",%progbits
  1225              	.Ldebug_line0:
- 1226 0000 E0010000 		.section	.debug_str,"MS",%progbits,1
+ 1226 0000 E2010000 		.section	.debug_str,"MS",%progbits,1
  1226      02005401 
  1226      00000201 
  1226      FB0E0D00 
@@ -1378,9 +1406,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1231      34457600 
  1232              	.LASF9:
  1233 0067 5F5F696E 		.ascii	"__int32_t\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 24
-
-
  1233      7433325F 
  1233      7400
  1234              	.LASF23:
@@ -1413,6 +1438,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1245      7400
  1246              	.LASF30:
  1247 00c6 4C45445F 		.ascii	"LED_PWM_WriteCompare1\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 25
+
+
  1247      50574D5F 
  1247      57726974 
  1247      65436F6D 
@@ -1438,9 +1466,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1256              	.LASF26:
  1257 010d 4C45445F 		.ascii	"LED_PWM_Start\000"
  1257      50574D5F 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 25
-
-
  1257      53746172 
  1257      7400
  1258              	.LASF17:
@@ -1473,6 +1498,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1269      7369676E 
  1269      65642069 
  1270              	.LASF29:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 26
+
+
  1271 0172 4C45445F 		.ascii	"LED_PWM_ReadCompare1\000"
  1271      50574D5F 
  1271      52656164 
@@ -1498,9 +1526,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1281 01b3 73697A65 		.ascii	"sizetype\000"
  1281      74797065 
  1281      00
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 26
-
-
  1282              	.LASF6:
  1283 01bc 6C6F6E67 		.ascii	"long long int\000"
  1283      206C6F6E 
@@ -1533,6 +1558,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1296              	.LASF38:
  1297 0206 5F5A4E33 		.ascii	"_ZN3LED8blinkLedEc\000"
  1297      4C454438 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccNIhB9L.s 			page 27
+
+
  1297      626C696E 
  1297      6B4C6564 
  1297      456300
@@ -1558,9 +1586,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 1
  1307      3420352E 
  1307      342E3120 
  1307      32303136 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccgYIxsu.s 			page 27
-
-
  1308 0279 6272616E 		.ascii	"branch revision 237715] -mcpu=cortex-m3 -mthumb -g "
  1308      63682072 
  1308      65766973 

@@ -22,6 +22,11 @@ Switches::~Switches()
 {
 }
 
+/***************************************************
+* Used to get state of switch 
+* @param button letter - P or F
+* @return <1 if on, 0 if off>
+****************************************************/
 bool Switches::getSwitchStatus(char button) const
 {
     if (button == 'P' || button == 'p')
@@ -35,6 +40,11 @@ bool Switches::getSwitchStatus(char button) const
     return false;
 }
 
+/***************************************************
+* Used to set state of switch 
+* @param button letter - P or F
+* @return none
+****************************************************/
 void Switches::setSwitchStatus(char button)
 {
     if (button == 'P')

@@ -13,16 +13,31 @@
 /* [] END OF FILE */
 
 #include "LED.h"
-
+/***************************************************
+* Default constructor for object creation. Initalizes
+* member-variables
+* @param  none
+* @return void
+****************************************************/
 LED::LED()
 {
     LED_PWM_Start();
 }
-
+/***************************************************
+* Destructor for object-destruction, deletes
+* dynamically allocated variables
+* @param none
+* @return void
+****************************************************/
 LED::~LED()
 {
 }
 
+/***************************************************
+* Used to turn on LED 
+* @param color of LED - R or G
+* @return none
+****************************************************/
 void LED::turnOnLed(char Color)
 {
     if (Color == 'g' || Color == 'G')
@@ -41,6 +56,11 @@ void LED::turnOnLed(char Color)
     }
 }
 
+/***************************************************
+* Used to turn off LED 
+* @param color of LED - R or G
+* @return none
+****************************************************/
 void LED::turnOffLed(char Color)
 {
     if (Color == 'g' || Color == 'G')
@@ -53,6 +73,11 @@ void LED::turnOffLed(char Color)
     }
 }
 
+/***************************************************
+* Used to blink LED 
+* @param color of LED - R or G
+* @return none
+****************************************************/
 void LED::blinkLed(char Color)
 {
     if (Color == 'g' || Color == 'G')

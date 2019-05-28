@@ -16,6 +16,13 @@
 enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4, Fallen = 5};
 extern uint8_t Mode;
 
+/***************************************************
+* Default constructor for object creation. Initalizes
+* member-variables
+* @param  <float a0, a1, b1 - regulator coefficients, 
+           float referance - distance to hold, pointer to Motor-object>>
+* @return void
+****************************************************/
 PIDcontroller::PIDcontroller(float a0, float a1, float b1, float reference, MotorController *MotorPtr)
 {
     MotorPtr_ = MotorPtr;
@@ -29,27 +36,47 @@ PIDcontroller::~PIDcontroller()
 {
 }
 
+/***************************************************
+* Used to set reference variable 
+* @param float reference
+* @return none
+****************************************************/
 void PIDcontroller::setReference(float reference)
 {
     ref_ = reference;
 }
 
+/***************************************************
+* Used to get reference variable 
+* @param none
+* @return float reference
+****************************************************/
 float PIDcontroller::getReference(void) const
 {
     return ref_;
 }
 
+/***************************************************
+* Used to calculate and set error 
+* @param float sensor_data
+* @return none
+****************************************************/
 void PIDcontroller::calculateError(float MidSensor)
 {
     error_ = ref_ - MidSensor;
 }
 
+/***************************************************
+* Used to calculate control and regulate motors 
+* @param <float sensor_data, float sensor_data>
+* @return none
+****************************************************/
 void PIDcontroller::calculateControl(float leftSensor, float rightSensor)
 {
 	/*Calculate the control variable*/
 	control_ = (b1_*old_control_) + (a0_*error_) + (a1_*old_error_); 
     
-    control_ = control_/6;
+    control_ = control_/10;
     
     /*Limit control*/
 	if (control_ > 100) 
@@ -60,36 +87,28 @@ void PIDcontroller::calculateControl(float leftSensor, float rightSensor)
     {
         control_ = -100;
     }
+    else if(control_ <= 1 || control_ <= -1)
+    {
+        control_= 0;
+    }
     
-    if (Mode == Follow)
+    if (Mode == Follow)                             //If mode is follow continue regulating
     {
         if (control_ >= 0)
         {           
-            MotorPtr_->GoBackward(control_);
+            MotorPtr_->GoBackward(control_);        //Regulate
         }
         else
         {
-            /*if (leftSensor-10 > rightSensor)
-            {
-                MotorPtr_->TurnLeft(control_);
-                
-            }
-            else if (rightSensor-10 > leftSensor)
-            {
-                 MotorPtr_->TurnRight(control_);
-            }
-            else
-            {
-                 MotorPtr_->GoForward(control_*-1);
-            }*/
-            MotorPtr_->GoForward(control_*-1);
+            MotorPtr_->GoForward(control_*-1);      //Regulate
         }
     }
-    else
+    else                                            //If mode is not follow stop motor
     {
         MotorPtr_->GoForward(0);
     }
     
-    old_error_ = error_;
+    //Set old error and control
+    old_error_ = error_;                            
     old_control_ = control_;
 }

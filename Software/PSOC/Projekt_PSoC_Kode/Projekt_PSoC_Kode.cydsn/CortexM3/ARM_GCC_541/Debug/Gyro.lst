@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 1
 
 
    1              		.syntax unified
@@ -41,9 +41,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
   11:Gyro.c        **** */
   12:Gyro.c        **** #include "Gyro.h"
   13:Gyro.c        **** 
-  14:Gyro.c        **** /*C++ new and delete operators*/
-  15:Gyro.c        **** void* operator new(size_t size) { 
-  28              		.loc 1 15 0
+  14:Gyro.c        **** /***************************************************
+  15:Gyro.c        **** * Hack for using the c++ new-operator in PSoC
+  16:Gyro.c        **** * @param <size of desired allocation>
+  17:Gyro.c        **** * @return byte pointer
+  18:Gyro.c        **** ****************************************************/
+  19:Gyro.c        **** void* operator new(size_t size) { 
+  28              		.loc 1 19 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -52,15 +56,15 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
   34              		.cfi_def_cfa_offset 8
   35              		.cfi_offset 3, -8
   36              		.cfi_offset 14, -4
-  16:Gyro.c        ****     return malloc(size); 
-  37              		.loc 1 16 0
+  20:Gyro.c        ****     return malloc(size); 
+  37              		.loc 1 20 0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 2
+
+
   38 0002 FFF7FEFF 		bl	malloc
   39              	.LVL1:
-  17:Gyro.c        **** } 
-  40              		.loc 1 17 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 2
-
-
+  21:Gyro.c        **** } 
+  40              		.loc 1 21 0
   41 0006 08BD     		pop	{r3, pc}
   42              		.cfi_endproc
   43              	.LFE69:
@@ -73,9 +77,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
   50              		.type	_ZdlPv, %function
   51              	_ZdlPv:
   52              	.LFB70:
-  18:Gyro.c        **** 
-  19:Gyro.c        **** void operator delete(void* ptr) {
-  53              		.loc 1 19 0
+  22:Gyro.c        **** 
+  23:Gyro.c        **** /***************************************************
+  24:Gyro.c        **** * Hack for using the c++ delete-operator in PSoC
+  25:Gyro.c        **** * @param <desired dynamic allocated byte>
+  26:Gyro.c        **** * @return void
+  27:Gyro.c        **** ****************************************************/
+  28:Gyro.c        **** void operator delete(void* ptr) {
+  53              		.loc 1 28 0
   54              		.cfi_startproc
   55              		@ args = 0, pretend = 0, frame = 0
   56              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -84,8 +93,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
   59              		.cfi_def_cfa_offset 8
   60              		.cfi_offset 3, -8
   61              		.cfi_offset 14, -4
-  20:Gyro.c        ****     free(ptr); 
-  62              		.loc 1 20 0
+  29:Gyro.c        ****     free(ptr); 
+  62              		.loc 1 29 0
   63 0002 FFF7FEFF 		bl	free
   64              	.LVL3:
   65 0006 08BD     		pop	{r3, pc}
@@ -100,28 +109,40 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
   74              		.type	_ZN4GyroD2Ev, %function
   75              	_ZN4GyroD2Ev:
   76              	.LFB81:
-  21:Gyro.c        **** }
-  22:Gyro.c        **** 
-  23:Gyro.c        **** Gyro::Gyro(){
-  24:Gyro.c        **** 	/*Make I2C interface*/
-  25:Gyro.c        **** 	I2C = new i2c;
-  26:Gyro.c        **** 	
-  27:Gyro.c        **** 	/*Initialize pointers to structures*/
-  28:Gyro.c        **** 	acceldata_ = new acc_data;
-  29:Gyro.c        **** 	gyrodata_ = new gyro_data;
-  30:Gyro.c        **** 	sensordata_ = new sensor_data(gyrodata_,
-  31:Gyro.c        **** 		acceldata_,
-  32:Gyro.c        **** 		&temperature_);
-  33:Gyro.c        **** 	sensordata_->gyro_ = gyrodata_;
-  34:Gyro.c        **** 	
-  35:Gyro.c        **** 	initGyro();
-  36:Gyro.c        **** };
-  37:Gyro.c        ****     
-  38:Gyro.c        **** Gyro::~Gyro(){
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 3
+  30:Gyro.c        **** }
+  31:Gyro.c        **** 
+  32:Gyro.c        **** /***************************************************
+  33:Gyro.c        **** * Default constructor for object creation. Initalizes
+  34:Gyro.c        **** * member-variables and sensors.
+  35:Gyro.c        **** * @param  none
+  36:Gyro.c        **** * @return void
+  37:Gyro.c        **** ****************************************************/
+  38:Gyro.c        **** Gyro::Gyro(){
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 3
 
 
-  77              		.loc 1 38 0
+  39:Gyro.c        **** 	/*Make I2C interface*/
+  40:Gyro.c        **** 	I2C = new i2c;
+  41:Gyro.c        **** 	
+  42:Gyro.c        **** 	/*Initialize pointers to structures*/
+  43:Gyro.c        **** 	acceldata_ = new acc_data;
+  44:Gyro.c        **** 	gyrodata_ = new gyro_data;
+  45:Gyro.c        **** 	sensordata_ = new sensor_data(gyrodata_,
+  46:Gyro.c        **** 		acceldata_,
+  47:Gyro.c        **** 		&temperature_);
+  48:Gyro.c        **** 	sensordata_->gyro_ = gyrodata_;
+  49:Gyro.c        **** 	
+  50:Gyro.c        **** 	initGyro();
+  51:Gyro.c        **** };
+  52:Gyro.c        **** 
+  53:Gyro.c        **** /***************************************************
+  54:Gyro.c        **** * Destructor for object-destruction, deletes
+  55:Gyro.c        **** * dynamically allocated variables
+  56:Gyro.c        **** * @param none
+  57:Gyro.c        **** * @return void
+  58:Gyro.c        **** ****************************************************/
+  59:Gyro.c        **** Gyro::~Gyro(){
+  77              		.loc 1 59 0
   78              		.cfi_startproc
   79              		@ args = 0, pretend = 0, frame = 0
   80              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -132,35 +153,38 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
   85              		.cfi_offset 14, -4
   86 0002 0446     		mov	r4, r0
   87              	.LBB11:
-  39:Gyro.c        **** 	/*Free dynamically allocated memory*/
-  40:Gyro.c        **** 	delete I2C;
-  88              		.loc 1 40 0
+  60:Gyro.c        **** 	/*Free dynamically allocated memory*/
+  61:Gyro.c        **** 	delete I2C;
+  88              		.loc 1 61 0
   89 0004 0121     		movs	r1, #1
   90 0006 0068     		ldr	r0, [r0]
   91              	.LVL5:
   92 0008 FFF7FEFF 		bl	_ZdlPvj
   93              	.LVL6:
-  41:Gyro.c        **** 	delete acceldata_;
-  94              		.loc 1 41 0
+  62:Gyro.c        **** 	delete acceldata_;
+  94              		.loc 1 62 0
   95 000c 1421     		movs	r1, #20
   96 000e A068     		ldr	r0, [r4, #8]
   97 0010 FFF7FEFF 		bl	_ZdlPvj
   98              	.LVL7:
-  42:Gyro.c        **** 	delete gyrodata_;
-  99              		.loc 1 42 0
+  63:Gyro.c        **** 	delete gyrodata_;
+  99              		.loc 1 63 0
  100 0014 1421     		movs	r1, #20
  101 0016 E068     		ldr	r0, [r4, #12]
  102 0018 FFF7FEFF 		bl	_ZdlPvj
  103              	.LVL8:
-  43:Gyro.c        **** 	delete sensordata_;
- 104              		.loc 1 43 0
+  64:Gyro.c        **** 	delete sensordata_;
+ 104              		.loc 1 64 0
  105 001c 0C21     		movs	r1, #12
  106 001e 2069     		ldr	r0, [r4, #16]
  107 0020 FFF7FEFF 		bl	_ZdlPvj
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 4
+
+
  108              	.LVL9:
  109              	.LBE11:
-  44:Gyro.c        **** };
- 110              		.loc 1 44 0
+  65:Gyro.c        **** };
+ 110              		.loc 1 65 0
  111 0024 2046     		mov	r0, r4
  112 0026 10BD     		pop	{r4, pc}
  113              		.cfi_endproc
@@ -176,20 +200,28 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  123              		.type	_ZN4Gyro8initGyroEv, %function
  124              	_ZN4Gyro8initGyroEv:
  125              	.LFB84:
-  45:Gyro.c        **** 
-  46:Gyro.c        **** int Gyro::hasFallen()
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 4
-
-
-  47:Gyro.c        **** {
-  48:Gyro.c        **** 	getAccData();
-  49:Gyro.c        **** 	//return 1;
-  50:Gyro.c        **** 	return acceldata_->z_G < 0 ? 1 : 0;
-  51:Gyro.c        **** }
-  52:Gyro.c        **** 
-  53:Gyro.c        **** void Gyro::initGyro()
-  54:Gyro.c        **** {
- 126              		.loc 1 54 0
+  66:Gyro.c        **** 
+  67:Gyro.c        **** /***************************************************
+  68:Gyro.c        **** * Retrieve if gyroscope is upside down. Used to detect
+  69:Gyro.c        **** * if robot has fallen.
+  70:Gyro.c        **** * @param none
+  71:Gyro.c        **** * @return < 1 if fallen, 0 if not fallen >
+  72:Gyro.c        **** ****************************************************/
+  73:Gyro.c        **** int Gyro::hasFallen()
+  74:Gyro.c        **** {
+  75:Gyro.c        **** 	getAccData();
+  76:Gyro.c        **** 	//return 1;
+  77:Gyro.c        **** 	return acceldata_->z_G < 0 ? 1 : 0;
+  78:Gyro.c        **** }
+  79:Gyro.c        **** 
+  80:Gyro.c        **** /***************************************************
+  81:Gyro.c        **** * Initialize sensors
+  82:Gyro.c        **** * @param none
+  83:Gyro.c        **** * @return void
+  84:Gyro.c        **** ****************************************************/
+  85:Gyro.c        **** void Gyro::initGyro()
+  86:Gyro.c        **** {
+ 126              		.loc 1 86 0
  127              		.cfi_startproc
  128              		@ args = 0, pretend = 0, frame = 0
  129              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -199,54 +231,54 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  133              		.cfi_offset 4, -8
  134              		.cfi_offset 14, -4
  135 0002 0446     		mov	r4, r0
-  55:Gyro.c        ****     //Initializing MPU6050 -- Might need some tweaking
-  56:Gyro.c        ****     //UART_1_PutString("Intializing MPU6050..\r\n");
-  57:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD, PWR_MGMT_1, 0x00);
- 136              		.loc 1 57 0
+  87:Gyro.c        ****     //Initializing MPU6050 -- Might need some tweaking
+  88:Gyro.c        ****     //UART_1_PutString("Intializing MPU6050..\r\n");
+  89:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD, PWR_MGMT_1, 0x00);
+ 136              		.loc 1 89 0
  137 0004 0023     		movs	r3, #0
  138 0006 6B22     		movs	r2, #107
  139 0008 6821     		movs	r1, #104
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 5
+
+
  140 000a 0068     		ldr	r0, [r0]
  141              	.LVL11:
  142 000c FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
  143              	.LVL12:
-  58:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,SMPRT_DIV,109);
- 144              		.loc 1 58 0
+  90:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,SMPRT_DIV,109);
+ 144              		.loc 1 90 0
  145 0010 6D23     		movs	r3, #109
  146 0012 1922     		movs	r2, #25
  147 0014 6821     		movs	r1, #104
  148 0016 2068     		ldr	r0, [r4]
  149 0018 FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
  150              	.LVL13:
-  59:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,GYRO_CONFIG,0x18); // FULLSCALE
- 151              		.loc 1 59 0
+  91:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,GYRO_CONFIG,0x18); // FULLSCALE
+ 151              		.loc 1 91 0
  152 001c 1823     		movs	r3, #24
  153 001e 1B22     		movs	r2, #27
  154 0020 6821     		movs	r1, #104
  155 0022 2068     		ldr	r0, [r4]
  156 0024 FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
  157              	.LVL14:
-  60:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,USER_CTRL,0x20);
- 158              		.loc 1 60 0
+  92:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,USER_CTRL,0x20);
+ 158              		.loc 1 92 0
  159 0028 2023     		movs	r3, #32
  160 002a 6A22     		movs	r2, #106
  161 002c 6821     		movs	r1, #104
  162 002e 2068     		ldr	r0, [r4]
  163 0030 FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
  164              	.LVL15:
-  61:Gyro.c        ****         I2C->WriteByte(MPU6050_ADD,INT_PIN_CFG,0x37);
- 165              		.loc 1 61 0
+  93:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,INT_PIN_CFG,0x37);
+ 165              		.loc 1 93 0
  166 0034 3723     		movs	r3, #55
  167 0036 1A46     		mov	r2, r3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 5
-
-
  168 0038 6821     		movs	r1, #104
  169 003a 2068     		ldr	r0, [r4]
  170 003c FFF7FEFF 		bl	_ZN3i2c9WriteByteEhhh
  171              	.LVL16:
-  62:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,CONFIG,6);         //6 very slow
- 172              		.loc 1 62 0
+  94:Gyro.c        ****     I2C->WriteByte(MPU6050_ADD,CONFIG,6);         //6 very slow
+ 172              		.loc 1 94 0
  173 0040 0623     		movs	r3, #6
  174 0042 1A22     		movs	r2, #26
  175 0044 6821     		movs	r1, #104
@@ -265,8 +297,11 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  188              		.type	_ZN4GyroC2Ev, %function
  189              	_ZN4GyroC2Ev:
  190              	.LFB78:
-  23:Gyro.c        **** 	/*Make I2C interface*/
- 191              		.loc 1 23 0
+  38:Gyro.c        **** 	/*Make I2C interface*/
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 6
+
+
+ 191              		.loc 1 38 0
  192              		.cfi_startproc
  193              		@ args = 0, pretend = 0, frame = 0
  194              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -279,28 +314,25 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  201              		.cfi_offset 14, -4
  202 0002 0446     		mov	r4, r0
  203              	.LBB12:
-  23:Gyro.c        **** 	/*Make I2C interface*/
- 204              		.loc 1 23 0
+  38:Gyro.c        **** 	/*Make I2C interface*/
+ 204              		.loc 1 38 0
  205 0004 0026     		movs	r6, #0
  206 0006 4660     		str	r6, [r0, #4]	@ float
  207 0008 0025     		movs	r5, #0
  208 000a 8560     		str	r5, [r0, #8]
  209 000c C560     		str	r5, [r0, #12]
  210 000e 0561     		str	r5, [r0, #16]
-  25:Gyro.c        **** 	
- 211              		.loc 1 25 0
+  40:Gyro.c        **** 	
+ 211              		.loc 1 40 0
  212 0010 0120     		movs	r0, #1
  213              	.LVL19:
  214 0012 FFF7FEFF 		bl	_Znwj
  215              	.LVL20:
  216 0016 2060     		str	r0, [r4]
-  28:Gyro.c        **** 	gyrodata_ = new gyro_data;
- 217              		.loc 1 28 0
+  43:Gyro.c        **** 	gyrodata_ = new gyro_data;
+ 217              		.loc 1 43 0
  218 0018 1420     		movs	r0, #20
  219 001a FFF7FEFF 		bl	_Znwj
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 6
-
-
  220              	.LVL21:
  221              	.LBB13:
  222              	.LBB14:
@@ -326,6 +358,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
   19:GyroDefs.h    ****     // PSoC include, this has to be wrapped
   20:GyroDefs.h    ****     #include "project.h"
   21:GyroDefs.h    **** 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 7
+
+
   22:GyroDefs.h    **** #ifdef __cplusplus
   23:GyroDefs.h    **** }
   24:GyroDefs.h    **** #endif
@@ -358,9 +393,6 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
   51:GyroDefs.h    **** 
   52:GyroDefs.h    **** /*Structure for accelerometer data*/
   53:GyroDefs.h    **** typedef struct acc_data {
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 7
-
-
  224              		.loc 2 53 0
  225 001e 0580     		strh	r5, [r0]	@ movhi
  226 0020 4580     		strh	r5, [r0, #2]	@ movhi
@@ -371,11 +403,11 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  231              	.LVL22:
  232              	.LBE14:
  233              	.LBE13:
-  28:Gyro.c        **** 	gyrodata_ = new gyro_data;
- 234              		.loc 1 28 0
+  43:Gyro.c        **** 	gyrodata_ = new gyro_data;
+ 234              		.loc 1 43 0
  235 002a A060     		str	r0, [r4, #8]
-  29:Gyro.c        **** 	sensordata_ = new sensor_data(gyrodata_,
- 236              		.loc 1 29 0
+  44:Gyro.c        **** 	sensordata_ = new sensor_data(gyrodata_,
+ 236              		.loc 1 44 0
  237 002c 1420     		movs	r0, #20
  238 002e FFF7FEFF 		bl	_Znwj
  239              	.LVL23:
@@ -386,17 +418,20 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  243 0032 0580     		strh	r5, [r0]	@ movhi
  244 0034 4580     		strh	r5, [r0, #2]	@ movhi
  245 0036 8580     		strh	r5, [r0, #4]	@ movhi
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 8
+
+
  246 0038 8660     		str	r6, [r0, #8]	@ float
  247 003a C660     		str	r6, [r0, #12]	@ float
  248 003c 0661     		str	r6, [r0, #16]	@ float
  249              	.LVL24:
  250              	.LBE16:
  251              	.LBE15:
-  29:Gyro.c        **** 	sensordata_ = new sensor_data(gyrodata_,
- 252              		.loc 1 29 0
+  44:Gyro.c        **** 	sensordata_ = new sensor_data(gyrodata_,
+ 252              		.loc 1 44 0
  253 003e E060     		str	r0, [r4, #12]
-  32:Gyro.c        **** 	sensordata_->gyro_ = gyrodata_;
- 254              		.loc 1 32 0
+  47:Gyro.c        **** 	sensordata_->gyro_ = gyrodata_;
+ 254              		.loc 1 47 0
  255 0040 0C20     		movs	r0, #12
  256 0042 FFF7FEFF 		bl	_Znwj
  257              	.LVL25:
@@ -407,21 +442,18 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  262 004e FFF7FEFF 		bl	_ZN11sensor_dataC1EP9gyro_dataP8acc_dataPf
  263              	.LVL26:
  264 0052 2561     		str	r5, [r4, #16]
-  33:Gyro.c        **** 	
- 265              		.loc 1 33 0
+  48:Gyro.c        **** 	
+ 265              		.loc 1 48 0
  266 0054 E368     		ldr	r3, [r4, #12]
  267 0056 2B60     		str	r3, [r5]
-  35:Gyro.c        **** };
- 268              		.loc 1 35 0
+  50:Gyro.c        **** };
+ 268              		.loc 1 50 0
  269 0058 2046     		mov	r0, r4
  270 005a FFF7FEFF 		bl	_ZN4Gyro8initGyroEv
  271              	.LVL27:
  272              	.LBE12:
-  36:Gyro.c        ****     
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 8
-
-
- 273              		.loc 1 36 0
+  51:Gyro.c        **** 
+ 273              		.loc 1 51 0
  274 005e 2046     		mov	r0, r4
  275 0060 70BD     		pop	{r4, r5, r6, pc}
  276              		.cfi_endproc
@@ -439,12 +471,20 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  288              		.type	_ZN4Gyro10getAccDataEv, %function
  289              	_ZN4Gyro10getAccDataEv:
  290              	.LFB85:
-  63:Gyro.c        ****     
-  64:Gyro.c        **** }
-  65:Gyro.c        **** 
-  66:Gyro.c        **** acc_data* Gyro::getAccData()
-  67:Gyro.c        **** {
- 291              		.loc 1 67 0
+  95:Gyro.c        ****     
+  96:Gyro.c        **** }
+  97:Gyro.c        **** 
+  98:Gyro.c        **** /***************************************************
+  99:Gyro.c        **** * Used to update and retrieve member accelerometer data
+ 100:Gyro.c        **** * @param none
+ 101:Gyro.c        **** * @return <pointer to member accelerometer-object (acceldata_)>
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 9
+
+
+ 102:Gyro.c        **** ****************************************************/
+ 103:Gyro.c        **** acc_data* Gyro::getAccData()
+ 104:Gyro.c        **** {
+ 291              		.loc 1 104 0
  292              		.cfi_startproc
  293              		@ args = 0, pretend = 0, frame = 8
  294              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -457,12 +497,12 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  301 0002 85B0     		sub	sp, sp, #20
  302              		.cfi_def_cfa_offset 32
  303 0004 0446     		mov	r4, r0
-  68:Gyro.c        **** 	//Buffer for sensor data
-  69:Gyro.c        ****     uint8_t rx_buffer[6];
-  70:Gyro.c        **** 
-  71:Gyro.c        ****     /*Read data into buffer*/
-  72:Gyro.c        ****     I2C->ReadBytes(MPU6050_ADD,START_ACC_DATA, 6, rx_buffer);
- 304              		.loc 1 72 0
+ 105:Gyro.c        **** 	//Buffer for sensor data
+ 106:Gyro.c        ****     uint8_t rx_buffer[6];
+ 107:Gyro.c        **** 
+ 108:Gyro.c        ****     /*Read data into buffer*/
+ 109:Gyro.c        ****     I2C->ReadBytes(MPU6050_ADD,START_ACC_DATA, 6, rx_buffer);
+ 304              		.loc 1 109 0
  305 0006 02AB     		add	r3, sp, #8
  306 0008 0093     		str	r3, [sp]
  307 000a 0623     		movs	r3, #6
@@ -472,36 +512,36 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  311              	.LVL29:
  312 0012 FFF7FEFF 		bl	_ZN3i2c9ReadBytesEhhhPh
  313              	.LVL30:
-  73:Gyro.c        ****     
-  74:Gyro.c        ****     //Extract raw data
-  75:Gyro.c        ****     acceldata_->x = rx_buffer[0] << 8 | rx_buffer[1];
- 314              		.loc 1 75 0
+ 110:Gyro.c        ****     
+ 111:Gyro.c        ****     //Extract raw data
+ 112:Gyro.c        ****     acceldata_->x = rx_buffer[0] << 8 | rx_buffer[1];
+ 314              		.loc 1 112 0
  315 0016 A268     		ldr	r2, [r4, #8]
  316 0018 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 9
-
-
  317 001c 9DF80930 		ldrb	r3, [sp, #9]	@ zero_extendqisi2
  318 0020 43EA0123 		orr	r3, r3, r1, lsl #8
  319 0024 1380     		strh	r3, [r2]	@ movhi
-  76:Gyro.c        ****     acceldata_->y = rx_buffer[2] << 8 | rx_buffer[3];
- 320              		.loc 1 76 0
+ 113:Gyro.c        ****     acceldata_->y = rx_buffer[2] << 8 | rx_buffer[3];
+ 320              		.loc 1 113 0
  321 0026 A268     		ldr	r2, [r4, #8]
  322 0028 9DF80A10 		ldrb	r1, [sp, #10]	@ zero_extendqisi2
  323 002c 9DF80B30 		ldrb	r3, [sp, #11]	@ zero_extendqisi2
  324 0030 43EA0123 		orr	r3, r3, r1, lsl #8
  325 0034 5380     		strh	r3, [r2, #2]	@ movhi
-  77:Gyro.c        ****     acceldata_->z = rx_buffer[4] << 8 | rx_buffer[5];
- 326              		.loc 1 77 0
+ 114:Gyro.c        ****     acceldata_->z = rx_buffer[4] << 8 | rx_buffer[5];
+ 326              		.loc 1 114 0
  327 0036 A268     		ldr	r2, [r4, #8]
  328 0038 9DF80C10 		ldrb	r1, [sp, #12]	@ zero_extendqisi2
  329 003c 9DF80D30 		ldrb	r3, [sp, #13]	@ zero_extendqisi2
  330 0040 43EA0123 		orr	r3, r3, r1, lsl #8
  331 0044 9380     		strh	r3, [r2, #4]	@ movhi
-  78:Gyro.c        ****     
-  79:Gyro.c        ****     /*Convert into G's*/
-  80:Gyro.c        ****     acceldata_->x_G = acceldata_->x / 8192.0f;
- 332              		.loc 1 80 0
+ 115:Gyro.c        ****     
+ 116:Gyro.c        ****     /*Convert into G's*/
+ 117:Gyro.c        ****     acceldata_->x_G = acceldata_->x / 8192.0f;
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 10
+
+
+ 332              		.loc 1 117 0
  333 0046 A568     		ldr	r5, [r4, #8]
  334 0048 B5F90000 		ldrsh	r0, [r5]
  335 004c FFF7FEFF 		bl	__aeabi_i2f
@@ -510,8 +550,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  338 0054 FFF7FEFF 		bl	__aeabi_fmul
  339              	.LVL32:
  340 0058 A860     		str	r0, [r5, #8]	@ float
-  81:Gyro.c        ****     acceldata_->y_G = acceldata_->y / 8192.0f;
- 341              		.loc 1 81 0
+ 118:Gyro.c        ****     acceldata_->y_G = acceldata_->y / 8192.0f;
+ 341              		.loc 1 118 0
  342 005a A568     		ldr	r5, [r4, #8]
  343 005c B5F90200 		ldrsh	r0, [r5, #2]
  344 0060 FFF7FEFF 		bl	__aeabi_i2f
@@ -520,8 +560,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  347 0068 FFF7FEFF 		bl	__aeabi_fmul
  348              	.LVL34:
  349 006c E860     		str	r0, [r5, #12]	@ float
-  82:Gyro.c        ****     acceldata_->z_G = acceldata_->z / 8192.0f;
- 350              		.loc 1 82 0
+ 119:Gyro.c        ****     acceldata_->z_G = acceldata_->z / 8192.0f;
+ 350              		.loc 1 119 0
  351 006e A568     		ldr	r5, [r4, #8]
  352 0070 B5F90400 		ldrsh	r0, [r5, #4]
  353 0074 FFF7FEFF 		bl	__aeabi_i2f
@@ -530,17 +570,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  356 007c FFF7FEFF 		bl	__aeabi_fmul
  357              	.LVL36:
  358 0080 2861     		str	r0, [r5, #16]	@ float
-  83:Gyro.c        **** 	
-  84:Gyro.c        **** 	return acceldata_;
-  85:Gyro.c        **** }
- 359              		.loc 1 85 0
+ 120:Gyro.c        **** 	
+ 121:Gyro.c        **** 	return acceldata_;
+ 122:Gyro.c        **** }
+ 359              		.loc 1 122 0
  360 0082 A068     		ldr	r0, [r4, #8]
  361 0084 05B0     		add	sp, sp, #20
  362              		.cfi_def_cfa_offset 12
  363              		@ sp needed
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 10
-
-
  364 0086 30BD     		pop	{r4, r5, pc}
  365              		.cfi_endproc
  366              	.LFE85:
@@ -554,23 +591,26 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  374              		.type	_ZN4Gyro9hasFallenEv, %function
  375              	_ZN4Gyro9hasFallenEv:
  376              	.LFB83:
-  47:Gyro.c        **** 	getAccData();
- 377              		.loc 1 47 0
+  74:Gyro.c        **** 	getAccData();
+ 377              		.loc 1 74 0
  378              		.cfi_startproc
  379              		@ args = 0, pretend = 0, frame = 0
  380              		@ frame_needed = 0, uses_anonymous_args = 0
  381              	.LVL37:
  382 0000 10B5     		push	{r4, lr}
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 11
+
+
  383              		.cfi_def_cfa_offset 8
  384              		.cfi_offset 4, -8
  385              		.cfi_offset 14, -4
  386 0002 0446     		mov	r4, r0
-  48:Gyro.c        **** 	//return 1;
- 387              		.loc 1 48 0
+  75:Gyro.c        **** 	//return 1;
+ 387              		.loc 1 75 0
  388 0004 FFF7FEFF 		bl	_ZN4Gyro10getAccDataEv
  389              	.LVL38:
-  50:Gyro.c        **** }
- 390              		.loc 1 50 0
+  77:Gyro.c        **** }
+ 390              		.loc 1 77 0
  391 0008 A368     		ldr	r3, [r4, #8]
  392 000a 0021     		movs	r1, #0
  393 000c 1869     		ldr	r0, [r3, #16]	@ float
@@ -582,8 +622,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  399              	.LVL40:
  400              	.L18:
  401 0018 0020     		movs	r0, #0
-  51:Gyro.c        **** 
- 402              		.loc 1 51 0
+  78:Gyro.c        **** 
+ 402              		.loc 1 78 0
  403 001a 10BD     		pop	{r4, pc}
  404              		.cfi_endproc
  405              	.LFE83:
@@ -598,13 +638,15 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  414              		.type	_ZN4Gyro7getTempEv, %function
  415              	_ZN4Gyro7getTempEv:
  416              	.LFB86:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 11
-
-
-  86:Gyro.c        **** 
-  87:Gyro.c        **** float Gyro::getTemp()
-  88:Gyro.c        **** {
- 417              		.loc 1 88 0
+ 123:Gyro.c        **** 
+ 124:Gyro.c        **** /***************************************************
+ 125:Gyro.c        **** * Used to update and retrieve member temperature data
+ 126:Gyro.c        **** * @param none
+ 127:Gyro.c        **** * @return <current sensor temperature>
+ 128:Gyro.c        **** ****************************************************/
+ 129:Gyro.c        **** float Gyro::getTemp()
+ 130:Gyro.c        **** {
+ 417              		.loc 1 130 0
  418              		.cfi_startproc
  419              		@ args = 0, pretend = 0, frame = 8
  420              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -616,12 +658,15 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  426 0002 84B0     		sub	sp, sp, #16
  427              		.cfi_def_cfa_offset 24
  428 0004 0446     		mov	r4, r0
-  89:Gyro.c        ****     uint8_t rx_buffer[2];
-  90:Gyro.c        ****     uint16_t temp_buffer;
-  91:Gyro.c        ****     
-  92:Gyro.c        ****     /*Read data into buffer*/
-  93:Gyro.c        ****     I2C->ReadBytes(MPU6050_ADD,START_TEMP_DATA, 2, rx_buffer);
- 429              		.loc 1 93 0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 12
+
+
+ 131:Gyro.c        ****     uint8_t rx_buffer[2];
+ 132:Gyro.c        ****     uint16_t temp_buffer;
+ 133:Gyro.c        ****     
+ 134:Gyro.c        ****     /*Read data into buffer*/
+ 135:Gyro.c        ****     I2C->ReadBytes(MPU6050_ADD,START_TEMP_DATA, 2, rx_buffer);
+ 429              		.loc 1 135 0
  430 0006 03AB     		add	r3, sp, #12
  431 0008 0093     		str	r3, [sp]
  432 000a 0223     		movs	r3, #2
@@ -631,17 +676,17 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  436              	.LVL42:
  437 0012 FFF7FEFF 		bl	_ZN3i2c9ReadBytesEhhhPh
  438              	.LVL43:
-  94:Gyro.c        ****     
-  95:Gyro.c        ****     /*Extract raw data*/
-  96:Gyro.c        ****     temp_buffer = rx_buffer[0] << 8 | rx_buffer[1];
- 439              		.loc 1 96 0
+ 136:Gyro.c        ****     
+ 137:Gyro.c        ****     /*Extract raw data*/
+ 138:Gyro.c        ****     temp_buffer = rx_buffer[0] << 8 | rx_buffer[1];
+ 439              		.loc 1 138 0
  440 0016 9DF80C00 		ldrb	r0, [sp, #12]	@ zero_extendqisi2
  441 001a 9DF80D30 		ldrb	r3, [sp, #13]	@ zero_extendqisi2
  442              	.LVL44:
-  97:Gyro.c        ****     
-  98:Gyro.c        ****     /*Convert to celsius*/
-  99:Gyro.c        ****     temperature_ = temp_buffer / 340.0f + 36.53f;
- 443              		.loc 1 99 0
+ 139:Gyro.c        ****     
+ 140:Gyro.c        ****     /*Convert to celsius*/
+ 141:Gyro.c        ****     temperature_ = temp_buffer / 340.0f + 36.53f;
+ 443              		.loc 1 141 0
  444 001e 43EA0020 		orr	r0, r3, r0, lsl #8
  445              	.LVL45:
  446 0022 FFF7FEFF 		bl	__aeabi_i2f
@@ -653,14 +698,11 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  452 002e FFF7FEFF 		bl	__aeabi_fadd
  453              	.LVL48:
  454 0032 6060     		str	r0, [r4, #4]	@ float
- 100:Gyro.c        **** 	return temperature_;
- 101:Gyro.c        **** }
- 455              		.loc 1 101 0
+ 142:Gyro.c        **** 	return temperature_;
+ 143:Gyro.c        **** }
+ 455              		.loc 1 143 0
  456 0034 04B0     		add	sp, sp, #16
  457              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 12
-
-
  458              		@ sp needed
  459 0036 10BD     		pop	{r4, pc}
  460              	.LVL49:
@@ -676,25 +718,38 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  470              		.align	2
  471              		.global	_ZN4Gyro11getGyroDataEv
  472              		.thumb
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 13
+
+
  473              		.thumb_func
  474              		.type	_ZN4Gyro11getGyroDataEv, %function
  475              	_ZN4Gyro11getGyroDataEv:
  476              	.LFB88:
- 102:Gyro.c        **** 
- 103:Gyro.c        **** sensor_data* Gyro::getSensorData()
- 104:Gyro.c        **** {
- 105:Gyro.c        **** 	/*Get new values from sensor!*/
- 106:Gyro.c        **** 	getAccData();
- 107:Gyro.c        **** 	getTemp();
- 108:Gyro.c        **** 	getGyroData();
- 109:Gyro.c        **** 	
- 110:Gyro.c        **** 	/*Return sensor struct*/
- 111:Gyro.c        **** 	return sensordata_;
- 112:Gyro.c        **** }
- 113:Gyro.c        **** 
- 114:Gyro.c        **** gyro_data* Gyro::getGyroData()
- 115:Gyro.c        **** {
- 477              		.loc 1 115 0
+ 144:Gyro.c        **** 
+ 145:Gyro.c        **** /***************************************************
+ 146:Gyro.c        **** * Used to update and retrieve all sensors data
+ 147:Gyro.c        **** * @param none
+ 148:Gyro.c        **** * @return <pointer to member sensor_data object>
+ 149:Gyro.c        **** ****************************************************/
+ 150:Gyro.c        **** sensor_data* Gyro::getSensorData()
+ 151:Gyro.c        **** {
+ 152:Gyro.c        **** 	/*Get new values from sensor!*/
+ 153:Gyro.c        **** 	getAccData();
+ 154:Gyro.c        **** 	getTemp();
+ 155:Gyro.c        **** 	getGyroData();
+ 156:Gyro.c        **** 	
+ 157:Gyro.c        **** 	/*Return sensor struct*/
+ 158:Gyro.c        **** 	return sensordata_;
+ 159:Gyro.c        **** }
+ 160:Gyro.c        **** 
+ 161:Gyro.c        **** /***************************************************
+ 162:Gyro.c        **** * Used to update and retrieve gyro data
+ 163:Gyro.c        **** * @param none
+ 164:Gyro.c        **** * @return <pointer to member gyro-data object (gyrodata_)>
+ 165:Gyro.c        **** ****************************************************/
+ 166:Gyro.c        **** gyro_data* Gyro::getGyroData()
+ 167:Gyro.c        **** {
+ 477              		.loc 1 167 0
  478              		.cfi_startproc
  479              		@ args = 0, pretend = 0, frame = 8
  480              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -707,51 +762,51 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  487 0002 85B0     		sub	sp, sp, #20
  488              		.cfi_def_cfa_offset 32
  489 0004 0446     		mov	r4, r0
- 116:Gyro.c        **** 	//Buffer for sensor data
- 117:Gyro.c        ****     uint8_t rx_buffer[6];
- 118:Gyro.c        **** 
- 119:Gyro.c        ****     /*Read data into buffer*/
- 120:Gyro.c        ****     I2C->ReadBytes(MPU6050_ADD,START_GYRO_DATA, 6, rx_buffer);
- 490              		.loc 1 120 0
+ 168:Gyro.c        **** 	//Buffer for sensor data
+ 169:Gyro.c        ****     uint8_t rx_buffer[6];
+ 170:Gyro.c        **** 
+ 171:Gyro.c        ****     /*Read data into buffer*/
+ 172:Gyro.c        ****     I2C->ReadBytes(MPU6050_ADD,START_GYRO_DATA, 6, rx_buffer);
+ 490              		.loc 1 172 0
  491 0006 02AB     		add	r3, sp, #8
  492 0008 0093     		str	r3, [sp]
  493 000a 0623     		movs	r3, #6
  494 000c 4322     		movs	r2, #67
  495 000e 6821     		movs	r1, #104
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 13
-
-
  496 0010 0068     		ldr	r0, [r0]
  497              	.LVL51:
  498 0012 FFF7FEFF 		bl	_ZN3i2c9ReadBytesEhhhPh
  499              	.LVL52:
- 121:Gyro.c        ****     
- 122:Gyro.c        ****     //Extract raw data
- 123:Gyro.c        ****     gyrodata_->x = rx_buffer[0] << 8 | rx_buffer[1];
- 500              		.loc 1 123 0
+ 173:Gyro.c        ****     
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 14
+
+
+ 174:Gyro.c        ****     //Extract raw data
+ 175:Gyro.c        ****     gyrodata_->x = rx_buffer[0] << 8 | rx_buffer[1];
+ 500              		.loc 1 175 0
  501 0016 E268     		ldr	r2, [r4, #12]
  502 0018 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
  503 001c 9DF80930 		ldrb	r3, [sp, #9]	@ zero_extendqisi2
  504 0020 43EA0123 		orr	r3, r3, r1, lsl #8
  505 0024 1380     		strh	r3, [r2]	@ movhi
- 124:Gyro.c        ****     gyrodata_->y = rx_buffer[2] << 8 | rx_buffer[3];
- 506              		.loc 1 124 0
+ 176:Gyro.c        ****     gyrodata_->y = rx_buffer[2] << 8 | rx_buffer[3];
+ 506              		.loc 1 176 0
  507 0026 E268     		ldr	r2, [r4, #12]
  508 0028 9DF80A10 		ldrb	r1, [sp, #10]	@ zero_extendqisi2
  509 002c 9DF80B30 		ldrb	r3, [sp, #11]	@ zero_extendqisi2
  510 0030 43EA0123 		orr	r3, r3, r1, lsl #8
  511 0034 5380     		strh	r3, [r2, #2]	@ movhi
- 125:Gyro.c        ****     gyrodata_->z = rx_buffer[4] << 8 | rx_buffer[5];
- 512              		.loc 1 125 0
+ 177:Gyro.c        ****     gyrodata_->z = rx_buffer[4] << 8 | rx_buffer[5];
+ 512              		.loc 1 177 0
  513 0036 E268     		ldr	r2, [r4, #12]
  514 0038 9DF80C10 		ldrb	r1, [sp, #12]	@ zero_extendqisi2
  515 003c 9DF80D30 		ldrb	r3, [sp, #13]	@ zero_extendqisi2
  516 0040 43EA0123 		orr	r3, r3, r1, lsl #8
  517 0044 9380     		strh	r3, [r2, #4]	@ movhi
- 126:Gyro.c        ****     
- 127:Gyro.c        ****     /*Convert into radians per second*/
- 128:Gyro.c        ****     gyrodata_->x_rad = gyrodata_->x / 939.650784f;
- 518              		.loc 1 128 0
+ 178:Gyro.c        ****     
+ 179:Gyro.c        ****     /*Convert into radians per second*/
+ 180:Gyro.c        ****     gyrodata_->x_rad = gyrodata_->x / 939.650784f;
+ 518              		.loc 1 180 0
  519 0046 E568     		ldr	r5, [r4, #12]
  520 0048 B5F90000 		ldrsh	r0, [r5]
  521 004c FFF7FEFF 		bl	__aeabi_i2f
@@ -760,8 +815,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  524 0052 FFF7FEFF 		bl	__aeabi_fdiv
  525              	.LVL54:
  526 0056 A860     		str	r0, [r5, #8]	@ float
- 129:Gyro.c        ****     gyrodata_->y_rad = gyrodata_->y / 939.650784f;
- 527              		.loc 1 129 0
+ 181:Gyro.c        ****     gyrodata_->y_rad = gyrodata_->y / 939.650784f;
+ 527              		.loc 1 181 0
  528 0058 E568     		ldr	r5, [r4, #12]
  529 005a B5F90200 		ldrsh	r0, [r5, #2]
  530 005e FFF7FEFF 		bl	__aeabi_i2f
@@ -770,23 +825,23 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  533 0064 FFF7FEFF 		bl	__aeabi_fdiv
  534              	.LVL56:
  535 0068 E860     		str	r0, [r5, #12]	@ float
- 130:Gyro.c        ****     gyrodata_->z_rad = gyrodata_->z / 939.650784f;
- 536              		.loc 1 130 0
+ 182:Gyro.c        ****     gyrodata_->z_rad = gyrodata_->z / 939.650784f;
+ 536              		.loc 1 182 0
  537 006a E568     		ldr	r5, [r4, #12]
  538 006c B5F90400 		ldrsh	r0, [r5, #4]
  539 0070 FFF7FEFF 		bl	__aeabi_i2f
  540              	.LVL57:
  541 0074 0349     		ldr	r1, .L26
  542 0076 FFF7FEFF 		bl	__aeabi_fdiv
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 14
-
-
  543              	.LVL58:
  544 007a 2861     		str	r0, [r5, #16]	@ float
- 131:Gyro.c        **** 	
- 132:Gyro.c        **** 	return gyrodata_;
- 133:Gyro.c        **** }
- 545              		.loc 1 133 0
+ 183:Gyro.c        **** 	
+ 184:Gyro.c        **** 	return gyrodata_;
+ 185:Gyro.c        **** }
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 15
+
+
+ 545              		.loc 1 185 0
  546 007c E068     		ldr	r0, [r4, #12]
  547 007e 05B0     		add	sp, sp, #20
  548              		.cfi_def_cfa_offset 12
@@ -808,8 +863,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  564              		.type	_ZN4Gyro13getSensorDataEv, %function
  565              	_ZN4Gyro13getSensorDataEv:
  566              	.LFB87:
- 104:Gyro.c        **** 	/*Get new values from sensor!*/
- 567              		.loc 1 104 0
+ 151:Gyro.c        **** 	/*Get new values from sensor!*/
+ 567              		.loc 1 151 0
  568              		.cfi_startproc
  569              		@ args = 0, pretend = 0, frame = 0
  570              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -819,33 +874,33 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  574              		.cfi_offset 4, -8
  575              		.cfi_offset 14, -4
  576 0002 0446     		mov	r4, r0
- 106:Gyro.c        **** 	getTemp();
- 577              		.loc 1 106 0
+ 153:Gyro.c        **** 	getTemp();
+ 577              		.loc 1 153 0
  578 0004 FFF7FEFF 		bl	_ZN4Gyro10getAccDataEv
  579              	.LVL61:
- 107:Gyro.c        **** 	getGyroData();
- 580              		.loc 1 107 0
+ 154:Gyro.c        **** 	getGyroData();
+ 580              		.loc 1 154 0
  581 0008 2046     		mov	r0, r4
  582 000a FFF7FEFF 		bl	_ZN4Gyro7getTempEv
  583              	.LVL62:
- 108:Gyro.c        **** 	
- 584              		.loc 1 108 0
+ 155:Gyro.c        **** 	
+ 584              		.loc 1 155 0
  585 000e 2046     		mov	r0, r4
  586 0010 FFF7FEFF 		bl	_ZN4Gyro11getGyroDataEv
  587              	.LVL63:
- 112:Gyro.c        **** 
- 588              		.loc 1 112 0
+ 159:Gyro.c        **** 
+ 588              		.loc 1 159 0
  589 0014 2069     		ldr	r0, [r4, #16]
  590 0016 10BD     		pop	{r4, pc}
  591              		.cfi_endproc
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 15
-
-
  592              	.LFE87:
  593              		.size	_ZN4Gyro13getSensorDataEv, .-_ZN4Gyro13getSensorDataEv
  594              		.text
  595              	.Letext0:
  596              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 16
+
+
  597              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  598              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  599              		.file 6 "i2c.h"
@@ -898,14 +953,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  646 005d 07       		.byte	0x7
  647 005e 5D030000 		.4byte	.LASF6
  648 0062 03       		.uleb128 0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 16
-
-
  649 0063 4C040000 		.4byte	.LASF7
  650 0067 03       		.byte	0x3
  651 0068 3F       		.byte	0x3f
  652 0069 6D000000 		.4byte	0x6d
  653 006d 02       		.uleb128 0x2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 17
+
+
  654 006e 04       		.byte	0x4
  655 006f 05       		.byte	0x5
  656 0070 18020000 		.4byte	.LASF8
@@ -958,14 +1013,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  703 00cc 04       		.byte	0x4
  704 00cd FD030000 		.4byte	.LASF18
  705 00d1 02       		.uleb128 0x2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 17
-
-
  706 00d2 01       		.byte	0x1
  707 00d3 08       		.byte	0x8
  708 00d4 8D030000 		.4byte	.LASF19
  709 00d8 03       		.uleb128 0x3
  710 00d9 1C010000 		.4byte	.LASF20
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 18
+
+
  711 00dd 05       		.byte	0x5
  712 00de D8       		.byte	0xd8
  713 00df 90000000 		.4byte	0x90
@@ -1018,14 +1073,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  760 014a 0B       		.uleb128 0xb
  761 014b 81020000 		.4byte	0x281
  762 014f 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 18
-
-
  763 0150 0A       		.uleb128 0xa
  764 0151 4B020000 		.4byte	.LASF24
  765 0155 06       		.byte	0x6
  766 0156 1E       		.byte	0x1e
  767 0157 36040000 		.4byte	.LASF26
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 19
+
+
  768 015b 01       		.byte	0x1
  769 015c 64010000 		.4byte	0x164
  770 0160 79010000 		.4byte	0x179
@@ -1078,14 +1133,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  817 01d1 92030000 		.4byte	.LASF31
  818 01d5 06       		.byte	0x6
  819 01d6 21       		.byte	0x21
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 19
-
-
  820 01d7 BD000000 		.4byte	.LASF32
  821 01db 01       		.byte	0x1
  822 01dc E4010000 		.4byte	0x1e4
  823 01e0 FE010000 		.4byte	0x1fe
  824 01e4 09       		.uleb128 0x9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 20
+
+
  825 01e5 7B020000 		.4byte	0x27b
  826 01e9 0B       		.uleb128 0xb
  827 01ea 97000000 		.4byte	0x97
@@ -1138,14 +1193,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  874 025b 24       		.byte	0x24
  875 025c 14040000 		.4byte	.LASF50
  876 0260 01       		.byte	0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 20
-
-
  877 0261 65020000 		.4byte	0x265
  878 0265 09       		.uleb128 0x9
  879 0266 7B020000 		.4byte	0x27b
  880 026a 0B       		.uleb128 0xb
  881 026b 97000000 		.4byte	0x97
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 21
+
+
  882 026f 0B       		.uleb128 0xb
  883 0270 AD000000 		.4byte	0xad
  884 0274 0B       		.uleb128 0xb
@@ -1198,14 +1253,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  931 02ca 3C000000 		.4byte	.LASF39
  932 02ce 02       		.byte	0x2
  933 02cf 31       		.byte	0x31
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 21
-
-
  934 02d0 C3000000 		.4byte	0xc3
  935 02d4 10       		.byte	0x10
  936 02d5 11       		.uleb128 0x11
  937 02d6 25050000 		.4byte	.LASF40
  938 02da 39020000 		.4byte	.LASF42
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 22
+
+
  939 02de ED020000 		.4byte	0x2ed
  940 02e2 E6020000 		.4byte	0x2e6
  941 02e6 09       		.uleb128 0x9
@@ -1258,14 +1313,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  988 033f 0C       		.byte	0xc
  989 0340 0F       		.uleb128 0xf
  990 0341 7A5F4700 		.ascii	"z_G\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 22
-
-
  991 0345 02       		.byte	0x2
  992 0346 3B       		.byte	0x3b
  993 0347 C3000000 		.4byte	0xc3
  994 034b 10       		.byte	0x10
  995 034c 11       		.uleb128 0x11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 23
+
+
  996 034d 41050000 		.4byte	.LASF41
  997 0351 40030000 		.4byte	.LASF43
  998 0355 64030000 		.4byte	0x364
@@ -1318,14 +1373,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1045 03bd FD030000 		.4byte	0x3fd
  1046 03c1 0B       		.uleb128 0xb
  1047 03c2 EB030000 		.4byte	0x3eb
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 23
-
-
  1048 03c6 0B       		.uleb128 0xb
  1049 03c7 F1030000 		.4byte	0x3f1
  1050 03cb 0B       		.uleb128 0xb
  1051 03cc F7030000 		.4byte	0x3f7
  1052 03d0 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 24
+
+
  1053 03d1 13       		.uleb128 0x13
  1054 03d2 2D020000 		.4byte	.LASF44
  1055 03d6 02       		.byte	0x2
@@ -1378,14 +1433,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1102 0438 2B       		.byte	0x2b
  1103 0439 F1030000 		.4byte	0x3f1
  1104 043d 08       		.byte	0x8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 24
-
-
  1105 043e 10       		.uleb128 0x10
  1106 043f D9030000 		.4byte	.LASF54
  1107 0443 07       		.byte	0x7
  1108 0444 2C       		.byte	0x2c
  1109 0445 EB030000 		.4byte	0x3eb
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 25
+
+
  1110 0449 0C       		.byte	0xc
  1111 044a 10       		.uleb128 0x10
  1112 044b 51030000 		.4byte	.LASF55
@@ -1438,14 +1493,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1159 04bc 76020000 		.4byte	.LASF62
  1160 04c0 89000000 		.4byte	0x89
  1161 04c4 01       		.byte	0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 25
-
-
  1162 04c5 CD040000 		.4byte	0x4cd
  1163 04c9 D3040000 		.4byte	0x4d3
  1164 04cd 09       		.uleb128 0x9
  1165 04ce 46050000 		.4byte	0x546
  1166 04d2 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 26
+
+
  1167 04d3 12       		.uleb128 0x12
  1168 04d4 B2000000 		.4byte	.LASF63
  1169 04d8 07       		.byte	0x7
@@ -1498,14 +1553,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1216 054c 17       		.uleb128 0x17
  1217 054d D5020000 		.4byte	0x2d5
  1218 0551 02       		.byte	0x2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 26
-
-
  1219 0552 2B       		.byte	0x2b
  1220 0553 03       		.byte	0x3
  1221 0554 5C050000 		.4byte	0x55c
  1222 0558 66050000 		.4byte	0x566
  1223 055c 18       		.uleb128 0x18
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 27
+
+
  1224 055d BC030000 		.4byte	.LASF70
  1225 0561 66050000 		.4byte	0x566
  1226 0565 00       		.byte	0
@@ -1538,7 +1593,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1253 05a7 1B       		.uleb128 0x1b
  1254 05a8 4A050000 		.4byte	.LASF87
  1255 05ac 01       		.byte	0x1
- 1256 05ad 0F       		.byte	0xf
+ 1256 05ad 13       		.byte	0x13
  1257 05ae A7000000 		.4byte	.LASF88
  1258 05b2 F6000000 		.4byte	0xf6
  1259 05b6 00000000 		.4byte	.LFB69
@@ -1549,7 +1604,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1264 05c4 1C       		.uleb128 0x1c
  1265 05c5 31040000 		.4byte	.LASF73
  1266 05c9 01       		.byte	0x1
- 1267 05ca 0F       		.byte	0xf
+ 1267 05ca 13       		.byte	0x13
  1268 05cb D8000000 		.4byte	0xd8
  1269 05cf 00000000 		.4byte	.LLST0
  1270 05d3 1D       		.uleb128 0x1d
@@ -1558,19 +1613,19 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1273 05dc 1E       		.uleb128 0x1e
  1274 05dd 01       		.uleb128 0x1
  1275 05de 50       		.byte	0x50
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 27
-
-
  1276 05df 03       		.uleb128 0x3
  1277 05e0 F3       		.byte	0xf3
  1278 05e1 01       		.uleb128 0x1
  1279 05e2 50       		.byte	0x50
  1280 05e3 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 28
+
+
  1281 05e4 00       		.byte	0
  1282 05e5 1F       		.uleb128 0x1f
  1283 05e6 04040000 		.4byte	.LASF71
  1284 05ea 01       		.byte	0x1
- 1285 05eb 13       		.byte	0x13
+ 1285 05eb 1C       		.byte	0x1c
  1286 05ec BC020000 		.4byte	.LASF72
  1287 05f0 00000000 		.4byte	.LFB70
  1288 05f4 08000000 		.4byte	.LFE70-.LFB70
@@ -1580,7 +1635,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1292 05fe 20       		.uleb128 0x20
  1293 05ff 70747200 		.ascii	"ptr\000"
  1294 0603 01       		.byte	0x1
- 1295 0604 13       		.byte	0x13
+ 1295 0604 1C       		.byte	0x1c
  1296 0605 F6000000 		.4byte	0xf6
  1297 0609 21000000 		.4byte	.LLST1
  1298 060d 1D       		.uleb128 0x1d
@@ -1598,7 +1653,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1310 061f 17       		.uleb128 0x17
  1311 0620 74040000 		.4byte	0x474
  1312 0624 01       		.byte	0x1
- 1313 0625 26       		.byte	0x26
+ 1313 0625 3B       		.byte	0x3b
  1314 0626 00       		.byte	0
  1315 0627 2F060000 		.4byte	0x62f
  1316 062b 42060000 		.4byte	0x642
@@ -1618,14 +1673,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1330 0651 A3020000 		.4byte	.LASF75
  1331 0655 00000000 		.4byte	.LFB81
  1332 0659 28000000 		.4byte	.LFE81-.LFB81
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 28
-
-
  1333 065d 01       		.uleb128 0x1
  1334 065e 9C       		.byte	0x9c
  1335 065f 67060000 		.4byte	0x667
  1336 0663 B9060000 		.4byte	0x6b9
  1337 0667 22       		.uleb128 0x22
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 29
+
+
  1338 0668 2F060000 		.4byte	0x62f
  1339 066c 42000000 		.4byte	.LLST2
  1340 0670 23       		.uleb128 0x23
@@ -1671,21 +1726,21 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1380 06b9 24       		.uleb128 0x24
  1381 06ba 2A050000 		.4byte	0x52a
  1382 06be 01       		.byte	0x1
- 1383 06bf 35       		.byte	0x35
+ 1383 06bf 55       		.byte	0x55
  1384 06c0 00000000 		.4byte	.LFB84
  1385 06c4 4E000000 		.4byte	.LFE84-.LFB84
  1386 06c8 01       		.uleb128 0x1
  1387 06c9 9C       		.byte	0x9c
  1388 06ca D2060000 		.4byte	0x6d2
  1389 06ce 96070000 		.4byte	0x796
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 29
-
-
  1390 06d2 25       		.uleb128 0x25
  1391 06d3 BC030000 		.4byte	.LASF70
  1392 06d7 42060000 		.4byte	0x642
  1393 06db 60000000 		.4byte	.LLST3
  1394 06df 23       		.uleb128 0x23
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 30
+
+
  1395 06e0 10000000 		.4byte	.LVL12
  1396 06e4 A7010000 		.4byte	0x1a7
  1397 06e8 FE060000 		.4byte	0x6fe
@@ -1738,14 +1793,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1444 072c 51       		.byte	0x51
  1445 072d 02       		.uleb128 0x2
  1446 072e 08       		.byte	0x8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 30
-
-
  1447 072f 68       		.byte	0x68
  1448 0730 1E       		.uleb128 0x1e
  1449 0731 01       		.uleb128 0x1
  1450 0732 52       		.byte	0x52
  1451 0733 01       		.uleb128 0x1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 31
+
+
  1452 0734 4B       		.byte	0x4b
  1453 0735 1E       		.uleb128 0x1e
  1454 0736 01       		.uleb128 0x1
@@ -1798,14 +1853,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1501 0777 02       		.uleb128 0x2
  1502 0778 08       		.byte	0x8
  1503 0779 37       		.byte	0x37
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 31
-
-
  1504 077a 00       		.byte	0
  1505 077b 1D       		.uleb128 0x1d
  1506 077c 4C000000 		.4byte	.LVL17
  1507 0780 A7010000 		.4byte	0x1a7
  1508 0784 1E       		.uleb128 0x1e
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 32
+
+
  1509 0785 01       		.uleb128 0x1
  1510 0786 51       		.byte	0x51
  1511 0787 02       		.uleb128 0x2
@@ -1826,7 +1881,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1526 0796 17       		.uleb128 0x17
  1527 0797 56040000 		.4byte	0x456
  1528 079b 01       		.byte	0x1
- 1529 079c 17       		.byte	0x17
+ 1529 079c 26       		.byte	0x26
  1530 079d 00       		.byte	0
  1531 079e A6070000 		.4byte	0x7a6
  1532 07a2 B0070000 		.4byte	0x7b0
@@ -1851,21 +1906,21 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1551 07d9 1E000000 		.4byte	.LBB13
  1552 07dd 0C000000 		.4byte	.LBE13-.LBB13
  1553 07e1 01       		.byte	0x1
- 1554 07e2 1C       		.byte	0x1c
+ 1554 07e2 2B       		.byte	0x2b
  1555 07e3 F1070000 		.4byte	0x7f1
  1556 07e7 22       		.uleb128 0x22
  1557 07e8 7B050000 		.4byte	0x57b
  1558 07ec 9C000000 		.4byte	.LLST5
  1559 07f0 00       		.byte	0
  1560 07f1 26       		.uleb128 0x26
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 32
-
-
  1561 07f2 4C050000 		.4byte	0x54c
  1562 07f6 32000000 		.4byte	.LBB15
  1563 07fa 0C000000 		.4byte	.LBE15-.LBB15
  1564 07fe 01       		.byte	0x1
- 1565 07ff 1D       		.byte	0x1d
+ 1565 07ff 2C       		.byte	0x2c
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 33
+
+
  1566 0800 0E080000 		.4byte	0x80e
  1567 0804 22       		.uleb128 0x22
  1568 0805 5C050000 		.4byte	0x55c
@@ -1918,14 +1973,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1615 0864 01       		.uleb128 0x1
  1616 0865 50       		.byte	0x50
  1617 0866 02       		.uleb128 0x2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 33
-
-
  1618 0867 75       		.byte	0x75
  1619 0868 00       		.sleb128 0
  1620 0869 1E       		.uleb128 0x1e
  1621 086a 01       		.uleb128 0x1
  1622 086b 53       		.byte	0x53
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 34
+
+
  1623 086c 02       		.uleb128 0x2
  1624 086d 74       		.byte	0x74
  1625 086e 04       		.sleb128 4
@@ -1944,7 +1999,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1638 0881 28       		.uleb128 0x28
  1639 0882 D3040000 		.4byte	0x4d3
  1640 0886 01       		.byte	0x1
- 1641 0887 42       		.byte	0x42
+ 1641 0887 67       		.byte	0x67
  1642 0888 00000000 		.4byte	.LFB85
  1643 088c 88000000 		.4byte	.LFE85-.LFB85
  1644 0890 01       		.uleb128 0x1
@@ -1958,7 +2013,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1652 08a7 29       		.uleb128 0x29
  1653 08a8 C1030000 		.4byte	.LASF77
  1654 08ac 01       		.byte	0x1
- 1655 08ad 45       		.byte	0x45
+ 1655 08ad 6A       		.byte	0x6a
  1656 08ae D8080000 		.4byte	0x8d8
  1657 08b2 02       		.uleb128 0x2
  1658 08b3 91       		.byte	0x91
@@ -1978,14 +2033,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1672 08c7 02       		.uleb128 0x2
  1673 08c8 08       		.byte	0x8
  1674 08c9 3B       		.byte	0x3b
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 34
-
-
  1675 08ca 1E       		.uleb128 0x1e
  1676 08cb 01       		.uleb128 0x1
  1677 08cc 53       		.byte	0x53
  1678 08cd 01       		.uleb128 0x1
  1679 08ce 36       		.byte	0x36
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 35
+
+
  1680 08cf 1E       		.uleb128 0x1e
  1681 08d0 02       		.uleb128 0x2
  1682 08d1 7D       		.byte	0x7d
@@ -2005,7 +2060,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1696 08e8 28       		.uleb128 0x28
  1697 08e9 B5040000 		.4byte	0x4b5
  1698 08ed 01       		.byte	0x1
- 1699 08ee 2E       		.byte	0x2e
+ 1699 08ee 49       		.byte	0x49
  1700 08ef 00000000 		.4byte	.LFB83
  1701 08f3 1C000000 		.4byte	.LFE83-.LFB83
  1702 08f7 01       		.uleb128 0x1
@@ -2030,7 +2085,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1721 091f 28       		.uleb128 0x28
  1722 0920 F0040000 		.4byte	0x4f0
  1723 0924 01       		.byte	0x1
- 1724 0925 57       		.byte	0x57
+ 1724 0925 81       		.byte	0x81
  1725 0926 00000000 		.4byte	.LFB86
  1726 092a 40000000 		.4byte	.LFE86-.LFB86
  1727 092e 01       		.uleb128 0x1
@@ -2038,16 +2093,16 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1729 0930 38090000 		.4byte	0x938
  1730 0934 85090000 		.4byte	0x985
  1731 0938 25       		.uleb128 0x25
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 35
-
-
  1732 0939 BC030000 		.4byte	.LASF70
  1733 093d 42060000 		.4byte	0x642
  1734 0941 FE000000 		.4byte	.LLST9
  1735 0945 29       		.uleb128 0x29
  1736 0946 C1030000 		.4byte	.LASF77
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 36
+
+
  1737 094a 01       		.byte	0x1
- 1738 094b 59       		.byte	0x59
+ 1738 094b 83       		.byte	0x83
  1739 094c 85090000 		.4byte	0x985
  1740 0950 02       		.uleb128 0x2
  1741 0951 91       		.byte	0x91
@@ -2055,7 +2110,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1743 0953 2C       		.uleb128 0x2c
  1744 0954 2F050000 		.4byte	.LASF78
  1745 0958 01       		.byte	0x1
- 1746 0959 5A       		.byte	0x5a
+ 1746 0959 84       		.byte	0x84
  1747 095a AD000000 		.4byte	0xad
  1748 095e 2A010000 		.4byte	.LLST10
  1749 0962 1D       		.uleb128 0x1d
@@ -2097,15 +2152,15 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1785 0995 28       		.uleb128 0x28
  1786 0996 0D050000 		.4byte	0x50d
  1787 099a 01       		.byte	0x1
- 1788 099b 72       		.byte	0x72
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 36
-
-
+ 1788 099b A6       		.byte	0xa6
  1789 099c 00000000 		.4byte	.LFB88
  1790 09a0 88000000 		.4byte	.LFE88-.LFB88
  1791 09a4 01       		.uleb128 0x1
  1792 09a5 9C       		.byte	0x9c
  1793 09a6 AE090000 		.4byte	0x9ae
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 37
+
+
  1794 09aa EC090000 		.4byte	0x9ec
  1795 09ae 25       		.uleb128 0x25
  1796 09af BC030000 		.4byte	.LASF70
@@ -2114,7 +2169,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1799 09bb 29       		.uleb128 0x29
  1800 09bc C1030000 		.4byte	.LASF77
  1801 09c0 01       		.byte	0x1
- 1802 09c1 75       		.byte	0x75
+ 1802 09c1 A9       		.byte	0xa9
  1803 09c2 D8080000 		.4byte	0x8d8
  1804 09c6 02       		.uleb128 0x2
  1805 09c7 91       		.byte	0x91
@@ -2151,21 +2206,21 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1836 09ec 24       		.uleb128 0x24
  1837 09ed 97040000 		.4byte	0x497
  1838 09f1 01       		.byte	0x1
- 1839 09f2 67       		.byte	0x67
+ 1839 09f2 96       		.byte	0x96
  1840 09f3 00000000 		.4byte	.LFB87
  1841 09f7 18000000 		.4byte	.LFE87-.LFB87
  1842 09fb 01       		.uleb128 0x1
  1843 09fc 9C       		.byte	0x9c
  1844 09fd 050A0000 		.4byte	0xa05
  1845 0a01 4B0A0000 		.4byte	0xa4b
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 37
-
-
  1846 0a05 25       		.uleb128 0x25
  1847 0a06 BC030000 		.4byte	.LASF70
  1848 0a0a 42060000 		.4byte	0x642
  1849 0a0e 87010000 		.4byte	.LLST12
  1850 0a12 23       		.uleb128 0x23
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 38
+
+
  1851 0a13 08000000 		.4byte	.LVL61
  1852 0a17 81080000 		.4byte	0x881
  1853 0a1b 260A0000 		.4byte	0xa26
@@ -2218,14 +2273,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1900 0a72 30       		.uleb128 0x30
  1901 0a73 E3030000 		.4byte	.LASF90
  1902 0a77 04040000 		.4byte	.LASF71
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 38
-
-
  1903 0a7b E3030000 		.4byte	.LASF90
  1904 0a7f 00       		.byte	0
  1905              		.section	.debug_abbrev,"",%progbits
  1906              	.Ldebug_abbrev0:
  1907 0000 01       		.uleb128 0x1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 39
+
+
  1908 0001 11       		.uleb128 0x11
  1909 0002 01       		.byte	0x1
  1910 0003 25       		.uleb128 0x25
@@ -2278,14 +2333,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  1957 0032 03       		.uleb128 0x3
  1958 0033 08       		.uleb128 0x8
  1959 0034 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 39
-
-
  1960 0035 00       		.byte	0
  1961 0036 05       		.uleb128 0x5
  1962 0037 3B       		.uleb128 0x3b
  1963 0038 00       		.byte	0
  1964 0039 03       		.uleb128 0x3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 40
+
+
  1965 003a 0E       		.uleb128 0xe
  1966 003b 00       		.byte	0
  1967 003c 00       		.byte	0
@@ -2338,14 +2393,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2014 006b 00       		.byte	0
  2015 006c 09       		.uleb128 0x9
  2016 006d 05       		.uleb128 0x5
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 40
-
-
  2017 006e 00       		.byte	0
  2018 006f 49       		.uleb128 0x49
  2019 0070 13       		.uleb128 0x13
  2020 0071 34       		.uleb128 0x34
  2021 0072 19       		.uleb128 0x19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 41
+
+
  2022 0073 00       		.byte	0
  2023 0074 00       		.byte	0
  2024 0075 0A       		.uleb128 0xa
@@ -2398,14 +2453,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2071 00a4 64       		.uleb128 0x64
  2072 00a5 13       		.uleb128 0x13
  2073 00a6 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 41
-
-
  2074 00a7 00       		.byte	0
  2075 00a8 0D       		.uleb128 0xd
  2076 00a9 0F       		.uleb128 0xf
  2077 00aa 00       		.byte	0
  2078 00ab 0B       		.uleb128 0xb
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 42
+
+
  2079 00ac 0B       		.uleb128 0xb
  2080 00ad 49       		.uleb128 0x49
  2081 00ae 13       		.uleb128 0x13
@@ -2458,14 +2513,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2128 00dd 00       		.byte	0
  2129 00de 11       		.uleb128 0x11
  2130 00df 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 42
-
-
  2131 00e0 01       		.byte	0x1
  2132 00e1 3F       		.uleb128 0x3f
  2133 00e2 19       		.uleb128 0x19
  2134 00e3 03       		.uleb128 0x3
  2135 00e4 0E       		.uleb128 0xe
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 43
+
+
  2136 00e5 6E       		.uleb128 0x6e
  2137 00e6 0E       		.uleb128 0xe
  2138 00e7 49       		.uleb128 0x49
@@ -2518,14 +2573,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2185 0116 13       		.uleb128 0x13
  2186 0117 3C       		.uleb128 0x3c
  2187 0118 19       		.uleb128 0x19
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 43
-
-
  2188 0119 64       		.uleb128 0x64
  2189 011a 13       		.uleb128 0x13
  2190 011b 00       		.byte	0
  2191 011c 00       		.byte	0
  2192 011d 14       		.uleb128 0x14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 44
+
+
  2193 011e 02       		.uleb128 0x2
  2194 011f 01       		.byte	0x1
  2195 0120 03       		.uleb128 0x3
@@ -2578,14 +2633,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2242 014f 0B       		.uleb128 0xb
  2243 0150 6E       		.uleb128 0x6e
  2244 0151 0E       		.uleb128 0xe
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 44
-
-
  2245 0152 3C       		.uleb128 0x3c
  2246 0153 19       		.uleb128 0x19
  2247 0154 64       		.uleb128 0x64
  2248 0155 13       		.uleb128 0x13
  2249 0156 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 45
+
+
  2250 0157 00       		.byte	0
  2251 0158 17       		.uleb128 0x17
  2252 0159 2E       		.uleb128 0x2e
@@ -2638,14 +2693,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2299 0188 1B       		.uleb128 0x1b
  2300 0189 2E       		.uleb128 0x2e
  2301 018a 01       		.byte	0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 45
-
-
  2302 018b 3F       		.uleb128 0x3f
  2303 018c 19       		.uleb128 0x19
  2304 018d 03       		.uleb128 0x3
  2305 018e 0E       		.uleb128 0xe
  2306 018f 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 46
+
+
  2307 0190 0B       		.uleb128 0xb
  2308 0191 3B       		.uleb128 0x3b
  2309 0192 0B       		.uleb128 0xb
@@ -2698,14 +2753,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2356 01c7 18       		.uleb128 0x18
  2357 01c8 00       		.byte	0
  2358 01c9 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 46
-
-
  2359 01ca 1F       		.uleb128 0x1f
  2360 01cb 2E       		.uleb128 0x2e
  2361 01cc 01       		.byte	0x1
  2362 01cd 3F       		.uleb128 0x3f
  2363 01ce 19       		.uleb128 0x19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 47
+
+
  2364 01cf 03       		.uleb128 0x3
  2365 01d0 0E       		.uleb128 0xe
  2366 01d1 3A       		.uleb128 0x3a
@@ -2758,14 +2813,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2413 0201 13       		.uleb128 0x13
  2414 0202 9742     		.uleb128 0x2117
  2415 0204 19       		.uleb128 0x19
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 47
-
-
  2416 0205 01       		.uleb128 0x1
  2417 0206 13       		.uleb128 0x13
  2418 0207 00       		.byte	0
  2419 0208 00       		.byte	0
  2420 0209 22       		.uleb128 0x22
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 48
+
+
  2421 020a 05       		.uleb128 0x5
  2422 020b 00       		.byte	0
  2423 020c 31       		.uleb128 0x31
@@ -2818,14 +2873,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2470 023e 34       		.uleb128 0x34
  2471 023f 19       		.uleb128 0x19
  2472 0240 02       		.uleb128 0x2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 48
-
-
  2473 0241 17       		.uleb128 0x17
  2474 0242 00       		.byte	0
  2475 0243 00       		.byte	0
  2476 0244 26       		.uleb128 0x26
  2477 0245 1D       		.uleb128 0x1d
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 49
+
+
  2478 0246 01       		.byte	0x1
  2479 0247 31       		.uleb128 0x31
  2480 0248 13       		.uleb128 0x13
@@ -2878,14 +2933,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2527 027a 00       		.byte	0
  2528 027b 03       		.uleb128 0x3
  2529 027c 0E       		.uleb128 0xe
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 49
-
-
  2530 027d 3A       		.uleb128 0x3a
  2531 027e 0B       		.uleb128 0xb
  2532 027f 3B       		.uleb128 0x3b
  2533 0280 0B       		.uleb128 0xb
  2534 0281 49       		.uleb128 0x49
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 50
+
+
  2535 0282 13       		.uleb128 0x13
  2536 0283 02       		.uleb128 0x2
  2537 0284 18       		.uleb128 0x18
@@ -2938,14 +2993,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2584 02b3 3F       		.uleb128 0x3f
  2585 02b4 19       		.uleb128 0x19
  2586 02b5 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 50
-
-
  2587 02b6 19       		.uleb128 0x19
  2588 02b7 00       		.byte	0
  2589 02b8 00       		.byte	0
  2590 02b9 2E       		.uleb128 0x2e
  2591 02ba 35       		.uleb128 0x35
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 51
+
+
  2592 02bb 00       		.byte	0
  2593 02bc 49       		.uleb128 0x49
  2594 02bd 13       		.uleb128 0x13
@@ -2998,14 +3053,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2641 0016 01       		.uleb128 0x1
  2642 0017 50       		.byte	0x50
  2643 0018 9F       		.byte	0x9f
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 51
-
-
  2644 0019 00000000 		.4byte	0
  2645 001d 00000000 		.4byte	0
  2646              	.LLST1:
  2647 0021 00000000 		.4byte	.LVL2
  2648 0025 05000000 		.4byte	.LVL3-1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 52
+
+
  2649 0029 0100     		.2byte	0x1
  2650 002b 50       		.byte	0x50
  2651 002c 05000000 		.4byte	.LVL3-1
@@ -3058,14 +3113,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2698 00a7 00000000 		.4byte	0
  2699 00ab 00000000 		.4byte	0
  2700              	.LLST6:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 52
-
-
  2701 00af 32000000 		.4byte	.LVL23
  2702 00b3 3E000000 		.4byte	.LVL24
  2703 00b7 0100     		.2byte	0x1
  2704 00b9 50       		.byte	0x50
  2705 00ba 00000000 		.4byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 53
+
+
  2706 00be 00000000 		.4byte	0
  2707              	.LLST7:
  2708 00c2 00000000 		.4byte	.LVL28
@@ -3118,14 +3173,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2755 0138 73       		.byte	0x73
  2756 0139 00       		.sleb128 0
  2757 013a 21       		.byte	0x21
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 53
-
-
  2758 013b 9F       		.byte	0x9f
  2759 013c 22000000 		.4byte	.LVL45
  2760 0140 25000000 		.4byte	.LVL46-1
  2761 0144 0D00     		.2byte	0xd
  2762 0146 91       		.byte	0x91
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 54
+
+
  2763 0147 74       		.sleb128 -12
  2764 0148 94       		.byte	0x94
  2765 0149 01       		.byte	0x1
@@ -3178,14 +3233,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2812 000c 0000     		.2byte	0
  2813 000e 0000     		.2byte	0
  2814 0010 00000000 		.4byte	.LFB69
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 54
-
-
  2815 0014 08000000 		.4byte	.LFE69-.LFB69
  2816 0018 00000000 		.4byte	.LFB70
  2817 001c 08000000 		.4byte	.LFE70-.LFB70
  2818 0020 00000000 		.4byte	.LFB81
  2819 0024 28000000 		.4byte	.LFE81-.LFB81
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 55
+
+
  2820 0028 00000000 		.4byte	.LFB84
  2821 002c 4E000000 		.4byte	.LFE84-.LFB84
  2822 0030 00000000 		.4byte	.LFB78
@@ -3228,7 +3283,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2859 0054 00000000 		.4byte	0
  2860              		.section	.debug_line,"",%progbits
  2861              	.Ldebug_line0:
- 2862 0000 3B030000 		.section	.debug_str,"MS",%progbits,1
+ 2862 0000 39030000 		.section	.debug_str,"MS",%progbits,1
  2862      02005602 
  2862      00000201 
  2862      FB0E0D00 
@@ -3238,14 +3293,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2864      656E736F 
  2864      72446174 
  2864      6100
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 55
-
-
  2865              	.LASF85:
  2866 000e 5F5A4E33 		.ascii	"_ZN3i2cC4Ev\000"
  2866      69326343 
  2866      34457600 
  2867              	.LASF84:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 56
+
+
  2868 001a 6465636C 		.ascii	"decltype(nullptr)\000"
  2868      74797065 
  2868      286E756C 
@@ -3298,14 +3353,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2890      746100
  2891              	.LASF32:
  2892 00bd 5F5A4E33 		.ascii	"_ZN3i2c15WriteBytes16bitEhthPh\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 56
-
-
  2892      69326331 
  2892      35577269 
  2892      74654279 
  2892      74657331 
  2893              	.LASF5:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 57
+
+
  2894 00dc 5F5F7569 		.ascii	"__uint16_t\000"
  2894      6E743136 
  2894      5F7400
@@ -3358,14 +3413,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2916      7400
  2917              	.LASF53:
  2918 0176 61636365 		.ascii	"acceldata_\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 57
-
-
  2918      6C646174 
  2918      615F00
  2919              	.LASF33:
  2920 0181 57726974 		.ascii	"WriteByte16bit\000"
  2920      65427974 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 58
+
+
  2920      65313662 
  2920      697400
  2921              	.LASF45:
@@ -3418,14 +3473,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2939      00
  2940              	.LASF25:
  2941 0254 5F5A4E33 		.ascii	"_ZN3i2c9ReadBytesEhhhPh\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 58
-
-
  2941      69326339 
  2941      52656164 
  2941      42797465 
  2941      73456868 
  2942              	.LASF2:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 59
+
+
  2943 026c 5F5F7569 		.ascii	"__uint8_t\000"
  2943      6E74385F 
  2943      7400
@@ -3478,14 +3533,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2964              	.LASF11:
  2965 0304 6C6F6E67 		.ascii	"long long unsigned int\000"
  2965      206C6F6E 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 59
-
-
  2965      6720756E 
  2965      7369676E 
  2965      65642069 
  2966              	.LASF12:
  2967 031b 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 60
+
+
  2967      676E6564 
  2967      20696E74 
  2967      00
@@ -3538,14 +3593,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  2989 03aa 5F5F696E 		.ascii	"__in_chrg\000"
  2989      5F636872 
  2989      6700
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 60
-
-
  2990              	.LASF14:
  2991 03b4 696E7431 		.ascii	"int16_t\000"
  2991      365F7400 
  2992              	.LASF70:
  2993 03bc 74686973 		.ascii	"this\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 61
+
+
  2993      00
  2994              	.LASF77:
  2995 03c1 72785F62 		.ascii	"rx_buffer\000"
@@ -3598,14 +3653,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  3017      7433325F 
  3017      7400
  3018              	.LASF81:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 61
-
-
  3019 0456 474E5520 		.ascii	"GNU C++14 5.4.1 20160609 (release) [ARM/embedded-5-"
  3019      432B2B31 
  3019      3420352E 
  3019      342E3120 
  3019      32303136 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 62
+
+
  3020 0489 6272616E 		.ascii	"branch revision 237715] -mcpu=cortex-m3 -mthumb -g "
  3020      63682072 
  3020      65766973 
@@ -3658,14 +3713,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 1
  3038      00
  3039              	.LASF52:
  3040 0564 4779726F 		.ascii	"Gyro\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccep3Jy1.s 			page 62
-
-
  3040      00
  3041              	.LASF28:
  3042 0569 5F5A4E33 		.ascii	"_ZN3i2c10WriteBytesEhhhPh\000"
  3042      69326331 
  3042      30577269 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctKOIZg.s 			page 63
+
+
  3042      74654279 
  3042      74657345 
  3043              	.LASF57:

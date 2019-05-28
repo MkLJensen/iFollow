@@ -18,11 +18,16 @@ extern uint8_t Mode;
 extern uint8_t oldMode;
 enum State {Off = 0, Init = 1, Sleep = 2, Control = 3, Follow = 4, Fallen = 5};
 
+/***************************************************
+* Default constructor for object creation. Initalizes
+* member-variables
+* @param  <pointer to Gyro-object, pointer to Motor-object>
+* @return void
+****************************************************/
 RpiSPI::RpiSPI(Gyro * Gyro, MotorController * Motor)
 {
     MotorPtr_ = Motor;
     GyroPtr_ = Gyro;
-    SPIS_WriteTxDataZero(GyroState_);
 }
 
 RpiSPI::~RpiSPI()
@@ -30,12 +35,23 @@ RpiSPI::~RpiSPI()
     
 }
 
+/***************************************************
+* Used to transmit data 
+* @param uint8_t 8 bits of data
+* @return none
+****************************************************/
 void RpiSPI::TransmitData(uint8_t Data)
 {
     SPIS_ClearTxBuffer();
     SPIS_WriteTxData(Data);
 }
 
+/***************************************************
+* Used to read data, transmit mode and act on recived byte. 
+* @param none
+* @return <uint8_t 'o' if control mode is suppose to turn on
+          'c' if control mode is supposte to turn off>
+****************************************************/
 uint8_t RpiSPI::ReadData()
 {
     if(SPIS_GetRxBufferSize() > 0)
@@ -67,6 +83,12 @@ uint8_t RpiSPI::ReadData()
     
 }
 
+/***************************************************
+* Used to Act on recived byte. 
+* @param <uint8_t data - recived from Readdata()>
+* @return <uint8_t 'o' if control mode is suppose to turn on,
+          'c' if control mode is supposte to turn off, else 0>
+****************************************************/
 uint8_t RpiSPI::handleByteReceived(uint8_t byteReceived)
 {
     switch(byteReceived)

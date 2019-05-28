@@ -26,7 +26,7 @@ extern "C"
 
 #include "MotorController.h"
 
-class PIDcontroller : public MotorController
+class PIDcontroller : public MotorController //WHY??
 {
 public:
    PIDcontroller(float a0, float a1, float b1, float reference, MotorController *MotorPtr);
@@ -44,6 +44,4 @@ private:
    MotorController *MotorPtr_;
 
 };
-
-
 #endif

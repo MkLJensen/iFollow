@@ -44,5 +44,4 @@ private:
    bool GyroState_ = 0;
     
  };
-
 #endif
