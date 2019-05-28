@@ -1,4 +1,4 @@
-#include "getGPS.hpp"
+#include "GPS.hpp"
 #include <iostream>
 #include <unistd.h>
 

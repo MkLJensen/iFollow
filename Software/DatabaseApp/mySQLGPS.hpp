@@ -6,7 +6,7 @@
 	//MySQL++ include
 	#include <mysql/mysql.h>
 
-	#include "getGPS.hpp"
+	#include "GPS.hpp"
 
     
     class mySQLGPS : public GPS
