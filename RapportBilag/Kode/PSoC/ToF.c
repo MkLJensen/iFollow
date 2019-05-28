@@ -12,99 +12,77 @@
 #include "ToF.h"
 
 ToF::ToF(){}
-/*
-void ToF::start(){  
-    // Init
-    SPIS_Start();
+
+void ToF::handleByte(uint8_t byte){
+   byteR_ = byte;                                          
     
-    UART_1_Start();
-    UART_1_PutString("Terminal vindue er connected\n\r");
-}
-
-void ToF::stop(){     
-    // Init
-    SPIS_Stop();
-    UART_1_PutString("Terminal vindue er disconnected\n\r");
-    UART_1_Stop();
-}
-*/
-
-void ToF::setRightSensor(uint16_t value)
-{
-    sensorRight = value;
-}
-
-void ToF::setMidSensor(uint16_t value)
-{
-    sensorMid = value;
-}
-
-void ToF::setLeftSensor(uint16_t value)
-{
-    sensorLeft = value;
-}
-
-uint16_t ToF::getRightSensor(void) const
-{
-    return sensorRight;
-}
-
-uint16_t ToF::getMidSensor(void) const
-{
-    return sensorMid;
-}
-
-uint16_t ToF::getLeftSensor(void) const
-{
-    return sensorLeft;
-}
-
-uint8_t ToF::getCounter(void) const
-{
-    return counter_;
-}
-void ToF::setCounter(uint8_t value)
-{
-    counter_ = value;
-}
-
-void ToF::handleByte(uint16_t byte){
-  
-    if (byte == 0)
+    if (byteR_ == 0)
+        index = 0;
+    
+    switch (index)
     {
-        setCounter(1);
-        return;
-    }
-    char string[50];
-    switch (counter_)
-    {       
-        case 1:
-        setRightSensor(byte);
-        setCounter(2);
+        case 0:
+        //UART_1_PutString("Start modtaget \n\r");
+        index++;
+        break;
         
-        sprintf(string, "Sensor right is: %d \n\r", byte);
-        UART_1_PutString(string);
+        case 1:
+        byteR_ --;
+        sensorRight = byteR_<<8;
+        index++;
         break;
         
         case 2:
-        setMidSensor(byte);
-        setCounter(3);
-      
-        sprintf(string, "Sensor middle is: %d \n\r", byte);
-        UART_1_PutString(string);
+        sensorRight = sensorRight|byteR_;
+        //sprintf(string, "Sensor Right: %d \n\r", sensorRight);
+        //UART_1_PutString(string);
+        index++;
         break;
         
         case 3:
-        setLeftSensor(byte);
-        setCounter(0);
-        
-        sprintf(string, "Sensor left is: %d \n\r", byte);
-        UART_1_PutString(string);
+        byteR_ --;
+        sensorMid = byteR_<<8;
+        index++;
         break;
-                
+        
+        case 4:
+        sensorMid = sensorMid|byteR_;
+        //sprintf(string, "Sensor Middle: %d \n\r", sensorMid);
+        //UART_1_PutString(string);
+        index++;
+        break;
+        
+        case 5:
+        byteR_ --;
+        sensorLeft = byteR_<<8;
+        index++;
+        break;
+        
+        case 6:
+        sensorLeft = sensorLeft|byteR_;
+        //sprintf(string, "Sensor Left: %d \n\r", sensorLeft);
+        //UART_1_PutString(string);
+        index++;
+        break;
+        
         default: 
         //UART_1_PutString("Unknown index!\n\r");
         break;
     }
 }
+uint16_t ToF::getSensorLeft(void) const
+{
+    return sensorLeft;
+}
+
+uint16_t ToF::getSensorMid(void) const
+{
+    return sensorMid;
+}
+
+uint16_t ToF::getSensorRight(void) const
+{
+    return sensorRight;
+}
+
 /* [] END OF FILE */
