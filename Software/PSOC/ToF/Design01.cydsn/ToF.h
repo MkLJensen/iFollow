@@ -29,16 +29,17 @@ extern "C" {
 class ToF { 
 public:
     ToF();
-    //void start();
-    //void stop();
     void handleByte(uint8_t byte);
+    uint16_t getSensorLeft(void) const;
+    uint16_t getSensorMid(void) const;
+    uint16_t getSensorRight(void) const;
+    uint8_t byteR_; 
+    char string[50];
+private:
     uint16_t sensorLeft;
     uint16_t sensorRight;
     uint16_t sensorMid;
-    uint8_t i;
-    uint8_t byteR_; 
-    uint8_t sensor1, sensor2, sensor3, sensor4, sensor5, sensor6;
-    char string[50];
+    uint8_t index;
 };
 
 #endif

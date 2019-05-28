@@ -15,11 +15,6 @@ extern "C" {
 
 uint8_t byteR;
 ToF obj;
-/*
-uint8_t i = 0;
-uint16_t s1, s2, s3;
-char string[50];
-*/
 CY_ISR_PROTO(isr_handler)
 {
    byteR = SPIS_ReadRxData();                                                             // Gemmer aflæsning af RX-buffer
