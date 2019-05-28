@@ -1,4 +1,4 @@
-#include "getGPS.hpp"
+#include "GPS.hpp"
 
 GPS::GPS(void)
 {
